@@ -1,0 +1,43 @@
+{
+  "name": "crypto-intelligence-backend",
+  "version": "1.0.0",
+  "description": "Crypto Research Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch . --ext ts --exec tsx index.ts",
+    "start": "node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrivatePepega/crypto-intelligence-backend.git"
+  },
+  "keywords": [],
+  "author": "Pepega",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/PrivatePepega/crypto-intelligence-backend/issues"
+  },
+  "homepage": "https://github.com/PrivatePepega/crypto-intelligence-backend#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.0",
+    "morgan": "^1.12.0",
+    "zod": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^22.20.2",
+    "nodemon": "^3.1.14",
+    "typescript": "^7.0.2"
+  }
+}
