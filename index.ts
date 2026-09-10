@@ -23,9 +23,7 @@ app.use(cors({
 app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(express.json());
-mongoose.connect(process.env.MONGODB_URI || "")
-.then(() => console.log("DB Connected Sucessfully"))
-.catch((err) => console.log("Failed to connect to DB:", err))
+
 
 
 

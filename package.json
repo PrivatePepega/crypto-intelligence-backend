@@ -2,7 +2,7 @@
   "name": "crypto-intelligence-backend",
   "version": "1.0.0",
   "description": "Crypto Research Platform",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch . --ext ts --exec tsx index.ts",
@@ -38,6 +38,7 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^22.20.2",
     "nodemon": "^3.1.14",
+    "tsx": "^4.23.13",
     "typescript": "^7.0.2"
   }
 }
