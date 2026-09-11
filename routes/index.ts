@@ -1,11 +1,11 @@
 import express from "express"
-
+import worldRoutes from "./worldRoutes.js"
 
 
 const router = express.Router()
 
 
-// router.use("/");
+router.use("/world", worldRoutes);
 
 
 
