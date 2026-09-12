@@ -1,6 +1,12 @@
 import type { Request, Response, NextFunction, Errback } from 'express'
 import { getFundingConditions, getInflation, getInflationExpectations, getLaborMarket, getTreasuryYields } from '../collectors/massive/massive.fetch.js';
 import { fredObservations, fredSearch, fredSeries } from '../collectors/fred/fred.fetch.js';
+import { getFederalFundsRate } from '../utils/fred/federalFundsRates.js';
+import { getTwoYearTreasuryYield } from '../utils/fred/2yTreasuryYield.js';
+import { getTenYearTreasuryYield } from '../utils/fred/10yTreasuryYield.js';
+import { getTenTwoYearYieldSpread } from '../utils/fred/10Y–2Y Yield Spread.js';
+import { getTenYearBreakevenInflation } from '../utils/fred/10YBreakEvenInflation.js';
+import { getRealTenYearTreasuryYield } from '../utils/fred/Real10YTreasuryYield.js';
 
 
 
@@ -11,15 +17,14 @@ import { fredObservations, fredSearch, fredSeries } from '../collectors/fred/fre
 const fredMacro = async(req: Request, res: Response) => {
     try {
     //   const search = await fredSearch("inflation");
-  
     //   const series = await fredSeries("CPIAUCSL");
-  
-      const observations = await fredObservations("CPIAUCSL");
+    // const observations = await fredObservations("CPIAUCSL", "10");
+
+      const data = await getRealTenYearTreasuryYield()
+
   
       res.json({
-        // search,
-        // series,
-        observations,
+        data,
       });
     } catch (error) {
         console.error("FRED macro error:", error);
