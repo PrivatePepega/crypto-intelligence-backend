@@ -22,6 +22,8 @@ import { getJobOpenings } from '../utils/fred/JobOpenings.js';
 import { getInitialJoblessClaims } from '../utils/fred/InitialJoblessClaims.js';
 import { getRealGdp } from '../utils/fred/RealGdp.js';
 import { getRealGdpGrowth } from '../utils/fred/RealGdpGrowth.js';
+import { getIndustrialProduction } from '../utils/fred/IndustrialProduction.js';
+import { getRetailSales } from '../utils/fred/retailSales.js';
 
 
 
@@ -35,7 +37,7 @@ const fredMacro = async(req: Request, res: Response) => {
     //   const series = await fredSeries("CPIAUCSL");
     // const observations = await fredObservations("CPIAUCSL", "10");
 
-      const data = await getRealGdpGrowth()
+      const data = await getRetailSales()
 
   
       res.json({

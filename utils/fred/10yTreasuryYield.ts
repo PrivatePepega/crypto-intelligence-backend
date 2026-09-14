@@ -4,46 +4,8 @@ import { z } from "zod";
 import "dotenv/config";
 
 
-export const FredObservationSchema = z.object({
-    date: z.string(),
-    value: z.string(),
-  });
-  
-  export const FredObservationsResponseSchema = z.object({
-    observations: z.array(FredObservationSchema),
-  });
-  
-  export const FredSeriesSchema = z.object({
-    id: z.string(),
-    realtime_start: z.string(),
-    realtime_end: z.string(),
-    title: z.string(),
-    observation_start: z.string(),
-    observation_end: z.string(),
-    frequency: z.string(),
-    frequency_short: z.string(),
-    units: z.string(),
-    units_short: z.string(),
-    seasonal_adjustment: z.string(),
-    seasonal_adjustment_short: z.string(),
-    last_updated: z.string(),
-    popularity: z.number(),
-    notes: z.string(),
-  });
-  
-  export const FredSeriesResponseSchema = z.object({
-    seriess: z.array(FredSeriesSchema),
-  });
+import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
 
-
-  export type FredObservationsResponse = z.infer<
-    typeof FredObservationsResponseSchema
-  >;
-  
-  
-  export type FredSeriesResponse = z.infer<
-    typeof FredSeriesResponseSchema
-  >;
 
 
 
