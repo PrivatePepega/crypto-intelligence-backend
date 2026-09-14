@@ -1,4 +1,7 @@
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
@@ -6,17 +9,18 @@ import type { FredObservationsResponse, FredSeriesResponse } from "../../types/f
 
 
 
-const apiLimit = process.env.FRED_API_LIMIT!;
-const TEN_YEAR_INFLATION_EXPECTATIONS_SERIES_ID = "T10YIE";
 
-export async function getTenYearInflationExpectations() {
+
+const apiLimit = process.env.FRED_API_LIMIT!;
+const PCE_SERIES_ID = "PCE";
+
+export async function getPce() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(TEN_YEAR_INFLATION_EXPECTATIONS_SERIES_ID),
+    fredSeries<FredSeriesResponse>(PCE_SERIES_ID),
+
     fredObservations<FredObservationsResponse>(
-      TEN_YEAR_INFLATION_EXPECTATIONS_SERIES_ID,
+      PCE_SERIES_ID,
       apiLimit,
-      "m",
-      "avg",
     ),
   ]);
 
@@ -24,30 +28,30 @@ export async function getTenYearInflationExpectations() {
   const previous = observations.observations[1];
 
   if (!latest) {
-    throw new Error(
-      "FRED returned no 10Y inflation expectations observations",
-    );
+    throw new Error("FRED returned no PCE observations");
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two 10Y inflation expectations observations",
+      "FRED returned fewer than two PCE observations",
     );
   }
 
   return {
-    indicator: "ten_year_inflation_expectations",
-    seriesId: TEN_YEAR_INFLATION_EXPECTATIONS_SERIES_ID,
+    indicator: "pce",
+    seriesId: PCE_SERIES_ID,
 
     current: {
       value:
         latest.value === null
           ? null
           : Number(Number(latest.value).toFixed(2)),
+
       previousValue:
         previous.value === null
           ? null
           : Number(Number(previous.value).toFixed(2)),
+
       change:
         latest.value === null || previous.value === null
           ? null
@@ -57,15 +61,17 @@ export async function getTenYearInflationExpectations() {
                 Number(previous.value)
               ).toFixed(2),
             ),
-      unit: "percent",
-      frequency: "daily",
+
+      unit: "billions_of_dollars",
+      frequency: "monthly",
       observedAt: latest.date,
     },
 
     history: {
       frequency: "monthly",
-      aggregation: "average",
-      unit: "percent",
+      aggregation: "none",
+      unit: "billions_of_dollars",
+
       observations: observations.observations.map(
         (observation) => ({
           date: observation.date,

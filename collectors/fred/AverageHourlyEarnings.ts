@@ -1,17 +1,20 @@
-import { fredObservations, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
 
 
 const apiLimit = process.env.FRED_API_LIMIT!;
-const NONFARM_PAYROLLS_SERIES_ID = "PAYEMS";
+const AVERAGE_HOURLY_EARNINGS_SERIES_ID = "CES0500000003";
 
-export async function getNonfarmPayrolls() {
+export async function getAverageHourlyEarnings() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(NONFARM_PAYROLLS_SERIES_ID),
+    fredSeries<FredSeriesResponse>(AVERAGE_HOURLY_EARNINGS_SERIES_ID),
     fredObservations<FredObservationsResponse>(
-      NONFARM_PAYROLLS_SERIES_ID,
+      AVERAGE_HOURLY_EARNINGS_SERIES_ID,
       apiLimit,
     ),
   ]);
@@ -20,18 +23,18 @@ export async function getNonfarmPayrolls() {
   const previous = observations.observations[1];
 
   if (!latest) {
-    throw new Error("FRED returned no nonfarm payroll observations");
+    throw new Error("FRED returned no average hourly earnings observations");
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two nonfarm payroll observations",
+      "FRED returned fewer than two average hourly earnings observations",
     );
   }
 
   return {
-    indicator: "nonfarm_payrolls",
-    seriesId: NONFARM_PAYROLLS_SERIES_ID,
+    indicator: "average_hourly_earnings",
+    seriesId: AVERAGE_HOURLY_EARNINGS_SERIES_ID,
 
     current: {
       value:
@@ -44,7 +47,7 @@ export async function getNonfarmPayrolls() {
         latest.value === null || previous.value === null
           ? null
           : Number((Number(latest.value) - Number(previous.value)).toFixed(2)),
-      unit: "thousands_of_persons",
+      unit: "dollars_per_hour",
       frequency: "monthly",
       observedAt: latest.date,
     },
@@ -52,7 +55,7 @@ export async function getNonfarmPayrolls() {
     history: {
       frequency: "monthly",
       aggregation: "none",
-      unit: "thousands_of_persons",
+      unit: "dollars_per_hour",
       observations: observations.observations.map((observation) => ({
         date: observation.date,
         value:

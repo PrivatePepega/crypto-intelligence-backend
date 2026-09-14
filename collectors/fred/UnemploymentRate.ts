@@ -1,4 +1,7 @@
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
@@ -7,47 +10,44 @@ import type { FredObservationsResponse, FredSeriesResponse } from "../../types/f
 
 
 
+
+
+
 const apiLimit = process.env.FRED_API_LIMIT!;
-const PPI_SERIES_ID = "PPIACO";
+const UNEMPLOYMENT_RATE_SERIES_ID = "UNRATE";
 
-export async function getPpi() {
+export async function getUnemploymentRate() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(PPI_SERIES_ID),
-
-    fredObservations<FredObservationsResponse>(
-      PPI_SERIES_ID,
-      apiLimit,
-    ),
+    fredSeries<FredSeriesResponse>(UNEMPLOYMENT_RATE_SERIES_ID),
+    fredObservations<FredObservationsResponse>(UNEMPLOYMENT_RATE_SERIES_ID, apiLimit),
   ]);
 
   const latest = observations.observations[0];
   const previous = observations.observations[1];
 
   if (!latest) {
-    throw new Error("FRED returned no PPI observations");
+    throw new Error("FRED returned no unemployment rate observations");
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two PPI observations",
+      "FRED returned fewer than two unemployment rate observations",
     );
   }
 
   return {
-    indicator: "ppi",
-    seriesId: PPI_SERIES_ID,
+    indicator: "unemployment_rate",
+    seriesId: UNEMPLOYMENT_RATE_SERIES_ID,
 
     current: {
       value:
         latest.value === null
           ? null
           : Number(Number(latest.value).toFixed(2)),
-
       previousValue:
         previous.value === null
           ? null
           : Number(Number(previous.value).toFixed(2)),
-
       change:
         latest.value === null || previous.value === null
           ? null
@@ -57,8 +57,7 @@ export async function getPpi() {
                 Number(previous.value)
               ).toFixed(2),
             ),
-
-      unit: "index",
+      unit: "percent",
       frequency: "monthly",
       observedAt: latest.date,
     },
@@ -66,8 +65,7 @@ export async function getPpi() {
     history: {
       frequency: "monthly",
       aggregation: "none",
-      unit: "index",
-
+      unit: "percent",
       observations: observations.observations.map(
         (observation) => ({
           date: observation.date,
@@ -82,3 +80,8 @@ export async function getPpi() {
     series: series.seriess[0],
   };
 }
+
+
+
+
+

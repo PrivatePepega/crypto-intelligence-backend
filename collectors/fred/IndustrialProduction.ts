@@ -4,7 +4,7 @@ import { z } from "zod";
 import {
   fredObservations,
   fredSeries,
-} from "../../collectors/fred/fred.fetch.js";
+} from "./fred.fetch.js";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
 
 

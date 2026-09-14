@@ -1,28 +1,34 @@
 
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
+
+
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
 
 
 
-const apiLimit = process.env.FRED_API_LIMIT!;
-const REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID = "DFII10";
 
-export async function getRealTenYearTreasuryYield() {
-  const [series, dailyObservations, monthlyObservations] =
+const apiLimit = process.env.FRED_API_LIMIT!;
+const TEN_YEAR_TREASURY_YIELD_SERIES_ID = "DGS10";
+
+export async function getTenYearTreasuryYield() {
+  const [series, dailyObservations, weeklyObservations] =
     await Promise.all([
-      fredSeries<FredSeriesResponse>(REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID),
+      fredSeries<FredSeriesResponse>(TEN_YEAR_TREASURY_YIELD_SERIES_ID),
 
       // Overview: current daily value + daily change
       fredObservations<FredObservationsResponse>(
-        REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID,
+        TEN_YEAR_TREASURY_YIELD_SERIES_ID,
         "10",
       ),
 
-      // Metrics: monthly average history
+      // Metrics: weekly average history
       fredObservations<FredObservationsResponse>(
-        REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID,
+        TEN_YEAR_TREASURY_YIELD_SERIES_ID,
         apiLimit,
         "m",
         "avg",
@@ -37,21 +43,18 @@ export async function getRealTenYearTreasuryYield() {
   }
 
   if (!previous) {
-    throw new Error("FRED returned fewer than two observations");
+    throw new Error("FRED returned fewer than two daily observations");
   }
 
   return {
-    indicator: "real_ten_year_treasury_yield",
-    seriesId: REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID,
+    indicator: "ten_year_treasury_yield",
+    seriesId: TEN_YEAR_TREASURY_YIELD_SERIES_ID,
 
     current: {
-      value: Number(Number(latest.value).toFixed(2)),
-      previousValue: Number(Number(previous.value).toFixed(2)),
+      value: Number(latest.value),
+      previousValue: Number(previous.value),
       change: Number(
-        (
-          Number(latest.value) -
-          Number(previous.value)
-        ).toFixed(2),
+        (Number(latest.value) - Number(previous.value)).toFixed(2),
       ),
       unit: "percent",
       frequency: "daily",
@@ -62,7 +65,7 @@ export async function getRealTenYearTreasuryYield() {
       frequency: "monthly",
       aggregation: "average",
       unit: "percent",
-      observations: monthlyObservations.observations.map(
+      observations: weeklyObservations.observations.map(
         (observation) => ({
           date: observation.date,
           value:

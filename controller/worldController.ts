@@ -1,29 +1,8 @@
 import type { Request, Response, NextFunction, Errback } from 'express'
 import { getFundingConditions, getInflation, getInflationExpectations, getLaborMarket, getTreasuryYields } from '../collectors/massive/massive.fetch.js';
-import { fredObservations, fredSearch, fredSeries } from '../collectors/fred/fred.fetch.js';
-import { getFederalFundsRate } from '../utils/fred/federalFundsRates.js';
-import { getTwoYearTreasuryYield } from '../utils/fred/2yTreasuryYield.js';
-import { getTenYearTreasuryYield } from '../utils/fred/10yTreasuryYield.js';
-import { getTenTwoYearYieldSpread } from '../utils/fred/10Y–2Y Yield Spread.js';
-import { getTenYearBreakevenInflation } from '../utils/fred/10YBreakEvenInflation.js';
-import { getRealTenYearTreasuryYield } from '../utils/fred/Real10YTreasuryYield.js';
-import { getCpi } from '../utils/fred/cpi.js';
-import { getCoreCpi } from '../utils/fred/coreCPI.js';
-import { getPce } from '../utils/fred/PCE.js';
-import { getCorePce } from '../utils/fred/corePCE.js';
-import { getPpi } from '../utils/fred/ppi.js';
-import { getFiveYearInflationExpectations } from '../utils/fred/5YInflationExpectations.js';
-import { getTenYearInflationExpectations } from '../utils/fred/10YInflationExpectations.js';
-import { getUnemploymentRate } from '../utils/fred/UnemploymentRate.js';
-import { getLaborForceParticipation } from '../utils/fred/LaborForceParticipation.js';
-import { getNonfarmPayrolls } from '../utils/fred/NonfarmPayrolls.js';
-import { getAverageHourlyEarnings } from '../utils/fred/AverageHourlyEarnings.js';
-import { getJobOpenings } from '../utils/fred/JobOpenings.js';
-import { getInitialJoblessClaims } from '../utils/fred/InitialJoblessClaims.js';
-import { getRealGdp } from '../utils/fred/RealGdp.js';
-import { getRealGdpGrowth } from '../utils/fred/RealGdpGrowth.js';
-import { getIndustrialProduction } from '../utils/fred/IndustrialProduction.js';
-import { getRetailSales } from '../utils/fred/retailSales.js';
+import { getM2MoneySupply } from '../collectors/fred/M2MoneySupply.js';
+
+
 
 
 
@@ -33,11 +12,9 @@ import { getRetailSales } from '../utils/fred/retailSales.js';
 
 const fredMacro = async(req: Request, res: Response) => {
     try {
-    //   const search = await fredSearch("inflation");
-    //   const series = await fredSeries("CPIAUCSL");
-    // const observations = await fredObservations("CPIAUCSL", "10");
 
-      const data = await getRetailSales()
+
+      const data = await getM2MoneySupply()
 
   
       res.json({

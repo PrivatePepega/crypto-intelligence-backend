@@ -3,7 +3,8 @@ import "dotenv/config";
 import {
   fredObservations,
   fredSeries,
-} from "../../collectors/fred/fred.fetch.js";
+} from "./fred.fetch.js";
+
 import type {
   FredObservationsResponse,
   FredSeriesResponse,
@@ -11,36 +12,49 @@ import type {
 
 const apiLimit = process.env.FRED_API_LIMIT!;
 
-const RETAIL_SALES_SERIES_ID = "RSAFS";
+const FED_TOTAL_ASSETS_SERIES_ID = "WALCL";
 
-export async function getRetailSales() {
-  const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(RETAIL_SALES_SERIES_ID),
-    fredObservations<FredObservationsResponse>(
-      RETAIL_SALES_SERIES_ID,
-      apiLimit,
-    ),
-  ]);
+export async function getFedTotalAssets() {
+  const [series, currentObservations, historicalObservations] =
+    await Promise.all([
+      fredSeries<FredSeriesResponse>(
+        FED_TOTAL_ASSETS_SERIES_ID,
+      ),
 
-  const latest = observations.observations[0];
-  const previous = observations.observations[1];
+      // Latest native weekly observations
+      fredObservations<FredObservationsResponse>(
+        FED_TOTAL_ASSETS_SERIES_ID,
+        apiLimit,
+      ),
+
+      // Monthly average history
+      fredObservations<FredObservationsResponse>(
+        FED_TOTAL_ASSETS_SERIES_ID,
+        apiLimit,
+        "m",
+        "avg",
+      ),
+    ]);
+
+  const latest = currentObservations.observations[0];
+  const previous = currentObservations.observations[1];
   const seriesData = series.seriess[0];
 
   if (!latest) {
     throw new Error(
-      "FRED returned no retail sales observations",
+      "FRED returned no Fed total assets observations",
     );
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two retail sales observations",
+      "FRED returned fewer than two Fed total assets observations",
     );
   }
 
   if (!seriesData) {
     throw new Error(
-      "FRED returned no retail sales series data",
+      "FRED returned no Fed total assets series data",
     );
   }
 
@@ -56,8 +70,8 @@ export async function getRetailSales() {
   const previousValue = parseValue(previous.value);
 
   return {
-    indicator: "retail_sales",
-    seriesId: RETAIL_SALES_SERIES_ID,
+    indicator: "fed_total_assets",
+    seriesId: FED_TOTAL_ASSETS_SERIES_ID,
 
     current: {
       value: latestValue,
@@ -72,10 +86,10 @@ export async function getRetailSales() {
     },
 
     history: {
-      frequency: seriesData.frequency,
-      aggregation: "none",
+      frequency: "Monthly",
+      aggregation: "average",
       unit: seriesData.units,
-      observations: observations.observations.map(
+      observations: historicalObservations.observations.map(
         (observation) => ({
           date: observation.date,
           value: parseValue(observation.value),

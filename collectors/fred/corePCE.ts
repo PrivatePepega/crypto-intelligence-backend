@@ -1,4 +1,7 @@
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
@@ -6,43 +9,49 @@ import type { FredObservationsResponse, FredSeriesResponse } from "../../types/f
 
 
 
-const apiLimit = process.env.FRED_API_LIMIT!;
-const LABOR_FORCE_PARTICIPATION_SERIES_ID = "CIVPART";
 
-export async function getLaborForceParticipation() {
+
+const apiLimit = process.env.FRED_API_LIMIT!;
+const CORE_PCE_SERIES_ID = "PCEPILFE";
+
+export async function getCorePce() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(LABOR_FORCE_PARTICIPATION_SERIES_ID),
-    fredObservations<FredObservationsResponse>(LABOR_FORCE_PARTICIPATION_SERIES_ID, apiLimit),
+    fredSeries<FredSeriesResponse>(CORE_PCE_SERIES_ID),
+
+    fredObservations<FredObservationsResponse>(
+      CORE_PCE_SERIES_ID,
+      apiLimit,
+    ),
   ]);
 
   const latest = observations.observations[0];
   const previous = observations.observations[1];
 
   if (!latest) {
-    throw new Error(
-      "FRED returned no labor force participation observations",
-    );
+    throw new Error("FRED returned no Core PCE observations");
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two labor force participation observations",
+      "FRED returned fewer than two Core PCE observations",
     );
   }
 
   return {
-    indicator: "labor_force_participation",
-    seriesId: LABOR_FORCE_PARTICIPATION_SERIES_ID,
+    indicator: "core_pce",
+    seriesId: CORE_PCE_SERIES_ID,
 
     current: {
       value:
         latest.value === null
           ? null
           : Number(Number(latest.value).toFixed(2)),
+
       previousValue:
         previous.value === null
           ? null
           : Number(Number(previous.value).toFixed(2)),
+
       change:
         latest.value === null || previous.value === null
           ? null
@@ -52,7 +61,8 @@ export async function getLaborForceParticipation() {
                 Number(previous.value)
               ).toFixed(2),
             ),
-      unit: "percent",
+
+      unit: "billions_of_dollars",
       frequency: "monthly",
       observedAt: latest.date,
     },
@@ -60,7 +70,8 @@ export async function getLaborForceParticipation() {
     history: {
       frequency: "monthly",
       aggregation: "none",
-      unit: "percent",
+      unit: "billions_of_dollars",
+
       observations: observations.observations.map(
         (observation) => ({
           date: observation.date,

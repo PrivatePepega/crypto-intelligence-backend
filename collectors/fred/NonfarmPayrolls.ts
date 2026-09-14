@@ -1,17 +1,20 @@
-import { fredObservations, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
 
 
 const apiLimit = process.env.FRED_API_LIMIT!;
-const AVERAGE_HOURLY_EARNINGS_SERIES_ID = "CES0500000003";
+const NONFARM_PAYROLLS_SERIES_ID = "PAYEMS";
 
-export async function getAverageHourlyEarnings() {
+export async function getNonfarmPayrolls() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(AVERAGE_HOURLY_EARNINGS_SERIES_ID),
+    fredSeries<FredSeriesResponse>(NONFARM_PAYROLLS_SERIES_ID),
     fredObservations<FredObservationsResponse>(
-      AVERAGE_HOURLY_EARNINGS_SERIES_ID,
+      NONFARM_PAYROLLS_SERIES_ID,
       apiLimit,
     ),
   ]);
@@ -20,18 +23,18 @@ export async function getAverageHourlyEarnings() {
   const previous = observations.observations[1];
 
   if (!latest) {
-    throw new Error("FRED returned no average hourly earnings observations");
+    throw new Error("FRED returned no nonfarm payroll observations");
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two average hourly earnings observations",
+      "FRED returned fewer than two nonfarm payroll observations",
     );
   }
 
   return {
-    indicator: "average_hourly_earnings",
-    seriesId: AVERAGE_HOURLY_EARNINGS_SERIES_ID,
+    indicator: "nonfarm_payrolls",
+    seriesId: NONFARM_PAYROLLS_SERIES_ID,
 
     current: {
       value:
@@ -44,7 +47,7 @@ export async function getAverageHourlyEarnings() {
         latest.value === null || previous.value === null
           ? null
           : Number((Number(latest.value) - Number(previous.value)).toFixed(2)),
-      unit: "dollars_per_hour",
+      unit: "thousands_of_persons",
       frequency: "monthly",
       observedAt: latest.date,
     },
@@ -52,7 +55,7 @@ export async function getAverageHourlyEarnings() {
     history: {
       frequency: "monthly",
       aggregation: "none",
-      unit: "dollars_per_hour",
+      unit: "thousands_of_persons",
       observations: observations.observations.map((observation) => ({
         date: observation.date,
         value:

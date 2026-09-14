@@ -1,5 +1,8 @@
 
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
@@ -7,22 +10,22 @@ import type { FredObservationsResponse, FredSeriesResponse } from "../../types/f
 
 
 const apiLimit = process.env.FRED_API_LIMIT!;
-const TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID = "T10YIE";
+const REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID = "DFII10";
 
-export async function getTenYearBreakevenInflation() {
-  const [series, dailyObservations, weeklyObservations] =
+export async function getRealTenYearTreasuryYield() {
+  const [series, dailyObservations, monthlyObservations] =
     await Promise.all([
-      fredSeries<FredSeriesResponse>(TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID),
+      fredSeries<FredSeriesResponse>(REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID),
 
       // Overview: current daily value + daily change
       fredObservations<FredObservationsResponse>(
-        TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
+        REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID,
         "10",
       ),
 
-      // Metrics: weekly average history
+      // Metrics: monthly average history
       fredObservations<FredObservationsResponse>(
-        TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
+        REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID,
         apiLimit,
         "m",
         "avg",
@@ -37,12 +40,12 @@ export async function getTenYearBreakevenInflation() {
   }
 
   if (!previous) {
-    throw new Error("FRED returned fewer than two daily observations");
+    throw new Error("FRED returned fewer than two observations");
   }
 
   return {
-    indicator: "ten_year_breakeven_inflation",
-    seriesId: TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
+    indicator: "real_ten_year_treasury_yield",
+    seriesId: REAL_TEN_YEAR_TREASURY_YIELD_SERIES_ID,
 
     current: {
       value: Number(Number(latest.value).toFixed(2)),
@@ -62,7 +65,7 @@ export async function getTenYearBreakevenInflation() {
       frequency: "monthly",
       aggregation: "average",
       unit: "percent",
-      observations: weeklyObservations.observations.map(
+      observations: monthlyObservations.observations.map(
         (observation) => ({
           date: observation.date,
           value:

@@ -1,4 +1,7 @@
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
@@ -7,16 +10,15 @@ import type { FredObservationsResponse, FredSeriesResponse } from "../../types/f
 
 
 
-
 const apiLimit = process.env.FRED_API_LIMIT!;
-const CORE_PCE_SERIES_ID = "PCEPILFE";
+const PPI_SERIES_ID = "PPIACO";
 
-export async function getCorePce() {
+export async function getPpi() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(CORE_PCE_SERIES_ID),
+    fredSeries<FredSeriesResponse>(PPI_SERIES_ID),
 
     fredObservations<FredObservationsResponse>(
-      CORE_PCE_SERIES_ID,
+      PPI_SERIES_ID,
       apiLimit,
     ),
   ]);
@@ -25,18 +27,18 @@ export async function getCorePce() {
   const previous = observations.observations[1];
 
   if (!latest) {
-    throw new Error("FRED returned no Core PCE observations");
+    throw new Error("FRED returned no PPI observations");
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two Core PCE observations",
+      "FRED returned fewer than two PPI observations",
     );
   }
 
   return {
-    indicator: "core_pce",
-    seriesId: CORE_PCE_SERIES_ID,
+    indicator: "ppi",
+    seriesId: PPI_SERIES_ID,
 
     current: {
       value:
@@ -59,7 +61,7 @@ export async function getCorePce() {
               ).toFixed(2),
             ),
 
-      unit: "billions_of_dollars",
+      unit: "index",
       frequency: "monthly",
       observedAt: latest.date,
     },
@@ -67,7 +69,7 @@ export async function getCorePce() {
     history: {
       frequency: "monthly",
       aggregation: "none",
-      unit: "billions_of_dollars",
+      unit: "index",
 
       observations: observations.observations.map(
         (observation) => ({

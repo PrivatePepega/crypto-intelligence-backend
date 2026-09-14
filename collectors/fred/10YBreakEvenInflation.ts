@@ -1,31 +1,31 @@
 
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
-
-
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
 
 
 
-
 const apiLimit = process.env.FRED_API_LIMIT!;
-const TEN_YEAR_TREASURY_YIELD_SERIES_ID = "DGS10";
+const TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID = "T10YIE";
 
-export async function getTenYearTreasuryYield() {
+export async function getTenYearBreakevenInflation() {
   const [series, dailyObservations, weeklyObservations] =
     await Promise.all([
-      fredSeries<FredSeriesResponse>(TEN_YEAR_TREASURY_YIELD_SERIES_ID),
+      fredSeries<FredSeriesResponse>(TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID),
 
       // Overview: current daily value + daily change
       fredObservations<FredObservationsResponse>(
-        TEN_YEAR_TREASURY_YIELD_SERIES_ID,
+        TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
         "10",
       ),
 
       // Metrics: weekly average history
       fredObservations<FredObservationsResponse>(
-        TEN_YEAR_TREASURY_YIELD_SERIES_ID,
+        TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
         apiLimit,
         "m",
         "avg",
@@ -44,14 +44,17 @@ export async function getTenYearTreasuryYield() {
   }
 
   return {
-    indicator: "ten_year_treasury_yield",
-    seriesId: TEN_YEAR_TREASURY_YIELD_SERIES_ID,
+    indicator: "ten_year_breakeven_inflation",
+    seriesId: TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
 
     current: {
-      value: Number(latest.value),
-      previousValue: Number(previous.value),
+      value: Number(Number(latest.value).toFixed(2)),
+      previousValue: Number(Number(previous.value).toFixed(2)),
       change: Number(
-        (Number(latest.value) - Number(previous.value)).toFixed(2),
+        (
+          Number(latest.value) -
+          Number(previous.value)
+        ).toFixed(2),
       ),
       unit: "percent",
       frequency: "daily",

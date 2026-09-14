@@ -1,4 +1,7 @@
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
@@ -6,22 +9,13 @@ import type { FredObservationsResponse, FredSeriesResponse } from "../../types/f
 
 
 
-
-
-
-
 const apiLimit = process.env.FRED_API_LIMIT!;
-const FIVE_YEAR_INFLATION_EXPECTATIONS_SERIES_ID = "T5YIE";
+const LABOR_FORCE_PARTICIPATION_SERIES_ID = "CIVPART";
 
-export async function getFiveYearInflationExpectations() {
+export async function getLaborForceParticipation() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(FIVE_YEAR_INFLATION_EXPECTATIONS_SERIES_ID),
-    fredObservations<FredObservationsResponse>(
-      FIVE_YEAR_INFLATION_EXPECTATIONS_SERIES_ID,
-      apiLimit,
-      "m",
-      "avg",
-    ),
+    fredSeries<FredSeriesResponse>(LABOR_FORCE_PARTICIPATION_SERIES_ID),
+    fredObservations<FredObservationsResponse>(LABOR_FORCE_PARTICIPATION_SERIES_ID, apiLimit),
   ]);
 
   const latest = observations.observations[0];
@@ -29,19 +23,19 @@ export async function getFiveYearInflationExpectations() {
 
   if (!latest) {
     throw new Error(
-      "FRED returned no 5Y inflation expectations observations",
+      "FRED returned no labor force participation observations",
     );
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two 5Y inflation expectations observations",
+      "FRED returned fewer than two labor force participation observations",
     );
   }
 
   return {
-    indicator: "five_year_inflation_expectations",
-    seriesId: FIVE_YEAR_INFLATION_EXPECTATIONS_SERIES_ID,
+    indicator: "labor_force_participation",
+    seriesId: LABOR_FORCE_PARTICIPATION_SERIES_ID,
 
     current: {
       value:
@@ -62,13 +56,13 @@ export async function getFiveYearInflationExpectations() {
               ).toFixed(2),
             ),
       unit: "percent",
-      frequency: "daily",
+      frequency: "monthly",
       observedAt: latest.date,
     },
 
     history: {
       frequency: "monthly",
-      aggregation: "average",
+      aggregation: "none",
       unit: "percent",
       observations: observations.observations.map(
         (observation) => ({

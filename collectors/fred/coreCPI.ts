@@ -1,4 +1,8 @@
-import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
+
+import {
+  fredObservations,
+  fredSeries,
+} from "./fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
 import type { FredObservationsResponse, FredSeriesResponse } from "../../types/fred.types.js";
@@ -8,15 +12,16 @@ import type { FredObservationsResponse, FredSeriesResponse } from "../../types/f
 
 
 
-const apiLimit = process.env.FRED_API_LIMIT!;
-const PCE_SERIES_ID = "PCE";
 
-export async function getPce() {
+const apiLimit = process.env.FRED_API_LIMIT!;
+const CORE_CPI_SERIES_ID = "CPILFESL";
+
+export async function getCoreCpi() {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(PCE_SERIES_ID),
+    fredSeries<FredSeriesResponse>(CORE_CPI_SERIES_ID),
 
     fredObservations<FredObservationsResponse>(
-      PCE_SERIES_ID,
+      CORE_CPI_SERIES_ID,
       apiLimit,
     ),
   ]);
@@ -25,18 +30,18 @@ export async function getPce() {
   const previous = observations.observations[1];
 
   if (!latest) {
-    throw new Error("FRED returned no PCE observations");
+    throw new Error("FRED returned no Core CPI observations");
   }
 
   if (!previous) {
     throw new Error(
-      "FRED returned fewer than two PCE observations",
+      "FRED returned fewer than two Core CPI observations",
     );
   }
 
   return {
-    indicator: "pce",
-    seriesId: PCE_SERIES_ID,
+    indicator: "core_cpi",
+    seriesId: CORE_CPI_SERIES_ID,
 
     current: {
       value:
@@ -59,7 +64,7 @@ export async function getPce() {
               ).toFixed(2),
             ),
 
-      unit: "billions_of_dollars",
+      unit: "index",
       frequency: "monthly",
       observedAt: latest.date,
     },
@@ -67,7 +72,7 @@ export async function getPce() {
     history: {
       frequency: "monthly",
       aggregation: "none",
-      unit: "billions_of_dollars",
+      unit: "index",
 
       observations: observations.observations.map(
         (observation) => ({
