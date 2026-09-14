@@ -1,6 +1,15 @@
 import type { Request, Response, NextFunction, Errback } from 'express'
 import { getFundingConditions, getInflation, getInflationExpectations, getLaborMarket, getTreasuryYields } from '../collectors/massive/massive.fetch.js';
-import { getM2MoneySupply } from '../collectors/fred/M2MoneySupply.js';
+import { getM2MoneySupply } from '../collectors/fred/Liquidity Financial Conditions/M2MoneySupply.js';
+import { getSp500 } from '../collectors/fred/Market Health/snp500.js';
+import { getNasdaqComposite } from '../collectors/fred/Market Health/NASDAQComposite.js';
+import { getDowJones } from '../collectors/fred/Market Health/DowJones.js';
+import { getBroadUsdIndex } from '../collectors/fred/Market Health/Broad USD Index.js';
+import { getRealBroadUsdIndex } from '../collectors/fred/Market Health/Real Broad USD Index.js';
+import { getAdvancedEconomyUsdIndex } from '../collectors/fred/Market Health/Advanced Economy USD Index.js';
+import { getEmergingMarketUsdIndex } from '../collectors/fred/Market Health/Emerging Market USD Index.js';
+import { get3mTreasury } from '../collectors/fred/Market Health/3M Treasury.js';
+import { get5yTreasury } from '../collectors/fred/Market Health/5Y Treasury.js';
 
 
 
@@ -14,7 +23,7 @@ const fredMacro = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await getM2MoneySupply()
+      const data = await get5yTreasury()
 
   
       res.json({
@@ -35,142 +44,7 @@ const fredMacro = async(req: Request, res: Response) => {
 
 
 
-const massiveMacro = async (req:Request, res:Response) => {
-try{
-
-    const [
-        dataTreasuryYields,
-        dataInflation,
-        dataInflationExpectations,
-        dataLaborMarket,
-        dataFundingConditions,
-      ] = await Promise.all([
-        getTreasuryYields({
-          limit: "1",
-          sort: "date.desc",
-        }),
-      
-        getInflation({
-          limit: "2",
-          sort: "date.desc",
-        }),
-      
-        getInflationExpectations({
-          limit: "2",
-          sort: "date.desc",
-        }),
-      
-        getLaborMarket({
-          limit: "2",
-          sort: "date.desc",
-        }),
-      
-        getFundingConditions({
-          limit: "2",
-          sort: "date.desc",
-        }),
-      ]);
-
-        const treasury = dataTreasuryYields.results[0]!;
-        const inflation = dataInflation.results;
-        const inflationExpectations = dataInflationExpectations.results;
-        const laborMarket = dataLaborMarket.results;
-        const fundingConditions = dataFundingConditions.results;
-
-        if (!inflationExpectations) {
-            throw new Error("Inflation expectations data is missing");
-          }
-        if (!laborMarket) {
-        throw new Error("Inflation expectations data is missing");
-        }
 
 
 
-        const normalizedData = {
-            treasuryYields: {
-              date: treasury.date,
-              oneYear: treasury.yield_1_year,
-              twoYear: treasury.yield_2_year,
-              fiveYear: treasury.yield_5_year,
-              tenYear: treasury.yield_10_year,
-              thirtyYear: treasury.yield_30_year,
-            },
-          
-            inflation: {
-              cpi: inflation.find(item => item.cpi !== undefined)?.cpi,
-              cpiCore: inflation.find(item => item.cpi_core !== undefined)?.cpi_core,
-              pce: inflation.find(item => item.pce !== undefined)?.pce,
-            },
-          
-            inflationExpectations: {
-              date: inflationExpectations[0]?.date,
-              marketFiveYear: inflationExpectations.find(
-                item => item.market_5_year !== undefined
-              )?.market_5_year,
-            },
-          
-            laborMarket: {
-              date: laborMarket[0]?.date,
-              unemploymentRate: laborMarket.find(
-                item => item.unemployment_rate !== undefined
-              )?.unemployment_rate,
-          
-              laborForceParticipationRate: laborMarket.find(
-                item => item.labor_force_participation_rate !== undefined
-              )?.labor_force_participation_rate,
-          
-              avgHourlyEarnings: laborMarket.find(
-                item => item.avg_hourly_earnings !== undefined
-              )?.avg_hourly_earnings,
-          
-              jobOpenings: laborMarket.find(
-                item => item.job_openings !== undefined
-              )?.job_openings,
-            },
-          
-            fundingConditions: {
-              date: fundingConditions.find(
-                item =>
-                  item.interest_on_reserve_balances !== undefined &&
-                  item.sofr_volume !== undefined &&
-                  item.obfr_volume !== undefined
-              )?.date,
-          
-              interestOnReserveBalances: fundingConditions.find(
-                item =>
-                  item.interest_on_reserve_balances !== undefined &&
-                  item.sofr_volume !== undefined &&
-                  item.obfr_volume !== undefined
-              )?.interest_on_reserve_balances,
-          
-              sofrVolume: fundingConditions.find(
-                item =>
-                  item.interest_on_reserve_balances !== undefined &&
-                  item.sofr_volume !== undefined &&
-                  item.obfr_volume !== undefined
-              )?.sofr_volume,
-          
-              obfrVolume: fundingConditions.find(
-                item =>
-                  item.interest_on_reserve_balances !== undefined &&
-                  item.sofr_volume !== undefined &&
-                  item.obfr_volume !== undefined
-              )?.obfr_volume,
-            },
-          };
-          
-          return res.json(normalizedData);
-} catch (error) {
-    console.error("Massive error:", error);
-
-    return res.status(500).json({
-        message: "Internal server error",
-        error: error instanceof Error ? error.message : error,
-    });
-}
-
-}
-
-
-
-export {massiveMacro, fredMacro}
+export { fredMacro}
