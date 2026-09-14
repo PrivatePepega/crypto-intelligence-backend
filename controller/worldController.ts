@@ -7,6 +7,17 @@ import { getTenYearTreasuryYield } from '../utils/fred/10yTreasuryYield.js';
 import { getTenTwoYearYieldSpread } from '../utils/fred/10Y–2Y Yield Spread.js';
 import { getTenYearBreakevenInflation } from '../utils/fred/10YBreakEvenInflation.js';
 import { getRealTenYearTreasuryYield } from '../utils/fred/Real10YTreasuryYield.js';
+import { getCpi } from '../utils/fred/cpi.js';
+import { getCoreCpi } from '../utils/fred/coreCPI.js';
+import { getPce } from '../utils/fred/PCE.js';
+import { getCorePce } from '../utils/fred/corePCE.js';
+import { getPpi } from '../utils/fred/ppi.js';
+import { getFiveYearInflationExpectations } from '../utils/fred/5YInflationExpectations.js';
+import { getTenYearInflationExpectations } from '../utils/fred/10YInflationExpectations.js';
+import { getUnemploymentRate } from '../utils/fred/UnemploymentRate.js';
+import { getLaborForceParticipation } from '../utils/fred/LaborForceParticipation.js';
+import { getNonfarmPayrolls } from '../utils/fred/NonfarmPayrolls.js';
+import { getAverageHourlyEarnings } from '../utils/fred/AverageHourlyEarnings.js';
 
 
 
@@ -20,7 +31,7 @@ const fredMacro = async(req: Request, res: Response) => {
     //   const series = await fredSeries("CPIAUCSL");
     // const observations = await fredObservations("CPIAUCSL", "10");
 
-      const data = await getRealTenYearTreasuryYield()
+      const data = await getAverageHourlyEarnings()
 
   
       res.json({
