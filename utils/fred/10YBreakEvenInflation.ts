@@ -1,6 +1,7 @@
 
 import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 
 
@@ -61,6 +62,7 @@ export const FredSeriesSchema = z.object({
 
 
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID = "T10YIE";
 
 export async function getTenYearBreakevenInflation() {
@@ -77,7 +79,7 @@ export async function getTenYearBreakevenInflation() {
       // Metrics: weekly average history
       fredObservations<FredObservationResponse>(
         TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
-        "36",
+        apiLimit,
         "m",
         "avg",
       ),

@@ -1,5 +1,6 @@
 import { fredObservations, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 export const FredSeriesSchema = z.object({
   id: z.string(),
@@ -51,6 +52,7 @@ export type FredObservationsResponse = z.infer<
   typeof FredObservationsResponseSchema
 >;
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const AVERAGE_HOURLY_EARNINGS_SERIES_ID = "CES0500000003";
 
 export async function getAverageHourlyEarnings() {
@@ -58,7 +60,7 @@ export async function getAverageHourlyEarnings() {
     fredSeries<FredSeriesResponse>(AVERAGE_HOURLY_EARNINGS_SERIES_ID),
     fredObservations<FredObservationsResponse>(
       AVERAGE_HOURLY_EARNINGS_SERIES_ID,
-      "36",
+      apiLimit,
     ),
   ]);
 

@@ -1,6 +1,8 @@
 
 import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
+
 
 export const FredObservationSchema = z.object({
     date: z.string(),
@@ -45,7 +47,7 @@ export const FredObservationSchema = z.object({
 
 
 
-
+const apiLimit = process.env.FRED_API_LIMIT!
 
 const TWO_YEAR_TREASURY_YIELD_SERIES_ID = "DGS2";
 
@@ -65,7 +67,7 @@ export async function getTwoYearTreasuryYield() {
         // Metrics: weekly average history
         fredObservations<FredObservationsResponse>(
           TWO_YEAR_TREASURY_YIELD_SERIES_ID,
-          "100",
+          apiLimit,
           "w",
           "avg",
         ),

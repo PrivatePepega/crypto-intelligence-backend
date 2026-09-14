@@ -1,5 +1,6 @@
 import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 
 
@@ -41,6 +42,7 @@ export const FredSeriesResponseSchema = z.object({
 export type FredSeriesResponse = z.infer<typeof FredSeriesResponseSchema>;
 
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const FEDERAL_FUNDS_RATE_SERIES_ID = "DFF";
 
 
@@ -49,7 +51,7 @@ const FEDERAL_FUNDS_RATE_SERIES_ID = "DFF";
 export async function getFederalFundsRate() {
   const [series, observations] = await Promise.all([
     fredSeries<FredSeriesResponse>(FEDERAL_FUNDS_RATE_SERIES_ID),
-    fredObservations<FredObservationsResponse>(FEDERAL_FUNDS_RATE_SERIES_ID, "10", "m", "avg"),
+    fredObservations<FredObservationsResponse>(FEDERAL_FUNDS_RATE_SERIES_ID, apiLimit, "m", "avg"),
   ]);
 
   const latest = observations.observations[0];

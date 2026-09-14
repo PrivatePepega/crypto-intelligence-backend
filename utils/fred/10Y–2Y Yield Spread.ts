@@ -1,6 +1,7 @@
 
 import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 
 export const FredObservationSchema = z.object({
@@ -48,6 +49,7 @@ export const FredObservationSchema = z.object({
 
 
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const TEN_YEAR_SERIES_ID = "DGS10";
 const TWO_YEAR_SERIES_ID = "DGS2";
 
@@ -68,8 +70,8 @@ export async function getTenTwoYearYieldSpread() {
     fredObservations<FredObservationsResponse>(TWO_YEAR_SERIES_ID, "10"),
 
     // Metrics
-    fredObservations<FredObservationsResponse>(TEN_YEAR_SERIES_ID, "100", "w", "avg"),
-    fredObservations<FredObservationsResponse>(TWO_YEAR_SERIES_ID, "100", "w", "avg"),
+    fredObservations<FredObservationsResponse>(TEN_YEAR_SERIES_ID, apiLimit, "w", "avg"),
+    fredObservations<FredObservationsResponse>(TWO_YEAR_SERIES_ID, apiLimit, "w", "avg"),
   ]);
 
   const latest10Y = tenYearDaily.observations[0];

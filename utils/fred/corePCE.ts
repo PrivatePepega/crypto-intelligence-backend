@@ -1,5 +1,6 @@
 import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 
 
@@ -62,6 +63,7 @@ export const FredSeriesSchema = z.object({
 
 
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const CORE_PCE_SERIES_ID = "PCEPILFE";
 
 export async function getCorePce() {
@@ -70,7 +72,7 @@ export async function getCorePce() {
 
     fredObservations<FredObservationsResponse>(
       CORE_PCE_SERIES_ID,
-      "36",
+      apiLimit,
     ),
   ]);
 

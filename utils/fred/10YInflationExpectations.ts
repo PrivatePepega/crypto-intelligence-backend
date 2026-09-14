@@ -1,5 +1,6 @@
 import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 
 
@@ -61,6 +62,7 @@ export const FredSeriesSchema = z.object({
 
 
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const TEN_YEAR_INFLATION_EXPECTATIONS_SERIES_ID = "T10YIE";
 
 export async function getTenYearInflationExpectations() {
@@ -68,7 +70,7 @@ export async function getTenYearInflationExpectations() {
     fredSeries<FredSeriesResponse>(TEN_YEAR_INFLATION_EXPECTATIONS_SERIES_ID),
     fredObservations<FredObservationsResponse>(
       TEN_YEAR_INFLATION_EXPECTATIONS_SERIES_ID,
-      "36",
+      apiLimit,
       "m",
       "avg",
     ),

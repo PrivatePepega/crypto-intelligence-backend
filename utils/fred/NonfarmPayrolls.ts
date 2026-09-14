@@ -1,5 +1,6 @@
 import { fredObservations, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 export const FredSeriesSchema = z.object({
   id: z.string(),
@@ -51,6 +52,7 @@ export type FredObservationsResponse = z.infer<
   typeof FredObservationsResponseSchema
 >;
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const NONFARM_PAYROLLS_SERIES_ID = "PAYEMS";
 
 export async function getNonfarmPayrolls() {
@@ -58,7 +60,7 @@ export async function getNonfarmPayrolls() {
     fredSeries<FredSeriesResponse>(NONFARM_PAYROLLS_SERIES_ID),
     fredObservations<FredObservationsResponse>(
       NONFARM_PAYROLLS_SERIES_ID,
-      "36",
+      apiLimit,
     ),
   ]);
 

@@ -1,5 +1,6 @@
 import { fredObservations, fredSearch, fredSeries } from "../../collectors/fred/fred.fetch.js";
 import { z } from "zod";
+import "dotenv/config";
 
 
 
@@ -61,12 +62,13 @@ export const FredSeriesSchema = z.object({
 
 
 
+const apiLimit = process.env.FRED_API_LIMIT!;
 const LABOR_FORCE_PARTICIPATION_SERIES_ID = "CIVPART";
 
 export async function getLaborForceParticipation() {
   const [series, observations] = await Promise.all([
     fredSeries<FredSeriesResponse>(LABOR_FORCE_PARTICIPATION_SERIES_ID),
-    fredObservations<FredObservationsResponse>(LABOR_FORCE_PARTICIPATION_SERIES_ID, "36"),
+    fredObservations<FredObservationsResponse>(LABOR_FORCE_PARTICIPATION_SERIES_ID, apiLimit),
   ]);
 
   const latest = observations.observations[0];
