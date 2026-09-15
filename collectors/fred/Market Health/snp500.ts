@@ -3,7 +3,7 @@ import {
     fredSeries,
   } from "../fred.fetch.js";
   
-  import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred.types.js";
+  import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
   
   const SERIES_ID = "SP500";

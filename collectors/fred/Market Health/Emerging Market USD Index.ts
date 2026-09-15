@@ -6,7 +6,7 @@ import {
   import type {
     FredObservationsResponse,
     FredSeriesResponse,
-  } from "../../../types/fred.types.js";
+  } from "../../../types/fred/fred.types.js";
   
   const SERIES_ID = "DTWEXEMEGS";
   const INDICATOR = "emerging_market_usd_index";

@@ -7,7 +7,7 @@ import {
 import type {
   FredObservationsResponse,
   FredSeriesResponse,
-} from "../../../types/fred.types.js";
+} from "../../../types/fred/fred.types.js";
 
 const apiLimit = process.env.FRED_API_LIMIT!;
 

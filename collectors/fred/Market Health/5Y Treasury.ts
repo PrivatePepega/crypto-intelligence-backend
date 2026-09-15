@@ -6,7 +6,7 @@ import {
   import type {
     FredObservationsResponse,
     FredSeriesResponse,
-  } from "../../../types/fred.types.js";
+  } from "../../../types/fred/fred.types.js";
   
   const SERIES_ID = "DGS5";
   const INDICATOR = "5y_treasury";

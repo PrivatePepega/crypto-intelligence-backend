@@ -5,12 +5,12 @@ import {
 } from "../fred.fetch.js";
 import { z } from "zod";
 import "dotenv/config";
-import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred.types.js";
+import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
 
 
 
-const apiLimit = process.env.FRED_API_LIMIT!
+const apiLimit = process.env.FRED_API_LIMIT!;
 
 const TWO_YEAR_TREASURY_YIELD_SERIES_ID = "DGS2";
 

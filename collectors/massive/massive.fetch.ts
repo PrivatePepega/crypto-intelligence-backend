@@ -32,3 +32,4 @@ export async function getTreasuryYields(
   ) {
     return massiveFetch<MassiveResponse<FundingCondition>>("/fed/v1/funding-conditions", params);
   }
+
