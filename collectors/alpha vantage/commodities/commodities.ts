@@ -5,7 +5,17 @@ import {
 } from "../../../types/alphaVantage/alphaVantage.types.js";
 import { normalizeCommodityData } from "../../../utils/alphaVantage/normalizerCommodities.js";
 
-const COMMODITIES = [
+
+type Commodity = {
+  name: string;
+  function: string;
+  interval: "daily" | "monthly";
+  type: "price" | "value";
+  unit: string;
+  symbol?: string;
+};
+
+const COMMODITIES: Commodity[] = [
     {
       name: "gold",
       function: "GOLD_SILVER_HISTORY",
@@ -14,55 +24,59 @@ const COMMODITIES = [
       type: "price",
       unit: "dollars per troy ounce",
     },
-    {
-      name: "silver",
-      function: "GOLD_SILVER_HISTORY",
-      symbol: "SILVER",
-      interval: "daily",
-      type: "price",
-      unit: "dollars per troy ounce",
-    },
-    {
-      name: "wti",
-      function: "WTI",
-      interval: "daily",
-      type: "value",
-      unit: "dollars per barrel",
-    },
-    {
-      name: "brent",
-      function: "BRENT",
-      interval: "daily",
-      type: "value",
-      unit: "dollars per barrel",
-    },
-    {
-      name: "natural_gas",
-      function: "NATURAL_GAS",
-      interval: "daily",
-      type: "value",
-      unit: "dollars per million BTU",
-    },
-    {
-      name: "copper",
-      function: "COPPER",
-      interval: "monthly",
-      type: "value",
-      unit: "dollar per metric ton",
-    },
-    {
-      name: "aluminum",
-      function: "ALUMINUM",
-      interval: "monthly",
-      type: "value",
-      unit: "unknown to test",
-    },
+    // {
+    //   name: "silver",
+    //   function: "GOLD_SILVER_HISTORY",
+    //   symbol: "SILVER",
+    //   interval: "daily",
+    //   type: "price",
+    //   unit: "dollars per troy ounce",
+    // },
+    // {
+    //   name: "wti",
+    //   function: "WTI",
+    //   interval: "daily",
+    //   type: "value",
+    //   unit: "dollars per barrel",
+    // },
+    // {
+    //   name: "brent",
+    //   function: "BRENT",
+    //   interval: "daily",
+    //   type: "value",
+    //   unit: "dollars per barrel",
+    // },
+    // {
+    //   name: "natural_gas",
+    //   function: "NATURAL_GAS",
+    //   interval: "daily",
+    //   type: "value",
+    //   unit: "dollars per million BTU",
+    // },
+    // {
+    //   name: "copper",
+    //   function: "COPPER",
+    //   interval: "monthly",
+    //   type: "value",
+    //   unit: "dollar per metric ton",
+    // },
+    // {
+    //   name: "aluminum",
+    //   function: "ALUMINUM",
+    //   interval: "monthly",
+    //   type: "value",
+    //   unit: "dollar per metric ton",
+    // },
   ];
 
 const delay = (ms: number) =>
   new Promise((resolve) => setTimeout(resolve, ms));
 
-export async function getCommodityData() {
+type CommodityDataMode = "latest" | "full";
+
+export async function getCommodityData(
+  mode: CommodityDataMode,
+) {
   const results = [];
 
   for (const commodity of COMMODITIES) {
@@ -81,12 +95,18 @@ export async function getCommodityData() {
         ? commodityPriceResponseSchema.parse(result)
         : commodityValueResponseSchema.parse(result);
 
-    const normalizedData = normalizeCommodityData(
-      parsedData,
-      commodity.name,
-    );
+        const normalizedData = normalizeCommodityData(
+          parsedData,
+          commodity.name,
+          commodity.interval,
+        );
 
-    results.push(...normalizedData);
+    const data =
+      mode === "latest"
+        ? normalizedData.slice(0, 3)
+        : normalizedData;
+
+    results.push(...data);
 
     await delay(1100);
   }

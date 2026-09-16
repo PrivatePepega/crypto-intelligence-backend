@@ -16,6 +16,8 @@ import type {
         high: Number(values["2. high"]),
         low: Number(values["3. low"]),
         close: Number(values["4. close"]),
+        interval: "daily",
+        timing: "end_of_day",
       }));
     });
   }

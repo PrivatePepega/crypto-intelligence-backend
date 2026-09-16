@@ -14,7 +14,7 @@ const alphaVantageMacro = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await getCommodityData()
+      const data = await getCommodityData("latest")
 
   
       res.json({
