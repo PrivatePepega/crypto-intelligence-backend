@@ -1,87 +1,81 @@
+import "dotenv/config";
+
 import {
   fredObservations,
   fredSeries,
 } from "../fred.fetch.js";
-import { z } from "zod";
-import "dotenv/config";
-import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
+import type {
+  FredObservationsResponse,
+  FredSeriesResponse,
+} from "../../../types/fred/fred.types.js";
 
-
-
+type FredDataMode = "full" | "latest";
 
 const apiLimit = process.env.FRED_API_LIMIT!;
+
 const PPI_SERIES_ID = "PPIACO";
 
-export async function getPpi() {
+export async function getPpi(
+  mode: FredDataMode,
+) {
   const [series, observations] = await Promise.all([
     fredSeries<FredSeriesResponse>(PPI_SERIES_ID),
-
     fredObservations<FredObservationsResponse>(
       PPI_SERIES_ID,
       apiLimit,
     ),
   ]);
 
-  const latest = observations.observations[0];
-  const previous = observations.observations[1];
+  const seriesData = series.seriess[0];
 
-  if (!latest) {
-    throw new Error("FRED returned no PPI observations");
-  }
-
-  if (!previous) {
+  if (!seriesData) {
     throw new Error(
-      "FRED returned fewer than two PPI observations",
+      "FRED returned no PPI series data",
     );
   }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no PPI observations",
+    );
+  }
+
+  const parseValue = (value: string | null): number | null => {
+    if (value === null || value === ".") {
+      return null;
+    }
+
+    return Number(Number(value).toFixed(2));
+  };
+
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value: parseValue(observation.value),
+    }),
+  );
+
+  const historical =
+    mode === "latest"
+      ? normalizedObservations.find(
+          (observation) => observation.value !== null,
+        ) ?? null
+      : null;
 
   return {
     indicator: "ppi",
     seriesId: PPI_SERIES_ID,
-
-    current: {
-      value:
-        latest.value === null
-          ? null
-          : Number(Number(latest.value).toFixed(2)),
-
-      previousValue:
-        previous.value === null
-          ? null
-          : Number(Number(previous.value).toFixed(2)),
-
-      change:
-        latest.value === null || previous.value === null
-          ? null
-          : Number(
-              (
-                Number(latest.value) -
-                Number(previous.value)
-              ).toFixed(2),
-            ),
-
-      unit: "index",
-      frequency: "monthly",
-      observedAt: latest.date,
-    },
-
-    history: {
-      frequency: "monthly",
-      aggregation: "none",
-      unit: "index",
-
-      observations: observations.observations.map(
-        (observation) => ({
-          date: observation.date,
-          value:
-            observation.value === null
-              ? null
-              : Number(Number(observation.value).toFixed(2)),
-        }),
-      ),
-    },
-
-    series: series.seriess[0],
+    frequency: seriesData.frequency,
+    aggregation: "none",
+    unit: "index",
+    observations: normalizedObservations,
+    historical,
+    series: seriesData,
   };
 }

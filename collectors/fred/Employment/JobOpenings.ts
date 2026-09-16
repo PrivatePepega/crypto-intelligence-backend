@@ -2,35 +2,73 @@ import {
   fredObservations,
   fredSeries,
 } from "../fred.fetch.js";
-import { z } from "zod";
-import "dotenv/config";
-import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
+import "dotenv/config";
+
+import type {
+  FredObservationsResponse,
+  FredSeriesResponse,
+} from "../../../types/fred/fred.types.js";
+
+type FredDataMode = "full" | "latest";
 
 const apiLimit = process.env.FRED_API_LIMIT!;
+
 const JOB_OPENINGS_SERIES_ID = "JTSJOL";
 
-export async function getJobOpenings() {
+export async function getJobOpenings(mode: FredDataMode) {
   const [series, observations] = await Promise.all([
     fredSeries<FredSeriesResponse>(JOB_OPENINGS_SERIES_ID),
-    fredObservations<FredObservationsResponse>(JOB_OPENINGS_SERIES_ID, apiLimit),
+    fredObservations<FredObservationsResponse>(
+      JOB_OPENINGS_SERIES_ID,
+      apiLimit,
+    ),
   ]);
-  const latest = observations.observations[0];
-  const previous = observations.observations[1];
-  if (!latest) throw new Error("FRED returned no job openings observations");
-  if (!previous) throw new Error("FRED returned fewer than two job openings observations");
+
+  const seriesData = series.seriess[0];
+
+  if (!seriesData) {
+    throw new Error(
+      "FRED returned no job openings series data",
+    );
+  }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no job openings observations",
+    );
+  }
+
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value:
+        observation.value === null
+          ? null
+          : Number(Number(observation.value).toFixed(2)),
+    }),
+  );
+
+  const historical =
+    mode === "latest"
+      ? normalizedObservations.find(
+          (observation) => observation.value !== null,
+        ) ?? null
+      : null;
+
   return {
-    indicator: "job_openings", seriesId: JOB_OPENINGS_SERIES_ID,
-    current: {
-      value: latest.value === null ? null : Number(Number(latest.value).toFixed(2)),
-      previousValue: previous.value === null ? null : Number(Number(previous.value).toFixed(2)),
-      change: latest.value === null || previous.value === null ? null : Number((Number(latest.value) - Number(previous.value)).toFixed(2)),
-      unit: "thousands_of_job_openings", frequency: "monthly", observedAt: latest.date,
-    },
-    history: {
-      frequency: "monthly", aggregation: "none", unit: "thousands_of_job_openings",
-      observations: observations.observations.map((observation) => ({ date: observation.date, value: observation.value === null ? null : Number(Number(observation.value).toFixed(2)) })),
-    },
-    series: series.seriess[0],
+    indicator: "job_openings",
+    seriesId: JOB_OPENINGS_SERIES_ID,
+    frequency: seriesData.frequency,
+    aggregation: "average",
+    unit: "thousands_of_job_openings",
+    observations: normalizedObservations,
+    historical,
+    series: seriesData,
   };
 }

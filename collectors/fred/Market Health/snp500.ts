@@ -1,77 +1,106 @@
+import "dotenv/config";
+
 import {
-    fredObservations,
-    fredSeries,
-  } from "../fred.fetch.js";
-  
-  import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
+  fredObservations,
+  fredSeries,
+} from "../fred.fetch.js";
 
-  
-  const SERIES_ID = "SP500";
-  const INDICATOR = "sp500";
-  
-  const parseValue = (value: string | null): number | null => {
-    if (value === null || value === ".") return null;
-  
-    return Number(Number(value).toFixed(2));
-  };
+import type {
+  FredObservationsResponse,
+  FredSeriesResponse,
+} from "../../../types/fred/fred.types.js";
 
-  const apiLimit = process.env.FRED_API_LIMIT!
+type FredDataMode = "full" | "latest";
 
-  export async function getSp500() {
-    const [series, currentObservations, historicalObservations] =
-      await Promise.all([
-        fredSeries<FredSeriesResponse>(SERIES_ID),
-  
-        // Native daily observations for current value
-        fredObservations<FredObservationsResponse>(
-          SERIES_ID,
-          "10",
-        ),
-  
-        // Monthly average history
-        fredObservations<FredObservationsResponse>(
-          SERIES_ID,
-          apiLimit,
-          "m",
-          "avg",
-        ),
-      ]);
-  
-    const latest = currentObservations.observations[0];
-    const previous = currentObservations.observations[1];
-    const seriesData = series.seriess[0]!;
-  
-    const latestValue = parseValue(latest?.value ?? null);
-    const previousValue = parseValue(previous?.value ?? null);
-  
-    return {
-      indicator: INDICATOR,
-      seriesId: SERIES_ID,
-  
-      current: {
-        value: latestValue,
-        previousValue,
-        change:
-          latestValue === null || previousValue === null
-            ? null
-            : Number((latestValue - previousValue).toFixed(2)),
-        unit: seriesData.units,
-        frequency: seriesData.frequency,
-        observedAt: latest?.date ?? null,
-      },
-  
-      history: {
-        frequency: "Monthly",
-        aggregation: "average",
-        unit: seriesData.units,
-        observations: historicalObservations.observations.map(
-          (observation) => ({
-            date: observation.date,
-            value: parseValue(observation.value),
-          }),
-        ),
-      },
-  
-      series: seriesData,
-    };
+const SERIES_ID = "SP500";
+const INDICATOR = "sp500";
+
+const apiLimit = process.env.FRED_API_LIMIT!;
+
+const parseValue = (value: string | null): number | null => {
+  if (value === null || value === ".") {
+    return null;
   }
+
+  return Number(Number(value).toFixed(2));
+};
+
+export async function getSp500(
+  mode: FredDataMode,
+) {
+  const [series, observations] = await Promise.all([
+    fredSeries<FredSeriesResponse>(SERIES_ID),
+    fredObservations<FredObservationsResponse>(
+      SERIES_ID,
+      mode === "latest" ? "10" : apiLimit,
+      ...(mode === "full" ? ["m", "avg"] : []),
+    ),
+  ]);
+
+  const seriesData = series.seriess[0];
+
+  if (!seriesData) {
+    throw new Error(
+      "FRED returned no S&P 500 series data",
+    );
+  }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no S&P 500 observations",
+    );
+  }
+
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value: parseValue(observation.value),
+    }),
+  );
+
+  let historical = null;
+
+  if (mode === "latest") {
+    const monthlyObservations =
+      await fredObservations<FredObservationsResponse>(
+        SERIES_ID,
+        apiLimit,
+        "m",
+        "avg",
+      );
+
+    const latestCompletedMonthlyObservation =
+      monthlyObservations.observations.find(
+        (observation) =>
+          parseValue(observation.value) !== null,
+      );
+
+    historical = latestCompletedMonthlyObservation
+      ? {
+          date: latestCompletedMonthlyObservation.date,
+          value: parseValue(
+            latestCompletedMonthlyObservation.value,
+          ),
+        }
+      : null;
+  }
+
+  return {
+    indicator: INDICATOR,
+    seriesId: SERIES_ID,
+    frequency:
+      mode === "latest"
+        ? seriesData.frequency
+        : "Monthly",
+    aggregation: "average",
+    unit: seriesData.units,
+    observations: normalizedObservations,
+    historical,
+    series: seriesData,
+  };
+}

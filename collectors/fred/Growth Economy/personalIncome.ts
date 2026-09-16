@@ -4,43 +4,47 @@ import {
   fredObservations,
   fredSeries,
 } from "../fred.fetch.js";
+
 import type {
   FredObservationsResponse,
   FredSeriesResponse,
 } from "../../../types/fred/fred.types.js";
 
+type FredDataMode = "full" | "latest";
+
 const apiLimit = process.env.FRED_API_LIMIT!;
 
 const PERSONAL_INCOME_SERIES_ID = "PI";
 
-export async function getPersonalIncome() {
+export async function getPersonalIncome(
+  mode: FredDataMode,
+) {
   const [series, observations] = await Promise.all([
-    fredSeries<FredSeriesResponse>(PERSONAL_INCOME_SERIES_ID),
+    fredSeries<FredSeriesResponse>(
+      PERSONAL_INCOME_SERIES_ID,
+    ),
     fredObservations<FredObservationsResponse>(
       PERSONAL_INCOME_SERIES_ID,
       apiLimit,
     ),
   ]);
 
-  const latest = observations.observations[0];
-  const previous = observations.observations[1];
   const seriesData = series.seriess[0];
-
-  if (!latest) {
-    throw new Error(
-      "FRED returned no personal income observations",
-    );
-  }
-
-  if (!previous) {
-    throw new Error(
-      "FRED returned fewer than two personal income observations",
-    );
-  }
 
   if (!seriesData) {
     throw new Error(
       "FRED returned no personal income series data",
+    );
+  }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no personal income observations",
     );
   }
 
@@ -52,37 +56,28 @@ export async function getPersonalIncome() {
     return Number(Number(value).toFixed(2));
   };
 
-  const latestValue = parseValue(latest.value);
-  const previousValue = parseValue(previous.value);
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value: parseValue(observation.value),
+    }),
+  );
+
+  const historical =
+    mode === "latest"
+      ? normalizedObservations.find(
+          (observation) => observation.value !== null,
+        ) ?? null
+      : null;
 
   return {
     indicator: "personal_income",
     seriesId: PERSONAL_INCOME_SERIES_ID,
-
-    current: {
-      value: latestValue,
-      previousValue,
-      change:
-        latestValue === null || previousValue === null
-          ? null
-          : Number((latestValue - previousValue).toFixed(2)),
-      unit: seriesData.units,
-      frequency: seriesData.frequency,
-      observedAt: latest.date,
-    },
-
-    history: {
-      frequency: seriesData.frequency,
-      aggregation: "none",
-      unit: seriesData.units,
-      observations: observations.observations.map(
-        (observation) => ({
-          date: observation.date,
-          value: parseValue(observation.value),
-        }),
-      ),
-    },
-
+    frequency: seriesData.frequency,
+    aggregation: "average",
+    unit: seriesData.units,
+    observations: normalizedObservations,
+    historical,
     series: seriesData,
   };
 }

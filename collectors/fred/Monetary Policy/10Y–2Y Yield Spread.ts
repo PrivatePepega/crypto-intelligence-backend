@@ -1,81 +1,94 @@
+import "dotenv/config";
 
 import {
   fredObservations,
   fredSeries,
 } from "../fred.fetch.js";
-import { z } from "zod";
-import "dotenv/config";
-import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
+import type {
+  FredObservationsResponse,
+  FredSeriesResponse,
+} from "../../../types/fred/fred.types.js";
 
-
-
-
+type FredDataMode = "full" | "latest";
 
 const apiLimit = process.env.FRED_API_LIMIT!;
+
 const TEN_YEAR_SERIES_ID = "DGS10";
 const TWO_YEAR_SERIES_ID = "DGS2";
 
-export async function getTenTwoYearYieldSpread() {
+const parseValue = (value: string | null): number | null => {
+  if (value === null || value === ".") {
+    return null;
+  }
+
+  return Number(Number(value).toFixed(2));
+};
+
+export async function getTenTwoYearYieldSpread(
+  mode: FredDataMode,
+) {
   const [
     tenYearSeries,
     twoYearSeries,
-    tenYearDaily,
-    twoYearDaily,
-    tenYearWeekly,
-    twoYearWeekly,
+    tenYearObservations,
+    twoYearObservations,
   ] = await Promise.all([
     fredSeries<FredSeriesResponse>(TEN_YEAR_SERIES_ID),
     fredSeries<FredSeriesResponse>(TWO_YEAR_SERIES_ID),
-
-    // Overview
-    fredObservations<FredObservationsResponse>(TEN_YEAR_SERIES_ID, "10"),
-    fredObservations<FredObservationsResponse>(TWO_YEAR_SERIES_ID, "10"),
-
-    // Metrics
-    fredObservations<FredObservationsResponse>(TEN_YEAR_SERIES_ID, apiLimit, "w", "avg"),
-    fredObservations<FredObservationsResponse>(TWO_YEAR_SERIES_ID, apiLimit, "w", "avg"),
+    fredObservations<FredObservationsResponse>(
+      TEN_YEAR_SERIES_ID,
+      mode === "latest" ? "10" : apiLimit,
+      ...(mode === "full" ? ["w", "avg"] : []),
+    ),
+    fredObservations<FredObservationsResponse>(
+      TWO_YEAR_SERIES_ID,
+      mode === "latest" ? "10" : apiLimit,
+      ...(mode === "full" ? ["w", "avg"] : []),
+    ),
   ]);
 
-  const latest10Y = tenYearDaily.observations[0];
-  const previous10Y = tenYearDaily.observations[1];
+  const tenYearSeriesData = tenYearSeries.seriess[0];
+  const twoYearSeriesData = twoYearSeries.seriess[0];
 
-  const latest2Y = twoYearDaily.observations[0];
-  const previous2Y = twoYearDaily.observations[1];
-
-  if (!latest10Y || !latest2Y) {
-    throw new Error("FRED returned no current observations");
+  if (!tenYearSeriesData || !twoYearSeriesData) {
+    throw new Error(
+      "FRED returned no Treasury yield series data",
+    );
   }
 
-  if (!previous10Y || !previous2Y) {
-    throw new Error("FRED returned fewer than two observations");
+  const selectedTenYearObservations =
+    mode === "latest"
+      ? tenYearObservations.observations.slice(0, 3)
+      : tenYearObservations.observations;
+
+  const selectedTwoYearObservations =
+    mode === "latest"
+      ? twoYearObservations.observations.slice(0, 3)
+      : twoYearObservations.observations;
+
+  if (
+    selectedTenYearObservations.length === 0 ||
+    selectedTwoYearObservations.length === 0
+  ) {
+    throw new Error(
+      "FRED returned no Treasury yield observations",
+    );
   }
 
-  const currentSpread =
-    Number(latest10Y.value) - Number(latest2Y.value);
-
-  const previousSpread =
-    Number(previous10Y.value) - Number(previous2Y.value);
-
-  const tenYearWeeklyMap = new Map(
-    tenYearWeekly.observations.map((observation) => [
+  const twoYearMap = new Map(
+    selectedTwoYearObservations.map((observation) => [
       observation.date,
-      observation.value,
+      parseValue(observation.value),
     ]),
   );
 
-  const twoYearWeeklyMap = new Map(
-    twoYearWeekly.observations.map((observation) => [
-      observation.date,
-      observation.value,
-    ]),
-  );
-
-  const history = tenYearWeekly.observations
+  const normalizedObservations = selectedTenYearObservations
     .map((observation) => {
-      const twoYearValue = twoYearWeeklyMap.get(observation.date);
+      const tenYearValue = parseValue(observation.value);
+      const twoYearValue = twoYearMap.get(observation.date);
 
-      if (observation.value === null || twoYearValue === null) {
+      if (tenYearValue === null || twoYearValue === null) {
         return {
           date: observation.date,
           value: null,
@@ -89,39 +102,90 @@ export async function getTenTwoYearYieldSpread() {
       return {
         date: observation.date,
         value: Number(
-          (
-            Number(observation.value) -
-            Number(twoYearValue)
-          ).toFixed(2),
+          (tenYearValue - twoYearValue).toFixed(2),
         ),
       };
     })
-    .filter((observation) => observation !== null);
+    .filter(
+      (
+        observation,
+      ): observation is {
+        date: string;
+        value: number | null;
+      } => observation !== null,
+    );
+
+  if (normalizedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no valid Treasury yield spread observations",
+    );
+  }
+
+  let historical = null;
+
+  if (mode === "latest") {
+    const [tenYearWeekly, twoYearWeekly] =
+      await Promise.all([
+        fredObservations<FredObservationsResponse>(
+          TEN_YEAR_SERIES_ID,
+          apiLimit,
+          "w",
+          "avg",
+        ),
+        fredObservations<FredObservationsResponse>(
+          TWO_YEAR_SERIES_ID,
+          apiLimit,
+          "w",
+          "avg",
+        ),
+      ]);
+
+    const twoYearWeeklyMap = new Map(
+      twoYearWeekly.observations.map((observation) => [
+        observation.date,
+        parseValue(observation.value),
+      ]),
+    );
+
+    historical =
+      tenYearWeekly.observations
+        .map((observation) => {
+          const tenYearValue = parseValue(observation.value);
+          const twoYearValue = twoYearWeeklyMap.get(
+            observation.date,
+          );
+
+          if (
+            tenYearValue === null ||
+            twoYearValue === null ||
+            twoYearValue === undefined
+          ) {
+            return null;
+          }
+
+          return {
+            date: observation.date,
+            value: Number(
+              (tenYearValue - twoYearValue).toFixed(2),
+            ),
+          };
+        })
+        .find((observation) => observation !== null) ?? null;
+  }
 
   return {
     indicator: "ten_two_year_yield_spread",
-
-    current: {
-      value: Number(currentSpread.toFixed(2)),
-      previousValue: Number(previousSpread.toFixed(2)),
-      change: Number(
-        (currentSpread - previousSpread).toFixed(2),
-      ),
-      unit: "percentage_points",
-      frequency: "daily",
-      observedAt: latest10Y.date,
-    },
-
-    history: {
-      frequency: "weekly",
-      aggregation: "average",
-      unit: "percentage_points",
-      observations: history,
-    },
-
+    frequency:
+      mode === "latest"
+        ? tenYearSeriesData.frequency
+        : "Weekly",
+    aggregation: "average",
+    unit: "percentage_points",
+    observations: normalizedObservations,
+    historical,
     series: {
-      primary: tenYearSeries.seriess[0],
-      secondary: twoYearSeries.seriess[0],
+      primary: tenYearSeriesData,
+      secondary: twoYearSeriesData,
     },
   };
 }

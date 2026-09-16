@@ -1,81 +1,107 @@
+import "dotenv/config";
 
 import {
   fredObservations,
   fredSeries,
 } from "../fred.fetch.js";
-import { z } from "zod";
-import "dotenv/config";
-import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
+import type {
+  FredObservationsResponse,
+  FredSeriesResponse,
+} from "../../../types/fred/fred.types.js";
 
+type FredDataMode = "full" | "latest";
 
 const apiLimit = process.env.FRED_API_LIMIT!;
+
 const TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID = "T10YIE";
 
-export async function getTenYearBreakevenInflation() {
-  const [series, dailyObservations, weeklyObservations] =
-    await Promise.all([
-      fredSeries<FredSeriesResponse>(TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID),
+export async function getTenYearBreakevenInflation(
+  mode: FredDataMode,
+) {
+  const [series, observations] = await Promise.all([
+    fredSeries<FredSeriesResponse>(
+      TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
+    ),
+    fredObservations<FredObservationsResponse>(
+      TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
+      mode === "latest" ? "10" : apiLimit,
+      ...(mode === "full" ? ["m", "avg"] : []),
+    ),
+  ]);
 
-      // Overview: current daily value + daily change
-      fredObservations<FredObservationsResponse>(
-        TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
-        "10",
-      ),
+  const seriesData = series.seriess[0];
 
-      // Metrics: weekly average history
-      fredObservations<FredObservationsResponse>(
+  if (!seriesData) {
+    throw new Error(
+      "FRED returned no ten-year breakeven inflation series data",
+    );
+  }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no ten-year breakeven inflation observations",
+    );
+  }
+
+  const parseValue = (value: string | null): number | null => {
+    if (value === null || value === ".") {
+      return null;
+    }
+
+    return Number(Number(value).toFixed(2));
+  };
+
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value: parseValue(observation.value),
+    }),
+  );
+
+  let historical = null;
+
+  if (mode === "latest") {
+    const monthlyObservations =
+      await fredObservations<FredObservationsResponse>(
         TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
         apiLimit,
         "m",
         "avg",
-      ),
-    ]);
+      );
 
-  const latest = dailyObservations.observations[0];
-  const previous = dailyObservations.observations[1];
+    const latestCompletedMonthlyObservation =
+      monthlyObservations.observations.find(
+        (observation) =>
+          parseValue(observation.value) !== null,
+      );
 
-  if (!latest) {
-    throw new Error("FRED returned no daily observations");
-  }
-
-  if (!previous) {
-    throw new Error("FRED returned fewer than two daily observations");
+    historical = latestCompletedMonthlyObservation
+      ? {
+          date: latestCompletedMonthlyObservation.date,
+          value: parseValue(
+            latestCompletedMonthlyObservation.value,
+          ),
+        }
+      : null;
   }
 
   return {
     indicator: "ten_year_breakeven_inflation",
     seriesId: TEN_YEAR_BREAKEVEN_INFLATION_SERIES_ID,
-
-    current: {
-      value: Number(Number(latest.value).toFixed(2)),
-      previousValue: Number(Number(previous.value).toFixed(2)),
-      change: Number(
-        (
-          Number(latest.value) -
-          Number(previous.value)
-        ).toFixed(2),
-      ),
-      unit: "percent",
-      frequency: "daily",
-      observedAt: latest.date,
-    },
-
-    history: {
-      frequency: "monthly",
-      aggregation: "average",
-      unit: "percent",
-      observations: weeklyObservations.observations.map(
-        (observation) => ({
-          date: observation.date,
-          value:
-            observation.value === null
-              ? null
-              : Number(Number(observation.value).toFixed(2)),
-        }),
-      ),
-    },
-
-    series: series.seriess[0],
+    frequency:
+      mode === "latest"
+        ? seriesData.frequency
+        : "Monthly",
+    aggregation: "average",
+    unit: "percent",
+    observations: normalizedObservations,
+    historical,
+    series: seriesData,
   };
 }

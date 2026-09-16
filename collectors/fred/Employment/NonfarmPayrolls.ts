@@ -2,15 +2,23 @@ import {
   fredObservations,
   fredSeries,
 } from "../fred.fetch.js";
-import { z } from "zod";
-import "dotenv/config";
-import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
+import "dotenv/config";
+
+import type {
+  FredObservationsResponse,
+  FredSeriesResponse,
+} from "../../../types/fred/fred.types.js";
+
+type FredDataMode = "full" | "latest";
 
 const apiLimit = process.env.FRED_API_LIMIT!;
+
 const NONFARM_PAYROLLS_SERIES_ID = "PAYEMS";
 
-export async function getNonfarmPayrolls() {
+export async function getNonfarmPayrolls(
+  mode: FredDataMode,
+) {
   const [series, observations] = await Promise.all([
     fredSeries<FredSeriesResponse>(NONFARM_PAYROLLS_SERIES_ID),
     fredObservations<FredObservationsResponse>(
@@ -19,52 +27,50 @@ export async function getNonfarmPayrolls() {
     ),
   ]);
 
-  const latest = observations.observations[0];
-  const previous = observations.observations[1];
+  const seriesData = series.seriess[0];
 
-  if (!latest) {
-    throw new Error("FRED returned no nonfarm payroll observations");
-  }
-
-  if (!previous) {
+  if (!seriesData) {
     throw new Error(
-      "FRED returned fewer than two nonfarm payroll observations",
+      "FRED returned no nonfarm payroll series data",
     );
   }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no nonfarm payroll observations",
+    );
+  }
+
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value:
+        observation.value === null
+          ? null
+          : Number(Number(observation.value).toFixed(2)),
+    }),
+  );
+
+  const historical =
+    mode === "latest"
+      ? normalizedObservations.find(
+          (observation) => observation.value !== null,
+        ) ?? null
+      : null;
 
   return {
     indicator: "nonfarm_payrolls",
     seriesId: NONFARM_PAYROLLS_SERIES_ID,
-
-    current: {
-      value:
-        latest.value === null ? null : Number(Number(latest.value).toFixed(2)),
-      previousValue:
-        previous.value === null
-          ? null
-          : Number(Number(previous.value).toFixed(2)),
-      change:
-        latest.value === null || previous.value === null
-          ? null
-          : Number((Number(latest.value) - Number(previous.value)).toFixed(2)),
-      unit: "thousands_of_persons",
-      frequency: "monthly",
-      observedAt: latest.date,
-    },
-
-    history: {
-      frequency: "monthly",
-      aggregation: "none",
-      unit: "thousands_of_persons",
-      observations: observations.observations.map((observation) => ({
-        date: observation.date,
-        value:
-          observation.value === null
-            ? null
-            : Number(Number(observation.value).toFixed(2)),
-      })),
-    },
-
-    series: series.seriess[0],
+    frequency: seriesData.frequency,
+    aggregation: "average",
+    unit: "thousands_of_persons",
+    observations: normalizedObservations,
+    historical,
+    series: seriesData,
   };
 }

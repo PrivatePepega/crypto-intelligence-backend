@@ -1,76 +1,107 @@
+import "dotenv/config";
 
 import {
   fredObservations,
   fredSeries,
 } from "../fred.fetch.js";
-import { z } from "zod";
-import "dotenv/config";
-import type { FredObservationsResponse, FredSeriesResponse } from "../../../types/fred/fred.types.js";
 
+import type {
+  FredObservationsResponse,
+  FredSeriesResponse,
+} from "../../../types/fred/fred.types.js";
 
-
+type FredDataMode = "full" | "latest";
 
 const apiLimit = process.env.FRED_API_LIMIT!;
 
 const TWO_YEAR_TREASURY_YIELD_SERIES_ID = "DGS2";
 
-export async function getTwoYearTreasuryYield() {
-    const [series, dailyObservations, weeklyObservations] =
-      await Promise.all([
-        fredSeries<FredSeriesResponse>(
-          TWO_YEAR_TREASURY_YIELD_SERIES_ID,
-        ),
-  
-        // Overview: current daily value + daily change
-        fredObservations<FredObservationsResponse>(
-          TWO_YEAR_TREASURY_YIELD_SERIES_ID,
-          "10",
-        ),
-  
-        // Metrics: weekly average history
-        fredObservations<FredObservationsResponse>(
-          TWO_YEAR_TREASURY_YIELD_SERIES_ID,
-          apiLimit,
-          "w",
-          "avg",
-        ),
-      ]);
-    const latest = dailyObservations.observations[0];
-    const previous = dailyObservations.observations[1];
-  
-    if (!latest) {
-      throw new Error("FRED returned no daily observations");
-    }
-  
-    if (!previous) {
-      throw new Error("FRED returned fewer than two daily observations");
-    }
-  
-    return {
-      indicator: "two_year_treasury_yield",
-      seriesId: TWO_YEAR_TREASURY_YIELD_SERIES_ID,
-  
-      current: {
-        value: Number(latest.value),
-        previousValue: Number(previous.value),
-        change: Number(latest.value) - Number(previous.value),
-        unit: "percent",
-        frequency: "daily",
-        observedAt: latest.date,
-      },
-  
-      history: {
-        frequency: "weekly",
-        aggregation: "average",
-        unit: "percent",
-        observations: weeklyObservations.observations.map(
-          (observation) => ({
-            date: observation.date,
-            value: Number(observation.value),
-          }),
-        ),
-      },
-  
-      series: series.seriess[0],
-    };
+const parseValue = (value: string | null): number | null => {
+  if (value === null || value === ".") {
+    return null;
   }
+
+  return Number(Number(value).toFixed(2));
+};
+
+export async function getTwoYearTreasuryYield(
+  mode: FredDataMode,
+) {
+  const [series, observations] = await Promise.all([
+    fredSeries<FredSeriesResponse>(
+      TWO_YEAR_TREASURY_YIELD_SERIES_ID,
+    ),
+    fredObservations<FredObservationsResponse>(
+      TWO_YEAR_TREASURY_YIELD_SERIES_ID,
+      mode === "latest" ? "10" : apiLimit,
+      ...(mode === "full" ? ["w", "avg"] : []),
+    ),
+  ]);
+
+  const seriesData = series.seriess[0];
+
+  if (!seriesData) {
+    throw new Error(
+      "FRED returned no 2Y Treasury yield series data",
+    );
+  }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no 2Y Treasury yield observations",
+    );
+  }
+
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value: parseValue(observation.value),
+    }),
+  );
+
+  let historical = null;
+
+  if (mode === "latest") {
+    const weeklyObservations =
+      await fredObservations<FredObservationsResponse>(
+        TWO_YEAR_TREASURY_YIELD_SERIES_ID,
+        apiLimit,
+        "w",
+        "avg",
+      );
+
+    const latestCompletedWeeklyObservation =
+      weeklyObservations.observations.find(
+        (observation) =>
+          parseValue(observation.value) !== null,
+      );
+
+    historical = latestCompletedWeeklyObservation
+      ? {
+          date: latestCompletedWeeklyObservation.date,
+          value: parseValue(
+            latestCompletedWeeklyObservation.value,
+          ),
+        }
+      : null;
+  }
+
+  return {
+    indicator: "two_year_treasury_yield",
+    seriesId: TWO_YEAR_TREASURY_YIELD_SERIES_ID,
+    frequency:
+      mode === "latest"
+        ? seriesData.frequency
+        : "Weekly",
+    aggregation: "average",
+    unit: "percent",
+    observations: normalizedObservations,
+    historical,
+    series: seriesData,
+  };
+}

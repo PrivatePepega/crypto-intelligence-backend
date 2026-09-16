@@ -10,51 +10,42 @@ import type {
   FredSeriesResponse,
 } from "../../../types/fred/fred.types.js";
 
+type FredDataMode = "full" | "latest";
+
 const apiLimit = process.env.FRED_API_LIMIT!;
 
 const INITIAL_JOBLESS_CLAIMS_SERIES_ID = "ICSA";
 
-export async function getInitialJoblessClaims() {
-  const [series, currentObservations, historicalObservations] =
-    await Promise.all([
-      fredSeries<FredSeriesResponse>(
-        INITIAL_JOBLESS_CLAIMS_SERIES_ID,
-      ),
+export async function getInitialJoblessClaims(
+  mode: FredDataMode,
+) {
+  const [series, observations] = await Promise.all([
+    fredSeries<FredSeriesResponse>(
+      INITIAL_JOBLESS_CLAIMS_SERIES_ID,
+    ),
+    fredObservations<FredObservationsResponse>(
+      INITIAL_JOBLESS_CLAIMS_SERIES_ID,
+      apiLimit,
+      ...(mode === "full" ? ["m", "avg"] : []),
+    ),
+  ]);
 
-      // Native weekly observations for current value/change
-      fredObservations<FredObservationsResponse>(
-        INITIAL_JOBLESS_CLAIMS_SERIES_ID,
-        apiLimit,
-      ),
-
-      // Monthly average observations for history
-      fredObservations<FredObservationsResponse>(
-        INITIAL_JOBLESS_CLAIMS_SERIES_ID,
-        apiLimit,
-        "m",
-        "avg",
-      ),
-    ]);
-
-  const latest = currentObservations.observations[0];
-  const previous = currentObservations.observations[1];
   const seriesData = series.seriess[0];
-
-  if (!latest) {
-    throw new Error(
-      "FRED returned no initial jobless claims observations",
-    );
-  }
-
-  if (!previous) {
-    throw new Error(
-      "FRED returned fewer than two initial jobless claims observations",
-    );
-  }
 
   if (!seriesData) {
     throw new Error(
       "FRED returned no initial jobless claims series data",
+    );
+  }
+
+  const selectedObservations =
+    mode === "latest"
+      ? observations.observations.slice(0, 3)
+      : observations.observations;
+
+  if (selectedObservations.length === 0) {
+    throw new Error(
+      "FRED returned no initial jobless claims observations",
     );
   }
 
@@ -66,37 +57,51 @@ export async function getInitialJoblessClaims() {
     return Number(Number(value).toFixed(2));
   };
 
-  const latestValue = parseValue(latest.value);
-  const previousValue = parseValue(previous.value);
+  const normalizedObservations = selectedObservations.map(
+    (observation) => ({
+      date: observation.date,
+      value: parseValue(observation.value),
+    }),
+  );
+
+  let historical = null;
+
+  if (mode === "latest") {
+    const monthlyObservations =
+      await fredObservations<FredObservationsResponse>(
+        INITIAL_JOBLESS_CLAIMS_SERIES_ID,
+        apiLimit,
+        "m",
+        "avg",
+      );
+
+    const latestCompletedMonthlyObservation =
+      monthlyObservations.observations.find(
+        (observation) =>
+          parseValue(observation.value) !== null,
+      );
+
+    historical = latestCompletedMonthlyObservation
+      ? {
+          date: latestCompletedMonthlyObservation.date,
+          value: parseValue(
+            latestCompletedMonthlyObservation.value,
+          ),
+        }
+      : null;
+  }
 
   return {
     indicator: "initial_jobless_claims",
     seriesId: INITIAL_JOBLESS_CLAIMS_SERIES_ID,
-
-    current: {
-      value: latestValue,
-      previousValue,
-      change:
-        latestValue === null || previousValue === null
-          ? null
-          : Number((latestValue - previousValue).toFixed(2)),
-      unit: seriesData.units,
-      frequency: seriesData.frequency,
-      observedAt: latest.date,
-    },
-
-    history: {
-      frequency: "Monthly",
-      aggregation: "average",
-      unit: seriesData.units,
-      observations: historicalObservations.observations.map(
-        (observation) => ({
-          date: observation.date,
-          value: parseValue(observation.value),
-        }),
-      ),
-    },
-
+    frequency:
+      mode === "latest"
+        ? seriesData.frequency
+        : "monthly",
+    aggregation: "average",
+    unit: seriesData.units,
+    observations: normalizedObservations,
+    historical,
     series: seriesData,
   };
 }
