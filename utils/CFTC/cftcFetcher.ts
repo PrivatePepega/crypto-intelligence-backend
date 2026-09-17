@@ -5,6 +5,8 @@ const CFTC_TFF_URL =
 
 const CFTC_TFF_CONTRACT_CODES = [
   "133741", // Bitcoin
+  "146021", // 50 ETH Ether Cash Settled
+  "146022", // 0.1 ETH Micro Ethe
   "13874+",  // S&P 500 Consolidated
   "20974+",  // Nasdaq-100 Consolidated
   "042601",  // UST 2Y Note
