@@ -1,6 +1,8 @@
 import type { Request, Response, NextFunction, Errback } from 'express'
 import { fetchIGSentiment } from '../collectors/IG/sentimentFetcher.js';
 import { fetchBinancePositioning } from '../collectors/binance/binanceFetcher.js';
+import { fetchFearGreed } from '../collectors/alternative.me/fearGreedIndex.js';
+import { fetchAltcoinSeason } from '../collectors/coinMarketCap/altSeasonIndex.js';
 
 
 
@@ -15,7 +17,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await fetchBinancePositioning("full")
+      const data = await fetchAltcoinSeason("full")
 
   
       res.json({
