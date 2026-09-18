@@ -1,8 +1,5 @@
 import type { Request, Response, NextFunction, Errback } from 'express'
-import { fetchIGSentiment } from '../collectors/IG/sentimentFetcher.js';
-import { fetchBinancePositioning } from '../collectors/binance/binanceFetcher.js';
-import { fetchFearGreed } from '../collectors/alternative.me/fearGreedIndex.js';
-import { fetchAltcoinSeason } from '../collectors/coinMarketCap/altSeasonIndex.js';
+
 import { fetchCoinMarketCapGlobalMetrics } from '../collectors/coinMarketCap/cryptoMarketStats.js';
 
 
