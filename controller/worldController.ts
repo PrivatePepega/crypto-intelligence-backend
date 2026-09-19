@@ -1,6 +1,7 @@
 import type { Request, Response, NextFunction, Errback } from 'express'
 
 import { fetchCoinMarketCapGlobalMetrics } from '../collectors/coinMarketCap/cryptoMarketStats.js';
+import { collectAllSosoValueEtfs } from '../collectors/sosoValue/spotETFfetcher.js';
 
 
 
@@ -15,7 +16,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await fetchCoinMarketCapGlobalMetrics()
+      const data = await collectAllSosoValueEtfs("latest")
 
   
       res.json({
