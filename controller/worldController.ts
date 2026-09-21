@@ -2,6 +2,8 @@ import type { Request, Response, NextFunction, Errback } from 'express'
 
 
 
+
+
 import { collectAllSosoValueEtfs } from '../collectors/sosoValue/spotETFfetcher.js';
 
 
