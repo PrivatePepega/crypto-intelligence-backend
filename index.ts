@@ -6,7 +6,7 @@ import morgan from "morgan";
 import type { Request, Response, NextFunction, Errback } from 'express'
 import routes from "./routes/index.js"
 import cookieParser from "cookie-parser";
-
+import "./config/database.js";
 
 
 const app = express();

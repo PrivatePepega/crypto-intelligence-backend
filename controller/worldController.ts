@@ -5,6 +5,7 @@ import type { Request, Response, NextFunction, Errback } from 'express'
 
 
 import { collectAllSosoValueEtfs } from '../collectors/sosoValue/spotETFfetcher.js';
+import { getInitialJoblessClaims } from '../collectors/fred/Employment/InitialJoblessClaims.js';
 
 
 
@@ -19,7 +20,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await collectAllSosoValueEtfs("latest")
+      const data = await getInitialJoblessClaims("full")
 
   
       res.json({
