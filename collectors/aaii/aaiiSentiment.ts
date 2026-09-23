@@ -1,6 +1,6 @@
-import { fetchAaiiSentimentFile } from "../../collectors/aaii/fetchAaiiSentiment.js";
-import { parseAaiiSentiment } from "./parseAaiiSentiment.js";
-import { normalizeAaiiSentiment } from "./normalizeAaiiSentiment.js";
+import { fetchAaiiSentimentFile } from "../../utils/aaii/fetchAaiiSentiment.js";
+import { parseAaiiSentiment } from "../../utils/aaii/parseAaiiSentiment.js";
+import { normalizeAaiiSentiment } from "../../utils/aaii/normalizeAaiiSentiment.js";
 
 type AaiiDataMode = "full" | "latest";
 

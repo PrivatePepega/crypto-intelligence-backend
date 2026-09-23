@@ -22,6 +22,8 @@ export const indicatorSchema = z.object({
   relationTags: z.array(z.string()),
 
   status: z.enum(["active", "inactive"]),
+
+  embedding: z.array(z.number()).length(1536).nullable(),
 });
 
 export type Indicator = z.infer<typeof indicatorSchema>;

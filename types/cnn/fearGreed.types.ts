@@ -45,23 +45,21 @@ import { z } from "zod";
   });
   
   export const cnnFearGreedResponseSchema = z.object({
-    data: z.object({
-      fear_and_greed: cnnCurrentFearGreedSchema,
-      fear_and_greed_historical: cnnHistoricalIndicatorSchema,
+    fear_and_greed: cnnCurrentFearGreedSchema,
+    fear_and_greed_historical: cnnHistoricalIndicatorSchema,
   
-      market_momentum_sp500: cnnHistoricalIndicatorSchema,
-      market_momentum_sp125: cnnHistoricalIndicatorSchema,
+    market_momentum_sp500: cnnHistoricalIndicatorSchema,
+    market_momentum_sp125: cnnHistoricalIndicatorSchema,
   
-      stock_price_strength: cnnHistoricalIndicatorSchema,
-      stock_price_breadth: cnnHistoricalIndicatorSchema,
+    stock_price_strength: cnnHistoricalIndicatorSchema,
+    stock_price_breadth: cnnHistoricalIndicatorSchema,
   
-      put_call_options: cnnHistoricalIndicatorSchema,
+    put_call_options: cnnHistoricalIndicatorSchema,
   
-      market_volatility_vix: cnnHistoricalIndicatorSchema,
-      market_volatility_vix_50: cnnHistoricalIndicatorSchema,
+    market_volatility_vix: cnnHistoricalIndicatorSchema,
+    market_volatility_vix_50: cnnHistoricalIndicatorSchema,
   
-      safe_haven_demand: cnnHistoricalIndicatorSchema,
-    }),
+    safe_haven_demand: cnnHistoricalIndicatorSchema,
   });
   
   export type CnnFearGreedResponse = z.infer<

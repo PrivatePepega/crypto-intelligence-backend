@@ -13,13 +13,13 @@ const BINANCE_API = "https://fapi.binance.com";
 
 const SYMBOLS = [
   "BTCUSDT",
-  "ETHUSDT",
-  "SOLUSDT",
-  "BNBUSDT",
-  "XRPUSDT",
-  "DOGEUSDT",
-  "LINKUSDT",
-  "AAVEUSDT",
+  // "ETHUSDT",
+  // "SOLUSDT",
+  // "BNBUSDT",
+  // "XRPUSDT",
+  // "DOGEUSDT",
+  // "LINKUSDT",
+  // "AAVEUSDT",
 ] as const;
 
 type FetchMode = "full" | "latest";

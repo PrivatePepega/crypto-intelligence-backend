@@ -74,7 +74,7 @@ export async function getHousingStarts(
     indicator: "housing_starts",
     seriesId: HOUSING_STARTS_SERIES_ID,
     frequency: seriesData.frequency,
-    aggregation: "none",
+    aggregation: "average",
     unit: seriesData.units,
     observations: normalizedObservations,
     historical,

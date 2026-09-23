@@ -30,37 +30,37 @@ const CNN_FEAR_GREED_URL =
     const cnn_fear_greed = normalizeCnnIndicator(
       "cnn_fear_greed",
       "score",
-      data.data.fear_and_greed_historical,
+      data.fear_and_greed_historical,
     );
   
     const cnn_market_momentum_sp125 = normalizeCnnIndicator(
       "cnn_market_momentum_sp125",
       "index",
-      data.data.market_momentum_sp125,
+      data.market_momentum_sp125,
     );
   
     const cnn_stock_price_breadth = normalizeCnnIndicator(
       "cnn_stock_price_breadth",
       "index",
-      data.data.stock_price_breadth,
+      data.stock_price_breadth,
     );
   
     const cnn_put_call_options = normalizeCnnIndicator(
       "cnn_put_call_options",
       "ratio",
-      data.data.put_call_options,
+      data.put_call_options,
     );
   
     const cnn_market_volatility_vix_50 = normalizeCnnIndicator(
       "cnn_market_volatility_vix_50",
       "index",
-      data.data.market_volatility_vix_50,
+      data.market_volatility_vix_50,
     );
   
     const cnn_safe_haven_demand = normalizeCnnIndicator(
       "cnn_safe_haven_demand",
       "ratio",
-      data.data.safe_haven_demand,
+      data.safe_haven_demand,
     );
   
     const indicators = {

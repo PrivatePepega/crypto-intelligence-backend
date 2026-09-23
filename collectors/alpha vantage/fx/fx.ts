@@ -3,8 +3,8 @@ import { fxResponsesSchema } from "../../../types/alphaVantage/alphaVantage.type
 import { normalizeFxData } from "../../../utils/alphaVantage/normalizeFx.js";
 
 const FX_PAIRS = [
-  { from: "EUR", to: "USD" },
-  // { from: "GBP", to: "USD" },
+  // { from: "EUR", to: "USD" },
+  { from: "GBP", to: "USD" },
   // { from: "USD", to: "JPY" },
   // { from: "USD", to: "CHF" },
   // { from: "AUD", to: "USD" },
