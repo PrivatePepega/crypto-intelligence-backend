@@ -1,7 +1,7 @@
 import type { Indicator } from "../../../types/database/indicator/indicatorMetaData.types.js";
 
 export const sp500: Indicator = {
-  id: "sp500",
+  id: "sp_five_zero_zero",
   name: "S&P 500",
   domain: "Macroeconomics",
   category: "Financial Markets",

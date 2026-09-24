@@ -1,7 +1,7 @@
 import type { Indicator } from "../../../types/database/indicator/indicatorMetaData.types.js";
 
 export const russell2000: Indicator = {
-  id: "russell_2000",
+  id: "russell_two_zero_zero_zero",
   name: "Russell 2000 Index",
   domain: "Financial Markets",
   category: "Equity Index",

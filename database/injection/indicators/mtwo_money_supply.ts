@@ -1,7 +1,7 @@
 import type { Indicator } from "../../../types/database/indicator/indicatorMetaData.types.js";
 
 export const m2MoneySupply: Indicator = {
-  id: "m2_money_supply",
+  id: "m_two_money_supply",
   name: "M2 Money Supply",
   domain: "Macroeconomics",
   category: "Money & Liquidity",

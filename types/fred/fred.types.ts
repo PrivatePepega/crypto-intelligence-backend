@@ -52,3 +52,22 @@ export type FredSeriesResponse = z.infer<
 export type FredObservationsResponse = z.infer<
   typeof FredObservationsResponseSchema
 >;
+
+export interface NormalizedIndicatorObservation {
+  date: string;
+  value: number | null;
+}
+
+export interface NormalizedIndicatorData {
+  indicator: string;
+  seriesId: string;
+  frequency: string;
+  aggregation: string;
+  unit: string;
+  observations: NormalizedIndicatorObservation[];
+  historical: {
+    date: string;
+    value: number | null;
+  } | null;
+  series: FredSeriesResponse["seriess"][number];
+}

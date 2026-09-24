@@ -1,7 +1,7 @@
 import type { Indicator } from "../../../types/database/indicator/indicatorMetaData.types.js";
 
 export const igSp500: Indicator = {
-  id: "ig_sp500",
+  id: "ig_sp_five_zero_zero",
   name: "IG S&P 500 Retail Positioning",
   domain: "Financial Markets",
   category: "Retail Positioning",

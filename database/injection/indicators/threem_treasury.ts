@@ -1,7 +1,7 @@
 import type { Indicator } from "../../../types/database/indicator/indicatorMetaData.types.js";
 
 export const threeMonthTreasury: Indicator = {
-  id: "3m_treasury",
+  id: "three_m_treasury",
   name: "3-Month Treasury Bill Rate",
   domain: "Macroeconomics",
   category: "Interest Rates",
