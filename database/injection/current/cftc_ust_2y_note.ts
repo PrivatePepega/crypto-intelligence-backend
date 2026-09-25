@@ -499,8 +499,7 @@ export const injectCftcUst2yNoteLatest = async (data: CftcUst2yNoteData) => {
           $61, $62,
 
           $63, $64,
-          $65, $66,
-          $67
+          $65, $66
         )
         ON CONFLICT (indicator)
         DO UPDATE SET

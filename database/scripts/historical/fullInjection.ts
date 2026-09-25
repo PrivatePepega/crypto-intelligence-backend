@@ -118,6 +118,12 @@ import { injectCftcBitcoinFull } from "../../injection/historical/cftc_bitcoin.j
 import { injectCftcSp500Full } from "../../injection/historical/cftc_sp500.js";
 import { injectCftcNasdaqFull } from "../../injection/historical/cftc_nasdaq.js";
 import { injectCftcUst2yNoteFull } from "../../injection/historical/cftc_ust_2y_note.js";
+import { injectCftcUst10yNoteFull } from "../../injection/historical/cftc_ust_10y_note.js";
+import { injectCftcEuroFxFull } from "../../injection/historical/cftc_euro_fx.js";
+import { injectCftcJapaneseYenFull } from "../../injection/historical/cftc_japanese_yen.js";
+import { injectCftcUsdIndexFull } from "../../injection/historical/cftc_usd_index.js";
+import { injectCftcEthereumFull } from "../../injection/historical/cftc_ethereum.js";
+import { injectCftcMicroEthereumFull } from "../../injection/historical/cftc_micro_ethereum.js";
 
 
 
@@ -505,16 +511,22 @@ const runFullInjection = async () => {
     // ETHER, S&P 500, UST, FX, USD INDEX, ...). Each injector narrows the
     // shared payload by observation.contract, so adding another CFTC market
     // must reuse this call rather than fetching again.
-    const cftcTff = await getCftcTff("full");
+    // const cftcTff = await getCftcTff("full");
 
-    if (cftcTff.observations.length === 0) {
-      throw new Error("No CFTC TFF observations found");
-    }
+    // if (cftcTff.observations.length === 0) {
+    //   throw new Error("No CFTC TFF observations found");
+    // }
 
-    await injectCftcBitcoinFull(cftcTff);
-    await injectCftcSp500Full(cftcTff);
-    await injectCftcNasdaqFull(cftcTff);
-    await injectCftcUst2yNoteFull(cftcTff);
+    // await injectCftcBitcoinFull(cftcTff);
+    // await injectCftcSp500Full(cftcTff);
+    // await injectCftcNasdaqFull(cftcTff);
+    // await injectCftcUst2yNoteFull(cftcTff);
+    // await injectCftcUst10yNoteFull(cftcTff);
+    // await injectCftcEuroFxFull(cftcTff);
+    // await injectCftcJapaneseYenFull(cftcTff);
+    // await injectCftcUsdIndexFull(cftcTff);
+    // await injectCftcEthereumFull(cftcTff);
+    // await injectCftcMicroEthereumFull(cftcTff);
 
 
 
