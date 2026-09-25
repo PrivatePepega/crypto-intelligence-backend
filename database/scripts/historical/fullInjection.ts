@@ -90,6 +90,9 @@ import { get5yTreasury } from "../../../collectors/fred/Market Health/5Y Treasur
 import { injectFiveYearTreasuryFull } from "../../injection/historical/five_year_treasury.js";
 import { getFxData } from "../../../collectors/alpha vantage/fx/fx.js";
 import { getCommodityData } from "../../../collectors/alpha vantage/commodities/commodities.js";
+import { getCnnFearGreed } from "../../../collectors/cnn/cnnFearGreed.js";
+import { getAaiiSentiment } from "../../../collectors/aaii/aaiiSentiment.js";
+import { getCftcTff } from "../../../collectors/CFTC/getCftc.js";
 import { injectEurUsdFull } from "../../injection/historical/eur_usd.js";
 import { injectGbpUsdFull } from "../../injection/historical/gbp_usd.js";
 import { injectUsdJpyFull } from "../../injection/historical/usd_jpy.js";
@@ -98,6 +101,23 @@ import { injectAudUsdFull } from "../../injection/historical/aud_usd.js";
 import { injectUsdCadFull } from "../../injection/historical/usd_cad.js";
 import { injectNzdUsdFull } from "../../injection/historical/nzd_usd.js";
 import { injectGoldFull } from "../../injection/historical/gold.js";
+import { injectSilverFull } from "../../injection/historical/silver.js";
+import { injectWtiFull } from "../../injection/historical/wti.js";
+import { injectBrentFull } from "../../injection/historical/brent.js";
+import { injectNaturalGasFull } from "../../injection/historical/natural_gas.js";
+import { injectCopperFull } from "../../injection/historical/copper.js";
+import { injectAluminumFull } from "../../injection/historical/aluminum.js";
+import { injectCnnFearGreedFull } from "../../injection/historical/cnn_fear_greed.js";
+import { injectCnnMarketMomentumSp125Full } from "../../injection/historical/cnn_market_momentum_sp125.js";
+import { injectCnnStockPriceBreadthFull } from "../../injection/historical/cnn_stock_price_breadth.js";
+import { injectCnnPutCallOptionsFull } from "../../injection/historical/cnn_put_call_options.js";
+import { injectCnnMarketVolatilityVix50Full } from "../../injection/historical/cnn_market_volatility_vix_50.js";
+import { injectCnnSafeHavenDemandFull } from "../../injection/historical/cnn_safe_haven_demand.js";
+import { injectAaiiSentimentFull } from "../../injection/historical/aaii_sentiment.js";
+import { injectCftcBitcoinFull } from "../../injection/historical/cftc_bitcoin.js";
+import { injectCftcSp500Full } from "../../injection/historical/cftc_sp500.js";
+import { injectCftcNasdaqFull } from "../../injection/historical/cftc_nasdaq.js";
+import { injectCftcUst2yNoteFull } from "../../injection/historical/cftc_ust_2y_note.js";
 
 
 
@@ -238,7 +258,7 @@ const runFullInjection = async () => {
     // const fiveYearTreasury = await get5yTreasury("full")
     // await injectFiveYearTreasuryFull(fiveYearTreasury)
 
-    const { full } = await getFxData();
+    // const { full } = await getFxData();
 
     // const eurUsdObservations = full.filter(
     //   (observation) => observation.pair === "EUR/USD",
@@ -249,17 +269,17 @@ const runFullInjection = async () => {
     //   observations: eurUsdObservations,
     // })
 
-    const gbpUsdObservations = full.filter(
-      (observation) => observation.pair === "GBP/USD",
-    )
-    if (gbpUsdObservations.length === 0) {
-      throw new Error("No GBP/USD observations found")
-    }
-    await injectGbpUsdFull({
-      indicator: "gbp_usd",
-      seriesId: "GBPUSD",
-      observations: gbpUsdObservations,
-    })
+    // const gbpUsdObservations = full.filter(
+    //   (observation) => observation.pair === "GBP/USD",
+    // )
+    // if (gbpUsdObservations.length === 0) {
+    //   throw new Error("No GBP/USD observations found")
+    // }
+    // await injectGbpUsdFull({
+    //   indicator: "gbp_usd",
+    //   seriesId: "GBPUSD",
+    //   observations: gbpUsdObservations,
+    // })
 
     // const usdJpyObservations = full.filter(
     //   (observation) => observation.pair === "USD/JPY",
@@ -320,6 +340,181 @@ const runFullInjection = async () => {
     //   seriesId: "NZDUSD",
     //   observations: nzdUsdObservations,
     // })
+
+    // const { full } = await getCommodityData();
+
+    // const goldObservations = full.filter(
+    //   (observation) => observation.commodity === "gold",
+    // )
+    // if (goldObservations.length === 0) {
+    //   throw new Error("No gold observations found")
+    // }
+    // await injectGoldFull({
+    //   indicator: "gold",
+    //   seriesId: "GOLD",
+    //   observations: goldObservations,
+    // })
+
+    // const silverObservations = full.filter(
+    //   (observation) => observation.commodity === "silver",
+    // )
+    // if (silverObservations.length === 0) {
+    //   throw new Error("No silver observations found")
+    // }
+    // await injectSilverFull({
+    //   indicator: "silver",
+    //   seriesId: "SILVER",
+    //   observations: silverObservations,
+    // })
+
+    // const wtiObservations = full.filter(
+    //   (observation) => observation.commodity === "wti",
+    // )
+    // if (wtiObservations.length === 0) {
+    //   throw new Error("No WTI observations found")
+    // }
+    // await injectWtiFull({
+    //   indicator: "wti",
+    //   seriesId: "WTI",
+    //   observations: wtiObservations,
+    // })
+
+    // const brentObservations = full.filter(
+    //   (observation) => observation.commodity === "brent",
+    // )
+    // if (brentObservations.length === 0) {
+    //   throw new Error("No Brent observations found")
+    // }
+    // await injectBrentFull({
+    //   indicator: "brent",
+    //   seriesId: "BRENT",
+    //   observations: brentObservations,
+    // })
+
+    // const naturalGasObservations = full.filter(
+    //   (observation) => observation.commodity === "natural_gas",
+    // )
+    // if (naturalGasObservations.length === 0) {
+    //   throw new Error("No natural gas observations found")
+    // }
+    // await injectNaturalGasFull({
+    //   indicator: "natural_gas",
+    //   seriesId: "NATURAL_GAS",
+    //   observations: naturalGasObservations,
+    // })
+
+    // const copperObservations = full.filter(
+    //   (observation) => observation.commodity === "copper",
+    // )
+    // if (copperObservations.length === 0) {
+    //   throw new Error("No copper observations found")
+    // }
+    // await injectCopperFull({
+    //   indicator: "copper",
+    //   seriesId: "COPPER",
+    //   observations: copperObservations,
+    // })
+
+    // const aluminumObservations = full.filter(
+    //   (observation) => observation.commodity === "aluminum",
+    // )
+    // if (aluminumObservations.length === 0) {
+    //   throw new Error("No aluminum observations found")
+    // }
+    // await injectAluminumFull({
+    //   indicator: "aluminum",
+    //   seriesId: "ALUMINUM",
+    //   observations: aluminumObservations,
+    // })
+
+    // Single CNN request, reused across every CNN indicator injector below.
+    // const cnnIndicators = await getCnnFearGreed("full");
+
+    // const cnnFearGreed = cnnIndicators.cnn_fear_greed;
+    // if (!cnnFearGreed || cnnFearGreed.observations.length === 0) {
+    //   throw new Error("No CNN Fear & Greed observations found");
+    // }
+    // await injectCnnFearGreedFull(cnnFearGreed);
+
+    // const cnnMarketMomentumSp125 =
+    //   cnnIndicators.cnn_market_momentum_sp125;
+    // if (
+    //   !cnnMarketMomentumSp125 ||
+    //   cnnMarketMomentumSp125.observations.length === 0
+    // ) {
+    //   throw new Error(
+    //     "No CNN Market Momentum S&P 125 observations found",
+    //   );
+    // }
+    // await injectCnnMarketMomentumSp125Full(cnnMarketMomentumSp125);
+
+    // const cnnStockPriceBreadth = cnnIndicators.cnn_stock_price_breadth;
+    // if (
+    //   !cnnStockPriceBreadth ||
+    //   cnnStockPriceBreadth.observations.length === 0
+    // ) {
+    //   throw new Error(
+    //     "No CNN Stock Price Breadth observations found",
+    //   );
+    // }
+    // await injectCnnStockPriceBreadthFull(cnnStockPriceBreadth);
+
+    // const cnnPutCallOptions = cnnIndicators.cnn_put_call_options;
+    // if (
+    //   !cnnPutCallOptions ||
+    //   cnnPutCallOptions.observations.length === 0
+    // ) {
+    //   throw new Error(
+    //     "No CNN Put/Call Options observations found",
+    //   );
+    // }
+    // await injectCnnPutCallOptionsFull(cnnPutCallOptions);
+
+    // const cnnMarketVolatilityVix50 =
+    //   cnnIndicators.cnn_market_volatility_vix_50;
+    // if (
+    //   !cnnMarketVolatilityVix50 ||
+    //   cnnMarketVolatilityVix50.observations.length === 0
+    // ) {
+    //   throw new Error(
+    //     "No CNN Market Volatility VIX 50 observations found",
+    //   );
+    // }
+    // await injectCnnMarketVolatilityVix50Full(cnnMarketVolatilityVix50);
+
+    // const cnnSafeHavenDemand = cnnIndicators.cnn_safe_haven_demand;
+    // if (
+    //   !cnnSafeHavenDemand ||
+    //   cnnSafeHavenDemand.observations.length === 0
+    // ) {
+    //   throw new Error(
+    //     "No CNN Safe Haven Demand observations found",
+    //   );
+    // }
+    // await injectCnnSafeHavenDemandFull(cnnSafeHavenDemand);
+
+    // const aaiiSentiment = await getAaiiSentiment("full");
+
+    // if (aaiiSentiment.observations.length === 0) {
+    //   throw new Error("No AAII Sentiment observations found");
+    // }
+
+    // await injectAaiiSentimentFull(aaiiSentiment);
+
+    // Single CFTC TFF request covering all tracked markets (BITCOIN, MICRO
+    // ETHER, S&P 500, UST, FX, USD INDEX, ...). Each injector narrows the
+    // shared payload by observation.contract, so adding another CFTC market
+    // must reuse this call rather than fetching again.
+    const cftcTff = await getCftcTff("full");
+
+    if (cftcTff.observations.length === 0) {
+      throw new Error("No CFTC TFF observations found");
+    }
+
+    await injectCftcBitcoinFull(cftcTff);
+    await injectCftcSp500Full(cftcTff);
+    await injectCftcNasdaqFull(cftcTff);
+    await injectCftcUst2yNoteFull(cftcTff);
 
 
 

@@ -19,13 +19,17 @@ export const injectGoldLatest = async (data: GoldData) => {
   const client = await pool.connect();
 
   try {
-    const currentObservation = data.observations.find(
+    const goldObservations = data.observations.filter(
       (observation) =>
-        observation.value !== null && Number.isFinite(observation.value),
+        observation.commodity === "gold" &&
+        observation.value !== null &&
+        Number.isFinite(observation.value),
     );
 
+    const currentObservation = goldObservations[0];
+
     if (!currentObservation || currentObservation.value === null) {
-      throw new Error("No valid Gold current observation found");
+      throw new Error("No valid Gold observations found");
     }
 
     const currentValue = currentObservation.value;
@@ -186,7 +190,7 @@ export const injectGoldLatest = async (data: GoldData) => {
       `,
       [
         data.indicator,
-        data.seriesId,
+        "GOLD",
 
         currentValue,
         previousDayValue,
@@ -217,7 +221,7 @@ export const injectGoldLatest = async (data: GoldData) => {
       commodity: currentObservation.commodity,
       current: {
         value: currentValue,
-        previousValue: previousDayValue,
+        previousDayValue,
         netChange,
         percentChange,
         movingAverage3d,

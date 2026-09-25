@@ -24,7 +24,8 @@ export const injectGoldFull = async (data: GoldData) => {
     for (const observation of data.observations) {
       if (
         observation.value === null ||
-        !Number.isFinite(observation.value)
+        !Number.isFinite(observation.value) ||
+        observation.commodity !== "gold"
       ) {
         continue;
       }
@@ -33,19 +34,22 @@ export const injectGoldFull = async (data: GoldData) => {
         `
           INSERT INTO historical.gold (
             date,
+            series_id,
             value,
             commodity,
             interval
           )
-          VALUES ($1, $2, $3, $4)
+          VALUES ($1, $2, $3, $4, $5)
           ON CONFLICT (date)
           DO UPDATE SET
+            series_id = EXCLUDED.series_id,
             value = EXCLUDED.value,
             commodity = EXCLUDED.commodity,
             interval = EXCLUDED.interval
         `,
         [
           observation.date,
+          "GOLD",
           observation.value,
           observation.commodity,
           observation.interval,

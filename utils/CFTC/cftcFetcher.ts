@@ -4,16 +4,16 @@ const CFTC_TFF_URL =
   "https://publicreporting.cftc.gov/resource/gpe5-46if.json";
 
 const CFTC_TFF_CONTRACT_CODES = [
-  "133741", // Bitcoin
-  "146021", // 50 ETH Ether Cash Settled
-  "146022", // 0.1 ETH Micro Ethe
+  "133741", // BITCOIN
+  "146021", // ETHER CASH SETTLED
+  "146022", // MICRO ETHER
   "13874+",  // S&P 500 Consolidated
-  "20974+",  // Nasdaq-100 Consolidated
-  "042601",  // UST 2Y Note
-  "043602",  // UST 10Y Note
-  "099741",  // Euro FX
-  "097741",  // Japanese Yen
-  "098662",  // USD Index
+  "20974+",  // NASDAQ-100 Consolidated
+  "042601",  // UST 2Y NOTE
+  "043602",  // UST 10Y NOTE
+  "099741",  // EURO FX
+  "097741",  // JAPANESE YEN
+  "098662",  // USD INDEX
 ] as const;
 
 export async function fetchCftcTff() {
