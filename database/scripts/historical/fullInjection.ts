@@ -42,6 +42,62 @@ import { getIndustrialProduction } from "../../../collectors/fred/Growth Economy
 import { injectIndustrialProductionFull } from "../../injection/historical/industrial_production.js";
 import { getRetailSales } from "../../../collectors/fred/Growth Economy/retailSales.js";
 import { injectRetailSalesFull } from "../../injection/historical/retail_sales.js";
+import { getPersonalIncome } from "../../../collectors/fred/Growth Economy/personalIncome.js";
+import { injectPersonalIncomeFull } from "../../injection/historical/personal_income.js";
+import { getM2MoneySupply } from "../../../collectors/fred/Liquidity Financial Conditions/M2MoneySupply.js";
+import { injectM2MoneySupplyFull } from "../../injection/historical/m2_money_supply.js";
+import { getFedTotalAssets } from "../../../collectors/fred/Liquidity Financial Conditions/FedTotalAssets.js";
+import { injectFedTotalAssetsFull } from "../../injection/historical/fed_total_assets.js";
+import { getReserveBalances } from "../../../collectors/fred/Liquidity Financial Conditions/ReserveBalances.js";
+import { injectReserveBalancesFull } from "../../injection/historical/reserve_balances.js";
+import { getReverseRepoUsage } from "../../../collectors/fred/Liquidity Financial Conditions/ReverseRepoUsage.js";
+import { injectReverseRepoUsageFull } from "../../injection/historical/reverse_repo_usage.js";
+import { getVix } from "../../../collectors/fred/Risk Sentiment/VIX.js";
+import { injectVixFull } from "../../injection/historical/vix.js";
+import { getHighYieldCreditSpread } from "../../../collectors/fred/Risk Sentiment/High-YieldCreditSpread.js";
+import { injectHighYieldCreditSpreadFull } from "../../injection/historical/high_yield_credit_spread.js";
+import { getInvestmentGradeCreditSpread } from "../../../collectors/fred/Risk Sentiment/Investment-GradeCreditSpread.js";
+import { injectInvestmentGradeCreditSpreadFull } from "../../injection/historical/investment_grade_credit_spread.js";
+import { getConsumerSentiment } from "../../../collectors/fred/Risk Sentiment/ConsumerSentiment.js";
+import { injectConsumerSentimentFull } from "../../injection/historical/consumer_sentiment.js";
+import { getHousingStarts } from "../../../collectors/fred/Housing/HousingStarts.js";
+import { injectHousingStartsFull } from "../../injection/historical/housing_starts.js";
+import { getBuildingPermits } from "../../../collectors/fred/Housing/BuildingPermits.js";
+import { injectBuildingPermitsFull } from "../../injection/historical/building_permits.js";
+import { getExistingHomeSales } from "../../../collectors/fred/Housing/ExistingHomeSales.js";
+import { injectExistingHomeSalesFull } from "../../injection/historical/existing_home_sales.js";
+import { getMortgageRate } from "../../../collectors/fred/Housing/MortgageRate.js";
+import { injectMortgageRateFull } from "../../injection/historical/mortgage_rate.js";
+import { getHomePriceIndex } from "../../../collectors/fred/Housing/HomePriceIndex.js";
+import { injectHomePriceIndexFull } from "../../injection/historical/home_price_index.js";
+import { getSp500 } from "../../../collectors/fred/Market Health/snp500.js";
+import { injectSp500Full } from "../../injection/historical/sp500.js";
+import { getNasdaqComposite } from "../../../collectors/fred/Market Health/NASDAQComposite.js";
+import { injectNasdaqCompositeFull } from "../../injection/historical/nasdaq_composite.js";
+import { getDowJones } from "../../../collectors/fred/Market Health/DowJones.js";
+import { injectDowJonesFull } from "../../injection/historical/dow_jones.js";
+import { getBroadUsdIndex } from "../../../collectors/fred/Market Health/Broad USD Index.js";
+import { injectBroadUsdIndexFull } from "../../injection/historical/broad_usd_index.js";
+import { getRealBroadUsdIndex } from "../../../collectors/fred/Market Health/Real Broad USD Index.js";
+import { injectRealBroadUsdIndexFull } from "../../injection/historical/real_broad_usd_index.js";
+import { getAdvancedEconomyUsdIndex } from "../../../collectors/fred/Market Health/Advanced Economy USD Index.js";
+import { injectAdvancedEconomyUsdIndexFull } from "../../injection/historical/advanced_economy_usd_index.js";
+import { getEmergingMarketUsdIndex } from "../../../collectors/fred/Market Health/Emerging Market USD Index.js";
+import { injectEmergingMarketUsdIndexFull } from "../../injection/historical/emerging_market_usd_index.js";
+import { get3mTreasury } from "../../../collectors/fred/Market Health/3M Treasury.js";
+import { injectThreeMonthTreasuryFull } from "../../injection/historical/three_month_treasury.js";
+import { get5yTreasury } from "../../../collectors/fred/Market Health/5Y Treasury.js";
+import { injectFiveYearTreasuryFull } from "../../injection/historical/five_year_treasury.js";
+import { getFxData } from "../../../collectors/alpha vantage/fx/fx.js";
+import { getCommodityData } from "../../../collectors/alpha vantage/commodities/commodities.js";
+import { injectEurUsdFull } from "../../injection/historical/eur_usd.js";
+import { injectGbpUsdFull } from "../../injection/historical/gbp_usd.js";
+import { injectUsdJpyFull } from "../../injection/historical/usd_jpy.js";
+import { injectUsdChfFull } from "../../injection/historical/usd_chf.js";
+import { injectAudUsdFull } from "../../injection/historical/aud_usd.js";
+import { injectUsdCadFull } from "../../injection/historical/usd_cad.js";
+import { injectNzdUsdFull } from "../../injection/historical/nzd_usd.js";
+import { injectGoldFull } from "../../injection/historical/gold.js";
 
 
 
@@ -110,8 +166,161 @@ const runFullInjection = async () => {
     // const industrialProduction = await getIndustrialProduction("full")
     // await injectIndustrialProductionFull(industrialProduction)
 
-    const retailSales = await getRetailSales("full")
-    await injectRetailSalesFull(retailSales)
+    // const retailSales = await getRetailSales("full")
+    // await injectRetailSalesFull(retailSales)
+
+    // const personalIncome = await getPersonalIncome("full")
+    // await injectPersonalIncomeFull(personalIncome)
+
+    // const m2MoneySupply = await getM2MoneySupply("full")
+    // await injectM2MoneySupplyFull(m2MoneySupply)
+
+    // const fedTotalAssets = await getFedTotalAssets("full")
+    // await injectFedTotalAssetsFull(fedTotalAssets)
+
+    // const reserveBalances = await getReserveBalances("full")
+    // await injectReserveBalancesFull(reserveBalances)
+
+    // const reverseRepoUsage = await getReverseRepoUsage("full")
+    // await injectReverseRepoUsageFull(reverseRepoUsage)
+
+    // const vix = await getVix("full")
+    // await injectVixFull(vix)
+
+    // const highYieldCreditSpread = await getHighYieldCreditSpread("full")
+    // await injectHighYieldCreditSpreadFull(highYieldCreditSpread)
+
+    // const investmentGradeCreditSpread = await getInvestmentGradeCreditSpread("full")
+    // await injectInvestmentGradeCreditSpreadFull(investmentGradeCreditSpread)
+
+    // const consumerSentiment = await getConsumerSentiment("full")
+    // await injectConsumerSentimentFull(consumerSentiment)
+
+    // const housingStarts = await getHousingStarts("full")
+    // await injectHousingStartsFull(housingStarts)
+
+    // const buildingPermits = await getBuildingPermits("full")
+    // await injectBuildingPermitsFull(buildingPermits)
+
+    // const existingHomeSales = await getExistingHomeSales("full")
+    // await injectExistingHomeSalesFull(existingHomeSales)
+
+    // const mortgageRate = await getMortgageRate("full")
+    // await injectMortgageRateFull(mortgageRate)
+
+    // const homePriceIndex = await getHomePriceIndex("full")
+    // await injectHomePriceIndexFull(homePriceIndex)
+
+    // const sp500 = await getSp500("full")
+    // await injectSp500Full(sp500)
+
+    // const nasdaqComposite = await getNasdaqComposite("full")
+    // await injectNasdaqCompositeFull(nasdaqComposite)
+
+    // const dowJones = await getDowJones("full")
+    // await injectDowJonesFull(dowJones)
+
+    // const broadUsdIndex = await getBroadUsdIndex("full")
+    // await injectBroadUsdIndexFull(broadUsdIndex)
+
+    // const realBroadUsdIndex = await getRealBroadUsdIndex("full")
+    // await injectRealBroadUsdIndexFull(realBroadUsdIndex)
+
+    // const advancedEconomyUsdIndex = await getAdvancedEconomyUsdIndex("full")
+    // await injectAdvancedEconomyUsdIndexFull(advancedEconomyUsdIndex)
+
+    // const emergingMarketUsdIndex = await getEmergingMarketUsdIndex("full")
+    // await injectEmergingMarketUsdIndexFull(emergingMarketUsdIndex)
+
+    // const threeMonthTreasury = await get3mTreasury("full")
+    // await injectThreeMonthTreasuryFull(threeMonthTreasury)
+
+    // const fiveYearTreasury = await get5yTreasury("full")
+    // await injectFiveYearTreasuryFull(fiveYearTreasury)
+
+    const { full } = await getFxData();
+
+    // const eurUsdObservations = full.filter(
+    //   (observation) => observation.pair === "EUR/USD",
+    // )
+    // await injectEurUsdFull({
+    //   indicator: "eur_usd",
+    //   seriesId: "EURUSD",
+    //   observations: eurUsdObservations,
+    // })
+
+    const gbpUsdObservations = full.filter(
+      (observation) => observation.pair === "GBP/USD",
+    )
+    if (gbpUsdObservations.length === 0) {
+      throw new Error("No GBP/USD observations found")
+    }
+    await injectGbpUsdFull({
+      indicator: "gbp_usd",
+      seriesId: "GBPUSD",
+      observations: gbpUsdObservations,
+    })
+
+    // const usdJpyObservations = full.filter(
+    //   (observation) => observation.pair === "USD/JPY",
+    // )
+    // if (usdJpyObservations.length === 0) {
+    //   throw new Error("No USD/JPY observations found")
+    // }
+    // await injectUsdJpyFull({
+    //   indicator: "usd_jpy",
+    //   seriesId: "USDJPY",
+    //   observations: usdJpyObservations,
+    // })
+
+    // const usdChfObservations = full.filter(
+    //   (observation) => observation.pair === "USD/CHF",
+    // )
+    // if (usdChfObservations.length === 0) {
+    //   throw new Error("No USD/CHF observations found")
+    // }
+    // await injectUsdChfFull({
+    //   indicator: "usd_chf",
+    //   seriesId: "USDCHF",
+    //   observations: usdChfObservations,
+    // })
+
+    // const audUsdObservations = full.filter(
+    //   (observation) => observation.pair === "AUD/USD",
+    // )
+    // if (audUsdObservations.length === 0) {
+    //   throw new Error("No AUD/USD observations found")
+    // }
+    // await injectAudUsdFull({
+    //   indicator: "aud_usd",
+    //   seriesId: "AUDUSD",
+    //   observations: audUsdObservations,
+    // })
+
+    // const usdCadObservations = full.filter(
+    //   (observation) => observation.pair === "USD/CAD",
+    // )
+    // if (usdCadObservations.length === 0) {
+    //   throw new Error("No USD/CAD observations found")
+    // }
+    // await injectUsdCadFull({
+    //   indicator: "usd_cad",
+    //   seriesId: "USDCAD",
+    //   observations: usdCadObservations,
+    // })
+
+    // const nzdUsdObservations = full.filter(
+    //   (observation) => observation.pair === "NZD/USD",
+    // )
+    // if (nzdUsdObservations.length === 0) {
+    //   throw new Error("No NZD/USD observations found")
+    // }
+    // await injectNzdUsdFull({
+    //   indicator: "nzd_usd",
+    //   seriesId: "NZDUSD",
+    //   observations: nzdUsdObservations,
+    // })
+
 
 
 

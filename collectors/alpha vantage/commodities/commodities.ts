@@ -74,10 +74,9 @@ const delay = (ms: number) =>
 
 type CommodityDataMode = "latest" | "full";
 
-export async function getCommodityData(
-  mode: CommodityDataMode,
-) {
-  const results = [];
+export async function getCommodityData() {
+  const full = [];
+  const latest = [];
 
   for (const commodity of COMMODITIES) {
     const result = await alphaVantageFetch({
@@ -95,21 +94,20 @@ export async function getCommodityData(
         ? commodityPriceResponseSchema.parse(result)
         : commodityValueResponseSchema.parse(result);
 
-        const normalizedData = normalizeCommodityData(
-          parsedData,
-          commodity.name,
-          commodity.interval,
-        );
+    const normalizedData = normalizeCommodityData(
+      parsedData,
+      commodity.name,
+      commodity.interval,
+    );
 
-    const data =
-      mode === "latest"
-        ? normalizedData.slice(0, 3)
-        : normalizedData;
-
-    results.push(...data);
+    full.push(...normalizedData);
+    latest.push(...normalizedData.slice(0, 3));
 
     await delay(1100);
   }
 
-  return results;
+  return {
+    full,
+    latest,
+  };
 }

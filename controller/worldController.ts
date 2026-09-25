@@ -4,6 +4,8 @@ import { getFederalFundsRate } from '../collectors/fred/Monetary Policy/federalF
 import { getTwoYearTreasuryYield } from '../collectors/fred/Monetary Policy/2yTreasuryYield.js';
 import { getTenTwoYearYieldSpread } from '../collectors/fred/Monetary Policy/10Y–2Y Yield Spread.js';
 import { getUnemploymentRate } from '../collectors/fred/Employment/UnemploymentRate.js';
+import { getFxData } from '../collectors/alpha vantage/fx/fx.js';
+import { getCommodityData } from '../collectors/alpha vantage/commodities/commodities.js';
 
 
 
@@ -21,7 +23,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await getUnemploymentRate("full")
+      const data = await getFxData()
 
   
       res.json({
