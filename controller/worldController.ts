@@ -9,6 +9,8 @@ import { getCommodityData } from '../collectors/alpha vantage/commodities/commod
 import { getCnnFearGreed } from '../collectors/cnn/cnnFearGreed.js';
 import { getAaiiSentiment } from '../collectors/aaii/aaiiSentiment.js';
 import { getCftcTff } from '../collectors/CFTC/getCftc.js';
+import { getRussell2000 } from '../collectors/FMP/russell2000Provider.js';
+import { fetchIGSentiment } from '../collectors/IG/sentimentFetcher.js';
 
 
 
@@ -26,7 +28,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await getCftcTff("latest")
+      const data = await fetchIGSentiment()
 
   
       res.json({

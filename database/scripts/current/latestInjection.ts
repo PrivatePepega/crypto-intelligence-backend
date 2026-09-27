@@ -76,6 +76,10 @@ import { getNasdaqComposite } from "../../../collectors/fred/Market Health/NASDA
 import { injectNasdaqCompositeLatest } from "../../injection/current/nasdaq_composite.js";
 import { getDowJones } from "../../../collectors/fred/Market Health/DowJones.js";
 import { injectDowJonesLatest } from "../../injection/current/dow_jones.js";
+import { getRussell2000 } from "../../../collectors/FMP/russell2000Provider.js";
+import { injectRussell2000Latest } from "../../injection/current/russell_2000.js";
+import { getIgSentiment } from "../../../collectors/IG/getIgSentiment.js";
+import { injectIgSp500Latest } from "../../injection/current/ig_sp500.js";
 import { getBroadUsdIndex } from "../../../collectors/fred/Market Health/Broad USD Index.js";
 import { injectBroadUsdIndexLatest } from "../../injection/current/broad_usd_index.js";
 import { getRealBroadUsdIndex } from "../../../collectors/fred/Market Health/Real Broad USD Index.js";
@@ -546,6 +550,11 @@ const runLatestInjection = async () => {
   // await injectCftcMicroEthereumLatest(cftcTff);
 
 
+  // const russell2000 = await getRussell2000("latest");
+  // await injectRussell2000Latest(russell2000);
+
+  const igSentiment = await getIgSentiment("latest");
+  await injectIgSp500Latest(igSentiment);
 
 
 

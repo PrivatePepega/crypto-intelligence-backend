@@ -176,6 +176,15 @@ export const fetchIGSentiment = async (): Promise<
         session
       );
 
+      // The response marketId is validated by the schema but was never
+      // compared to the requested one, so a mismatch would silently file the
+      // numbers under the wrong asset.
+      if (rawData.marketId !== market.marketId) {
+        console.warn(
+          `IG returned marketId "${rawData.marketId}" for requested "${market.marketId}"`,
+        );
+      }
+
       const normalizedData = normalizeIGSentiment(
         rawData,
         market.asset
