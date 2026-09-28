@@ -270,30 +270,37 @@ const runLatestInjection = async () => {
   // const fiveYearTreasury = await get5yTreasury("latest")
   // await injectFiveYearTreasuryLatest(fiveYearTreasury)
 
-  // const { latest } = await getFxData();
+  // const { latest: fxData } = await getFxData();
 
-  // const eurUsdObservation = latest.find(
+  // const eurUsdObservation = fxData.find(
   //   (observation) => observation?.pair === "EUR/USD",
   // )
+  
+  // if (!eurUsdObservation) {
+  //   throw new Error("No USD/JPY observation found")
+  // }
+
   // await injectEurUsdLatest({
   //   indicator: "eur_usd",
   //   seriesId: "EURUSD",
   //   observations: [eurUsdObservation],
   // })
 
-  // const gbpUsdObservation = latest.find(
+  // const gbpUsdObservation = fxData.find(
   //   (observation) => observation?.pair === "GBP/USD",
   // )
+
   // if (!gbpUsdObservation) {
-  //   throw new Error("No GBP/USD observation found")
+  //   throw new Error("No USD/JPY observation found")
   // }
+
   // await injectGbpUsdLatest({
   //   indicator: "gbp_usd",
   //   seriesId: "GBPUSD",
   //   observations: [gbpUsdObservation],
   // })
 
-  // const usdJpyObservation = latest.find(
+  // const usdJpyObservation = fxData.find(
   //   (observation) => observation?.pair === "USD/JPY",
   // )
   // if (!usdJpyObservation) {
@@ -305,7 +312,7 @@ const runLatestInjection = async () => {
   //   observations: [usdJpyObservation],
   // })
 
-  // const usdChfObservation = latest.find(
+  // const usdChfObservation = fxData.find(
   //   (observation) => observation?.pair === "USD/CHF",
   // )
   // if (!usdChfObservation) {
@@ -317,7 +324,7 @@ const runLatestInjection = async () => {
   //   observations: [usdChfObservation],
   // })
 
-  // const audUsdObservation = latest.find(
+  // const audUsdObservation = fxData.find(
   //   (observation) => observation?.pair === "AUD/USD",
   // )
   // if (!audUsdObservation) {
@@ -329,7 +336,7 @@ const runLatestInjection = async () => {
   //   observations: [audUsdObservation],
   // })
 
-  // const usdCadObservation = latest.find(
+  // const usdCadObservation = fxData.find(
   //   (observation) => observation?.pair === "USD/CAD",
   // )
   // if (!usdCadObservation) {
@@ -341,7 +348,7 @@ const runLatestInjection = async () => {
   //   observations: [usdCadObservation],
   // })
 
-  // const nzdUsdObservation = latest.find(
+  // const nzdUsdObservation = fxData.find(
   //   (observation) => observation?.pair === "NZD/USD",
   // )
   // if (!nzdUsdObservation) {
@@ -353,9 +360,9 @@ const runLatestInjection = async () => {
   //   observations: [nzdUsdObservation],
   // })
 
-  // const { latest } = await getCommodityData();
+  // const { latest: commodityData } = await getCommodityData();
 
-  // const goldObservation = latest.find(
+  // const goldObservation = commodityData.find(
   //   (observation) => observation.commodity === "gold",
   // )
   // if (!goldObservation) {
@@ -367,7 +374,7 @@ const runLatestInjection = async () => {
   //   observations: [goldObservation],
   // })
 
-  // const silverObservation = latest.find(
+  // const silverObservation = commodityData.find(
   //   (observation) => observation.commodity === "silver",
   // )
   // if (!silverObservation) {
@@ -379,7 +386,7 @@ const runLatestInjection = async () => {
   //   observations: [silverObservation],
   // })
 
-  // const wtiObservation = latest.find(
+  // const wtiObservation = commodityData.find(
   //   (observation) => observation.commodity === "wti",
   // )
   // if (!wtiObservation) {
@@ -391,7 +398,7 @@ const runLatestInjection = async () => {
   //   observations: [wtiObservation],
   // })
 
-  // const brentObservation = latest.find(
+  // const brentObservation = commodityData.find(
   //   (observation) => observation.commodity === "brent",
   // )
   // if (!brentObservation) {
@@ -403,7 +410,7 @@ const runLatestInjection = async () => {
   //   observations: [brentObservation],
   // })
 
-  // const naturalGasObservation = latest.find(
+  // const naturalGasObservation = commodityData.find(
   //   (observation) => observation.commodity === "natural_gas",
   // )
   // if (!naturalGasObservation) {
@@ -415,7 +422,7 @@ const runLatestInjection = async () => {
   //   observations: [naturalGasObservation],
   // })
 
-  // const copperObservation = latest.find(
+  // const copperObservation = commodityData.find(
   //   (observation) => observation.commodity === "copper",
   // )
   // if (!copperObservation) {
@@ -427,7 +434,7 @@ const runLatestInjection = async () => {
   //   observations: [copperObservation],
   // })
 
-  // const aluminumObservation = latest.find(
+  // const aluminumObservation = commodityData.find(
   //   (observation) => observation.commodity === "aluminum",
   // )
   // if (!aluminumObservation) {
@@ -439,9 +446,6 @@ const runLatestInjection = async () => {
   //   observations: [aluminumObservation],
   // })
 
-  // Single CNN request, reused across every CNN indicator injector below.
-  // Each indicator exposes its latest entry via `historical` (ascending order,
-  // so `find` would return the oldest observation).
   // const cnnIndicators = await getCnnFearGreed("latest");
 
   // const cnnFearGreed = cnnIndicators.cnn_fear_greed;
@@ -527,11 +531,6 @@ const runLatestInjection = async () => {
 
   // await injectAaiiSentimentLatest(aaiiSentiment);
 
-  // Single CFTC TFF request covering all tracked markets (BITCOIN, MICRO
-  // ETHER, S&P 500, UST, FX, USD INDEX, ...). Each injector narrows the
-  // shared payload by observation.contract, so adding another CFTC market
-  // must reuse this call rather than fetching again. Rows are newest-first
-  // ($order: report_date desc), so each injector takes the first match.
   // const cftcTff = await getCftcTff("latest");
 
   // if (cftcTff.observations.length === 0) {
@@ -554,7 +553,7 @@ const runLatestInjection = async () => {
   // await injectRussell2000Latest(russell2000);
 
   const igSentiment = await getIgSentiment("latest");
-  await injectIgSp500Latest(igSentiment);
+  // await injectIgSp500Latest(igSentiment);
 
 
 

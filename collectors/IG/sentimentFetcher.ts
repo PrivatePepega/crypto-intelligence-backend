@@ -10,50 +10,62 @@ const IG_MARKETS = {
   sp500: {
     marketId: "US500",
     asset: "S&P 500",
+    seriesId: "ig_sp500"
   },
   gold: {
     marketId: "GC",
     asset: "Gold",
+    seriesId: "ig_gold"
   },
   nasdaq100: {
     marketId: "USTECH",
     asset: "Nasdaq 100",
+    seriesId: "ig_nasdaq"
   },
   dowJones: {
     marketId: "WALL",
     asset: "Dow Jones",
+    seriesId: "ig_dow_jones"
   },
   silver: {
     marketId: "SI",
     asset: "Silver",
+    seriesId: "ig_silver"
   },
   wtiCrude: {
     marketId: "CL",
     asset: "WTI Crude Oil",
+    seriesId: "ig_wti_crude_oil"
   },
   brentCrude: {
     marketId: "LCO",
     asset: "Brent Crude Oil",
+    seriesId: "ig_brent_crude_oil"
   },
   eurUsd: {
     marketId: "EURUSD",
     asset: "EUR/USD",
+    seriesId: "ig_euro_usd"
   },
   gbpUsd: {
     marketId: "GBPUSD",
     asset: "GBP/USD",
+    seriesId: "ig_gbp_usd"
   },
   usdJpy: {
     marketId: "USDJPY",
     asset: "USD/JPY",
+    seriesId: "ig_usd_jpy"
   },
   audUsd: {
     marketId: "AUDUSD",
     asset: "AUD/USD",
+    seriesId: "ig_aud_usd"
   },
   usdCad: {
     marketId: "USDCAD",
     asset: "USD/CAD",
+    seriesId: "ig_usd_cad"
   },
 } as const;
 

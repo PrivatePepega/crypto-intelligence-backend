@@ -8,17 +8,17 @@ CREATE TABLE IF NOT EXISTS current.sp500_ig_sentiment (
     current_short NUMERIC NOT NULL,
     current_net NUMERIC NOT NULL,
 
-    previous_day_long NUMERIC NOT NULL,
-    previous_day_short NUMERIC NOT NULL,
-    previous_day_net NUMERIC NOT NULL,
+    previous_day_long NUMERIC,
+    previous_day_short NUMERIC,
+    previous_day_net NUMERIC,
 
-    long_net_change NUMERIC NOT NULL,
-    short_net_change NUMERIC NOT NULL,
-    net_net_change NUMERIC NOT NULL,
+    long_net_change NUMERIC,
+    short_net_change NUMERIC,
+    net_net_change NUMERIC,
 
-    long_percent_change NUMERIC NOT NULL,
-    short_percent_change NUMERIC NOT NULL,
-    net_percent_change NUMERIC NOT NULL,
+    long_percent_change NUMERIC,
+    short_percent_change NUMERIC,
+    net_percent_change NUMERIC,
 
     moving_average_3d_long NUMERIC,
     current_vs_3d_ma_long NUMERIC,

@@ -11,6 +11,7 @@ import { getAaiiSentiment } from '../collectors/aaii/aaiiSentiment.js';
 import { getCftcTff } from '../collectors/CFTC/getCftc.js';
 import { getRussell2000 } from '../collectors/FMP/russell2000Provider.js';
 import { fetchIGSentiment } from '../collectors/IG/sentimentFetcher.js';
+import { getIgSentiment } from '../collectors/IG/getIgSentiment.js';
 
 
 
@@ -28,7 +29,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await fetchIGSentiment()
+      const data = await getIgSentiment("latest")
 
   
       res.json({

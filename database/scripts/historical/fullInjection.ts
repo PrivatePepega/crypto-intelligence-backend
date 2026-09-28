@@ -268,9 +268,9 @@ const runFullInjection = async () => {
     // const fiveYearTreasury = await get5yTreasury("full")
     // await injectFiveYearTreasuryFull(fiveYearTreasury)
 
-    // const { full } = await getFxData();
+    // const { full: fullFxData } = await getFxData();
 
-    // const eurUsdObservations = full.filter(
+    // const eurUsdObservations = fullFxData.filter(
     //   (observation) => observation.pair === "EUR/USD",
     // )
     // await injectEurUsdFull({
@@ -279,7 +279,7 @@ const runFullInjection = async () => {
     //   observations: eurUsdObservations,
     // })
 
-    // const gbpUsdObservations = full.filter(
+    // const gbpUsdObservations = fullFxData.filter(
     //   (observation) => observation.pair === "GBP/USD",
     // )
     // if (gbpUsdObservations.length === 0) {
@@ -291,7 +291,7 @@ const runFullInjection = async () => {
     //   observations: gbpUsdObservations,
     // })
 
-    // const usdJpyObservations = full.filter(
+    // const usdJpyObservations = fullFxData.filter(
     //   (observation) => observation.pair === "USD/JPY",
     // )
     // if (usdJpyObservations.length === 0) {
@@ -303,7 +303,7 @@ const runFullInjection = async () => {
     //   observations: usdJpyObservations,
     // })
 
-    // const usdChfObservations = full.filter(
+    // const usdChfObservations = fullFxData.filter(
     //   (observation) => observation.pair === "USD/CHF",
     // )
     // if (usdChfObservations.length === 0) {
@@ -315,7 +315,7 @@ const runFullInjection = async () => {
     //   observations: usdChfObservations,
     // })
 
-    // const audUsdObservations = full.filter(
+    // const audUsdObservations = fullFxData.filter(
     //   (observation) => observation.pair === "AUD/USD",
     // )
     // if (audUsdObservations.length === 0) {
@@ -327,7 +327,7 @@ const runFullInjection = async () => {
     //   observations: audUsdObservations,
     // })
 
-    // const usdCadObservations = full.filter(
+    // const usdCadObservations = fullFxData.filter(
     //   (observation) => observation.pair === "USD/CAD",
     // )
     // if (usdCadObservations.length === 0) {
@@ -339,7 +339,7 @@ const runFullInjection = async () => {
     //   observations: usdCadObservations,
     // })
 
-    // const nzdUsdObservations = full.filter(
+    // const nzdUsdObservations = fullFxData.filter(
     //   (observation) => observation.pair === "NZD/USD",
     // )
     // if (nzdUsdObservations.length === 0) {
@@ -351,9 +351,9 @@ const runFullInjection = async () => {
     //   observations: nzdUsdObservations,
     // })
 
-    // const { full } = await getCommodityData();
+    // const { full: fullCommodityData } = await getCommodityData();
 
-    // const goldObservations = full.filter(
+    // const goldObservations = fullCommodityData.filter(
     //   (observation) => observation.commodity === "gold",
     // )
     // if (goldObservations.length === 0) {
@@ -365,7 +365,7 @@ const runFullInjection = async () => {
     //   observations: goldObservations,
     // })
 
-    // const silverObservations = full.filter(
+    // const silverObservations = fullCommodityData.filter(
     //   (observation) => observation.commodity === "silver",
     // )
     // if (silverObservations.length === 0) {
@@ -377,7 +377,7 @@ const runFullInjection = async () => {
     //   observations: silverObservations,
     // })
 
-    // const wtiObservations = full.filter(
+    // const wtiObservations = fullCommodityData.filter(
     //   (observation) => observation.commodity === "wti",
     // )
     // if (wtiObservations.length === 0) {
@@ -389,7 +389,7 @@ const runFullInjection = async () => {
     //   observations: wtiObservations,
     // })
 
-    // const brentObservations = full.filter(
+    // const brentObservations = fullCommodityData.filter(
     //   (observation) => observation.commodity === "brent",
     // )
     // if (brentObservations.length === 0) {
@@ -401,7 +401,7 @@ const runFullInjection = async () => {
     //   observations: brentObservations,
     // })
 
-    // const naturalGasObservations = full.filter(
+    // const naturalGasObservations = fullCommodityData.filter(
     //   (observation) => observation.commodity === "natural_gas",
     // )
     // if (naturalGasObservations.length === 0) {
@@ -413,7 +413,7 @@ const runFullInjection = async () => {
     //   observations: naturalGasObservations,
     // })
 
-    // const copperObservations = full.filter(
+    // const copperObservations = fullCommodityData.filter(
     //   (observation) => observation.commodity === "copper",
     // )
     // if (copperObservations.length === 0) {
@@ -425,7 +425,7 @@ const runFullInjection = async () => {
     //   observations: copperObservations,
     // })
 
-    // const aluminumObservations = full.filter(
+    // const aluminumObservations = fullCommodityData.filter(
     //   (observation) => observation.commodity === "aluminum",
     // )
     // if (aluminumObservations.length === 0) {
@@ -437,7 +437,6 @@ const runFullInjection = async () => {
     //   observations: aluminumObservations,
     // })
 
-    // Single CNN request, reused across every CNN indicator injector below.
     // const cnnIndicators = await getCnnFearGreed("full");
 
     // const cnnFearGreed = cnnIndicators.cnn_fear_greed;
@@ -511,10 +510,6 @@ const runFullInjection = async () => {
 
     // await injectAaiiSentimentFull(aaiiSentiment);
 
-    // Single CFTC TFF request covering all tracked markets (BITCOIN, MICRO
-    // ETHER, S&P 500, UST, FX, USD INDEX, ...). Each injector narrows the
-    // shared payload by observation.contract, so adding another CFTC market
-    // must reuse this call rather than fetching again.
     // const cftcTff = await getCftcTff("full");
 
     // if (cftcTff.observations.length === 0) {
@@ -536,7 +531,7 @@ const runFullInjection = async () => {
     // await injectRussell2000Full(russell2000);
 
     const igSentiment = await getIgSentiment("full");
-    await injectIgSp500Full(igSentiment);
+    // await injectIgSp500Full(igSentiment);
 
 
 
