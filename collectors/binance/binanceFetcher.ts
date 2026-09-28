@@ -7,19 +7,21 @@ import {
   binanceOpenInterestHistSchema,
   binanceFundingRateSchema,
   binanceTakerLongShortRatioSchema,
+  type BinancePositioningHistory,
+  type BinancePositioningLatest,
 } from "../../types/binance/binance.types.js";
 
 const BINANCE_API = "https://fapi.binance.com";
 
 const SYMBOLS = [
-  "BTCUSDT",
-  // "ETHUSDT",
-  // "SOLUSDT",
-  // "BNBUSDT",
-  // "XRPUSDT",
-  // "DOGEUSDT",
-  // "LINKUSDT",
-  // "AAVEUSDT",
+  "BTCUSDT", //binance_btcusdt
+  "ETHUSDT", //binance_ethusdt
+  "SOLUSDT", //binance_solusdt
+  "BNBUSDT", //binance_bnbusdt
+  "XRPUSDT", //binance_xrpusdt
+  "DOGEUSDT", //binance_dogeusdt
+  "LINKUSDT", //binance_linkusdt
+  "AAVEUSDT", //binance_aaveusdt
 ] as const;
 
 type FetchMode = "full" | "latest";
@@ -117,11 +119,20 @@ const formatTaker = (
   };
 };
 
-export const fetchBinancePositioning = async (
+// The two modes return different shapes, so the return type is keyed on the
+// mode rather than being a union that every caller has to narrow.
+export async function fetchBinancePositioning(
+  mode: "full",
+): Promise<BinancePositioningHistory[]>;
+export async function fetchBinancePositioning(
+  mode: "latest",
+): Promise<BinancePositioningLatest[]>;
+export async function fetchBinancePositioning(
   mode: FetchMode
-) => {
+): Promise<BinancePositioningHistory[] | BinancePositioningLatest[]> {
   try {
-    const results = [];
+    const histories: BinancePositioningHistory[] = [];
+    const snapshots: BinancePositioningLatest[] = [];
 
     for (const symbol of SYMBOLS) {
       const [
@@ -188,7 +199,7 @@ export const fetchBinancePositioning = async (
         );
 
       if (mode === "full") {
-        results.push({
+        histories.push({
           symbol,
 
           globalLongShort: globalLongShort.map(
@@ -239,7 +250,7 @@ export const fetchBinancePositioning = async (
         (item) => item.timestamp
       );
 
-      results.push({
+      snapshots.push({
         symbol,
 
         globalLongShort: latestGlobalLongShort
@@ -268,7 +279,7 @@ export const fetchBinancePositioning = async (
       });
     }
 
-    return results;
+    return mode === "full" ? histories : snapshots;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error(

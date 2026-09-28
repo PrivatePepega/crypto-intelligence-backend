@@ -81,6 +81,9 @@ import { injectRussell2000Full } from "../../injection/historical/russell_2000.j
 import { getIgSentiment } from "../../../collectors/IG/getIgSentiment.js";
 import { injectIgHistorical } from "../../injection/igSentimentHistorical.js";
 import { IG_SENTIMENT_MARKETS } from "../../injection/igSentiment.js";
+import { fetchBinancePositioning } from "../../../collectors/binance/binanceFetcher.js";
+import { injectBinancePositioningFull } from "../../injection/binancePositioningHistorical.js";
+import { BINANCE_POSITIONING_MARKETS } from "../../injection/binancePositioning.js";
 import { getBroadUsdIndex } from "../../../collectors/fred/Market Health/Broad USD Index.js";
 import { injectBroadUsdIndexFull } from "../../injection/historical/broad_usd_index.js";
 import { getRealBroadUsdIndex } from "../../../collectors/fred/Market Health/Real Broad USD Index.js";
@@ -531,19 +534,29 @@ const runFullInjection = async () => {
     // const russell2000 = await getRussell2000("full");
     // await injectRussell2000Full(russell2000);
 
-    const igSentiment = await getIgSentiment("full");
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.sp500, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.gold, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.nasdaq, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.dowJones, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.silver, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.wti, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.brent, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.eurUsd, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.gbpUsd, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.usdJpy, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.audUsd, igSentiment);
-    await injectIgHistorical(IG_SENTIMENT_MARKETS.usdCad, igSentiment);
+    // const igSentiment = await getIgSentiment("full");
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.sp500, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.gold, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.nasdaq, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.dowJones, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.silver, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.wti, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.brent, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.eurUsd, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.gbpUsd, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.usdJpy, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.audUsd, igSentiment);
+    // await injectIgHistorical(IG_SENTIMENT_MARKETS.usdCad, igSentiment);
+
+    // const binancePositioning = await fetchBinancePositioning("full");
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.btcusdt, binancePositioning);
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.ethusdt, binancePositioning);
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.solusdt, binancePositioning);
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.bnbusdt, binancePositioning);
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.xrpusdt, binancePositioning);
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.dogeusdt, binancePositioning);
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.linkusdt, binancePositioning);
+    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.aaveusdt, binancePositioning);
 
 
 

@@ -12,6 +12,7 @@ import { getCftcTff } from '../collectors/CFTC/getCftc.js';
 import { getRussell2000 } from '../collectors/FMP/russell2000Provider.js';
 import { fetchIGSentiment } from '../collectors/IG/sentimentFetcher.js';
 import { getIgSentiment } from '../collectors/IG/getIgSentiment.js';
+import { fetchBinancePositioning } from '../collectors/binance/binanceFetcher.js';
 
 
 
@@ -29,7 +30,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await getIgSentiment("latest")
+      const data = await fetchBinancePositioning("latest")
 
   
       res.json({

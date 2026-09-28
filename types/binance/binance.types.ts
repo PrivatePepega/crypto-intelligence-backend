@@ -58,3 +58,61 @@ export const binanceTakerLongShortRatioSchema = z.array(
     timestamp: z.number(),
   })
 );
+
+// Normalized shapes produced by collectors/binance/binanceFetcher.ts. Numeric
+// values stay strings here because that is how the upstream payloads arrive;
+// conversion to number happens at the injection boundary.
+
+export type BinanceLongShortPoint = {
+  symbol: string;
+  longAccount: string;
+  longShortRatio: string;
+  shortAccount: string;
+  date: string;
+};
+
+export type BinanceOpenInterestPoint = {
+  symbol: string;
+  sumOpenInterest: string;
+  sumOpenInterestValue: string;
+  CMCCirculatingSupply: string;
+  date: string;
+};
+
+export type BinanceFundingPoint = {
+  symbol: string;
+  fundingRate: string;
+  markPrice: string;
+  rateType: string;
+  date: string;
+};
+
+export type BinanceTakerPoint = {
+  buySellRatio: string;
+  sellVol: string;
+  buyVol: string;
+  date: string;
+};
+
+// "full" mode: one entry per symbol, each sub-source is its whole history.
+export type BinancePositioningHistory = {
+  symbol: string;
+  globalLongShort: BinanceLongShortPoint[];
+  topAccount: BinanceLongShortPoint[];
+  topPosition: BinanceLongShortPoint[];
+  openInterest: BinanceOpenInterestPoint[];
+  funding: BinanceFundingPoint[];
+  taker: BinanceTakerPoint[];
+};
+
+// "latest" mode: one entry per symbol, each sub-source is a single reading or
+// undefined when that sub-source had no data.
+export type BinancePositioningLatest = {
+  symbol: string;
+  globalLongShort: BinanceLongShortPoint | undefined;
+  topAccount: BinanceLongShortPoint | undefined;
+  topPosition: BinanceLongShortPoint | undefined;
+  openInterest: BinanceOpenInterestPoint | undefined;
+  funding: BinanceFundingPoint | undefined;
+  taker: BinanceTakerPoint | undefined;
+};
