@@ -5,7 +5,7 @@ import {
   CMC_MARKET_METRICS_MA_PERIOD,
   CMC_MARKET_METRICS_SERIES_ID,
   buildCmcMarketMetricsInsert,
-} from "../database/injection/coinmarketcapMarketMetrics.js";
+} from "../database/injection/config/coinmarketcapMarketMetrics.js";
 
 const cols = (p: string) =>
   [

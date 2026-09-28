@@ -1,6 +1,6 @@
 import pool from "../../../config/database.js";
 import type { CftcTffObservation } from "../../../types/cftc/ctfc.types.js";
-import { isCftcObservationComplete } from "../cftcObservation.js";
+import { isCftcObservationComplete } from "../config/cftcObservation.js";
 
 const UST_2Y_NOTE_CONTRACT = "UST 2Y NOTE";
 

@@ -1,4 +1,4 @@
-import pool from "../../config/database.js";
+import pool from "../../../config/database.js";
 import {
   IG_SENTIMENT_MA_PERIOD,
   selectLatestIgObservation,

@@ -6,7 +6,7 @@ import {
   SPOT_ETF_MARKETS,
   SPOT_ETF_METRICS,
   isSpotEtfObservationComplete,
-} from "../database/injection/spotEtf.js";
+} from "../database/injection/config/spotEtf.js";
 
 const read = (p: string) => readFileSync(new URL(p, import.meta.url), "utf-8");
 const cols = (p: string) =>

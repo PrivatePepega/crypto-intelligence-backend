@@ -2,7 +2,7 @@ import pool from "../../../config/database.js";
 import {
   CMC_MARKET_METRICS_SERIES_ID,
   type CmcMarketMetricsObservation,
-} from "../coinmarketcapMarketMetrics.js";
+} from "../config/coinmarketcapMarketMetrics.js";
 
 export type CmcMarketMetricsHistoricalData = {
   observations: CmcMarketMetricsObservation[];

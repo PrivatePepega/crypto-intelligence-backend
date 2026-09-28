@@ -1,4 +1,4 @@
-import type { CftcTffObservation } from "../../types/cftc/ctfc.types.js";
+import type { CftcTffObservation } from "../../../types/cftc/ctfc.types.js";
 
 /**
  * Every historical CFTC column is NOT NULL, but the parser runs Number() over

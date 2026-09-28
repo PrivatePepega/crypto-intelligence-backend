@@ -1,4 +1,4 @@
-import pool from "../../config/database.js";
+import pool from "../../../config/database.js";
 import {
   SPOT_ETF_COUNTRY_CODE,
   SPOT_ETF_MA_PERIOD,

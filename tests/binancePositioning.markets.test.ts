@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 
-import { BINANCE_POSITIONING_MARKETS } from "../database/injection/binancePositioning.js";
+import { BINANCE_POSITIONING_MARKETS } from "../database/injection/config/binancePositioning.js";
 
 const markets = Object.entries(BINANCE_POSITIONING_MARKETS);
 

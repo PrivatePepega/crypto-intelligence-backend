@@ -1,6 +1,6 @@
 import pool from "../../../config/database.js";
 import type { CftcTffObservation } from "../../../types/cftc/ctfc.types.js";
-import { isCftcObservationComplete } from "../cftcObservation.js";
+import { isCftcObservationComplete } from "../config/cftcObservation.js";
 
 const JAPANESE_YEN_CONTRACT = "JAPANESE YEN";
 

@@ -1,4 +1,4 @@
-import pool from "../../config/database.js";
+import pool from "../../../config/database.js";
 import {
   BINANCE_POSITIONING_MA_PERIOD,
   BINANCE_POSITIONING_METRICS,

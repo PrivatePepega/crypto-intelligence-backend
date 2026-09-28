@@ -6,7 +6,7 @@ import {
   mergeBinanceLatestPositioning,
   MISSING_LATEST_SUB_SOURCES,
   type BinancePositioningLatest,
-} from "../database/injection/binancePositioning.js";
+} from "../database/injection/config/binancePositioning.js";
 
 const sql = readFileSync(
   new URL("../database/sql/current/binanceBtcusdt.sql", import.meta.url),

@@ -4,7 +4,7 @@ import {
   CMC_MARKET_METRICS_MA_PERIOD,
   buildCmcMarketMetricsInsert,
   type CmcMarketMetricsObservation,
-} from "../coinmarketcapMarketMetrics.js";
+} from "../config/coinmarketcapMarketMetrics.js";
 
 type HistoricalRow = Record<string, string | null>;
 

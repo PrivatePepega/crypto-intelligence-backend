@@ -3,7 +3,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import {
   IG_SENTIMENT_MARKETS,
   IG_SENTIMENT_MA_PERIOD,
-} from "../database/injection/igSentiment.js";
+} from "../database/injection/config/igSentiment.js";
 
 const read = (p: string) => readFileSync(new URL(p, import.meta.url), "utf-8");
 const cols = (p: string) =>

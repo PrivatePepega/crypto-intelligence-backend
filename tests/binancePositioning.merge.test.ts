@@ -4,7 +4,7 @@ import {
   selectBinancePositioningPayload,
   type BinanceLongShortPoint,
   type BinancePositioningHistory,
-} from "../database/injection/binancePositioning.js";
+} from "../database/injection/config/binancePositioning.js";
 
 const longShort = (date: string) => ({
   symbol: "BTCUSDT",

@@ -14,7 +14,7 @@ import type {
   BinancePositioningHistory,
   BinancePositioningLatest,
   BinanceTakerPoint,
-} from "../../types/binance/binance.types.js";
+} from "../../../types/binance/binance.types.js";
 
 // The payload shapes live in types/binance/binance.types.ts because the
 // collector produces them; re-exported here so the injection layer and its
