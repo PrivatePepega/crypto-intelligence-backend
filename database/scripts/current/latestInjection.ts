@@ -79,7 +79,8 @@ import { injectDowJonesLatest } from "../../injection/current/dow_jones.js";
 import { getRussell2000 } from "../../../collectors/FMP/russell2000Provider.js";
 import { injectRussell2000Latest } from "../../injection/current/russell_2000.js";
 import { getIgSentiment } from "../../../collectors/IG/getIgSentiment.js";
-import { injectIgSp500Latest } from "../../injection/current/ig_sp500.js";
+import { injectIgCurrent } from "../../injection/igSentimentCurrent.js";
+import { IG_SENTIMENT_MARKETS } from "../../injection/igSentiment.js";
 import { getBroadUsdIndex } from "../../../collectors/fred/Market Health/Broad USD Index.js";
 import { injectBroadUsdIndexLatest } from "../../injection/current/broad_usd_index.js";
 import { getRealBroadUsdIndex } from "../../../collectors/fred/Market Health/Real Broad USD Index.js";
@@ -553,7 +554,18 @@ const runLatestInjection = async () => {
   // await injectRussell2000Latest(russell2000);
 
   const igSentiment = await getIgSentiment("latest");
-  // await injectIgSp500Latest(igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.sp500, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.gold, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.nasdaq, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.dowJones, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.silver, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.wti, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.brent, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.eurUsd, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.gbpUsd, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.usdJpy, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.audUsd, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.usdCad, igSentiment);
 
 
 

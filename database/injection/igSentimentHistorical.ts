@@ -1,29 +1,33 @@
-import pool from "../../../config/database.js";
-import { isIgObservationComplete, type IgSentimentData } from "../igSentiment.js";
+import pool from "../../config/database.js";
+import {
+  isIgObservationComplete,
+  type IgMarketConfig,
+  type IgSentimentData,
+} from "./igSentiment.js";
 
-const IG_SP500_ASSET = "S&P 500";
-const IG_SP500_SERIES_ID = "ig_sp500";
-
-export const injectIgSp500Full = async (data: IgSentimentData) => {
-  console.log("→ IG S&P 500 historical injection initialized");
+export const injectIgHistorical = async (
+  config: IgMarketConfig,
+  data: IgSentimentData,
+) => {
+  console.log(`→ ${config.label} historical injection initialized`);
 
   const client = await pool.connect();
 
   try {
     await client.query("BEGIN");
 
-    // The IG payload is one flat array covering every tracked asset, so the
-    // S&P 500 rows are selected by asset and every one of them is persisted.
+    // The IG payload is one flat array covering every asset, so this market's
+    // rows are selected by asset and every one of them is persisted.
     // Inserting only the first match would leave the table with a single row,
     // which in turn breaks the current injector's previous-day lookup and all
     // of its moving averages.
     const observations = data.data.filter(
-      (item) => item.asset === IG_SP500_ASSET,
+      (item) => item.asset === config.asset,
     );
 
     if (observations.length === 0) {
       throw new Error(
-        `No IG observations matched asset "${IG_SP500_ASSET}"`,
+        `No IG observations matched asset "${config.asset}"`,
       );
     }
 
@@ -34,7 +38,7 @@ export const injectIgSp500Full = async (data: IgSentimentData) => {
 
       await client.query(
         `
-          INSERT INTO historical.sp500_ig_sentiment (
+          INSERT INTO historical.${config.table} (
             date,
             series_id,
             asset,
@@ -55,7 +59,7 @@ export const injectIgSp500Full = async (data: IgSentimentData) => {
         `,
         [
           observation.date,
-          IG_SP500_SERIES_ID,
+          config.seriesId,
           observation.asset,
           observation.long,
           observation.short,
@@ -68,7 +72,7 @@ export const injectIgSp500Full = async (data: IgSentimentData) => {
     await client.query("COMMIT");
 
     console.log(
-      `✓ IG S&P 500 historical injection complete — ${observations.length} observations`,
+      `✓ ${config.label} historical injection complete — ${observations.length} observations`,
     );
   } catch (error) {
     await client.query("ROLLBACK");
