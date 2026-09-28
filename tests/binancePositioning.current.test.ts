@@ -82,15 +82,33 @@ console.log(`3b. injector guards columns/values length: ${
 const dupes = generated.filter((c, i) => generated.indexOf(c) !== i);
 console.log(`4. no duplicate column in the generated list: ${dupes.length === 0 ? "PASS" : `FAIL ${dupes.join(", ")}`}`);
 
-console.log(`\n5. all ${metrics.length} metrics use 12d windows only: ${
+console.log(`\n5. all ${metrics.length} metrics use 30d windows only: ${
   metrics.every(
     (m) =>
-      m.movingAverageColumn.startsWith("moving_average_12d_") &&
-      m.currentVsMovingAverageColumn.startsWith("current_vs_12d_ma_"),
+      m.movingAverageColumn.startsWith("moving_average_30d_") &&
+      m.currentVsMovingAverageColumn.startsWith("current_vs_30d_ma_"),
   )
     ? "PASS"
     : "FAIL"
 }`);
+
+console.log(
+  `   MA period constant is 30: ${
+    BINANCE_POSITIONING_MA_PERIOD === 30
+      ? "PASS"
+      : `FAIL ${BINANCE_POSITIONING_MA_PERIOD}`
+  }`,
+);
+
+console.log(
+  `   no 12d reference left in the contract: ${
+    BINANCE_POSITIONING_METRICS.every(
+      (m) => !`${m.movingAverageColumn}${m.currentVsMovingAverageColumn}`.includes("12d"),
+    )
+      ? "PASS"
+      : "FAIL"
+  }`,
+);
 
 console.log(`6. every metric's historicalColumn is a real historical column: ${
   metrics.every((m) => /_/.test(m.historicalColumn) && !m.historicalColumn.startsWith("current_") && !m.historicalColumn.startsWith("previous_day_"))

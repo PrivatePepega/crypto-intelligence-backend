@@ -304,7 +304,7 @@ export const selectBinancePositioningPayload = <T extends { symbol: string }>(
 // values for the current injector are all generated from this one definition
 // rather than written out by hand. Exported so it can be checked against the
 // deployed table definition.
-export const BINANCE_POSITIONING_MA_PERIOD = 12;
+export const BINANCE_POSITIONING_MA_PERIOD = 30;
 
 export type BinancePositioningMetric = {
   currentColumn: string;
@@ -323,8 +323,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_global_long_account",
     netChangeColumn: "global_long_account_net_change",
     percentChangeColumn: "global_long_account_percent_change",
-    movingAverageColumn: "moving_average_12d_global_long_account",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_global_long_account",
+    movingAverageColumn: "moving_average_30d_global_long_account",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_global_long_account",
     getCurrentValue: (row) => row.globalLongAccount,
   },
   {
@@ -333,8 +333,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_global_long_short_ratio",
     netChangeColumn: "global_long_short_ratio_net_change",
     percentChangeColumn: "global_long_short_ratio_percent_change",
-    movingAverageColumn: "moving_average_12d_global_long_short_ratio",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_global_long_short_ratio",
+    movingAverageColumn: "moving_average_30d_global_long_short_ratio",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_global_long_short_ratio",
     getCurrentValue: (row) => row.globalLongShortRatio,
   },
   {
@@ -343,8 +343,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_global_short_account",
     netChangeColumn: "global_short_account_net_change",
     percentChangeColumn: "global_short_account_percent_change",
-    movingAverageColumn: "moving_average_12d_global_short_account",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_global_short_account",
+    movingAverageColumn: "moving_average_30d_global_short_account",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_global_short_account",
     getCurrentValue: (row) => row.globalShortAccount,
   },
   {
@@ -353,9 +353,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_top_account_long_account",
     netChangeColumn: "top_account_long_account_net_change",
     percentChangeColumn: "top_account_long_account_percent_change",
-    movingAverageColumn: "moving_average_12d_top_account_long_account",
+    movingAverageColumn: "moving_average_30d_top_account_long_account",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_top_account_long_account",
+      "current_vs_30d_ma_top_account_long_account",
     getCurrentValue: (row) => row.topAccountLongAccount,
   },
   {
@@ -364,9 +364,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_top_account_long_short_ratio",
     netChangeColumn: "top_account_long_short_ratio_net_change",
     percentChangeColumn: "top_account_long_short_ratio_percent_change",
-    movingAverageColumn: "moving_average_12d_top_account_long_short_ratio",
+    movingAverageColumn: "moving_average_30d_top_account_long_short_ratio",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_top_account_long_short_ratio",
+      "current_vs_30d_ma_top_account_long_short_ratio",
     getCurrentValue: (row) => row.topAccountLongShortRatio,
   },
   {
@@ -375,9 +375,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_top_account_short_account",
     netChangeColumn: "top_account_short_account_net_change",
     percentChangeColumn: "top_account_short_account_percent_change",
-    movingAverageColumn: "moving_average_12d_top_account_short_account",
+    movingAverageColumn: "moving_average_30d_top_account_short_account",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_top_account_short_account",
+      "current_vs_30d_ma_top_account_short_account",
     getCurrentValue: (row) => row.topAccountShortAccount,
   },
   {
@@ -386,9 +386,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_top_position_long_account",
     netChangeColumn: "top_position_long_account_net_change",
     percentChangeColumn: "top_position_long_account_percent_change",
-    movingAverageColumn: "moving_average_12d_top_position_long_account",
+    movingAverageColumn: "moving_average_30d_top_position_long_account",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_top_position_long_account",
+      "current_vs_30d_ma_top_position_long_account",
     getCurrentValue: (row) => row.topPositionLongAccount,
   },
   {
@@ -397,9 +397,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_top_position_long_short_ratio",
     netChangeColumn: "top_position_long_short_ratio_net_change",
     percentChangeColumn: "top_position_long_short_ratio_percent_change",
-    movingAverageColumn: "moving_average_12d_top_position_long_short_ratio",
+    movingAverageColumn: "moving_average_30d_top_position_long_short_ratio",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_top_position_long_short_ratio",
+      "current_vs_30d_ma_top_position_long_short_ratio",
     getCurrentValue: (row) => row.topPositionLongShortRatio,
   },
   {
@@ -408,9 +408,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_top_position_short_account",
     netChangeColumn: "top_position_short_account_net_change",
     percentChangeColumn: "top_position_short_account_percent_change",
-    movingAverageColumn: "moving_average_12d_top_position_short_account",
+    movingAverageColumn: "moving_average_30d_top_position_short_account",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_top_position_short_account",
+      "current_vs_30d_ma_top_position_short_account",
     getCurrentValue: (row) => row.topPositionShortAccount,
   },
   {
@@ -419,8 +419,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_sum_open_interest",
     netChangeColumn: "sum_open_interest_net_change",
     percentChangeColumn: "sum_open_interest_percent_change",
-    movingAverageColumn: "moving_average_12d_sum_open_interest",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_sum_open_interest",
+    movingAverageColumn: "moving_average_30d_sum_open_interest",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_sum_open_interest",
     getCurrentValue: (row) => row.sumOpenInterest,
   },
   {
@@ -429,9 +429,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_sum_open_interest_value",
     netChangeColumn: "sum_open_interest_value_net_change",
     percentChangeColumn: "sum_open_interest_value_percent_change",
-    movingAverageColumn: "moving_average_12d_sum_open_interest_value",
+    movingAverageColumn: "moving_average_30d_sum_open_interest_value",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_sum_open_interest_value",
+      "current_vs_30d_ma_sum_open_interest_value",
     getCurrentValue: (row) => row.sumOpenInterestValue,
   },
   {
@@ -440,9 +440,9 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_cmc_circulating_supply",
     netChangeColumn: "cmc_circulating_supply_net_change",
     percentChangeColumn: "cmc_circulating_supply_percent_change",
-    movingAverageColumn: "moving_average_12d_cmc_circulating_supply",
+    movingAverageColumn: "moving_average_30d_cmc_circulating_supply",
     currentVsMovingAverageColumn:
-      "current_vs_12d_ma_cmc_circulating_supply",
+      "current_vs_30d_ma_cmc_circulating_supply",
     getCurrentValue: (row) => row.cmcCirculatingSupply,
   },
   {
@@ -451,8 +451,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_funding_rate",
     netChangeColumn: "funding_rate_net_change",
     percentChangeColumn: "funding_rate_percent_change",
-    movingAverageColumn: "moving_average_12d_funding_rate",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_funding_rate",
+    movingAverageColumn: "moving_average_30d_funding_rate",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_funding_rate",
     getCurrentValue: (row) => row.fundingRate,
   },
   {
@@ -461,8 +461,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_mark_price",
     netChangeColumn: "mark_price_net_change",
     percentChangeColumn: "mark_price_percent_change",
-    movingAverageColumn: "moving_average_12d_mark_price",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_mark_price",
+    movingAverageColumn: "moving_average_30d_mark_price",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_mark_price",
     getCurrentValue: (row) => row.markPrice,
   },
   {
@@ -471,8 +471,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_taker_buy_sell_ratio",
     netChangeColumn: "taker_buy_sell_ratio_net_change",
     percentChangeColumn: "taker_buy_sell_ratio_percent_change",
-    movingAverageColumn: "moving_average_12d_taker_buy_sell_ratio",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_taker_buy_sell_ratio",
+    movingAverageColumn: "moving_average_30d_taker_buy_sell_ratio",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_taker_buy_sell_ratio",
     getCurrentValue: (row) => row.takerBuySellRatio,
   },
   {
@@ -481,8 +481,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_taker_sell_volume",
     netChangeColumn: "taker_sell_volume_net_change",
     percentChangeColumn: "taker_sell_volume_percent_change",
-    movingAverageColumn: "moving_average_12d_taker_sell_volume",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_taker_sell_volume",
+    movingAverageColumn: "moving_average_30d_taker_sell_volume",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_taker_sell_volume",
     getCurrentValue: (row) => row.takerSellVolume,
   },
   {
@@ -491,8 +491,8 @@ export const BINANCE_POSITIONING_METRICS: BinancePositioningMetric[] = [
     previousColumn: "previous_day_taker_buy_volume",
     netChangeColumn: "taker_buy_volume_net_change",
     percentChangeColumn: "taker_buy_volume_percent_change",
-    movingAverageColumn: "moving_average_12d_taker_buy_volume",
-    currentVsMovingAverageColumn: "current_vs_12d_ma_taker_buy_volume",
+    movingAverageColumn: "moving_average_30d_taker_buy_volume",
+    currentVsMovingAverageColumn: "current_vs_30d_ma_taker_buy_volume",
     getCurrentValue: (row) => row.takerBuyVolume,
   },
 ];

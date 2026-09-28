@@ -101,56 +101,56 @@ CREATE TABLE IF NOT EXISTS current.dogeusdt_binance_trader_positioning (
     taker_buy_volume_net_change NUMERIC,
     taker_buy_volume_percent_change NUMERIC,
 
-    moving_average_12d_global_long_account NUMERIC,
-    current_vs_12d_ma_global_long_account NUMERIC,
+    moving_average_30d_global_long_account NUMERIC,
+    current_vs_30d_ma_global_long_account NUMERIC,
 
-    moving_average_12d_global_long_short_ratio NUMERIC,
-    current_vs_12d_ma_global_long_short_ratio NUMERIC,
+    moving_average_30d_global_long_short_ratio NUMERIC,
+    current_vs_30d_ma_global_long_short_ratio NUMERIC,
 
-    moving_average_12d_global_short_account NUMERIC,
-    current_vs_12d_ma_global_short_account NUMERIC,
+    moving_average_30d_global_short_account NUMERIC,
+    current_vs_30d_ma_global_short_account NUMERIC,
 
-    moving_average_12d_top_account_long_account NUMERIC,
-    current_vs_12d_ma_top_account_long_account NUMERIC,
+    moving_average_30d_top_account_long_account NUMERIC,
+    current_vs_30d_ma_top_account_long_account NUMERIC,
 
-    moving_average_12d_top_account_long_short_ratio NUMERIC,
-    current_vs_12d_ma_top_account_long_short_ratio NUMERIC,
+    moving_average_30d_top_account_long_short_ratio NUMERIC,
+    current_vs_30d_ma_top_account_long_short_ratio NUMERIC,
 
-    moving_average_12d_top_account_short_account NUMERIC,
-    current_vs_12d_ma_top_account_short_account NUMERIC,
+    moving_average_30d_top_account_short_account NUMERIC,
+    current_vs_30d_ma_top_account_short_account NUMERIC,
 
-    moving_average_12d_top_position_long_account NUMERIC,
-    current_vs_12d_ma_top_position_long_account NUMERIC,
+    moving_average_30d_top_position_long_account NUMERIC,
+    current_vs_30d_ma_top_position_long_account NUMERIC,
 
-    moving_average_12d_top_position_long_short_ratio NUMERIC,
-    current_vs_12d_ma_top_position_long_short_ratio NUMERIC,
+    moving_average_30d_top_position_long_short_ratio NUMERIC,
+    current_vs_30d_ma_top_position_long_short_ratio NUMERIC,
 
-    moving_average_12d_top_position_short_account NUMERIC,
-    current_vs_12d_ma_top_position_short_account NUMERIC,
+    moving_average_30d_top_position_short_account NUMERIC,
+    current_vs_30d_ma_top_position_short_account NUMERIC,
 
-    moving_average_12d_sum_open_interest NUMERIC,
-    current_vs_12d_ma_sum_open_interest NUMERIC,
+    moving_average_30d_sum_open_interest NUMERIC,
+    current_vs_30d_ma_sum_open_interest NUMERIC,
 
-    moving_average_12d_sum_open_interest_value NUMERIC,
-    current_vs_12d_ma_sum_open_interest_value NUMERIC,
+    moving_average_30d_sum_open_interest_value NUMERIC,
+    current_vs_30d_ma_sum_open_interest_value NUMERIC,
 
-    moving_average_12d_cmc_circulating_supply NUMERIC,
-    current_vs_12d_ma_cmc_circulating_supply NUMERIC,
+    moving_average_30d_cmc_circulating_supply NUMERIC,
+    current_vs_30d_ma_cmc_circulating_supply NUMERIC,
 
-    moving_average_12d_funding_rate NUMERIC,
-    current_vs_12d_ma_funding_rate NUMERIC,
+    moving_average_30d_funding_rate NUMERIC,
+    current_vs_30d_ma_funding_rate NUMERIC,
 
-    moving_average_12d_mark_price NUMERIC,
-    current_vs_12d_ma_mark_price NUMERIC,
+    moving_average_30d_mark_price NUMERIC,
+    current_vs_30d_ma_mark_price NUMERIC,
 
-    moving_average_12d_taker_buy_sell_ratio NUMERIC,
-    current_vs_12d_ma_taker_buy_sell_ratio NUMERIC,
+    moving_average_30d_taker_buy_sell_ratio NUMERIC,
+    current_vs_30d_ma_taker_buy_sell_ratio NUMERIC,
 
-    moving_average_12d_taker_sell_volume NUMERIC,
-    current_vs_12d_ma_taker_sell_volume NUMERIC,
+    moving_average_30d_taker_sell_volume NUMERIC,
+    current_vs_30d_ma_taker_sell_volume NUMERIC,
 
-    moving_average_12d_taker_buy_volume NUMERIC,
-    current_vs_12d_ma_taker_buy_volume NUMERIC,
+    moving_average_30d_taker_buy_volume NUMERIC,
+    current_vs_30d_ma_taker_buy_volume NUMERIC,
 
     symbol TEXT NOT NULL,
 

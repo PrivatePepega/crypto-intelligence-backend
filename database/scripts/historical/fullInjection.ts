@@ -84,6 +84,16 @@ import { IG_SENTIMENT_MARKETS } from "../../injection/igSentiment.js";
 import { fetchBinancePositioning } from "../../../collectors/binance/binanceFetcher.js";
 import { injectBinancePositioningFull } from "../../injection/binancePositioningHistorical.js";
 import { BINANCE_POSITIONING_MARKETS } from "../../injection/binancePositioning.js";
+import { fetchFearGreed } from "../../../collectors/alternative.me/fearGreedIndex.js";
+import { injectAlternativeCryptoFearGreedHistorical } from "../../injection/historical/alternative_crypto_fear_greed.js";
+import { fetchAltcoinSeason } from "../../../collectors/coinMarketCap/altSeasonIndex.js";
+import { injectCoinMarketCapAltcoinSeasonHistorical } from "../../injection/historical/coinmarketcap_altcoin_season.js";
+import { fetchCoinMarketCapGlobalMetrics } from "../../../collectors/coinMarketCap/cryptoMarketStats.js";
+import { injectCoinMarketCapCryptoMarketMetricsHistorical } from "../../injection/historical/coinmarketcap_crypto_market_metrics.js";
+import { collectAllSosoValueEtfs } from "../../../collectors/sosoValue/spotETFfetcher.js";
+import { injectSpotEtfHistorical } from "../../injection/spotEtfHistorical.js";
+import { SPOT_ETF_MARKETS } from "../../injection/spotEtf.js";
+import { withRetry } from "../../../utils/retry.js";
 import { getBroadUsdIndex } from "../../../collectors/fred/Market Health/Broad USD Index.js";
 import { injectBroadUsdIndexFull } from "../../injection/historical/broad_usd_index.js";
 import { getRealBroadUsdIndex } from "../../../collectors/fred/Market Health/Real Broad USD Index.js";
@@ -557,6 +567,69 @@ const runFullInjection = async () => {
     // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.dogeusdt, binancePositioning);
     // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.linkusdt, binancePositioning);
     // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.aaveusdt, binancePositioning);
+
+    // const alternativeFearGreed = await fetchFearGreed();
+    // await injectAlternativeCryptoFearGreedHistorical({
+    //   observations: [alternativeFearGreed],
+    // });
+
+    // const altcoinSeason = await withRetry(
+    //   () => fetchAltcoinSeason("full"),
+    //   {
+    //     label: "CoinMarketCap altcoin season (historical)",
+    //     attempts: 5,
+    //     delayMs: 5000,
+    //     isEmptyResult: (result) => result.observations.length === 0,
+    //   },
+    // );
+
+    // await injectCoinMarketCapAltcoinSeasonHistorical({
+    //   observations: altcoinSeason.observations,
+    //   source: altcoinSeason.source,
+    // });
+
+    // const cmcMarketMetrics = await withRetry(
+    //   () => fetchCoinMarketCapGlobalMetrics(),
+    //   {
+    //     label: "CoinMarketCap crypto market metrics (historical)",
+    //     attempts: 5,
+    //     delayMs: 5000,
+    //     isEmptyResult: (result) => !Number.isFinite(result.totalMarketCap),
+    //   },
+    // );
+
+    // await injectCoinMarketCapCryptoMarketMetricsHistorical({
+    //   observations: [
+    //     {
+    //       ...cmcMarketMetrics,
+    //       date: cmcMarketMetrics.observedAt.slice(0, 10),
+    //     },
+    //   ],
+    //   source: cmcMarketMetrics.source,
+    // });
+
+    const spotEtfs = await withRetry(
+      () => collectAllSosoValueEtfs("full"),
+      {
+        label: "SoSoValue spot ETF (historical)",
+        attempts: 5,
+        delayMs: 5000,
+        isEmptyResult: (result) =>
+          result.every((etf) => etf.history.length === 0),
+      },
+    );
+
+    for (const market of Object.values(SPOT_ETF_MARKETS)) {
+      const payload = spotEtfs.find((etf) => etf.asset === market.symbol);
+
+      if (!payload) {
+        throw new Error(
+          `SoSoValue returned no ${market.symbol} spot ETF data`,
+        );
+      }
+
+      await injectSpotEtfHistorical(market, payload.history);
+    }
 
 
 

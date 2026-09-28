@@ -111,12 +111,12 @@ export async function collectAllSosoValueEtfs(
   mode: SosoValueEtfMode
 ): Promise<SosoValueEtfData[]> {
   const symbols: SosoValueEtfSymbol[] = [
-    "BTC",
-    "ETH",
-    "SOL",
-    "XRP",
-    "DOGE",
-    "LINK",
+    "BTC", //spot_etf_btc
+    "ETH", //spot_etf_eth
+    "SOL", //spot_etf_sol
+    "XRP", //spot_etf_xrp
+    "DOGE", //spot_etf_doge
+    "LINK", //spot_etf_link
   ];
 
   return Promise.all(

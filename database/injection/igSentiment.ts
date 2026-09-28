@@ -109,6 +109,11 @@ export const IG_SENTIMENT_MARKETS = {
 
 export type IgSentimentMarket = keyof typeof IG_SENTIMENT_MARKETS;
 
+// The only moving-average window tracked for the IG current tables. The
+// current observation is folded into the average, so 29 prior days are needed
+// for a 30-day window.
+export const IG_SENTIMENT_MA_PERIOD = 30;
+
 // Every column is NOT NULL upstream in the sense that a malformed row would
 // poison the numbers, and parsers can yield NaN from blank source cells, so
 // historical injectors skip incomplete rows rather than aborting the

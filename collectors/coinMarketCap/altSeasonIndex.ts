@@ -8,7 +8,7 @@ const COINMARKETCAP_API =
 
 type FetchMode = "latest" | "full";
 
-type NormalizedAltcoinSeasonLatest = {
+export type NormalizedAltcoinSeasonLatest = {
   index: number;
   altcoinMarketCap: number;
   observedAt: string;
@@ -19,7 +19,7 @@ type NormalizedAltcoinSeasonLatest = {
   source: "CoinMarketCap";
 };
 
-type NormalizedAltcoinSeasonHistorical = {
+export type NormalizedAltcoinSeasonHistorical = {
   timeframe: string;
   observations: {
     date: string;
@@ -70,9 +70,19 @@ function normalizeHistorical(
   };
 }
 
-export const fetchAltcoinSeason = async (
+// The two modes return different shapes, so the return type is keyed on the
+// mode rather than being a union that every caller has to narrow.
+export async function fetchAltcoinSeason(
+  mode: "latest"
+): Promise<NormalizedAltcoinSeasonLatest>;
+export async function fetchAltcoinSeason(
+  mode: "full"
+): Promise<NormalizedAltcoinSeasonHistorical>;
+export async function fetchAltcoinSeason(
   mode: FetchMode
-) => {
+): Promise<
+  NormalizedAltcoinSeasonLatest | NormalizedAltcoinSeasonHistorical
+> {
   try {
     if (mode === "latest") {
       const response = await axios.get(

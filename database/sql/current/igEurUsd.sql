@@ -20,32 +20,14 @@ CREATE TABLE IF NOT EXISTS current.eur_usd_ig_sentiment (
     short_percent_change NUMERIC,
     net_percent_change NUMERIC,
 
-    moving_average_3d_long NUMERIC,
-    current_vs_3d_ma_long NUMERIC,
+    moving_average_30d_long NUMERIC,
+    current_vs_30d_ma_long NUMERIC,
 
-    moving_average_6d_long NUMERIC,
-    current_vs_6d_ma_long NUMERIC,
+    moving_average_30d_short NUMERIC,
+    current_vs_30d_ma_short NUMERIC,
 
-    moving_average_12d_long NUMERIC,
-    current_vs_12d_ma_long NUMERIC,
-
-    moving_average_3d_short NUMERIC,
-    current_vs_3d_ma_short NUMERIC,
-
-    moving_average_6d_short NUMERIC,
-    current_vs_6d_ma_short NUMERIC,
-
-    moving_average_12d_short NUMERIC,
-    current_vs_12d_ma_short NUMERIC,
-
-    moving_average_3d_net NUMERIC,
-    current_vs_3d_ma_net NUMERIC,
-
-    moving_average_6d_net NUMERIC,
-    current_vs_6d_ma_net NUMERIC,
-
-    moving_average_12d_net NUMERIC,
-    current_vs_12d_ma_net NUMERIC,
+    moving_average_30d_net NUMERIC,
+    current_vs_30d_ma_net NUMERIC,
 
     asset TEXT NOT NULL,
     source TEXT NOT NULL,

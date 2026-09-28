@@ -13,6 +13,10 @@ import { getRussell2000 } from '../collectors/FMP/russell2000Provider.js';
 import { fetchIGSentiment } from '../collectors/IG/sentimentFetcher.js';
 import { getIgSentiment } from '../collectors/IG/getIgSentiment.js';
 import { fetchBinancePositioning } from '../collectors/binance/binanceFetcher.js';
+import { fetchFearGreed } from '../collectors/alternative.me/fearGreedIndex.js';
+import { fetchAltcoinSeason } from '../collectors/coinMarketCap/altSeasonIndex.js';
+import { fetchCoinMarketCapGlobalMetrics } from '../collectors/coinMarketCap/cryptoMarketStats.js';
+import { collectAllSosoValueEtfs } from '../collectors/sosoValue/spotETFfetcher.js';
 
 
 
@@ -30,7 +34,7 @@ const test = async(req: Request, res: Response) => {
     try {
 
 
-      const data = await fetchBinancePositioning("latest")
+      const data = await collectAllSosoValueEtfs("latest")
 
   
       res.json({

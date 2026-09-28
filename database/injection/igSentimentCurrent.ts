@@ -1,5 +1,6 @@
 import pool from "../../config/database.js";
 import {
+  IG_SENTIMENT_MA_PERIOD,
   selectLatestIgObservation,
   type IgMarketConfig,
   type IgSentimentData,
@@ -124,7 +125,7 @@ export const injectIgCurrent = async (
         FROM historical.${config.table}
         WHERE date < $1::date
         ORDER BY date DESC
-        LIMIT 12
+        LIMIT ${IG_SENTIMENT_MA_PERIOD - 1}
       `,
       [observation.date],
     );
@@ -154,17 +155,13 @@ export const injectIgCurrent = async (
     };
 
     const buildMetricFigures = (current: number, series: number[]) => {
-      const ma3 = calculateMovingAverage(series, 3);
-      const ma6 = calculateMovingAverage(series, 6);
-      const ma12 = calculateMovingAverage(series, 12);
+      const ma30 = calculateMovingAverage(series, IG_SENTIMENT_MA_PERIOD);
 
       return {
-        ma3,
-        ma6,
-        ma12,
-        vsMa3: ma3 === null ? null : current - ma3,
-        vsMa6: ma6 === null ? null : current - ma6,
-        vsMa12: ma12 === null ? null : current - ma12,
+        ma30,
+        // Absolute difference, matching the current_vs_*_ma_* convention used
+        // by every other injector in the repo.
+        vsMa30: ma30 === null ? null : current - ma30,
       };
     };
 
@@ -205,32 +202,14 @@ export const injectIgCurrent = async (
           short_percent_change,
           net_percent_change,
 
-          moving_average_3d_long,
-          current_vs_3d_ma_long,
+          moving_average_30d_long,
+          current_vs_30d_ma_long,
 
-          moving_average_6d_long,
-          current_vs_6d_ma_long,
+          moving_average_30d_short,
+          current_vs_30d_ma_short,
 
-          moving_average_12d_long,
-          current_vs_12d_ma_long,
-
-          moving_average_3d_short,
-          current_vs_3d_ma_short,
-
-          moving_average_6d_short,
-          current_vs_6d_ma_short,
-
-          moving_average_12d_short,
-          current_vs_12d_ma_short,
-
-          moving_average_3d_net,
-          current_vs_3d_ma_net,
-
-          moving_average_6d_net,
-          current_vs_6d_ma_net,
-
-          moving_average_12d_net,
-          current_vs_12d_ma_net,
+          moving_average_30d_net,
+          current_vs_30d_ma_net,
 
           asset,
           source,
@@ -256,19 +235,7 @@ export const injectIgCurrent = async (
 
           $21, $22,
 
-          $23, $24,
-
-          $25, $26,
-
-          $27, $28,
-
-          $29, $30,
-
-          $31, $32,
-
-          $33, $34,
-
-          $35
+          $23
         )
         ON CONFLICT (indicator)
         DO UPDATE SET
@@ -290,32 +257,14 @@ export const injectIgCurrent = async (
           short_percent_change = EXCLUDED.short_percent_change,
           net_percent_change = EXCLUDED.net_percent_change,
 
-          moving_average_3d_long = EXCLUDED.moving_average_3d_long,
-          current_vs_3d_ma_long = EXCLUDED.current_vs_3d_ma_long,
+          moving_average_30d_long = EXCLUDED.moving_average_30d_long,
+          current_vs_30d_ma_long = EXCLUDED.current_vs_30d_ma_long,
 
-          moving_average_6d_long = EXCLUDED.moving_average_6d_long,
-          current_vs_6d_ma_long = EXCLUDED.current_vs_6d_ma_long,
+          moving_average_30d_short = EXCLUDED.moving_average_30d_short,
+          current_vs_30d_ma_short = EXCLUDED.current_vs_30d_ma_short,
 
-          moving_average_12d_long = EXCLUDED.moving_average_12d_long,
-          current_vs_12d_ma_long = EXCLUDED.current_vs_12d_ma_long,
-
-          moving_average_3d_short = EXCLUDED.moving_average_3d_short,
-          current_vs_3d_ma_short = EXCLUDED.current_vs_3d_ma_short,
-
-          moving_average_6d_short = EXCLUDED.moving_average_6d_short,
-          current_vs_6d_ma_short = EXCLUDED.current_vs_6d_ma_short,
-
-          moving_average_12d_short = EXCLUDED.moving_average_12d_short,
-          current_vs_12d_ma_short = EXCLUDED.current_vs_12d_ma_short,
-
-          moving_average_3d_net = EXCLUDED.moving_average_3d_net,
-          current_vs_3d_ma_net = EXCLUDED.current_vs_3d_ma_net,
-
-          moving_average_6d_net = EXCLUDED.moving_average_6d_net,
-          current_vs_6d_ma_net = EXCLUDED.current_vs_6d_ma_net,
-
-          moving_average_12d_net = EXCLUDED.moving_average_12d_net,
-          current_vs_12d_ma_net = EXCLUDED.current_vs_12d_ma_net,
+          moving_average_30d_net = EXCLUDED.moving_average_30d_net,
+          current_vs_30d_ma_net = EXCLUDED.current_vs_30d_ma_net,
 
           asset = EXCLUDED.asset,
           source = EXCLUDED.source,
@@ -343,32 +292,14 @@ export const injectIgCurrent = async (
         shortPercentChange,
         netPercentChange,
 
-        longFigures.ma3,
-        longFigures.vsMa3,
+        longFigures.ma30,
+        longFigures.vsMa30,
 
-        longFigures.ma6,
-        longFigures.vsMa6,
+        shortFigures.ma30,
+        shortFigures.vsMa30,
 
-        longFigures.ma12,
-        longFigures.vsMa12,
-
-        shortFigures.ma3,
-        shortFigures.vsMa3,
-
-        shortFigures.ma6,
-        shortFigures.vsMa6,
-
-        shortFigures.ma12,
-        shortFigures.vsMa12,
-
-        netFigures.ma3,
-        netFigures.vsMa3,
-
-        netFigures.ma6,
-        netFigures.vsMa6,
-
-        netFigures.ma12,
-        netFigures.vsMa12,
+        netFigures.ma30,
+        netFigures.vsMa30,
 
         observation.asset,
         observation.source,
