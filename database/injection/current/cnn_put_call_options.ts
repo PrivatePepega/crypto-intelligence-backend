@@ -80,23 +80,23 @@ export const injectCnnPutCallOptionsLatest = async (
         : (netChange / previousDayValue) * 100;
 
     const movingAverageResult = await client.query<{
-      moving_average_3d: string | null;
-      moving_average_6d: string | null;
-      moving_average_12d: string | null;
+      moving_average_30d: string | null;
+      moving_average_6month: string | null;
+      moving_average_12month: string | null;
     }>(
       `
         SELECT
           AVG(value) FILTER (
-            WHERE date >= $1::date - INTERVAL '2 days'
-          ) AS moving_average_3d,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d,
 
           AVG(value) FILTER (
-            WHERE date >= $1::date - INTERVAL '5 days'
-          ) AS moving_average_6d,
+            WHERE date >= $1::date - INTERVAL '6 months'
+          ) AS moving_average_6month,
 
           AVG(value) FILTER (
-            WHERE date >= $1::date - INTERVAL '11 days'
-          ) AS moving_average_12d
+            WHERE date >= $1::date - INTERVAL '12 months'
+          ) AS moving_average_12month
         FROM historical.cnn_put_call_options
         WHERE date < $1::date
       `,
@@ -111,34 +111,34 @@ export const injectCnnPutCallOptionsLatest = async (
       );
     }
 
-    const movingAverage3d =
-      row.moving_average_3d !== null
-        ? Number(row.moving_average_3d)
+    const movingAverage30d =
+      row.moving_average_30d !== null
+        ? Number(row.moving_average_30d)
         : null;
 
-    const movingAverage6d =
-      row.moving_average_6d !== null
-        ? Number(row.moving_average_6d)
+    const movingAverage6month =
+      row.moving_average_6month !== null
+        ? Number(row.moving_average_6month)
         : null;
 
-    const movingAverage12d =
-      row.moving_average_12d !== null
-        ? Number(row.moving_average_12d)
+    const movingAverage12month =
+      row.moving_average_12month !== null
+        ? Number(row.moving_average_12month)
         : null;
 
-    const currentVs3dMa =
-      movingAverage3d !== null
-        ? currentValue - movingAverage3d
+    const currentVs30dMa =
+      movingAverage30d !== null
+        ? currentValue - movingAverage30d
         : null;
 
-    const currentVs6dMa =
-      movingAverage6d !== null
-        ? currentValue - movingAverage6d
+    const currentVs6monthMa =
+      movingAverage6month !== null
+        ? currentValue - movingAverage6month
         : null;
 
-    const currentVs12dMa =
-      movingAverage12d !== null
-        ? currentValue - movingAverage12d
+    const currentVs12monthMa =
+      movingAverage12month !== null
+        ? currentValue - movingAverage12month
         : null;
 
     await client.query(
@@ -152,12 +152,12 @@ export const injectCnnPutCallOptionsLatest = async (
           previous_day_rating,
           net_change,
           percent_change,
-          moving_average_3d,
-          current_vs_3d_ma,
-          moving_average_6d,
-          current_vs_6d_ma,
-          moving_average_12d,
-          current_vs_12d_ma,
+          moving_average_30d,
+          current_vs_30d_ma,
+          moving_average_6month,
+          current_vs_6month_ma,
+          moving_average_12month,
+          current_vs_12month_ma,
           observed_at
         )
         VALUES (
@@ -177,12 +177,12 @@ export const injectCnnPutCallOptionsLatest = async (
           previous_day_rating = EXCLUDED.previous_day_rating,
           net_change = EXCLUDED.net_change,
           percent_change = EXCLUDED.percent_change,
-          moving_average_3d = EXCLUDED.moving_average_3d,
-          current_vs_3d_ma = EXCLUDED.current_vs_3d_ma,
-          moving_average_6d = EXCLUDED.moving_average_6d,
-          current_vs_6d_ma = EXCLUDED.current_vs_6d_ma,
-          moving_average_12d = EXCLUDED.moving_average_12d,
-          current_vs_12d_ma = EXCLUDED.current_vs_12d_ma,
+          moving_average_30d = EXCLUDED.moving_average_30d,
+          current_vs_30d_ma = EXCLUDED.current_vs_30d_ma,
+          moving_average_6month = EXCLUDED.moving_average_6month,
+          current_vs_6month_ma = EXCLUDED.current_vs_6month_ma,
+          moving_average_12month = EXCLUDED.moving_average_12month,
+          current_vs_12month_ma = EXCLUDED.current_vs_12month_ma,
           observed_at = EXCLUDED.observed_at,
           updated_at = NOW()
       `,
@@ -195,12 +195,12 @@ export const injectCnnPutCallOptionsLatest = async (
         previousDayRating,
         netChange,
         percentChange,
-        movingAverage3d,
-        currentVs3dMa,
-        movingAverage6d,
-        currentVs6dMa,
-        movingAverage12d,
-        currentVs12dMa,
+        movingAverage30d,
+        currentVs30dMa,
+        movingAverage6month,
+        currentVs6monthMa,
+        movingAverage12month,
+        currentVs12monthMa,
         currentObservation.date,
       ],
     );
@@ -224,14 +224,14 @@ export const injectCnnPutCallOptionsLatest = async (
       netChange,
       percentChange,
 
-      movingAverage3d,
-      currentVs3dMa,
+      movingAverage30d,
+      currentVs30dMa,
 
-      movingAverage6d,
-      currentVs6dMa,
+      movingAverage6month,
+      currentVs6monthMa,
 
-      movingAverage12d,
-      currentVs12dMa,
+      movingAverage12month,
+      currentVs12monthMa,
 
       observedAt: currentObservation.date,
     };

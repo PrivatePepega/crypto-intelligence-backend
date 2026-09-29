@@ -38,69 +38,57 @@ export const injectFiveYearTreasuryLatest = async (
 
     const netChange = currentValue - previousDayValue;
 
-    const historicalResult = await client.query<{
-      date: string;
-      value: number;
+    const movingAverageResult = await client.query<{
+      moving_average_30d: string | null;
+      moving_average_6month: string | null;
+      moving_average_12month: string | null;
     }>(
       `
-        SELECT date, value
+        SELECT
+          AVG(value) FILTER (
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d,
+
+          AVG(value) FILTER (
+            WHERE date >= $1::date - INTERVAL '6 months'
+          ) AS moving_average_6month,
+
+          AVG(value) FILTER (
+            WHERE date >= $1::date - INTERVAL '12 months'
+          ) AS moving_average_12month
         FROM historical.five_year_treasury
         WHERE date < $1::date
-        ORDER BY date DESC
-        LIMIT 12
       `,
       [currentObservation.date],
     );
 
-    const historicalValues = historicalResult.rows.map(
-      (row) => Number(row.value),
-    );
+    // AVG() over an empty window yields NULL, so a 6/12 month average stays
+    // null until enough history has been collected instead of throwing.
+    const movingAverageRow = movingAverageResult.rows[0];
 
-    const calculateMovingAverage = (
-      values: number[],
-      period: number,
-    ): number | null => {
-      if (values.length < period) return null;
-
-      const periodValues = values.slice(0, period);
-
-      return (
-        periodValues.reduce(
-          (sum, value) => sum + value,
-          0,
-        ) / period
-      );
-    };
-
-    const movingAverage3d = calculateMovingAverage(
-      historicalValues,
-      3,
-    );
-
-    const movingAverage6d = calculateMovingAverage(
-      historicalValues,
-      6,
-    );
-
-    const movingAverage12d = calculateMovingAverage(
-      historicalValues,
-      12,
-    );
-
-    const currentVs3dMa =
-      movingAverage3d !== null
-        ? currentValue - movingAverage3d
+    const movingAverage30d =
+      movingAverageRow?.moving_average_30d != null
+        ? Number(movingAverageRow.moving_average_30d)
         : null;
 
-    const currentVs6dMa =
-      movingAverage6d !== null
-        ? currentValue - movingAverage6d
+    const movingAverage6month =
+      movingAverageRow?.moving_average_6month != null
+        ? Number(movingAverageRow.moving_average_6month)
         : null;
 
-    const currentVs12dMa =
-      movingAverage12d !== null
-        ? currentValue - movingAverage12d
+    const movingAverage12month =
+      movingAverageRow?.moving_average_12month != null
+        ? Number(movingAverageRow.moving_average_12month)
         : null;
+
+    const currentVs30dMa =
+      movingAverage30d !== null ? currentValue - movingAverage30d : null;
+
+    const currentVs6monthMa =
+      movingAverage6month !== null ? currentValue - movingAverage6month : null;
+
+    const currentVs12monthMa =
+      movingAverage12month !== null ? currentValue - movingAverage12month : null;
 
     await client.query(
       `
@@ -113,14 +101,14 @@ export const injectFiveYearTreasuryLatest = async (
 
           net_change,
 
-          moving_average_3d,
-          current_vs_3d_ma,
+          moving_average_30d,
+          current_vs_30d_ma,
 
-          moving_average_6d,
-          current_vs_6d_ma,
+          moving_average_6month,
+          current_vs_6month_ma,
 
-          moving_average_12d,
-          current_vs_12d_ma,
+          moving_average_12month,
+          current_vs_12month_ma,
 
           observed_at
         )
@@ -142,14 +130,14 @@ export const injectFiveYearTreasuryLatest = async (
 
           net_change = EXCLUDED.net_change,
 
-          moving_average_3d = EXCLUDED.moving_average_3d,
-          current_vs_3d_ma = EXCLUDED.current_vs_3d_ma,
+          moving_average_30d = EXCLUDED.moving_average_30d,
+          current_vs_30d_ma = EXCLUDED.current_vs_30d_ma,
 
-          moving_average_6d = EXCLUDED.moving_average_6d,
-          current_vs_6d_ma = EXCLUDED.current_vs_6d_ma,
+          moving_average_6month = EXCLUDED.moving_average_6month,
+          current_vs_6month_ma = EXCLUDED.current_vs_6month_ma,
 
-          moving_average_12d = EXCLUDED.moving_average_12d,
-          current_vs_12d_ma = EXCLUDED.current_vs_12d_ma,
+          moving_average_12month = EXCLUDED.moving_average_12month,
+          current_vs_12month_ma = EXCLUDED.current_vs_12month_ma,
 
           observed_at = EXCLUDED.observed_at,
 
@@ -164,14 +152,14 @@ export const injectFiveYearTreasuryLatest = async (
 
         netChange,
 
-        movingAverage3d,
-        currentVs3dMa,
+        movingAverage30d,
+        currentVs30dMa,
 
-        movingAverage6d,
-        currentVs6dMa,
+        movingAverage6month,
+        currentVs6monthMa,
 
-        movingAverage12d,
-        currentVs12dMa,
+        movingAverage12month,
+        currentVs12monthMa,
 
         currentObservation.date,
       ],
@@ -187,12 +175,12 @@ export const injectFiveYearTreasuryLatest = async (
       currentValue,
       previousDayValue,
       netChange,
-      movingAverage3d,
-      currentVs3dMa,
-      movingAverage6d,
-      currentVs6dMa,
-      movingAverage12d,
-      currentVs12dMa,
+      movingAverage30d,
+      currentVs30dMa,
+      movingAverage6month,
+      currentVs6monthMa,
+      movingAverage12month,
+      currentVs12monthMa,
       observedAt: currentObservation.date,
     };
   } finally {

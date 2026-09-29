@@ -75,7 +75,7 @@ console.log(`\n3. all ${markets.length} current tables present and identical to 
 }`);
 
 // The injector must emit exactly the table's column set.
-const inj = read("../database/injection/igSentimentCurrent.ts");
+const inj = read("../database/injection/config/igSentimentCurrent.ts");
 const insCols = inj.match(
   /INSERT INTO current\.\$\{config\.table\} \(([\s\S]*?)\)\s*\n\s*VALUES/,
 )![1]!;

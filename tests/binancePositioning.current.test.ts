@@ -69,7 +69,7 @@ console.log(`3b. injector guards columns/values length: ${
   /columns\.length !== values\.length/.test(
     readFileSync(
       new URL(
-        "../database/injection/binancePositioningCurrent.ts",
+        "../database/injection/config/binancePositioningCurrent.ts",
         import.meta.url,
       ),
       "utf-8",

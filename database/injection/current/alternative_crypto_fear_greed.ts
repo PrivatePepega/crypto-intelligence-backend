@@ -5,9 +5,9 @@ import {
   type AlternativeFearGreedObservation,
 } from "../historical/alternative_crypto_fear_greed.js";
 
-// The current observation is folded into the moving average, so only 11 prior
-// days are needed to reach a 12-day window.
-const MA_PERIOD = 12;
+// Moving averages use calendar windows (30 days / 6 months / 12 months) and
+// are computed in SQL, so an indicator without enough history simply reports
+// null rather than throwing.
 
 export type AlternativeFearGreedCurrentData = {
   observation: AlternativeFearGreedObservation;
@@ -22,27 +22,6 @@ const calculatePercentChange = (
   }
 
   return ((current - previous) / previous) * 100;
-};
-
-// Averages the current observation together with the 11 most recent prior
-// observations, giving at most 12 values. Days whose value is missing are
-// dropped rather than counted as zero, so the window can reach back further
-// than 12 calendar days to fill 12 valid readings.
-const calculateMovingAverage = (
-  current: number,
-  historicalValues: number[],
-): number | null => {
-  const values = [current, ...historicalValues];
-
-  if (values.length < MA_PERIOD) {
-    return null;
-  }
-
-  const recentValues = values.slice(0, MA_PERIOD);
-
-  return (
-    recentValues.reduce((sum, value) => sum + value, 0) / MA_PERIOD
-  );
 };
 
 export const injectAlternativeCryptoFearGreedCurrent = async (
@@ -61,7 +40,7 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
       throw new Error("Current Alternative.me Fear & Greed value is invalid");
     }
 
-    const { rows: historicalRows } = await client.query<{
+    const { rows: previousRows } = await client.query<{
       value: string;
       classification: string;
       date: string;
@@ -74,7 +53,7 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
         FROM historical.alternative_fear_greed
         WHERE date < $1::date
         ORDER BY date DESC
-        LIMIT ${MA_PERIOD - 1}
+        LIMIT 1
       `,
       [observation.date],
     );
@@ -87,7 +66,7 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
       return trimmed === "" ? null : Number(trimmed);
     };
 
-    const previousObservation = historicalRows[0] ?? null;
+    const previousObservation = previousRows[0] ?? null;
 
     const previousDayValue = previousObservation
       ? toFiniteNumber(previousObservation.value)
@@ -105,21 +84,75 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
       previousDayValue,
     );
 
-    const historicalValues = historicalRows
-      .map((row) => toFiniteNumber(row.value))
-      .filter((value): value is number => value !== null);
+    // The current observation is folded into every window, matching the
+    // behaviour this injector had before the windows moved to SQL. AVG() over
+    // a window with no rows yields null, so 6/12 month averages stay null until
+    // enough history has been collected.
+    const { rows: movingAverageRows } = await client.query<{
+      moving_average_30d: string | null;
+      moving_average_6month: string | null;
+      moving_average_12month: string | null;
+    }>(
+      `
+        SELECT
+          AVG(value) FILTER (
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d,
 
-    const movingAverage12d = calculateMovingAverage(
-      observation.value,
-      historicalValues,
+          AVG(value) FILTER (
+            WHERE date >= $1::date - INTERVAL '6 months'
+          ) AS moving_average_6month,
+
+          AVG(value) FILTER (
+            WHERE date >= $1::date - INTERVAL '12 months'
+          ) AS moving_average_12month
+        FROM (
+          SELECT date, value
+          FROM historical.alternative_fear_greed
+          WHERE date < $1::date
+
+          UNION ALL
+
+          SELECT $1::date, $2::numeric
+        ) AS windowed
+        WHERE date <= $1::date
+      `,
+      [observation.date, observation.value],
+    );
+
+    const movingAverageRow = movingAverageRows[0];
+
+    const toMovingAverage = (value: string | null | undefined): number | null =>
+      value == null ? null : Number(value);
+
+    const movingAverage30d = toMovingAverage(
+      movingAverageRow?.moving_average_30d,
+    );
+
+    const movingAverage6month = toMovingAverage(
+      movingAverageRow?.moving_average_6month,
+    );
+
+    const movingAverage12month = toMovingAverage(
+      movingAverageRow?.moving_average_12month,
     );
 
     // Absolute difference, matching the current_vs_*_ma_* convention used by
     // the IG, Russell 2000, CFTC, and Binance injectors.
-    const currentVs12dMa =
-      movingAverage12d === null
+    const currentVs30dMa =
+      movingAverage30d === null
         ? null
-        : observation.value - movingAverage12d;
+        : observation.value - movingAverage30d;
+
+    const currentVs6monthMa =
+      movingAverage6month === null
+        ? null
+        : observation.value - movingAverage6month;
+
+    const currentVs12monthMa =
+      movingAverage12month === null
+        ? null
+        : observation.value - movingAverage12month;
 
     // updated_at is deliberately left out of the column list so the column
     // default applies on insert and NOW() is used on conflict.
@@ -138,8 +171,14 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
           net_change,
           percent_change,
 
-          moving_average_12d,
-          current_vs_12d_ma,
+          moving_average_30d,
+          current_vs_30d_ma,
+
+          moving_average_6month,
+          current_vs_6month_ma,
+
+          moving_average_12month,
+          current_vs_12month_ma,
 
           source,
 
@@ -160,10 +199,14 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
 
           $9,
           $10,
-
           $11,
+          $12,
+          $13,
+          $14,
 
-          $12
+          $15,
+
+          $16
         )
         ON CONFLICT (indicator)
         DO UPDATE SET
@@ -178,8 +221,14 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
           net_change = EXCLUDED.net_change,
           percent_change = EXCLUDED.percent_change,
 
-          moving_average_12d = EXCLUDED.moving_average_12d,
-          current_vs_12d_ma = EXCLUDED.current_vs_12d_ma,
+          moving_average_30d = EXCLUDED.moving_average_30d,
+          current_vs_30d_ma = EXCLUDED.current_vs_30d_ma,
+
+          moving_average_6month = EXCLUDED.moving_average_6month,
+          current_vs_6month_ma = EXCLUDED.current_vs_6month_ma,
+
+          moving_average_12month = EXCLUDED.moving_average_12month,
+          current_vs_12month_ma = EXCLUDED.current_vs_12month_ma,
 
           source = EXCLUDED.source,
 
@@ -199,8 +248,14 @@ export const injectAlternativeCryptoFearGreedCurrent = async (
         netChange,
         percentChange,
 
-        movingAverage12d,
-        currentVs12dMa,
+        movingAverage30d,
+        currentVs30dMa,
+
+        movingAverage6month,
+        currentVs6monthMa,
+
+        movingAverage12month,
+        currentVs12monthMa,
 
         observation.source,
 

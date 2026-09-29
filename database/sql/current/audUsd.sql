@@ -15,14 +15,14 @@ CREATE TABLE IF NOT EXISTS current.aud_usd (
 
     daily_range NUMERIC NOT NULL,
 
-    moving_average_3d NUMERIC,
-    current_vs_3d_ma NUMERIC,
+    moving_average_30d NUMERIC,
+    current_vs_30d_ma NUMERIC,
 
-    moving_average_6d NUMERIC,
-    current_vs_6d_ma NUMERIC,
+    moving_average_6month NUMERIC,
+    current_vs_6month_ma NUMERIC,
 
-    moving_average_12d NUMERIC,
-    current_vs_12d_ma NUMERIC,
+    moving_average_12month NUMERIC,
+    current_vs_12month_ma NUMERIC,
 
     pair TEXT NOT NULL,
     interval TEXT NOT NULL,

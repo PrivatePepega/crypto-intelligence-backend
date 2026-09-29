@@ -181,7 +181,7 @@ console.log(
 );
 
 // current_vs convention and the string-typed NUMERIC guard.
-const curr = read("../database/injection/spotEtfCurrent.ts");
+const curr = read("../database/injection/config/spotEtfCurrent.ts");
 console.log(
   `\n12. current_vs_30d_ma uses absolute difference: ${
     /currentValues\[index\]! - movingAverage/.test(curr) ? "PASS" : "FAIL"
@@ -198,7 +198,7 @@ console.log(
 console.log(
   `14. no trailing semicolons in query strings: ${
     /(EXCLUDED\.\w+|NOW\(\)|LIMIT \d+);\s*`/.test(
-      curr + read("../database/injection/spotEtfHistorical.ts"),
+      curr + read("../database/injection/config/spotEtfHistorical.ts"),
     )
       ? "FAIL"
       : "PASS"
