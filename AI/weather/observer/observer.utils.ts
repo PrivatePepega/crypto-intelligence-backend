@@ -157,3 +157,39 @@ export const getCurrentIndicatorData = async (query: string) => {
     },
   });
   
+
+/**
+ * Calls the Marketaux news search through the backend MCP server.
+ *
+ * The Observer talks to MCP instead of calling the Marketaux API directly.
+ * This keeps provider access behind the generic MCP boundary.
+ */
+export const searchMarketauxNews = async (
+  input: Record<string, unknown>,
+  signal?: AbortSignal,
+) => {
+  const { callMcpTool } = await import("../../../mcp/client.js");
+
+  const result = await callMcpTool(
+    "marketaux_news_search",
+    input,
+    signal,
+  );
+
+  if (result.isError) {
+    const message = result.content
+      .filter((item) => item.type === "text")
+      .map((item) => item.text)
+      .join("\n");
+
+    throw new Error(
+      message || "Marketaux MCP tool returned an error.",
+    );
+  }
+
+  if (result.structuredContent !== undefined) {
+    return result.structuredContent;
+  }
+
+  return result.content;
+};
