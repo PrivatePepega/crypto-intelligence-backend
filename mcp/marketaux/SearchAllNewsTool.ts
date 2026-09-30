@@ -8,7 +8,6 @@ import type {
   NewsSearchResult,
   RawArticle,
   RawEntity,
-  RawHighlight,
 } from './types.js';
 
 /** API accepts Y, Y-m, Y-m-d, and each with an optional T[H[:i[:s]]] suffix. */
@@ -179,47 +178,18 @@ export const newsSearchInputSchema = z.object({
 });
 
 const entityOutputSchema = z.object({
-  symbol: z.string().optional(),
   name: z.string().optional(),
-  type: z.string().optional(),
-  industry: z.string().optional(),
-  country: z.string().optional(),
-  exchange: z.string().optional(),
-  matchScore: z.number().optional(),
   sentimentScore: z.number().optional(),
-  highlights: z
-    .array(
-      z.object({
-        text: z.string(),
-        sentiment: z.number().optional(),
-        locatedIn: z.string().optional(),
-      })
-    )
-    .optional(),
 });
 
 const articleOutputSchema = z.object({
-  uuid: z.string(),
   title: z.string(),
-  url: z.string(),
-  publishedAt: z.string(),
-  source: z.string().optional(),
-  language: z.string().optional(),
   description: z.string().optional(),
   snippet: z.string().optional(),
-  imageUrl: z.string().optional(),
-  relevanceScore: z.number().optional(),
   entities: z.array(entityOutputSchema),
 });
 
 export const newsSearchOutputSchema = z.object({
-  meta: z.object({
-    found: z.number(),
-    returned: z.number(),
-    limit: z.number(),
-    page: z.number(),
-    hasMore: z.boolean(),
-  }),
   articles: z.array(articleOutputSchema),
 });
 
@@ -263,7 +233,6 @@ export class SearchAllNewsTool {
       },
       async (input, ctx) => {
         const {
-          include_highlights: includeHighlights = false,
           limit = 3,
           page = 1,
           ...rest
@@ -275,7 +244,7 @@ export class SearchAllNewsTool {
           ctx.mcpReq.signal
         );
 
-        const result = shapeResult(page_, includeHighlights);
+        const result = shapeResult(page_);
 
         return {
           content: [{ type: 'text' as const, text: formatDigest(result) }],
@@ -288,7 +257,7 @@ export class SearchAllNewsTool {
 
 /** Maps tool input onto the API's query parameters. */
 function toQuery(
-  input: Omit<z.infer<typeof newsSearchInputSchema>, 'include_highlights'>
+  input: z.infer<typeof newsSearchInputSchema>
 ): Parameters<MarketauxClient['searchAllNews']>[0] {
   const query: Record<string, string | number | boolean> = {};
 
@@ -324,130 +293,78 @@ function stripTags(value: string): string {
   return value.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 }
 
-function shapeEntity(
-  entity: RawEntity,
-  includeHighlights: boolean
-): NewsEntity {
-  const shaped: NewsEntity = {
-    symbol: entity.symbol ?? undefined,
+function shapeEntity(entity: RawEntity): NewsEntity {
+  return {
     name: entity.name ?? undefined,
-    type: entity.type ?? undefined,
-    industry: entity.industry ?? undefined,
-    country: entity.country ?? undefined,
-    exchange: entity.exchange ?? entity.exchange_long ?? undefined,
-    matchScore: entity.match_score ?? undefined,
     sentimentScore: entity.sentiment_score ?? undefined,
   };
-
-  if (includeHighlights && entity.highlights?.length) {
-    shaped.highlights = entity.highlights.map(shapeHighlight);
-  }
-
-  return shaped;
 }
 
-function shapeHighlight(highlight: RawHighlight) {
+function shapeArticle(article: RawArticle): NewsArticle {
   return {
-    text: stripTags(highlight.highlight),
-    sentiment: highlight.sentiment ?? undefined,
-    locatedIn: highlight.highlighted_in ?? undefined,
-  };
-}
-
-function shapeArticle(article: RawArticle, includeHighlights: boolean): NewsArticle {
-  return {
-    uuid: article.uuid,
     title: article.title,
-    url: article.url,
-    publishedAt: article.published_at,
-    source: article.source ?? undefined,
-    language: article.language ?? undefined,
     description: article.description || undefined,
     snippet: article.snippet || undefined,
-    imageUrl: article.image_url ?? undefined,
-    relevanceScore: article.relevance_score ?? undefined,
-    entities: (article.entities ?? []).map((entity) =>
-      shapeEntity(entity, includeHighlights)
-    ),
+    entities: (article.entities ?? []).map(shapeEntity),
   };
 }
 
 function shapeResult(
-  page: { meta: { found: number; returned: number; limit: number; page: number }; data: unknown },
-  includeHighlights: boolean
+  page: {
+    meta: {
+      found: number;
+      returned: number;
+      limit: number;
+      page: number;
+    };
+    data: unknown;
+  },
 ): NewsSearchResult {
   const articles = (page.data as RawArticle[] | null) ?? [];
 
   return {
-    meta: {
-      found: page.meta.found,
-      returned: page.meta.returned,
-      limit: page.meta.limit,
-      page: page.meta.page,
-      // A short page means the result set is exhausted.
-      hasMore: page.meta.returned >= page.meta.limit,
-    },
-    articles: articles.map((article) => shapeArticle(article, includeHighlights)),
+    articles: articles.map(shapeArticle),
   };
 }
 
 function formatDigest(result: NewsSearchResult): string {
-  const { meta, articles } = result;
-
-  if (articles.length === 0) {
-    return `No articles matched. The API reports ${meta.found} total matches for this query, so the filters were too narrow for page ${meta.page}.`;
+  if (result.articles.length === 0) {
+    return "No articles matched the query.";
   }
 
-  const lines: string[] = [
-    `${articles.length} of ${meta.found.toLocaleString('en-US')} matching articles (page ${meta.page}).`,
-    '',
-  ];
+  return result.articles
+    .map((article, index) => {
+      const lines = [`${index + 1}. ${article.title}`];
 
-  articles.forEach((article, index) => {
-    lines.push(`${index + 1}. ${article.title}`);
-    lines.push(`   ${article.source ?? 'unknown source'} · ${article.publishedAt}${article.language ? ` · ${article.language}` : ''}`);
+      if (article.description) {
+        lines.push(`Description: ${article.description}`);
+      }
 
-    if (article.relevanceScore !== undefined) {
-      lines.push(`   relevance ${article.relevanceScore.toFixed(2)}`);
-    }
-    if (article.snippet) {
-      lines.push(`   ${collapse(article.snippet)}`);
-    }
-    if (article.entities.length > 0) {
-      lines.push(`   Entities: ${article.entities.map(formatEntity).join('; ')}`);
-    }
-    lines.push(`   ${article.url}`);
-    lines.push('');
-  });
+      if (article.snippet) {
+        lines.push(`Snippet: ${article.snippet}`);
+      }
 
-  lines.push(
-    meta.hasMore
-      ? `More articles available — call again with page: ${meta.page + 1}.`
-      : 'End of results.'
-  );
+      if (article.entities.length > 0) {
+        lines.push(
+          `Entities: ${article.entities.map(formatEntity).join("; ")}`,
+        );
+      }
 
-  return lines.join('\n');
+      return lines.join("\n");
+    })
+    .join("\n\n");
 }
 
 function formatEntity(entity: NewsEntity): string {
-  const label = entity.symbol
-    ? `${entity.symbol}${entity.name ? ` (${entity.name})` : ''}`
-    : (entity.name ?? entity.industry ?? 'unnamed entity');
+  const name = entity.name ?? "unnamed entity";
 
-  const scores: string[] = [];
-  if (entity.matchScore !== undefined) {
-    scores.push(`match ${entity.matchScore.toFixed(2)}`);
-  }
-  if (entity.sentimentScore !== undefined) {
-    const sign = entity.sentimentScore > 0 ? '+' : '';
-    scores.push(`sentiment ${sign}${entity.sentimentScore.toFixed(2)}`);
+  if (entity.sentimentScore === undefined) {
+    return name;
   }
 
-  return scores.length > 0 ? `${label} [${scores.join(', ')}]` : label;
-}
+  const sign = entity.sentimentScore > 0 ? "+" : "";
 
-function collapse(value: string): string {
-  return stripTags(value);
+  return `${name} [sentiment ${sign}${entity.sentimentScore.toFixed(2)}]`;
 }
 
 /** Re-exported so the server can surface a useful message on startup. */
