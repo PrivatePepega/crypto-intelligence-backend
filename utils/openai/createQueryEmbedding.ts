@@ -15,6 +15,9 @@ export const createQueryEmbedding = async (query: string) => {
       throw new Error("Failed to generate embedding from OpenAI API.");
     }
   
-    return response.data[0].embedding;
-  };
+    return {
+      embedding: response.data[0].embedding,
+      usage: response.usage,
+    };
+    };
   
