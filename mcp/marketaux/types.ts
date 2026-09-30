@@ -82,55 +82,19 @@ export interface RawNewsPage {
   data: RawArticle[] | null;
 }
 
-/**
- * Normalised entity. Absent rather than null, so the model never has to
- * distinguish "missing" from "explicitly empty" and the output schema stays
- * a plain `optional` field.
- */
+/** Normalized entity returned to MCP clients. */
 export interface NewsEntity {
-  // `| undefined` is explicit because this repo compiles with
-  // exactOptionalPropertyTypes, and the shapers in SearchAllNewsTool assign
-  // `?? undefined` rather than leaving the key out entirely.
-  symbol?: string | undefined;
   name?: string | undefined;
-  type?: string | undefined;
-  industry?: string | undefined;
-  country?: string | undefined;
-  exchange?: string | undefined;
-  matchScore?: number | undefined;
   sentimentScore?: number | undefined;
-  /** Only present when the caller opted in via `includeHighlights`. */
-  highlights?: EntityHighlight[] | undefined;
-}
-
-export interface EntityHighlight {
-  text: string;
-  sentiment?: number | undefined;
-  locatedIn?: string | undefined;
 }
 
 export interface NewsArticle {
-  uuid: string;
   title: string;
-  url: string;
-  publishedAt: string;
-  source?: string | undefined;
-  language?: string | undefined;
   description?: string | undefined;
   snippet?: string | undefined;
-  imageUrl?: string | undefined;
-  relevanceScore?: number | undefined;
   entities: NewsEntity[];
 }
 
 export interface NewsSearchResult {
-  meta: {
-    found: number;
-    returned: number;
-    limit: number;
-    page: number;
-    /** True when `returned < limit`, i.e. this is the last page. */
-    hasMore: boolean;
-  };
   articles: NewsArticle[];
 }
