@@ -89,8 +89,8 @@ export interface RawNewsPage {
  */
 export interface NewsEntity {
   // `| undefined` is explicit because this repo compiles with
-  // exactOptionalPropertyTypes, and the shapers assign `?? undefined` rather
-  // than leaving the key out entirely.
+  // exactOptionalPropertyTypes, and the shapers in SearchAllNewsTool assign
+  // `?? undefined` rather than leaving the key out entirely.
   symbol?: string | undefined;
   name?: string | undefined;
   type?: string | undefined;

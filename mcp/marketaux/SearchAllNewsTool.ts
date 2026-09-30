@@ -1,7 +1,7 @@
 import type { McpServer } from '@modelcontextprotocol/server';
 import * as z from 'zod/v4';
 
-import { MarketauxApiError, type MarketauxClient } from '../marketaux/client.js';
+import { MarketauxApiError, type MarketauxClient } from './client.js';
 import type {
   NewsArticle,
   NewsEntity,
@@ -9,7 +9,7 @@ import type {
   RawArticle,
   RawEntity,
   RawHighlight,
-} from '../marketaux/types.js';
+} from './types.js';
 
 /** API accepts Y, Y-m, Y-m-d, and each with an optional T[H[:i[:s]]] suffix. */
 const PARTIAL_DATE =

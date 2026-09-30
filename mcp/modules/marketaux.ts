@@ -1,5 +1,5 @@
-import { MarketauxClient } from "../../src/marketaux/client.js";
-import { SearchAllNewsTool } from "../../src/tools/SearchAllNewsTool.js";
+import { MarketauxClient } from "../marketaux/client.js";
+import { SearchAllNewsTool } from "../marketaux/SearchAllNewsTool.js";
 import type { McpToolModule } from "../types.js";
 
 /**
