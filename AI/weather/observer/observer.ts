@@ -1,14 +1,14 @@
-import { streamText, stepCountIs } from "ai";
+import { isStepCount, streamText } from "ai";
 
+import { models } from "../../../AI/providers/model.js";
 import { cryptoObserverConfig } from "./observer.config.js";
 import { observerTools } from "./observer.tools.js";
-import { models } from "../../../AI/providers/model.js";
 
 // --------------------------------------------------
 // Observer limits
 // --------------------------------------------------
 
-const MAX_TOOL_ROUNDS = 5;
+const MAX_AGENT_STEPS = 5;
 
 // --------------------------------------------------
 // Observer
@@ -87,6 +87,10 @@ Do not create observations simply to increase the number of observations.
 
 Search broadly enough to identify meaningful developments, but stop when additional searching is unlikely to produce materially different observations.
 
+When a tool returns useful evidence, treat the tool result itself as evidence even if the result is not repeated in your own response text.
+
+If a search returns zero results, weak results, or results that appear unrelated to the observation objective, do not immediately conclude that nothing happened. Change the search query, broaden or adjust the relevant filters, or inspect another available source before concluding that no meaningful development was found.
+
 You should:
 
 - inspect the available deterministic data
@@ -99,6 +103,7 @@ You should:
 - preserve uncertainty when evidence is incomplete
 - remain within the configured observation scope
 - prioritize breadth over depth
+- use actual tool results as evidence for later synthesis
 
 You should NOT:
 
@@ -124,6 +129,42 @@ The goal is not to produce a fixed number of observations.
 The goal is to discover the meaningful things that happened.
 `;
 
+  const finalObserverPrompt = `
+You are producing the final output for the Observer.
+
+The research phase is complete.
+
+You have no tools available during this step.
+
+You have been given both:
+
+1. The research model's notes.
+2. The raw tool evidence collected during the research phase.
+
+The raw tool evidence is the primary factual evidence for this synthesis.
+
+Using ONLY the collected evidence:
+
+- produce concise observations about meaningful developments
+- preserve uncertainty when evidence is incomplete
+- do not invent facts
+- do not invent causes
+- do not perform additional research
+- do not explain your reasoning
+- do not use Markdown formatting
+- return only observations worth passing to Triage
+
+A meaningful observation may be based directly on a single strong event or may connect multiple pieces of evidence when the relationship is supported.
+
+Do not require the research model to have explicitly repeated a tool result in its notes. The raw tool evidence is available separately and should be used directly.
+
+If the collected evidence contains meaningful developments, report them.
+
+If the collected evidence does not support a meaningful observation, return:
+
+No meaningful developments identified.
+`;
+
   const prompt = `
 Observe the ${config.domain} domain for today.
 
@@ -132,174 +173,220 @@ ${config.objective}
 
 Areas of observation:
 ${config.categories
-  .map((category) => `- ${category}`)
-  .join("\n")}
+    .map((category) => `- ${category}`)
+    .join("\n")}
 
 Identify meaningful developments and produce observations.
 `;
-
-  // --------------------------------------------------
-  // Run Observer
-  // --------------------------------------------------
 
   console.log("");
   console.log("==============================================");
   console.log("Observer Starting");
   console.log("==============================================");
 
-  const result = streamText({
+  const researchResult = streamText({
     model: models.groq,
-
     instructions: observerPrompt,
-
     prompt,
-
     tools: observerTools,
+    stopWhen: isStepCount(MAX_AGENT_STEPS - 1),
 
-    stopWhen: stepCountIs(MAX_TOOL_ROUNDS),
+    onStepEnd: async (step) => {
+      const displayStep = step.stepNumber + 1;
+
+      console.log("");
+      console.log("----------------------------------------------");
+      console.log(
+        `Observer Research Step ${displayStep}`,
+      );
+      console.log("----------------------------------------------");
+
+      if (step.toolCalls.length > 0) {
+        for (const toolCall of step.toolCalls) {
+          console.log("");
+          console.log("Tool call:");
+          console.log(`Tool: ${toolCall.toolName}`);
+          console.log(
+            `Arguments: ${JSON.stringify(toolCall.input)}`,
+          );
+        }
+      }
+
+      if (step.toolResults.length > 0) {
+        for (const toolResult of step.toolResults) {
+          console.log("");
+          console.log("Tool result:");
+          console.log(`Tool: ${toolResult.toolName}`);
+          console.log(
+            `Result: ${JSON.stringify(toolResult.output)}`,
+          );
+        }
+      }
+
+      if (step.text) {
+        console.log("");
+        console.log("Step text:");
+        console.log(step.text);
+      }
+
+      console.log("");
+      console.log(
+        `Observer Research Step ${displayStep} complete.`,
+      );
+    },
   });
 
+  const researchText = await researchResult.text;
+  const researchSteps = await researchResult.steps;
+  const researchUsage = await researchResult.usage;
+
   // --------------------------------------------------
-  // Stream Observer events
+  // Preserve raw research evidence
   // --------------------------------------------------
+  //
+  // researchResult.text only contains model-generated text.
+  // Tool results are stored separately inside each research step.
+  //
+  // These records are passed directly to the final synthesis
+  // model so it can reason over the actual evidence returned
+  // by the Observer tools.
+  //
 
-  let stepNumber = 0;
+  const researchEvidence = researchSteps
+    .filter(
+      (step) =>
+        step.toolCalls.length > 0 ||
+        step.toolResults.length > 0 ||
+        Boolean(step.text),
+    )
+    .map((step) => ({
+      step: step.stepNumber + 1,
 
-  for await (const part of result.fullStream) {
-    switch (part.type) {
-      // ----------------------------------------------
-      // Step started
-      // ----------------------------------------------
+      text: step.text || null,
 
-      case "start-step": {
-        stepNumber++;
+      toolCalls: step.toolCalls.map((toolCall) => ({
+        tool: toolCall.toolName,
+        arguments: toolCall.input,
+      })),
 
-        console.log("");
-        console.log("----------------------------------------------");
-        console.log(`Observer Step ${stepNumber}`);
-        console.log("----------------------------------------------");
+      toolResults: step.toolResults.map((toolResult) => ({
+        tool: toolResult.toolName,
+        result: toolResult.output,
+      })),
+    }));
 
-        break;
-      }
+  console.log("");
+  console.log("----------------------------------------------");
+  console.log("Observer Final Synthesis");
+  console.log("----------------------------------------------");
 
-      // ----------------------------------------------
-      // Model text
-      // ----------------------------------------------
+  const synthesisPrompt = `
+Produce the final Observer observations.
 
-      case "text-delta": {
-        process.stdout.write(part.text);
+The configured domain is:
 
-        break;
-      }
+${config.domain}
 
-      // ----------------------------------------------
-      // Tool call
-      // ----------------------------------------------
+The Observer objective is:
 
-      case "tool-call": {
-        console.log("");
-        console.log("");
-        console.log("Tool call:");
-        console.log(`Tool: ${part.toolName}`);
-        console.log(
-          `Arguments: ${JSON.stringify(part.input)}`,
-        );
+${config.objective}
 
-        break;
-      }
+The areas being observed are:
 
-      // ----------------------------------------------
-      // Tool result
-      // ----------------------------------------------
+${config.categories.join(", ")}
 
-      case "tool-result": {
-        console.log("");
-        console.log("");
-        console.log("Tool result:");
-        console.log(`Tool: ${part.toolName}`);
-        console.log(
-          `Result: ${JSON.stringify(part.output)}`,
-        );
+The research model's notes are:
 
-        break;
-      }
+<research_notes>
+${researchText || "No research notes were produced."}
+</research_notes>
 
-      // ----------------------------------------------
-      // Tool error
-      // ----------------------------------------------
+The following is the raw evidence returned by the tools during the research phase.
 
-      case "tool-error": {
-        console.log("");
-        console.log("");
-        console.log("Tool error:");
-        console.log(`Tool: ${part.toolName}`);
-        console.log(
-          `Error: ${JSON.stringify(part.error)}`,
-        );
+<research_evidence>
+${JSON.stringify(researchEvidence, null, 2)}
+</research_evidence>
 
-        break;
-      }
+Use the raw tool evidence as the factual basis for the final observations.
 
-      // ----------------------------------------------
-      // Step finished
-      // ----------------------------------------------
+Important:
 
-      case "finish-step": {
-        console.log("");
-        console.log("");
-        console.log(`Observer Step ${stepNumber} complete.`);
+- A tool result is evidence even if the research model did not repeat it in its notes.
+- Do not ignore tool results simply because the research notes are short or empty.
+- Do not invent facts that are not present in the evidence.
+- Do not invent causal relationships.
+- Do not perform additional research.
+- Report meaningful developments supported by the evidence.
+- Do not report ordinary conditions.
+- Preserve uncertainty where appropriate.
+- Return concise observations only.
+`;
 
-        break;
-      }
+  const synthesisResult = streamText({
+    model: models.groq,
+    instructions: finalObserverPrompt,
+    prompt: synthesisPrompt,
+  });
 
-      // ----------------------------------------------
-      // Error
-      // ----------------------------------------------
+  let finalText = "";
 
-      case "error": {
-        console.error("");
-        console.error("Observer stream error:");
-        console.error(part.error);
-
-        break;
-      }
-
-      default:
-        break;
-    }
+  for await (const textDelta of synthesisResult.textStream) {
+    finalText += textDelta;
+    process.stdout.write(textDelta);
   }
 
-  // --------------------------------------------------
-  // Resolve final result
-  // --------------------------------------------------
+  const synthesisUsage = await synthesisResult.usage;
 
-  const finalText = await result.text;
-  const steps = await result.steps;
-  const usage = await result.usage;
-
-  // --------------------------------------------------
-  // Usage
-  // --------------------------------------------------
-
-  const inputTokens = usage?.inputTokens ?? 0;
-  const outputTokens = usage?.outputTokens ?? 0;
-
+  console.log("");
   console.log("");
   console.log("==============================================");
   console.log("Observer Usage");
   console.log("==============================================");
 
-  console.log(`Input tokens:  ${inputTokens}`);
-  console.log(`Output tokens: ${outputTokens}`);
-  console.log(`Steps:         ${steps.length}`);
+  console.log(
+    `Research input tokens: ${
+      researchUsage.inputTokens ?? 0
+    }`,
+  );
+
+  console.log(
+    `Research output tokens: ${
+      researchUsage.outputTokens ?? 0
+    }`,
+  );
+
+  console.log(
+    `Synthesis input tokens: ${
+      synthesisUsage.inputTokens ?? 0
+    }`,
+  );
+
+  console.log(
+    `Synthesis output tokens: ${
+      synthesisUsage.outputTokens ?? 0
+    }`,
+  );
+
+  console.log(
+    `Total input tokens: ${
+      (researchUsage.inputTokens ?? 0) +
+      (synthesisUsage.inputTokens ?? 0)
+    }`,
+  );
+
+  console.log(
+    `Total output tokens: ${
+      (researchUsage.outputTokens ?? 0) +
+      (synthesisUsage.outputTokens ?? 0)
+    }`,
+  );
+
+  console.log(`Research steps: ${researchSteps.length}`);
+  console.log("Final synthesis: 1");
 
   console.log("==============================================");
 
-  // --------------------------------------------------
-  // Tool usage summary
-  // --------------------------------------------------
-
-  const toolCalls = steps.flatMap(
+  const toolCalls = researchSteps.flatMap(
     (step) => step.toolCalls ?? [],
   );
 
@@ -319,18 +406,12 @@ Identify meaningful developments and produce observations.
     );
   }
 
-  // --------------------------------------------------
-  // Final Observer output
-  // --------------------------------------------------
-
   console.log("");
   console.log("----------------------------------------------");
   console.log("Observer Final Output");
   console.log("----------------------------------------------");
 
-  console.log(
-    finalText || "(no text output)",
-  );
+  console.log(finalText || "(no text output)");
 
   console.log("");
   console.log("==============================================");
