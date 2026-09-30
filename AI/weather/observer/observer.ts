@@ -1,4 +1,4 @@
-import { generateText, stepCountIs } from "ai";
+import { streamText, stepCountIs } from "ai";
 
 import { cryptoObserverConfig } from "./observer.config.js";
 import { observerTools } from "./observer.tools.js";
@@ -142,7 +142,12 @@ Identify meaningful developments and produce observations.
   // Run Observer
   // --------------------------------------------------
 
-  const result = await generateText({
+  console.log("");
+  console.log("==============================================");
+  console.log("Observer Starting");
+  console.log("==============================================");
+
+  const result = streamText({
     model: models.groq,
 
     instructions: observerPrompt,
@@ -154,90 +159,130 @@ Identify meaningful developments and produce observations.
     stopWhen: stepCountIs(MAX_TOOL_ROUNDS),
   });
 
-  for (const [index, step] of result.steps.entries()) {
-    console.log("");
-    console.log("----------------------------------------------");
-    console.log(`Observer Step ${index + 1}`);
-    console.log("----------------------------------------------");
-  
-    console.log(
-      `Finish reason: ${step.finishReason ?? "unknown"}`,
-    );
-  
-    // ----------------------------------------------
-    // Model text
-    // ----------------------------------------------
-  
-    if (step.text) {
-      console.log("");
-      console.log("Model text:");
-      console.log(step.text);
-    }
-  
-    // ----------------------------------------------
-    // Tool calls
-    // ----------------------------------------------
-  
-    if (step.toolCalls?.length > 0) {
-      console.log("");
-      console.log(`Tool calls: ${step.toolCalls.length}`);
-  
-      for (const toolCall of step.toolCalls) {
+  // --------------------------------------------------
+  // Stream Observer events
+  // --------------------------------------------------
+
+  let stepNumber = 0;
+
+  for await (const part of result.fullStream) {
+    switch (part.type) {
+      // ----------------------------------------------
+      // Step started
+      // ----------------------------------------------
+
+      case "start-step": {
+        stepNumber++;
+
         console.log("");
-        console.log(`Tool: ${toolCall.toolName}`);
-        console.log(
-          `Arguments: ${JSON.stringify(toolCall.input)}`,
-        );
+        console.log("----------------------------------------------");
+        console.log(`Observer Step ${stepNumber}`);
+        console.log("----------------------------------------------");
+
+        break;
       }
-    } else {
-      console.log("");
-      console.log("Tool calls: none");
-    }
-  
-    // ----------------------------------------------
-    // Tool results
-    // ----------------------------------------------
-  
-    if (step.toolResults?.length > 0) {
-      console.log("");
-      console.log(`Tool results: ${step.toolResults.length}`);
-  
-      for (const toolResult of step.toolResults) {
+
+      // ----------------------------------------------
+      // Model text
+      // ----------------------------------------------
+
+      case "text-delta": {
+        process.stdout.write(part.text);
+
+        break;
+      }
+
+      // ----------------------------------------------
+      // Tool call
+      // ----------------------------------------------
+
+      case "tool-call": {
         console.log("");
-        console.log(`Tool: ${toolResult.toolName}`);
+        console.log("");
+        console.log("Tool call:");
+        console.log(`Tool: ${part.toolName}`);
         console.log(
-          `Result: ${JSON.stringify(toolResult.output)}`,
+          `Arguments: ${JSON.stringify(part.input)}`,
         );
+
+        break;
       }
-    } else {
-      console.log("");
-      console.log("Tool results: none");
-    }
-  
-    // ----------------------------------------------
-    // Step usage
-    // ----------------------------------------------
-  
-    if (step.usage) {
-      console.log("");
-      console.log("Step usage:");
-  
-      console.log(
-        `Input tokens:  ${step.usage.inputTokens ?? 0}`,
-      );
-  
-      console.log(
-        `Output tokens: ${step.usage.outputTokens ?? 0}`,
-      );
+
+      // ----------------------------------------------
+      // Tool result
+      // ----------------------------------------------
+
+      case "tool-result": {
+        console.log("");
+        console.log("");
+        console.log("Tool result:");
+        console.log(`Tool: ${part.toolName}`);
+        console.log(
+          `Result: ${JSON.stringify(part.output)}`,
+        );
+
+        break;
+      }
+
+      // ----------------------------------------------
+      // Tool error
+      // ----------------------------------------------
+
+      case "tool-error": {
+        console.log("");
+        console.log("");
+        console.log("Tool error:");
+        console.log(`Tool: ${part.toolName}`);
+        console.log(
+          `Error: ${JSON.stringify(part.error)}`,
+        );
+
+        break;
+      }
+
+      // ----------------------------------------------
+      // Step finished
+      // ----------------------------------------------
+
+      case "finish-step": {
+        console.log("");
+        console.log("");
+        console.log(`Observer Step ${stepNumber} complete.`);
+
+        break;
+      }
+
+      // ----------------------------------------------
+      // Error
+      // ----------------------------------------------
+
+      case "error": {
+        console.error("");
+        console.error("Observer stream error:");
+        console.error(part.error);
+
+        break;
+      }
+
+      default:
+        break;
     }
   }
+
+  // --------------------------------------------------
+  // Resolve final result
+  // --------------------------------------------------
+
+  const finalText = await result.text;
+  const steps = await result.steps;
+  const usage = await result.usage;
 
   // --------------------------------------------------
   // Usage
   // --------------------------------------------------
 
-  const inputTokens = result.usage?.inputTokens ?? 0;
-  const outputTokens = result.usage?.outputTokens ?? 0;
+  const inputTokens = usage?.inputTokens ?? 0;
+  const outputTokens = usage?.outputTokens ?? 0;
 
   console.log("");
   console.log("==============================================");
@@ -246,19 +291,15 @@ Identify meaningful developments and produce observations.
 
   console.log(`Input tokens:  ${inputTokens}`);
   console.log(`Output tokens: ${outputTokens}`);
-  console.log(`Steps:         ${result.steps.length}`);
+  console.log(`Steps:         ${steps.length}`);
 
   console.log("==============================================");
 
-
-  
   // --------------------------------------------------
   // Tool usage summary
   // --------------------------------------------------
 
-
-
-  const toolCalls = result.steps.flatMap(
+  const toolCalls = steps.flatMap(
     (step) => step.toolCalls ?? [],
   );
 
@@ -288,7 +329,7 @@ Identify meaningful developments and produce observations.
   console.log("----------------------------------------------");
 
   console.log(
-    result.text || "(no text output)",
+    finalText || "(no text output)",
   );
 
   console.log("");
@@ -296,5 +337,5 @@ Identify meaningful developments and produce observations.
   console.log("Observer Complete");
   console.log("==============================================");
 
-  return result.text;
+  return finalText;
 };

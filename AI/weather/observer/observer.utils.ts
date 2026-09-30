@@ -3,6 +3,7 @@ import pool from "../../../config/database.js";
 import { webSearch } from "../../../utils/AI/webSearch.js";
 import { createQueryEmbedding } from "../../../utils/openai/createQueryEmbedding.js";
 import { z } from "zod";
+import { callMcpTool } from "../../mcp/client.js";
 
 
 
@@ -165,31 +166,13 @@ export const getCurrentIndicatorData = async (query: string) => {
  * This keeps provider access behind the generic MCP boundary.
  */
 export const searchMarketauxNews = async (
-  input: Record<string, unknown>,
-  signal?: AbortSignal,
-) => {
-  const { callMcpTool } = await import("../../../mcp/client.js");
-
-  const result = await callMcpTool(
-    "marketaux_news_search",
-    input,
-    signal,
-  );
-
-  if (result.isError) {
-    const message = result.content
-      .filter((item) => item.type === "text")
-      .map((item) => item.text)
-      .join("\n");
-
-    throw new Error(
-      message || "Marketaux MCP tool returned an error.",
+    input: Record<string, unknown>,
+    signal?: AbortSignal,
+  ) => {
+  
+    return await callMcpTool(
+      "marketaux_news_search",
+      input,
+      signal,
     );
-  }
-
-  if (result.structuredContent !== undefined) {
-    return result.structuredContent;
-  }
-
-  return result.content;
-};
+  };

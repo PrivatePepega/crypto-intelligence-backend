@@ -10,6 +10,10 @@ const MCP_API_KEY = process.env.MCP_API_KEY;
 
 let clientPromise: Promise<Client> | null = null;
 
+// --------------------------------------------------
+// MCP client
+// --------------------------------------------------
+
 const createMcpClient = async (): Promise<Client> => {
   const client = new Client({
     name: "crypto-intelligence-observer",
@@ -48,6 +52,10 @@ const createMcpClient = async (): Promise<Client> => {
   return client;
 };
 
+// --------------------------------------------------
+// Get client
+// --------------------------------------------------
+
 export const getMcpClient = async (): Promise<Client> => {
   if (clientPromise === null) {
     clientPromise = createMcpClient().catch((error) => {
@@ -59,6 +67,10 @@ export const getMcpClient = async (): Promise<Client> => {
   return clientPromise;
 };
 
+// --------------------------------------------------
+// Call MCP tool
+// --------------------------------------------------
+
 export const callMcpTool = async (
   name: string,
   arguments_: Record<string, unknown>,
@@ -66,17 +78,57 @@ export const callMcpTool = async (
 ) => {
   const client = await getMcpClient();
 
-  return await client.callTool(
+  const options = signal ? { signal } : undefined;
+
+  const result = await client.callTool(
     {
       name,
       arguments: arguments_,
     },
-    undefined,
-    {
-      signal,
-    },
+    options,
   );
+
+  if (result.isError) {
+    const message = result.content
+      .filter(
+        (item): item is { type: "text"; text: string } =>
+          item.type === "text",
+      )
+      .map((item) => item.text)
+      .join("\n");
+
+    throw new Error(
+      message || `MCP tool "${name}" returned an error.`,
+    );
+  }
+
+  if (
+    "structuredContent" in result &&
+    result.structuredContent !== undefined
+  ) {
+    return result.structuredContent;
+  }
+
+  const textContent = result.content
+    .filter(
+      (item): item is { type: "text"; text: string } =>
+        item.type === "text",
+    )
+    .map((item) => item.text)
+    .join("\n");
+
+  if (!textContent) {
+    throw new Error(
+      `MCP tool "${name}" returned no structured or text content.`,
+    );
+  }
+
+  return textContent;
 };
+
+// --------------------------------------------------
+// Close
+// --------------------------------------------------
 
 export const closeMcpClient = async (): Promise<void> => {
   if (clientPromise === null) {
@@ -84,6 +136,7 @@ export const closeMcpClient = async (): Promise<void> => {
   }
 
   const client = await clientPromise.catch(() => null);
+
   clientPromise = null;
 
   await client?.close();
