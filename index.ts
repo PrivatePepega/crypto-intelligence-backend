@@ -7,8 +7,8 @@ import type { Request, Response, NextFunction, Errback } from 'express'
 import routes from "./routes/index.js"
 import cookieParser from "cookie-parser";
 import "./config/database.js";
-import { connectMarketauxMcp, marketauxClient } from "./mcp/client.js";
-import { callMarketauxNews } from "./mcp/marketaux.js";
+import { mountMcpServer } from "./mcp/index.js";
+
 
 
 const app = express();
@@ -35,6 +35,13 @@ app.get("/", async (req:Request, res:Response) => {
 })
 app.use("/api-v1", routes);
 
+// Mounted on the same app and port as the REST API, so MCP needs no second
+// process. Must come after express.json() (the handler is handed the parsed
+// body) and before app.listen(), so a misconfigured provider fails at boot.
+// Registered before the error handlers below to keep its errors out of the
+// 404/500 fallback.
+mountMcpServer(app);
+
 
 
 
@@ -51,25 +58,3 @@ app.listen(PORT, () => {
 });
 
 
-async function main() {
-  try {
-    await connectMarketauxMcp();
-
-    const tools = await marketauxClient.listTools();
-
-    console.log("\nAvailable MCP tools:");
-    console.dir(tools.tools, { depth: null });
-
-    console.log("\nCalling MarketAux news tool...\n");
-
-    const result = await callMarketauxNews();
-
-    console.dir(result, { depth: null });
-  } catch (error) {
-    console.error("MCP test failed:", error);
-  } finally {
-    await marketauxClient.close();
-  }
-}
-
-main();
