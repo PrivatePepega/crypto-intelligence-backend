@@ -7,6 +7,8 @@ import type { Request, Response, NextFunction, Errback } from 'express'
 import routes from "./routes/index.js"
 import cookieParser from "cookie-parser";
 import "./config/database.js";
+import { connectMarketauxMcp, marketauxClient } from "./mcp/client.js";
+import { callMarketauxNews } from "./mcp/marketaux.js";
 
 
 const app = express();
@@ -47,3 +49,27 @@ app.use((err: Errback, req:Request, res:Response, next:NextFunction) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+async function main() {
+  try {
+    await connectMarketauxMcp();
+
+    const tools = await marketauxClient.listTools();
+
+    console.log("\nAvailable MCP tools:");
+    console.dir(tools.tools, { depth: null });
+
+    console.log("\nCalling MarketAux news tool...\n");
+
+    const result = await callMarketauxNews();
+
+    console.dir(result, { depth: null });
+  } catch (error) {
+    console.error("MCP test failed:", error);
+  } finally {
+    await marketauxClient.close();
+  }
+}
+
+main();
