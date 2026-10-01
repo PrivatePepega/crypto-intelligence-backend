@@ -13,21 +13,11 @@ type ExaSearchResponse = {
 
 const cleanText = (text: string) => {
   return text
-    // Remove escaped forward slashes.
     .replace(/\\\//g, "/")
-
-    // Remove Markdown heading markers.
     .replace(/^#{1,6}\s*/gm, "")
-
-    // Remove Exa truncation markers.
     .replace(/\.\.\./g, "")
-
-    // Convert newlines into spaces.
     .replace(/\r?\n/g, " ")
-
-    // Normalize repeated whitespace.
     .replace(/\s+/g, " ")
-
     .trim();
 };
 
@@ -37,7 +27,6 @@ const cleanText = (text: string) => {
 
 export const normalizeExaResults = (
   response: ExaSearchResponse,
-  
 ) => {
   return {
     results: response.results.map((result) => ({
