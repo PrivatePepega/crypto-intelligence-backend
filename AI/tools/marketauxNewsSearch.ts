@@ -154,11 +154,11 @@ export const marketauxSearchTool = tool({
       limit: z
         .number()
         .int()
-        .min(1)
+        .min(5)
         .max(20)
-        .default(20)
+        .default(10)
         .describe(
-          "Number of articles to return. Prefer 10-20 for Observer research so there is enough breadth to identify meaningful developments.",
+          "Number of articles to return. Prefer 5-10 for Observer research so there is enough breadth to identify meaningful developments.",
         ),
   
       page: z

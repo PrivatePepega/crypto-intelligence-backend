@@ -1,3 +1,4 @@
+import { encodingForModel, type Tiktoken } from "js-tiktoken";
 import { isStepCount, streamText } from "ai";
 
 import { models } from "../../../AI/providers/model.js";
@@ -13,15 +14,48 @@ import { cryptoObserverConfig } from "./observer.config.js";
 const observerTools = {
   ...getCurrentIndicatorTool,
 
-  // marketaux_news_search: marketauxSearchTool,
+  marketaux_news_search: marketauxSearchTool,
 
-  // web_search: webSearchTool,
+  web_search: webSearchTool,
 };
+
 // --------------------------------------------------
 // Observer limits
 // --------------------------------------------------
 
 const MAX_AGENT_STEPS = 5;
+
+// --------------------------------------------------
+// Token estimation
+// --------------------------------------------------
+//
+// Used to measure serialized tool-result context.
+//
+// Provider-reported `step.usage` remains the
+// authoritative model token usage.
+//
+// These estimates are diagnostic only.
+//
+
+const encoder: Tiktoken = encodingForModel("gpt-4o");
+
+const estimateTokens = (value: unknown): number => {
+  const serialized =
+    typeof value === "string"
+      ? value
+      : JSON.stringify(value);
+
+  return encoder.encode(serialized ?? "").length;
+};
+
+const countCharacters = (value: unknown): number => {
+  const serialized =
+    typeof value === "string"
+      ? value
+      : JSON.stringify(value);
+
+  return serialized?.length ?? 0;
+};
 
 // --------------------------------------------------
 // Observer
@@ -197,15 +231,45 @@ Identify meaningful developments and produce observations.
   console.log("Observer Starting");
   console.log("==============================================");
 
+  // --------------------------------------------------
+  // Research
+  // --------------------------------------------------
+
   const researchResult = streamText({
-    model: models.groq,
+    model: models.openrouter,
+
     instructions: observerPrompt,
+
     prompt,
+
     tools: observerTools,
+
     stopWhen: isStepCount(MAX_AGENT_STEPS),
 
     onStepEnd: async (step) => {
       const displayStep = step.stepNumber + 1;
+
+      // --------------------------------------------------
+      // Provider-reported model usage
+      // --------------------------------------------------
+
+      const inputTokens = step.usage.inputTokens ?? 0;
+      const outputTokens = step.usage.outputTokens ?? 0;
+
+      // --------------------------------------------------
+      // Tool-result diagnostic
+      // --------------------------------------------------
+
+      const toolResultTokens =
+        step.toolResults.reduce(
+          (total, toolResult) =>
+            total + estimateTokens(toolResult.output),
+          0,
+        );
+
+      // --------------------------------------------------
+      // Step header
+      // --------------------------------------------------
 
       console.log("");
       console.log("----------------------------------------------");
@@ -214,33 +278,96 @@ Identify meaningful developments and produce observations.
       );
       console.log("----------------------------------------------");
 
+      // --------------------------------------------------
+      // Tool calls
+      // --------------------------------------------------
+
       if (step.toolCalls.length > 0) {
         for (const toolCall of step.toolCalls) {
           console.log("");
           console.log("Tool call:");
           console.log(`Tool: ${toolCall.toolName}`);
+
+          const argumentCharacters = countCharacters(
+            toolCall.input,
+          );
+
+          const argumentTokens = estimateTokens(
+            toolCall.input,
+          );
+
           console.log(
             `Arguments: ${JSON.stringify(toolCall.input)}`,
+          );
+
+          console.log(
+            `Argument characters: ${argumentCharacters}`,
+          );
+
+          console.log(
+            `Argument estimated tokens: ${argumentTokens}`,
           );
         }
       }
 
+      // --------------------------------------------------
+      // Tool results
+      // --------------------------------------------------
+
       if (step.toolResults.length > 0) {
         for (const toolResult of step.toolResults) {
+          const resultCharacters = countCharacters(
+            toolResult.output,
+          );
+
+          const resultTokens = estimateTokens(
+            toolResult.output,
+          );
+
           console.log("");
           console.log("Tool result:");
           console.log(`Tool: ${toolResult.toolName}`);
+
+          console.log(
+            `Result characters: ${resultCharacters}`,
+          );
+
+          console.log(
+            `Result estimated tokens: ${resultTokens}`,
+          );
+
           console.log(
             `Result: ${JSON.stringify(toolResult.output)}`,
           );
         }
       }
 
+      // --------------------------------------------------
+      // Step text
+      // --------------------------------------------------
+
       if (step.text) {
         console.log("");
         console.log("Step text:");
         console.log(step.text);
       }
+
+      // --------------------------------------------------
+      // Input / output accounting
+      // --------------------------------------------------
+
+      console.log("");
+      console.log(
+        `Input tokens: ${inputTokens}`,
+      );
+
+      console.log(
+        `Tool result context tokens: ${toolResultTokens}`,
+      );
+
+      console.log(
+        `Output tokens: ${outputTokens}`,
+      );
 
       console.log("");
       console.log(
@@ -280,10 +407,41 @@ Identify meaningful developments and produce observations.
       })),
     }));
 
+  // --------------------------------------------------
+  // Research evidence context
+  // --------------------------------------------------
+
+  const researchEvidenceCharacters =
+    countCharacters(researchEvidence);
+
+  const researchEvidenceTokens =
+    estimateTokens(researchEvidence);
+
+  console.log("");
+  console.log("----------------------------------------------");
+  console.log("Research Evidence Context");
+  console.log("----------------------------------------------");
+
+  console.log(
+    `Characters: ${researchEvidenceCharacters}`,
+  );
+
+  console.log(
+    `Estimated tokens: ${researchEvidenceTokens}`,
+  );
+
+  console.log(
+    "Note: estimated tokens use GPT-4o tokenizer.",
+  );
+
   console.log("");
   console.log("----------------------------------------------");
   console.log("Observer Final Synthesis");
   console.log("----------------------------------------------");
+
+  // --------------------------------------------------
+  // Synthesis prompt
+  // --------------------------------------------------
 
   const synthesisPrompt = `
 Produce the final Observer observations.
@@ -327,9 +485,33 @@ Important:
 - Return concise observations only.
 `;
 
+  // --------------------------------------------------
+  // Synthesis context diagnostics
+  // --------------------------------------------------
+
+  const synthesisPromptTokens =
+    estimateTokens(synthesisPrompt);
+
+  console.log("");
+  console.log("Synthesis Input Context:");
+
+  console.log(
+    `Estimated synthesis prompt tokens: ${synthesisPromptTokens}`,
+  );
+
+  console.log(
+    "Note: estimated with GPT-4o tokenizer.",
+  );
+
+  // --------------------------------------------------
+  // Final synthesis
+  // --------------------------------------------------
+
   const synthesisResult = streamText({
-    model: models.groq,
+    model: models.openrouter,
+
     instructions: finalObserverPrompt,
+
     prompt: synthesisPrompt,
   });
 
@@ -341,6 +523,10 @@ Important:
   }
 
   const synthesisUsage = await synthesisResult.usage;
+
+  // --------------------------------------------------
+  // Final usage
+  // --------------------------------------------------
 
   console.log("");
   console.log("");
@@ -372,24 +558,14 @@ Important:
     }`,
   );
 
-  console.log(
-    `Total input tokens: ${
-      (researchUsage.inputTokens ?? 0) +
-      (synthesisUsage.inputTokens ?? 0)
-    }`,
-  );
-
-  console.log(
-    `Total output tokens: ${
-      (researchUsage.outputTokens ?? 0) +
-      (synthesisUsage.outputTokens ?? 0)
-    }`,
-  );
-
   console.log(`Research steps: ${researchSteps.length}`);
   console.log("Final synthesis: 1");
 
   console.log("==============================================");
+
+  // --------------------------------------------------
+  // Tool usage summary
+  // --------------------------------------------------
 
   const toolCalls = researchSteps.flatMap(
     (step) => step.toolCalls ?? [],
@@ -410,6 +586,10 @@ Important:
       `Arguments: ${JSON.stringify(toolCall.input)}`,
     );
   }
+
+  // --------------------------------------------------
+  // Final Observer output
+  // --------------------------------------------------
 
   console.log("");
   console.log("----------------------------------------------");
