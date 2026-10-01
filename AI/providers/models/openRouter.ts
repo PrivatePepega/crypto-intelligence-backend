@@ -1,5 +1,5 @@
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
-import { requiredEnv } from "../../utils/requiredEnv.js";
+import { requiredEnv } from "../../../utils/requiredEnv.js";
 
 
 

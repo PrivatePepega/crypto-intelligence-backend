@@ -1,9 +1,9 @@
 import type { LanguageModel } from "ai";
 
-import groq from "./groq.js";
-import google from "./google.js";
-import cloudflare from "./cloudFlare.js";
-import openrouter from "./openRouter.js";
+import groq from "./models/groq.js";
+import google from "./models/google.js";
+import cloudflare from "./models/cloudFlare.js";
+import openrouter from "./models/openRouter.js";
 
 type Models = {
     groq: LanguageModel;

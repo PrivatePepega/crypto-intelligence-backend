@@ -1,9 +1,9 @@
+
+
+import pool from "../../config/database.js";
+import { createQueryEmbedding } from "../../utils/openai/createQueryEmbedding.js";
 import { tool } from "ai";
-import pool from "../../../config/database.js";
-import { webSearch } from "../../../utils/AI/webSearch.js";
-import { createQueryEmbedding } from "../../../utils/openai/createQueryEmbedding.js";
 import { z } from "zod";
-import { callMcpTool } from "../../../mcp/client.js";
 
 
 
@@ -11,6 +11,7 @@ import { callMcpTool } from "../../../mcp/client.js";
 // --------------------------------------------------
 // Get current indicator data
 // --------------------------------------------------
+
 
 
 
@@ -136,43 +137,32 @@ export const getCurrentIndicatorData = async (query: string) => {
       client.release();
     }
   };
-  
-  // --------------------------------------------------
-  // Web search tool
-  // --------------------------------------------------
-  
-  export const webSearchTool = tool({
-    description:
-      "Search the public web for recent information relevant to the Observer's domain. Use this to discover current events, announcements, regulatory developments, security incidents, market narratives, and other developments that may not be available through deterministic database indicators.",
-  
-    inputSchema: z.object({
-      query: z
-        .string()
-        .describe(
-          "A focused search query describing the information needed from the public web.",
-        ),
-    }),
-  
-    execute: async ({ query }) => {
-      return await webSearch(query);
-    },
-  });
-  
 
-/**
- * Calls the Marketaux news search through the backend MCP server.
- *
- * The Observer talks to MCP instead of calling the Marketaux API directly.
- * This keeps provider access behind the generic MCP boundary.
- */
-export const searchMarketauxNews = async (
-    input: Record<string, unknown>,
-    signal?: AbortSignal,
-  ) => {
+
+
+
+
+
+
+
+export const getCurrentIndicatorTool = {
+    get_current_indicator: tool({
+      description:
+        "Find up to three relevant deterministic indicators for a natural-language request and return their current datasets together with metadata explaining what each indicator measures, how it is used, and why it is significant. Use this when current quantitative data is needed to understand a development or change.",
   
-    return await callMcpTool(
-      "marketaux_news_search",
-      input,
-      signal,
-    );
+      inputSchema: z.object({
+        query: z
+          .string()
+          .describe(
+            "Describe the current quantitative information needed in natural language.",
+          ),
+      }),
+  
+      execute: async ({ query }) => {
+        const toolResponse = await getCurrentIndicatorData(query);
+  
+        return toolResponse.result;
+      },
+
+    }),
   };

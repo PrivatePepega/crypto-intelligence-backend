@@ -1,5 +1,5 @@
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
-import { requiredEnv } from "../../utils/requiredEnv.js";
+import { requiredEnv } from "../../../utils/requiredEnv.js";
 
 
 

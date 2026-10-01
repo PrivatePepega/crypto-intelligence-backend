@@ -1,5 +1,5 @@
 import { createWorkersAI } from "workers-ai-provider";
-import { requiredEnv } from "../../utils/requiredEnv.js";
+import { requiredEnv } from "../../../utils/requiredEnv.js";
 
 
 

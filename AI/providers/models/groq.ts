@@ -1,5 +1,5 @@
 import { createGroq } from "@ai-sdk/groq";
-import { requiredEnv } from "../../utils/requiredEnv.js";
+import { requiredEnv } from "../../../utils/requiredEnv.js";
 
 
 
