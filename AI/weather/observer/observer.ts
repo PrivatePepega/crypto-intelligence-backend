@@ -189,7 +189,7 @@ Identify meaningful developments and produce observations.
     instructions: observerPrompt,
     prompt,
     tools: observerTools,
-    stopWhen: isStepCount(MAX_AGENT_STEPS - 1),
+    stopWhen: isStepCount(MAX_AGENT_STEPS),
 
     onStepEnd: async (step) => {
       const displayStep = step.stepNumber + 1;

@@ -3,7 +3,7 @@ import pool from "../../../config/database.js";
 import { webSearch } from "../../../utils/AI/webSearch.js";
 import { createQueryEmbedding } from "../../../utils/openai/createQueryEmbedding.js";
 import { z } from "zod";
-import { callMcpTool } from "../../mcp/client.js";
+import { callMcpTool } from "../../../mcp/client.js";
 
 
 
