@@ -13,28 +13,31 @@ import { normalizeBraveResults } from "../providers/webSearch/brave/normalizer.j
 import { searchYou } from "../providers/webSearch/you/client.js";
 import { normalizeYouResults } from "../providers/webSearch/you/normalizer.js";
 
-
 // --------------------------------------------------
 // Search providers
 // --------------------------------------------------
 
 export const searchProviders = {
   exa: {
+    searchCounter: 5,
     search: searchExa,
     normalize: normalizeExaResults,
   },
 
   tavily: {
+    searchCounter: 5,
     search: searchTavily,
     normalize: normalizeTavilyResults,
   },
 
   brave: {
+    searchCounter: 5,
     search: searchBrave,
     normalize: normalizeBraveResults,
   },
 
   you: {
+    searchCounter: 5,
     search: searchYou,
     normalize: normalizeYouResults,
   },
@@ -65,13 +68,12 @@ export const webSearchTool = tool({
 // Web search
 // --------------------------------------------------
 
-export const webSearch = async (
-  query: string,
-) => {
+export const webSearch = async (query: string) => {
   const provider = searchProviders.exa;
 
   const response = await provider.search(
     query,
+    provider.searchCounter,
   );
 
   return provider.normalize(response);
