@@ -9,12 +9,7 @@ import { callMcpTool } from "../../mcp/client.js";
 
 
 
-
-
-
-export const observerTools = {
-
-  marketaux_news_search: tool({
+export const marketauxSearchTool = tool({
     description:
       "Search Marketaux for recent financial and market news relevant to the Observer's domain. This tool is for discovering meaningful current events, not exhaustive research. ALWAYS return English-language articles. Keep search queries short and focused. Marketaux search supports | for OR, + for AND, -token for NOT, quoted phrases, prefix*, and parentheses. Prefer queries such as 'Bitcoin|Ethereum|DeFi|stablecoin' rather than long natural-language sentences. Do not put dates inside search when published_on, published_after, or published_before can express the date. Use published_on for today's coverage. Prefer group_similar=true to reduce duplicate coverage. Marketaux already sorts recent articles by publication time by default when no search-specific relevance sort is requested.",
   
@@ -182,8 +177,7 @@ export const observerTools = {
         options.abortSignal,
       );
     },
-  }),
-};
+  })
 
 
 

@@ -9,7 +9,7 @@ const BRAVE_SEARCH_URL =
 
 export const searchBrave = async (
   query: string,
-  count: number,
+  count: 8,
 ) => {
   const url = new URL(BRAVE_SEARCH_URL);
 

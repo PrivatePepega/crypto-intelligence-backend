@@ -1,9 +1,22 @@
 import { isStepCount, streamText } from "ai";
 
 import { models } from "../../../AI/providers/model.js";
+import { getCurrentIndicatorTool } from "../../../AI/tools/getCurrentIndicatorData.js";
+import { marketauxSearchTool } from "../../../AI/tools/marketauxNewsSearch.js";
+import { webSearchTool } from "../../../AI/tools/webSearchTool.js";
 import { cryptoObserverConfig } from "./observer.config.js";
-import { observerTools } from "./observer.tools.js";
 
+// --------------------------------------------------
+// Observer tools
+// --------------------------------------------------
+
+const observerTools = {
+  ...getCurrentIndicatorTool,
+
+  // marketaux_news_search: marketauxSearchTool,
+
+  // web_search: webSearchTool,
+};
 // --------------------------------------------------
 // Observer limits
 // --------------------------------------------------
@@ -243,14 +256,6 @@ Identify meaningful developments and produce observations.
   // --------------------------------------------------
   // Preserve raw research evidence
   // --------------------------------------------------
-  //
-  // researchResult.text only contains model-generated text.
-  // Tool results are stored separately inside each research step.
-  //
-  // These records are passed directly to the final synthesis
-  // model so it can reason over the actual evidence returned
-  // by the Observer tools.
-  //
 
   const researchEvidence = researchSteps
     .filter(

@@ -5,7 +5,6 @@ import { normalizeExaResults } from "./normalizer.js";
 
 const response = await searchExa(
   "latest Bitcoin crypto market developments",
-  5,
 );
 
 const normalized = normalizeExaResults(response);

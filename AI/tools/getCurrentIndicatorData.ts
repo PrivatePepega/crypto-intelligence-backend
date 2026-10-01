@@ -15,6 +15,32 @@ import { z } from "zod";
 
 
 
+
+export const getCurrentIndicatorTool = {
+  get_current_indicator: tool({
+    description:
+      "Find up to four relevant deterministic indicators for a natural-language request and return their current datasets together with metadata explaining what each indicator measures, how it is used, and why it is significant. Use this when current quantitative data is needed to understand a development or change.",
+
+    inputSchema: z.object({
+      query: z
+        .string()
+        .describe(
+          "Describe the current quantitative information needed in natural language.",
+        ),
+    }),
+
+    execute: async ({ query }) => {
+      const toolResponse = await getCurrentIndicatorData(query);
+
+      return toolResponse.result;
+    },
+
+  }),
+};
+
+
+
+
 export const getCurrentIndicatorData = async (query: string) => {
     const { embedding, usage } = await createQueryEmbedding(query);
   
@@ -47,7 +73,7 @@ export const getCurrentIndicatorData = async (query: string) => {
         WHERE status = 'active'
           AND embedding IS NOT NULL
         ORDER BY embedding <=> $1::vector
-        LIMIT 3;
+        LIMIT 4;
         `,
         [JSON.stringify(embedding)],
       );
@@ -145,24 +171,3 @@ export const getCurrentIndicatorData = async (query: string) => {
 
 
 
-export const getCurrentIndicatorTool = {
-    get_current_indicator: tool({
-      description:
-        "Find up to three relevant deterministic indicators for a natural-language request and return their current datasets together with metadata explaining what each indicator measures, how it is used, and why it is significant. Use this when current quantitative data is needed to understand a development or change.",
-  
-      inputSchema: z.object({
-        query: z
-          .string()
-          .describe(
-            "Describe the current quantitative information needed in natural language.",
-          ),
-      }),
-  
-      execute: async ({ query }) => {
-        const toolResponse = await getCurrentIndicatorData(query);
-  
-        return toolResponse.result;
-      },
-
-    }),
-  };

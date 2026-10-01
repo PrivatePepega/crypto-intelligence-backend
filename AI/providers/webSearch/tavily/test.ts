@@ -5,7 +5,6 @@ import { normalizeTavilyResults } from "./normalizer.js";
 
 const response = await searchTavily(
   "latest Bitcoin crypto market developments",
-  10,
 );
 
 const normalized = normalizeTavilyResults(response);

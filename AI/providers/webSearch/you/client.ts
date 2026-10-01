@@ -8,7 +8,7 @@ const YOU_SEARCH_URL = "https://ydc-index.io/v1/search";
 
 export const searchYou = async (
   query: string,
-  count: number,
+  count = 8,
 ) => {
   const url = new URL(YOU_SEARCH_URL);
 

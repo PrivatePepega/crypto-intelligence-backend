@@ -10,7 +10,7 @@ const client = tavily({ apiKey });
 
 export const searchTavily = async (
   query: string,
-  maxResults: number,
+  maxResults = 8,
 ) => {
   const response = await client.search(query, {
     maxResults,

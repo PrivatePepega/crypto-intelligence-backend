@@ -11,7 +11,7 @@ const exa = new Exa(apiKey);
 
 export const searchExa = async (
   query: string,
-  numResults = 10,
+  numResults = 5,
 ) => {
   const response = await exa.search(query, {
     type: "auto",
