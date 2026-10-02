@@ -6,17 +6,22 @@ import { getCurrentIndicatorTool } from "../../../AI/tools/getCurrentIndicatorDa
 import { marketauxSearchTool } from "../../../AI/tools/marketauxNewsSearch.js";
 import { webSearchTool } from "../../../AI/tools/webSearchTool.js";
 import { cryptoObserverConfig } from "./observer.config.js";
+import { currentsSearchTool } from "../../tools/currentsNewsSearch.js";
+
 
 // --------------------------------------------------
 // Observer tools
 // --------------------------------------------------
 
 const observerTools = {
-  ...getCurrentIndicatorTool,
+  // ...getCurrentIndicatorTool,
 
-  marketaux_news_search: marketauxSearchTool,
+  // marketaux_news_search: marketauxSearchTool,
 
-  web_search: webSearchTool,
+  // web_search: webSearchTool,
+
+  currentsSearchTool,
+
 };
 
 // --------------------------------------------------
@@ -236,7 +241,7 @@ Identify meaningful developments and produce observations.
   // --------------------------------------------------
 
   const researchResult = streamText({
-    model: models.openrouter,
+    model: models.groq,
 
     instructions: observerPrompt,
 
@@ -508,7 +513,7 @@ Important:
   // --------------------------------------------------
 
   const synthesisResult = streamText({
-    model: models.openrouter,
+    model: models.groq,
 
     instructions: finalObserverPrompt,
 
