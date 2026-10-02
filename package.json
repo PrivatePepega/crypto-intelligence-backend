@@ -23,6 +23,7 @@
   "dependencies": {
     "@ai-sdk/google": "^4.0.85",
     "@ai-sdk/groq": "^4.0.52",
+    "@composio/core": "^0.22.0",
     "@modelcontextprotocol/client": "^2.2.0",
     "@modelcontextprotocol/node": "^2.1.0",
     "@modelcontextprotocol/server": "^2.2.0",
