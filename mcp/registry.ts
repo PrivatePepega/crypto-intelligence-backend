@@ -1,4 +1,5 @@
-import { currentsModule } from "./composio/currents.js";
+import { currentsModule } from "./modules/currents.js";
+import { newsflashModule } from "./modules/flashNews.js";
 import { marketauxModule } from "./modules/marketaux.js";
 import type { McpToolModule } from "./types.js";
 
@@ -11,5 +12,5 @@ import type { McpToolModule } from "./types.js";
 export const MCP_TOOL_MODULES: readonly McpToolModule[] = [
   marketauxModule,
   currentsModule,
-
+  newsflashModule,
 ];

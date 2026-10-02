@@ -1,6 +1,6 @@
-import { createCurrentsClient } from "../composio/currents.client.js";
+import { createCurrentsClient } from "../composio/client.js";
 import type { McpToolModule } from "../types.js";
-import { CurrentsNewsTool } from "./currentsNewsTool.js";
+import { CurrentsNewsTool } from "../composio/currentsNewsTool.js";
 
 export const currentsModule: McpToolModule = {
   namespace: "currents",

@@ -5,7 +5,7 @@ import type {
   CurrentsClient,
   CurrentsLatestNewsOptions,
   CurrentsSearchNewsOptions,
-} from "./currents.client.js";
+} from "./client.js";
 
 const newsArticleSchema = z.object({
   author: z.string(),
