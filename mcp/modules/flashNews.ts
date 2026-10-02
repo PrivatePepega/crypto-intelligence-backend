@@ -4,7 +4,6 @@ import { GetEventTool } from "../newsFlash/getEventTool.js";
 import { SearchArticlesTool } from "../newsFlash/searchArticlesTool.js";
 import type { McpToolModule } from "../types.js";
 
-
 export const newsflashModule: McpToolModule = {
   namespace: "newsflash",
 
@@ -15,18 +14,9 @@ export const newsflashModule: McpToolModule = {
 
     return {
       register(server) {
-        void getNewsflashClient()
-          .then((client) => {
-            new GetEventsTool(client).register(server);
-            new GetEventTool(client).register(server);
-            new SearchArticlesTool(client).register(server);
-          })
-          .catch((error) => {
-            console.error(
-              "[Newsflash] Failed to initialize:",
-              error,
-            );
-          });
+        new GetEventsTool(getNewsflashClient).register(server);
+        new GetEventTool(getNewsflashClient).register(server);
+        new SearchArticlesTool(getNewsflashClient).register(server);
       },
     };
   },

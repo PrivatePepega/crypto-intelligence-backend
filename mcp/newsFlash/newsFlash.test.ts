@@ -3,23 +3,22 @@ import {
   getNewsflashClient,
 } from "./client.js";
 
+import {
+  normalizeNewsflashEvents,
+  normalizeNewsflashEventsForAI,
+  normalizeNewsflashEvent,
+  normalizeNewsflashEventForAI,
+  normalizeNewsflashArticles,
+  normalizeNewsflashArticlesForAI,
+} from "./newsFlashNormalizer.js";
+
 const run = async () => {
   console.log("");
   console.log("==============================================");
-  console.log("NEWSFLASH MCP TEST");
+  console.log("NEWSFLASH MCP + AI OUTPUT NORMALIZER TEST");
   console.log("==============================================");
 
   const client = await getNewsflashClient();
-
-  const { tools } = await client.listTools();
-
-  console.log("");
-  console.log("Available tools:");
-  console.log("----------------------------------------------");
-
-  for (const tool of tools) {
-    console.log(`- ${tool.name}`);
-  }
 
   // --------------------------------------------------
   // 1. get_events
@@ -27,7 +26,7 @@ const run = async () => {
 
   console.log("");
   console.log("==============================================");
-  console.log("1. get_events");
+  console.log("1. get_events → final AI output");
   console.log("==============================================");
 
   const eventsResult = await client.callTool({
@@ -38,26 +37,20 @@ const run = async () => {
     },
   });
 
-  console.log(JSON.stringify(eventsResult, null, 2));
+  const normalizedEvents =
+    normalizeNewsflashEvents(eventsResult);
 
-  // Extract first event ID for get_event.
-  let firstEventId: number | null = null;
+  const finalEvents =
+    normalizeNewsflashEventsForAI(normalizedEvents);
 
-  try {
-    const textContent = eventsResult.content
-      .filter(
-        (item): item is { type: "text"; text: string } =>
-          item.type === "text",
-      )
-      .map((item) => item.text)
-      .join("\n");
+  console.log(
+    JSON.stringify(finalEvents, null, 2),
+  );
 
-    const parsed = JSON.parse(textContent);
-
-    firstEventId = parsed.events?.[0]?.id ?? null;
-  } catch {
-    console.log("Could not extract event ID.");
-  }
+  // Extract event ID from the provider-normalized
+  // representation so we can test get_event.
+  const firstEventId =
+    normalizedEvents.events[0]?.id ?? null;
 
   // --------------------------------------------------
   // 2. get_event
@@ -65,11 +58,13 @@ const run = async () => {
 
   console.log("");
   console.log("==============================================");
-  console.log("2. get_event");
+  console.log("2. get_event → final AI output");
   console.log("==============================================");
 
   if (firstEventId === null) {
-    console.log("Skipping get_event because no event ID was found.");
+    console.log(
+      "Skipping get_event because no event ID was found.",
+    );
   } else {
     const eventResult = await client.callTool({
       name: "get_event",
@@ -78,7 +73,15 @@ const run = async () => {
       },
     });
 
-    console.log(JSON.stringify(eventResult, null, 2));
+    const normalizedEvent =
+      normalizeNewsflashEvent(eventResult);
+
+    const finalEvent =
+      normalizeNewsflashEventForAI(normalizedEvent);
+
+    console.log(
+      JSON.stringify(finalEvent, null, 2),
+    );
   }
 
   // --------------------------------------------------
@@ -87,7 +90,7 @@ const run = async () => {
 
   console.log("");
   console.log("==============================================");
-  console.log("3. search_articles");
+  console.log("3. search_articles → final AI output");
   console.log("==============================================");
 
   const articlesResult = await client.callTool({
@@ -98,50 +101,28 @@ const run = async () => {
     },
   });
 
-  console.log(JSON.stringify(articlesResult, null, 2));
+  const normalizedArticles =
+    normalizeNewsflashArticles(articlesResult);
 
-  // --------------------------------------------------
-  // 4. list_sources
-  // --------------------------------------------------
+  const finalArticles =
+    normalizeNewsflashArticlesForAI(
+      normalizedArticles,
+    );
 
-  console.log("");
-  console.log("==============================================");
-  console.log("4. list_sources");
-  console.log("==============================================");
-
-  const sourcesResult = await client.callTool({
-    name: "list_sources",
-    arguments: {},
-  });
-
-  console.log(JSON.stringify(sourcesResult, null, 2));
-
-  // --------------------------------------------------
-  // 5. corpus_stats
-  // --------------------------------------------------
+  console.log(
+    JSON.stringify(finalArticles, null, 2),
+  );
 
   console.log("");
   console.log("==============================================");
-  console.log("5. corpus_stats");
-  console.log("==============================================");
-
-  const statsResult = await client.callTool({
-    name: "corpus_stats",
-    arguments: {},
-  });
-
-  console.log(JSON.stringify(statsResult, null, 2));
-
-  console.log("");
-  console.log("==============================================");
-  console.log("NEWSFLASH MCP TEST COMPLETE");
+  console.log("NEWSFLASH AI OUTPUT TEST COMPLETE");
   console.log("==============================================");
 };
 
 run()
   .catch((error) => {
     console.error("");
-    console.error("NEWSFLASH MCP TEST FAILED");
+    console.error("NEWSFLASH AI OUTPUT TEST FAILED");
     console.error("----------------------------------------------");
     console.error(error);
 
