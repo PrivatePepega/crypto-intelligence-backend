@@ -17,8 +17,7 @@ import { normalizeGdeltEvent } from "./normalizers/getEvents.normalizer.js";
 import { normalizeGdeltStories } from "./normalizers/getSearchStories.normalizer.js";
 import { normalizeGdeltStory } from "./normalizers/getStory.normalizer.js";
 import { normalizeGdeltStoryArticles } from "./normalizers/getStoryArticles.js";
-import { normalizeGdeltEventSummaries } from "./normalizers/summarizeEvents.normalizer.js";
-import { normalizeGdeltStorySummaries } from "./normalizers/summarizeStories.normalizer.js";
+
 
 const RAW_DIR = "mcp/GDELT/raw";
 const OUT_DIR = "mcp/GDELT/normalized";
@@ -111,32 +110,7 @@ const main = async (): Promise<void> => {
     `  get_story_articles ${articles.length} article(s), ${countFields(articles)} fields each`,
   );
 
-  // --- summarize_events -> array of buckets ----------------------------
-  for (const [file, out] of [
-    ["summarize_events.json", "summarize_events.json"],
-    ["summarize_events.by-country.json", "summarize_events.by-country.json"],
-  ] as const) {
-    const captured = await readRaw(file);
-    const buckets = normalizeGdeltEventSummaries({ response: captured.response });
-    await writeOut(out, buckets);
-    console.log(
-      `  summarize_events   ${file.padEnd(34)} ${buckets.length} bucket(s), ${countFields(buckets)} fields each`,
-    );
-  }
-
-  // --- summarize_stories -> array of buckets ---------------------------
-  for (const [file, out] of [
-    ["summarize_stories.json", "summarize_stories.json"],
-    ["summarize_stories.by-category.json", "summarize_stories.by-category.json"],
-  ] as const) {
-    const captured = await readRaw(file);
-    const buckets = normalizeGdeltStorySummaries({ response: captured.response });
-    await writeOut(out, buckets);
-    console.log(
-      `  summarize_stories  ${file.padEnd(34)} ${buckets.length} bucket(s), ${countFields(buckets)} fields each`,
-    );
-  }
-
+ 
   console.log("");
   console.log(`Wrote normalized output to ${OUT_DIR}/`);
   console.log(

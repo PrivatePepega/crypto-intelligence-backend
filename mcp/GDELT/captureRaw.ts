@@ -46,8 +46,6 @@ import {
   fetchGetStoryArticles,
   fetchSearchEvents,
   fetchSearchStories,
-  fetchSummarizeEvents,
-  fetchSummarizeStories,
 } from "./fetchers/index.js";
 import { closeGdeltClient, readStructured } from "./gdeltClient.js";
 
@@ -130,24 +128,6 @@ const main = async (): Promise<void> => {
   );
   console.log(`  search_events      ${countRecords(readStructured(eventsResult))} record(s)`);
 
-  // --- summarize_events: window + group_by, no id ----------------------
-  const sumEvents = await fetchSummarizeEvents({ group_by: "date", days: 7 });
-  await capture("summarize_events", { group_by: "date", days: 7 }, sumEvents);
-  console.log(
-    `  summarize_events   group_by=date    ${countRecords(readStructured(sumEvents))} bucket(s)`,
-  );
-
-  const sumEventsCountry = await fetchSummarizeEvents({
-    group_by: "country",
-    days: 7,
-  });
-  await capture(
-    "summarize_events",
-    { group_by: "country", days: 7 },
-    sumEventsCountry,
-    "summarize_events.by-country",
-  );
-  console.log("  summarize_events   group_by=country captured");
 
   // --- get_event: fed the id from search_events ------------------------
   const eventId = readFirstId(readStructured(eventsResult));
@@ -170,24 +150,8 @@ const main = async (): Promise<void> => {
     `  search_stories     ${countRecords(readStructured(storiesResult))} record(s)`,
   );
 
-  // --- summarize_stories: window + group_by, no id ---------------------
-  const sumStories = await fetchSummarizeStories({ group_by: "date", days: 7 });
-  await capture("summarize_stories", { group_by: "date", days: 7 }, sumStories);
-  console.log(
-    `  summarize_stories  group_by=date    ${countRecords(readStructured(sumStories))} bucket(s)`,
-  );
 
-  const sumStoriesCat = await fetchSummarizeStories({
-    group_by: "category",
-    days: 7,
-  });
-  await capture(
-    "summarize_stories",
-    { group_by: "category", days: 7 },
-    sumStoriesCat,
-    "summarize_stories.by-category",
-  );
-  console.log("  summarize_stories  group_by=category captured");
+
 
   // --- get_story / get_story_articles: fed the same story id -----------
   const storyId = readFirstId(readStructured(storiesResult));

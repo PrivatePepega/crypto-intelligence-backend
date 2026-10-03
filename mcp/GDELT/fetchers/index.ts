@@ -14,8 +14,7 @@ import { fetchGetStory } from "./getStory.js";
 import { fetchGetStoryArticles } from "./getStoryArticles.js";
 import { fetchSearchEvents } from "./searchEvents.js";
 import { fetchSearchStories } from "./searchStories.js";
-import { fetchSummarizeEvents } from "./summarizeEvents.js";
-import { fetchSummarizeStories } from "./summarizeStories.js";
+
 
 import type { RawGdeltResult } from "../gdeltClient.js";
 import type {
@@ -29,8 +28,7 @@ export { fetchGetStory } from "./getStory.js";
 export { fetchGetStoryArticles } from "./getStoryArticles.js";
 export { fetchSearchEvents } from "./searchEvents.js";
 export { fetchSearchStories } from "./searchStories.js";
-export { fetchSummarizeEvents } from "./summarizeEvents.js";
-export { fetchSummarizeStories } from "./summarizeStories.js";
+
 
 /**
  * Dispatch signature.
@@ -58,11 +56,8 @@ export type GdeltFetcher = (
  */
 export const GDELT_FETCHERS: Record<string, GdeltFetcher> = {
   search_events: (input, signal) => fetchSearchEvents(input, signal),
-  summarize_events: (input, signal) => fetchSummarizeEvents(input, signal),
   get_event: (input, signal) => fetchGetEvent(input as GetEventInput, signal),
   search_stories: (input, signal) => fetchSearchStories(input, signal),
-  summarize_stories: (input, signal) =>
-    fetchSummarizeStories(input, signal),
   get_story: (input, signal) => fetchGetStory(input as GetStoryInput, signal),
   get_story_articles: (input, signal) =>
     fetchGetStoryArticles(input as GetStoryArticlesInput, signal),
