@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T00:02:45.001Z",
+  "generatedAt": "2026-10-03T01:02:03.093Z",
   "tool": "get_story",
   "args": {
     "story_id": "8608afb1d928"
@@ -38,12 +38,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 10%",
+                      "label": "free · 18%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "899 left",
+                      "content": "817 left",
                       "type": "Muted"
                     }
                   ]
@@ -158,7 +158,7 @@
                                         },
                                         {
                                           "cssClass": "font-semibold tabular-nums",
-                                          "content": "480",
+                                          "content": "493",
                                           "type": "Text"
                                         },
                                         {
@@ -222,8 +222,8 @@
           "url": "https://gdeltcloud.com/stories/trump-threatens-iran-over-copilots-alleged-attempt-to-crash-8608afb1",
           "title": "Trump threatens Iran over copilot's alleged attempt to crash flight to Israel",
           "story_date": "2026-10-02",
-          "updated_at": "2026-10-02T23:05:14Z",
-          "processed_at": "2026-10-02T23:05:14Z",
+          "updated_at": "2026-10-03T00:33:16Z",
+          "processed_at": "2026-10-03T00:33:16Z",
           "category": "Conflict security",
           "category_code": "conflict_security",
           "subcategory": null,
@@ -254,8 +254,8 @@
             ]
           },
           "metrics": {
-            "significance": 0.6705,
-            "article_count": 480,
+            "significance": 0.6734,
+            "article_count": 493,
             "linked_event_count": 8,
             "max_linked_event_significance": 0.4411,
             "civilian_targeting_event_count": 0
@@ -304,7 +304,7 @@
             {
               "id": "e_c26fc27b7e737e0e",
               "id_space": "spine",
-              "name": "FlyDubai",
+              "name": "Flydubai",
               "type": "organization",
               "entity_id": "e_c26fc27b7e737e0e",
               "spine_id": "e_c26fc27b7e737e0e",
@@ -426,11 +426,11 @@
           "language_breakdown": [
             {
               "language": "en",
-              "count": 242
+              "count": 252
             },
             {
               "language": "es",
-              "count": 48
+              "count": 51
             },
             {
               "language": "el",
@@ -441,12 +441,12 @@
               "count": 18
             },
             {
-              "language": "fr",
-              "count": 12
+              "language": "pt",
+              "count": 13
             },
             {
-              "language": "pt",
-              "count": 11
+              "language": "fr",
+              "count": 12
             },
             {
               "language": "hi",
@@ -595,8 +595,8 @@
           "has_fatalities": false,
           "fatalities": 0,
           "metrics": {
-            "significance": 0.6705,
-            "article_count": 480,
+            "significance": 0.6734,
+            "article_count": 493,
             "linked_event_count": 8,
             "max_linked_event_significance": 0.4411
           },
@@ -645,7 +645,7 @@
           "entity_refs": [
             {
               "id": "e_c26fc27b7e737e0e",
-              "name": "FlyDubai",
+              "name": "Flydubai",
               "type": "organization",
               "wikipedia_url": "https://en.wikipedia.org/wiki/Flydubai"
             },

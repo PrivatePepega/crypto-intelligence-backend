@@ -1,0 +1,222 @@
+[
+  {
+    "id": "conflict_574b2dc178a74941",
+    "family": "conflict",
+    "title": "Ethiopian federal forces recapture Alamata amid fighting",
+    "summary": "On 2026-10-01, Ethiopian federal forces reportedly took control of Alamata after three days of fighting in Tigray. Hospital sources told the BBC that at least 52 civilians were killed, with heavy artillery reportedly hitting residential areas and a market; hospitals across Tigray treated more than 700 wounded people.",
+    "eventDateEvidence": "The article reports three days of fighting around Alamata and says federal forces have taken control; no specific dates are provided, so this is coded as a current update to the bounded fighting.",
+    "category": "Battles",
+    "domain": "CONFLICT",
+    "region": "Eastern Africa",
+    "significance": 0.7691
+  },
+  {
+    "id": "conflict_fee41f79c8ad0319",
+    "family": "conflict",
+    "title": "Islamist militants kill 15 wood gatherers in Borno",
+    "summary": "On 2026-10-02, unidentified Islamist militants reportedly killed 15 people gathering wood in Nigeria’s Borno state. The report said three other people were missing. It did not identify a specific armed group or provide a more precise location within the state.",
+    "eventDateEvidence": "The report gives no occurrence date; the attack is presented as current news in the 2026-10-01/2026-10-02 publication window.",
+    "category": "Violence against civilians",
+    "domain": "CONFLICT",
+    "region": "Western Africa",
+    "significance": 0.7089
+  },
+  {
+    "id": "conflict_b7d73eae36814d9e",
+    "family": "conflict",
+    "title": "Gunmen kill at least 18 people in northeastern Nigeria",
+    "summary": "On 2026-10-02, gunmen reportedly attacked civilians in northeastern Nigeria, killing at least 18 people. The headline does not specify the location, injuries, or attackers’ identities.",
+    "eventDateEvidence": "The headline reports a current attack but gives no occurrence date; publication-window inference uses the latest publication date, 2026-10-02.",
+    "category": "Violence against civilians",
+    "domain": "CONFLICT",
+    "region": "Western Africa",
+    "significance": 0.6984
+  },
+  {
+    "id": "cameoplus_dbb18ab751762bc7",
+    "family": "cameoplus",
+    "title": "U.S. Treasury bond market pushes 10-year yield to 24-year high",
+    "summary": "On 2026-10-01, the U.S. Treasury bond market saw the 10-year yield rise as high as 5.342%. The article says this surpassed the 2007 peak and marked the highest level since early 2002, amid a bond selloff. It also reports the global benchmark's largest quarterly rise this century in the third quarter.",
+    "eventDateEvidence": "The article says the yield hit the level “on Thursday”; the article was published October 1, 2026.",
+    "category": "ECONOMIC",
+    "domain": "ECONOMIC",
+    "region": "North America",
+    "significance": 0.6522
+  },
+  {
+    "id": "conflict_7edc0e9d6df4a215",
+    "family": "conflict",
+    "title": "Nigerian soldiers kill 16 militants in eastern clashes",
+    "summary": "On 2026-10-02, Nigerian soldiers reportedly clashed with militants in eastern Nigeria. The report says 16 militants and three soldiers were killed; the article content was unavailable, so further details and the precise location could not be confirmed.",
+    "eventDateEvidence": "The title reports clashes but gives no occurrence date; the latest publication window date is 2026-10-02.",
+    "category": "Battles",
+    "domain": "CONFLICT",
+    "region": "Western Africa",
+    "significance": 0.6399
+  },
+  {
+    "id": "conflict_9555a5b8490ba060",
+    "family": "conflict",
+    "title": "Unidentified attackers kill seven in Hama minibus attack",
+    "summary": "On 2026-10-01, unidentified attackers reportedly attacked a minibus in Syria’s Hama province. The title reports seven people killed and four injured; the article content was unavailable, so further details and the exact location could not be confirmed.",
+    "eventDateEvidence": "The title reports a minibus attack and casualties but gives no occurrence date; publication-day inference from the 2026-09-30/2026-10-01 publication window.",
+    "category": "Violence against civilians",
+    "domain": "CONFLICT",
+    "region": "Middle East",
+    "significance": 0.626
+  },
+  {
+    "id": "cameoplus_aac46e15006cc08d",
+    "family": "cameoplus",
+    "title": "Russia detains Western vessel in Baltic Sea amid tanker seizures",
+    "summary": "On 2026-10-01, Russia reportedly detained a Western vessel in the Baltic Sea in response to tanker seizures, according to the headline. The supplied article content does not provide further details about the vessel, location, or duration of the detention.",
+    "eventDateEvidence": "The headline reports that Russia detained a Western vessel in the Baltic Sea; no separate occurrence date is given, so the publication-window day is inferred.",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "Eastern Europe",
+    "significance": 0.6089
+  },
+  {
+    "id": "conflict_ea9a7e8209bdaba2",
+    "family": "conflict",
+    "title": "Pakistani military airstrikes hit two houses in Helmand",
+    "summary": "On 2026-10-01, Pakistani military airstrikes struck two houses in Garmsir district, Helmand Province, according to a provincial official cited by Reuters. The Afghan Taliban government reported nine people killed and 11 injured; most of those killed and wounded were reportedly women and children.",
+    "eventDateEvidence": "The article says the airstrikes occurred “on Thursday”; the publication window is 2026-09-30 / 2026-10-01, and October 1, 2026 was Thursday.",
+    "category": "Explosions/Remote violence",
+    "domain": "CONFLICT",
+    "region": "South Asia",
+    "significance": 0.6054
+  },
+  {
+    "id": "cameoplus_c39c4aac77883aa4",
+    "family": "cameoplus",
+    "title": "US Treasury sanctions Wasim Pasha Tajammal and Cavalier Group",
+    "summary": "On 2026-10-01, the US Treasury Department’s Office of Foreign Assets Control sanctioned Wasim Pasha Tajammal and Cavalier Group, along with other individuals and entities across multiple jurisdictions. The Treasury alleged that they helped Iran’s Ministry of Defense and Armed Forces Logistics procure and distribute weapons.",
+    "eventDateEvidence": "The article reports as current news that the US Treasury Department’s Office of Foreign Assets Control “has sanctioned 10 individuals and entities”; no separate occurrence date is stated.",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "North America",
+    "significance": 0.5988
+  },
+  {
+    "id": "cameoplus_752ef4bcc4c15984",
+    "family": "cameoplus",
+    "title": "Japan adds Uralvagonzavod and other entities to sanctions list",
+    "summary": "On 2026-10-01, Japan imposed new sanctions on Russian companies and individuals, including Uralvagonzavod, in Tokyo. The government document also lists other organizations and, for the first time, 35 vessels it considers linked to Russia. The article says the measures are related to the situation in Ukraine.",
+    "eventDateEvidence": "The article says “yesterday” and is dated October 2; it reports that Japan introduced new sanctions.",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "East Asia",
+    "significance": 0.5966
+  },
+  {
+    "id": "cameoplus_3dd9d6d473ab11cc",
+    "family": "cameoplus",
+    "title": "U.S. Treasury sanctions Iran Khodro and other major firms",
+    "summary": "On 2026-10-01, the U.S. Department of the Treasury imposed a new sanctions package targeting Iran Khodro, Saipa, Niroo Motor, Iran's national railway company, Hepco and steel firms. The article says the restrictions also cover associated foreign entities in Indonesia, Turkey, Germany, the United Arab Emirates and Hong Kong. Treasury said the measures target important sources of Iranian revenue and logistical capacity.",
+    "eventDateEvidence": "The article says the U.S. Treasury imposed the sanctions “este jueves” (this Thursday); in the publication window, this resolves to October 1, 2026.",
+    "category": "ECONOMIC",
+    "domain": "ECONOMIC",
+    "region": "North America",
+    "significance": 0.5911
+  },
+  {
+    "id": "cameoplus_a71c9f83ddbae65b",
+    "family": "cameoplus",
+    "title": "Turkey orders urgent expropriation for Kars Dam irrigation project",
+    "summary": "On 2026-10-01, the President of Turkey published decisions in the Official Gazette providing for urgent expropriation of certain properties in Arpaçay, Kars. The land is designated for construction of the first section of the Kars Dam irrigation project, to be carried out by the State Hydraulic Works (DSİ).",
+    "eventDateEvidence": "The article reports that the presidential decisions were published in the Official Gazette; no separate occurrence date is stated, so the publication day is inferred.",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "Middle East",
+    "significance": 0.5832
+  },
+  {
+    "id": "cameoplus_d1fe18df27107df7",
+    "family": "cameoplus",
+    "title": "Adani Green expands operational battery storage at Khavda",
+    "summary": "On 2026-10-01, Adani Green Energy Ltd reported expanding its operational battery energy storage capacity at Khavda, Gujarat, to 6.63 GWh from 3.55 GWh in June. The company said this represents more than half of India's operational battery storage capacity, reported at about 12.6 GWh. The storage is integrated with the company's renewable energy development at Khavda.",
+    "eventDateEvidence": "On Thursday, Oct 1, Adani Green Energy said it had expanded operational battery storage capacity at Khavda to 6.63 GWh.",
+    "category": "INFRASTRUCTURE",
+    "domain": "INFRASTRUCTURE",
+    "region": "South Asia",
+    "significance": 0.5754
+  },
+  {
+    "id": "cameoplus_acb6ff563395a19e",
+    "family": "cameoplus",
+    "title": "Shell awards Fluor-JGC venture LNG Canada Phase 2 contract",
+    "summary": "On 2026-10-02, Shell awarded the Fluor-JGC joint venture a key contract for Phase 2 of the LNG Canada expansion in Kitimat, British Columbia. The article describes the contract as a $15 billion prize and says LNG Canada is proceeding with the terminal expansion. It provides no further details on contract terms or construction timing.",
+    "eventDateEvidence": "The article reports that the Fluor-JGC joint venture was awarded the Phase 2 contract in current-news coverage published October 2, 2026; it gives no separate date for the award.",
+    "category": "CORPORATE",
+    "domain": "CORPORATE",
+    "region": "North America",
+    "significance": 0.5722
+  },
+  {
+    "id": "conflict_cbad7d7a73525a0a",
+    "family": "conflict",
+    "title": "Gunmen ambush nine South Ethiopia police and security personnel",
+    "summary": "On 2026-10-01, gunmen reportedly ambushed police and security personnel carrying out their duties in Koshale Kebele, Geresse Zuria Woreda, Gamo Zone. The regional police commission identified nine personnel killed, while reporting did not provide an injury count or details about the alleged attackers.",
+    "eventDateEvidence": "The South Ethiopia Regional State Police Commission said the personnel were killed on 01 October; Xinhua describes the statement as issued Thursday.",
+    "category": "Battles",
+    "domain": "CONFLICT",
+    "region": "Eastern Africa",
+    "significance": 0.5673
+  },
+  {
+    "id": "cameoplus_22e8b9948b25ca8c",
+    "family": "cameoplus",
+    "title": "WVU Health System completes combination with Independence Health System",
+    "summary": "On 2026-10-01, WVU Health System and Independence Health System officially combined under the WVU Medicine name. Independence’s five Western Pennsylvania hospitals, affiliated physician groups and subsidiaries joined WVU Health System. WVU Medicine has stated plans to commit $800 million over five years to modernize the hospitals and expand services.",
+    "eventDateEvidence": "The systems “have officially become one Thursday, Oct. 1” under the WVU Medicine name.",
+    "category": "CORPORATE",
+    "domain": "CORPORATE",
+    "region": "North America",
+    "significance": 0.5654
+  },
+  {
+    "id": "cameoplus_c7d32ffaf28e0682",
+    "family": "cameoplus",
+    "title": "Ghana Armed Forces demolish structures at La Pleasure Beach",
+    "summary": "On 2026-10-02, the Ghana Armed Forces, supported by the Ghana Police Service, began demolishing structures at La Pleasure Beach in Accra. Several structures were reportedly completely demolished and others partially pulled down. La Dadekotopon MP Rita Naa Odoley Sowah confronted personnel and questioned the operation, citing assurances that the area would be spared.",
+    "eventDateEvidence": "The article says the exercise “began in the early hours of Friday, October 2, 2026.”",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "Western Africa",
+    "significance": 0.5639
+  },
+  {
+    "id": "cameoplus_beaec99842f8d0a0",
+    "family": "cameoplus",
+    "title": "New South Wales government destroys 23 seized illegal e-bikes",
+    "summary": "On 2026-10-01, the New South Wales government destroyed 23 illegal e-bikes at a wrecking facility in Blacktown, Western Sydney. Police had seized the bikes in the Northern Beaches under new state powers allowing authorities to confiscate and dispose of non-compliant e-bikes without first obtaining a court forfeiture order.",
+    "eventDateEvidence": "The article says the 23 e-bikes were destroyed “on Thursday,” during a demonstration reported on October 1, 2026.",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "Oceania",
+    "significance": 0.5622
+  },
+  {
+    "id": "cameoplus_4a91e46195df1711",
+    "family": "cameoplus",
+    "title": "United States dispatches 9,000 troops to the Middle East",
+    "summary": "On 2026-10-01, the United States military was dispatching roughly 9,000 troops aboard ships to the Middle East, according to a US official. The deployment includes the USS Theodore Roosevelt carrier strike group and the USS Makin Island amphibious readiness group, amid the war with Iran.",
+    "eventDateEvidence": "The article reports as current news that the US military “is dispatching roughly 9,000 troops” to the Middle East; no separate occurrence date is stated.",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "North America",
+    "significance": 0.5589
+  },
+  {
+    "id": "cameoplus_dc66636f41fcffef",
+    "family": "cameoplus",
+    "title": "Fisheries Department officials seize fibre boats in Rameswaram",
+    "summary": "On 2026-10-01, Fisheries Department officials seized fibre boats in Rameswaram, Tamil Nadu. The action followed complaints from traditional fishermen that fibre boats were crossing the international maritime boundary; the article also reports that fishermen demanded the boats’ release and threatened agitation if they were not released within two days.",
+    "eventDateEvidence": "The article says fisheries officials were talking with fishermen “on Thursday” and reports that the boats “were seized by the officials in Rameswaram”; the article was published October 1, 2026.",
+    "category": "POLITICAL",
+    "domain": "POLITICAL",
+    "region": "South Asia",
+    "significance": 0.5556
+  }
+]

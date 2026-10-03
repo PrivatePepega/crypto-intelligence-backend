@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T00:02:36.247Z",
+  "generatedAt": "2026-10-03T01:01:55.678Z",
   "tool": "summarize_stories",
   "args": {
     "group_by": "date",
@@ -86,12 +86,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 10%",
+                      "label": "free · 18%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "901 left",
+                      "content": "819 left",
                       "type": "Muted"
                     }
                   ]
@@ -118,7 +118,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums neon-text",
-                          "content": "16,346",
+                          "content": "85,041",
                           "type": "Text"
                         },
                         {
@@ -146,7 +146,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums text-destructive",
-                          "content": "198",
+                          "content": "799",
                           "type": "Text"
                         },
                         {
@@ -174,7 +174,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums text-violet-500",
-                          "content": "4,591",
+                          "content": "22,665",
                           "type": "Text"
                         },
                         {
@@ -228,19 +228,19 @@
                       "data": [
                         {
                           "bucket": "2026-09-27",
-                          "count": 0
+                          "count": 8874
                         },
                         {
                           "bucket": "2026-09-28",
-                          "count": 0
+                          "count": 13866
                         },
                         {
                           "bucket": "2026-09-29",
-                          "count": 0
+                          "count": 15631
                         },
                         {
                           "bucket": "2026-09-30",
-                          "count": 0
+                          "count": 15789
                         },
                         {
                           "bucket": "2026-10-01",
@@ -248,7 +248,7 @@
                         },
                         {
                           "bucket": "2026-10-02",
-                          "count": 0
+                          "count": 14535
                         }
                       ],
                       "series": [
@@ -330,56 +330,56 @@
                     {
                       "key": "2026-10-01",
                       "primary_count": 16346,
-                      "fatalities": 198,
-                      "article_count": 27333,
+                      "fatalities": 199,
+                      "article_count": 27330,
                       "country_count": 201,
                       "linked_event_count": 4591,
                       "fatality_rate_label": "0%"
                     },
                     {
-                      "key": "2026-09-27",
-                      "primary_count": 0,
-                      "fatalities": 0,
-                      "article_count": 0,
-                      "country_count": 0,
-                      "linked_event_count": 0,
-                      "fatality_rate_label": "—"
-                    },
-                    {
-                      "key": "2026-09-28",
-                      "primary_count": 0,
-                      "fatalities": 0,
-                      "article_count": 0,
-                      "country_count": 0,
-                      "linked_event_count": 0,
-                      "fatality_rate_label": "—"
+                      "key": "2026-09-30",
+                      "primary_count": 15789,
+                      "fatalities": 86,
+                      "article_count": 28396,
+                      "country_count": 200,
+                      "linked_event_count": 4406,
+                      "fatality_rate_label": "0%"
                     },
                     {
                       "key": "2026-09-29",
-                      "primary_count": 0,
-                      "fatalities": 0,
-                      "article_count": 0,
-                      "country_count": 0,
-                      "linked_event_count": 0,
-                      "fatality_rate_label": "—"
-                    },
-                    {
-                      "key": "2026-09-30",
-                      "primary_count": 0,
-                      "fatalities": 0,
-                      "article_count": 0,
-                      "country_count": 0,
-                      "linked_event_count": 0,
-                      "fatality_rate_label": "—"
+                      "primary_count": 15631,
+                      "fatalities": 176,
+                      "article_count": 27861,
+                      "country_count": 197,
+                      "linked_event_count": 4285,
+                      "fatality_rate_label": "0%"
                     },
                     {
                       "key": "2026-10-02",
-                      "primary_count": 0,
-                      "fatalities": 0,
-                      "article_count": 0,
-                      "country_count": 0,
-                      "linked_event_count": 0,
-                      "fatality_rate_label": "—"
+                      "primary_count": 14535,
+                      "fatalities": 87,
+                      "article_count": 26500,
+                      "country_count": 201,
+                      "linked_event_count": 4009,
+                      "fatality_rate_label": "0%"
+                    },
+                    {
+                      "key": "2026-09-28",
+                      "primary_count": 13866,
+                      "fatalities": 158,
+                      "article_count": 24677,
+                      "country_count": 195,
+                      "linked_event_count": 3347,
+                      "fatality_rate_label": "0%"
+                    },
+                    {
+                      "key": "2026-09-27",
+                      "primary_count": 8874,
+                      "fatalities": 93,
+                      "article_count": 15927,
+                      "country_count": 186,
+                      "linked_event_count": 2027,
+                      "fatality_rate_label": "0%"
                     }
                   ],
                   "search": false,
@@ -445,209 +445,209 @@
         "data": [
           {
             "key": "2026-09-27",
-            "group_by": "date",
-            "latest_date": null,
-            "story_count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "min_article_count": null,
-            "max_article_count": null,
-            "stories_with_events": null,
-            "story_only_count": null,
-            "linked_event_count": null,
-            "min_linked_event_count": null,
-            "avg_linked_event_count": null,
-            "max_linked_event_count": null,
-            "stories_with_fatalities": null,
-            "fatalities": null,
-            "fatality_story_rate": null,
-            "country_count": null,
-            "region_count": null,
-            "avg_significance": null,
-            "max_significance": null,
-            "min_significance": null,
+            "group_by": "story_date",
+            "latest_date": "2026-09-27",
+            "story_count": 8874,
+            "article_count": 15927,
+            "avg_article_count": 1.795,
+            "min_article_count": 1,
+            "max_article_count": 476,
+            "stories_with_events": 1954,
+            "story_only_count": 6920,
+            "linked_event_count": 2027,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.228,
+            "max_linked_event_count": 7,
+            "stories_with_fatalities": 22,
+            "fatalities": 93,
+            "fatality_story_rate": 0.0025,
+            "country_count": 186,
+            "region_count": 17,
+            "avg_significance": 0.0906,
+            "max_significance": 0.6696,
+            "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": null,
-                "min": null,
-                "max": null
+                "avg": 0.0906,
+                "min": 0.0753,
+                "max": 0.6696
               },
               "article_count": {
-                "total": 0,
-                "avg": null,
-                "min": null,
-                "max": null
+                "total": 15927,
+                "avg": 1.795,
+                "min": 1,
+                "max": 476
               },
               "linked_events": {
                 "count": {
-                  "total": null,
-                  "avg": null,
-                  "min": null,
-                  "max": null,
-                  "stories_with_events": null,
-                  "story_only_count": null
+                  "total": 2027,
+                  "avg": 0.228,
+                  "min": 0,
+                  "max": 7,
+                  "stories_with_events": 1954,
+                  "story_only_count": 6920
                 }
               },
               "fatalities": {
-                "stories": null,
-                "rate": null,
-                "total": null
+                "stories": 22,
+                "rate": 0.0025,
+                "total": 93
               }
             }
           },
           {
             "key": "2026-09-28",
-            "group_by": "date",
-            "latest_date": null,
-            "story_count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "min_article_count": null,
-            "max_article_count": null,
-            "stories_with_events": null,
-            "story_only_count": null,
-            "linked_event_count": null,
-            "min_linked_event_count": null,
-            "avg_linked_event_count": null,
-            "max_linked_event_count": null,
-            "stories_with_fatalities": null,
-            "fatalities": null,
-            "fatality_story_rate": null,
-            "country_count": null,
-            "region_count": null,
-            "avg_significance": null,
-            "max_significance": null,
-            "min_significance": null,
+            "group_by": "story_date",
+            "latest_date": "2026-09-28",
+            "story_count": 13866,
+            "article_count": 24677,
+            "avg_article_count": 1.78,
+            "min_article_count": 1,
+            "max_article_count": 745,
+            "stories_with_events": 3221,
+            "story_only_count": 10645,
+            "linked_event_count": 3347,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.241,
+            "max_linked_event_count": 8,
+            "stories_with_fatalities": 29,
+            "fatalities": 158,
+            "fatality_story_rate": 0.0021,
+            "country_count": 195,
+            "region_count": 17,
+            "avg_significance": 0.0908,
+            "max_significance": 0.7182,
+            "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": null,
-                "min": null,
-                "max": null
+                "avg": 0.0908,
+                "min": 0.0753,
+                "max": 0.7182
               },
               "article_count": {
-                "total": 0,
-                "avg": null,
-                "min": null,
-                "max": null
+                "total": 24677,
+                "avg": 1.78,
+                "min": 1,
+                "max": 745
               },
               "linked_events": {
                 "count": {
-                  "total": null,
-                  "avg": null,
-                  "min": null,
-                  "max": null,
-                  "stories_with_events": null,
-                  "story_only_count": null
+                  "total": 3347,
+                  "avg": 0.241,
+                  "min": 0,
+                  "max": 8,
+                  "stories_with_events": 3221,
+                  "story_only_count": 10645
                 }
               },
               "fatalities": {
-                "stories": null,
-                "rate": null,
-                "total": null
+                "stories": 29,
+                "rate": 0.0021,
+                "total": 158
               }
             }
           },
           {
             "key": "2026-09-29",
-            "group_by": "date",
-            "latest_date": null,
-            "story_count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "min_article_count": null,
-            "max_article_count": null,
-            "stories_with_events": null,
-            "story_only_count": null,
-            "linked_event_count": null,
-            "min_linked_event_count": null,
-            "avg_linked_event_count": null,
-            "max_linked_event_count": null,
-            "stories_with_fatalities": null,
-            "fatalities": null,
-            "fatality_story_rate": null,
-            "country_count": null,
-            "region_count": null,
-            "avg_significance": null,
-            "max_significance": null,
-            "min_significance": null,
+            "group_by": "story_date",
+            "latest_date": "2026-09-29",
+            "story_count": 15631,
+            "article_count": 27861,
+            "avg_article_count": 1.782,
+            "min_article_count": 1,
+            "max_article_count": 407,
+            "stories_with_events": 4129,
+            "story_only_count": 11502,
+            "linked_event_count": 4285,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.274,
+            "max_linked_event_count": 6,
+            "stories_with_fatalities": 17,
+            "fatalities": 176,
+            "fatality_story_rate": 0.0011,
+            "country_count": 197,
+            "region_count": 17,
+            "avg_significance": 0.0914,
+            "max_significance": 0.6527,
+            "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": null,
-                "min": null,
-                "max": null
+                "avg": 0.0914,
+                "min": 0.0753,
+                "max": 0.6527
               },
               "article_count": {
-                "total": 0,
-                "avg": null,
-                "min": null,
-                "max": null
+                "total": 27861,
+                "avg": 1.782,
+                "min": 1,
+                "max": 407
               },
               "linked_events": {
                 "count": {
-                  "total": null,
-                  "avg": null,
-                  "min": null,
-                  "max": null,
-                  "stories_with_events": null,
-                  "story_only_count": null
+                  "total": 4285,
+                  "avg": 0.274,
+                  "min": 0,
+                  "max": 6,
+                  "stories_with_events": 4129,
+                  "story_only_count": 11502
                 }
               },
               "fatalities": {
-                "stories": null,
-                "rate": null,
-                "total": null
+                "stories": 17,
+                "rate": 0.0011,
+                "total": 176
               }
             }
           },
           {
             "key": "2026-09-30",
-            "group_by": "date",
-            "latest_date": null,
-            "story_count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "min_article_count": null,
-            "max_article_count": null,
-            "stories_with_events": null,
-            "story_only_count": null,
-            "linked_event_count": null,
-            "min_linked_event_count": null,
-            "avg_linked_event_count": null,
-            "max_linked_event_count": null,
-            "stories_with_fatalities": null,
-            "fatalities": null,
-            "fatality_story_rate": null,
-            "country_count": null,
-            "region_count": null,
-            "avg_significance": null,
-            "max_significance": null,
-            "min_significance": null,
+            "group_by": "story_date",
+            "latest_date": "2026-09-30",
+            "story_count": 15789,
+            "article_count": 28396,
+            "avg_article_count": 1.798,
+            "min_article_count": 1,
+            "max_article_count": 660,
+            "stories_with_events": 4238,
+            "story_only_count": 11551,
+            "linked_event_count": 4406,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.279,
+            "max_linked_event_count": 6,
+            "stories_with_fatalities": 25,
+            "fatalities": 86,
+            "fatality_story_rate": 0.0016,
+            "country_count": 200,
+            "region_count": 17,
+            "avg_significance": 0.091,
+            "max_significance": 0.705,
+            "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": null,
-                "min": null,
-                "max": null
+                "avg": 0.091,
+                "min": 0.0753,
+                "max": 0.705
               },
               "article_count": {
-                "total": 0,
-                "avg": null,
-                "min": null,
-                "max": null
+                "total": 28396,
+                "avg": 1.798,
+                "min": 1,
+                "max": 660
               },
               "linked_events": {
                 "count": {
-                  "total": null,
-                  "avg": null,
-                  "min": null,
-                  "max": null,
-                  "stories_with_events": null,
-                  "story_only_count": null
+                  "total": 4406,
+                  "avg": 0.279,
+                  "min": 0,
+                  "max": 6,
+                  "stories_with_events": 4238,
+                  "story_only_count": 11551
                 }
               },
               "fatalities": {
-                "stories": null,
-                "rate": null,
-                "total": null
+                "stories": 25,
+                "rate": 0.0016,
+                "total": 86
               }
             }
           },
@@ -656,7 +656,7 @@
             "group_by": "story_date",
             "latest_date": "2026-10-01",
             "story_count": 16346,
-            "article_count": 27333,
+            "article_count": 27330,
             "avg_article_count": 1.672,
             "min_article_count": 1,
             "max_article_count": 340,
@@ -666,8 +666,8 @@
             "min_linked_event_count": 0,
             "avg_linked_event_count": 0.281,
             "max_linked_event_count": 7,
-            "stories_with_fatalities": 16,
-            "fatalities": 198,
+            "stories_with_fatalities": 17,
+            "fatalities": 199,
             "fatality_story_rate": 0.001,
             "country_count": 201,
             "region_count": 17,
@@ -681,7 +681,7 @@
                 "max": 0.6332
               },
               "article_count": {
-                "total": 27333,
+                "total": 27330,
                 "avg": 1.672,
                 "min": 1,
                 "max": 340
@@ -697,61 +697,61 @@
                 }
               },
               "fatalities": {
-                "stories": 16,
+                "stories": 17,
                 "rate": 0.001,
-                "total": 198
+                "total": 199
               }
             }
           },
           {
             "key": "2026-10-02",
-            "group_by": "date",
-            "latest_date": null,
-            "story_count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "min_article_count": null,
-            "max_article_count": null,
-            "stories_with_events": null,
-            "story_only_count": null,
-            "linked_event_count": null,
-            "min_linked_event_count": null,
-            "avg_linked_event_count": null,
-            "max_linked_event_count": null,
-            "stories_with_fatalities": null,
-            "fatalities": null,
-            "fatality_story_rate": null,
-            "country_count": null,
-            "region_count": null,
-            "avg_significance": null,
-            "max_significance": null,
-            "min_significance": null,
+            "group_by": "story_date",
+            "latest_date": "2026-10-02",
+            "story_count": 14535,
+            "article_count": 26500,
+            "avg_article_count": 1.823,
+            "min_article_count": 1,
+            "max_article_count": 493,
+            "stories_with_events": 3861,
+            "story_only_count": 10674,
+            "linked_event_count": 4009,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.276,
+            "max_linked_event_count": 8,
+            "stories_with_fatalities": 21,
+            "fatalities": 87,
+            "fatality_story_rate": 0.0014,
+            "country_count": 201,
+            "region_count": 17,
+            "avg_significance": 0.0912,
+            "max_significance": 0.6734,
+            "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": null,
-                "min": null,
-                "max": null
+                "avg": 0.0912,
+                "min": 0.0753,
+                "max": 0.6734
               },
               "article_count": {
-                "total": 0,
-                "avg": null,
-                "min": null,
-                "max": null
+                "total": 26500,
+                "avg": 1.823,
+                "min": 1,
+                "max": 493
               },
               "linked_events": {
                 "count": {
-                  "total": null,
-                  "avg": null,
-                  "min": null,
-                  "max": null,
-                  "stories_with_events": null,
-                  "story_only_count": null
+                  "total": 4009,
+                  "avg": 0.276,
+                  "min": 0,
+                  "max": 8,
+                  "stories_with_events": 3861,
+                  "story_only_count": 10674
                 }
               },
               "fatalities": {
-                "stories": null,
-                "rate": null,
-                "total": null
+                "stories": 21,
+                "rate": 0.0014,
+                "total": 87
               }
             }
           }
@@ -844,56 +844,76 @@
         "data": [
           {
             "key": "2026-09-27",
-            "count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "metrics": {}
+            "count": 8874,
+            "article_count": 15927,
+            "avg_article_count": 1.795,
+            "metrics": {
+              "significance": 0.0906,
+              "linked_events_count": 0.228,
+              "fatalities": 93
+            }
           },
           {
             "key": "2026-09-28",
-            "count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "metrics": {}
+            "count": 13866,
+            "article_count": 24677,
+            "avg_article_count": 1.78,
+            "metrics": {
+              "significance": 0.0908,
+              "linked_events_count": 0.241,
+              "fatalities": 158
+            }
           },
           {
             "key": "2026-09-29",
-            "count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "metrics": {}
+            "count": 15631,
+            "article_count": 27861,
+            "avg_article_count": 1.782,
+            "metrics": {
+              "significance": 0.0914,
+              "linked_events_count": 0.274,
+              "fatalities": 176
+            }
           },
           {
             "key": "2026-09-30",
-            "count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "metrics": {}
+            "count": 15789,
+            "article_count": 28396,
+            "avg_article_count": 1.798,
+            "metrics": {
+              "significance": 0.091,
+              "linked_events_count": 0.279,
+              "fatalities": 86
+            }
           },
           {
             "key": "2026-10-01",
             "count": 16346,
-            "article_count": 27333,
+            "article_count": 27330,
             "avg_article_count": 1.672,
             "metrics": {
               "significance": 0.0907,
               "linked_events_count": 0.281,
-              "fatalities": 198
+              "fatalities": 199
             }
           },
           {
             "key": "2026-10-02",
-            "count": 0,
-            "article_count": 0,
-            "avg_article_count": null,
-            "metrics": {}
+            "count": 14535,
+            "article_count": 26500,
+            "avg_article_count": 1.823,
+            "metrics": {
+              "significance": 0.0912,
+              "linked_events_count": 0.276,
+              "fatalities": 87
+            }
           }
         ]
       },
       "args": {
         "group_by": "date",
         "days": 7,
-        "limit": 1
+        "limit": 20
       }
     }
   }

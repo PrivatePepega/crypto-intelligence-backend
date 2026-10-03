@@ -116,17 +116,17 @@ export const closeGdeltClient = async (): Promise<void> => {
 };
 
 /**
- * Discovery default: one record per call.
+ * Default record limit for the list fetchers.
  *
- * Applied by the fetchers when the caller omits `limit`, so the captured
- * fixtures stay small enough to read and every payload demonstrates the record
- * shape rather than burying it. Normalizers that need volume pass `limit`
- * explicitly, which always wins.
+ * Applied when the caller omits `limit`, so a captured fixture or an agent call
+ * returns enough records to be useful without needing to know the pagination.
+ * Upstream caps search rows at 100 and summary buckets at 500, so 20 sits well
+ * inside both.
  *
- * `undefined` is treated as absent so `{ limit: undefined }` cannot silently
- * clobber the default with an absent key.
+ * An explicit `limit` always wins, so a caller that needs volume or a single
+ * record is unaffected.
  */
-export const DEFAULT_RECORD_LIMIT = 1;
+export const DEFAULT_RECORD_LIMIT = 20;
 
 /** Merges `input` over `{ limit: DEFAULT_RECORD_LIMIT }`. */
 export const withDefaultLimit = (

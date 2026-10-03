@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T00:02:49.733Z",
+  "generatedAt": "2026-10-03T01:02:06.807Z",
   "tool": "get_story_articles",
   "args": {
     "story_id": "8608afb1d928"
@@ -27,7 +27,7 @@
                   "children": [
                     {
                       "cssClass": "text-xl font-semibold neon-text",
-                      "content": "1 story",
+                      "content": "20 stories",
                       "type": "Text"
                     }
                   ]
@@ -38,12 +38,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 10%",
+                      "label": "free · 18%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "898 left",
+                      "content": "816 left",
                       "type": "Muted"
                     }
                   ]
@@ -51,8 +51,146 @@
               ]
             },
             {
-              "cssClass": "gap-4 grid-cols-1 md:grid-cols-2",
+              "cssClass": "gap-3 grid-cols-2 md:grid-cols-4",
               "type": "Grid",
+              "children": [
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "text-xs tracking-wider text-muted-foreground",
+                              "content": "STORIES",
+                              "type": "Text"
+                            },
+                            {
+                              "cssClass": "text-3xl font-bold tracking-tight neon-text",
+                              "content": "20",
+                              "type": "Text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "text-xs tracking-wider text-muted-foreground",
+                              "content": "TOTAL ARTICLES",
+                              "type": "Text"
+                            },
+                            {
+                              "cssClass": "text-3xl font-bold tracking-tight",
+                              "content": "0",
+                              "type": "Text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "text-xs tracking-wider text-muted-foreground",
+                              "content": "LINKED EVENTS",
+                              "type": "Text"
+                            },
+                            {
+                              "cssClass": "text-3xl font-bold tracking-tight",
+                              "content": "0",
+                              "type": "Text"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "text-xs tracking-wider text-muted-foreground",
+                              "content": "TOP CATEGORY",
+                              "type": "Text"
+                            },
+                            {
+                              "cssClass": "text-3xl font-bold tracking-tight",
+                              "content": "Other",
+                              "type": "Text"
+                            },
+                            {
+                              "content": "20 stories",
+                              "type": "Muted"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cssClass": "text-xs",
+              "content": "swipe or use the arrows to step through all 20 stories",
+              "type": "Muted"
+            },
+            {
+              "type": "Carousel",
+              "visible": 1,
+              "gap": 16,
+              "direction": "left",
+              "loop": true,
+              "autoAdvance": 0,
+              "continuous": false,
+              "speed": 2,
+              "effect": "slide",
+              "dimInactive": false,
+              "showControls": true,
+              "controlsPosition": "outside",
+              "showDots": true,
+              "pauseOnHover": true,
+              "align": "start",
+              "slidesToScroll": 1,
+              "drag": true,
               "children": [
                 {
                   "cssClass": "glass-panel border-l-4 border-l-azure-500",
@@ -111,6 +249,1072 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=http%3A%2F%2Fwww.mediatica.ro%2Fwp-content%2Fuploads%2F2026%2F10%2FRadio-Koko-hirado-Bus-Ildi-Farczadi-Attila.jpg",
+                                  "alt": "Trump kemény választ helyezett kilátásba, ha Iránnak köze volt a pilóta elleni támadáshoz"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Trump kemény választ helyezett kilátásba, ha Iránnak köze volt a pilóta elleni támadáshoz",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "http://www.mediatica.ro/radio-koko-hirek/trump-kemeny-valaszt-helyezett-kilatasba-ha-irannak-koze-volt-a-pilota-elleni-tamadashoz",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fbloximages.chicago2.vip.townnews.com%2Fthegazette.com%2Fcontent%2Ftncms%2Fassets%2Fv3%2Feditorial%2F2%2F49%2F2492ef17-5301-504e-8a7e-823ceb8e6dda%2F6abd6f1746a33.image.jpg%3Fcrop%3D5808%252C3049%252C0%252C411",
+                                  "alt": "Trump says Iran will be hit 'very hard' if it is behind copilot who tried to crash flight to Israel"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Trump says Iran will be hit 'very hard' if it is behind copilot who tried to crash flight to Israel",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "http://www.thegazette.com/news/world/trump-says-iran-will-be-hit-very-hard-if-it-is-behind-copilot-who-tried/article_8b19236a-50ef-53e3-a145-d9e3894945a0.html",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fs1.15min.lt%2Fstatic%2Fcache%2FMTI4MHgsLDk5OSxvcmlnaW5hbCwsaWQ9MTA4OTY0OTImZGF0ZT0yMDI2JTJGMTAlMkYwMiw4ODMzMDc5NTQ%3D%2Fd-trumpas-ap-6abf39e365c7c.jpg",
+                                  "alt": "Donaldas Trumpas žada smūgiuoti Iranui, jei šis susijęs su išpuoliu „FlyDubai“ lėktuve"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Donaldas Trumpas žada smūgiuoti Iranui, jei šis susijęs su išpuoliu „FlyDubai“ lėktuve",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://15min.lt/naujiena/aktualu/pasaulis/donaldas-trumpas-zada-smugiuoti-iranui-jei-sis-susijes-su-ispuoliu-flydubai-lektuve-57-2776138",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fs1.15min.lt%2Fstatic%2Fcache%2FMTI4MHgsLDk5OSxvcmlnaW5hbCwsaWQ9MTA4OTc2MzQmZGF0ZT0yMDI2JTJGMTAlMkYwMiw5NjAxOTQ4NzQ%3D%2Fanwaras-gargashas-fadel-senna-afp-6abf9a329a68a.jpg",
+                                  "alt": "Po išpuolio „FlyDubai“ lėktuve JAE pareigūnas pilotą gyrė už drąsą, incidentą vadino teroro aktu"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Po išpuolio „FlyDubai“ lėktuve JAE pareigūnas pilotą gyrė už drąsą, incidentą vadino teroro aktu",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://15min.lt/naujiena/aktualu/pasaulis/po-ispuolio-flydubai-lektuve-jae-pareigunas-pilota-gyre-uz-drasa-incidenta-vadino-teroro-aktu-57-2776644",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fcache2.24chasa.bg%2FImages%2FCache%2F732%2FIMAGE_23660732_2_0.jpg",
+                                  "alt": "Мъжът, спасил пилота на Flydubai от нападателя: Цялата пилотска кабина беше в кръв"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Мъжът, спасил пилота на Flydubai от нападателя: Цялата пилотска кабина беше в кръв",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://24chasa.bg/mezhdunarodni/article/23660714",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Junaški pilot 'ugrabljenega' leta: 'Nisem mogel dovoliti, da ljudje umrejo'",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://24ur.com/novice/tujina/junaski-pilot-ugrabljenega-leta-nisem-mogel-dovoliti-da-ljudje-umrejo.html",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fwww.abc.com.py%2Fresizer%2FVray45Ja6Zg2GOtClINwc6G0K9Y%3D%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fabccolor%2FMOAP76XDJFEHLLTLQPIEIIZQZI.jpg",
+                                  "alt": "Netanyahu dice que siguen estudiando el ataque de Flydubai: \"Quien lo haya enviado pagará\""
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Netanyahu dice que siguen estudiando el ataque de Flydubai: \"Quien lo haya enviado pagará\"",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://abc.com.py/internacionales/2026/10/02/netanyahu-dice-que-siguen-estudiando-el-ataque-de-flydubai-quien-lo-haya-enviado-pagara/",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fwww.abc.com.py%2Fresizer%2F8I_cAoPpBcVftkb5_TOmVKL8P5k%3D%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fabccolor%2F6HV3FT32OVEX5FR7EBXHIQ73VU.jpg",
+                                  "alt": "Trump promete golpear a Irán “muy duro” si está implicado en ataque a FlyDubai"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Trump promete golpear a Irán “muy duro” si está implicado en ataque a FlyDubai",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://abc.com.py/internacionales/2026/10/02/trump-promete-golpear-a-iran-muy-duro-si-esta-implicado-en-ataque-a-flydubai/",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fcdn.abcotvs.com%2Fdip%2Fimages%2F19902019_FlyDubai-img.png",
+                                  "alt": "Suspect in FlyDubai incident was previously identified as security risk: Officials"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Suspect in FlyDubai incident was previously identified as security risk: Officials",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://abc7news.com/story/suspect-flydubai-incident-was-previously-identified-security-risk-officials/19901987/",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fakamai.vgc.no%2Fv2%2Fimages%2Fa90d720c-680c-3441-99a7-9b3335de1df2%3Fformat%3Dauto%26w%3D1000%26s%3D184e8e0f39d92df7a092c187ecc7d4d51ab99fe0",
+                                  "alt": "Knivstukket pilot: – Jeg hadde ikke tenkt å la andre dø"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Knivstukket pilot: – Jeg hadde ikke tenkt å la andre dø",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://aftenposten.no/verden/i/R5xWXW/knivstukket-pilot-jeg-hadde-ikke-tenkt-aa-la-andre-doe",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fakamai.vgc.no%2Fv2%2Fimages%2Fe68b2782-ecbf-3e93-bd60-38ad554d69fb%3Fformat%3Dauto%26w%3D1000%26s%3D42bcf029828f49bd5bb3e31faca5d4d57bd399a0",
+                                  "alt": "Piloten om kapningsförsöket: ”Kämpade för mitt liv”"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Piloten om kapningsförsöket: ”Kämpade för mitt liv”",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://aftonbladet.se/nyheter/a/Gr1kAl/piloten-om-kapningsforsoket-kampade-for-mitt-liv",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fimg.aktuality.sk%2Ffoto%2Famericky-prezident-donald-trump-prichadza-pred-prihovorom-na-81-zasadnuti-valneho-zhromazdenia-organizacie-spojenych-narodov-vz-osn-v-new-yorku-v-utorok-22-septembra-2026%2FMTUweDE1MC9zbWFydC9maWx0ZXJzOmZvcm1hdChqcGcpOnF1YWxpdHkoNzApL2h0dHA6Ly9sb2NhbGhvc3Q6ODEvcHVsc2Ntcy10cmFuc2Zvcm1zLzE%3D%2FY2RktkpTURBXy8wOGJkMmRmZjhhNGI2YmQwNjEwNmFmOWFhYzIyYmIxYS5qcGeSlQMAzLXNFnXNDKSVAs0H0ADCww%3Fst%3DhtvNSYCFzkXDBN0p44ZPfhOViJtCmEH80F7_Z049Xuc%26ts%3D1790892000%26e%3D0",
+                                  "alt": "Donald Trump hrozí Iránu odvetou, ak sa potvrdí jeho účasť na incidente s lietadlom FlyDubai"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Donald Trump hrozí Iránu odvetou, ak sa potvrdí jeho účasť na incidente s lietadlom FlyDubai",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://aktuality.sk/clanok/AxE2GLD/donald-trump-hrozi-iranu-uderom-nudzove-pristatie-lietadla-po-utoku-pilota-vyvolalo-velke-podozrenia/",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "ترامب يتوعّد إيران بـ\"ضربة قوية جداً\" إذا ثبت ضلوعها في حادثة طائرة فلاي دبي",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://albiladpress.com/news/2026/6563/arab-and-world/1023346.html",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "FlyDubai pilot describes opening cockpit door during attack",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-describes-opening-cockpit-door-during-attack?traffic_source=rss",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "FlyDubai pilot hailed as ‘national hero’ as he describes attack",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-hailed-as-national-hero-as-he-describes-attack?traffic_source=rss",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fwww.ansa.it%2Fwebimages%2Fimg_1280x720%2F2026%2F10%2F1%2F117d08713aea7c2d928484959186b983.jpg",
+                                  "alt": "Netanyahu diz 'estar claro' que copiloto pretendia derrubar avião rumo a Israel - Mundo"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Netanyahu diz 'estar claro' que copiloto pretendia derrubar avião rumo a Israel - Mundo",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://ansabrasil.com.br/brasil/noticias/mundo/2026/10/02/netanyahu-diz-estar-claro-que-copiloto-pretendia-derrubar-aviao-rumo_5481ecec-fc15-4039-a2c6-ba8407f0ccfc.html",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=https%3A%2F%2Fimg.argumenti.ru%2Fnews%2Fnews_id_big%2F20261002122415-1010567.jpg",
+                                  "alt": "Второй пилот Flydubai напал на командира с ножом и пытался захватить управление самолётом"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Второй пилот Flydubai напал на командира с ножом и пытался захватить управление самолётом",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://argumenti.ru/world/vtoroy-pilot-flydubai-napal-na-komandira-s-nozhom-i-pytalsya-zahvatit-1010567",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Trump says Iran will be hit 'very hard' if it is behind copilot who tried ...",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://article.wn.com/view/2026/10/02/trump_says_iran_will_be_hit_8216very_hard_8217_if_it_is_behi/",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "“Më vrisni, më vrisni!”, bërtiste bashkëpiloti i fluturimit të Flydubai kur u ndalua, lëvizja e pilotit të therur që parandaloi tragjedinë",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "https://balkanweb.com/me-vrisni-me-vrisni-bertiste-bashkepiloti-i-fluturimit-te-flydubai-kur-u-ndalua-levizja-e-pilotit-te-therur-qe-parandaloi-tragjedine/",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -144,12 +1348,336 @@
             "publisher_country_provenance": null,
             "domain_avatar_url": "https://www.google.com/s2/favicons?domain=sunatimes.com&sz=64",
             "image_url": "http://sunatimes.com/uploads/article/photo/IMG_16F593-465F69-83D6CA-11EC73-B59A45-A8F2AF.jpg"
+          },
+          {
+            "id": "2026-10-02:http://www.mediatica.ro/radio-koko-hirek/trump-kemeny-valaszt-helyezett-kilatasba-ha-irannak-koze-volt-a-pilota-elleni-tamadashoz",
+            "url": "http://www.mediatica.ro/radio-koko-hirek/trump-kemeny-valaszt-helyezett-kilatasba-ha-irannak-koze-volt-a-pilota-elleni-tamadashoz",
+            "title": "Trump kemény választ helyezett kilátásba, ha Iránnak köze volt a pilóta elleni támadáshoz",
+            "domain": "mediatica.ro",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "hu",
+            "language_provenance": "gkg_translation_info",
+            "publisher_country_iso3": null,
+            "publisher_country_provenance": null,
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=mediatica.ro&sz=64",
+            "image_url": "http://www.mediatica.ro/wp-content/uploads/2026/10/Radio-Koko-hirado-Bus-Ildi-Farczadi-Attila.jpg"
+          },
+          {
+            "id": "2026-10-02:http://www.thegazette.com/news/world/trump-says-iran-will-be-hit-very-hard-if-it-is-behind-copilot-who-tried/article_8b19236a-50ef-53e3-a145-d9e3894945a0.html",
+            "url": "http://www.thegazette.com/news/world/trump-says-iran-will-be-hit-very-hard-if-it-is-behind-copilot-who-tried/article_8b19236a-50ef-53e3-a145-d9e3894945a0.html",
+            "title": "Trump says Iran will be hit 'very hard' if it is behind copilot who tried to crash flight to Israel",
+            "domain": "thegazette.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "en",
+            "language_provenance": "gkg_english",
+            "publisher_country_iso3": null,
+            "publisher_country_provenance": null,
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=thegazette.com&sz=64",
+            "image_url": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/2/49/2492ef17-5301-504e-8a7e-823ceb8e6dda/6abd6f1746a33.image.jpg?crop=5808%2C3049%2C0%2C411"
+          },
+          {
+            "id": "2026-10-02:https://15min.lt/naujiena/aktualu/pasaulis/donaldas-trumpas-zada-smugiuoti-iranui-jei-sis-susijes-su-ispuoliu-flydubai-lektuve-57-2776138",
+            "url": "https://15min.lt/naujiena/aktualu/pasaulis/donaldas-trumpas-zada-smugiuoti-iranui-jei-sis-susijes-su-ispuoliu-flydubai-lektuve-57-2776138",
+            "title": "Donaldas Trumpas žada smūgiuoti Iranui, jei šis susijęs su išpuoliu „FlyDubai“ lėktuve",
+            "domain": "15min.lt",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "lt",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "LTU",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "15min.lt"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=15min.lt&sz=64",
+            "image_url": "https://s1.15min.lt/static/cache/MTI4MHgsLDk5OSxvcmlnaW5hbCwsaWQ9MTA4OTY0OTImZGF0ZT0yMDI2JTJGMTAlMkYwMiw4ODMzMDc5NTQ=/d-trumpas-ap-6abf39e365c7c.jpg"
+          },
+          {
+            "id": "2026-10-02:https://15min.lt/naujiena/aktualu/pasaulis/po-ispuolio-flydubai-lektuve-jae-pareigunas-pilota-gyre-uz-drasa-incidenta-vadino-teroro-aktu-57-2776644",
+            "url": "https://15min.lt/naujiena/aktualu/pasaulis/po-ispuolio-flydubai-lektuve-jae-pareigunas-pilota-gyre-uz-drasa-incidenta-vadino-teroro-aktu-57-2776644",
+            "title": "Po išpuolio „FlyDubai“ lėktuve JAE pareigūnas pilotą gyrė už drąsą, incidentą vadino teroro aktu",
+            "domain": "15min.lt",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "lt",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "LTU",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "15min.lt"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=15min.lt&sz=64",
+            "image_url": "https://s1.15min.lt/static/cache/MTI4MHgsLDk5OSxvcmlnaW5hbCwsaWQ9MTA4OTc2MzQmZGF0ZT0yMDI2JTJGMTAlMkYwMiw5NjAxOTQ4NzQ=/anwaras-gargashas-fadel-senna-afp-6abf9a329a68a.jpg"
+          },
+          {
+            "id": "2026-10-02:https://24chasa.bg/mezhdunarodni/article/23660714",
+            "url": "https://24chasa.bg/mezhdunarodni/article/23660714",
+            "title": "Мъжът, спасил пилота на Flydubai от нападателя: Цялата пилотска кабина беше в кръв",
+            "domain": "24chasa.bg",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "bg",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "BGR",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "24 Chasa"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=24chasa.bg&sz=64",
+            "image_url": "https://cache2.24chasa.bg/Images/Cache/732/IMAGE_23660732_2_0.jpg"
+          },
+          {
+            "id": "2026-10-02:https://24ur.com/novice/tujina/junaski-pilot-ugrabljenega-leta-nisem-mogel-dovoliti-da-ljudje-umrejo.html",
+            "url": "https://24ur.com/novice/tujina/junaski-pilot-ugrabljenega-leta-nisem-mogel-dovoliti-da-ljudje-umrejo.html",
+            "title": "Junaški pilot 'ugrabljenega' leta: 'Nisem mogel dovoliti, da ljudje umrejo'",
+            "domain": "24ur.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "sl",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "SVN",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "24ur.com (POP TV)"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=24ur.com&sz=64",
+            "image_url": null
+          },
+          {
+            "id": "2026-10-02:https://abc.com.py/internacionales/2026/10/02/netanyahu-dice-que-siguen-estudiando-el-ataque-de-flydubai-quien-lo-haya-enviado-pagara/",
+            "url": "https://abc.com.py/internacionales/2026/10/02/netanyahu-dice-que-siguen-estudiando-el-ataque-de-flydubai-quien-lo-haya-enviado-pagara/",
+            "title": "Netanyahu dice que siguen estudiando el ataque de Flydubai: \"Quien lo haya enviado pagará\"",
+            "domain": "abc.com.py",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "es",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "PRY",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "ABC Color"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=abc.com.py&sz=64",
+            "image_url": "https://www.abc.com.py/resizer/Vray45Ja6Zg2GOtClINwc6G0K9Y=/cloudfront-us-east-1.images.arcpublishing.com/abccolor/MOAP76XDJFEHLLTLQPIEIIZQZI.jpg"
+          },
+          {
+            "id": "2026-10-02:https://abc.com.py/internacionales/2026/10/02/trump-promete-golpear-a-iran-muy-duro-si-esta-implicado-en-ataque-a-flydubai/",
+            "url": "https://abc.com.py/internacionales/2026/10/02/trump-promete-golpear-a-iran-muy-duro-si-esta-implicado-en-ataque-a-flydubai/",
+            "title": "Trump promete golpear a Irán “muy duro” si está implicado en ataque a FlyDubai",
+            "domain": "abc.com.py",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "es",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "PRY",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "ABC Color"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=abc.com.py&sz=64",
+            "image_url": "https://www.abc.com.py/resizer/8I_cAoPpBcVftkb5_TOmVKL8P5k=/cloudfront-us-east-1.images.arcpublishing.com/abccolor/6HV3FT32OVEX5FR7EBXHIQ73VU.jpg"
+          },
+          {
+            "id": "2026-10-02:https://abc7news.com/story/suspect-flydubai-incident-was-previously-identified-security-risk-officials/19901987/",
+            "url": "https://abc7news.com/story/suspect-flydubai-incident-was-previously-identified-security-risk-officials/19901987/",
+            "title": "Suspect in FlyDubai incident was previously identified as security risk: Officials",
+            "domain": "abc7news.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "en",
+            "language_provenance": "gkg_english",
+            "publisher_country_iso3": null,
+            "publisher_country_provenance": null,
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=abc7news.com&sz=64",
+            "image_url": "https://cdn.abcotvs.com/dip/images/19902019_FlyDubai-img.png"
+          },
+          {
+            "id": "2026-10-02:https://aftenposten.no/verden/i/R5xWXW/knivstukket-pilot-jeg-hadde-ikke-tenkt-aa-la-andre-doe",
+            "url": "https://aftenposten.no/verden/i/R5xWXW/knivstukket-pilot-jeg-hadde-ikke-tenkt-aa-la-andre-doe",
+            "title": "Knivstukket pilot: – Jeg hadde ikke tenkt å la andre dø",
+            "domain": "aftenposten.no",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "no",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "NOR",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "Aftenposten — paper of record"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=aftenposten.no&sz=64",
+            "image_url": "https://akamai.vgc.no/v2/images/a90d720c-680c-3441-99a7-9b3335de1df2?format=auto&w=1000&s=184e8e0f39d92df7a092c187ecc7d4d51ab99fe0"
+          },
+          {
+            "id": "2026-10-02:https://aftonbladet.se/nyheter/a/Gr1kAl/piloten-om-kapningsforsoket-kampade-for-mitt-liv",
+            "url": "https://aftonbladet.se/nyheter/a/Gr1kAl/piloten-om-kapningsforsoket-kampade-for-mitt-liv",
+            "title": "Piloten om kapningsförsöket: ”Kämpade för mitt liv”",
+            "domain": "aftonbladet.se",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "sv",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "SWE",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "Aftonbladet"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=aftonbladet.se&sz=64",
+            "image_url": "https://akamai.vgc.no/v2/images/e68b2782-ecbf-3e93-bd60-38ad554d69fb?format=auto&w=1000&s=42bcf029828f49bd5bb3e31faca5d4d57bd399a0"
+          },
+          {
+            "id": "2026-10-02:https://aktuality.sk/clanok/AxE2GLD/donald-trump-hrozi-iranu-uderom-nudzove-pristatie-lietadla-po-utoku-pilota-vyvolalo-velke-podozrenia/",
+            "url": "https://aktuality.sk/clanok/AxE2GLD/donald-trump-hrozi-iranu-uderom-nudzove-pristatie-lietadla-po-utoku-pilota-vyvolalo-velke-podozrenia/",
+            "title": "Donald Trump hrozí Iránu odvetou, ak sa potvrdí jeho účasť na incidente s lietadlom FlyDubai",
+            "domain": "aktuality.sk",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "sk",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "SVK",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "Aktuality.sk"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=aktuality.sk&sz=64",
+            "image_url": "https://img.aktuality.sk/foto/americky-prezident-donald-trump-prichadza-pred-prihovorom-na-81-zasadnuti-valneho-zhromazdenia-organizacie-spojenych-narodov-vz-osn-v-new-yorku-v-utorok-22-septembra-2026/MTUweDE1MC9zbWFydC9maWx0ZXJzOmZvcm1hdChqcGcpOnF1YWxpdHkoNzApL2h0dHA6Ly9sb2NhbGhvc3Q6ODEvcHVsc2Ntcy10cmFuc2Zvcm1zLzE=/Y2RktkpTURBXy8wOGJkMmRmZjhhNGI2YmQwNjEwNmFmOWFhYzIyYmIxYS5qcGeSlQMAzLXNFnXNDKSVAs0H0ADCww?st=htvNSYCFzkXDBN0p44ZPfhOViJtCmEH80F7_Z049Xuc&ts=1790892000&e=0"
+          },
+          {
+            "id": "2026-10-02:https://albiladpress.com/news/2026/6563/arab-and-world/1023346.html",
+            "url": "https://albiladpress.com/news/2026/6563/arab-and-world/1023346.html",
+            "title": "ترامب يتوعّد إيران بـ\"ضربة قوية جداً\" إذا ثبت ضلوعها في حادثة طائرة فلاي دبي",
+            "domain": "albiladpress.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "ar",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "BHR",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "Al Bilad / البلاد"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=albiladpress.com&sz=64",
+            "image_url": null
+          },
+          {
+            "id": "2026-10-02:https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-describes-opening-cockpit-door-during-attack?traffic_source=rss",
+            "url": "https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-describes-opening-cockpit-door-during-attack?traffic_source=rss",
+            "title": "FlyDubai pilot describes opening cockpit door during attack",
+            "domain": "aljazeera.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "en",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "QAT",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "Al Jazeera English"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=aljazeera.com&sz=64",
+            "image_url": null
+          },
+          {
+            "id": "2026-10-02:https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-hailed-as-national-hero-as-he-describes-attack?traffic_source=rss",
+            "url": "https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-hailed-as-national-hero-as-he-describes-attack?traffic_source=rss",
+            "title": "FlyDubai pilot hailed as ‘national hero’ as he describes attack",
+            "domain": "aljazeera.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "en",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "QAT",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "Al Jazeera English"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=aljazeera.com&sz=64",
+            "image_url": null
+          },
+          {
+            "id": "2026-10-02:https://ansabrasil.com.br/brasil/noticias/mundo/2026/10/02/netanyahu-diz-estar-claro-que-copiloto-pretendia-derrubar-aviao-rumo_5481ecec-fc15-4039-a2c6-ba8407f0ccfc.html",
+            "url": "https://ansabrasil.com.br/brasil/noticias/mundo/2026/10/02/netanyahu-diz-estar-claro-que-copiloto-pretendia-derrubar-aviao-rumo_5481ecec-fc15-4039-a2c6-ba8407f0ccfc.html",
+            "title": "Netanyahu diz 'estar claro' que copiloto pretendia derrubar avião rumo a Israel - Mundo",
+            "domain": "ansabrasil.com.br",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "pt",
+            "language_provenance": "gkg_translation_info",
+            "publisher_country_iso3": null,
+            "publisher_country_provenance": null,
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=ansabrasil.com.br&sz=64",
+            "image_url": "https://www.ansa.it/webimages/img_1280x720/2026/10/1/117d08713aea7c2d928484959186b983.jpg"
+          },
+          {
+            "id": "2026-10-02:https://argumenti.ru/world/vtoroy-pilot-flydubai-napal-na-komandira-s-nozhom-i-pytalsya-zahvatit-1010567",
+            "url": "https://argumenti.ru/world/vtoroy-pilot-flydubai-napal-na-komandira-s-nozhom-i-pytalsya-zahvatit-1010567",
+            "title": "Второй пилот Flydubai напал на командира с ножом и пытался захватить управление самолётом",
+            "domain": "argumenti.ru",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "ru",
+            "language_provenance": "gkg_translation_info",
+            "publisher_country_iso3": null,
+            "publisher_country_provenance": null,
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=argumenti.ru&sz=64",
+            "image_url": "https://img.argumenti.ru/news/news_id_big/20261002122415-1010567.jpg"
+          },
+          {
+            "id": "2026-10-02:https://article.wn.com/view/2026/10/02/trump_says_iran_will_be_hit_8216very_hard_8217_if_it_is_behi/",
+            "url": "https://article.wn.com/view/2026/10/02/trump_says_iran_will_be_hit_8216very_hard_8217_if_it_is_behi/",
+            "title": "Trump says Iran will be hit 'very hard' if it is behind copilot who tried ...",
+            "domain": "article.wn.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "en",
+            "language_provenance": "gkg_english",
+            "publisher_country_iso3": null,
+            "publisher_country_provenance": null,
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=article.wn.com&sz=64",
+            "image_url": null
+          },
+          {
+            "id": "2026-10-02:https://balkanweb.com/me-vrisni-me-vrisni-bertiste-bashkepiloti-i-fluturimit-te-flydubai-kur-u-ndalua-levizja-e-pilotit-te-therur-qe-parandaloi-tragjedine/",
+            "url": "https://balkanweb.com/me-vrisni-me-vrisni-bertiste-bashkepiloti-i-fluturimit-te-flydubai-kur-u-ndalua-levizja-e-pilotit-te-therur-qe-parandaloi-tragjedine/",
+            "title": "“Më vrisni, më vrisni!”, bërtiste bashkëpiloti i fluturimit të Flydubai kur u ndalua, lëvizja e pilotit të therur që parandaloi tragjedinë",
+            "domain": "balkanweb.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "sq",
+            "language_provenance": "native_source_metadata",
+            "publisher_country_iso3": "ALB",
+            "publisher_country_provenance": {
+              "method": "rss",
+              "publisher_name": "BalkanWeb"
+            },
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=balkanweb.com&sz=64",
+            "image_url": null
           }
         ],
         "pagination": {
-          "limit": 1,
+          "limit": 20,
           "cursor": null,
-          "next_cursor": "1"
+          "next_cursor": "20"
         },
         "applied_filters": {
           "language": null,
@@ -159,8 +1687,8 @@
         "meta": {
           "publisher_country_coverage": {
             "unit": "returned_articles",
-            "known": 0,
-            "unknown": 1
+            "known": 13,
+            "unknown": 7
           }
         }
       },
@@ -173,8 +1701,8 @@
         },
         "pagination": {
           "cursor": null,
-          "next_cursor": "1",
-          "limit": 1
+          "next_cursor": "20",
+          "limit": 20
         },
         "meta": {},
         "data": [
@@ -191,12 +1719,278 @@
             "entity_refs": [],
             "top_articles": [],
             "url": "http://sunatimes.com/articles/6637/Stabbed-at-30-000-Feet-Wounded-Pilots-Dramatic-Fight-to-Save-Flydubai-Flight"
+          },
+          {
+            "id": "2026-10-02:http://www.mediatica.ro/radio-koko-hirek/trump-kemeny-valaszt-helyezett-kilatasba-ha-irannak-koze-volt-a-pilota-elleni-tamadashoz",
+            "title": "Trump kemény választ helyezett kilátásba, ha Iránnak köze volt a pilóta elleni támadáshoz",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "http://www.mediatica.ro/radio-koko-hirek/trump-kemeny-valaszt-helyezett-kilatasba-ha-irannak-koze-volt-a-pilota-elleni-tamadashoz"
+          },
+          {
+            "id": "2026-10-02:http://www.thegazette.com/news/world/trump-says-iran-will-be-hit-very-hard-if-it-is-behind-copilot-who-tried/article_8b19236a-50ef-53e3-a145-d9e3894945a0.html",
+            "title": "Trump says Iran will be hit 'very hard' if it is behind copilot who tried to crash flight to Israel",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "http://www.thegazette.com/news/world/trump-says-iran-will-be-hit-very-hard-if-it-is-behind-copilot-who-tried/article_8b19236a-50ef-53e3-a145-d9e3894945a0.html"
+          },
+          {
+            "id": "2026-10-02:https://15min.lt/naujiena/aktualu/pasaulis/donaldas-trumpas-zada-smugiuoti-iranui-jei-sis-susijes-su-ispuoliu-flydubai-lektuve-57-2776138",
+            "title": "Donaldas Trumpas žada smūgiuoti Iranui, jei šis susijęs su išpuoliu „FlyDubai“ lėktuve",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://15min.lt/naujiena/aktualu/pasaulis/donaldas-trumpas-zada-smugiuoti-iranui-jei-sis-susijes-su-ispuoliu-flydubai-lektuve-57-2776138"
+          },
+          {
+            "id": "2026-10-02:https://15min.lt/naujiena/aktualu/pasaulis/po-ispuolio-flydubai-lektuve-jae-pareigunas-pilota-gyre-uz-drasa-incidenta-vadino-teroro-aktu-57-2776644",
+            "title": "Po išpuolio „FlyDubai“ lėktuve JAE pareigūnas pilotą gyrė už drąsą, incidentą vadino teroro aktu",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://15min.lt/naujiena/aktualu/pasaulis/po-ispuolio-flydubai-lektuve-jae-pareigunas-pilota-gyre-uz-drasa-incidenta-vadino-teroro-aktu-57-2776644"
+          },
+          {
+            "id": "2026-10-02:https://24chasa.bg/mezhdunarodni/article/23660714",
+            "title": "Мъжът, спасил пилота на Flydubai от нападателя: Цялата пилотска кабина беше в кръв",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://24chasa.bg/mezhdunarodni/article/23660714"
+          },
+          {
+            "id": "2026-10-02:https://24ur.com/novice/tujina/junaski-pilot-ugrabljenega-leta-nisem-mogel-dovoliti-da-ljudje-umrejo.html",
+            "title": "Junaški pilot 'ugrabljenega' leta: 'Nisem mogel dovoliti, da ljudje umrejo'",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://24ur.com/novice/tujina/junaski-pilot-ugrabljenega-leta-nisem-mogel-dovoliti-da-ljudje-umrejo.html"
+          },
+          {
+            "id": "2026-10-02:https://abc.com.py/internacionales/2026/10/02/netanyahu-dice-que-siguen-estudiando-el-ataque-de-flydubai-quien-lo-haya-enviado-pagara/",
+            "title": "Netanyahu dice que siguen estudiando el ataque de Flydubai: \"Quien lo haya enviado pagará\"",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://abc.com.py/internacionales/2026/10/02/netanyahu-dice-que-siguen-estudiando-el-ataque-de-flydubai-quien-lo-haya-enviado-pagara/"
+          },
+          {
+            "id": "2026-10-02:https://abc.com.py/internacionales/2026/10/02/trump-promete-golpear-a-iran-muy-duro-si-esta-implicado-en-ataque-a-flydubai/",
+            "title": "Trump promete golpear a Irán “muy duro” si está implicado en ataque a FlyDubai",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://abc.com.py/internacionales/2026/10/02/trump-promete-golpear-a-iran-muy-duro-si-esta-implicado-en-ataque-a-flydubai/"
+          },
+          {
+            "id": "2026-10-02:https://abc7news.com/story/suspect-flydubai-incident-was-previously-identified-security-risk-officials/19901987/",
+            "title": "Suspect in FlyDubai incident was previously identified as security risk: Officials",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://abc7news.com/story/suspect-flydubai-incident-was-previously-identified-security-risk-officials/19901987/"
+          },
+          {
+            "id": "2026-10-02:https://aftenposten.no/verden/i/R5xWXW/knivstukket-pilot-jeg-hadde-ikke-tenkt-aa-la-andre-doe",
+            "title": "Knivstukket pilot: – Jeg hadde ikke tenkt å la andre dø",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://aftenposten.no/verden/i/R5xWXW/knivstukket-pilot-jeg-hadde-ikke-tenkt-aa-la-andre-doe"
+          },
+          {
+            "id": "2026-10-02:https://aftonbladet.se/nyheter/a/Gr1kAl/piloten-om-kapningsforsoket-kampade-for-mitt-liv",
+            "title": "Piloten om kapningsförsöket: ”Kämpade för mitt liv”",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://aftonbladet.se/nyheter/a/Gr1kAl/piloten-om-kapningsforsoket-kampade-for-mitt-liv"
+          },
+          {
+            "id": "2026-10-02:https://aktuality.sk/clanok/AxE2GLD/donald-trump-hrozi-iranu-uderom-nudzove-pristatie-lietadla-po-utoku-pilota-vyvolalo-velke-podozrenia/",
+            "title": "Donald Trump hrozí Iránu odvetou, ak sa potvrdí jeho účasť na incidente s lietadlom FlyDubai",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://aktuality.sk/clanok/AxE2GLD/donald-trump-hrozi-iranu-uderom-nudzove-pristatie-lietadla-po-utoku-pilota-vyvolalo-velke-podozrenia/"
+          },
+          {
+            "id": "2026-10-02:https://albiladpress.com/news/2026/6563/arab-and-world/1023346.html",
+            "title": "ترامب يتوعّد إيران بـ\"ضربة قوية جداً\" إذا ثبت ضلوعها في حادثة طائرة فلاي دبي",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://albiladpress.com/news/2026/6563/arab-and-world/1023346.html"
+          },
+          {
+            "id": "2026-10-02:https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-describes-opening-cockpit-door-during-attack?traffic_source=rss",
+            "title": "FlyDubai pilot describes opening cockpit door during attack",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-describes-opening-cockpit-door-during-attack?traffic_source=rss"
+          },
+          {
+            "id": "2026-10-02:https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-hailed-as-national-hero-as-he-describes-attack?traffic_source=rss",
+            "title": "FlyDubai pilot hailed as ‘national hero’ as he describes attack",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-hailed-as-national-hero-as-he-describes-attack?traffic_source=rss"
+          },
+          {
+            "id": "2026-10-02:https://ansabrasil.com.br/brasil/noticias/mundo/2026/10/02/netanyahu-diz-estar-claro-que-copiloto-pretendia-derrubar-aviao-rumo_5481ecec-fc15-4039-a2c6-ba8407f0ccfc.html",
+            "title": "Netanyahu diz 'estar claro' que copiloto pretendia derrubar avião rumo a Israel - Mundo",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://ansabrasil.com.br/brasil/noticias/mundo/2026/10/02/netanyahu-diz-estar-claro-que-copiloto-pretendia-derrubar-aviao-rumo_5481ecec-fc15-4039-a2c6-ba8407f0ccfc.html"
+          },
+          {
+            "id": "2026-10-02:https://argumenti.ru/world/vtoroy-pilot-flydubai-napal-na-komandira-s-nozhom-i-pytalsya-zahvatit-1010567",
+            "title": "Второй пилот Flydubai напал на командира с ножом и пытался захватить управление самолётом",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://argumenti.ru/world/vtoroy-pilot-flydubai-napal-na-komandira-s-nozhom-i-pytalsya-zahvatit-1010567"
+          },
+          {
+            "id": "2026-10-02:https://article.wn.com/view/2026/10/02/trump_says_iran_will_be_hit_8216very_hard_8217_if_it_is_behi/",
+            "title": "Trump says Iran will be hit 'very hard' if it is behind copilot who tried ...",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://article.wn.com/view/2026/10/02/trump_says_iran_will_be_hit_8216very_hard_8217_if_it_is_behi/"
+          },
+          {
+            "id": "2026-10-02:https://balkanweb.com/me-vrisni-me-vrisni-bertiste-bashkepiloti-i-fluturimit-te-flydubai-kur-u-ndalua-levizja-e-pilotit-te-therur-qe-parandaloi-tragjedine/",
+            "title": "“Më vrisni, më vrisni!”, bërtiste bashkëpiloti i fluturimit të Flydubai kur u ndalua, lëvizja e pilotit të therur që parandaloi tragjedinë",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "https://balkanweb.com/me-vrisni-me-vrisni-bertiste-bashkepiloti-i-fluturimit-te-flydubai-kur-u-ndalua-levizja-e-pilotit-te-therur-qe-parandaloi-tragjedine/"
           }
         ]
       },
       "args": {
         "story_id": "8608afb1d928",
-        "limit": 1,
+        "limit": 20,
         "include_images": true
       }
     }

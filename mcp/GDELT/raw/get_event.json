@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T00:02:26.185Z",
+  "generatedAt": "2026-10-03T01:01:48.486Z",
   "tool": "get_event",
   "args": {
     "event_id": "conflict_574b2dc178a74941"
@@ -38,12 +38,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 10%",
+                      "label": "free · 18%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "903 left",
+                      "content": "821 left",
                       "type": "Muted"
                     }
                   ]

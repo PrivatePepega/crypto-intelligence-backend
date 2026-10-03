@@ -1,0 +1,574 @@
+[
+  {
+    "key": "cameoplus_political",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 35014,
+    "articleCount": 65752,
+    "avgArticleCount": 1.878,
+    "minArticleCount": 1,
+    "maxArticleCount": 745,
+    "storiesWithEvents": 8404,
+    "storyOnlyCount": 26610,
+    "linkedEventCount": 8880,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.254,
+    "maxLinkedEventCount": 8,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 211,
+    "regionCount": 17,
+    "avgSignificance": 0.0921,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.7182,
+    "metrics": {
+      "significance": {
+        "avg": 0.0921,
+        "min": 0.0753,
+        "max": 0.7182
+      },
+      "article_count": {
+        "total": 65752,
+        "avg": 1.878,
+        "min": 1,
+        "max": 745
+      },
+      "linked_events": {
+        "count": {
+          "total": 8880,
+          "avg": 0.254,
+          "min": 0,
+          "max": 8,
+          "stories_with_events": 8404,
+          "story_only_count": 26610
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_crime",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 12998,
+    "articleCount": 21580,
+    "avgArticleCount": 1.66,
+    "minArticleCount": 1,
+    "maxArticleCount": 261,
+    "storiesWithEvents": 4244,
+    "storyOnlyCount": 8754,
+    "linkedEventCount": 4314,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.332,
+    "maxLinkedEventCount": 4,
+    "storiesWithFatalities": 5,
+    "fatalities": 15,
+    "fatalityStoryRate": 0.0004,
+    "countryCount": 182,
+    "regionCount": 17,
+    "avgSignificance": 0.091,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.6046,
+    "metrics": {
+      "significance": {
+        "avg": 0.091,
+        "min": 0.0753,
+        "max": 0.6046
+      },
+      "article_count": {
+        "total": 21580,
+        "avg": 1.66,
+        "min": 1,
+        "max": 261
+      },
+      "linked_events": {
+        "count": {
+          "total": 4314,
+          "avg": 0.332,
+          "min": 0,
+          "max": 4,
+          "stories_with_events": 4244,
+          "story_only_count": 8754
+        }
+      },
+      "fatalities": {
+        "stories": 5,
+        "rate": 0.0004,
+        "total": 15
+      }
+    }
+  },
+  {
+    "key": "conflict_security",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 10475,
+    "articleCount": 23426,
+    "avgArticleCount": 2.236,
+    "minArticleCount": 1,
+    "maxArticleCount": 493,
+    "storiesWithEvents": 2170,
+    "storyOnlyCount": 8305,
+    "linkedEventCount": 2295,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.219,
+    "maxLinkedEventCount": 8,
+    "storiesWithFatalities": 126,
+    "fatalities": 784,
+    "fatalityStoryRate": 0.012,
+    "countryCount": 158,
+    "regionCount": 17,
+    "avgSignificance": 0.0954,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.6734,
+    "metrics": {
+      "significance": {
+        "avg": 0.0954,
+        "min": 0.0753,
+        "max": 0.6734
+      },
+      "article_count": {
+        "total": 23426,
+        "avg": 2.236,
+        "min": 1,
+        "max": 493
+      },
+      "linked_events": {
+        "count": {
+          "total": 2295,
+          "avg": 0.219,
+          "min": 0,
+          "max": 8,
+          "stories_with_events": 2170,
+          "story_only_count": 8305
+        }
+      },
+      "fatalities": {
+        "stories": 126,
+        "rate": 0.012,
+        "total": 784
+      }
+    }
+  },
+  {
+    "key": "cameoplus_economic",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 7069,
+    "articleCount": 10874,
+    "avgArticleCount": 1.538,
+    "minArticleCount": 1,
+    "maxArticleCount": 171,
+    "storiesWithEvents": 1716,
+    "storyOnlyCount": 5353,
+    "linkedEventCount": 1761,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.249,
+    "maxLinkedEventCount": 6,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 186,
+    "regionCount": 17,
+    "avgSignificance": 0.0881,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.5589,
+    "metrics": {
+      "significance": {
+        "avg": 0.0881,
+        "min": 0.0753,
+        "max": 0.5589
+      },
+      "article_count": {
+        "total": 10874,
+        "avg": 1.538,
+        "min": 1,
+        "max": 171
+      },
+      "linked_events": {
+        "count": {
+          "total": 1761,
+          "avg": 0.249,
+          "min": 0,
+          "max": 6,
+          "stories_with_events": 1716,
+          "story_only_count": 5353
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_infrastructure",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 5638,
+    "articleCount": 7392,
+    "avgArticleCount": 1.311,
+    "minArticleCount": 1,
+    "maxArticleCount": 49,
+    "storiesWithEvents": 1527,
+    "storyOnlyCount": 4111,
+    "linkedEventCount": 1558,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.276,
+    "maxLinkedEventCount": 3,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 184,
+    "regionCount": 17,
+    "avgSignificance": 0.0848,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.4247,
+    "metrics": {
+      "significance": {
+        "avg": 0.0848,
+        "min": 0.0753,
+        "max": 0.4247
+      },
+      "article_count": {
+        "total": 7392,
+        "avg": 1.311,
+        "min": 1,
+        "max": 49
+      },
+      "linked_events": {
+        "count": {
+          "total": 1558,
+          "avg": 0.276,
+          "min": 0,
+          "max": 3,
+          "stories_with_events": 1527,
+          "story_only_count": 4111
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_environment",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 4358,
+    "articleCount": 7240,
+    "avgArticleCount": 1.661,
+    "minArticleCount": 1,
+    "maxArticleCount": 126,
+    "storiesWithEvents": 1004,
+    "storyOnlyCount": 3354,
+    "linkedEventCount": 1051,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.241,
+    "maxLinkedEventCount": 5,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 169,
+    "regionCount": 17,
+    "avgSignificance": 0.0899,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.5259,
+    "metrics": {
+      "significance": {
+        "avg": 0.0899,
+        "min": 0.0753,
+        "max": 0.5259
+      },
+      "article_count": {
+        "total": 7240,
+        "avg": 1.661,
+        "min": 1,
+        "max": 126
+      },
+      "linked_events": {
+        "count": {
+          "total": 1051,
+          "avg": 0.241,
+          "min": 0,
+          "max": 5,
+          "stories_with_events": 1004,
+          "story_only_count": 3354
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_corporate",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 3462,
+    "articleCount": 4977,
+    "avgArticleCount": 1.438,
+    "minArticleCount": 1,
+    "maxArticleCount": 46,
+    "storiesWithEvents": 1590,
+    "storyOnlyCount": 1872,
+    "linkedEventCount": 1605,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.464,
+    "maxLinkedEventCount": 2,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 153,
+    "regionCount": 17,
+    "avgSignificance": 0.0876,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.418,
+    "metrics": {
+      "significance": {
+        "avg": 0.0876,
+        "min": 0.0753,
+        "max": 0.418
+      },
+      "article_count": {
+        "total": 4977,
+        "avg": 1.438,
+        "min": 1,
+        "max": 46
+      },
+      "linked_events": {
+        "count": {
+          "total": 1605,
+          "avg": 0.464,
+          "min": 0,
+          "max": 2,
+          "stories_with_events": 1590,
+          "story_only_count": 1872
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_health",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 2353,
+    "articleCount": 3093,
+    "avgArticleCount": 1.314,
+    "minArticleCount": 1,
+    "maxArticleCount": 37,
+    "storiesWithEvents": 426,
+    "storyOnlyCount": 1927,
+    "linkedEventCount": 433,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.184,
+    "maxLinkedEventCount": 4,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 162,
+    "regionCount": 17,
+    "avgSignificance": 0.0853,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.3949,
+    "metrics": {
+      "significance": {
+        "avg": 0.0853,
+        "min": 0.0753,
+        "max": 0.3949
+      },
+      "article_count": {
+        "total": 3093,
+        "avg": 1.314,
+        "min": 1,
+        "max": 37
+      },
+      "linked_events": {
+        "count": {
+          "total": 433,
+          "avg": 0.184,
+          "min": 0,
+          "max": 4,
+          "stories_with_events": 426,
+          "story_only_count": 1927
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_technology",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 2103,
+    "articleCount": 3815,
+    "avgArticleCount": 1.814,
+    "minArticleCount": 1,
+    "maxArticleCount": 233,
+    "storiesWithEvents": 435,
+    "storyOnlyCount": 1668,
+    "linkedEventCount": 447,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.213,
+    "maxLinkedEventCount": 3,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 136,
+    "regionCount": 17,
+    "avgSignificance": 0.0904,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.5923,
+    "metrics": {
+      "significance": {
+        "avg": 0.0904,
+        "min": 0.0753,
+        "max": 0.5923
+      },
+      "article_count": {
+        "total": 3815,
+        "avg": 1.814,
+        "min": 1,
+        "max": 233
+      },
+      "linked_events": {
+        "count": {
+          "total": 447,
+          "avg": 0.213,
+          "min": 0,
+          "max": 3,
+          "stories_with_events": 435,
+          "story_only_count": 1668
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_information",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 869,
+    "articleCount": 1491,
+    "avgArticleCount": 1.716,
+    "minArticleCount": 1,
+    "maxArticleCount": 41,
+    "storiesWithEvents": 190,
+    "storyOnlyCount": 679,
+    "linkedEventCount": 195,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.224,
+    "maxLinkedEventCount": 2,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 132,
+    "regionCount": 17,
+    "avgSignificance": 0.0926,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.4058,
+    "metrics": {
+      "significance": {
+        "avg": 0.0926,
+        "min": 0.0753,
+        "max": 0.4058
+      },
+      "article_count": {
+        "total": 1491,
+        "avg": 1.716,
+        "min": 1,
+        "max": 41
+      },
+      "linked_events": {
+        "count": {
+          "total": 195,
+          "avg": 0.224,
+          "min": 0,
+          "max": 2,
+          "stories_with_events": 190,
+          "story_only_count": 679
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  },
+  {
+    "key": "cameoplus_demographic",
+    "groupBy": "category",
+    "latestDate": "2026-10-02",
+    "storyCount": 702,
+    "articleCount": 1051,
+    "avgArticleCount": 1.497,
+    "minArticleCount": 1,
+    "maxArticleCount": 41,
+    "storiesWithEvents": 121,
+    "storyOnlyCount": 581,
+    "linkedEventCount": 126,
+    "minLinkedEventCount": 0,
+    "avgLinkedEventCount": 0.179,
+    "maxLinkedEventCount": 3,
+    "storiesWithFatalities": 0,
+    "fatalities": 0,
+    "fatalityStoryRate": 0,
+    "countryCount": 124,
+    "regionCount": 17,
+    "avgSignificance": 0.0901,
+    "minSignificance": 0.0753,
+    "maxSignificance": 0.4058,
+    "metrics": {
+      "significance": {
+        "avg": 0.0901,
+        "min": 0.0753,
+        "max": 0.4058
+      },
+      "article_count": {
+        "total": 1051,
+        "avg": 1.497,
+        "min": 1,
+        "max": 41
+      },
+      "linked_events": {
+        "count": {
+          "total": 126,
+          "avg": 0.179,
+          "min": 0,
+          "max": 3,
+          "stories_with_events": 121,
+          "story_only_count": 581
+        }
+      },
+      "fatalities": {
+        "stories": 0,
+        "rate": 0,
+        "total": 0
+      }
+    }
+  }
+]

@@ -6,28 +6,31 @@
  *
  * Output, one file per tool, in mcp/GDELT/raw/:
  *
- *   search_events.json        search_events, no id needed
- *   summarize_events.json     summarize_events by date
- *   summarize_events.by-country.json   the bucket shape changes with group_by
- *   get_event.json            get_event, fed an id from search_events
- *   search_stories.json       search_stories, no id needed
- *   summarize_stories.json    summarize_stories by date
+ *   search_events.json              search_events, no id needed
+ *   summarize_events.json           summarize_events by date
+ *   summarize_events.by-country.json the bucket shape changes with group_by
+ *   get_event.json                  get_event, fed an id from search_events
+ *   search_stories.json             search_stories, no id needed
+ *   summarize_stories.json          summarize_stories by date
  *   summarize_stories.by-category.json
- *   get_story.json            get_story, fed an id from search_stories
- *   get_story_articles.json   get_story_articles, fed the same story id
+ *   get_story.json                  get_story, fed an id from search_stories
+ *   get_story_articles.json         get_story_articles, fed the same story id
  *
- * ## The two summarize tools do NOT take an id
+ * ## The two summarize tools take a WINDOW, not an id
  *
- * They are aggregate rollups, not record lookups: they take a window
- * (`days` / `start_date` / `end_date`) plus filters, and bucket the result by
- * `group_by`. So nothing needs to feed them an id - they need a window, and
- * each `group_by` returns a differently shaped bucket.
+ * `summarize_events` (GET /api/v2/events/summary) and `summarize_stories`
+ * (GET /api/v2/stories/summary) are aggregate rollups, not record lookups:
+ * they take a date window plus filters and bucket the result by `group_by`.
+ * No id is accepted, and none is needed.
  *
- * That is why each summarize tool is captured twice here. `group_by: date`
- * buckets read `{ key, latest_date, event_count, ... }`, while
- * `group_by: country` buckets read `{ key, country_count, region_count, ... }`
- * with no date field. Deciding what to normalize needs both, because the fields
- * differ by grouping dimension rather than only by tool.
+ * They are NOT a summarised `search_events`. search_events returns individual
+ * Event cards with ids and titles; summarize_events returns counts and metric
+ * averages per bucket, with no ids at all. Both are wanted - the summary for
+ * volume/trend questions, the search for the records themselves.
+ *
+ * That is also why each summarize tool is captured twice: `group_by: date`
+ * returns 5-field buckets while `group_by: country` returns 40, so the field
+ * inventory differs by grouping dimension and not only by tool.
  *
  * The three by-id tools ARE fed ids, chained from the searches in this same
  * script - see `readFirstId`.
@@ -37,7 +40,15 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import "dotenv/config";
 
-import { GDELT_FETCHERS } from "./fetchers/index.js";
+import {
+  fetchGetEvent,
+  fetchGetStory,
+  fetchGetStoryArticles,
+  fetchSearchEvents,
+  fetchSearchStories,
+  fetchSummarizeEvents,
+  fetchSummarizeStories,
+} from "./fetchers/index.js";
 import { closeGdeltClient, readStructured } from "./gdeltClient.js";
 
 const OUT_DIR = "mcp/GDELT/raw";
@@ -46,17 +57,9 @@ const OUT_DIR = "mcp/GDELT/raw";
 const capture = async (
   tool: string,
   input: Record<string, unknown>,
+  result: Awaited<ReturnType<typeof fetchSearchEvents>>,
   file = tool,
-): Promise<unknown> => {
-  const fetcher = GDELT_FETCHERS[tool];
-
-  if (!fetcher) {
-    throw new Error(`No fetcher registered for "${tool}".`);
-  }
-
-  const result = await fetcher(input);
-  const structured = readStructured(result);
-
+): Promise<void> => {
   await writeFile(
     `${OUT_DIR}/${file}.json`,
     JSON.stringify(
@@ -65,24 +68,22 @@ const capture = async (
         tool,
         args: input,
         isError: result.isError === true,
-        response: structured,
+        response: readStructured(result),
       },
       null,
       2,
     ),
     "utf8",
   );
-
-  return structured;
 };
 
 /**
  * Reads the first record's `id` from `_gdelt.payload.data`.
  *
- * Verified against live responses: search_stories returned `3bba6f6d6d7c` and
+ * Verified against live responses: search_stories returned `8608afb1d928` and
  * get_story returned a record with the same `id`. Ids are short hex strings
- * (stories) or family-prefixed hex (events, e.g. `conflict_22923136a...`), not
- * the record's `url`.
+ * (stories) or family-prefixed hex (events, e.g. `conflict_574b2dc178a74941`),
+ * not the record's `url`.
  */
 const readFirstId = (structured: unknown): string | undefined => {
   const data = (
@@ -118,67 +119,82 @@ const main = async (): Promise<void> => {
   console.log("=".repeat(72));
 
   // --- search_events: the source of the event id -----------------------
-  const events = await capture("search_events", {
-    days: 3,
-    sort: "significance",
-  });
-  console.log(`  search_events      ${countRecords(events)} record(s)`);
+  const eventsResult = await fetchSearchEvents({ days: 3, sort: "significance" });
+  await capture(
+    "search_events",
+    { days: 3, sort: "significance" },
+    eventsResult,
+  );
+  console.log(`  search_events      ${countRecords(readStructured(eventsResult))} record(s)`);
 
   // --- summarize_events: window + group_by, no id ----------------------
-  const sumEventsDate = await capture("summarize_events", {
-    group_by: "date",
-    days: 7,
-  });
+  const sumEvents = await fetchSummarizeEvents({ group_by: "date", days: 7 });
+  await capture("summarize_events", { group_by: "date", days: 7 }, sumEvents);
   console.log(
-    `  summarize_events   group_by=date    ${countRecords(sumEventsDate)} bucket(s)`,
+    `  summarize_events   group_by=date    ${countRecords(readStructured(sumEvents))} bucket(s)`,
   );
 
+  const sumEventsCountry = await fetchSummarizeEvents({
+    group_by: "country",
+    days: 7,
+  });
   await capture(
     "summarize_events",
     { group_by: "country", days: 7 },
+    sumEventsCountry,
     "summarize_events.by-country",
   );
   console.log("  summarize_events   group_by=country captured");
 
   // --- get_event: fed the id from search_events ------------------------
-  const eventId = readFirstId(events);
+  const eventId = readFirstId(readStructured(eventsResult));
   if (eventId) {
-    await capture("get_event", { event_id: eventId });
+    const event = await fetchGetEvent({ event_id: eventId });
+    await capture("get_event", { event_id: eventId }, event);
     console.log(`  get_event          id=${eventId}`);
   } else {
     console.log("  get_event          SKIPPED - search_events returned nothing");
   }
 
   // --- search_stories: the source of the story id ----------------------
-  const stories = await capture("search_stories", {
-    days: 3,
-    sort: "significance",
-  });
-  console.log(`  search_stories     ${countRecords(stories)} record(s)`);
-
-  // --- summarize_stories: window + group_by, no id ---------------------
-  const sumStoriesDate = await capture("summarize_stories", {
-    group_by: "date",
-    days: 7,
-  });
+  const storiesResult = await fetchSearchStories({ days: 3, sort: "significance" });
+  await capture(
+    "search_stories",
+    { days: 3, sort: "significance" },
+    storiesResult,
+  );
   console.log(
-    `  summarize_stories  group_by=date    ${countRecords(sumStoriesDate)} bucket(s)`,
+    `  search_stories     ${countRecords(readStructured(storiesResult))} record(s)`,
   );
 
+  // --- summarize_stories: window + group_by, no id ---------------------
+  const sumStories = await fetchSummarizeStories({ group_by: "date", days: 7 });
+  await capture("summarize_stories", { group_by: "date", days: 7 }, sumStories);
+  console.log(
+    `  summarize_stories  group_by=date    ${countRecords(readStructured(sumStories))} bucket(s)`,
+  );
+
+  const sumStoriesCat = await fetchSummarizeStories({
+    group_by: "category",
+    days: 7,
+  });
   await capture(
     "summarize_stories",
     { group_by: "category", days: 7 },
+    sumStoriesCat,
     "summarize_stories.by-category",
   );
   console.log("  summarize_stories  group_by=category captured");
 
   // --- get_story / get_story_articles: fed the same story id -----------
-  const storyId = readFirstId(stories);
+  const storyId = readFirstId(readStructured(storiesResult));
   if (storyId) {
-    await capture("get_story", { story_id: storyId });
+    const story = await fetchGetStory({ story_id: storyId });
+    await capture("get_story", { story_id: storyId }, story);
     console.log(`  get_story          id=${storyId}`);
 
-    await capture("get_story_articles", { story_id: storyId });
+    const articles = await fetchGetStoryArticles({ story_id: storyId });
+    await capture("get_story_articles", { story_id: storyId }, articles);
     console.log(`  get_story_articles id=${storyId}`);
   } else {
     console.log(

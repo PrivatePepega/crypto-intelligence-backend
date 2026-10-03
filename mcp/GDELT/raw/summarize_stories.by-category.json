@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T00:02:40.406Z",
+  "generatedAt": "2026-10-03T01:01:59.479Z",
   "tool": "summarize_stories",
   "args": {
     "group_by": "category",
@@ -75,7 +75,7 @@
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "1 bucket · max / countDistinct semantics",
+                      "content": "11 buckets · max / countDistinct semantics",
                       "type": "Muted"
                     }
                   ]
@@ -86,12 +86,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 10%",
+                      "label": "free · 18%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "900 left",
+                      "content": "818 left",
                       "type": "Muted"
                     }
                   ]
@@ -118,12 +118,40 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums neon-text",
-                          "content": "34,857",
+                          "content": "85,041",
                           "type": "Text"
                         },
                         {
                           "cssClass": "text-[10px] tracking-wider uppercase",
                           "content": "STORIES",
+                          "type": "Muted"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "gap-2 items-baseline shrink-0",
+                  "type": "Row",
+                  "children": [
+                    {
+                      "cssClass": "h-4 w-4 shrink-0 text-destructive",
+                      "type": "Icon",
+                      "name": "skull",
+                      "size": "default"
+                    },
+                    {
+                      "cssClass": "gap-0",
+                      "type": "Column",
+                      "children": [
+                        {
+                          "cssClass": "text-lg font-semibold leading-none tabular-nums text-destructive",
+                          "content": "799",
+                          "type": "Text"
+                        },
+                        {
+                          "cssClass": "text-[10px] tracking-wider uppercase",
+                          "content": "FATALITIES",
                           "type": "Muted"
                         }
                       ]
@@ -146,7 +174,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums text-violet-500",
-                          "content": "8,862",
+                          "content": "22,665",
                           "type": "Text"
                         },
                         {
@@ -188,7 +216,52 @@
                 },
                 {
                   "type": "Badge",
-                  "label": "CAMEO+ Political · 100%",
+                  "label": "CAMEO+ Political · 41%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Crime · 15%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "Conflict Security · 12%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Economic · 8%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Infrastructure · 7%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Environment · 5%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Corporate · 4%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Health · 3%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Technology · 2%",
+                  "variant": "default"
+                },
+                {
+                  "type": "Badge",
+                  "label": "CAMEO+ Information · 1%",
                   "variant": "default"
                 }
               ]
@@ -248,7 +321,7 @@
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "34,857 stories",
+                                  "content": "35,014 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -269,7 +342,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "8,862",
+                                      "content": "8,880",
                                       "type": "Text"
                                     }
                                   ]
@@ -286,7 +359,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "65,462",
+                                      "content": "65,752",
                                       "type": "Text"
                                     }
                                   ]
@@ -304,6 +377,1230 @@
                                     {
                                       "cssClass": "text-xs tabular-nums",
                                       "content": "211",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Crime",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 37.12229393956703,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "12,998 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-red-500",
+                                      "type": "Icon",
+                                      "name": "skull",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-sm font-semibold text-destructive tabular-nums",
+                                      "content": "15",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "4,314",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "21,580",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "182",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "Conflict Security",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 29.916604786656766,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "10,475 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-red-500",
+                                      "type": "Icon",
+                                      "name": "skull",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-sm font-semibold text-destructive tabular-nums",
+                                      "content": "784",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "2,295",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "23,426",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "158",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Economic",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 20.189067230250757,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "7,069 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "1,761",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "10,874",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "186",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Infrastructure",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 16.102130576340894,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "5,638 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "1,558",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "7,392",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "184",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Environment",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 12.446449991431999,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "4,358 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "1,051",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "7,240",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "169",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Corporate",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 9.887473581995772,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "3,462 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "1,605",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "4,977",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "153",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Health",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 6.720169075227052,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "2,353 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "433",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "3,093",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "162",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Technology",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 6.006168960987034,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "2,103 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "447",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "3,815",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "136",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Information",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 2.4818643970983034,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "869 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "195",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "1,491",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "132",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#00C8FF"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "circle-dot",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "CAMEO+ Demographic",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 2.004912320785971,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "702 stories",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-violet-500",
+                                      "type": "Icon",
+                                      "name": "link-2",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "126",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "1,051",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "globe",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "124",
                                       "type": "Text"
                                     }
                                   ]
@@ -377,14 +1674,14 @@
             "key": "cameoplus_political",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 34857,
-            "article_count": 65462,
+            "story_count": 35014,
+            "article_count": 65752,
             "avg_article_count": 1.878,
             "min_article_count": 1,
             "max_article_count": 745,
-            "stories_with_events": 8385,
-            "story_only_count": 26472,
-            "linked_event_count": 8862,
+            "stories_with_events": 8404,
+            "story_only_count": 26610,
+            "linked_event_count": 8880,
             "min_linked_event_count": 0,
             "avg_linked_event_count": 0.254,
             "max_linked_event_count": 8,
@@ -403,19 +1700,539 @@
                 "max": 0.7182
               },
               "article_count": {
-                "total": 65462,
+                "total": 65752,
                 "avg": 1.878,
                 "min": 1,
                 "max": 745
               },
               "linked_events": {
                 "count": {
-                  "total": 8862,
+                  "total": 8880,
                   "avg": 0.254,
                   "min": 0,
                   "max": 8,
-                  "stories_with_events": 8385,
-                  "story_only_count": 26472
+                  "stories_with_events": 8404,
+                  "story_only_count": 26610
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_crime",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 12998,
+            "article_count": 21580,
+            "avg_article_count": 1.66,
+            "min_article_count": 1,
+            "max_article_count": 261,
+            "stories_with_events": 4244,
+            "story_only_count": 8754,
+            "linked_event_count": 4314,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.332,
+            "max_linked_event_count": 4,
+            "stories_with_fatalities": 5,
+            "fatalities": 15,
+            "fatality_story_rate": 0.0004,
+            "country_count": 182,
+            "region_count": 17,
+            "avg_significance": 0.091,
+            "max_significance": 0.6046,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.091,
+                "min": 0.0753,
+                "max": 0.6046
+              },
+              "article_count": {
+                "total": 21580,
+                "avg": 1.66,
+                "min": 1,
+                "max": 261
+              },
+              "linked_events": {
+                "count": {
+                  "total": 4314,
+                  "avg": 0.332,
+                  "min": 0,
+                  "max": 4,
+                  "stories_with_events": 4244,
+                  "story_only_count": 8754
+                }
+              },
+              "fatalities": {
+                "stories": 5,
+                "rate": 0.0004,
+                "total": 15
+              }
+            }
+          },
+          {
+            "key": "conflict_security",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 10475,
+            "article_count": 23426,
+            "avg_article_count": 2.236,
+            "min_article_count": 1,
+            "max_article_count": 493,
+            "stories_with_events": 2170,
+            "story_only_count": 8305,
+            "linked_event_count": 2295,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.219,
+            "max_linked_event_count": 8,
+            "stories_with_fatalities": 126,
+            "fatalities": 784,
+            "fatality_story_rate": 0.012,
+            "country_count": 158,
+            "region_count": 17,
+            "avg_significance": 0.0954,
+            "max_significance": 0.6734,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0954,
+                "min": 0.0753,
+                "max": 0.6734
+              },
+              "article_count": {
+                "total": 23426,
+                "avg": 2.236,
+                "min": 1,
+                "max": 493
+              },
+              "linked_events": {
+                "count": {
+                  "total": 2295,
+                  "avg": 0.219,
+                  "min": 0,
+                  "max": 8,
+                  "stories_with_events": 2170,
+                  "story_only_count": 8305
+                }
+              },
+              "fatalities": {
+                "stories": 126,
+                "rate": 0.012,
+                "total": 784
+              }
+            }
+          },
+          {
+            "key": "cameoplus_economic",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 7069,
+            "article_count": 10874,
+            "avg_article_count": 1.538,
+            "min_article_count": 1,
+            "max_article_count": 171,
+            "stories_with_events": 1716,
+            "story_only_count": 5353,
+            "linked_event_count": 1761,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.249,
+            "max_linked_event_count": 6,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 186,
+            "region_count": 17,
+            "avg_significance": 0.0881,
+            "max_significance": 0.5589,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0881,
+                "min": 0.0753,
+                "max": 0.5589
+              },
+              "article_count": {
+                "total": 10874,
+                "avg": 1.538,
+                "min": 1,
+                "max": 171
+              },
+              "linked_events": {
+                "count": {
+                  "total": 1761,
+                  "avg": 0.249,
+                  "min": 0,
+                  "max": 6,
+                  "stories_with_events": 1716,
+                  "story_only_count": 5353
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_infrastructure",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 5638,
+            "article_count": 7392,
+            "avg_article_count": 1.311,
+            "min_article_count": 1,
+            "max_article_count": 49,
+            "stories_with_events": 1527,
+            "story_only_count": 4111,
+            "linked_event_count": 1558,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.276,
+            "max_linked_event_count": 3,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 184,
+            "region_count": 17,
+            "avg_significance": 0.0848,
+            "max_significance": 0.4247,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0848,
+                "min": 0.0753,
+                "max": 0.4247
+              },
+              "article_count": {
+                "total": 7392,
+                "avg": 1.311,
+                "min": 1,
+                "max": 49
+              },
+              "linked_events": {
+                "count": {
+                  "total": 1558,
+                  "avg": 0.276,
+                  "min": 0,
+                  "max": 3,
+                  "stories_with_events": 1527,
+                  "story_only_count": 4111
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_environment",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 4358,
+            "article_count": 7240,
+            "avg_article_count": 1.661,
+            "min_article_count": 1,
+            "max_article_count": 126,
+            "stories_with_events": 1004,
+            "story_only_count": 3354,
+            "linked_event_count": 1051,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.241,
+            "max_linked_event_count": 5,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 169,
+            "region_count": 17,
+            "avg_significance": 0.0899,
+            "max_significance": 0.5259,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0899,
+                "min": 0.0753,
+                "max": 0.5259
+              },
+              "article_count": {
+                "total": 7240,
+                "avg": 1.661,
+                "min": 1,
+                "max": 126
+              },
+              "linked_events": {
+                "count": {
+                  "total": 1051,
+                  "avg": 0.241,
+                  "min": 0,
+                  "max": 5,
+                  "stories_with_events": 1004,
+                  "story_only_count": 3354
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_corporate",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 3462,
+            "article_count": 4977,
+            "avg_article_count": 1.438,
+            "min_article_count": 1,
+            "max_article_count": 46,
+            "stories_with_events": 1590,
+            "story_only_count": 1872,
+            "linked_event_count": 1605,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.464,
+            "max_linked_event_count": 2,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 153,
+            "region_count": 17,
+            "avg_significance": 0.0876,
+            "max_significance": 0.418,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0876,
+                "min": 0.0753,
+                "max": 0.418
+              },
+              "article_count": {
+                "total": 4977,
+                "avg": 1.438,
+                "min": 1,
+                "max": 46
+              },
+              "linked_events": {
+                "count": {
+                  "total": 1605,
+                  "avg": 0.464,
+                  "min": 0,
+                  "max": 2,
+                  "stories_with_events": 1590,
+                  "story_only_count": 1872
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_health",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 2353,
+            "article_count": 3093,
+            "avg_article_count": 1.314,
+            "min_article_count": 1,
+            "max_article_count": 37,
+            "stories_with_events": 426,
+            "story_only_count": 1927,
+            "linked_event_count": 433,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.184,
+            "max_linked_event_count": 4,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 162,
+            "region_count": 17,
+            "avg_significance": 0.0853,
+            "max_significance": 0.3949,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0853,
+                "min": 0.0753,
+                "max": 0.3949
+              },
+              "article_count": {
+                "total": 3093,
+                "avg": 1.314,
+                "min": 1,
+                "max": 37
+              },
+              "linked_events": {
+                "count": {
+                  "total": 433,
+                  "avg": 0.184,
+                  "min": 0,
+                  "max": 4,
+                  "stories_with_events": 426,
+                  "story_only_count": 1927
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_technology",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 2103,
+            "article_count": 3815,
+            "avg_article_count": 1.814,
+            "min_article_count": 1,
+            "max_article_count": 233,
+            "stories_with_events": 435,
+            "story_only_count": 1668,
+            "linked_event_count": 447,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.213,
+            "max_linked_event_count": 3,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 136,
+            "region_count": 17,
+            "avg_significance": 0.0904,
+            "max_significance": 0.5923,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0904,
+                "min": 0.0753,
+                "max": 0.5923
+              },
+              "article_count": {
+                "total": 3815,
+                "avg": 1.814,
+                "min": 1,
+                "max": 233
+              },
+              "linked_events": {
+                "count": {
+                  "total": 447,
+                  "avg": 0.213,
+                  "min": 0,
+                  "max": 3,
+                  "stories_with_events": 435,
+                  "story_only_count": 1668
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_information",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 869,
+            "article_count": 1491,
+            "avg_article_count": 1.716,
+            "min_article_count": 1,
+            "max_article_count": 41,
+            "stories_with_events": 190,
+            "story_only_count": 679,
+            "linked_event_count": 195,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.224,
+            "max_linked_event_count": 2,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 132,
+            "region_count": 17,
+            "avg_significance": 0.0926,
+            "max_significance": 0.4058,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0926,
+                "min": 0.0753,
+                "max": 0.4058
+              },
+              "article_count": {
+                "total": 1491,
+                "avg": 1.716,
+                "min": 1,
+                "max": 41
+              },
+              "linked_events": {
+                "count": {
+                  "total": 195,
+                  "avg": 0.224,
+                  "min": 0,
+                  "max": 2,
+                  "stories_with_events": 190,
+                  "story_only_count": 679
+                }
+              },
+              "fatalities": {
+                "stories": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          },
+          {
+            "key": "cameoplus_demographic",
+            "group_by": "category",
+            "latest_date": "2026-10-02",
+            "story_count": 702,
+            "article_count": 1051,
+            "avg_article_count": 1.497,
+            "min_article_count": 1,
+            "max_article_count": 41,
+            "stories_with_events": 121,
+            "story_only_count": 581,
+            "linked_event_count": 126,
+            "min_linked_event_count": 0,
+            "avg_linked_event_count": 0.179,
+            "max_linked_event_count": 3,
+            "stories_with_fatalities": 0,
+            "fatalities": 0,
+            "fatality_story_rate": 0,
+            "country_count": 124,
+            "region_count": 17,
+            "avg_significance": 0.0901,
+            "max_significance": 0.4058,
+            "min_significance": 0.0753,
+            "metrics": {
+              "significance": {
+                "avg": 0.0901,
+                "min": 0.0753,
+                "max": 0.4058
+              },
+              "article_count": {
+                "total": 1051,
+                "avg": 1.497,
+                "min": 1,
+                "max": 41
+              },
+              "linked_events": {
+                "count": {
+                  "total": 126,
+                  "avg": 0.179,
+                  "min": 0,
+                  "max": 3,
+                  "stories_with_events": 121,
+                  "story_only_count": 581
                 }
               },
               "fatalities": {
@@ -514,12 +2331,122 @@
         "data": [
           {
             "key": "cameoplus_political",
-            "count": 34857,
-            "article_count": 65462,
+            "count": 35014,
+            "article_count": 65752,
             "avg_article_count": 1.878,
             "metrics": {
               "significance": 0.0921,
               "linked_events_count": 0.254,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_crime",
+            "count": 12998,
+            "article_count": 21580,
+            "avg_article_count": 1.66,
+            "metrics": {
+              "significance": 0.091,
+              "linked_events_count": 0.332,
+              "fatalities": 15
+            }
+          },
+          {
+            "key": "conflict_security",
+            "count": 10475,
+            "article_count": 23426,
+            "avg_article_count": 2.236,
+            "metrics": {
+              "significance": 0.0954,
+              "linked_events_count": 0.219,
+              "fatalities": 784
+            }
+          },
+          {
+            "key": "cameoplus_economic",
+            "count": 7069,
+            "article_count": 10874,
+            "avg_article_count": 1.538,
+            "metrics": {
+              "significance": 0.0881,
+              "linked_events_count": 0.249,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_infrastructure",
+            "count": 5638,
+            "article_count": 7392,
+            "avg_article_count": 1.311,
+            "metrics": {
+              "significance": 0.0848,
+              "linked_events_count": 0.276,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_environment",
+            "count": 4358,
+            "article_count": 7240,
+            "avg_article_count": 1.661,
+            "metrics": {
+              "significance": 0.0899,
+              "linked_events_count": 0.241,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_corporate",
+            "count": 3462,
+            "article_count": 4977,
+            "avg_article_count": 1.438,
+            "metrics": {
+              "significance": 0.0876,
+              "linked_events_count": 0.464,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_health",
+            "count": 2353,
+            "article_count": 3093,
+            "avg_article_count": 1.314,
+            "metrics": {
+              "significance": 0.0853,
+              "linked_events_count": 0.184,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_technology",
+            "count": 2103,
+            "article_count": 3815,
+            "avg_article_count": 1.814,
+            "metrics": {
+              "significance": 0.0904,
+              "linked_events_count": 0.213,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_information",
+            "count": 869,
+            "article_count": 1491,
+            "avg_article_count": 1.716,
+            "metrics": {
+              "significance": 0.0926,
+              "linked_events_count": 0.224,
+              "fatalities": 0
+            }
+          },
+          {
+            "key": "cameoplus_demographic",
+            "count": 702,
+            "article_count": 1051,
+            "avg_article_count": 1.497,
+            "metrics": {
+              "significance": 0.0901,
+              "linked_events_count": 0.179,
               "fatalities": 0
             }
           }
@@ -528,7 +2455,7 @@
       "args": {
         "group_by": "category",
         "days": 7,
-        "limit": 1
+        "limit": 20
       }
     }
   }
