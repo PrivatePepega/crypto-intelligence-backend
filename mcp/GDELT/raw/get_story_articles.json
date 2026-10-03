@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-10-03T00:02:49.733Z",
+  "tool": "get_story_articles",
+  "args": {
+    "story_id": "8608afb1d928"
+  },
+  "isError": false,
+  "response": {
+    "$prefab": {
+      "version": "0.2"
+    },
+    "view": {
+      "cssClass": "pf-app-root",
+      "type": "Div",
+      "children": [
+        {
+          "cssClass": "gap-4 p-4",
+          "type": "Column",
+          "children": [
+            {
+              "cssClass": "gap-4 items-start justify-between",
+              "type": "Row",
+              "children": [
+                {
+                  "cssClass": "gap-1",
+                  "type": "Column",
+                  "children": [
+                    {
+                      "cssClass": "text-xl font-semibold neon-text",
+                      "content": "1 story",
+                      "type": "Text"
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "gap-2 items-center",
+                  "type": "Row",
+                  "children": [
+                    {
+                      "type": "Badge",
+                      "label": "free · 10%",
+                      "variant": "outline"
+                    },
+                    {
+                      "cssClass": "text-xs",
+                      "content": "898 left",
+                      "type": "Muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cssClass": "gap-4 grid-cols-1 md:grid-cols-2",
+              "type": "Grid",
+              "children": [
+                {
+                  "cssClass": "glass-panel border-l-4 border-l-azure-500",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-4",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-4 items-start",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-0 relative h-20 w-20 shrink-0 items-center justify-center rounded-md overflow-hidden bg-azure-500/15",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-7 w-7 text-azure-400 absolute inset-0 z-0 m-auto",
+                                  "type": "Icon",
+                                  "name": "globe",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "relative z-10 h-20 w-20 object-cover rounded-md",
+                                  "type": "Image",
+                                  "src": "https://gdeltcloud.com/api/img?u=http%3A%2F%2Fsunatimes.com%2Fuploads%2Farticle%2Fphoto%2FIMG_16F593-465F69-83D6CA-11EC73-B59A45-A8F2AF.jpg",
+                                  "alt": "Stabbed at 30,000 Feet: Wounded Pilot's Dramatic Fight to Save Flydubai Flight"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "cssClass": "gap-2 flex-wrap items-center text-xs",
+                                  "type": "Row"
+                                },
+                                {
+                                  "cssClass": "text-base font-semibold leading-snug hover:neon-text line-clamp-2",
+                                  "content": "Stabbed at 30,000 Feet: Wounded Pilot's Dramatic Fight to Save Flydubai Flight",
+                                  "code": false,
+                                  "type": "Link",
+                                  "href": "http://sunatimes.com/articles/6637/Stabbed-at-30-000-Feet-Wounded-Pilots-Dramatic-Fight-to-Save-Flydubai-Flight",
+                                  "target": "_blank"
+                                },
+                                {
+                                  "cssClass": "gap-4 flex-wrap items-baseline text-xs",
+                                  "type": "Row"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "theme": {
+      "light": "--primary: oklch(0.6 0.24 var(--accent-hue)); --primary-foreground: oklch(0.985 0 0); --ring: oklch(0.6 0.24 var(--accent-hue)); --chart-1: oklch(0.65 0.25 var(--accent-hue)); --chart-2: oklch(0.65 0.25 calc(var(--accent-hue) + 72)); --chart-3: oklch(0.65 0.25 calc(var(--accent-hue) + 144)); --chart-4: oklch(0.65 0.25 calc(var(--accent-hue) + 216)); --chart-5: oklch(0.65 0.25 calc(var(--accent-hue) + 288)); --primary: hsl(200 100% 60%); --ring: hsl(200 100% 60%); --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif; --font-mono: 'JetBrains Mono', ui-monospace, monospace;",
+      "dark": "--primary: oklch(0.7 0.18 var(--accent-hue)); --primary-foreground: oklch(0.205 0 0); --ring: oklch(0.7 0.18 var(--accent-hue)); --chart-1: oklch(0.72 0.22 var(--accent-hue)); --chart-2: oklch(0.72 0.22 calc(var(--accent-hue) + 72)); --chart-3: oklch(0.72 0.22 calc(var(--accent-hue) + 144)); --chart-4: oklch(0.72 0.22 calc(var(--accent-hue) + 216)); --chart-5: oklch(0.72 0.22 calc(var(--accent-hue) + 288)); --primary: hsl(200 100% 60%); --ring: hsl(200 100% 60%); --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif; --font-mono: 'JetBrains Mono', ui-monospace, monospace;",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');\n/* GDELT Cloud Prefab theme — neon glow + frosted glass overlays.\n *\n * Injected via Basic(custom_css=) on top of Prefab's default stylesheet.\n * Designed to be applied SELECTIVELY (one or two elements per card), not\n * drenched across the whole widget — the Next.js app reserves neon glow\n * for titles and a single accent metric per card. Mirror that here.\n *\n * Apply via css_class=\"neon-text\" / \"glass-panel\" / \"glass-panel--glow\"\n * on individual components.\n */\n\n/* Neon text-shadow. Matches .neon-text-azure in nextjs_/app/globals.css. */\n.neon-text {\n  text-shadow:\n    0 0 1px hsla(200 100% 60% / 0.55),\n    0 0 8px hsla(200 100% 60% / 0.28);\n}\n\n/* Stronger variant for hero titles behind a panel. */\n.neon-text--strong {\n  text-shadow:\n    0 0 1px hsla(200 100% 60% / 0.85),\n    0 0 8px hsla(200 100% 60% / 0.55),\n    0 0 22px hsla(200 100% 60% / 0.35);\n}\n\n/* Frosted-glass panel. Matches .sidebar-frost in nextjs_/app/globals.css. */\n.glass-panel {\n  background:\n    linear-gradient(\n      135deg,\n      hsla(200 100% 60% / 0.05) 0%,\n      hsla(0 0% 100% / 0.04) 50%,\n      hsla(200 100% 60% / 0.03) 100%\n    );\n  backdrop-filter: blur(12px) saturate(150%);\n  -webkit-backdrop-filter: blur(12px) saturate(150%);\n  box-shadow:\n    inset 1px 0 0 hsla(200 100% 60% / 0.18),\n    inset 0 1px 0 hsla(0 0% 100% / 0.10);\n}\n\n/* Glow-tinted variant — paint a subtle azure edge on hover. */\n.glass-panel--glow:hover {\n  box-shadow:\n    inset 1px 0 0 hsla(200 100% 60% / 0.28),\n    inset 0 1px 0 hsla(0 0% 100% / 0.14),\n    0 0 22px hsla(200 100% 60% / 0.18);\n  transition: box-shadow 220ms ease-out;\n}\n",
+      "mode": "dark"
+    },
+    "_gdelt": {
+      "tool": "get_story_articles",
+      "view": "stories",
+      "payload": {
+        "success": true,
+        "data": [
+          {
+            "id": "2026-10-02:http://sunatimes.com/articles/6637/Stabbed-at-30-000-Feet-Wounded-Pilots-Dramatic-Fight-to-Save-Flydubai-Flight",
+            "url": "http://sunatimes.com/articles/6637/Stabbed-at-30-000-Feet-Wounded-Pilots-Dramatic-Fight-to-Save-Flydubai-Flight",
+            "title": "Stabbed at 30,000 Feet: Wounded Pilot's Dramatic Fight to Save Flydubai Flight",
+            "domain": "sunatimes.com",
+            "article_date": "2026-10-02",
+            "rank": 1,
+            "role": "core",
+            "language": "en",
+            "language_provenance": "gkg_english",
+            "publisher_country_iso3": null,
+            "publisher_country_provenance": null,
+            "domain_avatar_url": "https://www.google.com/s2/favicons?domain=sunatimes.com&sz=64",
+            "image_url": "http://sunatimes.com/uploads/article/photo/IMG_16F593-465F69-83D6CA-11EC73-B59A45-A8F2AF.jpg"
+          }
+        ],
+        "pagination": {
+          "limit": 1,
+          "cursor": null,
+          "next_cursor": "1"
+        },
+        "applied_filters": {
+          "language": null,
+          "publisher_country_iso3": null,
+          "ignored": []
+        },
+        "meta": {
+          "publisher_country_coverage": {
+            "unit": "returned_articles",
+            "known": 0,
+            "unknown": 1
+          }
+        }
+      },
+      "digest": {
+        "success": true,
+        "applied_filters": {
+          "language": null,
+          "publisher_country_iso3": null,
+          "ignored": []
+        },
+        "pagination": {
+          "cursor": null,
+          "next_cursor": "1",
+          "limit": 1
+        },
+        "meta": {},
+        "data": [
+          {
+            "id": "2026-10-02:http://sunatimes.com/articles/6637/Stabbed-at-30-000-Feet-Wounded-Pilots-Dramatic-Fight-to-Save-Flydubai-Flight",
+            "title": "Stabbed at 30,000 Feet: Wounded Pilot's Dramatic Fight to Save Flydubai Flight",
+            "category": null,
+            "story_date": null,
+            "geo": null,
+            "has_fatalities": null,
+            "fatalities": null,
+            "metrics": {},
+            "linked_events": [],
+            "entity_refs": [],
+            "top_articles": [],
+            "url": "http://sunatimes.com/articles/6637/Stabbed-at-30-000-Feet-Wounded-Pilots-Dramatic-Fight-to-Save-Flydubai-Flight"
+          }
+        ]
+      },
+      "args": {
+        "story_id": "8608afb1d928",
+        "limit": 1,
+        "include_images": true
+      }
+    }
+  }
+}

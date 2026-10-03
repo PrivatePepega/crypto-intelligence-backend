@@ -1,0 +1,718 @@
+{
+  "generatedAt": "2026-10-03T00:02:22.258Z",
+  "tool": "summarize_events",
+  "args": {
+    "group_by": "country",
+    "days": 7
+  },
+  "isError": false,
+  "response": {
+    "$prefab": {
+      "version": "0.2"
+    },
+    "view": {
+      "cssClass": "pf-app-root",
+      "type": "Div",
+      "children": [
+        {
+          "cssClass": "gap-4 p-4",
+          "type": "Column",
+          "children": [
+            {
+              "cssClass": "gap-4 items-start justify-between",
+              "type": "Row",
+              "children": [
+                {
+                  "cssClass": "gap-2",
+                  "type": "Column",
+                  "children": [
+                    {
+                      "cssClass": "text-xl font-semibold neon-text",
+                      "content": "Summary by country",
+                      "type": "Text"
+                    },
+                    {
+                      "cssClass": "gap-1 flex-wrap items-center",
+                      "type": "Row",
+                      "children": [
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Badge",
+                          "variant": "default",
+                          "children": [
+                            {
+                              "cssClass": "h-3 w-3 shrink-0",
+                              "type": "Icon",
+                              "name": "calendar",
+                              "size": "default"
+                            },
+                            {
+                              "cssClass": "text-xs",
+                              "content": "7d window",
+                              "type": "Text"
+                            }
+                          ]
+                        },
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Badge",
+                          "variant": "outline",
+                          "children": [
+                            {
+                              "cssClass": "h-3 w-3 shrink-0",
+                              "type": "Icon",
+                              "name": "layers",
+                              "size": "default"
+                            },
+                            {
+                              "cssClass": "text-xs",
+                              "content": "by country",
+                              "type": "Text"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "cssClass": "text-xs",
+                      "content": "1 bucket · max / countDistinct semantics",
+                      "type": "Muted"
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "gap-2 items-center",
+                  "type": "Row",
+                  "children": [
+                    {
+                      "type": "Badge",
+                      "label": "free · 10%",
+                      "variant": "outline"
+                    },
+                    {
+                      "cssClass": "text-xs",
+                      "content": "904 left",
+                      "type": "Muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cssClass": "gap-6 flex-wrap items-end",
+              "type": "Row",
+              "children": [
+                {
+                  "cssClass": "gap-2 items-baseline shrink-0",
+                  "type": "Row",
+                  "children": [
+                    {
+                      "cssClass": "h-4 w-4 shrink-0 neon-text",
+                      "type": "Icon",
+                      "name": "activity",
+                      "size": "default"
+                    },
+                    {
+                      "cssClass": "gap-0",
+                      "type": "Column",
+                      "children": [
+                        {
+                          "cssClass": "text-lg font-semibold leading-none tabular-nums neon-text",
+                          "content": "2,927",
+                          "type": "Text"
+                        },
+                        {
+                          "cssClass": "text-[10px] tracking-wider uppercase",
+                          "content": "EVENTS",
+                          "type": "Muted"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "gap-1 items-center ml-auto",
+                  "type": "Row",
+                  "children": [
+                    {
+                      "cssClass": "h-3 w-3 text-muted-foreground",
+                      "type": "Icon",
+                      "name": "calendar",
+                      "size": "default"
+                    },
+                    {
+                      "cssClass": "text-xs",
+                      "content": "last 7d",
+                      "type": "Muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cssClass": "glass-panel",
+              "type": "Card",
+              "children": [
+                {
+                  "cssClass": "pb-2",
+                  "type": "CardHeader",
+                  "children": [
+                    {
+                      "cssClass": "text-xs uppercase tracking-wider text-muted-foreground",
+                      "type": "CardTitle",
+                      "content": "Average intensity"
+                    }
+                  ]
+                },
+                {
+                  "cssClass": "pt-0",
+                  "type": "CardContent",
+                  "children": [
+                    {
+                      "cssClass": "gap-3 grid-cols-2 md:grid-cols-5",
+                      "type": "Grid",
+                      "children": [
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "gap-1 items-center",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-3 w-3 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "trending-up",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-[10px] uppercase tracking-wider",
+                                  "content": "Magnitude",
+                                  "type": "Muted"
+                                },
+                                {
+                                  "cssClass": "ml-auto text-xs font-mono tabular-nums",
+                                  "content": "100%",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Progress",
+                              "value": 100,
+                              "max": 100,
+                              "variant": "info",
+                              "size": "sm"
+                            }
+                          ]
+                        },
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "gap-1 items-center",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-3 w-3 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "line-chart",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-[10px] uppercase tracking-wider",
+                                  "content": "Market",
+                                  "type": "Muted"
+                                },
+                                {
+                                  "cssClass": "ml-auto text-xs font-mono tabular-nums",
+                                  "content": "16%",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Progress",
+                              "value": 16.17,
+                              "max": 100,
+                              "variant": "success",
+                              "size": "sm"
+                            }
+                          ]
+                        },
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "gap-1 items-center",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-3 w-3 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "share-2",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-[10px] uppercase tracking-wider",
+                                  "content": "Contagion",
+                                  "type": "Muted"
+                                },
+                                {
+                                  "cssClass": "ml-auto text-xs font-mono tabular-nums",
+                                  "content": "24%",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Progress",
+                              "value": 24.269999999999996,
+                              "max": 100,
+                              "variant": "warning",
+                              "size": "sm"
+                            }
+                          ]
+                        },
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "gap-1 items-center",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-3 w-3 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "building",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-[10px] uppercase tracking-wider",
+                                  "content": "Systemic",
+                                  "type": "Muted"
+                                },
+                                {
+                                  "cssClass": "ml-auto text-xs font-mono tabular-nums",
+                                  "content": "13%",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Progress",
+                              "value": 13.350000000000001,
+                              "max": 100,
+                              "variant": "info",
+                              "size": "sm"
+                            }
+                          ]
+                        },
+                        {
+                          "cssClass": "gap-1",
+                          "type": "Column",
+                          "children": [
+                            {
+                              "cssClass": "gap-1 items-center",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "h-3 w-3 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "check-circle-2",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-[10px] uppercase tracking-wider",
+                                  "content": "Confidence",
+                                  "type": "Muted"
+                                },
+                                {
+                                  "cssClass": "ml-auto text-xs font-mono tabular-nums",
+                                  "content": "77%",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "Progress",
+                              "value": 76.75999999999999,
+                              "max": 100,
+                              "variant": "default",
+                              "size": "sm"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "cssClass": "gap-2 flex-wrap items-center",
+              "type": "Row",
+              "children": [
+                {
+                  "cssClass": "text-[10px] tracking-wider",
+                  "content": "MIX",
+                  "type": "Muted"
+                },
+                {
+                  "type": "Badge",
+                  "label": "United States · 100%",
+                  "variant": "default"
+                }
+              ]
+            },
+            {
+              "cssClass": "gap-2",
+              "type": "Column",
+              "children": [
+                {
+                  "cssClass": "glass-panel",
+                  "type": "Card",
+                  "children": [
+                    {
+                      "cssClass": "p-3",
+                      "type": "CardContent",
+                      "children": [
+                        {
+                          "cssClass": "gap-3 items-center",
+                          "type": "Row",
+                          "children": [
+                            {
+                              "cssClass": "gap-2 items-center w-[200px] shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "inline-block h-2.5 w-2.5 shrink-0 rounded-full",
+                                  "content": "",
+                                  "code": false,
+                                  "type": "Span",
+                                  "style": {
+                                    "background-color": "#10b981"
+                                  }
+                                },
+                                {
+                                  "cssClass": "h-4 w-4 shrink-0 text-muted-foreground",
+                                  "type": "Icon",
+                                  "name": "map-pin",
+                                  "size": "default"
+                                },
+                                {
+                                  "cssClass": "text-sm font-medium truncate",
+                                  "content": "🇺🇸 United States",
+                                  "type": "Text"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-1 flex-1 min-w-0",
+                              "type": "Column",
+                              "children": [
+                                {
+                                  "type": "Progress",
+                                  "value": 100,
+                                  "max": 100,
+                                  "variant": "default",
+                                  "size": "sm"
+                                },
+                                {
+                                  "cssClass": "text-[10px] tracking-wider",
+                                  "content": "2,927 events",
+                                  "type": "Muted"
+                                }
+                              ]
+                            },
+                            {
+                              "cssClass": "gap-2 items-center shrink-0",
+                              "type": "Row",
+                              "children": [
+                                {
+                                  "cssClass": "gap-1 items-center",
+                                  "type": "Row",
+                                  "children": [
+                                    {
+                                      "cssClass": "h-3 w-3 text-muted-foreground",
+                                      "type": "Icon",
+                                      "name": "newspaper",
+                                      "size": "default"
+                                    },
+                                    {
+                                      "cssClass": "text-xs tabular-nums",
+                                      "content": "15,277",
+                                      "type": "Text"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "theme": {
+      "light": "--primary: oklch(0.6 0.24 var(--accent-hue)); --primary-foreground: oklch(0.985 0 0); --ring: oklch(0.6 0.24 var(--accent-hue)); --chart-1: oklch(0.65 0.25 var(--accent-hue)); --chart-2: oklch(0.65 0.25 calc(var(--accent-hue) + 72)); --chart-3: oklch(0.65 0.25 calc(var(--accent-hue) + 144)); --chart-4: oklch(0.65 0.25 calc(var(--accent-hue) + 216)); --chart-5: oklch(0.65 0.25 calc(var(--accent-hue) + 288)); --primary: hsl(200 100% 60%); --ring: hsl(200 100% 60%); --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif; --font-mono: 'JetBrains Mono', ui-monospace, monospace;",
+      "dark": "--primary: oklch(0.7 0.18 var(--accent-hue)); --primary-foreground: oklch(0.205 0 0); --ring: oklch(0.7 0.18 var(--accent-hue)); --chart-1: oklch(0.72 0.22 var(--accent-hue)); --chart-2: oklch(0.72 0.22 calc(var(--accent-hue) + 72)); --chart-3: oklch(0.72 0.22 calc(var(--accent-hue) + 144)); --chart-4: oklch(0.72 0.22 calc(var(--accent-hue) + 216)); --chart-5: oklch(0.72 0.22 calc(var(--accent-hue) + 288)); --primary: hsl(200 100% 60%); --ring: hsl(200 100% 60%); --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif; --font-mono: 'JetBrains Mono', ui-monospace, monospace;",
+      "css": "@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');\n@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');\n/* GDELT Cloud Prefab theme — neon glow + frosted glass overlays.\n *\n * Injected via Basic(custom_css=) on top of Prefab's default stylesheet.\n * Designed to be applied SELECTIVELY (one or two elements per card), not\n * drenched across the whole widget — the Next.js app reserves neon glow\n * for titles and a single accent metric per card. Mirror that here.\n *\n * Apply via css_class=\"neon-text\" / \"glass-panel\" / \"glass-panel--glow\"\n * on individual components.\n */\n\n/* Neon text-shadow. Matches .neon-text-azure in nextjs_/app/globals.css. */\n.neon-text {\n  text-shadow:\n    0 0 1px hsla(200 100% 60% / 0.55),\n    0 0 8px hsla(200 100% 60% / 0.28);\n}\n\n/* Stronger variant for hero titles behind a panel. */\n.neon-text--strong {\n  text-shadow:\n    0 0 1px hsla(200 100% 60% / 0.85),\n    0 0 8px hsla(200 100% 60% / 0.55),\n    0 0 22px hsla(200 100% 60% / 0.35);\n}\n\n/* Frosted-glass panel. Matches .sidebar-frost in nextjs_/app/globals.css. */\n.glass-panel {\n  background:\n    linear-gradient(\n      135deg,\n      hsla(200 100% 60% / 0.05) 0%,\n      hsla(0 0% 100% / 0.04) 50%,\n      hsla(200 100% 60% / 0.03) 100%\n    );\n  backdrop-filter: blur(12px) saturate(150%);\n  -webkit-backdrop-filter: blur(12px) saturate(150%);\n  box-shadow:\n    inset 1px 0 0 hsla(200 100% 60% / 0.18),\n    inset 0 1px 0 hsla(0 0% 100% / 0.10);\n}\n\n/* Glow-tinted variant — paint a subtle azure edge on hover. */\n.glass-panel--glow:hover {\n  box-shadow:\n    inset 1px 0 0 hsla(200 100% 60% / 0.28),\n    inset 0 1px 0 hsla(0 0% 100% / 0.14),\n    0 0 22px hsla(200 100% 60% / 0.18);\n  transition: box-shadow 220ms ease-out;\n}\n",
+      "mode": "dark"
+    },
+    "_gdelt": {
+      "tool": "summarize_events",
+      "view": "summary",
+      "payload": {
+        "success": true,
+        "group_by": "country",
+        "data": [
+          {
+            "key": "United States",
+            "group_by": "country",
+            "latest_date": "2026-10-02",
+            "event_count": 2927,
+            "conflict_event_count": 48,
+            "cameoplus_event_count": 2879,
+            "fatality_event_count": 0,
+            "fatalities": 0,
+            "fatality_event_rate": 0,
+            "country_count": 1,
+            "region_count": 1,
+            "article_count": 15277,
+            "avg_article_count": 5.219,
+            "min_article_count": 0,
+            "max_article_count": 1046,
+            "avg_significance": 0.2547,
+            "max_significance": 0.6522,
+            "min_significance": 0.084,
+            "avg_goldstein_scale": -0.001,
+            "min_goldstein_scale": -9,
+            "max_goldstein_scale": 10,
+            "avg_goldstein_severity": 2.753,
+            "min_goldstein_severity": 0,
+            "max_goldstein_severity": 10,
+            "avg_magnitude": 2.7674,
+            "min_magnitude": 0,
+            "max_magnitude": 8,
+            "avg_systemic_importance": 0.1335,
+            "min_systemic_importance": 0.01,
+            "max_systemic_importance": 0.93,
+            "avg_propagation_potential": 0.2427,
+            "min_propagation_potential": 0,
+            "max_propagation_potential": 0.7,
+            "avg_market_sensitivity": 0.1617,
+            "min_market_sensitivity": 0.05,
+            "max_market_sensitivity": 1,
+            "avg_confidence": 0.7676,
+            "min_confidence": 0.23,
+            "max_confidence": 0.99,
+            "metrics": {
+              "significance": {
+                "avg": 0.2547,
+                "max": 0.6522,
+                "min": 0.084
+              },
+              "goldstein_scale": {
+                "avg": -0.001,
+                "min": -9,
+                "max": 10,
+                "avg_severity": 2.753
+              },
+              "goldstein_severity": {
+                "avg": 2.753,
+                "min": 0,
+                "max": 10
+              },
+              "cameoplus": {
+                "magnitude": {
+                  "avg": 2.7674,
+                  "max": 8,
+                  "min": 0
+                },
+                "systemic_importance": {
+                  "avg": 0.1335,
+                  "max": 0.93,
+                  "min": 0.01
+                },
+                "propagation_potential": {
+                  "avg": 0.2427,
+                  "max": 0.7,
+                  "min": 0
+                },
+                "market_sensitivity": {
+                  "avg": 0.1617,
+                  "max": 1,
+                  "min": 0.05
+                }
+              },
+              "confidence": {
+                "avg": 0.7676,
+                "max": 0.99,
+                "min": 0.23
+              },
+              "article_count": {
+                "total": 15277,
+                "avg": 5.219,
+                "min": 0,
+                "max": 1046
+              },
+              "fatalities": {
+                "events": 0,
+                "rate": 0,
+                "total": 0
+              }
+            }
+          }
+        ],
+        "meta": {
+          "row_source": "settled",
+          "settled_at": "2026-10-02 01:50:29",
+          "row_source_reason": "settled",
+          "coverage": {
+            "start": "2026-03-01",
+            "end": "2026-10-03",
+            "note": "First day of continuous event coding. Rows dated earlier exist but are back-dated occurrence dates written by 2026 ingest — a scatter of individual events, not coverage of those periods.",
+            "warnings": [],
+            "served_dates": [
+              "2026-09-27",
+              "2026-09-28",
+              "2026-09-29",
+              "2026-09-30",
+              "2026-10-01",
+              "2026-10-02"
+            ],
+            "missing_dates": [],
+            "awaiting_dates": [
+              "2026-10-03"
+            ],
+            "window_complete": true
+          },
+          "query_window": {
+            "date_start": "2026-09-27",
+            "date_end": "2026-10-03",
+            "date_basis": "event_date",
+            "date_bounds": "inclusive",
+            "observed_start": null,
+            "observed_end": null,
+            "observed_basis": "coded_at",
+            "observed_end_exclusive": true,
+            "source": "explicit"
+          },
+          "window_adjustment": null
+        },
+        "applied_filters": {
+          "date_start": "2026-09-27",
+          "date_end": "2026-10-03",
+          "country": [],
+          "region": null,
+          "continent": null,
+          "admin1": null,
+          "bbox": null,
+          "event_family": null,
+          "category": [],
+          "subcategory": [],
+          "domain": null,
+          "has_fatalities": null,
+          "civilian_targeting": null,
+          "languages": null,
+          "entity": null,
+          "group_by": "country",
+          "ignored": {}
+        }
+      },
+      "digest": {
+        "success": true,
+        "group_by": "country",
+        "applied_filters": {
+          "date_start": "2026-09-27",
+          "date_end": "2026-10-03",
+          "country": [],
+          "region": null,
+          "continent": null,
+          "admin1": null,
+          "bbox": null,
+          "event_family": null,
+          "category": [],
+          "subcategory": [],
+          "domain": null,
+          "has_fatalities": null,
+          "civilian_targeting": null,
+          "languages": null,
+          "entity": null,
+          "group_by": "country",
+          "ignored": {}
+        },
+        "meta": {
+          "row_source": "settled",
+          "settled_at": "2026-10-02 01:50:29",
+          "query_window": {
+            "date_start": "2026-09-27",
+            "date_end": "2026-10-03",
+            "date_basis": "event_date",
+            "date_bounds": "inclusive",
+            "observed_start": null,
+            "observed_end": null,
+            "observed_basis": "coded_at",
+            "observed_end_exclusive": true,
+            "source": "explicit"
+          },
+          "window_adjustment": null,
+          "coverage": {
+            "start": "2026-03-01",
+            "end": "2026-10-03",
+            "note": "First day of continuous event coding. Rows dated earlier exist but are back-dated occurrence dates written by 2026 ingest — a scatter of individual events, not coverage of those periods.",
+            "warnings": [],
+            "served_dates": [
+              "2026-09-27",
+              "2026-09-28",
+              "2026-09-29",
+              "2026-09-30",
+              "2026-10-01",
+              "2026-10-02"
+            ],
+            "missing_dates": [],
+            "awaiting_dates": [
+              "2026-10-03"
+            ],
+            "window_complete": true
+          }
+        },
+        "data": [
+          {
+            "key": "United States",
+            "count": 2927,
+            "article_count": 15277,
+            "avg_article_count": 5.219,
+            "metrics": {
+              "significance": 0.2547,
+              "goldstein_scale": -0.001,
+              "goldstein_severity": 2.753,
+              "cameoplus_magnitude": 2.7674,
+              "cameoplus_systemic_importance": 0.1335,
+              "cameoplus_propagation_potential": 0.2427,
+              "cameoplus_market_sensitivity": 0.1617,
+              "confidence": 0.7676,
+              "fatalities": 0
+            }
+          }
+        ]
+      },
+      "args": {
+        "group_by": "country",
+        "days": 7,
+        "limit": 1
+      }
+    }
+  }
+}

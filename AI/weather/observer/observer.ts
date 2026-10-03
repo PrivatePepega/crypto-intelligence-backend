@@ -8,7 +8,6 @@ import { webSearchTool } from "../../../AI/tools/webSearchTool.js";
 import { cryptoObserverConfig } from "./observer.config.js";
 import { currentsSearchTool } from "../../tools/currentsNewsSearch.js";
 import { newsflashGetEventsTool } from "../../tools/newsflashGetEvents.js";
-import { newsflashGetEventTool } from "../../tools/newsflashGetEvent.js";
 import { newsflashSearchArticlesTool } from "../../tools/newsflashSearchArticles.js";
 
 
@@ -24,8 +23,6 @@ const observerTools = {
   // web_search: webSearchTool,
 
   // currentsSearchTool,
-
-  newsflashGetEventTool,
 
   // newsflashGetEventsTool,
 
