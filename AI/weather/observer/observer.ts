@@ -12,6 +12,9 @@ import { newsflashSearchArticlesTool } from "../../tools/newsflashSearchArticles
 import { gdeltSearchEventsTool } from "../../tools/gdeltSearchEvents.js";
 import { gdeltSearchStoriesTool } from "../../tools/gdeltSearchStories.js";
 import { fmpGetArticlesListTool } from "../../tools/fmpGetArticlesList.js";
+import { newsDataCryptoNewsTool } from "../../tools/newsDataCryptoNews.js";
+import { newsDataLatestNewsTool } from "../../tools/newsDataLatestNews.js";
+import { newsDataMarketNewsTool } from "../../tools/newsDataMarketNews.js";
 
 
 // --------------------------------------------------
@@ -35,7 +38,13 @@ const observerTools = {
 
   // gdeltSearchStoriesTool,
 
-  fmpGetArticlesListTool,
+  // fmpGetArticlesListTool,
+
+  // newsDataCryptoNewsTool,
+
+  // newsDataLatestNewsTool,
+
+  newsDataMarketNewsTool,
 
 };
 
