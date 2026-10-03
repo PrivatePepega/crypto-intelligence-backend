@@ -9,6 +9,8 @@ import { cryptoObserverConfig } from "./observer.config.js";
 import { currentsSearchTool } from "../../tools/currentsNewsSearch.js";
 import { newsflashGetEventsTool } from "../../tools/newsflashGetEvents.js";
 import { newsflashSearchArticlesTool } from "../../tools/newsflashSearchArticles.js";
+import { gdeltSearchEventsTool } from "../../tools/gdeltSearchEvents.js";
+import { gdeltSearchStoriesTool } from "../../tools/gdeltSearchStories.js";
 
 
 // --------------------------------------------------
@@ -27,6 +29,10 @@ const observerTools = {
   // newsflashGetEventsTool,
 
   // newsflashSearchArticlesTool,
+
+  // gdeltSearchEventsTool,
+
+  gdeltSearchStoriesTool,
 
 };
 

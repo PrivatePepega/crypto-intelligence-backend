@@ -6,7 +6,7 @@ export type NormalizedGdeltStory = {
   significance: number | null;
 };
 
-type RawGdeltStory = {
+export type RawGdeltStory = {
   id?: string | null;
   title?: string | null;
   category?: string | null;

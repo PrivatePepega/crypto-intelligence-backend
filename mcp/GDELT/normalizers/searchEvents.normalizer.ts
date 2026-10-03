@@ -10,7 +10,7 @@ export type NormalizedGdeltEvent = {
   significance: number | null;
 };
 
-type RawGdeltEvent = {
+export type RawGdeltEvent = {
   id?: string | null;
   family?: string | null;
   title?: string | null;
@@ -18,14 +18,8 @@ type RawGdeltEvent = {
   event_date_evidence?: string | null;
   category?: string | null;
   domain?: string | null;
-
-  geo?: {
-    region?: string | null;
-  } | null;
-
-  metrics?: {
-    significance?: number | null;
-  } | null;
+  geo?: { region?: string | null } | null;
+  metrics?: { significance?: number | null } | null;
 };
 
 export const normalizeGdeltEvents = (

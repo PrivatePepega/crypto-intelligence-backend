@@ -201,6 +201,54 @@ export const readStructured = (
   }
 };
 
+/**
+ * Reads the record array out of a raw tool result.
+ *
+ * The envelope is `{ $prefab, view, theme, _gdelt: { payload: { data } } }`,
+ * so records live at `_gdelt.payload.data` - NOT under a top-level `response`
+ * key, which does not exist on an MCP result. Reading the wrong path yields
+ * `undefined` and an empty array with no error, which looks like "no data"
+ * rather than a bug.
+ *
+ * Tolerates both `data` shapes upstream uses: an array for the list tools, a
+ * single object for `get_event` / `get_story`.
+ */
+export const readPayloadRecords = <T = Record<string, unknown>>(
+  result: RawGdeltResult,
+): T[] => {
+  const payload = (
+    readStructured(result) as
+      | { _gdelt?: { payload?: { data?: unknown } } }
+      | undefined
+  )?._gdelt?.payload;
+
+  const data = payload?.data;
+
+  if (Array.isArray(data)) {
+    return data as T[];
+  }
+
+  if (data && typeof data === "object") {
+    return [data as T];
+  }
+
+  return [];
+};
+
+/**
+ * Throws when a tool call failed, so a failed call can never masquerade as
+ * "nothing matched".
+ */
+export const assertNotError = (result: RawGdeltResult): void => {
+  if (result.isError !== true) {
+    return;
+  }
+
+  throw new Error(
+    `GDELT call failed: ${readText(result).slice(0, 400) || "no message"}`,
+  );
+};
+
 /** Concatenated text blocks, used to surface upstream error messages. */
 export const readText = (result: RawGdeltResult): string => {
   const content = result.content as { type: string; text?: string }[] | undefined;
