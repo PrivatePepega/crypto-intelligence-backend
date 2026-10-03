@@ -1,0 +1,77 @@
+{
+  "/api/1/crypto": {
+    "count": 5,
+    "items": [
+      {
+        "title": "Boomchange and Bitcoin to Zelle: A Practical Look at Converting BTC to Bank Payments",
+        "description": "Bitcoin gives people a way to hold and transfer value without relying on a conventional bank for every transaction. But there are times when having BTC in a wallet isn't particularly useful. Rent, groceries, bills, and everyday expenses are generally"
+      },
+      {
+        "title": "SHIB Price Prediction: Triangle Apex Hits October 4 — The 5% Flush Puts Bulls on Trial",
+        "description": "SHIB is down 5.19% at the October 3 open, knifing back into its symmetrical triangle support near $0.00000557 just as the apex deadline arrives — the next 48 hours determine whether the token's his... (Read More)"
+      },
+      {
+        "title": "Dogecoin Price Prediction Eyes $0.10 Breakout, but Could AlphaPepe Be Next on the Binance Watchlist?",
+        "description": "Dogecoin is back near the $0.10 line, where another breakout attempt is pulling meme traders back to the chart. AlphaPepe https://www.alphapepe.io/ gives retail a very different exchange story. ALPE is still in presale, yet four CEX partnerships are already announced"
+      },
+      {
+        "title": "Shiba Inu News Today: SHIB Price Crash On US Jobs Data, Will Recover?",
+        "description": "Shiba Inu News Today: SHIB Price Crash 4.9% in a Day, Will it Recover?Shiba Inu news today tells a story every crypto trader knows too well. One jobs report lands in Washington, and within hours, a meme coin market cap worth billions takes a hit. That's exactly what happened to SHIB today, and the r..."
+      },
+      {
+        "title": "Dogecoin vs Shiba Inu: Which Meme Coin Offers More?",
+        "description": "Dogecoin vs Shiba Inu: Understanding Two Leading Meme CoinsDogecoin vs Shiba Inu is one of those comparisons that comes up constantly in crypto circles, mostly because both coins started as jokes and somehow became genuinely significant projects. People searching for dogecoin vs shiba inu, which is ..."
+      }
+    ]
+  },
+  "/api/1/latest": {
+    "count": 5,
+    "items": [
+      {
+        "title": "Boomchange and Bitcoin to Zelle: A Practical Look at Converting BTC to Bank Payments",
+        "description": "Bitcoin gives people a way to hold and transfer value without relying on a conventional bank for every transaction. But there are times when having BTC in a wallet isn't particularly useful. Rent, groceries, bills, and everyday expenses are generally"
+      },
+      {
+        "title": "SHIB Price Prediction: Triangle Apex Hits October 4 — The 5% Flush Puts Bulls on Trial",
+        "description": "SHIB is down 5.19% at the October 3 open, knifing back into its symmetrical triangle support near $0.00000557 just as the apex deadline arrives — the next 48 hours determine whether the token's his... (Read More)"
+      },
+      {
+        "title": "Dogecoin Price Prediction Eyes $0.10 Breakout, but Could AlphaPepe Be Next on the Binance Watchlist?",
+        "description": "Dogecoin is back near the $0.10 line, where another breakout attempt is pulling meme traders back to the chart. AlphaPepe https://www.alphapepe.io/ gives retail a very different exchange story. ALPE is still in presale, yet four CEX partnerships are already announced"
+      },
+      {
+        "title": "Keel Infrastructure (NASDAQ:KEEL) & Asana (NYSE:ASAN) Critical Survey",
+        "description": "Keel Infrastructure (NASDAQ:KEEL – Get Free Report) and Asana (NYSE:ASAN – Get Free Report) are both mid-cap technology companies, but which is the superior stock? We will contrast the two companies based on the strength of their dividends, risk, earnings, profitability, valuation, analyst recommendations and institutional ownership. Risk & Volatility Keel Infrastructure has a beta […]"
+      },
+      {
+        "title": "WLD Price Prediction: Bulls Stall at the Bollinger Ceiling — $0.62 or Flush to $0.50?",
+        "description": "WLD is printing a clean 5.1% session gain but is kissing its Bollinger Band upper wall at $0.59 while aggressive spot sellers hammer the taker ratio to 0.66 — the next 72 hours either confirm a bre... (Read More)"
+      }
+    ]
+  },
+  "/api/1/market": {
+    "count": 5,
+    "items": [
+      {
+        "title": "Keel Infrastructure (NASDAQ:KEEL) & Asana (NYSE:ASAN) Critical Survey",
+        "description": "Keel Infrastructure (NASDAQ:KEEL – Get Free Report) and Asana (NYSE:ASAN – Get Free Report) are both mid-cap technology companies, but which is the superior stock? We will contrast the two companies based on the strength of their dividends, risk, earnings, profitability, valuation, analyst recommendations and institutional ownership. Risk & Volatility Keel Infrastructure has a beta […]"
+      },
+      {
+        "title": "WLD Price Prediction: Bulls Stall at the Bollinger Ceiling — $0.62 or Flush to $0.50?",
+        "description": "WLD is printing a clean 5.1% session gain but is kissing its Bollinger Band upper wall at $0.59 while aggressive spot sellers hammer the taker ratio to 0.66 — the next 72 hours either confirm a bre... (Read More)"
+      },
+      {
+        "title": "Promising Mining Stocks To Consider – September 30th",
+        "description": "Franco-Nevada, Freeport-McMoRan, IREN, Caterpillar, BitMine Immersion Technologies, Hut 8, and Coeur Mining are the seven Mining stocks to watch today, according to MarketBeat’s stock screener tool. Mining stocks are shares of publicly traded companies involved in extracting and processing natural resources such as gold, silver, copper, coal, oil, or lithium. Their prices can be influenced […]"
+      },
+      {
+        "title": "Coinbase Global (NASDAQ:COIN) Upgraded at Wells Fargo & Company",
+        "description": "Coinbase Global (NASDAQ:COIN) was upgraded by Wells Fargo & Company to a “hold” rating in a report issued on Friday, Zacks reports. COIN has been the topic of a number of other research reports. UBS Group set a $155.00 price objective on Coinbase Global in a research note on Friday, July 31st. Compass Point raised […]"
+      },
+      {
+        "title": "Coinbase Global (NASDAQ:COIN) Stock Rating Upgraded by Wells Fargo & Company",
+        "description": "Coinbase Global (NASDAQ:COIN) was upgraded by stock analysts at Wells Fargo & Company to a “hold” rating in a note issued to investors on Friday, Zacks reports. Several other brokerages also recently weighed in on COIN. Wolfe Research set a $325.00 price target on Coinbase Global in a report on Thursday, July 9th. Citizens Jmp […]"
+      }
+    ]
+  }
+}

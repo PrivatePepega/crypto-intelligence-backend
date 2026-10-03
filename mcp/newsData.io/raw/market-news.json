@@ -1,0 +1,267 @@
+{
+  "label": "Market News",
+  "endpoint": "/api/1/market",
+  "method": "GET",
+  "params": {
+    "q": "bitcoin",
+    "language": "en",
+    "size": 5
+  },
+  "capturedAt": "2026-10-03T22:21:44.820Z",
+  "elapsedMs": 236,
+  "recordCount": 5,
+  "fieldCount": 28,
+  "fields": [
+    "article_id",
+    "link",
+    "title",
+    "description",
+    "content",
+    "keywords",
+    "creator",
+    "symbol",
+    "market_id",
+    "language",
+    "country",
+    "datatype",
+    "pubDate",
+    "pubDateTZ",
+    "fetched_at",
+    "image_url",
+    "video_url",
+    "source_id",
+    "source_name",
+    "source_priority",
+    "source_url",
+    "source_icon",
+    "sentiment",
+    "sentiment_stats",
+    "ai_tag",
+    "ai_org",
+    "ai_summary",
+    "duplicate"
+  ],
+  "response": {
+    "status": "success",
+    "totalResults": 1956,
+    "results": [
+      {
+        "article_id": "646c984543e825ad7fe32bcf98e16fe2",
+        "link": "https://www.dailypolitical.com/2026/10/03/keel-infrastructure-nasdaqkeel-asana-nyseasan-critical-survey.html",
+        "title": "Keel Infrastructure (NASDAQ:KEEL) & Asana (NYSE:ASAN) Critical Survey",
+        "description": "Keel Infrastructure (NASDAQ:KEEL – Get Free Report) and Asana (NYSE:ASAN – Get Free Report) are both mid-cap technology companies, but which is the superior stock? We will contrast the two companies based on the strength of their dividends, risk, earnings, profitability, valuation, analyst recommendations and institutional ownership. Risk & Volatility Keel Infrastructure has a beta […]",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "comparison articles",
+          "finance"
+        ],
+        "creator": [
+          "patrick bannon"
+        ],
+        "symbol": [
+          "KEEL*",
+          "NDAQ"
+        ],
+        "market_id": [
+          "KEEL*-MX-MU",
+          "NDAQ-AT-AV"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:15:06",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 11:19:25",
+        "image_url": "https://www.marketbeat.com/logos/asana-inc-logo-1200x675.jpg?v=20221117152037",
+        "video_url": null,
+        "source_id": "dailypolitical",
+        "source_name": "Daily Political",
+        "source_priority": 1152138,
+        "source_url": "https://www.dailypolitical.com",
+        "source_icon": "https://i.newsdata.io/dailypolitical.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      },
+      {
+        "article_id": "988cb56ea5af2e9c83465db9554806f2",
+        "link": "https://blockchain.news/news/20261003-price-prediction-wld-bulls-stall-at-the-bollinger-ceiling",
+        "title": "WLD Price Prediction: Bulls Stall at the Bollinger Ceiling — $0.62 or Flush to $0.50?",
+        "description": "WLD is printing a clean 5.1% session gain but is kissing its Bollinger Band upper wall at $0.59 while aggressive spot sellers hammer the taker ratio to 0.66 — the next 72 hours either confirm a bre... (Read More)",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "wld price prediction",
+          "wld price analysis",
+          "news"
+        ],
+        "creator": [
+          "blockchain.news"
+        ],
+        "symbol": [
+          "WLD"
+        ],
+        "market_id": [
+          "WLD-AU-AT"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america",
+          "singapore"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:09:31",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:42:40",
+        "image_url": "https://image.blockchain.news/features/6A4F3DEBF8E1B4D0AC5C9EF64894BF46866D16F7B944B14BE5178CA07A4D3AD1.jpg",
+        "video_url": null,
+        "source_id": "blockchain_news",
+        "source_name": "Blockchain News",
+        "source_priority": 183155,
+        "source_url": "https://blockchain.news",
+        "source_icon": "https://i.newsdata.io/blockchain_news.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      },
+      {
+        "article_id": "fe5c0c947ea5ecb60b642d91ade8b188",
+        "link": "https://www.americanbankingnews.com/2026/10/03/promising-mining-stocks-to-consider-september-30th.html",
+        "title": "Promising Mining Stocks To Consider – September 30th",
+        "description": "Franco-Nevada, Freeport-McMoRan, IREN, Caterpillar, BitMine Immersion Technologies, Hut 8, and Coeur Mining are the seven Mining stocks to watch today, according to MarketBeat’s stock screener tool. Mining stocks are shares of publicly traded companies involved in extracting and processing natural resources such as gold, silver, copper, coal, oil, or lithium. Their prices can be influenced […]",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "market news",
+          "partner feed articles"
+        ],
+        "creator": [
+          "abmn staff"
+        ],
+        "symbol": [
+          "CAT",
+          "CDE",
+          "1HUT",
+          "IREN"
+        ],
+        "market_id": [
+          "CDE-AT-AV",
+          "IREN-CH-BW",
+          "CAT-AT-AV",
+          "1HUT-IT-IM",
+          "IREN-US-VY"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:03:01",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:25:09",
+        "image_url": "https://www.marketbeat.com/logos/franco-nevada-co-logo-1200x675.png?v=20221103120812",
+        "video_url": null,
+        "source_id": "americanbankingnews",
+        "source_name": "Americanbankingnews",
+        "source_priority": 4239970,
+        "source_url": "https://www.americanbankingnews.com",
+        "source_icon": "https://i.newsdata.io/americanbankingnews.jpg",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": true
+      },
+      {
+        "article_id": "a8ecd0020c48f936ab1955caec5f15aa",
+        "link": "https://www.americanbankingnews.com/2026/10/03/coinbase-global-nasdaqcoin-upgraded-at-wells-fargo-company.html",
+        "title": "Coinbase Global (NASDAQ:COIN) Upgraded at Wells Fargo & Company",
+        "description": "Coinbase Global (NASDAQ:COIN) was upgraded by Wells Fargo & Company to a “hold” rating in a report issued on Friday, Zacks reports. COIN has been the topic of a number of other research reports. UBS Group set a $155.00 price objective on Coinbase Global in a research note on Friday, July 31st. Compass Point raised […]",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "analyst articles - us",
+          "market news"
+        ],
+        "creator": [
+          "abmn staff"
+        ],
+        "symbol": [
+          "COIN"
+        ],
+        "market_id": [
+          "COIN-AT-AV"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:01:14",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:25:13",
+        "image_url": "https://www.marketbeat.com/logos/coinbase-global-inc-logo-1200x675.jpg?v=20210413172727",
+        "video_url": null,
+        "source_id": "americanbankingnews",
+        "source_name": "Americanbankingnews",
+        "source_priority": 4239970,
+        "source_url": "https://www.americanbankingnews.com",
+        "source_icon": "https://i.newsdata.io/americanbankingnews.jpg",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      },
+      {
+        "article_id": "5d142021b5e5fa5a0b94f02a34aeb493",
+        "link": "https://www.watchlistnews.com/coinbase-global-nasdaqcoin-stock-rating-upgraded-by-wells-fargo-company/11249570.html",
+        "title": "Coinbase Global (NASDAQ:COIN) Stock Rating Upgraded by Wells Fargo & Company",
+        "description": "Coinbase Global (NASDAQ:COIN) was upgraded by stock analysts at Wells Fargo & Company to a “hold” rating in a note issued to investors on Friday, Zacks reports. Several other brokerages also recently weighed in on COIN. Wolfe Research set a $325.00 price target on Coinbase Global in a report on Thursday, July 9th. Citizens Jmp […]",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "investing",
+          "analyst articles - us"
+        ],
+        "creator": [
+          "nicole kennedy"
+        ],
+        "symbol": [
+          "COIN"
+        ],
+        "market_id": [
+          "COIN-AT-AV"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:01:10",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:19:03",
+        "image_url": "https://www.marketbeat.com/logos/coinbase-global-inc-logo-1200x675.jpg?v=20210413172727",
+        "video_url": null,
+        "source_id": "watchlistnews",
+        "source_name": "Watch List News",
+        "source_priority": 927984,
+        "source_url": "https://www.watchlistnews.com",
+        "source_icon": "https://i.newsdata.io/watchlistnews.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      }
+    ],
+    "nextPage": "1791021670566492305"
+  }
+}

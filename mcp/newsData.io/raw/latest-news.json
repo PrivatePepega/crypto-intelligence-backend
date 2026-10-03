@@ -1,0 +1,256 @@
+{
+  "label": "Latest News",
+  "endpoint": "/api/1/latest",
+  "method": "GET",
+  "params": {
+    "q": "bitcoin",
+    "language": "en",
+    "size": 5
+  },
+  "capturedAt": "2026-10-03T22:21:44.583Z",
+  "elapsedMs": 217,
+  "recordCount": 5,
+  "fieldCount": 28,
+  "fields": [
+    "article_id",
+    "link",
+    "title",
+    "description",
+    "content",
+    "keywords",
+    "creator",
+    "language",
+    "country",
+    "category",
+    "datatype",
+    "pubDate",
+    "pubDateTZ",
+    "fetched_at",
+    "image_url",
+    "video_url",
+    "source_id",
+    "source_name",
+    "source_priority",
+    "source_url",
+    "source_icon",
+    "sentiment",
+    "sentiment_stats",
+    "ai_tag",
+    "ai_region",
+    "ai_org",
+    "ai_summary",
+    "duplicate"
+  ],
+  "response": {
+    "status": "success",
+    "totalResults": 1250,
+    "results": [
+      {
+        "article_id": "da1f15a34643ff173a13056b63b31421",
+        "link": "https://www.openpr.com/news/4651076/boomchange-and-bitcoin-to-zelle-a-practical-look-at-converting",
+        "title": "Boomchange and Bitcoin to Zelle: A Practical Look at Converting BTC to Bank Payments",
+        "description": "Bitcoin gives people a way to hold and transfer value without relying on a conventional bank for every transaction. But there are times when having BTC in a wallet isn't particularly useful. Rent, groceries, bills, and everyday expenses are generally",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "economy",
+          "business",
+          "banking & insurance",
+          "finances"
+        ],
+        "creator": [
+          "billion boost marketing agency"
+        ],
+        "language": "english",
+        "country": [
+          "germany"
+        ],
+        "category": [
+          "business"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:18:42",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:37:18",
+        "image_url": "https://cdn.open-pr.com/L/a/La03250060_k.jpg",
+        "video_url": null,
+        "source_id": "openpr",
+        "source_name": "Openpr.com",
+        "source_priority": 31972,
+        "source_url": "https://www.openpr.com",
+        "source_icon": "https://i.newsdata.io/openpr.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_region": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      },
+      {
+        "article_id": "7e261d258d7339042d3ff11515ad2672",
+        "link": "https://blockchain.news/news/20261003-price-prediction-shib-triangle-apex-hits-october-4-the",
+        "title": "SHIB Price Prediction: Triangle Apex Hits October 4 — The 5% Flush Puts Bulls on Trial",
+        "description": "SHIB is down 5.19% at the October 3 open, knifing back into its symmetrical triangle support near $0.00000557 just as the apex deadline arrives — the next 48 hours determine whether the token's his... (Read More)",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "shib price analysis",
+          "shib price prediction",
+          "news"
+        ],
+        "creator": [
+          "blockchain.news"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america",
+          "singapore"
+        ],
+        "category": [
+          "top",
+          "business"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:18:31",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:42:40",
+        "image_url": "https://image.blockchain.news/features/AAFFD3E2307E2152CB005A2ED72963B6CF20890DD145E6B5529C7E1E5A731BD0.jpg",
+        "video_url": null,
+        "source_id": "blockchain_news",
+        "source_name": "Blockchain News",
+        "source_priority": 183155,
+        "source_url": "https://blockchain.news",
+        "source_icon": "https://i.newsdata.io/blockchain_news.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_region": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      },
+      {
+        "article_id": "9ea8bc3df2010565e601b692534648c6",
+        "link": "https://www.openpr.com/news/4651075/dogecoin-price-prediction-eyes-0-10-breakout-but-could",
+        "title": "Dogecoin Price Prediction Eyes $0.10 Breakout, but Could AlphaPepe Be Next on the Binance Watchlist?",
+        "description": "Dogecoin is back near the $0.10 line, where another breakout attempt is pulling meme traders back to the chart. AlphaPepe https://www.alphapepe.io/ gives retail a very different exchange story. ALPE is still in presale, yet four CEX partnerships are already announced",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "economy",
+          "business",
+          "banking & insurance",
+          "finances"
+        ],
+        "creator": [
+          "btcpresswire"
+        ],
+        "language": "english",
+        "country": [
+          "germany"
+        ],
+        "category": [
+          "business"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:17:20",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:37:18",
+        "image_url": "https://cdn.open-pr.com/L/a/La03259130_k.jpg",
+        "video_url": null,
+        "source_id": "openpr",
+        "source_name": "Openpr.com",
+        "source_priority": 31972,
+        "source_url": "https://www.openpr.com",
+        "source_icon": "https://i.newsdata.io/openpr.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_region": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      },
+      {
+        "article_id": "646c984543e825ad7fe32bcf98e16fe2",
+        "link": "https://www.dailypolitical.com/2026/10/03/keel-infrastructure-nasdaqkeel-asana-nyseasan-critical-survey.html",
+        "title": "Keel Infrastructure (NASDAQ:KEEL) & Asana (NYSE:ASAN) Critical Survey",
+        "description": "Keel Infrastructure (NASDAQ:KEEL – Get Free Report) and Asana (NYSE:ASAN – Get Free Report) are both mid-cap technology companies, but which is the superior stock? We will contrast the two companies based on the strength of their dividends, risk, earnings, profitability, valuation, analyst recommendations and institutional ownership. Risk & Volatility Keel Infrastructure has a beta […]",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "comparison articles",
+          "finance"
+        ],
+        "creator": [
+          "patrick bannon"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america"
+        ],
+        "category": [
+          "politics"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:15:06",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 11:19:25",
+        "image_url": "https://www.marketbeat.com/logos/asana-inc-logo-1200x675.jpg?v=20221117152037",
+        "video_url": null,
+        "source_id": "dailypolitical",
+        "source_name": "Daily Political",
+        "source_priority": 1152138,
+        "source_url": "https://www.dailypolitical.com",
+        "source_icon": "https://i.newsdata.io/dailypolitical.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_region": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      },
+      {
+        "article_id": "988cb56ea5af2e9c83465db9554806f2",
+        "link": "https://blockchain.news/news/20261003-price-prediction-wld-bulls-stall-at-the-bollinger-ceiling",
+        "title": "WLD Price Prediction: Bulls Stall at the Bollinger Ceiling — $0.62 or Flush to $0.50?",
+        "description": "WLD is printing a clean 5.1% session gain but is kissing its Bollinger Band upper wall at $0.59 while aggressive spot sellers hammer the taker ratio to 0.66 — the next 72 hours either confirm a bre... (Read More)",
+        "content": "ONLY AVAILABLE IN PAID PLANS",
+        "keywords": [
+          "wld price prediction",
+          "wld price analysis",
+          "news"
+        ],
+        "creator": [
+          "blockchain.news"
+        ],
+        "language": "english",
+        "country": [
+          "united states of america",
+          "singapore"
+        ],
+        "category": [
+          "top",
+          "business"
+        ],
+        "datatype": "news",
+        "pubDate": "2026-10-03 10:09:31",
+        "pubDateTZ": "UTC",
+        "fetched_at": "2026-10-03 10:42:40",
+        "image_url": "https://image.blockchain.news/features/6A4F3DEBF8E1B4D0AC5C9EF64894BF46866D16F7B944B14BE5178CA07A4D3AD1.jpg",
+        "video_url": null,
+        "source_id": "blockchain_news",
+        "source_name": "Blockchain News",
+        "source_priority": 183155,
+        "source_url": "https://blockchain.news",
+        "source_icon": "https://i.newsdata.io/blockchain_news.png",
+        "sentiment": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "sentiment_stats": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_tag": "ONLY AVAILABLE IN PROFESSIONAL AND CORPORATE PLANS",
+        "ai_region": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_org": "ONLY AVAILABLE IN CORPORATE PLANS",
+        "ai_summary": "ONLY AVAILABLE IN PAID PLANS",
+        "duplicate": false
+      }
+    ],
+    "nextPage": "1791022171856925248"
+  }
+}
