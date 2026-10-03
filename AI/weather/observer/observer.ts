@@ -11,6 +11,7 @@ import { newsflashGetEventsTool } from "../../tools/newsflashGetEvents.js";
 import { newsflashSearchArticlesTool } from "../../tools/newsflashSearchArticles.js";
 import { gdeltSearchEventsTool } from "../../tools/gdeltSearchEvents.js";
 import { gdeltSearchStoriesTool } from "../../tools/gdeltSearchStories.js";
+import { fmpGetArticlesListTool } from "../../tools/fmpGetArticlesList.js";
 
 
 // --------------------------------------------------
@@ -32,7 +33,9 @@ const observerTools = {
 
   // gdeltSearchEventsTool,
 
-  gdeltSearchStoriesTool,
+  // gdeltSearchStoriesTool,
+
+  fmpGetArticlesListTool,
 
 };
 

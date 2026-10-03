@@ -64,6 +64,79 @@ endpoints honour it. **`fmp-articles` does not** - it returns an empty
 Getting this wrong is silent: the wrong path yields `[]` with no error, which
 is indistinguishable from "no results".
 
+## `fmp-articles` response shape
+
+Captured 2026-10-03 with `captureRaw.ts`. 43 records across three variants.
+
+### Envelope
+
+`structuredContent` is **absent**. The payload arrives as a single text content
+block holding a bare JSON array:
+
+```
+structuredContent : undefined
+content           : 1 block, type "text"
+records           : parsed from content[0].text
+```
+
+`readPayloadRecords()` handles this. Every other endpoint honours the
+documented `structuredContent.data`.
+
+### Fields
+
+Eight fields, present on **43/43** records — a flat, uniform schema with no
+optional fields and no nesting.
+
+| Field | Type | Observed | Notes |
+| --- | --- | --- | --- |
+| `title` | string | 64–112 chars | never contains HTML |
+| `date` | string | always 19 chars | `YYYY-MM-DD HH:mm:ss`, no timezone |
+| `content` | string | **1987–3599** chars, avg 2753 | HTML in 43/43 |
+| `tickers` | string | 8–12 chars | e.g. `NYSE:JOBY` |
+| `image` | string | 79–80 chars | CDN URL |
+| `link` | string | 78–103 chars | unique per record — good id candidate |
+| `author` | string | 10–15 chars | byline, e.g. `Andrew Wynn` |
+| `site` | string | constant | `Financial Modeling Prep` |
+
+Notes for the normalizer:
+
+- **`content` is the whole article as HTML**, not a summary. It runs to ~3600
+  characters of `<ul>/<li>/<strong>/<a>` markup, so it needs tag stripping *and*
+  truncation before it goes anywhere near an agent's context.
+- **No `id` field.** `link` is unique across all 43 records and is the only
+  stable identifier available.
+- **`tickers` may be comma-separated** for multi-ticker articles — only
+  single values were observed, so the normalizer should split defensively.
+- **`date` has no timezone or offset.** Normalising it to ISO requires assuming
+  one; the upstream value is US/Eastern. Converting as if it were UTC shifts
+  every timestamp by hours, and the offset changes with daylight saving.
+- Encoding is clean UTF-8. Only `U+2019` and `U+2013` appear.
+
+## Verified parameter behaviour
+
+Measured 2026-10-03, not inferred from docs:
+
+| Param | Works? | Evidence |
+| --- | --- | --- |
+| `limit` | **yes, capped at 200** | `limit: 3` → 3 records; `limit: 20` → 20; `limit: 500` → **200** |
+| `page` | **yes** | `page: 0` → Oct 2 18:00–21:03; `page: 1` → Oct 2 15:02–17:06; `page: 99` → Sep 8 |
+| `from_date` | **silently ignored** | `from_date: 2026-10-03` (after all data) still returned Oct 2 records |
+| `to_date` | **silently ignored** | `to_date: 2026-10-01` (before all data) still returned Oct 2 records |
+
+**`from_date` and `to_date` are accepted and discarded.** Both date filters are
+declared on the `news` tool's schema, and the dispatcher drops them without
+erroring — the call succeeds and returns unfiltered data. This is the same
+behaviour seen in GDELT: a silently dropped parameter looks exactly like "no
+results in that window".
+
+Consequences for the tools:
+
+- Do **not** advertise a date filter on these endpoints. It does not work.
+- Pagination is the only way to reach history, and `page * limit` is the only
+  cursor available.
+- Clamp `limit` to 200 in the schema rather than accepting a larger value and
+  silently returning less than asked for.
+
 ## Plan gating
 
 FMP restricts endpoints by subscription tier and answers an under-tiered call
@@ -96,6 +169,21 @@ subscription tier.
 | --- | --- |
 | `client.ts` | Connection, tool invocation, result readers |
 | `fmp.test.ts` | Ping, capability dump, per-endpoint checks |
+| `captureRaw.ts` | Records real responses to `raw/` for inspection |
+| `raw/` | Captured `fmp-articles` responses and field-shape report |
+
+### Captures
+
+```bash
+npx tsx mcp/fmp/captureRaw.ts
+```
+
+Writes, per variant, the full MCP envelope (`.result.json`) and the extracted
+records (`.records.json`), plus a combined field-shape report
+(`fmp-articles.shape.json`). Each capture records which envelope shape produced
+the records, since that differs per endpoint.
+
+`raw/` is regenerated output, not source - safe to delete and re-create.
 
 ## Client API
 

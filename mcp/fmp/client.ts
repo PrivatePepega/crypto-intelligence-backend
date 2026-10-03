@@ -176,11 +176,42 @@ export const listFmpTools = async () => {
 // --------------------------------------------------
 
 /** Concatenated text blocks from a tool result. */
-export const readText = (result: {
-  content?: { type: string; text?: string }[];
-}): string =>
-  (result.content ?? [])
-    .map((item) => ("text" in item ? (item.text ?? "") : ""))
+/**
+ * Minimal shape of an MCP content block.
+ *
+ * The readers take `unknown` and narrow internally rather than declaring the
+ * SDK's result type. The SDK's `content` is a tagged union of five block types,
+ * which is not assignable to a hand-written shape under
+ * `exactOptionalPropertyTypes`, so passing a real tool result straight in is a
+ * compile error. Narrowing here keeps every call site clean and makes the
+ * readers immune to SDK type changes.
+ */
+type ContentBlock = {
+  type?: string | undefined;
+  text?: string | undefined;
+};
+
+/** Extracts the content blocks from an arbitrary tool result. */
+const contentBlocks = (result: unknown): ContentBlock[] => {
+  if (typeof result !== "object" || result === null) {
+    return [];
+  }
+
+  const content = (result as { content?: unknown }).content;
+
+  return Array.isArray(content) ? (content as ContentBlock[]) : [];
+};
+
+/** Reads a possibly-absent property from an arbitrary value. */
+const prop = <T>(value: unknown, key: string): T | undefined =>
+  typeof value === "object" && value !== null
+    ? ((value as Record<string, unknown>)[key] as T | undefined)
+    : undefined;
+
+/** Concatenated text blocks from a tool result. */
+export const readText = (result: unknown): string =>
+  contentBlocks(result)
+    .map((item) => item.text ?? "")
     .join("\n");
 
 /** Pulls an array out of a value, wrapping a lone object. */
@@ -212,14 +243,13 @@ const toRecords = <T>(value: unknown): T[] => {
  * here, so callers pair this with {@link assertNotError} and treat an empty
  * array from a successful call as "no matches".
  */
-export const readPayloadRecords = <T = Record<string, unknown>>(result: {
-  structuredContent?: unknown;
-  content?: { type: string; text?: string }[];
-}): T[] => {
-  const structured = result.structuredContent as unknown;
+export const readPayloadRecords = <T = Record<string, unknown>>(
+  result: unknown,
+): T[] => {
+  const structured = prop<unknown>(result, "structuredContent");
 
   if (structured != null) {
-    const fromData = toRecords<T>((structured as { data?: unknown }).data);
+    const fromData = toRecords<T>(prop<unknown>(structured, "data"));
 
     if (fromData.length > 0) {
       return fromData;
@@ -280,11 +310,8 @@ export const describeFmpError = (message: string): string => {
  * Throws when a tool call failed, so a failed call can never be mistaken for
  * "nothing matched".
  */
-export const assertNotError = (result: {
-  isError?: boolean;
-  content?: { type: string; text?: string }[];
-}): void => {
-  if (result.isError !== true) {
+export const assertNotError = (result: unknown): void => {
+  if (prop<boolean>(result, "isError") !== true) {
     return;
   }
 
