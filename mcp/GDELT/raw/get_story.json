@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T01:02:03.093Z",
+  "generatedAt": "2026-10-03T01:23:35.460Z",
   "tool": "get_story",
   "args": {
     "story_id": "8608afb1d928"
@@ -38,12 +38,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 18%",
+                      "label": "free · 19%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "817 left",
+                      "content": "808 left",
                       "type": "Muted"
                     }
                   ]
@@ -158,7 +158,7 @@
                                         },
                                         {
                                           "cssClass": "font-semibold tabular-nums",
-                                          "content": "493",
+                                          "content": "497",
                                           "type": "Text"
                                         },
                                         {
@@ -222,8 +222,8 @@
           "url": "https://gdeltcloud.com/stories/trump-threatens-iran-over-copilots-alleged-attempt-to-crash-8608afb1",
           "title": "Trump threatens Iran over copilot's alleged attempt to crash flight to Israel",
           "story_date": "2026-10-02",
-          "updated_at": "2026-10-03T00:33:16Z",
-          "processed_at": "2026-10-03T00:33:16Z",
+          "updated_at": "2026-10-03T00:52:38Z",
+          "processed_at": "2026-10-03T00:52:38Z",
           "category": "Conflict security",
           "category_code": "conflict_security",
           "subcategory": null,
@@ -254,8 +254,8 @@
             ]
           },
           "metrics": {
-            "significance": 0.6734,
-            "article_count": 493,
+            "significance": 0.6743,
+            "article_count": 497,
             "linked_event_count": 8,
             "max_linked_event_significance": 0.4411,
             "civilian_targeting_event_count": 0
@@ -309,8 +309,8 @@
               "entity_id": "e_c26fc27b7e737e0e",
               "spine_id": "e_c26fc27b7e737e0e",
               "wikipedia_url": "https://en.wikipedia.org/wiki/Flydubai",
-              "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/FlyDubai_737-800_A6-FDB.jpg/330px-FlyDubai_737-800_A6-FDB.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-              "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/FlyDubai_737-800_A6-FDB.jpg/330px-FlyDubai_737-800_A6-FDB.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+              "image_url": null,
+              "avatar_url": null
             },
             {
               "id": "e_4fcc5068ffe683f5",
@@ -320,8 +320,8 @@
               "entity_id": "e_4fcc5068ffe683f5",
               "spine_id": "e_4fcc5068ffe683f5",
               "wikipedia_url": "https://en.wikipedia.org/wiki/Donald_Trump",
-              "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-              "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+              "image_url": null,
+              "avatar_url": null
             },
             {
               "id": "e_54440259ed850686",
@@ -331,8 +331,8 @@
               "entity_id": "e_54440259ed850686",
               "spine_id": "e_54440259ed850686",
               "wikipedia_url": "https://en.wikipedia.org/wiki/Benjamin_Netanyahu",
-              "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Benjamin_Netanyahu%2C_February_2023.jpg/330px-Benjamin_Netanyahu%2C_February_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-              "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Benjamin_Netanyahu%2C_February_2023.jpg/330px-Benjamin_Netanyahu%2C_February_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+              "image_url": null,
+              "avatar_url": null
             },
             {
               "id": "e_e69f6f739a7a15b4",
@@ -342,8 +342,8 @@
               "entity_id": "e_e69f6f739a7a15b4",
               "spine_id": "e_e69f6f739a7a15b4",
               "wikipedia_url": "https://en.wikipedia.org/wiki/Narendra_Modi",
-              "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/The_official_portrait_of_Shri_Narendra_Modi%2C_the_Prime_Minister_of_the_Republic_of_India.jpg/330px-The_official_portrait_of_Shri_Narendra_Modi%2C_the_Prime_Minister_of_the_Republic_of_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-              "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/The_official_portrait_of_Shri_Narendra_Modi%2C_the_Prime_Minister_of_the_Republic_of_India.jpg/330px-The_official_portrait_of_Shri_Narendra_Modi%2C_the_Prime_Minister_of_the_Republic_of_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+              "image_url": null,
+              "avatar_url": null
             },
             {
               "id": "e_49251a48de83ba8c",
@@ -353,8 +353,8 @@
               "entity_id": "e_49251a48de83ba8c",
               "spine_id": "e_49251a48de83ba8c",
               "wikipedia_url": "https://en.wikipedia.org/wiki/Itamar_Ben-Gvir",
-              "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Itamar_Ben_Gvir_3_%28cropped%29.jpg/330px-Itamar_Ben_Gvir_3_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-              "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Itamar_Ben_Gvir_3_%28cropped%29.jpg/330px-Itamar_Ben_Gvir_3_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+              "image_url": null,
+              "avatar_url": null
             },
             {
               "id": "llm:3e73d05d933c10afed2d",
@@ -364,8 +364,8 @@
               "entity_id": "llm:3e73d05d933c10afed2d",
               "spine_id": null,
               "wikipedia_url": null,
-              "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Benjamin_Netanyahu%2C_February_2023.jpg/330px-Benjamin_Netanyahu%2C_February_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-              "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Benjamin_Netanyahu%2C_February_2023.jpg/330px-Benjamin_Netanyahu%2C_February_2023.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+              "image_url": null,
+              "avatar_url": null
             },
             {
               "id": "llm:b81aed6a2c4d8be0b873",
@@ -595,8 +595,8 @@
           "has_fatalities": false,
           "fatalities": 0,
           "metrics": {
-            "significance": 0.6734,
-            "article_count": 493,
+            "significance": 0.6743,
+            "article_count": 497,
             "linked_event_count": 8,
             "max_linked_event_significance": 0.4411
           },

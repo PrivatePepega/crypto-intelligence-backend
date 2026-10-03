@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T01:01:55.678Z",
+  "generatedAt": "2026-10-03T01:23:27.388Z",
   "tool": "summarize_stories",
   "args": {
     "group_by": "date",
@@ -86,12 +86,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 18%",
+                      "label": "free · 19%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "819 left",
+                      "content": "810 left",
                       "type": "Muted"
                     }
                   ]
@@ -118,7 +118,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums neon-text",
-                          "content": "85,041",
+                          "content": "85,245",
                           "type": "Text"
                         },
                         {
@@ -146,7 +146,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums text-destructive",
-                          "content": "799",
+                          "content": "798",
                           "type": "Text"
                         },
                         {
@@ -174,7 +174,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums text-violet-500",
-                          "content": "22,665",
+                          "content": "22,660",
                           "type": "Text"
                         },
                         {
@@ -244,11 +244,11 @@
                         },
                         {
                           "bucket": "2026-10-01",
-                          "count": 16346
+                          "count": 16345
                         },
                         {
                           "bucket": "2026-10-02",
-                          "count": 14535
+                          "count": 14740
                         }
                       ],
                       "series": [
@@ -329,11 +329,11 @@
                   "rows": [
                     {
                       "key": "2026-10-01",
-                      "primary_count": 16346,
-                      "fatalities": 199,
-                      "article_count": 27330,
+                      "primary_count": 16345,
+                      "fatalities": 198,
+                      "article_count": 27329,
                       "country_count": 201,
-                      "linked_event_count": 4591,
+                      "linked_event_count": 4590,
                       "fatality_rate_label": "0%"
                     },
                     {
@@ -356,11 +356,11 @@
                     },
                     {
                       "key": "2026-10-02",
-                      "primary_count": 14535,
+                      "primary_count": 14740,
                       "fatalities": 87,
-                      "article_count": 26500,
+                      "article_count": 26844,
                       "country_count": 201,
-                      "linked_event_count": 4009,
+                      "linked_event_count": 4005,
                       "fatality_rate_label": "0%"
                     },
                     {
@@ -422,16 +422,20 @@
               "2026-10-01",
               "2026-10-02"
             ],
-            "missing_dates": [],
-            "geography_missing_dates": [],
-            "awaiting_dates": [
-              "2026-10-03"
+            "missing_dates": [
+              {
+                "date": "2026-10-03",
+                "reason": "snapshot_unavailable",
+                "retryable": true
+              }
             ],
-            "window_complete": true
+            "geography_missing_dates": [],
+            "awaiting_dates": [],
+            "window_complete": false
           },
           "query_window": {
             "date_start": "2026-09-27",
-            "date_end": "2026-10-03",
+            "date_end": "2026-10-02",
             "date_basis": "story_date",
             "date_bounds": "inclusive",
             "observed_start": null,
@@ -440,7 +444,22 @@
             "observed_end_exclusive": true,
             "source": "explicit"
           },
-          "window_adjustment": null
+          "window_adjustment": {
+            "kind": "truncated",
+            "requested": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-03"
+            },
+            "served": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-02"
+            },
+            "held_back_date": "2026-10-03",
+            "held_back_dates": [
+              "2026-10-03"
+            ],
+            "reason": "current_date_snapshot_not_ready"
+          }
         },
         "data": [
           {
@@ -655,19 +674,19 @@
             "key": "2026-10-01",
             "group_by": "story_date",
             "latest_date": "2026-10-01",
-            "story_count": 16346,
-            "article_count": 27330,
+            "story_count": 16345,
+            "article_count": 27329,
             "avg_article_count": 1.672,
             "min_article_count": 1,
             "max_article_count": 340,
-            "stories_with_events": 4424,
+            "stories_with_events": 4423,
             "story_only_count": 11922,
-            "linked_event_count": 4591,
+            "linked_event_count": 4590,
             "min_linked_event_count": 0,
             "avg_linked_event_count": 0.281,
             "max_linked_event_count": 7,
-            "stories_with_fatalities": 17,
-            "fatalities": 199,
+            "stories_with_fatalities": 16,
+            "fatalities": 198,
             "fatality_story_rate": 0.001,
             "country_count": 201,
             "region_count": 17,
@@ -681,25 +700,25 @@
                 "max": 0.6332
               },
               "article_count": {
-                "total": 27330,
+                "total": 27329,
                 "avg": 1.672,
                 "min": 1,
                 "max": 340
               },
               "linked_events": {
                 "count": {
-                  "total": 4591,
+                  "total": 4590,
                   "avg": 0.281,
                   "min": 0,
                   "max": 7,
-                  "stories_with_events": 4424,
+                  "stories_with_events": 4423,
                   "story_only_count": 11922
                 }
               },
               "fatalities": {
-                "stories": 17,
+                "stories": 16,
                 "rate": 0.001,
-                "total": 199
+                "total": 198
               }
             }
           },
@@ -707,16 +726,16 @@
             "key": "2026-10-02",
             "group_by": "story_date",
             "latest_date": "2026-10-02",
-            "story_count": 14535,
-            "article_count": 26500,
-            "avg_article_count": 1.823,
+            "story_count": 14740,
+            "article_count": 26844,
+            "avg_article_count": 1.821,
             "min_article_count": 1,
-            "max_article_count": 493,
-            "stories_with_events": 3861,
-            "story_only_count": 10674,
-            "linked_event_count": 4009,
+            "max_article_count": 497,
+            "stories_with_events": 3859,
+            "story_only_count": 10881,
+            "linked_event_count": 4005,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.276,
+            "avg_linked_event_count": 0.272,
             "max_linked_event_count": 8,
             "stories_with_fatalities": 21,
             "fatalities": 87,
@@ -724,28 +743,28 @@
             "country_count": 201,
             "region_count": 17,
             "avg_significance": 0.0912,
-            "max_significance": 0.6734,
+            "max_significance": 0.6743,
             "min_significance": 0.0753,
             "metrics": {
               "significance": {
                 "avg": 0.0912,
                 "min": 0.0753,
-                "max": 0.6734
+                "max": 0.6743
               },
               "article_count": {
-                "total": 26500,
-                "avg": 1.823,
+                "total": 26844,
+                "avg": 1.821,
                 "min": 1,
-                "max": 493
+                "max": 497
               },
               "linked_events": {
                 "count": {
-                  "total": 4009,
-                  "avg": 0.276,
+                  "total": 4005,
+                  "avg": 0.272,
                   "min": 0,
                   "max": 8,
-                  "stories_with_events": 3861,
-                  "story_only_count": 10674
+                  "stories_with_events": 3859,
+                  "story_only_count": 10881
                 }
               },
               "fatalities": {
@@ -810,7 +829,7 @@
           "settled_at": "2026-09-30 04:06:55",
           "query_window": {
             "date_start": "2026-09-27",
-            "date_end": "2026-10-03",
+            "date_end": "2026-10-02",
             "date_basis": "story_date",
             "date_bounds": "inclusive",
             "observed_start": null,
@@ -819,7 +838,22 @@
             "observed_end_exclusive": true,
             "source": "explicit"
           },
-          "window_adjustment": null,
+          "window_adjustment": {
+            "kind": "truncated",
+            "requested": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-03"
+            },
+            "served": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-02"
+            },
+            "held_back_date": "2026-10-03",
+            "held_back_dates": [
+              "2026-10-03"
+            ],
+            "reason": "current_date_snapshot_not_ready"
+          },
           "coverage": {
             "start": "2026-03-08",
             "end": "2026-10-03",
@@ -833,12 +867,16 @@
               "2026-10-01",
               "2026-10-02"
             ],
-            "missing_dates": [],
-            "geography_missing_dates": [],
-            "awaiting_dates": [
-              "2026-10-03"
+            "missing_dates": [
+              {
+                "date": "2026-10-03",
+                "reason": "snapshot_unavailable",
+                "retryable": true
+              }
             ],
-            "window_complete": true
+            "geography_missing_dates": [],
+            "awaiting_dates": [],
+            "window_complete": false
           }
         },
         "data": [
@@ -888,23 +926,23 @@
           },
           {
             "key": "2026-10-01",
-            "count": 16346,
-            "article_count": 27330,
+            "count": 16345,
+            "article_count": 27329,
             "avg_article_count": 1.672,
             "metrics": {
               "significance": 0.0907,
               "linked_events_count": 0.281,
-              "fatalities": 199
+              "fatalities": 198
             }
           },
           {
             "key": "2026-10-02",
-            "count": 14535,
-            "article_count": 26500,
-            "avg_article_count": 1.823,
+            "count": 14740,
+            "article_count": 26844,
+            "avg_article_count": 1.821,
             "metrics": {
               "significance": 0.0912,
-              "linked_events_count": 0.276,
+              "linked_events_count": 0.272,
               "fatalities": 87
             }
           }

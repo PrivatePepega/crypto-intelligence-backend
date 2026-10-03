@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T01:01:36.902Z",
+  "generatedAt": "2026-10-03T01:23:06.760Z",
   "tool": "search_events",
   "args": {
     "days": 3,
@@ -44,7 +44,7 @@
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "824 left",
+                      "content": "815 left",
                       "type": "Muted"
                     }
                   ]
@@ -11959,8 +11959,8 @@
                 "entity_id": "llm:a4744db0655942167d0c",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm/330px--This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm.jpg",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm/330px--This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm.jpg",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -11978,8 +11978,8 @@
                 "entity_id": "llm:df5a1cb8e271db9c9461",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm/330px--This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm.jpg",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm/330px--This_is_Doctors_Without_Borders-M%C3%A9decins_Sans_Fronti%C3%A8res_%28MSF%29.webm.jpg",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -12114,8 +12114,8 @@
                 "entity_id": "llm:cc6c9db50cfd3afdaeb5",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Islamic_State_flag.svg/330px-Islamic_State_flag.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Islamic_State_flag.svg/330px-Islamic_State_flag.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -12133,8 +12133,8 @@
                 "entity_id": "llm:4246600022aa4713981a",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Amnesty_International_logo.svg/330px-Amnesty_International_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ee/Amnesty_International_logo.svg/330px-Amnesty_International_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -12680,8 +12680,8 @@
                 "entity_id": "llm:c4bf487fd4138859577c",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://upload.wikimedia.org/wikipedia/en/3/38/SyrianObservatoryHRlogo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-                "avatar_url": "https://upload.wikimedia.org/wikipedia/en/3/38/SyrianObservatoryHRlogo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -12699,8 +12699,8 @@
                 "entity_id": "llm:cea87268a8e66e30f2d1",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Logo_of_the_Syrian_Arab_News_Agency.svg/330px-Logo_of_the_Syrian_Arab_News_Agency.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Logo_of_the_Syrian_Arab_News_Agency.svg/330px-Logo_of_the_Syrian_Arab_News_Agency.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -13108,8 +13108,8 @@
                 "entity_id": "e_3a86b4e0176fe7a1",
                 "spine_id": "e_3a86b4e0176fe7a1",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Zabihullah_Mujahid",
-                "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Zabihullah_Mujahid.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-                "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Zabihullah_Mujahid.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -13127,8 +13127,8 @@
                 "entity_id": "llm:634e6532f5ddc89092b0",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/UNAMA_Logo.jpg/330px-UNAMA_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/UNAMA_Logo.jpg/330px-UNAMA_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -13146,8 +13146,8 @@
                 "entity_id": "llm:0d2b7dc1bf9dbc829fe1",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Zabihullah_Mujahid.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-                "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Zabihullah_Mujahid.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -13203,8 +13203,8 @@
                 "entity_id": "e_bce65bb7f6c6a9d2",
                 "spine_id": "e_bce65bb7f6c6a9d2",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/United_Nations_Assistance_Mission_in_Afghanistan",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/UNAMA_Logo.jpg/330px-UNAMA_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/UNAMA_Logo.jpg/330px-UNAMA_Logo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -13596,8 +13596,8 @@
                 "entity_id": "llm:f6875326060a2e990ec4",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/IRI-MOD.svg/330px-IRI-MOD.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/IRI-MOD.svg/330px-IRI-MOD.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -13615,8 +13615,8 @@
                 "entity_id": "llm:ca9e705886257d893d82",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Seal_of_the_United_States_Department_of_the_Treasury.svg/330px-Seal_of_the_United_States_Department_of_the_Treasury.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Seal_of_the_United_States_Department_of_the_Treasury.svg/330px-Seal_of_the_United_States_Department_of_the_Treasury.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -13634,8 +13634,8 @@
                 "entity_id": "e_0ea2d85c2ffcf52b",
                 "spine_id": "e_0ea2d85c2ffcf52b",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/United_States_Department_of_the_Treasury",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Seal_of_the_United_States_Department_of_the_Treasury.svg/330px-Seal_of_the_United_States_Department_of_the_Treasury.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Seal_of_the_United_States_Department_of_the_Treasury.svg/330px-Seal_of_the_United_States_Department_of_the_Treasury.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -14288,8 +14288,8 @@
                 "entity_id": "e_2ca99b28c9da8e99",
                 "spine_id": "e_2ca99b28c9da8e99",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/TPAO",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/T%C3%BCrkiye_Petrolleri_logo.svg/330px-T%C3%BCrkiye_Petrolleri_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/T%C3%BCrkiye_Petrolleri_logo.svg/330px-T%C3%BCrkiye_Petrolleri_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -14307,8 +14307,8 @@
                 "entity_id": "llm:5c582fd084a7a1975944",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_-_T%C3%BCrkisches_Amt_f%C3%BCr_Wasserwirtschaft.svg/330px-Logo_-_T%C3%BCrkisches_Amt_f%C3%BCr_Wasserwirtschaft.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_-_T%C3%BCrkisches_Amt_f%C3%BCr_Wasserwirtschaft.svg/330px-Logo_-_T%C3%BCrkisches_Amt_f%C3%BCr_Wasserwirtschaft.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -14494,8 +14494,8 @@
                 "entity_id": "e_6671985a04ce809a",
                 "spine_id": "e_6671985a04ce809a",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Adani_Green_Energy",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Adani_Green_Energy_logo.svg/330px-Adani_Green_Energy_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Adani_Green_Energy_logo.svg/330px-Adani_Green_Energy_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -14532,8 +14532,8 @@
                 "entity_id": "e_a876471b4774c533",
                 "spine_id": "e_a876471b4774c533",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Adani_Group",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Adani_logo_2012.svg/330px-Adani_logo_2012.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Adani_logo_2012.svg/330px-Adani_logo_2012.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -14726,8 +14726,8 @@
                 "entity_id": "llm:8fe0bdab08637e6f0b68",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/LNG_Canada_logo.png/330px-LNG_Canada_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/LNG_Canada_logo.png/330px-LNG_Canada_logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -14764,8 +14764,8 @@
                 "entity_id": "llm:ac30912a7051b31498d8",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Mark_Carney_Argentina_v_Spain_19_July_2026-303_%283x4_close_up_cropped%29.jpg/330px-Mark_Carney_Argentina_v_Spain_19_July_2026-303_%283x4_close_up_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Mark_Carney_Argentina_v_Spain_19_July_2026-303_%283x4_close_up_cropped%29.jpg/330px-Mark_Carney_Argentina_v_Spain_19_July_2026-303_%283x4_close_up_cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -14821,8 +14821,8 @@
                 "entity_id": "llm:f5d1422a51b28c3e2111",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/JGC_Corporation_company_logo.svg/330px-JGC_Corporation_company_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/JGC_Corporation_company_logo.svg/330px-JGC_Corporation_company_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -15473,8 +15473,8 @@
                 "entity_id": "e_59b1654c792cca3c",
                 "spine_id": "e_59b1654c792cca3c",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Rita_Naa_Odoley_Sowah",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Rita_Naa_Odoley_Sowah.jpg/330px-Rita_Naa_Odoley_Sowah.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Rita_Naa_Odoley_Sowah.jpg/330px-Rita_Naa_Odoley_Sowah.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": true,
@@ -15676,8 +15676,8 @@
                 "entity_id": "e_a4ed79774bf49699",
                 "spine_id": "e_a4ed79774bf49699",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/John_Graham_(Australian_politician)",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/John_Graham_MLC.jpg/330px-John_Graham_MLC.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/John_Graham_MLC.jpg/330px-John_Graham_MLC.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -15695,8 +15695,8 @@
                 "entity_id": "e_898afe33248280b2",
                 "spine_id": "e_898afe33248280b2",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Transport_for_NSW",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7c/Transport_for_NSW_logo.svg/330px-Transport_for_NSW_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7c/Transport_for_NSW_logo.svg/330px-Transport_for_NSW_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": false,
@@ -15882,8 +15882,8 @@
                 "entity_id": "https://en.wikipedia.org/wiki/Pentagon",
                 "spine_id": null,
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Pentagon",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/5-gon_cyclic_01.svg/330px-5-gon_cyclic_01.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/5-gon_cyclic_01.svg/330px-5-gon_cyclic_01.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -15901,8 +15901,8 @@
                 "entity_id": "llm:bde81d5835d36436045c",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Seal_of_the_United_States_Department_of_War_%282025%29.svg/330px-Seal_of_the_United_States_Department_of_War_%282025%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Seal_of_the_United_States_Department_of_War_%282025%29.svg/330px-Seal_of_the_United_States_Department_of_War_%282025%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -15920,8 +15920,8 @@
                 "entity_id": "llm:a20ee647eb1b441417c3",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Seal_of_the_United_States_Department_of_War_%282025%29.svg/330px-Seal_of_the_United_States_Department_of_War_%282025%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Seal_of_the_United_States_Department_of_War_%282025%29.svg/330px-Seal_of_the_United_States_Department_of_War_%282025%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -15939,8 +15939,8 @@
                 "entity_id": "llm:e5fb4d207c50eb4788d4",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Seal_of_the_United_States_Department_of_War_%282025%29.svg/330px-Seal_of_the_United_States_Department_of_War_%282025%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Seal_of_the_United_States_Department_of_War_%282025%29.svg/330px-Seal_of_the_United_States_Department_of_War_%282025%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -15958,8 +15958,8 @@
                 "entity_id": "e_4fcc5068ffe683f5",
                 "spine_id": "e_4fcc5068ffe683f5",
                 "wikipedia_url": "https://en.wikipedia.org/wiki/Donald_Trump",
-                "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-                "avatar_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": true,
                   "is_public_official": true,
@@ -16418,8 +16418,8 @@
                 "entity_id": "llm:2ce64fc06a9f8c046a30",
                 "spine_id": null,
                 "wikipedia_url": null,
-                "image_url": "https://upload.wikimedia.org/wikipedia/en/6/66/Sri_Lanka_Naval_Seal.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-                "avatar_url": "https://upload.wikimedia.org/wikipedia/en/6/66/Sri_Lanka_Naval_Seal.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+                "image_url": null,
+                "avatar_url": null,
                 "public_official": {
                   "checked": false,
                   "is_public_official": null,
@@ -16459,7 +16459,7 @@
         "pagination": {
           "limit": 20,
           "cursor": null,
-          "next_cursor": "s.202610030050172026100120261002.20"
+          "next_cursor": "s.20261003012015202610012026100220261003.20"
         },
         "sort": "significance",
         "applied_filters": {
@@ -16497,12 +16497,11 @@
             "warnings": [],
             "served_dates": [
               "2026-10-01",
-              "2026-10-02"
-            ],
-            "missing_dates": [],
-            "awaiting_dates": [
+              "2026-10-02",
               "2026-10-03"
             ],
+            "missing_dates": [],
+            "awaiting_dates": [],
             "window_complete": true
           },
           "query_window": {
@@ -16548,7 +16547,7 @@
         },
         "pagination": {
           "cursor": null,
-          "next_cursor": "s.202610030050172026100120261002.20",
+          "next_cursor": "s.20261003012015202610012026100220261003.20",
           "limit": 20
         },
         "meta": {
@@ -16573,12 +16572,11 @@
             "warnings": [],
             "served_dates": [
               "2026-10-01",
-              "2026-10-02"
-            ],
-            "missing_dates": [],
-            "awaiting_dates": [
+              "2026-10-02",
               "2026-10-03"
             ],
+            "missing_dates": [],
+            "awaiting_dates": [],
             "window_complete": true
           }
         },

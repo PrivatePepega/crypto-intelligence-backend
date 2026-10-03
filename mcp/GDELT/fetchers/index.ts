@@ -7,7 +7,7 @@
  *
  * Each fetcher maps 1:1 onto a tool the server exposes through
  * `gdelt_cloud_tool_call`. See `captureRaw.ts` for a runnable example and
- * `../raw/README.md` for what each response actually contains.
+ * `../README.md` for what each response actually contains.
  */
 import { fetchGetEvent } from "./getEvent.js";
 import { fetchGetStory } from "./getStory.js";
@@ -16,6 +16,7 @@ import { fetchSearchEvents } from "./searchEvents.js";
 import { fetchSearchStories } from "./searchStories.js";
 import { fetchSummarizeEvents } from "./summarizeEvents.js";
 import { fetchSummarizeStories } from "./summarizeStories.js";
+
 import type { RawGdeltResult } from "../gdeltClient.js";
 import type {
   GetEventInput,
@@ -44,19 +45,24 @@ export type GdeltFetcher = (
 ) => Promise<RawGdeltResult>;
 
 /**
- * Tool name -> fetcher.
+ * Tool name -> fetcher, one entry per GDELT Cloud tool.
  *
  * The discovery scripts dispatch through this rather than calling
- * `callGdeltTool` directly. `limit: 1` defaults live inside the list fetchers
- * (`withDefaultLimit`), so a script bypassing them would silently capture 25
- * records per file instead of 1.
+ * `callGdeltTool` directly. The `DEFAULT_RECORD_LIMIT` default lives inside the
+ * list fetchers (`withDefaultLimit`), so a script bypassing them would capture a
+ * different number of records than the caller expects.
+ *
+ * The by-id fetchers take a narrower input type, so they are adapted here
+ * rather than widened at the source: each validates its own id and throws with
+ * a useful message, which the loose dispatch signature cannot express.
  */
 export const GDELT_FETCHERS: Record<string, GdeltFetcher> = {
   search_events: (input, signal) => fetchSearchEvents(input, signal),
   summarize_events: (input, signal) => fetchSummarizeEvents(input, signal),
   get_event: (input, signal) => fetchGetEvent(input as GetEventInput, signal),
   search_stories: (input, signal) => fetchSearchStories(input, signal),
-  summarize_stories: (input, signal) => fetchSummarizeStories(input, signal),
+  summarize_stories: (input, signal) =>
+    fetchSummarizeStories(input, signal),
   get_story: (input, signal) => fetchGetStory(input as GetStoryInput, signal),
   get_story_articles: (input, signal) =>
     fetchGetStoryArticles(input as GetStoryArticlesInput, signal),

@@ -488,28 +488,28 @@
     "key": "2026-10-02",
     "groupBy": "event_date",
     "latestDate": "2026-10-02",
-    "eventCount": 2983,
+    "eventCount": 2981,
     "conflictEventCount": 188,
-    "cameoPlusEventCount": 2795,
+    "cameoPlusEventCount": 2793,
     "fatalityEventCount": 17,
     "fatalities": 74,
     "fatalityRate": 0.0057,
     "countryCount": 169,
     "regionCount": 17,
-    "articleCount": 13672,
-    "avgArticleCount": 4.583,
+    "articleCount": 13649,
+    "avgArticleCount": 4.579,
     "minArticleCount": 0,
     "maxArticleCount": 489,
     "avgSignificance": 0.2392,
     "minSignificance": 0.0446,
     "maxSignificance": 0.7089,
-    "avgGoldsteinScale": -0.305,
+    "avgGoldsteinScale": -0.303,
     "minGoldsteinScale": -10,
     "maxGoldsteinScale": 10,
-    "avgGoldsteinSeverity": 3.235,
+    "avgGoldsteinSeverity": 3.236,
     "minGoldsteinSeverity": 0,
     "maxGoldsteinSeverity": 10,
-    "avgMagnitude": 2.7114,
+    "avgMagnitude": 2.7105,
     "minMagnitude": 1,
     "maxMagnitude": 9,
     "avgSystemicImportance": 0.1249,
@@ -531,19 +531,19 @@
         "min": 0.0446
       },
       "goldstein_scale": {
-        "avg": -0.305,
+        "avg": -0.303,
         "min": -10,
         "max": 10,
-        "avg_severity": 3.235
+        "avg_severity": 3.236
       },
       "goldstein_severity": {
-        "avg": 3.235,
+        "avg": 3.236,
         "min": 0,
         "max": 10
       },
       "cameoplus": {
         "magnitude": {
-          "avg": 2.7114,
+          "avg": 2.7105,
           "max": 9,
           "min": 1
         },
@@ -569,8 +569,8 @@
         "min": 0.23
       },
       "article_count": {
-        "total": 13672,
-        "avg": 4.583,
+        "total": 13649,
+        "avg": 4.579,
         "min": 0,
         "max": 489
       },
@@ -578,6 +578,103 @@
         "events": 17,
         "rate": 0.0057,
         "total": 74
+      }
+    }
+  },
+  {
+    "key": "2026-10-03",
+    "groupBy": "event_date",
+    "latestDate": "2026-10-03",
+    "eventCount": 15,
+    "conflictEventCount": 0,
+    "cameoPlusEventCount": 15,
+    "fatalityEventCount": 0,
+    "fatalities": null,
+    "fatalityRate": 0,
+    "countryCount": 10,
+    "regionCount": 8,
+    "articleCount": 18,
+    "avgArticleCount": 1.2,
+    "minArticleCount": 1,
+    "maxArticleCount": 3,
+    "avgSignificance": 0.2224,
+    "minSignificance": 0.1254,
+    "maxSignificance": 0.45,
+    "avgGoldsteinScale": 0.057,
+    "minGoldsteinScale": -2,
+    "maxGoldsteinScale": 5,
+    "avgGoldsteinSeverity": 2.343,
+    "minGoldsteinSeverity": 0,
+    "maxGoldsteinSeverity": 5,
+    "avgMagnitude": 2.6667,
+    "minMagnitude": 1,
+    "maxMagnitude": 4,
+    "avgSystemicImportance": 0.1407,
+    "minSystemicImportance": 0.07,
+    "maxSystemicImportance": 0.43,
+    "avgPropagationPotential": 0.23,
+    "minPropagationPotential": 0,
+    "maxPropagationPotential": 0.42,
+    "avgMarketSensitivity": 0.0867,
+    "minMarketSensitivity": 0.05,
+    "maxMarketSensitivity": 0.6,
+    "avgConfidence": 0.6047,
+    "minConfidence": 0.28,
+    "maxConfidence": 0.91,
+    "metrics": {
+      "significance": {
+        "avg": 0.2224,
+        "max": 0.45,
+        "min": 0.1254
+      },
+      "goldstein_scale": {
+        "avg": 0.057,
+        "min": -2,
+        "max": 5,
+        "avg_severity": 2.343
+      },
+      "goldstein_severity": {
+        "avg": 2.343,
+        "min": 0,
+        "max": 5
+      },
+      "cameoplus": {
+        "magnitude": {
+          "avg": 2.6667,
+          "max": 4,
+          "min": 1
+        },
+        "systemic_importance": {
+          "avg": 0.1407,
+          "max": 0.43,
+          "min": 0.07
+        },
+        "propagation_potential": {
+          "avg": 0.23,
+          "max": 0.42,
+          "min": 0
+        },
+        "market_sensitivity": {
+          "avg": 0.0867,
+          "max": 0.6,
+          "min": 0.05
+        }
+      },
+      "confidence": {
+        "avg": 0.6047,
+        "max": 0.91,
+        "min": 0.28
+      },
+      "article_count": {
+        "total": 18,
+        "avg": 1.2,
+        "min": 1,
+        "max": 3
+      },
+      "fatalities": {
+        "events": 0,
+        "rate": 0,
+        "total": null
       }
     }
   }

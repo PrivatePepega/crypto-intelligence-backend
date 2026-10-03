@@ -4,7 +4,7 @@
     "title": "Trump threatens Iran over copilot's alleged attempt to crash flight to Israel",
     "category": "Conflict security",
     "region": "Middle East",
-    "significance": 0.6734
+    "significance": 0.6743
   },
   {
     "id": "67a07d19b6e5",
@@ -39,7 +39,7 @@
     "title": "Student protests disrupt over 1,000 schools across France, with fires and injuries",
     "category": "Conflict security",
     "region": "Europe",
-    "significance": 0.6082
+    "significance": 0.6102
   },
   {
     "id": "99004052f2b6",
@@ -56,18 +56,18 @@
     "significance": 0.5821
   },
   {
-    "id": "e2af63c54f71",
-    "title": "Trump says he may ask Europeans to tap their diesel reserves",
-    "category": "Economic",
-    "region": "North America",
-    "significance": 0.5589
-  },
-  {
     "id": "04ef515e6073",
     "title": "Spain's government presses ahead with housing decrees despite Junts opposition",
     "category": "Political",
     "region": "Europe",
-    "significance": 0.5582
+    "significance": 0.5595
+  },
+  {
+    "id": "9447278a3ef0",
+    "title": "G7 agrees to release 100 million barrels from emergency oil reserves",
+    "category": "Economic",
+    "region": "Europe",
+    "significance": 0.557
   },
   {
     "id": "d6a7986efc0b",
@@ -75,13 +75,6 @@
     "category": "Conflict security",
     "region": "Europe",
     "significance": 0.557
-  },
-  {
-    "id": "9447278a3ef0",
-    "title": "G7 agrees to release 100 million barrels from emergency oil reserves",
-    "category": "Economic",
-    "region": "Europe",
-    "significance": 0.5544
   },
   {
     "id": "911fd0b8dd91",
@@ -98,18 +91,18 @@
     "significance": 0.5242
   },
   {
+    "id": "6a8bc9df5772",
+    "title": "Demonstrations banned near French high schools this Friday amid student anger",
+    "category": "Conflict security",
+    "region": "Europe",
+    "significance": 0.5225
+  },
+  {
     "id": "4b22e833829d",
     "title": "Houthis attack power distribution station in Medina, Saudi-led coalition says",
     "category": "Conflict security",
     "region": "Middle East",
     "significance": 0.5216
-  },
-  {
-    "id": "6a8bc9df5772",
-    "title": "Demonstrations banned near French high schools this Friday amid student anger",
-    "category": "Conflict security",
-    "region": "Europe",
-    "significance": 0.5207
   },
   {
     "id": "32467a2a745f",
@@ -138,5 +131,12 @@
     "category": "Political",
     "region": "East Asia",
     "significance": 0.5053
+  },
+  {
+    "id": "1d878e89bff1",
+    "title": "Nationwide campaign against SIR to begin, with demand for ballot-paper polls",
+    "category": "Political",
+    "region": "South Asia",
+    "significance": 0.5043
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T01:01:59.479Z",
+  "generatedAt": "2026-10-03T01:23:31.455Z",
   "tool": "summarize_stories",
   "args": {
     "group_by": "category",
@@ -86,12 +86,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 18%",
+                      "label": "free · 19%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "818 left",
+                      "content": "809 left",
                       "type": "Muted"
                     }
                   ]
@@ -118,7 +118,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums neon-text",
-                          "content": "85,041",
+                          "content": "85,245",
                           "type": "Text"
                         },
                         {
@@ -146,7 +146,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums text-destructive",
-                          "content": "799",
+                          "content": "798",
                           "type": "Text"
                         },
                         {
@@ -174,7 +174,7 @@
                       "children": [
                         {
                           "cssClass": "text-lg font-semibold leading-none tabular-nums text-violet-500",
-                          "content": "22,665",
+                          "content": "22,660",
                           "type": "Text"
                         },
                         {
@@ -321,7 +321,7 @@
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "35,014 stories",
+                                  "content": "35,091 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -342,7 +342,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "8,880",
+                                      "content": "8,879",
                                       "type": "Text"
                                     }
                                   ]
@@ -359,7 +359,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "65,752",
+                                      "content": "65,871",
                                       "type": "Text"
                                     }
                                   ]
@@ -433,14 +433,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 37.12229393956703,
+                                  "value": 37.14627682311704,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "12,998 stories",
+                                  "content": "13,035 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -495,7 +495,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "21,580",
+                                      "content": "21,641",
                                       "type": "Text"
                                     }
                                   ]
@@ -569,14 +569,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 29.916604786656766,
+                                  "value": 29.942150408936765,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "10,475 stories",
+                                  "content": "10,507 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -597,7 +597,7 @@
                                     },
                                     {
                                       "cssClass": "text-sm font-semibold text-destructive tabular-nums",
-                                      "content": "784",
+                                      "content": "783",
                                       "type": "Text"
                                     }
                                   ]
@@ -614,7 +614,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "2,295",
+                                      "content": "2,294",
                                       "type": "Text"
                                     }
                                   ]
@@ -631,7 +631,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "23,426",
+                                      "content": "23,505",
                                       "type": "Text"
                                     }
                                   ]
@@ -705,14 +705,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 20.189067230250757,
+                                  "value": 20.17896326693454,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "7,069 stories",
+                                  "content": "7,081 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -733,7 +733,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "1,761",
+                                      "content": "1,760",
                                       "type": "Text"
                                     }
                                   ]
@@ -750,7 +750,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "10,874",
+                                      "content": "10,896",
                                       "type": "Text"
                                     }
                                   ]
@@ -824,14 +824,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 16.102130576340894,
+                                  "value": 16.10099455700892,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "5,638 stories",
+                                  "content": "5,650 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -852,7 +852,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "1,558",
+                                      "content": "1,557",
                                       "type": "Text"
                                     }
                                   ]
@@ -869,7 +869,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "7,392",
+                                      "content": "7,409",
                                       "type": "Text"
                                     }
                                   ]
@@ -943,14 +943,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 12.446449991431999,
+                                  "value": 12.453335613120172,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "4,358 stories",
+                                  "content": "4,370 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -988,7 +988,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "7,240",
+                                      "content": "7,254",
                                       "type": "Text"
                                     }
                                   ]
@@ -1062,14 +1062,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 9.887473581995772,
+                                  "value": 9.882875951098573,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "3,462 stories",
+                                  "content": "3,468 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -1107,7 +1107,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "4,977",
+                                      "content": "4,984",
                                       "type": "Text"
                                     }
                                   ]
@@ -1181,14 +1181,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 6.720169075227052,
+                                  "value": 6.728220911344789,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "2,353 stories",
+                                  "content": "2,361 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -1226,7 +1226,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "3,093",
+                                      "content": "3,102",
                                       "type": "Text"
                                     }
                                   ]
@@ -1300,14 +1300,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 6.006168960987034,
+                                  "value": 6.00723832321678,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "2,103 stories",
+                                  "content": "2,108 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -1345,7 +1345,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "3,815",
+                                      "content": "3,823",
                                       "type": "Text"
                                     }
                                   ]
@@ -1419,14 +1419,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 2.4818643970983034,
+                                  "value": 2.4821179219742953,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "869 stories",
+                                  "content": "871 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -1447,7 +1447,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "195",
+                                      "content": "194",
                                       "type": "Text"
                                     }
                                   ]
@@ -1464,7 +1464,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "1,491",
+                                      "content": "1,495",
                                       "type": "Text"
                                     }
                                   ]
@@ -1538,14 +1538,14 @@
                               "children": [
                                 {
                                   "type": "Progress",
-                                  "value": 2.004912320785971,
+                                  "value": 2.0033626855888973,
                                   "max": 100,
                                   "variant": "default",
                                   "size": "sm"
                                 },
                                 {
                                   "cssClass": "text-[10px] tracking-wider",
-                                  "content": "702 stories",
+                                  "content": "703 stories",
                                   "type": "Muted"
                                 }
                               ]
@@ -1583,7 +1583,7 @@
                                     },
                                     {
                                       "cssClass": "text-xs tabular-nums",
-                                      "content": "1,051",
+                                      "content": "1,054",
                                       "type": "Text"
                                     }
                                   ]
@@ -1649,16 +1649,20 @@
               "2026-10-01",
               "2026-10-02"
             ],
-            "missing_dates": [],
-            "geography_missing_dates": [],
-            "awaiting_dates": [
-              "2026-10-03"
+            "missing_dates": [
+              {
+                "date": "2026-10-03",
+                "reason": "snapshot_unavailable",
+                "retryable": true
+              }
             ],
-            "window_complete": true
+            "geography_missing_dates": [],
+            "awaiting_dates": [],
+            "window_complete": false
           },
           "query_window": {
             "date_start": "2026-09-27",
-            "date_end": "2026-10-03",
+            "date_end": "2026-10-02",
             "date_basis": "story_date",
             "date_bounds": "inclusive",
             "observed_start": null,
@@ -1667,23 +1671,38 @@
             "observed_end_exclusive": true,
             "source": "explicit"
           },
-          "window_adjustment": null
+          "window_adjustment": {
+            "kind": "truncated",
+            "requested": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-03"
+            },
+            "served": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-02"
+            },
+            "held_back_date": "2026-10-03",
+            "held_back_dates": [
+              "2026-10-03"
+            ],
+            "reason": "current_date_snapshot_not_ready"
+          }
         },
         "data": [
           {
             "key": "cameoplus_political",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 35014,
-            "article_count": 65752,
-            "avg_article_count": 1.878,
+            "story_count": 35091,
+            "article_count": 65871,
+            "avg_article_count": 1.877,
             "min_article_count": 1,
             "max_article_count": 745,
-            "stories_with_events": 8404,
-            "story_only_count": 26610,
-            "linked_event_count": 8880,
+            "stories_with_events": 8403,
+            "story_only_count": 26688,
+            "linked_event_count": 8879,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.254,
+            "avg_linked_event_count": 0.253,
             "max_linked_event_count": 8,
             "stories_with_fatalities": 0,
             "fatalities": 0,
@@ -1700,19 +1719,19 @@
                 "max": 0.7182
               },
               "article_count": {
-                "total": 65752,
-                "avg": 1.878,
+                "total": 65871,
+                "avg": 1.877,
                 "min": 1,
                 "max": 745
               },
               "linked_events": {
                 "count": {
-                  "total": 8880,
-                  "avg": 0.254,
+                  "total": 8879,
+                  "avg": 0.253,
                   "min": 0,
                   "max": 8,
-                  "stories_with_events": 8404,
-                  "story_only_count": 26610
+                  "stories_with_events": 8403,
+                  "story_only_count": 26688
                 }
               },
               "fatalities": {
@@ -1726,17 +1745,17 @@
             "key": "cameoplus_crime",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 12998,
-            "article_count": 21580,
+            "story_count": 13035,
+            "article_count": 21641,
             "avg_article_count": 1.66,
             "min_article_count": 1,
             "max_article_count": 261,
-            "stories_with_events": 4244,
-            "story_only_count": 8754,
+            "stories_with_events": 4245,
+            "story_only_count": 8790,
             "linked_event_count": 4314,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.332,
-            "max_linked_event_count": 4,
+            "avg_linked_event_count": 0.331,
+            "max_linked_event_count": 3,
             "stories_with_fatalities": 5,
             "fatalities": 15,
             "fatality_story_rate": 0.0004,
@@ -1752,7 +1771,7 @@
                 "max": 0.6046
               },
               "article_count": {
-                "total": 21580,
+                "total": 21641,
                 "avg": 1.66,
                 "min": 1,
                 "max": 261
@@ -1760,11 +1779,11 @@
               "linked_events": {
                 "count": {
                   "total": 4314,
-                  "avg": 0.332,
+                  "avg": 0.331,
                   "min": 0,
-                  "max": 4,
-                  "stories_with_events": 4244,
-                  "story_only_count": 8754
+                  "max": 3,
+                  "stories_with_events": 4245,
+                  "story_only_count": 8790
                 }
               },
               "fatalities": {
@@ -1778,51 +1797,51 @@
             "key": "conflict_security",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 10475,
-            "article_count": 23426,
-            "avg_article_count": 2.236,
+            "story_count": 10507,
+            "article_count": 23505,
+            "avg_article_count": 2.237,
             "min_article_count": 1,
-            "max_article_count": 493,
+            "max_article_count": 497,
             "stories_with_events": 2170,
-            "story_only_count": 8305,
-            "linked_event_count": 2295,
+            "story_only_count": 8337,
+            "linked_event_count": 2294,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.219,
+            "avg_linked_event_count": 0.218,
             "max_linked_event_count": 8,
-            "stories_with_fatalities": 126,
-            "fatalities": 784,
-            "fatality_story_rate": 0.012,
+            "stories_with_fatalities": 125,
+            "fatalities": 783,
+            "fatality_story_rate": 0.0119,
             "country_count": 158,
             "region_count": 17,
             "avg_significance": 0.0954,
-            "max_significance": 0.6734,
+            "max_significance": 0.6743,
             "min_significance": 0.0753,
             "metrics": {
               "significance": {
                 "avg": 0.0954,
                 "min": 0.0753,
-                "max": 0.6734
+                "max": 0.6743
               },
               "article_count": {
-                "total": 23426,
-                "avg": 2.236,
+                "total": 23505,
+                "avg": 2.237,
                 "min": 1,
-                "max": 493
+                "max": 497
               },
               "linked_events": {
                 "count": {
-                  "total": 2295,
-                  "avg": 0.219,
+                  "total": 2294,
+                  "avg": 0.218,
                   "min": 0,
                   "max": 8,
                   "stories_with_events": 2170,
-                  "story_only_count": 8305
+                  "story_only_count": 8337
                 }
               },
               "fatalities": {
-                "stories": 126,
-                "rate": 0.012,
-                "total": 784
+                "stories": 125,
+                "rate": 0.0119,
+                "total": 783
               }
             }
           },
@@ -1830,14 +1849,14 @@
             "key": "cameoplus_economic",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 7069,
-            "article_count": 10874,
-            "avg_article_count": 1.538,
+            "story_count": 7081,
+            "article_count": 10896,
+            "avg_article_count": 1.539,
             "min_article_count": 1,
             "max_article_count": 171,
-            "stories_with_events": 1716,
-            "story_only_count": 5353,
-            "linked_event_count": 1761,
+            "stories_with_events": 1715,
+            "story_only_count": 5366,
+            "linked_event_count": 1760,
             "min_linked_event_count": 0,
             "avg_linked_event_count": 0.249,
             "max_linked_event_count": 6,
@@ -1856,19 +1875,19 @@
                 "max": 0.5589
               },
               "article_count": {
-                "total": 10874,
-                "avg": 1.538,
+                "total": 10896,
+                "avg": 1.539,
                 "min": 1,
                 "max": 171
               },
               "linked_events": {
                 "count": {
-                  "total": 1761,
+                  "total": 1760,
                   "avg": 0.249,
                   "min": 0,
                   "max": 6,
-                  "stories_with_events": 1716,
-                  "story_only_count": 5353
+                  "stories_with_events": 1715,
+                  "story_only_count": 5366
                 }
               },
               "fatalities": {
@@ -1882,14 +1901,14 @@
             "key": "cameoplus_infrastructure",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 5638,
-            "article_count": 7392,
+            "story_count": 5650,
+            "article_count": 7409,
             "avg_article_count": 1.311,
             "min_article_count": 1,
             "max_article_count": 49,
-            "stories_with_events": 1527,
-            "story_only_count": 4111,
-            "linked_event_count": 1558,
+            "stories_with_events": 1526,
+            "story_only_count": 4124,
+            "linked_event_count": 1557,
             "min_linked_event_count": 0,
             "avg_linked_event_count": 0.276,
             "max_linked_event_count": 3,
@@ -1908,19 +1927,19 @@
                 "max": 0.4247
               },
               "article_count": {
-                "total": 7392,
+                "total": 7409,
                 "avg": 1.311,
                 "min": 1,
                 "max": 49
               },
               "linked_events": {
                 "count": {
-                  "total": 1558,
+                  "total": 1557,
                   "avg": 0.276,
                   "min": 0,
                   "max": 3,
-                  "stories_with_events": 1527,
-                  "story_only_count": 4111
+                  "stories_with_events": 1526,
+                  "story_only_count": 4124
                 }
               },
               "fatalities": {
@@ -1934,13 +1953,13 @@
             "key": "cameoplus_environment",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 4358,
-            "article_count": 7240,
-            "avg_article_count": 1.661,
+            "story_count": 4370,
+            "article_count": 7254,
+            "avg_article_count": 1.66,
             "min_article_count": 1,
             "max_article_count": 126,
             "stories_with_events": 1004,
-            "story_only_count": 3354,
+            "story_only_count": 3366,
             "linked_event_count": 1051,
             "min_linked_event_count": 0,
             "avg_linked_event_count": 0.241,
@@ -1950,18 +1969,18 @@
             "fatality_story_rate": 0,
             "country_count": 169,
             "region_count": 17,
-            "avg_significance": 0.0899,
+            "avg_significance": 0.0898,
             "max_significance": 0.5259,
             "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": 0.0899,
+                "avg": 0.0898,
                 "min": 0.0753,
                 "max": 0.5259
               },
               "article_count": {
-                "total": 7240,
-                "avg": 1.661,
+                "total": 7254,
+                "avg": 1.66,
                 "min": 1,
                 "max": 126
               },
@@ -1972,7 +1991,7 @@
                   "min": 0,
                   "max": 5,
                   "stories_with_events": 1004,
-                  "story_only_count": 3354
+                  "story_only_count": 3366
                 }
               },
               "fatalities": {
@@ -1986,16 +2005,16 @@
             "key": "cameoplus_corporate",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 3462,
-            "article_count": 4977,
-            "avg_article_count": 1.438,
+            "story_count": 3468,
+            "article_count": 4984,
+            "avg_article_count": 1.437,
             "min_article_count": 1,
             "max_article_count": 46,
             "stories_with_events": 1590,
-            "story_only_count": 1872,
+            "story_only_count": 1878,
             "linked_event_count": 1605,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.464,
+            "avg_linked_event_count": 0.463,
             "max_linked_event_count": 2,
             "stories_with_fatalities": 0,
             "fatalities": 0,
@@ -2012,19 +2031,19 @@
                 "max": 0.418
               },
               "article_count": {
-                "total": 4977,
-                "avg": 1.438,
+                "total": 4984,
+                "avg": 1.437,
                 "min": 1,
                 "max": 46
               },
               "linked_events": {
                 "count": {
                   "total": 1605,
-                  "avg": 0.464,
+                  "avg": 0.463,
                   "min": 0,
                   "max": 2,
                   "stories_with_events": 1590,
-                  "story_only_count": 1872
+                  "story_only_count": 1878
                 }
               },
               "fatalities": {
@@ -2038,16 +2057,16 @@
             "key": "cameoplus_health",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 2353,
-            "article_count": 3093,
+            "story_count": 2361,
+            "article_count": 3102,
             "avg_article_count": 1.314,
             "min_article_count": 1,
             "max_article_count": 37,
             "stories_with_events": 426,
-            "story_only_count": 1927,
+            "story_only_count": 1935,
             "linked_event_count": 433,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.184,
+            "avg_linked_event_count": 0.183,
             "max_linked_event_count": 4,
             "stories_with_fatalities": 0,
             "fatalities": 0,
@@ -2064,7 +2083,7 @@
                 "max": 0.3949
               },
               "article_count": {
-                "total": 3093,
+                "total": 3102,
                 "avg": 1.314,
                 "min": 1,
                 "max": 37
@@ -2072,11 +2091,11 @@
               "linked_events": {
                 "count": {
                   "total": 433,
-                  "avg": 0.184,
+                  "avg": 0.183,
                   "min": 0,
                   "max": 4,
                   "stories_with_events": 426,
-                  "story_only_count": 1927
+                  "story_only_count": 1935
                 }
               },
               "fatalities": {
@@ -2090,33 +2109,33 @@
             "key": "cameoplus_technology",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 2103,
-            "article_count": 3815,
+            "story_count": 2108,
+            "article_count": 3823,
             "avg_article_count": 1.814,
             "min_article_count": 1,
             "max_article_count": 233,
             "stories_with_events": 435,
-            "story_only_count": 1668,
+            "story_only_count": 1673,
             "linked_event_count": 447,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.213,
+            "avg_linked_event_count": 0.212,
             "max_linked_event_count": 3,
             "stories_with_fatalities": 0,
             "fatalities": 0,
             "fatality_story_rate": 0,
             "country_count": 136,
             "region_count": 17,
-            "avg_significance": 0.0904,
+            "avg_significance": 0.0905,
             "max_significance": 0.5923,
             "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": 0.0904,
+                "avg": 0.0905,
                 "min": 0.0753,
                 "max": 0.5923
               },
               "article_count": {
-                "total": 3815,
+                "total": 3823,
                 "avg": 1.814,
                 "min": 1,
                 "max": 233
@@ -2124,11 +2143,11 @@
               "linked_events": {
                 "count": {
                   "total": 447,
-                  "avg": 0.213,
+                  "avg": 0.212,
                   "min": 0,
                   "max": 3,
                   "stories_with_events": 435,
-                  "story_only_count": 1668
+                  "story_only_count": 1673
                 }
               },
               "fatalities": {
@@ -2142,45 +2161,45 @@
             "key": "cameoplus_information",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 869,
-            "article_count": 1491,
+            "story_count": 871,
+            "article_count": 1495,
             "avg_article_count": 1.716,
             "min_article_count": 1,
             "max_article_count": 41,
-            "stories_with_events": 190,
-            "story_only_count": 679,
-            "linked_event_count": 195,
+            "stories_with_events": 189,
+            "story_only_count": 682,
+            "linked_event_count": 194,
             "min_linked_event_count": 0,
-            "avg_linked_event_count": 0.224,
+            "avg_linked_event_count": 0.223,
             "max_linked_event_count": 2,
             "stories_with_fatalities": 0,
             "fatalities": 0,
             "fatality_story_rate": 0,
             "country_count": 132,
             "region_count": 17,
-            "avg_significance": 0.0926,
+            "avg_significance": 0.0927,
             "max_significance": 0.4058,
             "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": 0.0926,
+                "avg": 0.0927,
                 "min": 0.0753,
                 "max": 0.4058
               },
               "article_count": {
-                "total": 1491,
+                "total": 1495,
                 "avg": 1.716,
                 "min": 1,
                 "max": 41
               },
               "linked_events": {
                 "count": {
-                  "total": 195,
-                  "avg": 0.224,
+                  "total": 194,
+                  "avg": 0.223,
                   "min": 0,
                   "max": 2,
-                  "stories_with_events": 190,
-                  "story_only_count": 679
+                  "stories_with_events": 189,
+                  "story_only_count": 682
                 }
               },
               "fatalities": {
@@ -2194,13 +2213,13 @@
             "key": "cameoplus_demographic",
             "group_by": "category",
             "latest_date": "2026-10-02",
-            "story_count": 702,
-            "article_count": 1051,
-            "avg_article_count": 1.497,
+            "story_count": 703,
+            "article_count": 1054,
+            "avg_article_count": 1.499,
             "min_article_count": 1,
             "max_article_count": 41,
             "stories_with_events": 121,
-            "story_only_count": 581,
+            "story_only_count": 582,
             "linked_event_count": 126,
             "min_linked_event_count": 0,
             "avg_linked_event_count": 0.179,
@@ -2210,18 +2229,18 @@
             "fatality_story_rate": 0,
             "country_count": 124,
             "region_count": 17,
-            "avg_significance": 0.0901,
+            "avg_significance": 0.0902,
             "max_significance": 0.4058,
             "min_significance": 0.0753,
             "metrics": {
               "significance": {
-                "avg": 0.0901,
+                "avg": 0.0902,
                 "min": 0.0753,
                 "max": 0.4058
               },
               "article_count": {
-                "total": 1051,
-                "avg": 1.497,
+                "total": 1054,
+                "avg": 1.499,
                 "min": 1,
                 "max": 41
               },
@@ -2232,7 +2251,7 @@
                   "min": 0,
                   "max": 3,
                   "stories_with_events": 121,
-                  "story_only_count": 581
+                  "story_only_count": 582
                 }
               },
               "fatalities": {
@@ -2297,7 +2316,7 @@
           "settled_at": "2026-09-30 04:06:55",
           "query_window": {
             "date_start": "2026-09-27",
-            "date_end": "2026-10-03",
+            "date_end": "2026-10-02",
             "date_basis": "story_date",
             "date_bounds": "inclusive",
             "observed_start": null,
@@ -2306,7 +2325,22 @@
             "observed_end_exclusive": true,
             "source": "explicit"
           },
-          "window_adjustment": null,
+          "window_adjustment": {
+            "kind": "truncated",
+            "requested": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-03"
+            },
+            "served": {
+              "date_start": "2026-09-27",
+              "date_end": "2026-10-02"
+            },
+            "held_back_date": "2026-10-03",
+            "held_back_dates": [
+              "2026-10-03"
+            ],
+            "reason": "current_date_snapshot_not_ready"
+          },
           "coverage": {
             "start": "2026-03-08",
             "end": "2026-10-03",
@@ -2320,53 +2354,57 @@
               "2026-10-01",
               "2026-10-02"
             ],
-            "missing_dates": [],
-            "geography_missing_dates": [],
-            "awaiting_dates": [
-              "2026-10-03"
+            "missing_dates": [
+              {
+                "date": "2026-10-03",
+                "reason": "snapshot_unavailable",
+                "retryable": true
+              }
             ],
-            "window_complete": true
+            "geography_missing_dates": [],
+            "awaiting_dates": [],
+            "window_complete": false
           }
         },
         "data": [
           {
             "key": "cameoplus_political",
-            "count": 35014,
-            "article_count": 65752,
-            "avg_article_count": 1.878,
+            "count": 35091,
+            "article_count": 65871,
+            "avg_article_count": 1.877,
             "metrics": {
               "significance": 0.0921,
-              "linked_events_count": 0.254,
+              "linked_events_count": 0.253,
               "fatalities": 0
             }
           },
           {
             "key": "cameoplus_crime",
-            "count": 12998,
-            "article_count": 21580,
+            "count": 13035,
+            "article_count": 21641,
             "avg_article_count": 1.66,
             "metrics": {
               "significance": 0.091,
-              "linked_events_count": 0.332,
+              "linked_events_count": 0.331,
               "fatalities": 15
             }
           },
           {
             "key": "conflict_security",
-            "count": 10475,
-            "article_count": 23426,
-            "avg_article_count": 2.236,
+            "count": 10507,
+            "article_count": 23505,
+            "avg_article_count": 2.237,
             "metrics": {
               "significance": 0.0954,
-              "linked_events_count": 0.219,
-              "fatalities": 784
+              "linked_events_count": 0.218,
+              "fatalities": 783
             }
           },
           {
             "key": "cameoplus_economic",
-            "count": 7069,
-            "article_count": 10874,
-            "avg_article_count": 1.538,
+            "count": 7081,
+            "article_count": 10896,
+            "avg_article_count": 1.539,
             "metrics": {
               "significance": 0.0881,
               "linked_events_count": 0.249,
@@ -2375,8 +2413,8 @@
           },
           {
             "key": "cameoplus_infrastructure",
-            "count": 5638,
-            "article_count": 7392,
+            "count": 5650,
+            "article_count": 7409,
             "avg_article_count": 1.311,
             "metrics": {
               "significance": 0.0848,
@@ -2386,66 +2424,66 @@
           },
           {
             "key": "cameoplus_environment",
-            "count": 4358,
-            "article_count": 7240,
-            "avg_article_count": 1.661,
+            "count": 4370,
+            "article_count": 7254,
+            "avg_article_count": 1.66,
             "metrics": {
-              "significance": 0.0899,
+              "significance": 0.0898,
               "linked_events_count": 0.241,
               "fatalities": 0
             }
           },
           {
             "key": "cameoplus_corporate",
-            "count": 3462,
-            "article_count": 4977,
-            "avg_article_count": 1.438,
+            "count": 3468,
+            "article_count": 4984,
+            "avg_article_count": 1.437,
             "metrics": {
               "significance": 0.0876,
-              "linked_events_count": 0.464,
+              "linked_events_count": 0.463,
               "fatalities": 0
             }
           },
           {
             "key": "cameoplus_health",
-            "count": 2353,
-            "article_count": 3093,
+            "count": 2361,
+            "article_count": 3102,
             "avg_article_count": 1.314,
             "metrics": {
               "significance": 0.0853,
-              "linked_events_count": 0.184,
+              "linked_events_count": 0.183,
               "fatalities": 0
             }
           },
           {
             "key": "cameoplus_technology",
-            "count": 2103,
-            "article_count": 3815,
+            "count": 2108,
+            "article_count": 3823,
             "avg_article_count": 1.814,
             "metrics": {
-              "significance": 0.0904,
-              "linked_events_count": 0.213,
+              "significance": 0.0905,
+              "linked_events_count": 0.212,
               "fatalities": 0
             }
           },
           {
             "key": "cameoplus_information",
-            "count": 869,
-            "article_count": 1491,
+            "count": 871,
+            "article_count": 1495,
             "avg_article_count": 1.716,
             "metrics": {
-              "significance": 0.0926,
-              "linked_events_count": 0.224,
+              "significance": 0.0927,
+              "linked_events_count": 0.223,
               "fatalities": 0
             }
           },
           {
             "key": "cameoplus_demographic",
-            "count": 702,
-            "article_count": 1051,
-            "avg_article_count": 1.497,
+            "count": 703,
+            "article_count": 1054,
+            "avg_article_count": 1.499,
             "metrics": {
-              "significance": 0.0901,
+              "significance": 0.0902,
               "linked_events_count": 0.179,
               "fatalities": 0
             }

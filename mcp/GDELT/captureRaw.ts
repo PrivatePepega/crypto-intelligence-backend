@@ -57,7 +57,10 @@ const OUT_DIR = "mcp/GDELT/raw";
 const capture = async (
   tool: string,
   input: Record<string, unknown>,
-  result: Awaited<ReturnType<typeof fetchSearchEvents>>,
+  // Typed loosely because every fetcher returns the same RawGdeltResult shape;
+  // `ReturnType<typeof fetchSearchEvents>` was a stand-in that broke as soon as
+  // a differently-typed fetcher was passed in.
+  result: { isError?: boolean; structuredContent?: unknown },
   file = tool,
 ): Promise<void> => {
   await writeFile(

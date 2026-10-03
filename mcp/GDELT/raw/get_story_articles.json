@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T01:02:06.807Z",
+  "generatedAt": "2026-10-03T01:23:39.476Z",
   "tool": "get_story_articles",
   "args": {
     "story_id": "8608afb1d928"
@@ -38,12 +38,12 @@
                   "children": [
                     {
                       "type": "Badge",
-                      "label": "free · 18%",
+                      "label": "free · 19%",
                       "variant": "outline"
                     },
                     {
                       "cssClass": "text-xs",
-                      "content": "816 left",
+                      "content": "807 left",
                       "type": "Muted"
                     }
                   ]
