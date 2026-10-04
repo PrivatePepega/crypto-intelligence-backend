@@ -1,0 +1,166 @@
+{
+  "label": "markets, importance=high",
+  "importance": "high",
+  "capturedAt": "2026-10-04T21:40:58.900Z",
+  "elapsedMs": 748,
+  "count": 5,
+  "quota": {
+    "plan": "free",
+    "delaySeconds": 120,
+    "requestLimit": 500,
+    "quotaPeriod": "week",
+    "dailyLimit": null,
+    "weeklyLimit": 500,
+    "remaining": 414,
+    "resetAt": "2026-10-05T00:00:00.000Z",
+    "calendarAccess": false,
+    "newsCategories": [
+      "markets"
+    ],
+    "stale": false,
+    "archive": {
+      "retentionDays": 365,
+      "replayDays": 7,
+      "earliest": 1789044469000,
+      "latest": 1791099337000,
+      "count": 98
+    }
+  },
+  "nextCursor": null,
+  "response": {
+    "ok": true,
+    "count": 5,
+    "language": "en",
+    "request_id": "6ebc49c1-1e96-4945-a251-124fc5b45f0c",
+    "next_cursor": null,
+    "archive": {
+      "retentionDays": 365,
+      "replayDays": 7,
+      "earliest": 1789044469000,
+      "latest": 1791099337000,
+      "count": 98
+    },
+    "data": [
+      {
+        "id": "wn_2e6fcd581f946d044df00435",
+        "headline": "Iran agrees to suspend uranium enrichment in exchange for US sanctions relief.",
+        "excerpt": "",
+        "publishedAt": 1790615734000,
+        "sourcePublishedAt": null,
+        "provenance": {
+          "publisher": "Wabble News",
+          "timestampBasis": "wabble_channel",
+          "upstreamSource": "not_disclosed"
+        },
+        "imageUrl": "/assets/news/3427a8322415ec1749928be06b9f4aa20a8d889beb0969d138d940b8b4b53b29.jpg",
+        "category": "markets",
+        "importance": "high",
+        "important": true,
+        "imageRights": {
+          "status": "unknown",
+          "commercialUse": null
+        },
+        "detectedAt": 1790615798053,
+        "updatedAt": 1790615798053,
+        "availableAt": 1790615854000,
+        "imageUrlAbsolute": "https://wabble.news/assets/news/3427a8322415ec1749928be06b9f4aa20a8d889beb0969d138d940b8b4b53b29.jpg"
+      },
+      {
+        "id": "wn_8918a310f8cbae2671a4b605",
+        "headline": "U.S. Treasury Secretary Bessent says interest rates should decrease following the conflict.",
+        "excerpt": "",
+        "publishedAt": 1789993132000,
+        "sourcePublishedAt": null,
+        "provenance": {
+          "publisher": "Wabble News",
+          "timestampBasis": "wabble_channel",
+          "upstreamSource": "not_disclosed"
+        },
+        "imageUrl": "/assets/news/8e55e7235a7263017793281b0d12770e840111fea45e11057048eca351a02ced.jpg",
+        "category": "markets",
+        "importance": "high",
+        "important": true,
+        "imageRights": {
+          "status": "unknown",
+          "commercialUse": null
+        },
+        "detectedAt": 1789993137088,
+        "updatedAt": 1789993178713,
+        "availableAt": 1789993252000,
+        "imageUrlAbsolute": "https://wabble.news/assets/news/8e55e7235a7263017793281b0d12770e840111fea45e11057048eca351a02ced.jpg"
+      },
+      {
+        "id": "wn_8656bacf995a3ff5f6c56669",
+        "headline": "President Trump says the war with Iran will end soon.",
+        "excerpt": "",
+        "publishedAt": 1789762209000,
+        "sourcePublishedAt": null,
+        "provenance": {
+          "publisher": "Wabble News",
+          "timestampBasis": "wabble_channel",
+          "upstreamSource": "not_disclosed"
+        },
+        "imageUrl": "/assets/news/0ef7442ec23ac0141e90592afd0e839eca2357288f2eaa1e5bed5bbf4ceeefa1.jpg",
+        "category": "markets",
+        "importance": "high",
+        "important": true,
+        "imageRights": {
+          "status": "unknown",
+          "commercialUse": null
+        },
+        "detectedAt": 1789768589472,
+        "updatedAt": 1789836168049,
+        "availableAt": 1789768589472,
+        "imageUrlAbsolute": "https://wabble.news/assets/news/0ef7442ec23ac0141e90592afd0e839eca2357288f2eaa1e5bed5bbf4ceeefa1.jpg"
+      },
+      {
+        "id": "wn_25a277423868f9c1b6f77fe9",
+        "headline": "UK government urges households to prepare for potential war with Russia, BBC reports.",
+        "excerpt": "",
+        "publishedAt": 1789755473000,
+        "sourcePublishedAt": null,
+        "provenance": {
+          "publisher": "Wabble News",
+          "timestampBasis": "wabble_channel",
+          "upstreamSource": "not_disclosed"
+        },
+        "imageUrl": "/assets/news/9864a330bbf882ee4f3be04d08af7ad9c543d2ce2db14e396a0cdeb09f17fb65.jpg",
+        "category": "markets",
+        "importance": "high",
+        "important": true,
+        "imageRights": {
+          "status": "unknown",
+          "commercialUse": null
+        },
+        "detectedAt": 1789768589472,
+        "updatedAt": 1789836168049,
+        "availableAt": 1789768589472,
+        "imageUrlAbsolute": "https://wabble.news/assets/news/9864a330bbf882ee4f3be04d08af7ad9c543d2ce2db14e396a0cdeb09f17fb65.jpg"
+      },
+      {
+        "id": "wn_5a70e8e462d5a70db553b814",
+        "headline": "President Trump says the war with Iran will conclude very soon.",
+        "excerpt": "",
+        "publishedAt": 1789206385000,
+        "sourcePublishedAt": 1789206385000,
+        "provenance": {
+          "publisher": "Wabble News",
+          "timestampBasis": "feed_timestamp",
+          "upstreamSource": "not_disclosed"
+        },
+        "imageUrl": "/assets/news/9184290ffd293058a2192e9583f34e69cba2dacca6d7d019803bc691b0b9d3f2.jpg",
+        "category": "markets",
+        "importance": "high",
+        "important": true,
+        "imageRights": {
+          "status": "unknown",
+          "commercialUse": null
+        },
+        "detectedAt": 1789768587393,
+        "updatedAt": 1789836165619,
+        "availableAt": 1789768587393,
+        "imageUrlAbsolute": "https://wabble.news/assets/news/9184290ffd293058a2192e9583f34e69cba2dacca6d7d019803bc691b0b9d3f2.jpg"
+      }
+    ]
+  }
+}
