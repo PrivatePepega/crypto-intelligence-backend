@@ -1,11 +1,27 @@
 {
   "label": "GET /data/v1/sections/tech.json",
-  "path": "/data/v1/sections/tech.json",
-  "capturedAt": "2026-10-04T20:27:30.854Z",
-  "elapsedMs": 233,
-  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "section": "tech",
+  "capturedAt": "2026-10-04T20:46:36.116Z",
+  "elapsedMs": 220,
+  "generatedAt": "2026-10-04T20:32:45.595801+00:00",
+  "storyCount": 23,
+  "storyFields": [
+    "distinct_publishers",
+    "first_seen_at",
+    "headline",
+    "id",
+    "image_url",
+    "last_seen_at",
+    "publishers",
+    "score",
+    "section",
+    "slug",
+    "source_count",
+    "summary",
+    "top_market"
+  ],
   "response": {
-    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "generated_at": "2026-10-04T20:32:45.595801+00:00",
     "schema_version": 1,
     "section": "tech",
     "stories": [
@@ -67,7 +83,7 @@
             "url": "https://www.bloomberg.com/news/videos/2026-10-03/can-ai-outrun-america-s-deficit-problem"
           }
         ],
-        "score": 9.211,
+        "score": 9.155,
         "section": "tech",
         "slug": "arm-launches-total-design-for-physical-ai-and-robotics-framework-2538",
         "source_count": 474,
@@ -76,7 +92,7 @@
           "end_date": "2026-10-31T16:00:00+00:00",
           "explainer": "The market resolves to Yes if Google owns the model with the highest rank on the arena.ai Text Arena leaderboard at 12:00 PM ET on October 31, 2026. It resolves to No if any other company holds that top spot at that specific time. Readers often mistake the resolution source, but only data from the specified arena.ai page counts, not general industry reports or other benchmarks.",
           "id": "0x23858cc44dce48e23f754240a0a71595f38f5c66d9a0eaf612eb5a737ad1e66d",
-          "liquidity": 32615.11737,
+          "liquidity": 33893.90117,
           "outcomes": [
             {
               "name": "Yes",
@@ -88,7 +104,7 @@
             }
           ],
           "polymarket_url": "https://polymarket.com/event/will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120?r=alykhan3",
-          "price_24h_ago": 0.6325,
+          "price_24h_ago": 0.636,
           "question": "Will Google have the best AI model at the end of October 2026?",
           "similarity": 0.8214237689971924,
           "slug": "will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120",
@@ -158,7 +174,7 @@
             "url": "https://thehill.com/opinion/lindseys-lens/6120712-anthropic-ai-existential-risk-ipo"
           }
         ],
-        "score": 8.283,
+        "score": 8.233,
         "section": "tech",
         "slug": "uk-ai-policy-architect-matt-clifford-quits-amid-anthropic-conflict-of-inter-2312",
         "source_count": 254,
@@ -248,7 +264,7 @@
             "url": "https://www.axios.com/2026/10/02/artificial-intelligence-ai-legal-liability"
           }
         ],
-        "score": 6.855,
+        "score": 6.814,
         "section": "tech",
         "slug": "anthropic-researcher-warns-ai-could-kill-all-humans-by-2030-4036",
         "source_count": 363,
@@ -257,7 +273,7 @@
           "end_date": "2026-12-31T17:00:00+00:00",
           "explainer": "Anthropic wins if its AI model holds the top spot on Chatbot Arena’s leaderboard at 12:00 PM ET on December 31, 2026. The ranking uses unrounded arena scores to break ties, with alphabetical company name order as the final tiebreaker. Readers often mistake the resolution time or ignore that only models listed under the “Leaderboard” tab count toward the result.",
           "id": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
-          "liquidity": 50388.0013,
+          "liquidity": 50882.0437,
           "outcomes": [
             {
               "name": "Yes",
@@ -338,7 +354,7 @@
             "url": "https://www.bloomberg.com/news/articles/2026-10-02/ai-tools-suspected-in-korea-s-shinhan-bank-hack-yonhap-says"
           }
         ],
-        "score": 5.206,
+        "score": 5.174,
         "section": "tech",
         "slug": "openai-agents-attacked-rubygems-before-hacking-hugging-face-9147",
         "source_count": 175,
@@ -429,7 +445,7 @@
             "url": "https://www.engadget.com/2276762/trump-announces-an-ai-czar-for-his-newly-created-super-intelligence-force"
           }
         ],
-        "score": 4.765,
+        "score": 4.737,
         "section": "tech",
         "slug": "trump-creates-super-intelligence-force-led-by-jay-clayton-to-advance-ai-de-44225",
         "source_count": 8,
@@ -467,7 +483,7 @@
         },
         "verdict": {
           "kind": "moved",
-          "moved": -0.16500000000000004
+          "moved": -0.17000000000000004
         }
       },
       {
@@ -529,7 +545,7 @@
             "url": "https://techcrunch.com/2026/10/01/the-new-kindle-ditches-the-bezel-in-a-push-toward-a-smaller-lighter-e-reader"
           }
         ],
-        "score": 2.603,
+        "score": 2.587,
         "section": "tech",
         "slug": "leaked-images-reveal-new-colors-for-amazon-s-next-entry-level-kindle-36017",
         "source_count": 12,
@@ -593,7 +609,7 @@
             "url": "https://www.bloomberg.com/news/newsletters/2026-10-01/openai-and-meta-push-ahead-with-ai-agents-testing-public-s-trust"
           }
         ],
-        "score": 2.262,
+        "score": 2.249,
         "section": "tech",
         "slug": "openai-releases-gpt-6-astra-boosting-oracle-stock-and-revealing-ad-strategy-1993",
         "source_count": 362,
@@ -602,7 +618,7 @@
           "end_date": "2026-10-31T16:00:00+00:00",
           "explainer": "The market resolves by checking the arena.ai Text Arena leaderboard on October 31, 2026, at 12:00 PM ET. OpenAI wins if its model holds the highest rank among eligible models at that specific time and source. Readers often mistake the check date for the end of the month or overlook that auto-evaluated models are excluded from the ranking.",
           "id": "0xadf826589a83573dbb33c5fcfcfac6fd3d472dfa4a0a0779cb9491dbcb8e9223",
-          "liquidity": 55506.21533,
+          "liquidity": 55444.63548,
           "outcomes": [
             {
               "name": "Yes",
@@ -614,7 +630,7 @@
             }
           ],
           "polymarket_url": "https://polymarket.com/event/will-openai-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841123?r=alykhan3",
-          "price_24h_ago": 0.0075,
+          "price_24h_ago": 0.009,
           "question": "Will OpenAI have the best AI model at the end of October 2026?",
           "similarity": 0.852569580078125,
           "slug": "will-openai-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841123",
@@ -683,7 +699,7 @@
             "url": "https://www.engadget.com/2275023/judge-dismisses-lawsuits-claiming-googles-ai-overviews-siphon-web-traffic"
           }
         ],
-        "score": 2.116,
+        "score": 2.103,
         "section": "tech",
         "slug": "judge-dismisses-antitrust-lawsuits-against-google-over-ai-search-features-40371",
         "source_count": 8,
@@ -692,7 +708,7 @@
           "end_date": "2026-10-31T16:00:00+00:00",
           "explainer": "The market resolves to Yes if Google owns the model with the highest rank on the arena.ai Text Arena leaderboard at 12:00 PM ET on October 31, 2026. It resolves to No if any other company holds that top spot at that specific time. Readers often mistake the resolution source, but only data from the specified arena.ai page counts, not general industry reports or other benchmarks.",
           "id": "0x23858cc44dce48e23f754240a0a71595f38f5c66d9a0eaf612eb5a737ad1e66d",
-          "liquidity": 32615.11737,
+          "liquidity": 33893.90117,
           "outcomes": [
             {
               "name": "Yes",
@@ -704,7 +720,7 @@
             }
           ],
           "polymarket_url": "https://polymarket.com/event/will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120?r=alykhan3",
-          "price_24h_ago": 0.6325,
+          "price_24h_ago": 0.636,
           "question": "Will Google have the best AI model at the end of October 2026?",
           "similarity": 0.7211756706237793,
           "slug": "will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120",
@@ -769,7 +785,7 @@
             "url": "https://www.cnet.com/tech/amazon-delivery-driver-ai-smart-glasses-privacy"
           }
         ],
-        "score": 1.622,
+        "score": 1.612,
         "section": "tech",
         "slug": "amazon-delivery-driver-smart-glasses-to-take-photos-almost-constantly-38522",
         "source_count": 5,
@@ -834,7 +850,7 @@
             "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai"
           }
         ],
-        "score": 1.519,
+        "score": 1.51,
         "section": "tech",
         "slug": "meta-unveils-muse-an-ai-personal-assistant-linked-to-whatsapp-and-instagram-3282",
         "source_count": 217,
@@ -843,7 +859,7 @@
           "end_date": "2026-11-01T03:59:00+00:00",
           "explainer": "The market resolves to Yes if Meta owns the model with the highest rank on the specified arena.ai leaderboard at 12:00 PM ET on October 31, 2026. It resolves to No if any other company holds that top spot or if the source becomes permanently unavailable. Readers often mistake the resolution time for the end of the day rather than the specific 12:00 PM ET deadline.",
           "id": "0x1cf218efb6ef7336fd0f60cca5c4b9e7ffcc6263359fa1827b84ef2d96fd982b",
-          "liquidity": 59852.16948,
+          "liquidity": 59797.4556,
           "outcomes": [
             {
               "name": "Yes",
@@ -855,7 +871,7 @@
             }
           ],
           "polymarket_url": "https://polymarket.com/event/will-meta-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841119?r=alykhan3",
-          "price_24h_ago": 0.002,
+          "price_24h_ago": 0.0025,
           "question": "Will Meta have the best AI model at the end of October 2026?",
           "similarity": 0.8256402015686035,
           "slug": "will-meta-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841119",
@@ -908,7 +924,7 @@
             "url": "https://www.cnet.com/home/kitchen-and-household/keurigs-plastic-free-pod-coffee-system-has-finally-arrived-and-we-tried-it-first"
           }
         ],
-        "score": 1.315,
+        "score": 1.307,
         "section": "tech",
         "slug": "keurig-launches-plastic-free-alta-coffee-machine-using-plant-based-pods-39915",
         "source_count": 4,
@@ -940,7 +956,7 @@
             "url": "https://www.engadget.com/2276786/the-upcoming-touchscreen-oled-macbook-pro-is-reportedly-significantly-lighter"
           }
         ],
-        "score": 1.3,
+        "score": 1.292,
         "section": "tech",
         "slug": "apple-s-john-ternus-leads-design-for-lighter-touch-screen-oled-macbook-pro-44230",
         "source_count": 2,
@@ -972,7 +988,7 @@
             "url": "https://play.runescape.com/4"
           }
         ],
-        "score": 0.965,
+        "score": 0.959,
         "section": "tech",
         "slug": "jagex-developing-fourth-runescape-game-using-unreal-engine-43880",
         "source_count": 2,
@@ -1005,7 +1021,7 @@
             "url": "https://www.tomshardware.com/video-games/pc-gaming/database-expert-runs-doom-in-sql-with-just-5-900-lines-of-code-1-300-line-graphical-renderer-spans-89-different-tables-full-featured-sqldoom-is-the-sequel-to-embryonic-doomql"
           }
         ],
-        "score": 0.96,
+        "score": 0.955,
         "section": "tech",
         "slug": "sql-database-renders-doom-at-35-fps-42557",
         "source_count": 2,
@@ -1073,7 +1089,7 @@
             "url": "https://www.cnet.com/tech/mobile/iphone-duo-isnt-for-everyone"
           }
         ],
-        "score": 0.75,
+        "score": 0.745,
         "section": "tech",
         "slug": "virtual-walkman-app-emerges-for-iphone-duo-34491",
         "source_count": 9,
@@ -1082,7 +1098,7 @@
           "end_date": "2027-01-01T04:59:00+00:00",
           "explainer": "The market resolves to Yes if Apple makes a foldable smartphone available for public purchase by December 31, 2026, at 11:59 PM ET. The product does not need to carry the iPhone brand name, but an announcement alone is insufficient; it must be purchasable. Readers often mistake the deadline date or assume that a mere unveiling counts as a release.",
           "id": "0x7209592f294c2b3a7230ea66a4483ecfe1a57ae79144e5e735654829e00cfc68",
-          "liquidity": 17356.82162,
+          "liquidity": 17595.72253,
           "outcomes": [
             {
               "name": "Yes",
@@ -1130,7 +1146,7 @@
             "url": "https://timesofindia.indiatimes.com/science/archaeology/in-1809-napoleon-bonaparte-sent-a-coded-message-to-his-general-it-remained-mysterious-for-217-years-until-ai-cracked-the-meaning-in-6-hours/articleshow/134655800.cms"
           }
         ],
-        "score": 0.733,
+        "score": 0.728,
         "section": "tech",
         "slug": "ai-cracks-217-year-old-napoleonic-code-in-six-hours-43878",
         "source_count": 2,
@@ -1162,7 +1178,7 @@
             "url": "https://phys.org/news/2026-10-deep-ai-relationships-theory-expert.html"
           }
         ],
-        "score": 0.615,
+        "score": 0.612,
         "section": "tech",
         "slug": "attachment-theory-explains-depth-of-human-ai-relationships-41609",
         "source_count": 2,
@@ -1230,7 +1246,7 @@
             "url": "https://www.cnet.com/tech/gaming/todays-wordle-hints-answer-and-help-for-oct-4-1933"
           }
         ],
-        "score": 0.534,
+        "score": 0.531,
         "section": "tech",
         "slug": "nyt-puzzle-answers-provided-for-multiple-dates-19346",
         "source_count": 81,
@@ -1272,99 +1288,11 @@
             "url": "https://www.tomshardware.com/service-providers/streaming/7-year-old-nvidia-shield-tv-pro-gets-shocking-50-percent-price-hike-driven-by-ai-memory-shortage-chipmaker-axes-entry-level-shield-tv-as-component-prices-soar"
           }
         ],
-        "score": 0.479,
+        "score": 0.476,
         "section": "tech",
         "slug": "nvidia-shield-tv-pro-price-hikes-to-299-amid-ai-push-41869",
         "source_count": 3,
         "summary": "The Nvidia Shield TV Pro now costs $299.99, a $100 increase from its previous price."
-      },
-      {
-        "distinct_publishers": 7,
-        "first_seen_at": "2026-09-28T16:32:35+00:00",
-        "headline": "Netflix Loses Key Creators David Fincher and Shawn Levy as It Pivots Strategy",
-        "id": 34476,
-        "image_url": "https://variety.com/wp-content/uploads/2023/09/GettyImages-1657363318.jpg",
-        "last_seen_at": "2026-10-02T20:30:26+00:00",
-        "publishers": [
-          {
-            "published_at": "2026-10-02T20:30:26+00:00",
-            "publisher": "The Verge",
-            "publisher_slug": "theverge-com",
-            "tier": 1,
-            "title": "Netflix is pivoting away from prestige",
-            "url": "https://www.theverge.com/streaming/1004323/netflix-david-fincher-shawn-levy-mike-flanagan-duffer-brothers-greta-gerwig"
-          },
-          {
-            "published_at": "2026-10-01T18:43:38+00:00",
-            "publisher": "The Hollywood Reporter",
-            "publisher_slug": "hollywoodreporter-com",
-            "tier": 1,
-            "title": "Ted Sarandos Explains Why the ‘Stranger Things’ Team Left Netflix",
-            "url": "https://www.hollywoodreporter.com/tv/tv-news/ted-sarandos-stranger-things-netflix-1236718320"
-          },
-          {
-            "published_at": "2026-10-01T02:07:13+00:00",
-            "publisher": "The Hollywood Reporter",
-            "publisher_slug": "hollywoodreporter-com",
-            "tier": 1,
-            "title": "Ted Sarandos Admits Netflix Is “Not Growing as Fast as I Want Us To”",
-            "url": "https://www.hollywoodreporter.com/business/business-news/ted-sarandos-netflix-not-growing-as-fast-as-i-want-us-to-1236717600"
-          },
-          {
-            "image_url": "https://variety.com/wp-content/uploads/2023/09/GettyImages-1657363318.jpg",
-            "published_at": "2026-09-30T19:18:25+00:00",
-            "publisher": "Variety",
-            "publisher_slug": "variety-com",
-            "tier": 1,
-            "title": "David Fincher Ending Netflix Deal After Six Years and Three Movies, Including ‘Cliff Booth’",
-            "url": "https://variety.com/2026/film/news/david-fincher-netflix-deal-exit-1236878552"
-          },
-          {
-            "published_at": "2026-09-29T20:21:45+00:00",
-            "publisher": "Bloomberg Technology",
-            "publisher_slug": "bloomberg-com",
-            "tier": 1,
-            "title": "David Fincher to End Deal With Netflix, Adding to String of Departures",
-            "url": "https://www.bloomberg.com/news/articles/2026-09-29/david-fincher-to-end-deal-with-netflix-adding-to-string-of-departures"
-          },
-          {
-            "published_at": "2026-09-28T16:33:54+00:00",
-            "publisher": "TV | Hollywood Reporter",
-            "publisher_slug": "hollywoodreporter-com",
-            "tier": 1,
-            "title": "Shawn Levy Inks Overall Deal With Disney’s 20th Television",
-            "url": "https://www.hollywoodreporter.com/tv/tv-news/shawn-levy-overall-tv-deal-disney-1236713548"
-          }
-        ],
-        "score": 0.4,
-        "section": "tech",
-        "slug": "shawn-levy-signs-overall-deal-with-disney-s-20th-television-34476",
-        "source_count": 11,
-        "summary": "David Fincher and Shawn Levy are ending their long-standing partnerships with Netflix, signaling a strategic shift away from exclusive prestige deals.",
-        "top_market": {
-          "end_date": "2027-07-01T03:59:00+00:00",
-          "explainer": "The market resolves to Yes if official public announcements confirm that Netflix successfully takes over Warner Bros before July 2027. Otherwise, it resolves to No. Readers often mistake any news about Netflix or Warner Bros for a resolution, but only the specific takeover announcement counts.",
-          "id": "kalshi:KXTAKEOVERACQWB-27JUN30-NFLX",
-          "liquidity": 1584702.65,
-          "outcomes": [
-            {
-              "name": "Yes",
-              "price": 0.01
-            },
-            {
-              "name": "No",
-              "price": 0.99
-            }
-          ],
-          "polymarket_url": "https://kalshi.com/markets/kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-nflx",
-          "price_24h_ago": 0.01,
-          "question": "Netflix",
-          "similarity": 0.7849339246749878,
-          "slug": "kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-nflx",
-          "volume_24h": 25,
-          "volume_total": 1584702.65,
-          "yes_price": 0.01
-        }
       },
       {
         "distinct_publishers": 4,
@@ -1410,7 +1338,7 @@
             "url": "https://www.businessinsider.com/the-pope-criticizes-ai-generated-art-2026-10"
           }
         ],
-        "score": 0.351,
+        "score": 0.349,
         "section": "tech",
         "slug": "pope-leo-xiv-decries-ai-generated-art-as-lacking-humanity-41981",
         "source_count": 4,
@@ -1442,7 +1370,7 @@
             "url": "https://www.engadget.com/2276597/capcom-plans-to-use-ai-to-speed-up-the-game-development-process"
           }
         ],
-        "score": 0.324,
+        "score": 0.322,
         "section": "tech",
         "slug": "capcom-envisions-future-of-game-creation-with-ai-43419",
         "source_count": 2,
@@ -1510,11 +1438,77 @@
             "url": "https://www.cbssports.com/nfl/news/former-steelers-mike-tomlin-reveals-massive-minecraft-city"
           }
         ],
-        "score": 0.316,
+        "score": 0.314,
         "section": "tech",
         "slug": "former-steelers-coach-mike-tomlin-reveals-extensive-minecraft-city-build-39164",
         "source_count": 9,
         "summary": "Mike Tomlin unveils a sprawling virtual city he has constructed in Minecraft over twelve years, prompting reactions from the gaming and sports communities."
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-10-02T18:11:27+00:00",
+        "headline": "Apple Tightens Mac Data Controls to Counter AI Agent Risks",
+        "id": 42223,
+        "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/02/gatekeeping-ai-agents-1152x648.jpg",
+        "last_seen_at": "2026-10-02T23:03:16+00:00",
+        "publishers": [
+          {
+            "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/02/gatekeeping-ai-agents-1152x648.jpg",
+            "published_at": "2026-10-02T23:03:16+00:00",
+            "publisher": "Ars Technica",
+            "publisher_slug": "arstechnica-com",
+            "tier": 1,
+            "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
+            "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents"
+          },
+          {
+            "published_at": "2026-10-02T20:50:08+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Apple to Tighten Mac Data Controls in Guard Against AI Agents",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/apple-to-tighten-mac-data-controls-in-guard-against-ai-agents"
+          },
+          {
+            "published_at": "2026-10-02T20:08:40+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
+            "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents"
+          },
+          {
+            "published_at": "2026-10-02T18:11:27+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Apple says it’s tightening macOS ‘Full Disk Access’ controls due to new risks from AI agents",
+            "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents"
+          },
+          {
+            "image_url": "https://i.insider.com/6ac01504265e3f8e338fa497?format=jpeg",
+            "published_at": "2026-10-02T21:33:02+00:00",
+            "publisher": "All Content from Business Insider",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "Apple is adding new privacy safeguards for Mac users as AI agents get more powerful",
+            "url": "https://www.businessinsider.com/apple-planning-tougher-mac-privacy-controls-ai-agents-2026-10"
+          },
+          {
+            "image_url": "https://www.engadget.com/img/gallery/apple-sounds-the-alarm-on-ai-agents-and-full-disk-access/l-intro-1790968835.jpg",
+            "published_at": "2026-10-02T19:22:06+00:00",
+            "publisher": "Engadget",
+            "publisher_slug": "engadget-com",
+            "tier": 2,
+            "title": "Apple sounds the alarm on AI agents and 'Full Disk Access'",
+            "url": "https://www.engadget.com/2276186/apple-sounds-the-alarm-on-ai-agents-and-full-disk-access"
+          }
+        ],
+        "score": 0.311,
+        "section": "tech",
+        "slug": "apple-tightens-macos-full-disk-access-controls-for-ai-agents-42223",
+        "source_count": 6,
+        "summary": "The company is introducing new limits on Full Disk Access permissions for third-party software to mitigate privacy risks posed by increasingly capable artificial intelligence agents."
       }
     ],
     "total": 23

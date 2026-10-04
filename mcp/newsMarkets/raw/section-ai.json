@@ -1,11 +1,28 @@
 {
   "label": "GET /data/v1/sections/ai.json",
-  "path": "/data/v1/sections/ai.json",
-  "capturedAt": "2026-10-04T20:27:34.102Z",
-  "elapsedMs": 233,
-  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "section": "ai",
+  "capturedAt": "2026-10-04T20:46:26.525Z",
+  "elapsedMs": 468,
+  "generatedAt": "2026-10-04T20:32:45.595801+00:00",
+  "storyCount": 3,
+  "storyFields": [
+    "distinct_publishers",
+    "first_seen_at",
+    "headline",
+    "hot",
+    "id",
+    "image_url",
+    "last_seen_at",
+    "publishers",
+    "score",
+    "section",
+    "slug",
+    "source_count",
+    "summary",
+    "top_market"
+  ],
   "response": {
-    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "generated_at": "2026-10-04T20:32:45.595801+00:00",
     "schema_version": 1,
     "section": "ai",
     "stories": [
@@ -71,7 +88,7 @@
             "url": "https://www.businessinsider.com/safety-leader-david-robinson-resigns-from-openai-2026-10"
           }
         ],
-        "score": 3.229,
+        "score": 3.21,
         "section": "ai",
         "slug": "openai-safety-leader-david-robinson-resigns-amid-company-upheaval-42683",
         "source_count": 6,
@@ -80,7 +97,7 @@
           "end_date": "2026-10-15T03:59:00+00:00",
           "explainer": "The market resolves to \"Yes\" if OpenAI makes an official announcement that it has resumed training suspended on September 25, 2026. The resolution date is the calendar date of that first qualifying announcement, provided it occurs by 11:59 PM ET on October 20, 2026. Readers often mistake planned or permitted restarts for actual resumption, but only confirmed training activity counts.",
           "id": "0x9ab2720ce9756400d5fe00ce722cdcdb804f8016775c4cf328af74f367dfe9ae",
-          "liquidity": 2885.2971,
+          "liquidity": 2841.60408,
           "outcomes": [
             {
               "name": "Yes",
@@ -133,7 +150,7 @@
             "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model"
           }
         ],
-        "score": 0.521,
+        "score": 0.518,
         "section": "ai",
         "slug": "aleph-alpha-releases-kolibri-open-weight-ai-model-43138",
         "source_count": 3,
@@ -201,7 +218,7 @@
             "url": "https://www.tomshardware.com/laptops/gaming-laptops/grab-a-huge-usd520-saving-on-this-rtx-5090-gaming-laptop-from-msi-with-64gb-ddr5-and-a-2tb-ssd-stealth-a18-ai-rig-ships-with-12-core-amd-ryzen-ai-9-cpu-along-with-an-18-inch-uhd-display-with-a-120hz-refresh-rate"
           }
         ],
-        "score": 0.435,
+        "score": 0.433,
         "section": "ai",
         "slug": "walmart-and-newegg-offer-discounts-on-gaming-pcs-with-nvidia-rtx-50-series-23079",
         "source_count": 23,

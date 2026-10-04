@@ -1,11 +1,26 @@
 {
   "label": "GET /data/v1/sections/crypto.json",
-  "path": "/data/v1/sections/crypto.json",
-  "capturedAt": "2026-10-04T20:27:24.253Z",
-  "elapsedMs": 272,
-  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "section": "crypto",
+  "capturedAt": "2026-10-04T20:46:32.887Z",
+  "elapsedMs": 156,
+  "generatedAt": "2026-10-04T20:32:45.595801+00:00",
+  "storyCount": 4,
+  "storyFields": [
+    "distinct_publishers",
+    "first_seen_at",
+    "headline",
+    "id",
+    "image_url",
+    "last_seen_at",
+    "publishers",
+    "score",
+    "section",
+    "slug",
+    "source_count",
+    "summary"
+  ],
   "response": {
-    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "generated_at": "2026-10-04T20:32:45.595801+00:00",
     "schema_version": 1,
     "section": "crypto",
     "stories": [
@@ -71,7 +86,7 @@
             "url": "https://www.coindesk.com/markets/2026/09/26/bitget-hacker-moves-usd83-million-in-stolen-xrp-that-ripple-cannot-freeze"
           }
         ],
-        "score": 1.118,
+        "score": 1.112,
         "section": "crypto",
         "slug": "bitget-hacked-as-350-million-vanishes-from-crypto-exchange-wallets-29600",
         "source_count": 45,
@@ -140,7 +155,7 @@
             "url": "https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack"
           }
         ],
-        "score": 1.066,
+        "score": 1.059,
         "section": "crypto",
         "slug": "near-intents-exploited-for-3-8-million-promises-compensation-40028",
         "source_count": 7,
@@ -208,7 +223,7 @@
             "url": "https://www.coindesk.com/business/2026/09/24/bullish-alpaca-and-apex-fintech-form-coalition-to-push-issuer-backed-tokenized-stocks"
           }
         ],
-        "score": 0.951,
+        "score": 0.946,
         "section": "crypto",
         "slug": "sec-grants-five-year-exemption-for-tokenized-securities-venues-17886",
         "source_count": 39,
@@ -275,7 +290,7 @@
             "url": "https://www.coindesk.com/policy/2026/09/30/u-s-cftc-seeks-event-contract-definitions-that-may-defy-states-gambling-claims"
           }
         ],
-        "score": 0.725,
+        "score": 0.721,
         "section": "crypto",
         "slug": "crypto-com-clears-sec-hurdle-to-offer-single-stock-futures-in-us-17952",
         "source_count": 67,

@@ -23,6 +23,7 @@ import { cvNewsTool } from "../../tools/cvNews.js";
 import { cvSearchTool } from "../../tools/cvSearch.js";
 import { cvTrendingTool } from "../../tools/cvTrending.js";
 import { finnhubCryptoNewsTool } from "../../tools/finnhubCryptoNews.js";
+import { newsMarketsNewsTool } from "../../tools/newsMarketsNewsTool.js";
 
 
 // --------------------------------------------------
@@ -68,8 +69,9 @@ const observerTools = {
 
   // cvTrendingTool,
 
-  finnhubCryptoNewsTool,
+  // finnhubCryptoNewsTool,
 
+  // newsMarketsNewsTool
 };
 
 // --------------------------------------------------

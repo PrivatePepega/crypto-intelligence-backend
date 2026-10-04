@@ -1,11 +1,26 @@
 {
   "label": "GET /data/v1/sections/business.json",
-  "path": "/data/v1/sections/business.json",
-  "capturedAt": "2026-10-04T20:27:27.611Z",
-  "elapsedMs": 351,
-  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "section": "business",
+  "capturedAt": "2026-10-04T20:46:29.723Z",
+  "elapsedMs": 189,
+  "generatedAt": "2026-10-04T20:32:45.595801+00:00",
+  "storyCount": 40,
+  "storyFields": [
+    "distinct_publishers",
+    "first_seen_at",
+    "headline",
+    "id",
+    "image_url",
+    "last_seen_at",
+    "publishers",
+    "score",
+    "section",
+    "slug",
+    "source_count",
+    "summary"
+  ],
   "response": {
-    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "generated_at": "2026-10-04T20:32:45.595801+00:00",
     "schema_version": 1,
     "section": "business",
     "stories": [
@@ -68,7 +83,7 @@
             "url": "https://www.axios.com/2026/10/02/wikipedia-ceo-ai-traffic-loss"
           }
         ],
-        "score": 6.45,
+        "score": 6.411,
         "section": "business",
         "slug": "ceos-use-ai-but-lack-long-term-plans-9956",
         "source_count": 282,
@@ -132,7 +147,7 @@
             "url": "https://www.ft.com/content/8b7e2800-3e36-4d0c-9016-32deaae67b62"
           }
         ],
-        "score": 6.035,
+        "score": 5.998,
         "section": "business",
         "slug": "strong-corporate-earnings-drive-global-stock-rally-despite-war-risks-2780",
         "source_count": 420,
@@ -198,7 +213,7 @@
             "url": "https://www.theverge.com/tech/1003929/amazon-ai-data-center-blog-warning"
           }
         ],
-        "score": 5.967,
+        "score": 5.931,
         "section": "business",
         "slug": "ai-firms-move-data-center-builds-overseas-amid-rising-costs-and-backlash-5243",
         "source_count": 154,
@@ -261,7 +276,7 @@
             "url": "https://www.bloomberg.com/news/articles/2026-10-02/dollar-falls-as-traders-pare-fed-hike-bets-after-soft-jobs-data"
           }
         ],
-        "score": 5.62,
+        "score": 5.586,
         "section": "business",
         "slug": "ecb-expected-to-raise-interest-rates-for-second-time-since-iran-war-5275",
         "source_count": 338,
@@ -286,7 +301,7 @@
           "question": "Before 2027",
           "similarity": 0.8293196558952332,
           "slug": "kxfedhike-2/kxfedhike-2-26dec31",
-          "volume_24h": 560.1,
+          "volume_24h": 579.27,
           "volume_total": 61944.54,
           "yes_price": 0.77
         }
@@ -348,7 +363,7 @@
             "url": "https://www.bloomberg.com/news/videos/2026-10-02/bond-yields-are-juicy-says-apollo-s-slok-video"
           }
         ],
-        "score": 5.11,
+        "score": 5.079,
         "section": "business",
         "slug": "strategist-says-treasury-buybacks-won-t-fix-us-yields-3584",
         "source_count": 360,
@@ -415,7 +430,7 @@
             "url": "https://www.theguardian.com/money/2026/sep/28/price-of-diesel-on-uk-forecourts-reaches-all-time-high"
           }
         ],
-        "score": 5.08,
+        "score": 5.049,
         "section": "business",
         "slug": "tariffs-and-inflation-take-toll-on-american-farmers-22205",
         "source_count": 38,
@@ -503,7 +518,7 @@
             "url": "https://www.bloomberg.com/news/articles/2026-10-01/tanker-congestion-shunts-vital-oil-transfers-farther-from-hormuz"
           }
         ],
-        "score": 5.028,
+        "score": 4.997,
         "section": "business",
         "slug": "south-korea-sends-fact-finding-team-to-assess-strait-of-hormuz-situation-2917",
         "source_count": 182,
@@ -512,25 +527,25 @@
           "end_date": "2027-01-01T04:59:00+00:00",
           "explainer": "The market resolves to Yes if a senior US-Iran diplomatic meeting begins in Qatar by December 31, 2026, at 11:59 PM ET. It resolves to No if such a meeting does not start in Qatar within that timeframe or occurs elsewhere. Readers often mistake the location of previous talks for the required future venue or overlook the strict deadline.",
           "id": "0x205676c44a0664fba4cc30995dc5721a41d30614bd302f5b08cfc66f2e20c5bd",
-          "liquidity": 3919.14403,
+          "liquidity": 3973.42051,
           "outcomes": [
             {
               "name": "Yes",
-              "price": 0.221
+              "price": 0.2215
             },
             {
               "name": "No",
-              "price": 0.779
+              "price": 0.7785
             }
           ],
           "polymarket_url": "https://polymarket.com/event/will-the-next-diplomatic-us-iran-meeting-be-in-qatar-by-september-30-2026-20260622185050767-copy?r=alykhan3",
-          "price_24h_ago": 0.1765,
+          "price_24h_ago": 0.191,
           "question": "Will the next US-Iran senior diplomatic meeting take place in Qatar by December 31, 2026?",
           "similarity": 0.769213855266571,
           "slug": "will-the-next-diplomatic-us-iran-meeting-be-in-qatar-by-september-30-2026-20260622185050767-copy",
           "volume_24h": 33.822979000000004,
           "volume_total": 13729.230565,
-          "yes_price": 0.221
+          "yes_price": 0.2215
         }
       },
       {
@@ -592,7 +607,7 @@
             "url": "https://www.coindesk.com/markets/2026/10/01/cathie-wood-says-smart-investors-need-to-start-watching-where-ai-agents-spend-money"
           }
         ],
-        "score": 4.993,
+        "score": 4.963,
         "section": "business",
         "slug": "bank-of-america-says-rising-bond-yields-not-yet-threat-to-ai-trade-5634",
         "source_count": 209,
@@ -659,7 +674,7 @@
             "url": "https://www.theverge.com/gadgets/999447/best-early-amazon-prime-day-big-deals-sale-october"
           }
         ],
-        "score": 3.92,
+        "score": 3.897,
         "section": "business",
         "slug": "amazon-prime-day-starts-oct-6-as-rivals-launch-competing-sales-34425",
         "source_count": 43,
@@ -755,7 +770,7 @@
             "url": "https://www.axios.com/2026/09/22/the-rising-price-tag-of-romance"
           }
         ],
-        "score": 3.864,
+        "score": 3.841,
         "section": "business",
         "slug": "gen-z-cuts-big-spending-but-keeps-budget-for-small-treats-and-last-minute-21340",
         "source_count": 34,
@@ -819,7 +834,7 @@
             "url": "https://www.bloomberg.com/news/videos/2026-09-28/bloomberg-tech-9-28-2026-video"
           }
         ],
-        "score": 3.858,
+        "score": 3.835,
         "section": "business",
         "slug": "nvidia-boosts-share-buyback-authorization-by-150-billion-34009",
         "source_count": 27,
@@ -911,7 +926,7 @@
             "url": "https://www.coindesk.com/daybook-us/2026/10/01/crypto-lost-usd1-26-billion-in-hacks-while-bitcoin-bulls-enjoyed-a-monster-quarter"
           }
         ],
-        "score": 3.417,
+        "score": 3.396,
         "section": "business",
         "slug": "hackers-return-most-bitcoin-stolen-in-liquid-network-breach-2181",
         "source_count": 257,
@@ -932,11 +947,11 @@
             }
           ],
           "polymarket_url": "https://kalshi.com/markets/kxbtcy-27jan0100/kxbtcy-27jan0100-b82500",
-          "price_24h_ago": 0.139,
+          "price_24h_ago": 0.136,
           "question": "80,000 to 84,999.99",
           "similarity": 0.8230123519897461,
           "slug": "kxbtcy-27jan0100/kxbtcy-27jan0100-b82500",
-          "volume_24h": 24160.25,
+          "volume_24h": 24150.22,
           "volume_total": 2578211.55,
           "yes_price": 0.122
         }
@@ -998,7 +1013,7 @@
             "url": "https://www.bloomberg.com/news/audio/2026-10-02/us-weighs-sending-3rd-carrier-to-mideast-anthropic-eyes-nov-ipo"
           }
         ],
-        "score": 3.415,
+        "score": 3.395,
         "section": "business",
         "slug": "anthropic-ipo-prospectus-reveals-customer-concentration-35251",
         "source_count": 32,
@@ -1007,7 +1022,7 @@
           "end_date": "2027-01-01T04:59:00+00:00",
           "explainer": "The Yes outcome occurs if Anthropic completes its first public stock sale on a recognized exchange by December 31, 2026, at 11:59 PM ET. The No outcome applies if the company does not meet this deadline or if it merges, gets acquired, or ceases to exist before then. Readers often mistake the linked news story about AI collusion for the resolution event, but only an actual IPO counts toward the result.",
           "id": "0x6522024c060166830e53a48b0db1cab9296601a8539ab005124db5e4bf50a303",
-          "liquidity": 10469.5335,
+          "liquidity": 11105.7025,
           "outcomes": [
             {
               "name": "Yes",
@@ -1085,7 +1100,7 @@
             "url": "https://www.bloomberg.com/news/articles/2026-09-24/china-plans-inclusion-of-new-products-for-swap-connect-expansion"
           }
         ],
-        "score": 3.015,
+        "score": 2.997,
         "section": "business",
         "slug": "hong-kong-and-kazakhstan-sign-mou-on-transport-lab-at-belt-and-road-summit-1897",
         "source_count": 254,
@@ -1174,7 +1189,7 @@
             "url": "https://www.cnbc.com/2026/10/02/paramount-warner-bros-discovery-skydance.html"
           }
         ],
-        "score": 1.996,
+        "score": 1.984,
         "section": "business",
         "slug": "justice-department-demands-1-88-billion-bond-from-paramount-15050",
         "source_count": 185,
@@ -1263,7 +1278,7 @@
             "url": "https://variety.com/2026/biz/news/bob-chapek-book-interview-iger-disney-disappointment-1236877387"
           }
         ],
-        "score": 1.841,
+        "score": 1.83,
         "section": "business",
         "slug": "ex-disney-ceo-bob-chapek-says-he-raised-board-concerns-weekly-during-iger-34441",
         "source_count": 18,
@@ -1330,7 +1345,7 @@
             "url": "https://www.scmp.com/news/china/diplomacy/article/3369477/eu-retools-trump-trade-war-tripwire-china-shipments-surge-alarm"
           }
         ],
-        "score": 1.825,
+        "score": 1.814,
         "section": "business",
         "slug": "china-warns-eu-tariffs-could-disrupt-trade-talks-37236",
         "source_count": 8,
@@ -1419,7 +1434,7 @@
             "url": "https://www.ft.com/content/b77a34af-a12f-445c-8707-8f6b8223ad39"
           }
         ],
-        "score": 1.572,
+        "score": 1.562,
         "section": "business",
         "slug": "sydney-elite-home-sale-highlights-australia-s-housing-slump-37051",
         "source_count": 12,
@@ -1487,7 +1502,7 @@
             "url": "https://www.scmp.com/news/china/military/article/3369429/us-says-f-47-will-be-first-sixth-gen-jet-chinas-j-36-and-j-50-are-already-flying"
           }
         ],
-        "score": 1.493,
+        "score": 1.484,
         "section": "business",
         "slug": "boeing-wins-20b-pentagon-contract-for-u-s-navy-s-next-fighter-jet-36956",
         "source_count": 12,
@@ -1574,7 +1589,7 @@
             "url": "https://www.bloomberg.com/news/articles/2026-09-30/coca-cola-is-said-to-consider-december-filing-for-india-unit-s-1-billion-ipo"
           }
         ],
-        "score": 1.372,
+        "score": 1.364,
         "section": "business",
         "slug": "kkr-backed-advanta-begins-road-show-for-400-million-ipo-in-india-33766",
         "source_count": 16,
@@ -1606,7 +1621,7 @@
             "url": "https://www.japantimes.co.jp/commentary/2026/10/04/world/asia-lng-boom"
           }
         ],
-        "score": 1.146,
+        "score": 1.139,
         "section": "business",
         "slug": "asian-lng-demand-slumps-as-governments-abandon-forecasts-44146",
         "source_count": 2,
@@ -1672,7 +1687,7 @@
             "url": "https://variety.com/2026/film/news/john-leguizamo-message-david-ellison-what-americans-need-1236897710"
           }
         ],
-        "score": 1.133,
+        "score": 1.127,
         "section": "business",
         "slug": "cindy-holland-exits-paramount-as-casey-bloys-poised-to-lead-streaming-37046",
         "source_count": 60,
@@ -1765,7 +1780,7 @@
             "url": "https://timesofindia.indiatimes.com/business/india-business/goyal-pitches-india-as-global-trade-hub-eyes-75-80-of-world-economy/articleshow/134653607.cms"
           }
         ],
-        "score": 1.098,
+        "score": 1.092,
         "section": "business",
         "slug": "us-trade-chief-says-india-deal-not-imminent-after-modi-trump-call-39327",
         "source_count": 9,
@@ -1855,7 +1870,7 @@
             "url": "https://www.hollywoodreporter.com/movies/movie-news/anne-hathaway-verity-break-character-premiere-1236717148"
           }
         ],
-        "score": 0.976,
+        "score": 0.97,
         "section": "business",
         "slug": "anne-hathaway-blocked-from-hot-ones-during-verity-press-tour-due-to-pregna-34577",
         "source_count": 15,
@@ -1942,7 +1957,7 @@
             "url": "https://www.bloomberg.com/news/articles/2026-10-01/india-steps-up-palm-oil-buying-as-tax-cut-spurs-restocking"
           }
         ],
-        "score": 0.947,
+        "score": 0.941,
         "section": "business",
         "slug": "oil-nears-100-a-barrel-as-u-s-iran-conflict-disrupts-markets-2240",
         "source_count": 244,
@@ -2006,7 +2021,7 @@
             "url": "https://www.theguardian.com/politics/2026/oct/01/labour-unease-healey-budget"
           }
         ],
-        "score": 0.923,
+        "score": 0.917,
         "section": "business",
         "slug": "labour-figures-uneasy-about-healey-s-budget-approach-amid-global-volatilit-41227",
         "source_count": 3,
@@ -2071,7 +2086,7 @@
             "url": "https://www.scmp.com/economy/china-economy/article/3369550/china-seen-doing-just-enough-targeted-fiscal-support-defend-gdp-growth"
           }
         ],
-        "score": 0.896,
+        "score": 0.891,
         "section": "business",
         "slug": "china-launches-mini-stimulus-to-counter-economic-slowdown-37170",
         "source_count": 6,
@@ -2128,7 +2143,7 @@
             "url": "https://cointelegraph.com/news/community-banks-sue-occ-over-trust-bank-charters-of-crypto-firms"
           }
         ],
-        "score": 0.859,
+        "score": 0.854,
         "section": "business",
         "slug": "community-banks-sue-to-block-crypto-firms-access-via-occ-trust-charters-42954",
         "source_count": 2,
@@ -2195,7 +2210,7 @@
             "url": "https://www.scmp.com/business/banking-finance/article/3369156/hong-kongs-ipo-revival-faces-test-three-new-stocks-stumble-debut"
           }
         ],
-        "score": 0.794,
+        "score": 0.789,
         "section": "business",
         "slug": "tencent-backed-ai-cloud-unicorn-said-to-file-for-hong-kong-ipo-33690",
         "source_count": 8,
@@ -2260,7 +2275,7 @@
             "url": "https://www.businessinsider.com/walmart-lighting-up-new-feature-for-shoppers-ondigital-price-tags-2026-10"
           }
         ],
-        "score": 0.753,
+        "score": 0.748,
         "section": "business",
         "slug": "walmart-rules-out-personalised-pricing-as-ai-transforms-retail-31201",
         "source_count": 13,
@@ -2323,7 +2338,7 @@
             "url": "https://www.ft.com/content/6b216fc2-b2f4-42df-9102-c18476eb74de"
           }
         ],
-        "score": 0.719,
+        "score": 0.715,
         "section": "business",
         "slug": "catl-develops-pickup-truck-batteries-for-us-market-ahead-of-xi-visit-21471",
         "source_count": 28,
@@ -2416,7 +2431,7 @@
             "url": "https://timesofindia.indiatimes.com/real-estate/news/in-2004-tyler-perry-bought-beverly-hills-land-for-4-3-million-he-built-a-mansion-that-later-housed-harry-and-meghan-and-the-22-5-acre-estate-is-now-on-the-market-for-57-million/articleshow/134592070.cms"
           }
         ],
-        "score": 0.676,
+        "score": 0.672,
         "section": "business",
         "slug": "benedikt-taschen-and-pat-boone-list-beverly-hills-homes-for-over-47-millio-26900",
         "source_count": 12,
@@ -2474,7 +2489,7 @@
             "url": "https://www.dw.com/en/argentina-launches-cash-for-citizenship-scheme/a-79520708"
           }
         ],
-        "score": 0.512,
+        "score": 0.509,
         "section": "business",
         "slug": "argentina-to-sell-golden-passports-by-end-of-year-41767",
         "source_count": 5,
@@ -2562,7 +2577,7 @@
             "url": "https://www.ft.com/content/906051fc-c116-4803-b395-2d56d1bcbf28"
           }
         ],
-        "score": 0.472,
+        "score": 0.47,
         "section": "business",
         "slug": "us-private-payrolls-rise-by-90-000-in-september-37849",
         "source_count": 26,
@@ -2645,7 +2660,7 @@
             "url": "https://de.qz.com/ford-jpmorgan-michigan-heben-fertigung-plattform-093026"
           }
         ],
-        "score": 0.377,
+        "score": 0.374,
         "section": "business",
         "slug": "jpmorgan-ford-to-invest-billions-in-michigan-manufacturing-36368",
         "source_count": 5,
@@ -2693,7 +2708,7 @@
             "url": "https://www.youtube.com/watch?v=bam3uxilEJo"
           }
         ],
-        "score": 0.367,
+        "score": 0.365,
         "section": "business",
         "slug": "investors-exit-france-as-crisis-deepens-across-bonds-stocks-and-euro-41187",
         "source_count": 4,
@@ -2739,7 +2754,7 @@
             "url": "https://www.ft.com/content/2084f349-0829-4130-a5e6-b98929a6e633"
           }
         ],
-        "score": 0.357,
+        "score": 0.355,
         "section": "business",
         "slug": "schneider-electric-nears-20bn-deal-to-buy-software-group-ptc-44525",
         "source_count": 1,
@@ -2807,7 +2822,7 @@
             "url": "https://www.businessinsider.com/is-it-good-time-look-for-job-job-market-hiring-2026-9"
           }
         ],
-        "score": 0.351,
+        "score": 0.349,
         "section": "business",
         "slug": "weak-us-job-market-poses-no-worry-for-fed-rate-setters-36188",
         "source_count": 7,
@@ -2829,7 +2844,7 @@
             "url": "https://www.ft.com/content/9737146d-fda7-440f-a77d-ab954de7a1a5"
           }
         ],
-        "score": 0.345,
+        "score": 0.343,
         "section": "business",
         "slug": "akzonobel-nears-deal-to-sell-se-asia-paint-unit-to-nippon-paint-44490",
         "source_count": 1,
@@ -2881,7 +2896,7 @@
             "url": "https://qz.com/amazon-ftc-prime-settlement-payments-expansion-100126"
           }
         ],
-        "score": 0.339,
+        "score": 0.337,
         "section": "business",
         "slug": "amazon-expands-ftc-prime-settlement-payments-to-millions-more-customers-40038",
         "source_count": 4,

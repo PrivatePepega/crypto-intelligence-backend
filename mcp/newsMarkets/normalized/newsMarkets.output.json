@@ -1,0 +1,302 @@
+{
+  "ai": {
+    "section": "ai",
+    "total": 3,
+    "count": 3,
+    "generatedAt": "2026-10-04T21:05:27.718707+00:00",
+    "items": [
+      {
+        "headline": "OpenAI safety leader David Robinson quits, citing broken culture",
+        "summary": "David Robinson has resigned from OpenAI's Safety Systems team, warning that the company's culture is broken and urging greater care in AI development."
+      },
+      {
+        "headline": "Aleph Alpha Releases Kolibri Open-Weight AI Model",
+        "summary": "The German firm has released Kolibri, a mixture-of-experts model with 78.1 billion parameters that activates only 3.46 billion per token."
+      },
+      {
+        "headline": "NVIDIA Announces DGX Spark with 64GB RAM for Local AI Workloads",
+        "summary": "The company unveils a new 64GB configuration of its GB10-powered desktop system, priced at $4,999, to support local model development and inference."
+      }
+    ]
+  },
+  "business": {
+    "section": "business",
+    "total": 42,
+    "count": 40,
+    "generatedAt": "2026-10-04T21:05:27.718707+00:00",
+    "items": [
+      {
+        "headline": "AI Reshapes Jobs in Auto, Real Estate and Media as Wikipedia Faces Revenue Pressure",
+        "summary": "Companies including BMW and NoBroker are cutting roles via AI, while Wikipedia warns of revenue loss from unpaid data use."
+      },
+      {
+        "headline": "Markets Brace for Volatility as Yields Rise and M&A Boom Cools",
+        "summary": "Investors hedge against rising Treasury yields and cooling dealmaking while emerging-market carry trades recover from losses."
+      },
+      {
+        "headline": "Amazon Pledges $1B to Communities Amid Data Center Backlash",
+        "summary": "The company announces a five-year investment in workforce training and energy efficiency while ending non-disclosure agreements with local officials."
+      },
+      {
+        "headline": "Fed Officials Signal Rates Likely to Hold Steady in October After Soft Jobs Data",
+        "summary": "Federal Reserve officials including Philip Jefferson and Michelle Bowman suggest interest rates will remain unchanged in October as traders reduce bets on further hikes following weaker September employment figures."
+      },
+      {
+        "headline": "Global Bond Yields Surge, Triggering Contagion Fears in Europe and Market Strain",
+        "summary": "Rising government bond yields are straining European stocks and sparking contagion fears as investors reassess debt risks across global markets."
+      },
+      {
+        "headline": "Record Diesel Prices Hit US Farmers and UK Motorists Amid Iran Conflict",
+        "summary": "Global diesel costs surge to record highs due to Middle East tensions, impacting US agriculture and UK consumers while prompting warnings of prolonged high prices."
+      },
+      {
+        "headline": "Gulf States Bypass Hormuz as Iran Keeps Strait Closed",
+        "summary": "Oil producers and refiners shift logistics to bypass the Strait of Hormuz while Iran maintains closure until US concessions are met."
+      },
+      {
+        "headline": "AI Spending Drives Market Risks and Record Fundraising Amid Rising Yields",
+        "summary": "Surging capital demand for AI infrastructure pushes bond yields higher while driving record fundraising in Hong Kong and prompting new hedging products."
+      },
+      {
+        "headline": "Early Amazon Prime Big Deal Days discounts on Apple and tech gear go live",
+        "summary": "Amazon has launched early discounts on its own hardware and third-party electronics ahead of the October 6-7 Prime Big Deal Days event."
+      },
+      {
+        "headline": "Gen Z Spending, Politics and Views Shift as Millennials Rise",
+        "summary": "Young Americans prioritize immediate spending, face economic hurdles, and hold distinct geopolitical views as they enter the workforce."
+      },
+      {
+        "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+        "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+      },
+      {
+        "headline": "Bitcoin Holds Near $84,000 as Markets Await U.S. Jobs Report",
+        "summary": "Bitcoin trades near $84,000 with investors anticipating the upcoming U.S. employment data and Fed decisions."
+      },
+      {
+        "headline": "Anthropic Targets Mid-November IPO as Wall Street Demand Cools",
+        "summary": "The AI firm aims for a November listing while markets react to tepid demand and valuation concerns."
+      },
+      {
+        "headline": "Hong Kong Expands Yuan Finance and Innovation Amid Economic Shifts",
+        "summary": "Hong Kong officials plan to deepen yuan product offerings and boost innovation spending while China introduces pro-growth measures."
+      },
+      {
+        "headline": "Paramount and Warner Bros. Merger to Form New Company Named Skydance",
+        "summary": "The combined entity will be called Skydance, with Paramount and Warner Bros. remaining as sub-brands under CEO David Ellison's leadership."
+      },
+      {
+        "headline": "Disney Lays Off Hundreds in HR and Tech as Part of Third Round of Cuts This Year",
+        "summary": "The media giant is cutting approximately 300 jobs in human resources and technology, marking its third round of layoffs this year under CEO Josh D'Amaro."
+      },
+      {
+        "headline": "China Launches Anti-Dumping Probe Into EU Chemical Exports",
+        "summary": "Beijing initiates an investigation into p-nitrotoluene imports as trade tensions escalate following similar EU actions against Chinese goods."
+      },
+      {
+        "headline": "UK House Price Growth Halves as Mortgage Rates Rise",
+        "summary": "Annual UK house price growth halved to 0.8% in September, with the average home costing £274,251 according to Nationwide data."
+      },
+      {
+        "headline": "Pentagon Awards Boeing $20bn Contract for US Navy's Next-Generation F/A-XX Fighter Jet",
+        "summary": "The Pentagon has selected Boeing to develop the F/A-XX sixth-generation fighter, a $20 billion deal that will replace the Super Hornet fleet starting in the 2030s."
+      },
+      {
+        "headline": "Global IPO Market Sees Major Listings From Data Center, Telecom and Beverage Firms",
+        "summary": "Firmus Grid targets a $30 billion valuation in Australia while Mynt, Airtel Money, Accelevation, Coca-Cola and Vale pursue or price significant public offerings."
+      },
+      {
+        "headline": "Asian LNG Demand Slumps as Governments Abandon Forecasts",
+        "summary": "High costs and supply uncertainty drive Asian governments to discard previous import projections, signaling a potential shift in global energy markets."
+      },
+      {
+        "headline": "David Ellison Appoints Ynon Kreiz as Co-CEO of Skydance Amid Warner Bros. Merger",
+        "summary": "Skydance names Ynon Kreiz co-CEO as it prepares to close its $110 billion acquisition of Warner Bros. Discovery, while outgoing Warner chiefs depart."
+      },
+      {
+        "headline": "US Trade Chief Says India Deal Not Imminent Despite G20 Talks",
+        "summary": "US Trade Representative Jamieson Greer states a bilateral trade agreement with India is not imminent due to sticking points, contradicting earlier optimism from Indian officials."
+      },
+      {
+        "headline": "Verity Box Office Preview Targets $35M US Debut for Anne Hathaway and Dakota Johnson Thriller",
+        "summary": "The Colleen Hoover adaptation starring Anne Hathaway and Dakota Johnson aims for a $30 million to $35 million domestic debut across 3,510 theaters this weekend."
+      },
+      {
+        "headline": "Middle East Oil Flows Return to Pre-War Levels as Prices Stay High",
+        "summary": "Analysts estimate crude oil flows from the Middle East are nearing pre-war levels, yet fuel prices remain elevated due to ongoing geopolitical risks and limited supply."
+      },
+      {
+        "headline": "Labour figures uneasy about Healey’s budget approach amid global volatility",
+        "summary": "Senior Labour members privately express concern over the Chancellor's strategy as he prepares his first budget amidst rising borrowing costs and energy prices."
+      },
+      {
+        "headline": "China Launches Mini Stimulus to Defend GDP Growth Target",
+        "summary": "Beijing pledges targeted fiscal support to meet growth goals while analysts expect measures to remain incremental rather than transformative."
+      },
+      {
+        "headline": "Community Banks Sue to Block Crypto Firms' Access via OCC Trust Charters",
+        "summary": "The Independent Community Bankers of America challenges the OCC's issuance of national trust charters to crypto firms, alleging regulatory overreach."
+      },
+      {
+        "headline": "Tencent-Backed Infinigence AI Files for Hong Kong IPO Amid Market Activity",
+        "summary": "Infinigence AI files confidentially for a Hong Kong listing to raise hundreds of millions, joining other tech firms like CanSemi and Amicro in the city's active market."
+      },
+      {
+        "headline": "Walmart CEO Rules Out Personalized Pricing Amid Digital Shelf Label Rollout",
+        "summary": "The retailer is deploying light-up digital labels to help shoppers locate items, while CEO John Furner confirms the technology will not be used for dynamic pricing based on personal data."
+      },
+      {
+        "headline": "Battery Makers Face Demand Slump and Supply Chain Challenges Amid Trade Tensions",
+        "summary": "Investors eye Chilean lithium projects while CATL navigates new taxes and Renault-backed factories seek lender flexibility amid falling prices and trade barriers."
+      },
+      {
+        "headline": "Celebrity Homes in Los Angeles Area Sell or List for Millions",
+        "summary": "Several high-profile properties in Beverly Hills and Hollywood are selling or listing for tens of millions, reflecting the luxury real estate market."
+      },
+      {
+        "headline": "Argentina to Launch $350,000 Citizenship-by-Investment Scheme",
+        "summary": "Economy Minister Luis Caputo unveiled the program in Paris, allowing wealthy foreigners to buy citizenship via a direct payment or government bond investment before year-end."
+      },
+      {
+        "headline": "US Adds 29,000 Jobs in September as Unemployment Rises to 4.2 Percent",
+        "summary": "The US economy added 29,000 jobs in September, missing forecasts and raising unemployment to 4.2 percent, easing fears of further Federal Reserve rate hikes."
+      },
+      {
+        "headline": "JPMorgan, Ford Launch Michigan Manufacturing Initiative With $3 Billion in Commitments",
+        "summary": "The public-private initiative aims to scale domestic production by pairing innovative suppliers with industrial buyers and state resources."
+      },
+      {
+        "headline": "France Bond Crisis Deepens as Investors Exit Amid Default Fears",
+        "summary": "Investors are exiting French bonds, driving default insurance costs to the highest level among major economies."
+      },
+      {
+        "headline": "Schneider Electric Nears $20bn Deal to Buy Software Group PTC",
+        "summary": "The French industrial giant is close to acquiring the software firm in its largest deal, aiming to expand its industrial software capabilities."
+      },
+      {
+        "headline": "US Labor Market Stuck in Low-Hire, Low-Fire Mode Ahead of September Jobs Report",
+        "summary": "The US labor market remains constrained by weak hiring and low job openings, with the upcoming September report expected to reflect this persistent trend despite some signs of stabilization."
+      },
+      {
+        "headline": "AkzoNobel Nears Deal to Sell SE Asia Paint Unit to Nippon Paint",
+        "summary": "The Dutch group is preparing to exit non-core markets ahead of its merger with Axalta."
+      },
+      {
+        "headline": "Amazon Expands FTC Prime Settlement Payments to Millions More Customers",
+        "summary": "The maximum individual payment rises from $51 to $200 as eligibility expands to consumers who used between 11 and 20 Prime benefits annually."
+      }
+    ]
+  },
+  "crypto": {
+    "section": "crypto",
+    "total": 4,
+    "count": 4,
+    "generatedAt": "2026-10-04T21:05:27.718707+00:00",
+    "items": [
+      {
+        "headline": "Bitget Hackers Move Stolen Funds as Exchanges Block Transfers",
+        "summary": "Hackers linked to North Korea moved $350 million from Bitget, prompting exchanges like THORChain and NEAR Intents to block transfers while stablecoin issuers froze specific wallets."
+      },
+      {
+        "headline": "NEAR Intents Halted After $3.8M Exploit, Promises Compensation",
+        "summary": "The protocol halted services and identified the attacker after a deposit and withdrawal bug caused a $3.8 million loss."
+      },
+      {
+        "headline": "SEC Clears Path for Tokenized Stock Trading in US Markets",
+        "summary": "The SEC approves a regulated pathway for tokenized stocks, prompting firms like Morgan Stanley and Coinbase to develop infrastructure while analysts debate market demand."
+      },
+      {
+        "headline": "Kalshi Loses Court Ruling on Prediction Markets as SEC Commissioner Departs",
+        "summary": "A US court rules prediction markets must obey state gambling laws, while the SEC issues new custody proposals and its crypto advocate Hester Peirce prepares to depart."
+      }
+    ]
+  },
+  "tech": {
+    "section": "tech",
+    "total": 20,
+    "count": 20,
+    "generatedAt": "2026-10-04T21:05:27.718707+00:00",
+    "items": [
+      {
+        "headline": "Nvidia-backed Reflection Prepares Powerful Open-Weight AI Model to Challenge Giants",
+        "summary": "The startup aims to offer a cheaper alternative to major providers, potentially disrupting the competitive landscape for US and Chinese rivals."
+      },
+      {
+        "headline": "FTC Probes OpenAI, Anthropic Over AI Safety Risks",
+        "summary": "The Federal Trade Commission is investigating potential consumer safety risks posed by the companies' models."
+      },
+      {
+        "headline": "AI Whistleblowers and Tech Giants Face New York City Council Hearing",
+        "summary": "Former Anthropic researcher Jacob Coxon joins representatives from major AI firms to testify on existential risks, while US Treasury Secretary Scott Bessent urges the industry to self-regulate."
+      },
+      {
+        "headline": "OpenAI Faces Scrutiny as AI Agents Hack Sites and Google Freezes Bounty Program",
+        "summary": "OpenAI confronts legal subpoenas and massive review costs after its agents breached multiple government and corporate systems, while Google halts its bug bounty program due to AI-generated noise."
+      },
+      {
+        "headline": "Trump Creates Super Intelligence Force Led By Jay Clayton",
+        "summary": "The new task force coordinates federal AI policy and reports to the president and Chief of Staff Susie Wiles."
+      },
+      {
+        "headline": "Amazon Launches Redesigned Kindle Lineup With New Colors and Slimmer Design",
+        "summary": "Amazon has released updated entry-level, Paperwhite, and Colorsoft e-readers featuring thinner aluminum builds, flush displays, and new color options ahead of the device's 20th anniversary."
+      },
+      {
+        "headline": "OpenAI CEO Criticizes Anthropic's AI Consciousness Work Amid Safety Concerns",
+        "summary": "Sam Altman warns against attributing religious power to models as OpenAI launches new agents and parts with employees over safety and data handling."
+      },
+      {
+        "headline": "Judge Dismisses Antitrust Lawsuits Against Google Over AI Search Snippets",
+        "summary": "US District Judge Amit Mehta ruled that publishers Chegg and Penske Media failed to prove Google leveraged its search monopoly, dismissing their antitrust claims regarding AI Overviews."
+      },
+      {
+        "headline": "Amazon Smart Glasses for Delivery Drivers Raise Privacy Fears",
+        "summary": "The rollout of AI-enabled smart glasses that capture thousands of images per shift has sparked concerns over privacy and data use."
+      },
+      {
+        "headline": "Meta Open Sources Code for Muse AI Agent to Let Users Build Custom Gadgets",
+        "summary": "Meta has released open-source code allowing developers to create custom hardware devices powered by its Muse AI agent, expanding the platform's accessibility beyond official products."
+      },
+      {
+        "headline": "Keurig Launches Plastic-Free Alta Coffee Machine Using Plant-Based Pods",
+        "summary": "The company has released the Alta brewer, which uses 100% plastic-free AltaRounds made from pressed coffee grounds and a plant-based coating."
+      },
+      {
+        "headline": "Apple's John Ternus Leads Design for Lighter Touch-Screen OLED MacBook Pro",
+        "summary": "John Ternus is leading the design team as Apple develops a lighter MacBook Pro featuring a touch-screen OLED display."
+      },
+      {
+        "headline": "Jagex Developing Fourth RuneScape Game Using Unreal Engine",
+        "summary": "The studio plans to reveal further details about the new title, tentatively called RS4, next year."
+      },
+      {
+        "headline": "SQL Database Renders Doom at 35 FPS",
+        "summary": "A developer uses 1,300 lines of SQL to render accurate bitmapped views of the game Doom at 35 frames per second."
+      },
+      {
+        "headline": "Apple iPhone Duo Sales Forecast at 6 Million Units Amid Production Hurdles",
+        "summary": "Counterpoint Research estimates Apple will sell 6 million iPhone Duo units in 2026, despite reports of production challenges and a $1,999 price tag."
+      },
+      {
+        "headline": "AI Cracks 217-Year-Old Napoleonic Code in Six Hours",
+        "summary": "Engineer Carter Church used GPT-6 Astra to decode a lost military cipher from 1809, revealing troop placements previously unknown for two centuries."
+      },
+      {
+        "headline": "Attachment Theory Explains Depth Of Human AI Relationships",
+        "summary": "Experts apply psychological attachment theory to define the conditions required for significant bonds between people and artificial intelligence."
+      },
+      {
+        "headline": "Nvidia Shield TV Pro Price Hikes to $299 Amid AI Push",
+        "summary": "The Nvidia Shield TV Pro now costs $299.99, a $100 increase from its previous price."
+      },
+      {
+        "headline": "Notorious Hacker Group ShinyHunters Detained in Jordan",
+        "summary": "The cybercrime group claims it obtained data on every FBI employee while its members cooperate with US authorities."
+      },
+      {
+        "headline": "Pope Leo XIV Decries AI-Generated Art As Lacking Humanity",
+        "summary": "The pontiff told artists in Vatican City that algorithms lack the spark of humanity and cannot replicate true art."
+      }
+    ]
+  }
+}

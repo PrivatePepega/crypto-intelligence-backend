@@ -59,6 +59,27 @@ export const NEWSMARKETS_SECTIONS = [
 
 export type NewsMarketsSection = (typeof NEWSMARKETS_SECTIONS)[number];
 
+/**
+ * The sections this integration uses.
+ *
+ * A deliberate subset of {@link NEWSMARKETS_SECTIONS}. The remaining nine -
+ * `politics`, `world`, `sports`, `culture`, `music`, `health`, `science`,
+ * `weather`, `startups` - were captured and reviewed during discovery and
+ * dropped as out of scope for this backend.
+ *
+ * This is what the AI tool's `category` enum is built from, so widening coverage
+ * is a one-line change here rather than an edit in the tool.
+ */
+export const NEWSMARKETS_IN_SCOPE_SECTIONS = [
+  "ai",
+  "business",
+  "crypto",
+  "tech",
+] as const satisfies readonly NewsMarketsSection[];
+
+export type NewsMarketsInScopeSection =
+  (typeof NEWSMARKETS_IN_SCOPE_SECTIONS)[number];
+
 /** Thrown for a failed request, with the upstream body preserved. */
 export class NewsMarketsApiError extends Error {
   readonly status: number;
