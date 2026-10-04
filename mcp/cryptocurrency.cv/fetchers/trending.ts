@@ -4,6 +4,8 @@ import {
   type NormalizedTrending,
 } from "../trending.normalizer.js";
 
+import { awaitRateLimitSlot } from "./throttle.js";
+
 /**
  * Fetch and sanitize trending topics.
  *
@@ -24,6 +26,8 @@ export const getTrendingTopics = async (options: {
   limit: number;
   signal?: AbortSignal | undefined;
 }): Promise<NormalizedTrending> => {
+  await awaitRateLimitSlot();
+
   const payload = await fetchTrending({ limit: options.limit });
 
   return normalizeTrending(payload);

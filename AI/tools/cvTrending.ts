@@ -4,7 +4,7 @@ import { z } from "zod";
 import { getTrendingTopics } from "../../mcp/cryptocurrency.cv/fetchers/trending.js";
 
 /** Trends requested when the caller does not specify. */
-const DEFAULT_LIMIT = 10;
+const DEFAULT_LIMIT = 20;
 
 export const cvTrendingTool = tool({
   description:

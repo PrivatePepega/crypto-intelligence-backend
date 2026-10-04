@@ -9,7 +9,7 @@ import { getBreakingNews } from "../../mcp/cryptocurrency.cv/fetchers/breaking.j
  * Small by default: the window is only about two hours, so a large page mostly
  * returns duplicate or near-duplicate coverage of the same events.
  */
-const DEFAULT_LIMIT = 10;
+const DEFAULT_LIMIT = 20;
 
 export const cvBreakingTool = tool({
   description:

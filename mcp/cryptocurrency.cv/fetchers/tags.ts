@@ -4,6 +4,8 @@ import {
   type NormalizedTagArticles,
 } from "../tagsArticles.normalizer.js";
 
+import { awaitRateLimitSlot } from "./throttle.js";
+
 /**
  * Fetch and sanitize the articles carrying a given tag.
  *
@@ -22,6 +24,8 @@ export const getTagArticles = async (
   slug: string,
   options: { limit: number; signal?: AbortSignal | undefined },
 ): Promise<NormalizedTagArticles> => {
+  await awaitRateLimitSlot();
+
   const payload = await fetchTagArticles(slug, { limit: options.limit });
 
   return normalizeTagArticles(payload);

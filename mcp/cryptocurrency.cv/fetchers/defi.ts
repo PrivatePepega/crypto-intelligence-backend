@@ -4,6 +4,8 @@ import {
   type NormalizedDefiNews,
 } from "../defi.normalizer.js";
 
+import { awaitRateLimitSlot } from "./throttle.js";
+
 /**
  * Fetch and sanitize DeFi-specific news.
  *
@@ -19,6 +21,8 @@ export const getDefiNews = async (options: {
   limit: number;
   signal?: AbortSignal | undefined;
 }): Promise<NormalizedDefiNews> => {
+  await awaitRateLimitSlot();
+
   const payload = await fetchDefiNews({ limit: options.limit });
 
   return normalizeDefiNews(payload);

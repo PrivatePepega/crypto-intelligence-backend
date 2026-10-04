@@ -4,6 +4,8 @@ import {
   type NormalizedBitcoinNews,
 } from "../bitcoin.normalizer.js";
 
+import { awaitRateLimitSlot } from "./throttle.js";
+
 /**
  * Fetch and sanitize Bitcoin-specific news.
  *
@@ -21,6 +23,8 @@ export const getBitcoinNews = async (options: {
   limit: number;
   signal?: AbortSignal | undefined;
 }): Promise<NormalizedBitcoinNews> => {
+  await awaitRateLimitSlot();
+
   const payload = await fetchBitcoinNews({ limit: options.limit });
 
   return normalizeBitcoinNews(payload);

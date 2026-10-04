@@ -1,6 +1,8 @@
 import { fetchNews } from "../client.js";
 import { normalizeNews, type NormalizedNews } from "../news.normalizer.js";
 
+import { awaitRateLimitSlot } from "./throttle.js";
+
 /**
  * Fetch and sanitize the main crypto news feed.
  *
@@ -18,6 +20,8 @@ export const getNews = async (options: {
   limit: number;
   signal?: AbortSignal | undefined;
 }): Promise<NormalizedNews> => {
+  await awaitRateLimitSlot();
+
   const payload = await fetchNews({ limit: options.limit });
 
   return normalizeNews(payload);

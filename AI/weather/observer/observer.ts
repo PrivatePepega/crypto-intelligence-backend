@@ -15,6 +15,13 @@ import { fmpGetArticlesListTool } from "../../tools/fmpGetArticlesList.js";
 import { newsDataCryptoNewsTool } from "../../tools/newsDataCryptoNews.js";
 import { newsDataLatestNewsTool } from "../../tools/newsDataLatestNews.js";
 import { newsDataMarketNewsTool } from "../../tools/newsDataMarketNews.js";
+import { cvArticlesTagsTool } from "../../tools/cvArticlesTags.js";
+import { cvBitcoinNewsTool } from "../../tools/cvBitcoinNews.js";
+import { cvBreakingTool } from "../../tools/cvBreaking.js";
+// import { cvDefiTool } from "../../tools/cvDefi.js";
+import { cvNewsTool } from "../../tools/cvNews.js";
+import { cvSearchTool } from "../../tools/cvSearch.js";
+import { cvTrendingTool } from "../../tools/cvTrending.js";
 
 
 // --------------------------------------------------
@@ -44,7 +51,21 @@ const observerTools = {
 
   // newsDataLatestNewsTool,
 
-  newsDataMarketNewsTool,
+  // newsDataMarketNewsTool,
+
+  // cvArticlesTagsTool,
+
+  // cvBitcoinNewsTool,
+
+  // cvBreakingTool,
+
+  // cvDefiTool, //sucks max3
+
+  // cvNewsTool, //sucks max3
+
+  // cvSearchTool, //sucks max3
+
+  // cvTrendingTool,
 
 };
 

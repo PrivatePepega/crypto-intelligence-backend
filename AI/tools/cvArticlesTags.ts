@@ -15,12 +15,20 @@ const DEFAULT_LIMIT = 10;
 const KNOWN_TAGS = [
   "bitcoin",
   "ethereum",
+  "etf",
   "defi",
   "nft",
   "stablecoin",
   "regulation",
   "altcoin",
+  "institutional",
+  "layer-2",
+  "hack",
+  "ai-crypto",
+  "rwa",
+  "nft",
 ] as const;
+
 
 export const cvArticlesTagsTool = tool({
   description:

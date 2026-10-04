@@ -4,6 +4,8 @@ import {
   type NormalizedSearch,
 } from "../search.normalizer.js";
 
+import { awaitRateLimitSlot } from "./throttle.js";
+
 /**
  * Fetch and sanitize keyword search results.
  *
@@ -26,6 +28,8 @@ export const searchNews = async (
   query: string,
   options: { limit: number; signal?: AbortSignal | undefined },
 ): Promise<NormalizedSearch> => {
+  await awaitRateLimitSlot();
+
   const payload = await fetchSearch({
     q: query,
     limit: options.limit,

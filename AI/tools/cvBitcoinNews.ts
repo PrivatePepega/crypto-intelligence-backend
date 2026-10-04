@@ -10,7 +10,7 @@ import { getBitcoinNews } from "../../mcp/cryptocurrency.cv/fetchers/bitcoin.js"
  * most articles carry only the literal description `Comments` and are dropped,
  * so 5 requested commonly yields only 1 or 2 usable items.
  */
-const DEFAULT_LIMIT = 15;
+const DEFAULT_LIMIT = 20;
 
 export const cvBitcoinNewsTool = tool({
   description:

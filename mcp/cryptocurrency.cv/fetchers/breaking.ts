@@ -4,6 +4,8 @@ import {
   type NormalizedBreaking,
 } from "../breaking.normalizer.js";
 
+import { awaitRateLimitSlot } from "./throttle.js";
+
 /**
  * Fetch and sanitize breaking crypto news, covering roughly the last two hours.
  *
@@ -23,6 +25,8 @@ export const getBreakingNews = async (options: {
   limit: number;
   signal?: AbortSignal | undefined;
 }): Promise<NormalizedBreaking> => {
+  await awaitRateLimitSlot();
+
   const payload = await fetchBreaking({ limit: options.limit });
 
   return normalizeBreaking(payload);
