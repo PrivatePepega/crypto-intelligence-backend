@@ -7,9 +7,6 @@ import { cleanText, isEmptyDescription, readArticles } from "./client.js";
  * removed**, for the same reasons as `/api/search`.
  */
 
-/** Maximum articles returned per call. */
-export const TAGS_ARTICLE_LIMIT = 5;
-
 export type NormalizedTagArticleItem = {
   title: string;
   description: string;
@@ -38,7 +35,6 @@ export const normalizeTagArticles = (
   raw: unknown,
 ): NormalizedTagArticles => {
   const items = readArticles(raw)
-    .slice(0, TAGS_ARTICLE_LIMIT)
     .map((article) => ({
       title: cleanText(article.title),
       description: cleanText(article.description),

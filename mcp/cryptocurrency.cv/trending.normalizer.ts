@@ -12,9 +12,6 @@ import { cleanText } from "./client.js";
  * `readArticles` finds nothing and the projection reads `trending` directly.
  */
 
-/** Maximum trends returned per call. */
-export const TRENDING_LIMIT = 5;
-
 export type NormalizedTrendingItem = {
   topic: string;
   sentiment: string;
@@ -60,7 +57,6 @@ export const normalizeTrending = (raw: unknown): NormalizedTrending => {
     : ((prop<unknown>(payload, "trending") as unknown[]) ?? []);
 
   const items = (trends as Record<string, unknown>[])
-    .slice(0, TRENDING_LIMIT)
     .map((trend) => {
       const headlines = Array.isArray(trend.recentHeadlines)
         ? trend.recentHeadlines

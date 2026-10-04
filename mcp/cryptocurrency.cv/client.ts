@@ -271,6 +271,17 @@ export const unionFields = (records: Record<string, unknown>[]): string[] => {
 
 // --------------------------------------------------
 // Endpoint helpers
+//
+// Only endpoints with a normalizer behind them are kept, so the client and the
+// tool surface cannot drift apart. `/api/search/semantic` is the one exception:
+// it has no normalizer yet and is kept while its behaviour is still being
+// established - see `fetchSemanticSearch` below.
+//
+// Removed as unused:
+//   GET  /api/news/international  different article shape, region filter no-op
+//   GET  /api/tags               metadata, never consumed by a tool
+//   GET  /api/article            single object, no normalizer
+//   POST /api/news/extract       single object, no normalizer
 // --------------------------------------------------
 
 /** `GET /api/news` - the main crypto news feed. */
@@ -297,37 +308,17 @@ export const fetchBitcoinNews = async (params: CryptoCvParams = {}) =>
 export const fetchDefiNews = async (params: CryptoCvParams = {}) =>
   await cryptoCvGet("/api/defi", params);
 
-/** `GET /api/news/international` - international crypto news. */
-export const fetchInternationalNews = async (params: CryptoCvParams = {}) =>
-  await cryptoCvGet("/api/news/international", params);
-
-/** `GET /api/tags` - browse available article tags. */
-export const fetchTags = async (params: CryptoCvParams = {}) =>
-  await cryptoCvGet("/api/tags", params);
-
 /** `GET /api/tags/{slug}` - articles carrying a given tag. */
 export const fetchTagArticles = async (
   slug: string,
   params: CryptoCvParams = {},
 ) => await cryptoCvGet(`/api/tags/${encodeURIComponent(slug)}`, params);
 
-/** `GET /api/article` - article lookup by url, title or source. */
-export const fetchArticle = async (params: CryptoCvParams = {}) =>
-  await cryptoCvGet("/api/article", params);
-
-/**
- * `POST /api/news/extract` - extract full article text from a URL.
- *
- * The spec declares `url` as a query parameter rather than a JSON body, so it
- * is sent as both: the query form matches the spec, and the body form matches
- * the written brief. Sending both is harmless and covers whichever the server
- * actually reads.
- */
-export const extractArticle = async (url: string) =>
-  await cryptoCvPost("/api/news/extract", { url }, { url });
-
 /**
  * Semantic search - and it is **not** a search endpoint.
+ *
+ * Kept in the client without a normalizer because its behaviour is still being
+ * established. See `semanticSearch.test.ts`, which probes it in isolation.
  *
  * Measured 2026-10-03. The written brief calls this
  * `GET /api/search/semantic?q=...`. Reality:

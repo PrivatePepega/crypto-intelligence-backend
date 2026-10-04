@@ -1,155 +1,225 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
+import "dotenv/config";
 
+import {
+  CryptoCvApiError,
+  fetchBitcoinNews,
+  fetchBreaking,
+  fetchDefiNews,
+  fetchSearch,
+  fetchTagArticles,
+  fetchTrending,
+  describeCryptoCvBaseUrl,
+  readArticles,
+} from "./client.js";
+
+import { normalizeBitcoinNews } from "./bitcoin.normalizer.js";
 import { normalizeBreaking } from "./breaking.normalizer.js";
 import { normalizeDefiNews } from "./defi.normalizer.js";
-import { normalizeNewsExtract } from "./newsExtract.normalizer.js";
 import { normalizeSearch } from "./search.normalizer.js";
 import { normalizeTagArticles } from "./tagsArticles.normalizer.js";
 import { normalizeTrending } from "./trending.normalizer.js";
 
 /**
- * Run every normalizer against the captured responses and show the result.
+ * Fetch every scoped endpoint, normalize it, and write the result.
  *
  * Run: npx tsx mcp/cryptocurrency.cv/showOutput.ts
  *
- * Reads `raw/*.json` rather than calling the API, so it is offline and free -
- * important while the account is rate-limited.
+ * Out: mcp/cryptocurrency.cv/normalized/<slug>.json
  *
- * Only normalizers whose capture exists are run, so this stays in step with
- * whatever `raw/` currently holds rather than reporting a wall of empties for
- * endpoints that were removed.
+ * This **calls the live API**. The earlier version of this script read
+ * `raw/*.json` and normalized those, which meant it could only ever show data
+ * already captured - and with the account rate-limited it mostly showed
+ * failures. Fetching here makes the script self-contained: one run produces
+ * current output without needing `captureRaw.ts` to have run first.
  *
- * Captures that recorded a failure are reported as failures, not as empty
- * results, so a rate-limited capture cannot be mistaken for "no news".
+ * `raw/` is deliberately **not** written. That is `captureRaw.ts`'s job; keeping
+ * the two separate means a quick normalisation run never overwrites a good
+ * capture.
+ *
+ * Each endpoint is isolated: one failure is reported and the run continues, so a
+ * single rate-limited call cannot blank out the whole report.
  */
 
-const RAW_DIR = "mcp/cryptocurrency.cv/raw";
+/** Articles requested per call. The free tier caps responses at 3. */
+const LIMIT = 5;
+
 const OUT_DIR = "mcp/cryptocurrency.cv/normalized";
 
-interface Case {
-  slug: string;
-  endpoint: string;
-  normalize: (raw: unknown) => { count: number; items: unknown[] };
-}
+type Normalized = { count: number; items: unknown[] };
 
-const CASES: Case[] = [
-  { slug: "defi", endpoint: "GET /api/defi", normalize: normalizeDefiNews },
-  {
-    slug: "breaking",
-    endpoint: "GET /api/breaking",
-    normalize: normalizeBreaking,
-  },
-  { slug: "search", endpoint: "GET /api/search", normalize: normalizeSearch },
-  {
-    slug: "tags-bitcoin",
-    endpoint: "GET /api/tags/bitcoin",
-    normalize: normalizeTagArticles,
-  },
-  {
-    slug: "news-extract",
-    endpoint: "POST /api/news/extract",
-    normalize: normalizeNewsExtract,
-  },
-  { slug: "trending", endpoint: "GET /api/trending", normalize: normalizeTrending },
-];
+/** Anything a fetch can return, kept untyped until the normalizer narrows it. */
+type Payload = unknown;
 
-/** Reads a capture, reporting whether it holds data or recorded a failure. */
-const readCapture = async (
-  slug: string,
-): Promise<
-  { state: "ok"; raw: unknown } | { state: "failed"; error: string } | { state: "missing" }
-> => {
-  let text: string;
-
-  try {
-    text = await readFile(`${RAW_DIR}/${slug}.json`, "utf8");
-  } catch {
-    return { state: "missing" };
-  }
-
-  const parsed = JSON.parse(text) as { ok?: boolean; error?: string };
-
-  if (parsed.ok === false) {
-    const message =
-      typeof parsed.error === "string"
-        ? parsed.error.replace(/\s+/g, " ").slice(0, 110)
-        : "unknown error";
-
-    return { state: "failed", error: message };
-  }
-
-  return { state: "ok", raw: parsed };
+const write = async (slug: string, value: unknown): Promise<void> => {
+  await writeFile(
+    `${OUT_DIR}/${slug}.json`,
+    JSON.stringify(value, null, 2),
+    "utf8",
+  );
 };
 
-const main = async (): Promise<void> => {
-  const output: Record<string, unknown> = {};
+/** How many articles a payload carried before normalization. */
+const articleCount = (payload: Payload): number => readArticles(payload).length;
 
-  const tally = { ok: 0, failed: 0, missing: 0 };
+const main = async (): Promise<void> => {
+  console.log("");
+  console.log("=".repeat(70));
+  console.log("cryptocurrency.cv  fetch -> normalize -> normalized/");
+  console.log("=".repeat(70));
+  console.log(`  base url : ${describeCryptoCvBaseUrl()}`);
+  console.log(`  limit    : ${LIMIT}`);
+  console.log(`  output   : ${OUT_DIR}/`);
 
   await mkdir(OUT_DIR, { recursive: true });
 
-  for (const testCase of CASES) {
-    const capture = await readCapture(testCase.slug);
+  const results: Record<string, unknown> = {};
 
-    if (capture.state === "missing") {
-      tally.missing += 1;
+  const tally = { ok: 0, failed: 0 };
 
-      output[testCase.endpoint] = { capture: "missing" };
+  const failed = (t: { failed: number }): void => {
+    t.failed += 1;
+  };
 
-      await writeFile(
-        `${OUT_DIR}/${testCase.slug}.json`,
-        JSON.stringify({ capture: "missing" }, null, 2),
-        "utf8",
+  /**
+   * Fetches, normalizes and records one endpoint.
+   *
+   * `dependsOn` lets a later endpoint reuse an earlier payload, which
+   * `/api/news/extract` needs since it requires an article URL.
+   */
+  const step = async (
+    slug: string,
+    endpoint: string,
+    fetchIt: () => Promise<Payload>,
+    normalize: (raw: Payload) => Normalized,
+  ): Promise<Payload | null> => {
+    process.stdout.write(`\n  ${endpoint}\n`);
+
+    const startedAt = Date.now();
+
+    let payload: Payload;
+
+    try {
+      payload = await fetchIt();
+    } catch (error) {
+      failed(tally);
+      results[endpoint] = {
+        error: (error instanceof Error ? error.message : String(error))
+          .replace(/\s+/g, " ")
+          .slice(0, 160),
+      };
+
+      await write(slug, results[endpoint]);
+
+      console.log(
+        `    FAILED ${Date.now() - startedAt}ms  ${JSON.stringify(results[endpoint])}`,
       );
 
-      continue;
+      return null;
     }
 
-    if (capture.state === "failed") {
-      tally.failed += 1;
+    const elapsed = Date.now() - startedAt;
 
-      output[testCase.endpoint] = { capture: "failed", error: capture.error };
+    try {
+      const normalized = normalize(payload);
 
-      await writeFile(
-        `${OUT_DIR}/${testCase.slug}.json`,
-        JSON.stringify({ capture: "failed", error: capture.error }, null, 2),
-        "utf8",
-      );
-
-      continue;
-    }
-
-    const normalized = testCase.normalize(capture.raw);
-
-    if (normalized.count > 0) {
       tally.ok += 1;
-    } else {
-      tally.failed += 1;
+      results[endpoint] = normalized;
+
+      await write(slug, normalized);
+
+      console.log(
+        `    OK ${elapsed}ms  raw=${articleCount(payload)} articles  ` +
+          `-> ${normalized.count} normalized  ` +
+          `(${JSON.stringify(normalized).length} chars)`,
+      );
+
+      return payload;
+    } catch (error) {
+      failed(tally);
+      results[endpoint] = {
+        error: `normalize failed: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      };
+
+      await write(slug, results[endpoint]);
+
+      console.log(`    NORMALIZE FAILED  ${JSON.stringify(results[endpoint])}`);
+
+      return payload;
     }
+  };
 
-    output[testCase.endpoint] = normalized;
+  // --- trending first: no dependencies, and a different response shape ---
 
-    await writeFile(
-      `${OUT_DIR}/${testCase.slug}.json`,
-      JSON.stringify(normalized, null, 2),
-      "utf8",
-    );
-  }
+  await step(
+    "trending",
+    "GET /api/trending",
+    () => fetchTrending({ limit: LIMIT }),
+    normalizeTrending,
+  );
+
+  // --- search: its articles supply the URL that news/extract needs ---
+
+  const searchPayload = await step(
+    "search",
+    "GET /api/search?q=bitcoin",
+    () => fetchSearch({ q: "bitcoin", limit: LIMIT }),
+    normalizeSearch,
+  );
+
+  await step(
+    "bitcoin",
+    "GET /api/bitcoin",
+    () => fetchBitcoinNews({ limit: LIMIT }),
+    normalizeBitcoinNews,
+  );
+
+  await step(
+    "defi",
+    "GET /api/defi",
+    () => fetchDefiNews({ limit: LIMIT }),
+    normalizeDefiNews,
+  );
+
+  await step(
+    "breaking",
+    "GET /api/breaking",
+    () => fetchBreaking({ limit: LIMIT }),
+    normalizeBreaking,
+  );
+
+  await step(
+    "tags-bitcoin",
+    "GET /api/tags/bitcoin",
+    () => fetchTagArticles("bitcoin", { limit: LIMIT }),
+    normalizeTagArticles,
+  );
 
   console.log("");
-  console.log(JSON.stringify(output, null, 2));
-
-  console.log("");
+  console.log("=".repeat(70));
+  console.log(JSON.stringify(results, null, 2));
   console.log("=".repeat(70));
   console.log(`  with data : ${tally.ok}`);
-  console.log(`  no data   : ${tally.failed}`);
-  console.log(`  missing   : ${tally.missing}`);
+  console.log(`  failed    : ${tally.failed}`);
   console.log(`  written   : ${OUT_DIR}/`);
   console.log("=".repeat(70));
+
+  if (tally.ok === 0) {
+    process.exitCode = 1;
+  }
 };
 
 void main().catch((error: unknown) => {
+  console.error("");
+  console.error("FETCH + NORMALIZE FAILED");
+  console.error("----------------------------------------------");
   console.error(error);
+
+  if (error instanceof CryptoCvApiError) {
+    console.error(`  status: ${error.status}`);
+  }
 
   process.exitCode = 1;
 });

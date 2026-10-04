@@ -7,9 +7,6 @@ import { cleanText, isEmptyDescription, readArticles } from "./client.js";
  * removed**.
  */
 
-/** Maximum articles returned per call. */
-export const BREAKING_LIMIT = 5;
-
 export type NormalizedBreakingItem = {
   title: string;
   description: string;
@@ -39,7 +36,6 @@ export type NormalizedBreaking = {
  */
 export const normalizeBreaking = (raw: unknown): NormalizedBreaking => {
   const items = readArticles(raw)
-    .slice(0, BREAKING_LIMIT)
     .map((article) => ({
       title: cleanText(article.title),
       description: cleanText(article.description),

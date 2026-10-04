@@ -1,4 +1,0 @@
-{
-  "capture": "failed",
-  "error": "cryptocurrency.cv /api/breaking failed (HTTP 403): {\"error\":\"Forbidden\",\"code\":\"REPEAT_RATE_LIMIT_ABUSE\",\"mess"
-}

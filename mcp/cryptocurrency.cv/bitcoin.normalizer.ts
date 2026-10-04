@@ -6,9 +6,6 @@ import { cleanText, isEmptyDescription, readArticles } from "./client.js";
  * Projects each article down to `title` and `description`.
  */
 
-/** Maximum articles returned per call. */
-export const BITCOIN_LIMIT = 5;
-
 export type NormalizedBitcoinItem = {
   title: string;
   description: string;
@@ -38,7 +35,6 @@ export const normalizeBitcoinNews = (
   raw: unknown,
 ): NormalizedBitcoinNews => {
   const items = readArticles(raw)
-    .slice(0, BITCOIN_LIMIT)
     .map((article) => ({
       title: cleanText(article.title),
       description: cleanText(article.description),

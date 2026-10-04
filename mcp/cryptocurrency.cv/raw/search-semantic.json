@@ -1,8 +1,0 @@
-{
-  "label": "POST /api/search/semantic (reranker)",
-  "capturedAt": "2026-10-04T01:59:04.579Z",
-  "ok": false,
-  "params": {},
-  "httpStatus": 403,
-  "error": "cryptocurrency.cv /api/search/semantic failed (HTTP 403): {\"error\":\"Forbidden\",\"code\":\"REPEAT_RATE_LIMIT_ABUSE\",\"message\":\"Too many rate-limited requests. You are temporarily blocked.\",\"retryAfter\":3600,\"requestId\":\"req_mut6a0y1_d575230c\"}"
-}

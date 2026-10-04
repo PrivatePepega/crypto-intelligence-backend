@@ -7,9 +7,6 @@ import { cleanText, isEmptyDescription, readArticles } from "./client.js";
  * removed**.
  */
 
-/** Maximum articles returned per call. */
-export const SEARCH_LIMIT = 5;
-
 export type NormalizedSearchItem = {
   title: string;
   description: string;
@@ -43,7 +40,6 @@ export type NormalizedSearch = {
  */
 export const normalizeSearch = (raw: unknown): NormalizedSearch => {
   const items = readArticles(raw)
-    .slice(0, SEARCH_LIMIT)
     .map((article) => ({
       title: cleanText(article.title),
       description: cleanText(article.description),

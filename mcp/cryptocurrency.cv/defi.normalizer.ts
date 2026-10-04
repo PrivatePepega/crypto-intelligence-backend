@@ -6,9 +6,6 @@ import { cleanText, isEmptyDescription, readArticles } from "./client.js";
  * Projects each article down to `title` and `description`.
  */
 
-/** Maximum articles returned per call. */
-export const DEFI_LIMIT = 5;
-
 export type NormalizedDefiItem = {
   title: string;
   description: string;
@@ -33,7 +30,6 @@ export type NormalizedDefiNews = {
  */
 export const normalizeDefiNews = (raw: unknown): NormalizedDefiNews => {
   const items = readArticles(raw)
-    .slice(0, DEFI_LIMIT)
     .map((article) => ({
       title: cleanText(article.title),
       description: cleanText(article.description),
