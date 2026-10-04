@@ -1,0 +1,237 @@
+{
+  "label": "GET /data/v1/sections/ai.json",
+  "path": "/data/v1/sections/ai.json",
+  "capturedAt": "2026-10-04T20:27:34.102Z",
+  "elapsedMs": 233,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "ai",
+    "stories": [
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-02T23:15:09+00:00",
+        "headline": "OpenAI safety leader David Robinson quits, citing broken culture",
+        "hot": "$66k traded on its market in 24 hours",
+        "id": 42683,
+        "image_url": "https://i.guim.co.uk/img/media/77b3a6702fa4e94c36e292a72e438fa40eb19184/625_0_6261_5010/master/6261.jpg?width=140&quality=85&auto=format&fit=max&s=c17f6e9f87c87ad9b50cb368a894daf4",
+        "last_seen_at": "2026-10-04T19:36:56+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/77b3a6702fa4e94c36e292a72e438fa40eb19184/625_0_6261_5010/master/6261.jpg?width=140&quality=85&auto=format&fit=max&s=c17f6e9f87c87ad9b50cb368a894daf4",
+            "published_at": "2026-10-03T19:41:21+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "OpenAI safety leader quits, warning AI company’s culture is ‘broken’",
+            "url": "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken"
+          },
+          {
+            "published_at": "2026-10-03T16:30:01+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+            "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken"
+          },
+          {
+            "published_at": "2026-10-03T14:31:56+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "An OpenAI safety employee has quit and is sounding the alarm",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm"
+          },
+          {
+            "image_url": "https://i.insider.com/6ac28d7f265e3f8e338fa96a?format=jpeg",
+            "published_at": "2026-10-04T19:36:56+00:00",
+            "publisher": "All Content from Business Insider",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "Meet David Robinson, the OpenAI safety leader who quit and warned that the company isn’t careful enough",
+            "url": "https://www.businessinsider.com/david-robinson-the-openai-safety-leader-who-quit-the-company-2026-10"
+          },
+          {
+            "image_url": "https://i.insider.com/6ac150a3eb7225411267e014?format=jpeg",
+            "published_at": "2026-10-03T19:01:53+00:00",
+            "publisher": "All Content from Business Insider",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "OpenAI leader who quit says he can do more for safety from outside the company",
+            "url": "https://www.businessinsider.com/david-robinson-can-do-more-for-safety-outside-open-ai-2026-10"
+          },
+          {
+            "image_url": "https://i.insider.com/6ac03522d15f8a572974de1c?format=jpeg",
+            "published_at": "2026-10-02T23:15:09+00:00",
+            "publisher": "All Content from Business Insider",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "OpenAI safety leader David Robinson resigns as the team's upheaval mounts",
+            "url": "https://www.businessinsider.com/safety-leader-david-robinson-resigns-from-openai-2026-10"
+          }
+        ],
+        "score": 3.229,
+        "section": "ai",
+        "slug": "openai-safety-leader-david-robinson-resigns-amid-company-upheaval-42683",
+        "source_count": 6,
+        "summary": "David Robinson has resigned from OpenAI's Safety Systems team, warning that the company's culture is broken and urging greater care in AI development.",
+        "top_market": {
+          "end_date": "2026-10-15T03:59:00+00:00",
+          "explainer": "The market resolves to \"Yes\" if OpenAI makes an official announcement that it has resumed training suspended on September 25, 2026. The resolution date is the calendar date of that first qualifying announcement, provided it occurs by 11:59 PM ET on October 20, 2026. Readers often mistake planned or permitted restarts for actual resumption, but only confirmed training activity counts.",
+          "id": "0x9ab2720ce9756400d5fe00ce722cdcdb804f8016775c4cf328af74f367dfe9ae",
+          "liquidity": 2885.2971,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.103
+            },
+            {
+              "name": "No",
+              "price": 0.897
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/openai-resumes-training-on-october-14?r=alykhan3",
+          "price_24h_ago": 0.10149999999999999,
+          "question": "Will OpenAI announce that it has resumed training on October 14, 2026?",
+          "similarity": 0.7482742667198181,
+          "slug": "openai-resumes-training-on-october-14",
+          "volume_24h": 52.765384999999995,
+          "volume_total": 2568.992106,
+          "yes_price": 0.103
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-03T09:36:04+00:00",
+        "headline": "Aleph Alpha Releases Kolibri Open-Weight AI Model",
+        "id": 43138,
+        "last_seen_at": "2026-10-04T07:01:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T07:01:04+00:00",
+            "publisher": "marktechpost.com",
+            "publisher_slug": "marktechpost-com",
+            "tier": 2,
+            "title": "Aleph Alpha Releases Kolibri: A 78.1B Open-Weight English-German MoE Model With Only 3.46B Active Parameters",
+            "url": "https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters"
+          },
+          {
+            "published_at": "2026-10-03T10:43:51+00:00",
+            "publisher": "Hacker News",
+            "publisher_slug": "ycombinator-com",
+            "tier": 3,
+            "title": "Show HN: Germany's new sovereign AI model Kolibri",
+            "url": "https://tej.as/blog/aleph-alpha-kolibri"
+          },
+          {
+            "published_at": "2026-10-03T09:36:04+00:00",
+            "publisher": "Hacker News",
+            "publisher_slug": "ycombinator-com",
+            "tier": 3,
+            "title": "Kolibri Has Landed: A Sovereign Open-Weight Model",
+            "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model"
+          }
+        ],
+        "score": 0.521,
+        "section": "ai",
+        "slug": "aleph-alpha-releases-kolibri-open-weight-ai-model-43138",
+        "source_count": 3,
+        "summary": "The German firm has released Kolibri, a mixture-of-experts model with 78.1 billion parameters that activates only 3.46 billion per token."
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-09-21T14:45:00+00:00",
+        "headline": "NVIDIA Announces DGX Spark with 64GB RAM for Local AI Workloads",
+        "id": 23079,
+        "image_url": "https://cdn.mos.cms.futurecdn.net/3PafanCD9Ws7RDdJ8SGBji-1920-80.jpg",
+        "last_seen_at": "2026-10-03T11:40:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-09-24T18:19:23+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Sadly, this $1,549 RTX 5070-equipped gaming PC is a very good deal",
+            "url": "https://www.theverge.com/gadgets/1000122/cyberpowerpc-gaming-prebuilt-rtx-5070-core-i7-asrock-oled-monitor-deal-sale"
+          },
+          {
+            "image_url": "https://cdn.mos.cms.futurecdn.net/3PafanCD9Ws7RDdJ8SGBji-1920-80.jpg",
+            "published_at": "2026-10-03T11:40:00+00:00",
+            "publisher": "Latest from Tom's Hardware",
+            "publisher_slug": "tomshardware-com",
+            "tier": 2,
+            "title": "$5,245 prebuilt RTX 5090 PC's connectors melt after sitting boxed for a year",
+            "url": "https://www.tomshardware.com/desktops/gaming-pcs/usd5-245-prebuilt-rtx-5090-pcs-connectors-melt-after-sitting-boxed-for-a-year-digital-storm-and-pny-deny-warranty-claims-over-expired-coverage-and-third-party-cables"
+          },
+          {
+            "image_url": "https://www.youtube.com/embed/MehBUQtb9qM",
+            "published_at": "2026-10-02T18:04:56+00:00",
+            "publisher": "marktechpost.com",
+            "publisher_slug": "marktechpost-com",
+            "tier": 2,
+            "title": "NVIDIA Announces DGX Spark 64GB: A 1-PetaFLOP Grace Blackwell Desktop for Local AI Agents, Fine-Tuning, and Inference",
+            "url": "https://www.marktechpost.com/2026/10/02/nvidia-announces-dgx-spark-64gb-a-1-petaflop-grace-blackwell-desktop-for-local-ai-agents-fine-tuning-and-inference"
+          },
+          {
+            "image_url": "https://image.theregister.com/?imageId=243225&width=800",
+            "published_at": "2026-10-02T13:00:00+00:00",
+            "publisher": "www.theregister.com",
+            "publisher_slug": "theregister-com",
+            "tier": 2,
+            "title": "Nvidia debuts $4,999 DGX Spark with half the RAM and storage, amid memory crunch",
+            "url": "https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622"
+          },
+          {
+            "image_url": "https://cdn.mos.cms.futurecdn.net/D4D8sJFKUe4PFUpqUAPSfB-1920-80.jpg",
+            "published_at": "2026-10-02T13:00:00+00:00",
+            "publisher": "Latest from Tom's Hardware",
+            "publisher_slug": "tomshardware-com",
+            "tier": 2,
+            "title": "Nvidia introduces 64GB DGX Spark to throw local AI fans a lifeline amid the RAMpocalypse",
+            "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-introduces-64gb-dgx-spark-to-throw-local-ai-fans-a-lifeline-amid-the-rampocalypse-new-gb10-config-starts-at-usd4999-for-those-who-can-work-with-less"
+          },
+          {
+            "image_url": "https://cdn.mos.cms.futurecdn.net/Mm2gV5qCSP73reYrDxWWvU-1920-80.png",
+            "published_at": "2026-10-01T11:40:00+00:00",
+            "publisher": "Latest from Tom's Hardware",
+            "publisher_slug": "tomshardware-com",
+            "tier": 2,
+            "title": "Grab a huge $520 saving on this RTX 5090 gaming laptop from MSI with 64GB DDR5 and a 2TB SSD",
+            "url": "https://www.tomshardware.com/laptops/gaming-laptops/grab-a-huge-usd520-saving-on-this-rtx-5090-gaming-laptop-from-msi-with-64gb-ddr5-and-a-2tb-ssd-stealth-a18-ai-rig-ships-with-12-core-amd-ryzen-ai-9-cpu-along-with-an-18-inch-uhd-display-with-a-120hz-refresh-rate"
+          }
+        ],
+        "score": 0.435,
+        "section": "ai",
+        "slug": "walmart-and-newegg-offer-discounts-on-gaming-pcs-with-nvidia-rtx-50-series-23079",
+        "source_count": 23,
+        "summary": "The company unveils a new 64GB configuration of its GB10-powered desktop system, priced at $4,999, to support local model development and inference.",
+        "top_market": {
+          "end_date": "2027-06-01T03:59:59+00:00",
+          "explainer": "The market resolves to Yes if the average hourly cost of renting NVIDIA RTX 5090 computing power exceeds $2 during May 2027. It resolves to No if that average stays at or below $2 for the entire month. Readers often mistake the linked news story about current PC prices for the actual metric being tracked.",
+          "id": "kalshi:KXRTX5090MS-27MAY-2.000",
+          "liquidity": 5104.09,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.02
+            },
+            {
+              "name": "No",
+              "price": 0.98
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxrtx5090ms-27may/kxrtx5090ms-27may-2.000",
+          "price_24h_ago": 0.02,
+          "question": "Above $2.00",
+          "similarity": 0.7877466082572937,
+          "slug": "kxrtx5090ms-27may/kxrtx5090ms-27may-2.000",
+          "volume_24h": 0,
+          "volume_total": 5104.09,
+          "yes_price": 0.02
+        }
+      }
+    ],
+    "total": 3
+  }
+}

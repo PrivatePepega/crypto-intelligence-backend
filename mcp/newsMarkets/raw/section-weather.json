@@ -1,0 +1,14 @@
+{
+  "label": "GET /data/v1/sections/weather.json",
+  "path": "/data/v1/sections/weather.json",
+  "capturedAt": "2026-10-04T20:27:56.804Z",
+  "elapsedMs": 140,
+  "generatedAt": "2026-10-04T14:46:31.113588+00:00",
+  "response": {
+    "generated_at": "2026-10-04T14:46:31.113588+00:00",
+    "schema_version": 1,
+    "section": "weather",
+    "stories": [],
+    "total": 0
+  }
+}

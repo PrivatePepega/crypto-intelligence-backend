@@ -1,0 +1,2921 @@
+{
+  "label": "GET /data/v1/sections/business.json",
+  "path": "/data/v1/sections/business.json",
+  "capturedAt": "2026-10-04T20:27:27.611Z",
+  "elapsedMs": 351,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "business",
+    "stories": [
+      {
+        "distinct_publishers": 45,
+        "first_seen_at": "2026-09-12T17:00:00+00:00",
+        "headline": "AI Reshapes Jobs in Auto, Real Estate and Media as Wikipedia Faces Revenue Pressure",
+        "id": 9956,
+        "image_url": "https://i.guim.co.uk/img/media/887a4a342690f7c675f7ae9e721933650383125d/0_0_3000_2400/master/3000.jpg?width=140&quality=85&auto=format&fit=max&s=709fe6cd03e4ff11d157abf67e2deeb9",
+        "last_seen_at": "2026-10-04T17:20:52+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/887a4a342690f7c675f7ae9e721933650383125d/0_0_3000_2400/master/3000.jpg?width=140&quality=85&auto=format&fit=max&s=709fe6cd03e4ff11d157abf67e2deeb9",
+            "published_at": "2026-10-04T13:00:29+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "The AI industry is booming. Women are getting left behind",
+            "url": "https://www.theguardian.com/technology/2026/oct/04/women-ai-jobs-inequality"
+          },
+          {
+            "published_at": "2026-10-04T04:00:07+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "What can we learn from the office AI superusers?",
+            "url": "https://www.ft.com/content/7a556b32-0511-42ae-a596-d0aedbcdb1a3"
+          },
+          {
+            "published_at": "2026-10-03T16:27:47+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "By The Way: Headlines You May Have Missed",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-03/by-the-way-headlines-you-may-have-missed"
+          },
+          {
+            "published_at": "2026-10-02T10:00:01+00:00",
+            "publisher": "CNBC",
+            "publisher_slug": "cnbc-com",
+            "tier": 1,
+            "title": "How AI is redefining Wall Street jobs — and boosting demand for this new 'hottest skill' by 1,721%",
+            "url": "https://www.cnbc.com/2026/10/02/ai-redefining-wall-street-jobs.html"
+          },
+          {
+            "published_at": "2026-10-02T10:00:00+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "NYC’s AI Office Boom Is Bust for Young Job Hunters, Report Finds",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/nyc-s-ai-office-boom-is-bust-for-young-job-hunters-report-finds"
+          },
+          {
+            "image_url": "https://images.axios.com/w3OMWXfR2Pff7DVVTz7OkWX7lro=/0x96:4000x2346/1366x768/2026/10/01/1790896686519.jpeg",
+            "published_at": "2026-10-02T09:00:05+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "\"We're not asking for charity\": Wikimedia CEO calls out AI for unpaid data use",
+            "url": "https://www.axios.com/2026/10/02/wikipedia-ceo-ai-traffic-loss"
+          }
+        ],
+        "score": 6.45,
+        "section": "business",
+        "slug": "ceos-use-ai-but-lack-long-term-plans-9956",
+        "source_count": 282,
+        "summary": "Companies including BMW and NoBroker are cutting roles via AI, while Wikipedia warns of revenue loss from unpaid data use."
+      },
+      {
+        "distinct_publishers": 21,
+        "first_seen_at": "2026-09-08T11:30:55+00:00",
+        "headline": "UK Urged to Act as Polymarket Takes Bets on Bank Failures",
+        "id": 2780,
+        "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F38ced831-9e85-4e1d-bbb6-1d7e5edc5f49.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down",
+        "last_seen_at": "2026-10-04T20:00:10+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T20:00:10+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Dealmaking slowdown threatens early end to M&A boom",
+            "url": "https://www.ft.com/content/00fb4438-1f86-4bf2-a165-0c39f3fd506b"
+          },
+          {
+            "published_at": "2026-10-04T14:00:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Wall Street Strategists Steer Investors to Cross-Asset Hedges",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/wall-street-strategists-steer-investors-to-cross-asset-hedges"
+          },
+          {
+            "published_at": "2026-10-04T12:30:00+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "What’s Happening in EM: Carry Trades vs US Treasuries (Podcast)",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/what-s-happening-in-em-carry-trades-vs-us-treasuries-podcast"
+          },
+          {
+            "published_at": "2026-10-04T12:30:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Markets Brace for Sharp Swings No Matter Result of Brazil Vote",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/markets-brace-for-sharp-swings-no-matter-result-of-brazil-vote"
+          },
+          {
+            "published_at": "2026-10-04T12:30:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "EM Investors Shrug Off Quarter’s Pullback, Double Down on Carry Trades",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/em-investors-shrug-off-quarter-s-pullback-double-down-on-carry-trades"
+          },
+          {
+            "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F38ced831-9e85-4e1d-bbb6-1d7e5edc5f49.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down",
+            "published_at": "2026-10-04T09:29:09+00:00",
+            "publisher": "International homepage",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Why the IPO market is booming and busting",
+            "url": "https://www.ft.com/content/8b7e2800-3e36-4d0c-9016-32deaae67b62"
+          }
+        ],
+        "score": 6.035,
+        "section": "business",
+        "slug": "strong-corporate-earnings-drive-global-stock-rally-despite-war-risks-2780",
+        "source_count": 420,
+        "summary": "Authorities are urged to intervene after the prediction platform allowed bets on whether HSBC and Lloyds will fail."
+      },
+      {
+        "distinct_publishers": 36,
+        "first_seen_at": "2026-09-09T10:45:38+00:00",
+        "headline": "Amazon Pledges $1B to Communities Amid Data Center Backlash",
+        "id": 5243,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26276040482447.jpg?w=900",
+        "last_seen_at": "2026-10-04T17:00:05+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26276040482447.jpg?w=900",
+            "published_at": "2026-10-04T02:39:12+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump backs data centers in Ohio amid tight Senate race",
+            "url": "https://thehill.com/homenews/campaign/6127929-trump-defends-ohio-data-centers"
+          },
+          {
+            "published_at": "2026-10-03T18:43:57+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Amazon responds to data center backlash, says it no longer uses NDAs",
+            "url": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas"
+          },
+          {
+            "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/GettyImages-2292181016.jpg",
+            "published_at": "2026-10-02T20:30:27+00:00",
+            "publisher": "Ars Technica",
+            "publisher_slug": "arstechnica-com",
+            "tier": 1,
+            "title": "Amazon’s $1B plan to combat data center backlash draws more backlash",
+            "url": "https://arstechnica.com/tech-policy/2026/10/amazons-1b-plan-to-combat-data-center-backlash-draws-more-backlash"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/Zoom-In-AI-data-center_082224_AP_Jenny-Kane.jpg?w=900",
+            "published_at": "2026-10-02T16:02:56+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Amazon investing $1B in data center communities",
+            "url": "https://thehill.com/policy/technology/6126145-amazon-investment-data-center-communities-energy-water-costs"
+          },
+          {
+            "published_at": "2026-10-02T12:00:00+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "If a data center is camouflaged in the woods, will anyone hate it?",
+            "url": "https://www.theverge.com/tech/1003681/microsoft-data-centers-ai-environment-biomimicry"
+          },
+          {
+            "published_at": "2026-10-02T11:52:20+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Amazon writes scary blog warning communities not to block data centers",
+            "url": "https://www.theverge.com/tech/1003929/amazon-ai-data-center-blog-warning"
+          }
+        ],
+        "score": 5.967,
+        "section": "business",
+        "slug": "ai-firms-move-data-center-builds-overseas-amid-rising-costs-and-backlash-5243",
+        "source_count": 154,
+        "summary": "The company announces a five-year investment in workforce training and energy efficiency while ending non-disclosure agreements with local officials."
+      },
+      {
+        "distinct_publishers": 33,
+        "first_seen_at": "2026-09-10T06:10:53+00:00",
+        "headline": "Fed Officials Signal Rates Likely to Hold Steady in October After Soft Jobs Data",
+        "id": 5275,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/06/6a3c44ca219c67.10368312-e1787690611864.jpeg?w=900",
+        "last_seen_at": "2026-10-04T13:04:07+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T13:04:07+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Jobs Slow but Inflation Keeps Fed on Alert",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-04/jobs-slow-but-inflation-keeps-fed-on-alert-video"
+          },
+          {
+            "published_at": "2026-10-02T19:07:15+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "October fall",
+            "url": "https://www.ft.com/content/c89a552e-4720-47ae-9f0d-e9ff85b36dd9"
+          },
+          {
+            "published_at": "2026-10-02T18:45:50+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Traders Waver on Bets For Another Rate Hike This Year",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/traders-waver-on-bets-for-another-rate-hike-this-year-video"
+          },
+          {
+            "published_at": "2026-10-02T13:51:34+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Stocks and Bonds Rise at Open, Jobs Ease Fed-Hike Wagers, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-02/stocks-and-bonds-rise-at-open-jobs-ease-fed-hike-wagers-more"
+          },
+          {
+            "published_at": "2026-10-02T13:17:03+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Fed Is One Bad Inflation Number Away From Hiking Rates, Dutta Says",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/fed-is-one-bad-inflation-number-away-from-hiking-dutta-video"
+          },
+          {
+            "published_at": "2026-10-02T13:00:28+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Dollar Falls as Traders Pare Fed-Hike Bets After Soft Jobs Data",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/dollar-falls-as-traders-pare-fed-hike-bets-after-soft-jobs-data"
+          }
+        ],
+        "score": 5.62,
+        "section": "business",
+        "slug": "ecb-expected-to-raise-interest-rates-for-second-time-since-iran-war-5275",
+        "source_count": 338,
+        "summary": "Federal Reserve officials including Philip Jefferson and Michelle Bowman suggest interest rates will remain unchanged in October as traders reduce bets on further hikes following weaker September employment figures.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The outcome is Yes if the Federal Reserve raises its target interest rate range by December 31, 2026. The outcome is No if it does not raise rates within that timeframe. Readers often mistake the announcement date for the effective date of the rate change.",
+          "id": "kalshi:KXFEDHIKE-2-26DEC31",
+          "liquidity": 61944.54,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.77
+            },
+            {
+              "name": "No",
+              "price": 0.23
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxfedhike-2/kxfedhike-2-26dec31",
+          "price_24h_ago": 0.76,
+          "question": "Before 2027",
+          "similarity": 0.8293196558952332,
+          "slug": "kxfedhike-2/kxfedhike-2-26dec31",
+          "volume_24h": 560.1,
+          "volume_total": 61944.54,
+          "yes_price": 0.77
+        }
+      },
+      {
+        "distinct_publishers": 19,
+        "first_seen_at": "2026-09-08T23:49:59+00:00",
+        "headline": "Global Bond Yields Surge, Triggering Contagion Fears in Europe and Market Strain",
+        "id": 3584,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Treasury_Bonds_100125.png?w=900",
+        "last_seen_at": "2026-10-04T17:34:23+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T11:15:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Whispers of Contagion Risk Are Returning to Europe’s Bond Market",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/whispers-of-contagion-risk-are-returning-to-europe-s-bond-market"
+          },
+          {
+            "published_at": "2026-10-03T16:12:33+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Pressure Building on Iran, Bessent Downplays Rising Yields, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/pressure-building-on-iran-bessent-downplays-rising-yields-more"
+          },
+          {
+            "published_at": "2026-10-03T07:00:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Europe’s Stocks Are Straining Under Pressure From Bond Yields",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-03/europe-s-stocks-are-straining-under-pressure-from-bond-yields"
+          },
+          {
+            "published_at": "2026-10-03T04:00:39+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Rising gilt yields attract retail investors hunting for tax-efficient assets",
+            "url": "https://www.ft.com/content/17a502a2-f8cb-4d79-996e-f2c7018585de"
+          },
+          {
+            "published_at": "2026-10-02T20:40:38+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Wall Street Tries to Live With 5% Yields as Market Cracks Grow",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/wall-street-tries-to-live-with-5-yields-as-market-cracks-grow"
+          },
+          {
+            "published_at": "2026-10-02T18:20:15+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Bond Yields Are 'Juicy,' Says Apollo's Slok",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/bond-yields-are-juicy-says-apollo-s-slok-video"
+          }
+        ],
+        "score": 5.11,
+        "section": "business",
+        "slug": "strategist-says-treasury-buybacks-won-t-fix-us-yields-3584",
+        "source_count": 360,
+        "summary": "Rising government bond yields are straining European stocks and sparking contagion fears as investors reassess debt risks across global markets."
+      },
+      {
+        "distinct_publishers": 17,
+        "first_seen_at": "2026-09-20T23:45:00+00:00",
+        "headline": "Record Diesel Prices Hit US Farmers and UK Motorists Amid Iran Conflict",
+        "id": 22205,
+        "image_url": "https://i.guim.co.uk/img/media/f3458c8f45d7533d5f6fd936fa6b92236e7d1cf1/0_0_5001_4000/master/5001.jpg?width=140&quality=85&auto=format&fit=max&s=f8ed1036559e7358ac3b535d008ee0d9",
+        "last_seen_at": "2026-10-04T14:49:38+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/f3458c8f45d7533d5f6fd936fa6b92236e7d1cf1/0_0_5001_4000/master/5001.jpg?width=140&quality=85&auto=format&fit=max&s=f8ed1036559e7358ac3b535d008ee0d9",
+            "published_at": "2026-10-03T12:00:59+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Soaring diesel prices take their toll on US farmers in midwest corn belt",
+            "url": "https://www.theguardian.com/us-news/2026/oct/03/diesel-prices-midwest-farmers"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/1fb290be7bb9ce10a786dcc0c003a65f166d3e2d/575_0_5746_4599/master/5746.jpg?width=140&quality=85&auto=format&fit=max&s=8783a7c9e4ed93bca7bacb36b286abfe",
+            "published_at": "2026-10-02T16:41:33+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "People in the UK: how is the cost of diesel affecting you?",
+            "url": "https://www.theguardian.com/money/2026/oct/02/people-in-the-uk-how-is-the-cost-of-diesel-affecting-you"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/8fc52253a68b0b6e644c31a253ee97851d7a9ea2/204_0_3640_2912/master/3640.jpg?width=140&quality=85&auto=format&fit=max&s=a18728491d2707c5ca7e734f72981e5d",
+            "published_at": "2026-10-02T10:20:26+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "UK diesel price hits record high of £2 a litre",
+            "url": "https://www.theguardian.com/money/2026/oct/02/uk-diesel-price-record-high-iran-war-oil"
+          },
+          {
+            "published_at": "2026-09-30T16:20:52+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "US oil industry warns diesel prices will not return to normal for a year",
+            "url": "https://www.ft.com/content/0d74d66a-a9ee-4c22-83ab-9df6452117de"
+          },
+          {
+            "published_at": "2026-09-29T12:34:12+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Average UK diesel price set to reach £2 per litre within days",
+            "url": "https://www.ft.com/content/807daf90-94e6-40a3-b446-20a4395b42d4"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/e421ea4e90454f0289a447260271fec84cef26ea/929_0_6174_4938/master/6174.jpg?width=140&quality=85&auto=format&fit=max&s=a32c9fa794cdf0457b6ca80258253f32",
+            "published_at": "2026-09-28T10:45:36+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Price of diesel on UK forecourts reaches all-time high",
+            "url": "https://www.theguardian.com/money/2026/sep/28/price-of-diesel-on-uk-forecourts-reaches-all-time-high"
+          }
+        ],
+        "score": 5.08,
+        "section": "business",
+        "slug": "tariffs-and-inflation-take-toll-on-american-farmers-22205",
+        "source_count": 38,
+        "summary": "Global diesel costs surge to record highs due to Middle East tensions, impacting US agriculture and UK consumers while prompting warnings of prolonged high prices.",
+        "top_market": {
+          "end_date": "2026-12-31T04:59:00+00:00",
+          "explainer": "The outcome is Yes if the AAA national average price for diesel in the US exceeds $8.00 at any point between now and December 31, 2026. The outcome is No if that price never reaches that level during this period. Readers often mistake the linked news headline about current prices as the deciding factor, but only the AAA national average in 2026 matters.",
+          "id": "kalshi:KXDIESELMAXY-26DEC31-T8.00",
+          "liquidity": 16206.06,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.08
+            },
+            {
+              "name": "No",
+              "price": 0.92
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxdieselmaxy-26dec31/kxdieselmaxy-26dec31-t8.00",
+          "price_24h_ago": 0.06,
+          "question": "Above $8.00",
+          "similarity": 0.8388541340827942,
+          "slug": "kxdieselmaxy-26dec31/kxdieselmaxy-26dec31-t8.00",
+          "volume_24h": 537.44,
+          "volume_total": 16206.06,
+          "yes_price": 0.08
+        }
+      },
+      {
+        "distinct_publishers": 20,
+        "first_seen_at": "2026-09-08T14:01:10+00:00",
+        "headline": "Gulf States Bypass Hormuz as Iran Keeps Strait Closed",
+        "id": 2917,
+        "image_url": "https://i.guim.co.uk/img/media/e4042e8b36ddea01b752ce79d617e7a4b1705daa/534_0_3634_2909/master/3634.jpg?width=140&quality=85&auto=format&fit=max&s=5dacba8da8769ec1b230d7c1713af4bb",
+        "last_seen_at": "2026-10-04T11:11:30+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T11:11:30+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Iran says Hormuz to remain closed until US meets conditions",
+            "url": "https://www.aljazeera.com/news/2026/10/4/iran-says-strait-of-hormuz-to-remain-closed-until-us-meets-conditions"
+          },
+          {
+            "published_at": "2026-10-04T10:09:23+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Iraq Shifts Oil Strategy by Arranging Tanker to Move Past Hormuz",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/iraq-shifts-oil-strategy-by-arranging-tanker-to-move-past-hormuz"
+          },
+          {
+            "published_at": "2026-10-02T02:21:50+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "World’s Top LNG Buyer Doesn’t See Qatar Supply Coming Back Soon",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/world-s-top-lng-buyer-doesn-t-see-qatar-supply-coming-back-soon"
+          },
+          {
+            "published_at": "2026-10-01T23:01:01+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Getting Oil and Gas Through Hormuz Strait Is Dangerous Job for Ship Captains",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/getting-oil-and-gas-through-hormuz-strait-is-dangerous-job-for-ship-captains"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/e4042e8b36ddea01b752ce79d617e7a4b1705daa/534_0_3634_2909/master/3634.jpg?width=140&quality=85&auto=format&fit=max&s=5dacba8da8769ec1b230d7c1713af4bb",
+            "published_at": "2026-10-01T15:52:14+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Crude oil exports from strait of Hormuz largely return to pre-war levels",
+            "url": "https://www.theguardian.com/business/2026/oct/01/crude-oil-exports-strait-of-hormuz-transport-gulf-region-diesel"
+          },
+          {
+            "published_at": "2026-10-01T09:35:39+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Tanker Congestion Shunts Vital Oil Transfers Farther From Hormuz",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/tanker-congestion-shunts-vital-oil-transfers-farther-from-hormuz"
+          }
+        ],
+        "score": 5.028,
+        "section": "business",
+        "slug": "south-korea-sends-fact-finding-team-to-assess-strait-of-hormuz-situation-2917",
+        "source_count": 182,
+        "summary": "Oil producers and refiners shift logistics to bypass the Strait of Hormuz while Iran maintains closure until US concessions are met.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if a senior US-Iran diplomatic meeting begins in Qatar by December 31, 2026, at 11:59 PM ET. It resolves to No if such a meeting does not start in Qatar within that timeframe or occurs elsewhere. Readers often mistake the location of previous talks for the required future venue or overlook the strict deadline.",
+          "id": "0x205676c44a0664fba4cc30995dc5721a41d30614bd302f5b08cfc66f2e20c5bd",
+          "liquidity": 3919.14403,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.221
+            },
+            {
+              "name": "No",
+              "price": 0.779
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-the-next-diplomatic-us-iran-meeting-be-in-qatar-by-september-30-2026-20260622185050767-copy?r=alykhan3",
+          "price_24h_ago": 0.1765,
+          "question": "Will the next US-Iran senior diplomatic meeting take place in Qatar by December 31, 2026?",
+          "similarity": 0.769213855266571,
+          "slug": "will-the-next-diplomatic-us-iran-meeting-be-in-qatar-by-september-30-2026-20260622185050767-copy",
+          "volume_24h": 33.822979000000004,
+          "volume_total": 13729.230565,
+          "yes_price": 0.221
+        }
+      },
+      {
+        "distinct_publishers": 23,
+        "first_seen_at": "2026-09-10T11:01:00+00:00",
+        "headline": "AI Spending Drives Market Risks and Record Fundraising Amid Rising Yields",
+        "id": 5634,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6a99b0a7dac3a5.99459131.jpeg?w=900",
+        "last_seen_at": "2026-10-04T16:05:33+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T16:05:33+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "AI Stocks Drive an Increasingly Divided Market",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-04/ai-stocks-drive-an-increasingly-divided-market-video"
+          },
+          {
+            "published_at": "2026-10-04T13:00:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Wall Street’s AI Party Is on Edge as Soaring Yields Raise Risks",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/wall-street-s-ai-party-is-on-edge-as-soaring-yields-raise-risks"
+          },
+          {
+            "published_at": "2026-10-04T12:00:08+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Investors look to shelter portfolios from rising AI concentration risks",
+            "url": "https://www.ft.com/content/3302fd5c-8b92-425b-9523-673b2565bb10"
+          },
+          {
+            "published_at": "2026-10-04T00:00:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "AI Deal Frenzy Powers Hong Kong Fundraising to Record Summer",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/ai-deal-frenzy-powers-hong-kong-fundraising-to-record-summer"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6a99b0a7dac3a5.99459131.jpeg?w=900",
+            "published_at": "2026-10-03T19:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "The next crash could be an economic bloodbath",
+            "url": "https://thehill.com/opinion/finance/6126452-ai-infrastructure-economic-risk"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/cb41936ab0c9767ce6de085eb8b95a680f9dc9ac-6000x4161.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-03T15:00:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Cathie Wood says smart investors need to start watching where AI agents spend money",
+            "url": "https://www.coindesk.com/markets/2026/10/01/cathie-wood-says-smart-investors-need-to-start-watching-where-ai-agents-spend-money"
+          }
+        ],
+        "score": 4.993,
+        "section": "business",
+        "slug": "bank-of-america-says-rising-bond-yields-not-yet-threat-to-ai-trade-5634",
+        "source_count": 209,
+        "summary": "Surging capital demand for AI infrastructure pushes bond yields higher while driving record fundraising in Hong Kong and prompting new hedging products."
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-09-28T15:48:32+00:00",
+        "headline": "Early Amazon Prime Big Deal Days discounts on Apple and tech gear go live",
+        "hot": "Odds moved 97 points in 24 hours",
+        "id": 34425,
+        "image_url": "https://media.wired.com/photos/6abeb44859f7d99889340660/master/pass/Amazon%20Prime%20Day%20Top%20Art%20102026%20Early%20APD%20Deals%20Update%20ILLUSTRATION%20Isadora-Ayesa%20Lima%20SOURCE%20Amazon.jpg",
+        "last_seen_at": "2026-10-04T18:29:45+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T13:00:00+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "The AirPods Pro 3 are a fantastic deal at $179",
+            "url": "https://www.theverge.com/gadgets/1004242/airpods-pro-3-amazon-october-prime-day-deal-sale"
+          },
+          {
+            "published_at": "2026-10-04T12:31:50+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "The iPad Mini is slightly cheaper again during Prime Day",
+            "url": "https://www.theverge.com/gadgets/1000323/apple-ipad-mini-amazon-prime-big-deal-days-sale"
+          },
+          {
+            "image_url": "https://media.wired.com/photos/6abeb44859f7d99889340660/master/pass/Amazon%20Prime%20Day%20Top%20Art%20102026%20Early%20APD%20Deals%20Update%20ILLUSTRATION%20Isadora-Ayesa%20Lima%20SOURCE%20Amazon.jpg",
+            "published_at": "2026-10-01T20:53:32+00:00",
+            "publisher": "Feed: All Latest",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "The Best Early Prime Day Deals Ahead of Amazon’s Second Sale (2026)",
+            "url": "https://www.wired.com/story/amazon-prime-day-early-deals-10-01-2026"
+          },
+          {
+            "image_url": "https://media.wired.com/photos/6abd58106f8c64341c3fc8f7/master/pass/Best%20Early%20Amazon%20Device%20Deals%20092026%20top%20art%20SOURCE%20Amazon.jpg",
+            "published_at": "2026-10-01T13:00:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "The Best Early Amazon Echo Deals (and the Worst) Ahead of Prime Big Deal Days",
+            "url": "https://www.wired.com/story/best-amazon-alexa-device-deals-prime-day"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/09/prime-big-deal-days-2026-e1790709610422.jpg",
+            "published_at": "2026-09-29T19:23:26+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Prime ‘Big Deal Days’ 2026: What to Know About Amazon’s October Prime Day Sale",
+            "url": "https://variety.com/2026/shopping/news/amazon-prime-big-deal-days-october-2026-date-best-deals-1236877781"
+          },
+          {
+            "published_at": "2026-09-29T14:00:00+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "The best early October Prime Day deals happening now",
+            "url": "https://www.theverge.com/gadgets/999447/best-early-amazon-prime-day-big-deals-sale-october"
+          }
+        ],
+        "score": 3.92,
+        "section": "business",
+        "slug": "amazon-prime-day-starts-oct-6-as-rivals-launch-competing-sales-34425",
+        "source_count": 43,
+        "summary": "Amazon has launched early discounts on its own hardware and third-party electronics ahead of the October 6-7 Prime Big Deal Days event.",
+        "top_market": {
+          "end_date": "2027-03-31T14:00:00+00:00",
+          "explainer": "The market resolves to Yes if an Amazon representative mentions Prime Day during the upcoming earnings call or Q&A session. It resolves to No if they do not mention it in that specific setting. Readers often mistake the start date of the sales event for the resolution trigger, but only verbal confirmation on the call counts.",
+          "id": "kalshi:KXEARNINGSMENTIONAMZN-26OCT29-PRIM",
+          "liquidity": 2036.48,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.92
+            },
+            {
+              "name": "No",
+              "price": 0.07999999999999996
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxearningsmentionamzn-26oct29/kxearningsmentionamzn-26oct29-prim",
+          "price_24h_ago": 0.92,
+          "question": "Prime Day",
+          "similarity": 0.7810496091842651,
+          "slug": "kxearningsmentionamzn-26oct29/kxearningsmentionamzn-26oct29-prim",
+          "volume_24h": 0,
+          "volume_total": 2036.48,
+          "yes_price": 0.92
+        },
+        "verdict": {
+          "kind": "moved",
+          "moved": 0.97
+        }
+      },
+      {
+        "distinct_publishers": 14,
+        "first_seen_at": "2026-09-20T09:00:00+00:00",
+        "headline": "Gen Z Spending, Politics and Views Shift as Millennials Rise",
+        "id": 21340,
+        "image_url": "https://i.guim.co.uk/img/media/295fd29ca609140c7664eedf0bab84254f814b41/376_92_4342_3474/master/4342.jpg?width=140&quality=85&auto=format&fit=max&s=aeb9c4ad4d9d471d588ec556a6b39202",
+        "last_seen_at": "2026-10-04T14:21:35+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/295fd29ca609140c7664eedf0bab84254f814b41/376_92_4342_3474/master/4342.jpg?width=140&quality=85&auto=format&fit=max&s=aeb9c4ad4d9d471d588ec556a6b39202",
+            "published_at": "2026-10-04T13:00:29+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Are my gen X peers the influencers the world has been waiting for? | Emma Beddington",
+            "url": "https://www.theguardian.com/commentisfree/2026/oct/04/my-gen-x-peers-influencers"
+          },
+          {
+            "published_at": "2026-10-02T19:10:15+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Gen Z Doesn't Want To 'Postpone Joy': Suzy Welch",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/gen-z-doesn-t-want-to-postpone-joy-suzy-welch-video"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Feed_100226_AP_Julia-Deamree-Nikhinson.jpg?w=900",
+            "published_at": "2026-10-02T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Younger candidates are finding it tough to break into Congress",
+            "url": "https://thehill.com/homenews/campaign/6124602-young-candidates-generation-z-congressional-runs"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/GettyImages-1141254399.jpg?w=900",
+            "published_at": "2026-09-26T12:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "The future is here: What will a Millennial-Gen Z majority mean for America?",
+            "url": "https://thehill.com/opinion/campaign/6110360-millennial-gen-z-independent-surge"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26267563671714-e1790285674600.jpg?w=900",
+            "published_at": "2026-09-25T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Why Generation Z is less likely to view China as a threat",
+            "url": "https://thehill.com/blogs/in-the-know/6110534-gen-z-china-press-freedom-healthcare-employment"
+          },
+          {
+            "image_url": "https://datawrapper.dwcdn.net/PbGFm/fallback.png",
+            "published_at": "2026-09-22T13:00:07+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Love is pricey. Here's what young Americans are doing about it",
+            "url": "https://www.axios.com/2026/09/22/the-rising-price-tag-of-romance"
+          }
+        ],
+        "score": 3.864,
+        "section": "business",
+        "slug": "gen-z-cuts-big-spending-but-keeps-budget-for-small-treats-and-last-minute-21340",
+        "source_count": 34,
+        "summary": "Young Americans prioritize immediate spending, face economic hurdles, and hold distinct geopolitical views as they enter the workforce."
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-09-28T11:16:22+00:00",
+        "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+        "id": 34009,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26238747371061-e1790621169206.jpg?w=900",
+        "last_seen_at": "2026-10-04T15:00:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T13:47:58+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Nvidia Hits First Record Since May as Value Nears $6 Trillion",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/nvidia-hits-first-record-since-may-as-value-nears-6-trillion"
+          },
+          {
+            "published_at": "2026-10-02T04:23:48+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Amazon Seeks to Move $8 Billion of Chips Off Its Books, FT Says",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/amazon-seeks-to-move-8-billion-of-chips-off-its-books-ft-says"
+          },
+          {
+            "published_at": "2026-10-02T04:00:33+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Amazon seeks to offload $8bn of Nvidia chips to investors",
+            "url": "https://www.ft.com/content/97d8d346-519e-48fb-8df8-66cf5f12ef62"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26238747371061-e1790621169206.jpg?w=900",
+            "published_at": "2026-09-28T18:54:07+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Nvidia boosts buyback plan by $150B in new record",
+            "url": "https://thehill.com/policy/technology/6115736-nvidia-stock-buyback-plan-boost"
+          },
+          {
+            "published_at": "2026-09-28T17:39:08+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Oil Surges, Nvidia Unleashes a Record $150B Buyback",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-28/open-interest-9-28-2026-video"
+          },
+          {
+            "published_at": "2026-09-28T17:22:53+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Nvidia’s $235 Billion Buyback, SpaceX Milestone and Meta’s AI Push",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-28/bloomberg-tech-9-28-2026-video"
+          }
+        ],
+        "score": 3.858,
+        "section": "business",
+        "slug": "nvidia-boosts-share-buyback-authorization-by-150-billion-34009",
+        "source_count": 27,
+        "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if any part of the U.S. federal government takes a stake in Nvidia before January 1, 2027. Otherwise, it resolves to No. Readers often mistake this for a prediction about stock performance rather than government ownership.",
+          "id": "kalshi:KXUSACOMPANYSTAKE-27JAN01-NVDA",
+          "liquidity": 59026.22,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.09
+            },
+            {
+              "name": "No",
+              "price": 0.91
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxusacompanystake-27jan01/kxusacompanystake-27jan01-nvda",
+          "price_24h_ago": 0.09,
+          "question": "Nvidia",
+          "similarity": 0.813605010509491,
+          "slug": "kxusacompanystake-27jan01/kxusacompanystake-27jan01-nvda",
+          "volume_24h": 0,
+          "volume_total": 59026.22,
+          "yes_price": 0.09
+        }
+      },
+      {
+        "distinct_publishers": 12,
+        "first_seen_at": "2026-09-07T09:55:42+00:00",
+        "headline": "Bitcoin Holds Near $84,000 as Markets Await U.S. Jobs Report",
+        "id": 2181,
+        "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/fce15d9b832d4f087056ff45ef32cee4441b4240-7360x4912.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+        "last_seen_at": "2026-10-04T15:01:03+00:00",
+        "publishers": [
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/fce15d9b832d4f087056ff45ef32cee4441b4240-7360x4912.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-02T11:22:40+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Live updates: Bitcoin, gold and tech futures edge higher as markets await U.S. jobs report",
+            "url": "https://www.coindesk.com/tech/2026/10/02/live-updates-bitcoin-gold-and-tech-futures-edge-higher-as-markets-await-u-s-jobs-report"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/1f7db8efec882b601432e8971478c5f4bf5e2436-1864x1022.png?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-02T10:31:16+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Crypto traders are in risk-on mode as bitcoin dominance nears return to 60%",
+            "url": "https://www.coindesk.com/markets/2026/10/02/crypto-traders-are-in-risk-on-mode-as-bitcoin-dominance-nears-return-to-60"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/26c6dd7dda161d93ae92859dbd66ad026ff0ee53-2752x978.png?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-02T09:14:21+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Why rising perpetual funding rates signal growing bullish leverage as bitcoin crosses $86,500",
+            "url": "https://www.coindesk.com/markets/2026/10/02/why-rising-perpetual-funding-rates-signal-growing-bullish-leverage-as-bitcoin-crosses-usd86-500"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/705735639a0b6346c5f13b5330dd574c2aaf87d2-1200x760.png?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-02T08:11:54+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Bitcoin tops $86,000 ahead of U.S. jobs report",
+            "url": "https://www.coindesk.com/markets/2026/10/02/bitcoin-tops-usd86-000-ahead-of-u-s-jobs-report"
+          },
+          {
+            "published_at": "2026-10-01T11:59:17+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Live Updates: Bitcoin flat near $84,000 after closing out best quarter since 2024",
+            "url": "https://www.coindesk.com/tech/2026/10/01/live-updates-bitcoin-flat-near-usd84-000-after-best-quarter-since-2024"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/46896a614298dcf705810c12a113e9dab6ce84fb-4416x2488.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-01T11:30:38+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Crypto lost $1.26 billion in hacks while bitcoin bulls enjoyed a monster quarter",
+            "url": "https://www.coindesk.com/daybook-us/2026/10/01/crypto-lost-usd1-26-billion-in-hacks-while-bitcoin-bulls-enjoyed-a-monster-quarter"
+          }
+        ],
+        "score": 3.417,
+        "section": "business",
+        "slug": "hackers-return-most-bitcoin-stolen-in-liquid-network-breach-2181",
+        "source_count": 257,
+        "summary": "Bitcoin trades near $84,000 with investors anticipating the upcoming U.S. employment data and Fed decisions.",
+        "top_market": {
+          "end_date": "2027-01-01T05:00:00+00:00",
+          "explainer": "The market resolves to Yes if the simple average of CF Benchmarks' BRTI over sixty seconds before midnight EST on January 1, 2027, falls between $80,000 and $84,999.99. It resolves to No if that average is outside that range. Readers often mistake the current Bitcoin price for the resolution value instead of the specific CF Benchmarks average at the deadline.",
+          "id": "kalshi:KXBTCY-27JAN0100-B82500",
+          "liquidity": 2578211.55,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.122
+            },
+            {
+              "name": "No",
+              "price": 0.878
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxbtcy-27jan0100/kxbtcy-27jan0100-b82500",
+          "price_24h_ago": 0.139,
+          "question": "80,000 to 84,999.99",
+          "similarity": 0.8230123519897461,
+          "slug": "kxbtcy-27jan0100/kxbtcy-27jan0100-b82500",
+          "volume_24h": 24160.25,
+          "volume_total": 2578211.55,
+          "yes_price": 0.122
+        }
+      },
+      {
+        "distinct_publishers": 12,
+        "first_seen_at": "2026-09-29T03:21:19+00:00",
+        "headline": "Anthropic Targets Mid-November IPO as Wall Street Demand Cools",
+        "id": 35251,
+        "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2245836911.jpg",
+        "last_seen_at": "2026-10-04T15:00:35+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T04:01:05+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Wall Street’s IPO fervour cools on tepid demand and valuation worries",
+            "url": "https://www.ft.com/content/b8924d77-364b-46c1-b783-5db73a91f351"
+          },
+          {
+            "published_at": "2026-10-02T15:21:03+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Why does Anthropic’s IPO feel so weird?",
+            "url": "https://www.ft.com/content/69d2d0ec-c0d4-444f-84c5-4ca4f64b7899"
+          },
+          {
+            "published_at": "2026-10-02T12:05:45+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Stocks Climb Ahead of Payrolls Report, Anthropic Eyes November IPO",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/bloomberg-brief-10-02-2026-video"
+          },
+          {
+            "published_at": "2026-10-02T03:42:34+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US to Beef Up Mideast Deployment, Anthropic November IPO Aim",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-02/us-to-beef-up-mideast-deployment-anthropic-november-ipo-aim"
+          },
+          {
+            "published_at": "2026-10-02T02:43:31+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US May Add Carrier to Mideast, Anthropic November IPO Target",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-02/us-may-add-carrier-to-mideast-anthropic-november-ipo-target"
+          },
+          {
+            "published_at": "2026-10-02T01:42:15+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US Weighs Sending 3rd Carrier to Mideast, Anthropic Eyes Nov IPO",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-02/us-weighs-sending-3rd-carrier-to-mideast-anthropic-eyes-nov-ipo"
+          }
+        ],
+        "score": 3.415,
+        "section": "business",
+        "slug": "anthropic-ipo-prospectus-reveals-customer-concentration-35251",
+        "source_count": 32,
+        "summary": "The AI firm aims for a November listing while markets react to tepid demand and valuation concerns.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The Yes outcome occurs if Anthropic completes its first public stock sale on a recognized exchange by December 31, 2026, at 11:59 PM ET. The No outcome applies if the company does not meet this deadline or if it merges, gets acquired, or ceases to exist before then. Readers often mistake the linked news story about AI collusion for the resolution event, but only an actual IPO counts toward the result.",
+          "id": "0x6522024c060166830e53a48b0db1cab9296601a8539ab005124db5e4bf50a303",
+          "liquidity": 10469.5335,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.835
+            },
+            {
+              "name": "No",
+              "price": 0.165
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/anthropic-ipo-before-2027?r=alykhan3",
+          "price_24h_ago": 0.825,
+          "question": "Anthropic IPO before 2027?",
+          "similarity": 0.8916659355163574,
+          "slug": "anthropic-ipo-before-2027",
+          "volume_24h": 6273.756113,
+          "volume_total": 628263.3896090003,
+          "yes_price": 0.835
+        }
+      },
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-09-06T10:06:52+00:00",
+        "headline": "Hong Kong Expands Yuan Finance and Innovation Amid Economic Shifts",
+        "id": 1897,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_31a5936d589784c7f814e40d7b5fc03c_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T10:22:26+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T05:27:15+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Hong Kong Stocks Suffer Biggest Slump Since March",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/the-china-show-10-2-2026-video"
+          },
+          {
+            "published_at": "2026-10-02T03:35:22+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Hong Kong Economy Q4 Focus: Wealth and Finance Boom, Uneven Tourism Recovery",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-10-02/hong-kong-economy-q4-focus-wealth-and-finance-boom-uneven-tourism-recovery"
+          },
+          {
+            "published_at": "2026-09-29T03:16:28+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "China to Launch New Pro-Growth Policies",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-29/china-to-launch-new-pro-growth-policies-video"
+          },
+          {
+            "published_at": "2026-09-28T23:00:00+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "RoboTechnik Leads Hong Kong’s $1.8 Billion Listing Debut Lineup",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-28/robotechnik-leads-hong-kong-s-1-8-billion-listing-debut-lineup"
+          },
+          {
+            "published_at": "2026-09-28T00:15:15+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Singapore’s Kwek Property Clan Eyes China, Japan for Investments",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-28/singapore-s-kwek-property-clan-eyes-china-japan-for-investments"
+          },
+          {
+            "published_at": "2026-09-24T06:14:30+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "China Plans Inclusion of New Products for Swap Connect Expansion",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-24/china-plans-inclusion-of-new-products-for-swap-connect-expansion"
+          }
+        ],
+        "score": 3.015,
+        "section": "business",
+        "slug": "hong-kong-and-kazakhstan-sign-mou-on-transport-lab-at-belt-and-road-summit-1897",
+        "source_count": 254,
+        "summary": "Hong Kong officials plan to deepen yuan product offerings and boost innovation spending while China introduces pro-growth measures.",
+        "top_market": {
+          "end_date": "2027-12-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if China records two consecutive quarters of negative real GDP growth between January 1, 2024, and December 31, 2026. Otherwise, it resolves to No. Readers often mistake the start date for the beginning of 2025.",
+          "id": "kalshi:WRECSS-26-PRC",
+          "liquidity": 34080.79,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.012
+            },
+            {
+              "name": "No",
+              "price": 0.988
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/wrecss-26/wrecss-26-prc",
+          "price_24h_ago": 0.012,
+          "question": "China",
+          "similarity": 0.755270779132843,
+          "slug": "wrecss-26/wrecss-26-prc",
+          "volume_24h": 0,
+          "volume_total": 34080.79,
+          "yes_price": 0.012
+        }
+      },
+      {
+        "distinct_publishers": 28,
+        "first_seen_at": "2026-09-15T20:46:43+00:00",
+        "headline": "Paramount and Warner Bros. Merger to Form New Company Named Skydance",
+        "id": 15050,
+        "image_url": "https://variety.com/wp-content/uploads/2026/10/GettyImages-2298306473.jpg",
+        "last_seen_at": "2026-10-03T19:15:41+00:00",
+        "publishers": [
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/10/GettyImages-2298306473.jpg",
+            "published_at": "2026-10-03T19:15:41+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Tony Gilroy Says Paramount-Warner Bros. Merger Will ‘Destroy’ a ‘Healthy and Beautiful Business’ in ‘The Name of Venture Capital’: ‘It’s Tragic’",
+            "url": "https://variety.com/2026/film/news/tony-gilroy-paramount-warner-bros-merger-behemoth-nyff-1236898132"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26261448561238-e1790966767326.png?w=900",
+            "published_at": "2026-10-02T18:49:27+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Paramount, Warner Bros. reveal new name",
+            "url": "https://thehill.com/business/6126321-paramount-warner-bros-merger-name-reveal"
+          },
+          {
+            "published_at": "2026-10-02T17:18:15+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Paramount’s $52 Billion Debt Saga Ends With Hair-Raising Finale",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/paramount-s-52-billion-debt-saga-ends-with-hair-raising-finale"
+          },
+          {
+            "published_at": "2026-10-02T15:53:50+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Paramount and Warner Bros Discovery to become Skydance",
+            "url": "https://techcrunch.com/2026/10/02/paramount-and-warner-bros-discovery-to-become-skydance"
+          },
+          {
+            "published_at": "2026-10-02T13:42:36+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Paramount’s Warner Bros. megamerger will just be called Skydance",
+            "url": "https://www.theverge.com/entertainment/1004016/paramount-warner-bros-skydance-megamerger-name"
+          },
+          {
+            "published_at": "2026-10-02T13:40:38+00:00",
+            "publisher": "CNBC",
+            "publisher_slug": "cnbc-com",
+            "tier": 1,
+            "title": "David Ellison says combined Paramount and Warner Bros. Discovery will be named Skydance",
+            "url": "https://www.cnbc.com/2026/10/02/paramount-warner-bros-discovery-skydance.html"
+          }
+        ],
+        "score": 1.996,
+        "section": "business",
+        "slug": "justice-department-demands-1-88-billion-bond-from-paramount-15050",
+        "source_count": 185,
+        "summary": "The combined entity will be called Skydance, with Paramount and Warner Bros. remaining as sub-brands under CEO David Ellison's leadership.",
+        "top_market": {
+          "end_date": "2027-07-01T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if there are qualifying public announcements indicating that Paramount successfully takes over Warner Bros. before July 2027. Otherwise, it resolves to No. Readers often mistake the deadline as the end of the announcement period rather than the cutoff for when the takeover must be confirmed.",
+          "id": "kalshi:KXTAKEOVERACQWB-27JUN30-PSKY",
+          "liquidity": 1904551.47,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.99
+            },
+            {
+              "name": "No",
+              "price": 0.010000000000000007
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-psky",
+          "price_24h_ago": 0.99,
+          "question": "Paramount",
+          "similarity": 0.853151261806488,
+          "slug": "kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-psky",
+          "volume_24h": 3703.75,
+          "volume_total": 1904551.47,
+          "yes_price": 0.99
+        }
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-09-28T16:02:17+00:00",
+        "headline": "Disney Lays Off Hundreds in HR and Tech as Part of Third Round of Cuts This Year",
+        "id": 34441,
+        "image_url": "https://variety.com/wp-content/uploads/2024/07/Walt-Disney-Studios-Lot-Burbank.jpg",
+        "last_seen_at": "2026-10-04T03:12:06+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T18:17:31+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Disney's Walden Says Layoffs Are 'Extremely Painful'",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-01/consolidation-is-part-of-business-says-disney-s-walden-video"
+          },
+          {
+            "published_at": "2026-09-29T18:00:59+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Disney Cuts Hundreds More Jobs in New Round of Layoffs as Corporate Streamlining Casualties Mount",
+            "url": "https://www.hollywoodreporter.com/business/business-news/disney-layoffs-corporate-cuts-1236714541"
+          },
+          {
+            "published_at": "2026-09-29T17:36:13+00:00",
+            "publisher": "CNBC",
+            "publisher_slug": "cnbc-com",
+            "tier": 1,
+            "title": "Disney laying off around 300 employees in latest cuts under new CEO Josh D'Amaro",
+            "url": "https://www.cnbc.com/2026/09/29/disney-layoffs-josh-damaro.html"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2024/07/Walt-Disney-Studios-Lot-Burbank.jpg",
+            "published_at": "2026-09-29T16:36:22+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Disney Makes More Job Cuts, Laying Off Several Hundred Employees",
+            "url": "https://variety.com/2026/film/news/disney-layoffs-hr-tech-employees-1236878176"
+          },
+          {
+            "published_at": "2026-09-28T21:35:58+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Former Disney CEO Bob Chapek Says Company Needs a 'Growth Engine'",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-28/former-disney-ceo-says-company-needs-a-growth-engine-video"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/09/Bob-Chapek-1.jpg",
+            "published_at": "2026-09-28T19:45:16+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Bob Chapek Still Feels ‘Let Down’ by Bob Iger and Disney: ‘They’ve Attempted to Erase Me’",
+            "url": "https://variety.com/2026/biz/news/bob-chapek-book-interview-iger-disney-disappointment-1236877387"
+          }
+        ],
+        "score": 1.841,
+        "section": "business",
+        "slug": "ex-disney-ceo-bob-chapek-says-he-raised-board-concerns-weekly-during-iger-34441",
+        "source_count": 18,
+        "summary": "The media giant is cutting approximately 300 jobs in human resources and technology, marking its third round of layoffs this year under CEO Josh D'Amaro."
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-09-30T02:26:27+00:00",
+        "headline": "China Launches Anti-Dumping Probe Into EU Chemical Exports",
+        "id": 37236,
+        "image_url": "https://i.guim.co.uk/img/media/b10db41e65d9e09adda2a58a3691fd5ec4bb508a/1094_279_2900_2320/master/2900.jpg?width=140&quality=85&auto=format&fit=max&s=34c20b3fbecf653ece4347d0b7483316",
+        "last_seen_at": "2026-10-04T05:00:18+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/b10db41e65d9e09adda2a58a3691fd5ec4bb508a/1094_279_2900_2320/master/2900.jpg?width=140&quality=85&auto=format&fit=max&s=34c20b3fbecf653ece4347d0b7483316",
+            "published_at": "2026-10-04T05:00:18+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "UK car industry faces ‘difficult trade-off’ between Chinese and EU markets",
+            "url": "https://www.theguardian.com/business/2026/oct/04/uk-car-industry-trade-off-china-made-in-europe-laws"
+          },
+          {
+            "published_at": "2026-10-03T09:26:35+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "China launches anti-dumping probe into European chemical exports",
+            "url": "https://www.ft.com/content/bae0af94-f42d-47d1-a1a8-fab608e75a72"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/US/abc_news_default_2000x2000_update_4x3t_384.jpg",
+            "published_at": "2026-10-03T06:16:55+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "China launches anti-dumping probe into chemical compound p-nitrotoluene from the EU",
+            "url": "https://abcnews.com/International/wireStory/china-launches-anti-dumping-probe-chemical-compound-nitrotoluene-136967994"
+          },
+          {
+            "published_at": "2026-09-30T02:26:27+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "China Warns Broad EU Tariffs Could Disrupt Trade Negotiations",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/china-warns-broad-eu-tariffs-could-disrupt-trade-negotiations"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/01/907b0360-a906-4853-af43-192d26737dbd_6fbea140.jpg?itok=WVBgyk8R&v=1790836254",
+            "published_at": "2026-10-03T08:30:09+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "Can Britain really afford to diverge from EU tariffs on Chinese EVs?",
+            "url": "https://www.scmp.com/opinion/world-opinion/article/3369331/can-britain-really-afford-diverge-eu-tariffs-chinese-evs"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/01/53981afa-4dc9-4a14-a4a6-e389ea075869_d4678636.jpg?itok=pHorCRF-&v=1790860814",
+            "published_at": "2026-10-01T13:20:16+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "EU retools Trump trade war tripwire into China shipments surge alarm",
+            "url": "https://www.scmp.com/news/china/diplomacy/article/3369477/eu-retools-trump-trade-war-tripwire-china-shipments-surge-alarm"
+          }
+        ],
+        "score": 1.825,
+        "section": "business",
+        "slug": "china-warns-eu-tariffs-could-disrupt-trade-talks-37236",
+        "source_count": 8,
+        "summary": "Beijing initiates an investigation into p-nitrotoluene imports as trade tensions escalate following similar EU actions against Chinese goods.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if a free trade deal with China becomes law through Senate ratification and Presidential approval, or via a Congressional-Executive Agreement signed by the President before January 1, 2027. Otherwise, it resolves to No. Readers often mistake the announcement of talks for the actual passage of legislation.",
+          "id": "kalshi:KXFTACOUNTRIES-27-CHI",
+          "liquidity": 5265.48,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.13
+            },
+            {
+              "name": "No",
+              "price": 0.87
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxftacountries-27/kxftacountries-27-chi",
+          "price_24h_ago": 0.13,
+          "question": "China",
+          "similarity": 0.7758125066757202,
+          "slug": "kxftacountries-27/kxftacountries-27-chi",
+          "volume_24h": 0,
+          "volume_total": 5265.48,
+          "yes_price": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-09-29T22:53:23+00:00",
+        "headline": "UK House Price Growth Halves as Mortgage Rates Rise",
+        "id": 37051,
+        "image_url": "https://i.guim.co.uk/img/media/09413c837b020dcfaab9ced1564c5aa1324cec39/936_0_4680_3744/master/4680.jpg?width=140&quality=85&auto=format&fit=max&s=d2d20347866cd04a9b78b481ab065900",
+        "last_seen_at": "2026-10-04T08:00:10+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/09413c837b020dcfaab9ced1564c5aa1324cec39/936_0_4680_3744/master/4680.jpg?width=140&quality=85&auto=format&fit=max&s=d2d20347866cd04a9b78b481ab065900",
+            "published_at": "2026-10-01T07:51:32+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "UK house price growth halves amid rising mortgage interest rates",
+            "url": "https://www.theguardian.com/money/2026/oct/01/uk-house-price-growth-rising-mortgage-interest-rates-nationwide"
+          },
+          {
+            "published_at": "2026-10-01T06:48:15+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "UK house prices fall as higher mortgage rates ‘subdue’ market",
+            "url": "https://www.ft.com/content/8702be93-442f-49c5-ac48-f06c541bc7af"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/34f82856f94e775d63aebc4a30f27699d0990220/588_0_2275_1820/master/2275.jpg?width=140&quality=85&auto=format&fit=max&s=26b63154ba3991f278a2fdf9ed5c048e",
+            "published_at": "2026-10-01T06:44:46+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Annual UK house price growth halves as mortgage rates rise – business live",
+            "url": "https://www.theguardian.com/business/live/2026/oct/01/uk-house-prices-september-mortgage-rates-bonds-stock-markets-manufacturing-latest-news-updates"
+          },
+          {
+            "published_at": "2026-10-01T00:53:28+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Singapore Home Prices Accelerate Despite Slowdown in Sales",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/singapore-home-prices-accelerate-despite-slowdown-in-sales"
+          },
+          {
+            "published_at": "2026-09-30T23:18:16+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Australia Bans Card Surcharges, Home Prices Slide, Private Credit Slump Deepens",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-09-30/australia-bans-card-surcharges-home-prices-slide-private-credit-slump-deepens"
+          },
+          {
+            "published_at": "2026-09-30T23:01:01+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Australia’s housing slump could have a silver lining for its banks",
+            "url": "https://www.ft.com/content/b77a34af-a12f-445c-8707-8f6b8223ad39"
+          }
+        ],
+        "score": 1.572,
+        "section": "business",
+        "slug": "sydney-elite-home-sale-highlights-australia-s-housing-slump-37051",
+        "source_count": 12,
+        "summary": "Annual UK house price growth halved to 0.8% in September, with the average home costing £274,251 according to Nationwide data."
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-09-29T21:42:11+00:00",
+        "headline": "Pentagon Awards Boeing $20bn Contract for US Navy's Next-Generation F/A-XX Fighter Jet",
+        "id": 36956,
+        "image_url": "https://images.axios.com/C3jlFMZLgPV7qb6XLY-x8hQg0TA=/1366x768/smart/2021/09/09/213020-1631223020835.jpg",
+        "last_seen_at": "2026-10-04T03:53:33+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-09-30T00:19:41+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Pentagon awards Boeing $20bn contract for Navy stealth fighter jet",
+            "url": "https://www.ft.com/content/5f1cd056-b5cb-4b29-84a7-703819811b0d"
+          },
+          {
+            "image_url": "https://images.axios.com/C3jlFMZLgPV7qb6XLY-x8hQg0TA=/1366x768/smart/2021/09/09/213020-1631223020835.jpg",
+            "published_at": "2026-09-29T21:42:11+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Boeing nabs $20B contract for Navy's futuristic fighter",
+            "url": "https://www.axios.com/2026/09/29/navy-boeing-fighter-contract-f47"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134669350,imgsize-129355.cms",
+            "published_at": "2026-10-04T03:53:33+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Lockheed Martin eyes bigger India footprint with $10.5bn military aircraft bid",
+            "url": "https://timesofindia.indiatimes.com/defence/news/lockheed-martin-eyes-bigger-india-footprint-with-10-5bn-military-aircraft-bid/articleshow/134669326.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134654903,imgsize-105024.cms",
+            "published_at": "2026-10-03T07:57:19+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "AMCA, Rafale and drones: IAF chief lays out India's air power roadmap",
+            "url": "https://timesofindia.indiatimes.com/defence/news/amca-rafale-and-drones-iaf-chief-lays-out-indias-air-power-roadmap/articleshow/134654853.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134638154,imgsize-1508856.cms",
+            "published_at": "2026-10-02T11:23:25+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Rafale, F-15EX & Gripen: Why 4th gen jets are bagging billion-dollar orders in age of 6th-gen",
+            "url": "https://timesofindia.indiatimes.com/defence/international/rafale-f-15ex-gripen-why-4th-gen-jets-are-bagging-billion-dollar-orders-in-age-of-6th-gen-fighters/articleshow/134637834.cms"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/01/eef20cf6-3875-44b1-9f8b-15e52a5f56da_d2d62d71.jpg?itok=X5ZIPn4_&v=1790837593",
+            "published_at": "2026-10-01T12:30:16+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "US says F-47 will be first sixth-gen jet. China’s J-36 and J-50 are already flying",
+            "url": "https://www.scmp.com/news/china/military/article/3369429/us-says-f-47-will-be-first-sixth-gen-jet-chinas-j-36-and-j-50-are-already-flying"
+          }
+        ],
+        "score": 1.493,
+        "section": "business",
+        "slug": "boeing-wins-20b-pentagon-contract-for-u-s-navy-s-next-fighter-jet-36956",
+        "source_count": 12,
+        "summary": "The Pentagon has selected Boeing to develop the F/A-XX sixth-generation fighter, a $20 billion deal that will replace the Super Hornet fleet starting in the 2030s.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The outcome is Yes if the U.S. federal government acquires any ownership stake in Boeing before January 1, 2027. Otherwise, the outcome is No. Readers often mistake the linked news story about a Pentagon contract for the required government ownership.",
+          "id": "kalshi:KXUSACOMPANYSTAKE-27JAN01-BA",
+          "liquidity": 29079.03,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.08
+            },
+            {
+              "name": "No",
+              "price": 0.92
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxusacompanystake-27jan01/kxusacompanystake-27jan01-ba",
+          "price_24h_ago": 0.08,
+          "question": "Boeing",
+          "similarity": 0.7836859822273254,
+          "slug": "kxusacompanystake-27jan01/kxusacompanystake-27jan01-ba",
+          "volume_24h": 0,
+          "volume_total": 29079.03,
+          "yes_price": 0.08
+        }
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-09-28T07:31:15+00:00",
+        "headline": "Global IPO Market Sees Major Listings From Data Center, Telecom and Beverage Firms",
+        "id": 33766,
+        "image_url": "https://static.toiimg.com/photo/msid-134674067,imgsize-68256.cms",
+        "last_seen_at": "2026-10-04T11:37:09+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T22:30:03+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Firmus Eyes $30 Billion Valuation in Australian IPO, AFR Reports",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/firmus-eyes-30-billion-valuation-in-australian-ipo-afr-reports"
+          },
+          {
+            "published_at": "2026-10-01T11:10:58+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "GCash Owner Prices Record Philippine IPO of Nearly $1 Billion",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/gcash-owner-prices-record-philippine-ipo-of-nearly-1-billion"
+          },
+          {
+            "published_at": "2026-10-01T07:23:49+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Airtel Money Plans UK IPO That May Rank as Biggest in Five Years",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/airtel-money-backers-are-seeking-to-raise-529-million-in-uk-ipo"
+          },
+          {
+            "published_at": "2026-09-30T16:47:05+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "AI Infrastructure Firm Accelevation Edges Down 2.5% After IPO",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/ai-infrastructure-firm-accelevation-edges-down-2-5-after-ipo"
+          },
+          {
+            "published_at": "2026-09-30T12:00:00+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Texas Stock Exchange Raises $155 Million After First Listings",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/texas-stock-exchange-raises-155-million-after-first-listings"
+          },
+          {
+            "published_at": "2026-09-30T08:54:15+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Coca-Cola Is Said to Consider December Filing for India Unit’s $1 Billion IPO",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/coca-cola-is-said-to-consider-december-filing-for-india-unit-s-1-billion-ipo"
+          }
+        ],
+        "score": 1.372,
+        "section": "business",
+        "slug": "kkr-backed-advanta-begins-road-show-for-400-million-ipo-in-india-33766",
+        "source_count": 16,
+        "summary": "Firmus Grid targets a $30 billion valuation in Australia while Mynt, Airtel Money, Accelevation, Coca-Cola and Vale pursue or price significant public offerings."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-04T06:19:00+00:00",
+        "headline": "Asian LNG Demand Slumps as Governments Abandon Forecasts",
+        "id": 44146,
+        "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/04/566177.jpg",
+        "last_seen_at": "2026-10-04T17:11:12+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T17:11:12+00:00",
+            "publisher": "Finance & economics",
+            "publisher_slug": "economist-com",
+            "tier": 1,
+            "title": "The world is facing an almighty LNG crunch",
+            "url": "https://www.economist.com/finance-and-economics/2026/10/04/the-world-is-facing-an-almighty-lng-crunch"
+          },
+          {
+            "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/04/566177.jpg",
+            "published_at": "2026-10-04T06:19:00+00:00",
+            "publisher": "Latest articles",
+            "publisher_slug": "japantimes-co-jp",
+            "tier": 2,
+            "title": "The LNG boom is losing its biggest Asian bet",
+            "url": "https://www.japantimes.co.jp/commentary/2026/10/04/world/asia-lng-boom"
+          }
+        ],
+        "score": 1.146,
+        "section": "business",
+        "slug": "asian-lng-demand-slumps-as-governments-abandon-forecasts-44146",
+        "source_count": 2,
+        "summary": "High costs and supply uncertainty drive Asian governments to discard previous import projections, signaling a potential shift in global energy markets."
+      },
+      {
+        "distinct_publishers": 14,
+        "first_seen_at": "2026-09-29T22:45:48+00:00",
+        "headline": "David Ellison Appoints Ynon Kreiz as Co-CEO of Skydance Amid Warner Bros. Merger",
+        "id": 37046,
+        "image_url": "https://variety.com/wp-content/uploads/2026/10/David-Ellison-CEO-Skydance-Corp.jpg",
+        "last_seen_at": "2026-10-03T13:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/10/David-Ellison-CEO-Skydance-Corp.jpg",
+            "published_at": "2026-10-03T13:00:00+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Skydance Blasts Off: Can David Ellison Make Paramount-Warner Bros. Merger Fly?",
+            "url": "https://variety.com/2026/film/news/skydance-david-ellison-paramount-warner-bros-merger-debt-1236898108"
+          },
+          {
+            "published_at": "2026-10-03T11:00:01+00:00",
+            "publisher": "CNBC",
+            "publisher_slug": "cnbc-com",
+            "tier": 1,
+            "title": "David Ellison just brought in a co-CEO to run his new empire: Meet Ynon Kreiz",
+            "url": "https://www.cnbc.com/2026/10/03/david-ellison-ynon-kreiz-skydance.html"
+          },
+          {
+            "published_at": "2026-10-03T01:02:14+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "George Cheeks May Level Up in David Ellison’s TV Empire",
+            "url": "https://www.hollywoodreporter.com/business/business-news/george-cheeks-skydance-david-ellison-tv-empire-1236721367"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2023/02/George-Cheeks.jpg",
+            "published_at": "2026-10-02T23:40:19+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "George Cheeks May Be Poised for Expanded TV Role at Skydance Post Paramount-Warner Bros. Merger",
+            "url": "https://variety.com/2026/tv/news/george-cheeks-tv-role-skydance-paramount-warner-bros-merger-1236897948"
+          },
+          {
+            "published_at": "2026-10-02T22:40:36+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Ouster Rumors and a Tense Phone Call: Mike De Luca and Pam Abdy’s Final Weeks at Warners",
+            "url": "https://www.hollywoodreporter.com/movies/movie-news/mike-de-luca-pam-abdy-final-weeks-at-warners-1236721241"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/10/GettyImages-2298272566.jpg",
+            "published_at": "2026-10-02T22:37:41+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "John Leguizamo Has a Message for David Ellison: ‘Think of What Americans Need and What the Industry Needs’",
+            "url": "https://variety.com/2026/film/news/john-leguizamo-message-david-ellison-what-americans-need-1236897710"
+          }
+        ],
+        "score": 1.133,
+        "section": "business",
+        "slug": "cindy-holland-exits-paramount-as-casey-bloys-poised-to-lead-streaming-37046",
+        "source_count": 60,
+        "summary": "Skydance names Ynon Kreiz co-CEO as it prepares to close its $110 billion acquisition of Warner Bros. Discovery, while outgoing Warner chiefs depart.",
+        "top_market": {
+          "end_date": "2027-07-01T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if there are qualifying public announcements indicating that Paramount successfully takes over Warner Bros. before July 2027. Otherwise, it resolves to No. Readers often mistake the deadline as the end of the announcement period rather than the cutoff for when the takeover must be confirmed.",
+          "id": "kalshi:KXTAKEOVERACQWB-27JUN30-PSKY",
+          "liquidity": 1904551.47,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.99
+            },
+            {
+              "name": "No",
+              "price": 0.010000000000000007
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-psky",
+          "price_24h_ago": 0.99,
+          "question": "Paramount",
+          "similarity": 0.8210883140563965,
+          "slug": "kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-psky",
+          "volume_24h": 3703.75,
+          "volume_total": 1904551.47,
+          "yes_price": 0.99
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-01T03:58:57+00:00",
+        "headline": "US Trade Chief Says India Deal Not Imminent Despite G20 Talks",
+        "id": 39327,
+        "image_url": "https://static.toiimg.com/photo/msid-134678358,imgsize-144226.cms",
+        "last_seen_at": "2026-10-04T17:09:04+00:00",
+        "publishers": [
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134678358,imgsize-144226.cms",
+            "published_at": "2026-10-04T17:09:04+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "'More involved': EAM confirms India has 'gone beyond advocacy' to end Ukraine war",
+            "url": "https://timesofindia.indiatimes.com/india/little-bit-more-involved-jaishankar-says-india-has-gone-beyond-advocacy-to-end-russia-ukraine-war/articleshow/134678353.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134673306,imgsize-53046.cms",
+            "published_at": "2026-10-04T10:32:49+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Where will India be 5 to 10 years from now? EAM Jaishankar answers",
+            "url": "https://timesofindia.indiatimes.com/india/where-india-will-be-5-to-10-years-from-now-eam-jaishankar-answers/articleshow/134673259.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134668336,imgsize-92432.cms",
+            "published_at": "2026-10-03T22:39:11+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "India must stay open, but not become vulnerable, says principle sec to PM",
+            "url": "https://timesofindia.indiatimes.com/india/pk-mishra-india-must-stay-open-but-not-become-vulnerable/articleshow/134668333.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134663805,imgsize-161682.cms",
+            "published_at": "2026-10-03T17:20:12+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Russia to take 70,000 Indian skilled workers this year, Jaishankar tells panel",
+            "url": "https://timesofindia.indiatimes.com/india/russia-to-take-70000-indian-skilled-workers-this-year-jaishankar-tells-panel/articleshow/134663757.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134658838,imgsize-81888.cms",
+            "published_at": "2026-10-03T11:51:11+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "India unlikely to face food, fertiliser crisis despite global headwinds: Report",
+            "url": "https://timesofindia.indiatimes.com/business/india-business/india-unlikely-to-face-major-food-fertiliser-crisis-despite-global-headwinds-finance-commission-chairman/articleshow/134658642.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134653742,imgsize-106062.cms",
+            "published_at": "2026-10-03T06:41:45+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Goyal pitches India as global trade hub, eyes 75-80% of world economy",
+            "url": "https://timesofindia.indiatimes.com/business/india-business/goyal-pitches-india-as-global-trade-hub-eyes-75-80-of-world-economy/articleshow/134653607.cms"
+          }
+        ],
+        "score": 1.098,
+        "section": "business",
+        "slug": "us-trade-chief-says-india-deal-not-imminent-after-modi-trump-call-39327",
+        "source_count": 9,
+        "summary": "US Trade Representative Jamieson Greer states a bilateral trade agreement with India is not imminent due to sticking points, contradicting earlier optimism from Indian officials.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The outcome is Yes if a free trade deal with India becomes law through Senate ratification and Presidential approval, or via Congressional-Executive Agreement and Presidential signature before January 1, 2027. The outcome is No if this does not happen by the deadline. Readers often mistake the signing of any agreement for the final resolution, but only enacted law counts.",
+          "id": "kalshi:KXFTACOUNTRIES-27-IND",
+          "liquidity": 1212.95,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.1
+            },
+            {
+              "name": "No",
+              "price": 0.9
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxftacountries-27/kxftacountries-27-ind",
+          "price_24h_ago": 0.09,
+          "question": "India",
+          "similarity": 0.8379588723182678,
+          "slug": "kxftacountries-27/kxftacountries-27-ind",
+          "volume_24h": 20,
+          "volume_total": 1212.95,
+          "yes_price": 0.1
+        }
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-09-28T17:50:10+00:00",
+        "headline": "Verity Box Office Preview Targets $35M US Debut for Anne Hathaway and Dakota Johnson Thriller",
+        "id": 34577,
+        "image_url": "https://variety.com/wp-content/uploads/2026/10/verity-cast-book-amazon.jpg",
+        "last_seen_at": "2026-10-03T18:39:14+00:00",
+        "publishers": [
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/10/verity-cast-book-amazon.jpg",
+            "published_at": "2026-10-03T18:39:14+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "‘Verity’ Cast Reveals Their Go-To Book Recommendations on Heels of Novel’s Big-Screen Adaptation (Exclusive)",
+            "url": "https://variety.com/2026/shopping/news/best-books-like-verity-movie-cast-recommendations-picks-1236897066"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/10/MCDVERI_ZU026.jpg",
+            "published_at": "2026-10-02T21:00:00+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "‘Verity’ Had a Much More Twisted Ending. Then Came the Focus Group Screenings",
+            "url": "https://variety.com/2026/film/news/verity-ending-changed-focus-groups-books-1236897426"
+          },
+          {
+            "published_at": "2026-10-02T19:03:32+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Anne Hathaway Completes Her Epic Year With ‘Verity,’ Florence Pugh Debuts ‘East of Eden’ and This Week’s Best Events",
+            "url": "https://www.hollywoodreporter.com/gallery/verity-east-of-eden-red-carpet-events-1236712856"
+          },
+          {
+            "published_at": "2026-10-01T15:23:07+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Verity — this twisty Colleen Hoover adaptation is a convoluted dud",
+            "url": "https://www.ft.com/content/a8501c31-c42a-450f-b072-41f99f09dc86"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/09/MCDVERI_ZU006.jpg",
+            "published_at": "2026-09-30T21:45:53+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Box Office: ‘Verity’ Aims for $35 Million Debut and Anne Hathaway’s Third No. 1 Movie of the Year, ‘Digger’ Could Bomb With $12 Million",
+            "url": "https://variety.com/2026/film/box-office/verity-box-office-opening-weekend-projection-1236893670"
+          },
+          {
+            "published_at": "2026-09-30T17:21:22+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Anne Hathaway Says This ‘Verity’ Scene Almost Made Her Break Character — And It Involved a Foot Rub",
+            "url": "https://www.hollywoodreporter.com/movies/movie-news/anne-hathaway-verity-break-character-premiere-1236717148"
+          }
+        ],
+        "score": 0.976,
+        "section": "business",
+        "slug": "anne-hathaway-blocked-from-hot-ones-during-verity-press-tour-due-to-pregna-34577",
+        "source_count": 15,
+        "summary": "The Colleen Hoover adaptation starring Anne Hathaway and Dakota Johnson aims for a $30 million to $35 million domestic debut across 3,510 theaters this weekend.",
+        "top_market": {
+          "end_date": "2027-12-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if Anne Hathaway receives a nomination for Best Actress at the 99th Academy Awards. Otherwise, it resolves to No. Readers often mistake the linked news story about her pregnancy as the deciding factor, but only an official Oscar nomination counts.",
+          "id": "kalshi:KXOSCARNOMACTR-27-ANN",
+          "liquidity": 13699.81,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.06
+            },
+            {
+              "name": "No",
+              "price": 0.94
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxoscarnomactr-27/kxoscarnomactr-27-ann",
+          "price_24h_ago": 0.06,
+          "question": "Anne Hathaway",
+          "similarity": 0.7649717926979065,
+          "slug": "kxoscarnomactr-27/kxoscarnomactr-27-ann",
+          "volume_24h": 1.36,
+          "volume_total": 13699.81,
+          "yes_price": 0.06
+        }
+      },
+      {
+        "distinct_publishers": 30,
+        "first_seen_at": "2026-09-07T11:39:22+00:00",
+        "headline": "Middle East Oil Flows Return to Pre-War Levels as Prices Stay High",
+        "id": 2240,
+        "image_url": "https://images.ft.com/v3/image/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F8a734038-7a30-4875-8896-3ffa93dacbf0.jpg?source=next-home-page&dpr=2&width=580&fit=scale-down",
+        "last_seen_at": "2026-10-03T05:29:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T14:36:30+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Factory Orders Edge Higher; G7 to Release Diesel, Crude",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/factory-orders-edge-higher-g7-to-release-diesel-crude-video"
+          },
+          {
+            "published_at": "2026-10-02T11:33:51+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Saudi Arabia Hikes Oil Flow on Key Pipeline to Over 80% Capacity",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/saudi-arabia-hikes-oil-flow-on-key-pipeline-to-over-80-capacity"
+          },
+          {
+            "published_at": "2026-10-02T04:01:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Fuel Subsidies May Top $1 Trillion As Iran War Drags, UN Says",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/fuel-subsidies-may-top-1-trillion-as-iran-war-drags-un-says"
+          },
+          {
+            "published_at": "2026-10-02T04:00:15+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "US refiners reap windfall profits as wars push up fuel prices for consumers",
+            "url": "https://www.ft.com/content/118785e7-8637-46ad-a60c-286e51370848"
+          },
+          {
+            "published_at": "2026-10-01T22:03:33+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Latest Oil Market News and Analysis for Oct. 2",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/latest-oil-market-news-and-analysis-for-oct-2"
+          },
+          {
+            "published_at": "2026-10-01T08:22:01+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "India Steps Up Palm Oil Buying as Tax Cut Spurs Restocking",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/india-steps-up-palm-oil-buying-as-tax-cut-spurs-restocking"
+          }
+        ],
+        "score": 0.947,
+        "section": "business",
+        "slug": "oil-nears-100-a-barrel-as-u-s-iran-conflict-disrupts-markets-2240",
+        "source_count": 244,
+        "summary": "Analysts estimate crude oil flows from the Middle East are nearing pre-war levels, yet fuel prices remain elevated due to ongoing geopolitical risks and limited supply.",
+        "top_market": {
+          "end_date": "2026-10-13T11:59:00+00:00",
+          "explainer": "The market resolves to Yes if OPEC reports that Saudi Arabia’s crude oil production in September 2026 exceeds 8.0 million barrels per day. Otherwise, it resolves to No. Readers often mistake the source of truth, but only official OPEC data counts.",
+          "id": "kalshi:KXSAUDICRUDE-26OCT13-T8.0",
+          "liquidity": 1000,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.25
+            },
+            {
+              "name": "No",
+              "price": 0.75
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxsaudicrude-26oct13/kxsaudicrude-26oct13-t8.0",
+          "price_24h_ago": 0.25,
+          "question": "Above 8.0 million bpd",
+          "similarity": 0.7621533274650574,
+          "slug": "kxsaudicrude-26oct13/kxsaudicrude-26oct13-t8.0",
+          "volume_24h": 0,
+          "volume_total": 1000,
+          "yes_price": 0.25
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-01T18:33:40+00:00",
+        "headline": "Labour figures uneasy about Healey’s budget approach amid global volatility",
+        "id": 41227,
+        "image_url": "https://i.guim.co.uk/img/media/497140ece85bc35f4082907611e6cc167bdc048d/674_0_4522_3618/master/4522.jpg?width=140&quality=85&auto=format&fit=max&s=f19ee8601205193188a852cc46400dea",
+        "last_seen_at": "2026-10-04T10:00:07+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T10:00:07+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Britain’s Budget needs to tame spending and boost growth",
+            "url": "https://www.ft.com/content/dfa07e3f-5557-46ba-8128-72f43aa6558d"
+          },
+          {
+            "published_at": "2026-10-02T20:41:15+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Healey set to park difficult choices with ‘breathing space’ UK Budget",
+            "url": "https://www.ft.com/content/9df55c2e-e9c8-4a5a-a025-99fb459721d3"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/497140ece85bc35f4082907611e6cc167bdc048d/674_0_4522_3618/master/4522.jpg?width=140&quality=85&auto=format&fit=max&s=f19ee8601205193188a852cc46400dea",
+            "published_at": "2026-10-01T18:33:40+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Labour figures uneasy about Healey’s ‘underpowered’ approach to budget",
+            "url": "https://www.theguardian.com/politics/2026/oct/01/labour-unease-healey-budget"
+          }
+        ],
+        "score": 0.923,
+        "section": "business",
+        "slug": "labour-figures-uneasy-about-healey-s-budget-approach-amid-global-volatilit-41227",
+        "source_count": 3,
+        "summary": "Senior Labour members privately express concern over the Chancellor's strategy as he prepares his first budget amidst rising borrowing costs and energy prices."
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-09-30T01:11:29+00:00",
+        "headline": "China Launches Mini Stimulus to Defend GDP Growth Target",
+        "id": 37170,
+        "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/02/724f79e8-fe9c-4efc-90db-c6ec9e6f19f6_99a38c41.jpg?itok=xUyRnK6X&v=1790943197",
+        "last_seen_at": "2026-10-04T02:00:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T02:00:04+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "China closes hundreds of banks to bolster financial system",
+            "url": "https://www.ft.com/content/8a8f5c97-f1d3-4d3d-a3bc-d5a2e5539177"
+          },
+          {
+            "published_at": "2026-10-02T05:26:27+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Beijing’s mini-stimulus package: Next China",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-10-02/beijing-s-mini-stimulus-package-next-china"
+          },
+          {
+            "published_at": "2026-09-30T09:14:51+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "China Stimulus Underwhelms In Sign Two-Speed Economy to Persist",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-09-30/china-stimulus-underwhelms-in-sign-two-speed-economy-to-persist"
+          },
+          {
+            "published_at": "2026-09-30T01:11:29+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "China’s Launches ‘Mini Stimulus’ to Counter Slowdown",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-30/china-s-launches-mini-stimulus-to-counter-slowdown-video"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/02/724f79e8-fe9c-4efc-90db-c6ec9e6f19f6_99a38c41.jpg?itok=xUyRnK6X&v=1790943197",
+            "published_at": "2026-10-02T23:15:10+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "China’s economic recovery calls for a bigger role for private firms",
+            "url": "https://www.scmp.com/opinion/comment/article/3369611/chinas-economic-recovery-calls-bigger-role-private-firms"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/02/a5196da5-e517-493f-a40e-b1579b16e511_b27e3d4b.jpg?itok=qpBYlFmx&v=1790929800",
+            "published_at": "2026-10-02T09:00:06+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "China seen doing ‘just enough’ with targeted fiscal support to defend GDP growth",
+            "url": "https://www.scmp.com/economy/china-economy/article/3369550/china-seen-doing-just-enough-targeted-fiscal-support-defend-gdp-growth"
+          }
+        ],
+        "score": 0.896,
+        "section": "business",
+        "slug": "china-launches-mini-stimulus-to-counter-economic-slowdown-37170",
+        "source_count": 6,
+        "summary": "Beijing pledges targeted fiscal support to meet growth goals while analysts expect measures to remain incremental rather than transformative.",
+        "top_market": {
+          "end_date": "2027-12-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if China records two consecutive quarters of negative real GDP growth between January 1, 2024, and December 31, 2026. Otherwise, it resolves to No. Readers often mistake the start date for the beginning of 2025.",
+          "id": "kalshi:WRECSS-26-PRC",
+          "liquidity": 34080.79,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.012
+            },
+            {
+              "name": "No",
+              "price": 0.988
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/wrecss-26/wrecss-26-prc",
+          "price_24h_ago": 0.012,
+          "question": "China",
+          "similarity": 0.7553127408027649,
+          "slug": "wrecss-26/wrecss-26-prc",
+          "volume_24h": 0,
+          "volume_total": 34080.79,
+          "yes_price": 0.012
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-03T09:25:01+00:00",
+        "headline": "Community Banks Sue to Block Crypto Firms' Access via OCC Trust Charters",
+        "id": 42954,
+        "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2026/02/banks2-gID_7.jpg@png",
+        "last_seen_at": "2026-10-04T16:01:03+00:00",
+        "publishers": [
+          {
+            "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2026/02/banks2-gID_7.jpg@png",
+            "published_at": "2026-10-04T16:01:03+00:00",
+            "publisher": "decrypt.co",
+            "publisher_slug": "decrypt-co",
+            "tier": 2,
+            "title": "Banking Group Sues to Block Crypto's 'Side Door' Into the Banking System",
+            "url": "https://decrypt.co/380017/banking-group-sues-block-crypto-side-door-banking"
+          },
+          {
+            "image_url": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M40GZ6STY7R8TJPNFCZ17PJ8/courtroom-court-lawsuit-justice-jurisdiction-breaking-news-3.png",
+            "published_at": "2026-10-03T09:25:01+00:00",
+            "publisher": "Cointelegraph.com News",
+            "publisher_slug": "cointelegraph-com",
+            "tier": 2,
+            "title": "Community banks sue OCC over trust bank charters of crypto firms",
+            "url": "https://cointelegraph.com/news/community-banks-sue-occ-over-trust-bank-charters-of-crypto-firms"
+          }
+        ],
+        "score": 0.859,
+        "section": "business",
+        "slug": "community-banks-sue-to-block-crypto-firms-access-via-occ-trust-charters-42954",
+        "source_count": 2,
+        "summary": "The Independent Community Bankers of America challenges the OCC's issuance of national trust charters to crypto firms, alleging regulatory overreach."
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-09-28T05:14:07+00:00",
+        "headline": "Tencent-Backed Infinigence AI Files for Hong Kong IPO Amid Market Activity",
+        "id": 33690,
+        "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/04/60b528df-a761-479d-96a2-2aa26ba9471a_cd869efb.jpg?itok=a_CQ-1R9&v=1791094856",
+        "last_seen_at": "2026-10-04T06:22:57+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T09:31:28+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Tencent-Backed AI Cloud Unicorn Said to File for Hong Kong IPO",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/tencent-backed-ai-cloud-unicorn-said-to-file-for-hong-kong-ipo"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/04/60b528df-a761-479d-96a2-2aa26ba9471a_cd869efb.jpg?itok=a_CQ-1R9&v=1791094856",
+            "published_at": "2026-10-04T06:22:57+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "Hong Kong’s IPO haul more than doubles to HK$388b in first 9 months: Paul Chan",
+            "url": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3369688/hong-kongs-ipo-haul-more-doubles-hk388b-first-9-months-paul-chan"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/02/c5125e7d-f558-4637-8879-cb1ad05e03a0_d57b4285.jpg?itok=uwl7rf2R&v=1790931938",
+            "published_at": "2026-10-02T09:05:40+00:00",
+            "publisher": "Hong Kong - South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "Hong Kong IPOs falter, China aids homebuyers, EU trade talks",
+            "url": "https://www.scmp.com/plus/business/banking-finance/article/3369567/hong-kong-ipos-falter-china-aids-homebuyers-eu-trade-talks"
+          },
+          {
+            "published_at": "2026-10-02T09:00:04+00:00",
+            "publisher": "theinformation.com",
+            "publisher_slug": "theinformation-com",
+            "tier": 2,
+            "title": "Neocloud Backed by Chinese Tech Giants Files for IPO",
+            "url": "https://www.theinformation.com/briefings/neocloud-backed-chinese-tech-giants-files-ipo"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/30/63e4926b-b78f-4af0-8466-7d61c8e6210b_a2716e7a.jpg?itok=Cs1BsjV0&v=1790754256",
+            "published_at": "2026-09-30T08:00:27+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "Hong Kong’s IPO haul in first 9 months smashes record despite Nasdaq’s fundraising lead",
+            "url": "https://www.scmp.com/business/banking-finance/article/3369316/hong-kongs-ipo-haul-first-9-months-smashes-record-despite-nasdaqs-fundraising-lead"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/09/29/a90488dd-d45f-4b08-8d50-6ba58d2bdee7_47f05ef3.jpg?itok=YrJQn7F9&v=1790660189",
+            "published_at": "2026-09-29T07:00:10+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "Hong Kong’s IPO revival faces test as three new stocks stumble on debut",
+            "url": "https://www.scmp.com/business/banking-finance/article/3369156/hong-kongs-ipo-revival-faces-test-three-new-stocks-stumble-debut"
+          }
+        ],
+        "score": 0.794,
+        "section": "business",
+        "slug": "tencent-backed-ai-cloud-unicorn-said-to-file-for-hong-kong-ipo-33690",
+        "source_count": 8,
+        "summary": "Infinigence AI files confidentially for a Hong Kong listing to raise hundreds of millions, joining other tech firms like CanSemi and Amicro in the city's active market."
+      },
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-09-25T19:47:50+00:00",
+        "headline": "Walmart CEO Rules Out Personalized Pricing Amid Digital Shelf Label Rollout",
+        "id": 31201,
+        "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/GettyImages-2297775464.jpg",
+        "last_seen_at": "2026-10-03T15:05:03+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T15:05:03+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "School IB economics: Walmart chief rules out personalised pricing as AI transforms retail",
+            "url": "https://www.ft.com/content/c5fda07d-0c6e-40a2-a185-2e3db48d5166"
+          },
+          {
+            "published_at": "2026-10-01T13:18:47+00:00",
+            "publisher": "CNBC",
+            "publisher_slug": "cnbc-com",
+            "tier": 1,
+            "title": "Walmart is using light-up digital shelf labels to help shoppers and employees find items",
+            "url": "https://www.cnbc.com/2026/10/01/walmart-digital-shelf-label-tools.html"
+          },
+          {
+            "published_at": "2026-09-28T16:44:57+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Walmart won’t hike prices based on your shopping history, CEO says",
+            "url": "https://www.theverge.com/tech/1001492/walmart-dynamic-pricing-digital-shelf-labels"
+          },
+          {
+            "published_at": "2026-09-25T21:16:49+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Walmart chief rules out personalised pricing as AI transforms retail",
+            "url": "https://www.ft.com/content/632e21a3-b889-4423-a1d9-be16b3e680bd"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/GettyImages-2297775464.jpg",
+            "published_at": "2026-10-01T19:07:48+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "McDonald’s and Walmart Are Part of the Widening Fray Over Surveillance Pricing",
+            "url": "https://www.cnet.com/news/privacy/surveillance-pricing-debate-walmart-mcdonalds"
+          },
+          {
+            "image_url": "https://i.insider.com/69f37e1f6550c0f1fa0c8b50?format=jpeg",
+            "published_at": "2026-10-01T16:40:12+00:00",
+            "publisher": "All Content from Business Insider",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "Walmart lights up a new feature for shoppers on its digital price tags",
+            "url": "https://www.businessinsider.com/walmart-lighting-up-new-feature-for-shoppers-ondigital-price-tags-2026-10"
+          }
+        ],
+        "score": 0.753,
+        "section": "business",
+        "slug": "walmart-rules-out-personalised-pricing-as-ai-transforms-retail-31201",
+        "source_count": 13,
+        "summary": "The retailer is deploying light-up digital labels to help shoppers locate items, while CEO John Furner confirms the technology will not be used for dynamic pricing based on personal data."
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-09-20T11:58:50+00:00",
+        "headline": "Battery Makers Face Demand Slump and Supply Chain Challenges Amid Trade Tensions",
+        "id": 21471,
+        "image_url": "https://i.guim.co.uk/img/media/98dafebbb2f563aff059cc3b9f77cd32f0173ea0/1495_338_4286_3429/master/4286.jpg?width=140&quality=85&auto=format&fit=max&s=978e8c7203cec588db4189a9dc62e019",
+        "last_seen_at": "2026-10-03T07:00:11+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T15:59:25+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Chilean Lithium Project Draws Investors Despite Metal Rout",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/chile-lithium-project-draws-investors-despite-battery-metal-rout"
+          },
+          {
+            "published_at": "2026-10-01T08:51:18+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Renault-Backed Battery Factory Plans Lender Talks After Delays",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/renault-backed-battery-factory-plans-lender-talks-after-delays"
+          },
+          {
+            "published_at": "2026-10-01T04:00:06+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "The trouble with China’s bigger, better batteries",
+            "url": "https://www.ft.com/content/b84778e5-ce8b-4baa-9ca7-402cdf277b4d"
+          },
+          {
+            "published_at": "2026-09-30T04:00:14+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Battery groups push to stick with post-Brexit rules on electric cars",
+            "url": "https://www.ft.com/content/f72004ae-3a17-459f-a14e-01840c90c6da"
+          },
+          {
+            "published_at": "2026-09-30T03:15:51+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Lithium Plunges 25% in China on Fears Over Battery Demand Growth",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/lithium-plunges-25-in-china-on-fears-over-battery-demand-growth"
+          },
+          {
+            "published_at": "2026-09-28T11:31:05+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Why the EU fears Britain becoming a back door for Chinese cars",
+            "url": "https://www.ft.com/content/6b216fc2-b2f4-42df-9102-c18476eb74de"
+          }
+        ],
+        "score": 0.719,
+        "section": "business",
+        "slug": "catl-develops-pickup-truck-batteries-for-us-market-ahead-of-xi-visit-21471",
+        "source_count": 28,
+        "summary": "Investors eye Chilean lithium projects while CATL navigates new taxes and Renault-backed factories seek lender flexibility amid falling prices and trade barriers.",
+        "top_market": {
+          "end_date": "2030-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if China's gross domestic product exceeds that of the United States by the year 2030. It resolves to No if China's GDP does not surpass the US total within that timeframe. Readers often mistake the linked news story about rare earth processing for the actual resolution criteria, but only GDP figures determine the outcome.",
+          "id": "kalshi:CHINAUSGDP-30",
+          "liquidity": 130173.82,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.14
+            },
+            {
+              "name": "No",
+              "price": 0.86
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/chinausgdp/chinausgdp-30",
+          "price_24h_ago": 0.17,
+          "question": "By 2030",
+          "similarity": 0.7360279560089111,
+          "slug": "chinausgdp/chinausgdp-30",
+          "volume_24h": 28.2,
+          "volume_total": 130173.82,
+          "yes_price": 0.14
+        }
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-09-23T14:35:11+00:00",
+        "headline": "Celebrity Homes in Los Angeles Area Sell or List for Millions",
+        "id": 26900,
+        "image_url": "https://static.toiimg.com/photo/msid-134669972,imgsize-846592.cms",
+        "last_seen_at": "2026-10-04T07:30:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134669972,imgsize-846592.cms",
+            "published_at": "2026-10-04T07:30:00+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Shonda Rhimes bought LA mansion for $8.8m, restored it and sold for $21m",
+            "url": "https://timesofindia.indiatimes.com/real-estate/news/in-2014-shonda-rhimes-bought-a-1923-hancock-park-mansion-for-8-8-million-after-restoring-and-expanding-it-she-sold-the-12000-sq-ft-estate-for-a-record-21-million-in-2022/articleshow/134669899.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134654971,imgsize-1266945.cms",
+            "published_at": "2026-10-03T08:21:49+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Judy Garland’s former Bel-Air home sold for $5.2m, later changed hands for $11.1m",
+            "url": "https://timesofindia.indiatimes.com/real-estate/news/in-2011-judy-garlands-former-bel-air-home-sold-for-5-2-million-after-successive-renovations-the-1938-house-on-nearly-2-7-acres-changed-hands-again-for-11-1-million-in-july-2024/articleshow/134654957.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134622931,imgsize-100446.cms",
+            "published_at": "2026-10-01T15:43:25+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Michael B. Jordan’s former Hollywood Hills home hits market for $14 million",
+            "url": "https://timesofindia.indiatimes.com/real-estate/news/michael-b-jordans-former-hollywood-hills-home-hits-market-for-14-million-oscar-winning-actor-bought-four-bedroom-la-residence-for-5-8-million-in-2019-he-later-sold-it-for-6-95-million-in-2022/articleshow/134622890.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134612507,imgsize-2517873.cms",
+            "published_at": "2026-10-01T09:30:00+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "James Cagney’s former Beverly Hills estate now asks $29.995 million",
+            "url": "https://timesofindia.indiatimes.com/real-estate/news/james-cagneys-former-beverly-hills-estate-was-restored-over-many-years-preserving-its-original-fireplaces-and-leaded-glass-the-five-acre-compound-listed-for-38-5-million-is-now-asking-29-995-million/articleshow/134612348.cms"
+          },
+          {
+            "image_url": "https://images.mktw.net/im-28007543",
+            "published_at": "2026-10-01T09:04:00+00:00",
+            "publisher": "MarketWatch",
+            "publisher_slug": "marketwatch-com",
+            "tier": 2,
+            "title": "Angelina Jolie sells L.A. mansion with illustrious Hollywood history for $24.75 million",
+            "url": "https://www.marketwatch.com/story/angelina-jolie-sells-l-a-mansion-with-illustrious-hollywood-history-for-24-75-million-d0e38495?mod=mw_rss_topstories"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134592225,imgsize-715427.cms",
+            "published_at": "2026-09-30T14:30:00+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Tyler Perry bought Beverly Hills land for $4.3m; 22.5-acre estate now asks $57m",
+            "url": "https://timesofindia.indiatimes.com/real-estate/news/in-2004-tyler-perry-bought-beverly-hills-land-for-4-3-million-he-built-a-mansion-that-later-housed-harry-and-meghan-and-the-22-5-acre-estate-is-now-on-the-market-for-57-million/articleshow/134592070.cms"
+          }
+        ],
+        "score": 0.676,
+        "section": "business",
+        "slug": "benedikt-taschen-and-pat-boone-list-beverly-hills-homes-for-over-47-millio-26900",
+        "source_count": 12,
+        "summary": "Several high-profile properties in Beverly Hills and Hollywood are selling or listing for tens of millions, reflecting the luxury real estate market."
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-02T14:02:48+00:00",
+        "headline": "Argentina to Launch $350,000 Citizenship-by-Investment Scheme",
+        "id": 41767,
+        "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2297626034-e1791043926501.jpg?w=2048",
+        "last_seen_at": "2026-10-03T16:32:21+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T14:02:48+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Argentina to sell ‘golden passports’ by end of year",
+            "url": "https://www.ft.com/content/396cee26-bcf3-40e6-ac02-b42f30d5922a"
+          },
+          {
+            "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2297626034-e1791043926501.jpg?w=2048",
+            "published_at": "2026-10-03T16:32:21+00:00",
+            "publisher": "Fortune",
+            "publisher_slug": "fortune-com",
+            "tier": 2,
+            "title": "Argentina’s golden passport will be so popular that ‘really wealthy Americans will be embarrassed’ not to have it, top advisor says",
+            "url": "https://fortune.com/2026/10/03/argentina-golden-passport-wealth-americans-embarrassed-not-to-have-it"
+          },
+          {
+            "image_url": "https://ocdn.eu/pulscms/MDA_/192397f4-0763-4ea5-b530-921e6bd35373.jpeg",
+            "published_at": "2026-10-03T09:19:28+00:00",
+            "publisher": "businessinsider.com",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "Argentina follows Africa’s second-largest economy’s playbook with $350,000 citizenship offer to wealthy foreigners as both countries face high debt levels",
+            "url": "https://africa.businessinsider.com/local/markets/argentina-follows-africas-second-largest-economys-playbook-with-dollar350000/3973rcx"
+          },
+          {
+            "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2292658362-e1790974353218.jpg?w=2048",
+            "published_at": "2026-10-02T20:56:37+00:00",
+            "publisher": "Fortune",
+            "publisher_slug": "fortune-com",
+            "tier": 2,
+            "title": "The ‘golden passport’: Argentina to offer citizenship for foreigners that make a $350,000 contribution to its treasury—or invest $800,000 in its bonds",
+            "url": "https://fortune.com/2026/10/02/golden-passport-argentina-foreigners-350000-treasury-800000"
+          },
+          {
+            "published_at": "2026-10-02T14:26:00+00:00",
+            "publisher": "Deutsche Welle",
+            "publisher_slug": "dw-com",
+            "tier": 2,
+            "title": "Argentina launches cash-for-citizenship scheme",
+            "url": "https://www.dw.com/en/argentina-launches-cash-for-citizenship-scheme/a-79520708"
+          }
+        ],
+        "score": 0.512,
+        "section": "business",
+        "slug": "argentina-to-sell-golden-passports-by-end-of-year-41767",
+        "source_count": 5,
+        "summary": "Economy Minister Luis Caputo unveiled the program in Paris, allowing wealthy foreigners to buy citizenship via a direct payment or government bond investment before year-end.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if a free trade deal with Argentina becomes law through Senate ratification and Presidential approval, or via a Congressional-Executive Agreement signed by the President before January 1, 2027. Otherwise, it resolves to No. Readers often mistake the signing of implementing legislation for the final resolution without confirming that the deal has actually become law.",
+          "id": "kalshi:KXFTACOUNTRIES-27-ARG",
+          "liquidity": 4136.45,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.1
+            },
+            {
+              "name": "No",
+              "price": 0.9
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxftacountries-27/kxftacountries-27-arg",
+          "price_24h_ago": 0.1,
+          "question": "Argentina",
+          "similarity": 0.7275880575180054,
+          "slug": "kxftacountries-27/kxftacountries-27-arg",
+          "volume_24h": 0,
+          "volume_total": 4136.45,
+          "yes_price": 0.1
+        }
+      },
+      {
+        "distinct_publishers": 13,
+        "first_seen_at": "2026-09-30T12:40:35+00:00",
+        "headline": "US Adds 29,000 Jobs in September as Unemployment Rises to 4.2 Percent",
+        "id": 37849,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6abbcc1baacad9.44528029.jpeg?w=900",
+        "last_seen_at": "2026-10-02T21:42:53+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T21:42:53+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "EM Assets Find Relief as US Jobs Data Eases Rate Fears",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/em-assets-find-relief-as-us-jobs-data-eases-rate-fears-video"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6abbcc1baacad9.44528029.jpeg?w=900",
+            "published_at": "2026-10-02T21:39:26+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "September jobs report misses expectations",
+            "url": "https://thehill.com/newsletters/business-economy/6127094-september-jobs-report-misses"
+          },
+          {
+            "published_at": "2026-10-02T19:19:55+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US Job Growth Falls Short of Forecasts",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/us-job-growth-falls-short-of-forecasts-video-murckvvm"
+          },
+          {
+            "published_at": "2026-10-02T16:20:46+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "US job growth slows as unemployment rises before midterm elections",
+            "url": "https://www.aljazeera.com/economy/2026/10/2/us-job-growth-slows-as-unemployment-rises-before-midterm-elections"
+          },
+          {
+            "published_at": "2026-10-02T15:55:25+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US Job Growth Falls Short of Forecasts as Firms Remain Cautious",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/us-job-growth-falls-short-of-forecasts-video"
+          },
+          {
+            "published_at": "2026-10-02T14:01:04+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Weak US payrolls likely to keep rate setters on the sidelines in October",
+            "url": "https://www.ft.com/content/906051fc-c116-4803-b395-2d56d1bcbf28"
+          }
+        ],
+        "score": 0.472,
+        "section": "business",
+        "slug": "us-private-payrolls-rise-by-90-000-in-september-37849",
+        "source_count": 26,
+        "summary": "The US economy added 29,000 jobs in September, missing forecasts and raising unemployment to 4.2 percent, easing fears of further Federal Reserve rate hikes.",
+        "top_market": {
+          "end_date": "2027-01-08T13:29:00+00:00",
+          "explainer": "The market resolves to Yes if the U.S. labor force participation rate for December 2026 exceeds 58.50%. Otherwise, it resolves to No. Readers often mistake the linked September jobs report for the relevant data, but only the December 2026 participation rate matters.",
+          "id": "kalshi:KXLFPRATEEOY-27JAN08-T58.50",
+          "liquidity": 2205,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.99
+            },
+            {
+              "name": "No",
+              "price": 0.010000000000000007
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxlfprateeoy-27jan08/kxlfprateeoy-27jan08-t58.50",
+          "price_24h_ago": 0.99,
+          "question": "Above 58.50%",
+          "similarity": 0.733049750328064,
+          "slug": "kxlfprateeoy-27jan08/kxlfprateeoy-27jan08-t58.50",
+          "volume_24h": 0,
+          "volume_total": 2205,
+          "yes_price": 0.99
+        }
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-09-29T16:30:55+00:00",
+        "headline": "JPMorgan, Ford Launch Michigan Manufacturing Initiative With $3 Billion in Commitments",
+        "id": 36368,
+        "image_url": "https://static.toiimg.com/photo/msid-134637388,imgsize-292550.cms",
+        "last_seen_at": "2026-10-03T14:16:41+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-09-29T16:30:55+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "JPMorgan, Ford to Invest Billions in Michigan Manufacturing",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-29/jpmorgan-investing-1-billion-in-michigan-manufacturing-video"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134637388,imgsize-292550.cms",
+            "published_at": "2026-10-03T14:16:41+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Michigan commits $89m to clean polluted Detroit and Kalamazoo rivers",
+            "url": "https://timesofindia.indiatimes.com/science/nature/decades-of-industrial-pollution-left-michigans-detroit-and-kalamazoo-rivers-contaminated-with-pcbs-mercury-and-other-chemicals-the-state-is-now-committing-89-million-to-clean-and-restore-the-waterways-by-2040/articleshow/134637191.cms"
+          },
+          {
+            "image_url": "https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/vip/2026/10/jamie-dimon-detroit-inc.jpg",
+            "published_at": "2026-10-02T13:45:29+00:00",
+            "publisher": "Inc.",
+            "publisher_slug": "inc-com",
+            "tier": 2,
+            "title": "Jamie Dimon Is Betting Up to $1 Billion on Michigan Manufacturing. The Real Opportunity Isn’t the Money",
+            "url": "https://www.inc.com/victoria-salves/jamie-dimon-betting-up-to-1-billion-dollars-michigan-manufacturing/91413277"
+          },
+          {
+            "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2270119521.jpg",
+            "published_at": "2026-09-30T17:00:32+00:00",
+            "publisher": "Quartz",
+            "publisher_slug": "qz-com",
+            "tier": 2,
+            "title": "Ford and JPMorganChase launch Michigan manufacturing platform with $3 billion in aspirational commitments",
+            "url": "https://qz.com/ford-jpmorgan-michigan-lift-manufacturing-platform-093026"
+          },
+          {
+            "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2270119521.jpg",
+            "published_at": "2026-09-30T17:00:32+00:00",
+            "publisher": "Quartz",
+            "publisher_slug": "qz-com",
+            "tier": 2,
+            "title": "Ford und JPMorganChase starten eine Produktionsplattform in Michigan mit Zielverpflichtungen von 3 Milliarden Dollar.",
+            "url": "https://de.qz.com/ford-jpmorgan-michigan-heben-fertigung-plattform-093026"
+          }
+        ],
+        "score": 0.377,
+        "section": "business",
+        "slug": "jpmorgan-ford-to-invest-billions-in-michigan-manufacturing-36368",
+        "source_count": 5,
+        "summary": "The public-private initiative aims to scale domestic production by pairing innovative suppliers with industrial buyers and state resources."
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-10-02T04:15:02+00:00",
+        "headline": "France Bond Crisis Deepens as Investors Exit Amid Default Fears",
+        "id": 41187,
+        "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2294554597-e1790945129951.jpg?w=2048",
+        "last_seen_at": "2026-10-03T13:12:28+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T16:38:04+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "France’s Bond Crisis Deepens",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/france-s-bond-crisis-deepens-video"
+          },
+          {
+            "published_at": "2026-10-02T04:15:02+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "France’s Crisis Is Deepening as Investors Head for the Exit",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/france-s-crisis-is-deepening-as-investors-head-for-the-exit"
+          },
+          {
+            "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/10/GettyImages-2294554597-e1790945129951.jpg?w=2048",
+            "published_at": "2026-10-02T16:31:19+00:00",
+            "publisher": "Fortune",
+            "publisher_slug": "fortune-com",
+            "tier": 2,
+            "title": "France debt crisis: Bond investors have rendered a ‘guilty’ verdict and are pricing in growing odds of a sovereign default, analyst says",
+            "url": "https://fortune.com/2026/10/02/france-debt-crisis-bond-investors-odds-sovereign-default-cds-yield-spread-deficit-presidential-race"
+          },
+          {
+            "published_at": "2026-10-03T13:12:28+00:00",
+            "publisher": "Hacker News",
+            "publisher_slug": "ycombinator-com",
+            "tier": 3,
+            "title": "French Bond Risk Hits Euro-Crisis Levels [video]",
+            "url": "https://www.youtube.com/watch?v=bam3uxilEJo"
+          }
+        ],
+        "score": 0.367,
+        "section": "business",
+        "slug": "investors-exit-france-as-crisis-deepens-across-bonds-stocks-and-euro-41187",
+        "source_count": 4,
+        "summary": "Investors are exiting French bonds, driving default insurance costs to the highest level among major economies.",
+        "top_market": {
+          "end_date": "2027-04-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if France's nominal GDP exceeds $4.3 trillion in 2026. It resolves to No if that threshold is not met. Readers often mistake this for a measure of current economic performance rather than the specific forecast for 2026.",
+          "id": "kalshi:KXGDPNOM-FRA26-4.3",
+          "liquidity": 6259,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.06
+            },
+            {
+              "name": "No",
+              "price": 0.94
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxgdpnom-fra26/kxgdpnom-fra26-4.3",
+          "price_24h_ago": 0.06,
+          "question": "Above $4.3 trillion",
+          "similarity": 0.7421524524688721,
+          "slug": "kxgdpnom-fra26/kxgdpnom-fra26-4.3",
+          "volume_24h": 0,
+          "volume_total": 6259,
+          "yes_price": 0.06
+        }
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T19:33:33+00:00",
+        "headline": "Schneider Electric Nears $20bn Deal to Buy Software Group PTC",
+        "id": 44525,
+        "last_seen_at": "2026-10-04T19:33:33+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T19:33:33+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Schneider Electric nears deal to buy software group PTC for $20bn",
+            "url": "https://www.ft.com/content/2084f349-0829-4130-a5e6-b98929a6e633"
+          }
+        ],
+        "score": 0.357,
+        "section": "business",
+        "slug": "schneider-electric-nears-20bn-deal-to-buy-software-group-ptc-44525",
+        "source_count": 1,
+        "summary": "The French industrial giant is close to acquiring the software firm in its largest deal, aiming to expand its industrial software capabilities."
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-09-29T15:21:00+00:00",
+        "headline": "US Labor Market Stuck in Low-Hire, Low-Fire Mode Ahead of September Jobs Report",
+        "id": 36188,
+        "image_url": "https://images.mktw.net/im-64055327",
+        "last_seen_at": "2026-10-03T13:00:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-09-29T15:25:14+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Low-hire, low-fire US labour market is no worry for Fed rate-setters",
+            "url": "https://www.ft.com/content/525c4aa1-2d36-47e4-b3ec-2d8f6ebf9060"
+          },
+          {
+            "image_url": "https://images.mktw.net/im-64055327",
+            "published_at": "2026-10-03T13:00:00+00:00",
+            "publisher": "MarketWatch",
+            "publisher_slug": "marketwatch-com",
+            "tier": 2,
+            "title": "The U.S. jobs market just took a turn for the worse. Or did it?",
+            "url": "https://www.marketwatch.com/story/the-u-s-jobs-market-just-took-a-turn-for-the-worse-or-did-it-c44c371b?mod=mw_rss_topstories"
+          },
+          {
+            "image_url": "https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/vip/2026/10/job-candidates-dumb-down-inc.jpg",
+            "published_at": "2026-10-02T18:42:24+00:00",
+            "publisher": "Inc.",
+            "publisher_slug": "inc-com",
+            "tier": 2,
+            "title": "43 Percent of Job Seekers Are Hiding Their Best Qualifications to Get Hired",
+            "url": "https://www.inc.com/bruce-crumley/43-percent-of-job-seekers-are-hiding-their-best-qualifications-to-get-hired/91413739"
+          },
+          {
+            "image_url": "https://images.mktw.net/im-82298777",
+            "published_at": "2026-10-01T14:43:00+00:00",
+            "publisher": "MarketWatch",
+            "publisher_slug": "marketwatch-com",
+            "tier": 2,
+            "title": "September jobs report may show labor market is on the mend — but it’s far from cured",
+            "url": "https://www.marketwatch.com/story/september-jobs-report-may-show-labor-market-is-on-the-mend-but-its-far-from-cured-ebac2472?mod=mw_rss_topstories"
+          },
+          {
+            "image_url": "https://images.mktw.net/im-69217223",
+            "published_at": "2026-09-30T15:55:00+00:00",
+            "publisher": "MarketWatch",
+            "publisher_slug": "marketwatch-com",
+            "tier": 2,
+            "title": "A tough job market is pushing more young Americans to make a big bet: on themselves",
+            "url": "https://www.marketwatch.com/story/a-tough-job-market-is-pushing-more-young-americans-to-make-a-big-bet-on-themselves-1aaddeca?mod=mw_rss_topstories"
+          },
+          {
+            "image_url": "https://i.insider.com/6ab68404d15f8a572974a95c?format=jpeg",
+            "published_at": "2026-09-30T09:30:01+00:00",
+            "publisher": "All Content from Business Insider",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "The next jobs report is almost here. Here's how to read it if you're job hunting.",
+            "url": "https://www.businessinsider.com/is-it-good-time-look-for-job-job-market-hiring-2026-9"
+          }
+        ],
+        "score": 0.351,
+        "section": "business",
+        "slug": "weak-us-job-market-poses-no-worry-for-fed-rate-setters-36188",
+        "source_count": 7,
+        "summary": "The US labor market remains constrained by weak hiring and low job openings, with the upcoming September report expected to reflect this persistent trend despite some signs of stabilization."
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T18:55:09+00:00",
+        "headline": "AkzoNobel Nears Deal to Sell SE Asia Paint Unit to Nippon Paint",
+        "id": 44490,
+        "last_seen_at": "2026-10-04T18:55:09+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T18:55:09+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "AkzoNobel nears deal to sell its SE Asia decorative paint unit to Nippon Paint",
+            "url": "https://www.ft.com/content/9737146d-fda7-440f-a77d-ab954de7a1a5"
+          }
+        ],
+        "score": 0.345,
+        "section": "business",
+        "slug": "akzonobel-nears-deal-to-sell-se-asia-paint-unit-to-nippon-paint-44490",
+        "source_count": 1,
+        "summary": "The Dutch group is preparing to exit non-core markets ahead of its merger with Axalta."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-01T14:30:29+00:00",
+        "headline": "Amazon Expands FTC Prime Settlement Payments to Millions More Customers",
+        "hot": "Odds moved 97 points in 24 hours",
+        "id": 40038,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26230751761751-e1787147222953.jpg?w=900",
+        "last_seen_at": "2026-10-03T16:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26230751761751-e1787147222953.jpg?w=900",
+            "published_at": "2026-10-03T16:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Check your email: Notices sent regarding $309M Amazon returns settlement",
+            "url": "https://thehill.com/homenews/6123841-check-your-email-notices-sent-regarding-309m-amazon-returns-settlement"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/07/prime-e1759258909592.jpg?w=800",
+            "published_at": "2026-10-02T16:00:00+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "$2.5 billion Amazon settlement: More payments being sent out, with another round possible",
+            "url": "https://thehill.com/homenews/6124122-2-5-billion-amazon-settlement-more-payments-being-sent-out-with-another-round-possible"
+          },
+          {
+            "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2195802149.jpg",
+            "published_at": "2026-10-01T14:30:29+00:00",
+            "publisher": "Quartz",
+            "publisher_slug": "qz-com",
+            "tier": 2,
+            "title": "Amazon erweitert die FTC-Prime-Abrechnungszahlungen auf Millionen weitere Kunden.",
+            "url": "https://de.qz.com/amazon-ftc-prime-vergleichszahlungen-erweiterung-100126"
+          },
+          {
+            "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2195802149.jpg",
+            "published_at": "2026-10-01T14:30:29+00:00",
+            "publisher": "Quartz",
+            "publisher_slug": "qz-com",
+            "tier": 2,
+            "title": "Amazon is expanding FTC Prime settlement payments to millions more customers",
+            "url": "https://qz.com/amazon-ftc-prime-settlement-payments-expansion-100126"
+          }
+        ],
+        "score": 0.339,
+        "section": "business",
+        "slug": "amazon-expands-ftc-prime-settlement-payments-to-millions-more-customers-40038",
+        "source_count": 4,
+        "summary": "The maximum individual payment rises from $51 to $200 as eligibility expands to consumers who used between 11 and 20 Prime benefits annually.",
+        "top_market": {
+          "end_date": "2028-03-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if Amazon reports more than 1,575,000 employees in 2026. It resolves to No if the count is 1,575,000 or fewer. Readers often mistake the deadline for the end of the calendar year rather than the specific reporting period defined by the company.",
+          "id": "kalshi:KXAMZNA-28JANHEAD-1575000",
+          "liquidity": 13544.35,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.89
+            },
+            {
+              "name": "No",
+              "price": 0.11
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxamzna-28janhead/kxamzna-28janhead-1575000",
+          "price_24h_ago": 0.89,
+          "question": "Above 1575000",
+          "similarity": 0.7328981757164001,
+          "slug": "kxamzna-28janhead/kxamzna-28janhead-1575000",
+          "volume_24h": 0,
+          "volume_total": 13544.35,
+          "yes_price": 0.89
+        },
+        "verdict": {
+          "kind": "moved",
+          "moved": 0.97
+        }
+      }
+    ],
+    "total": 42
+  }
+}

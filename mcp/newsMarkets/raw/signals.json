@@ -1,0 +1,724 @@
+{
+  "label": "GET /data/v1/signals.json",
+  "path": "/data/v1/signals.json",
+  "capturedAt": "2026-10-04T20:27:14.631Z",
+  "elapsedMs": 230,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "big_move": 0.1,
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "loud_market_quiet_news": [
+      {
+        "market": {
+          "end_date": "2026-10-04T18:45:00+00:00",
+          "explainer": "The market resolves to Yes if Denmark wins the match scheduled for October 4, 2026, based only on the result within regular time and stoppage. It resolves to No if Denmark does not win or if the game is canceled without a make-up match. Readers often mistake the deadline for resolution, which depends on the availability of official statistics from the governing body rather than a fixed clock after the game ends.",
+          "id": "0xc693735341bfc1cd40deb3a08d60be629caebd39a85be26469642d57101edb11",
+          "liquidity": 72786.5059,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.865
+            },
+            {
+              "name": "No",
+              "price": 0.135
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/unl-wal-den-2026-10-04-den?r=alykhan3",
+          "price_24h_ago": 0.485,
+          "question": "Will Denmark win on 2026-10-04?",
+          "similarity": 0.7693644165992737,
+          "slug": "unl-wal-den-2026-10-04-den",
+          "volume_24h": 178613.49681600003,
+          "volume_total": 186102.84344199992,
+          "yes_price": 0.865
+        },
+        "publishers_24h": 0,
+        "story": {
+          "distinct_publishers": 3,
+          "first_seen_at": "2026-09-30T17:11:37+00:00",
+          "headline": "Wales beat ten-man Norway to end winless run under Bellamy",
+          "hot": "$345k traded on its market in 24 hours",
+          "id": 38948,
+          "image_url": "https://i.guim.co.uk/img/media/2fcb9e598ed8d830a776bd51b1ba06bb769714d7/279_0_2883_2306/master/2883.jpg?width=140&quality=85&auto=format&fit=max&s=3b429a36f29ce78113723396efe9c069",
+          "last_seen_at": "2026-10-03T16:11:50+00:00",
+          "publishers": [
+            {
+              "image_url": "https://i.guim.co.uk/img/media/2fcb9e598ed8d830a776bd51b1ba06bb769714d7/279_0_2883_2306/master/2883.jpg?width=140&quality=85&auto=format&fit=max&s=3b429a36f29ce78113723396efe9c069",
+              "published_at": "2026-10-01T20:58:07+00:00",
+              "publisher": "The Guardian Sport",
+              "publisher_slug": "theguardian-com",
+              "tier": 1,
+              "title": "Neco Williams fires revitalised Wales to fightback win against 10-man Norway",
+              "url": "https://www.theguardian.com/football/2026/oct/01/wales-norway-nations-league-league-a-group-4-match-report"
+            },
+            {
+              "image_url": "https://i.guim.co.uk/img/media/a10750e4fbebccc871fd0001b7750ed9fb86785d/124_0_3315_2652/master/3315.jpg?width=140&quality=85&auto=format&fit=max&s=01135814fb7348bbd55605850544917e",
+              "published_at": "2026-10-01T17:32:28+00:00",
+              "publisher": "The Guardian Sport",
+              "publisher_slug": "theguardian-com",
+              "tier": 1,
+              "title": "Wales v Norway, Denmark v Portugal, Germany v Serbia: Nations League – live",
+              "url": "https://www.theguardian.com/football/live/2026/oct/01/wales-norway-denmark-portugal-germany-serbia-nations-league-live"
+            },
+            {
+              "image_url": "https://i.guim.co.uk/img/media/91f0e16375659d20df525b7087856a962d841651/407_0_4050_3240/master/4050.jpg?width=140&quality=85&auto=format&fit=max&s=94d559a0f57ffdaaf404bc7ec4d950ad",
+              "published_at": "2026-09-30T17:11:37+00:00",
+              "publisher": "The Guardian Sport",
+              "publisher_slug": "theguardian-com",
+              "tier": 1,
+              "title": "Craig Bellamy urges Wales improvement but wary of Norway’s threat",
+              "url": "https://www.theguardian.com/football/2026/sep/30/craig-bellamy-wales-norway-nations-league-erling-haaland-manchester-city"
+            },
+            {
+              "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d544/live/cd3b0f80-bf1e-11f1-9b47-174f268aae1d.jpg",
+              "published_at": "2026-10-03T16:11:50+00:00",
+              "publisher": "BBC Sport",
+              "publisher_slug": "bbci-co-uk",
+              "tier": 2,
+              "title": "Group has 'exploded' after Wales win - Bellamy",
+              "url": "https://www.bbc.co.uk/sport/football/articles/cmkgewx77521o"
+            },
+            {
+              "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/49c0/live/3a9b0ca0-be35-11f1-883b-cfbfbf424e7e.jpg",
+              "published_at": "2026-10-02T09:36:29+00:00",
+              "publisher": "BBC Sport",
+              "publisher_slug": "bbci-co-uk",
+              "tier": 2,
+              "title": "Was long-awaited win a turning point for Craig Bellamy?",
+              "url": "https://www.bbc.co.uk/sport/football/articles/cqe8x87y3lg2o"
+            },
+            {
+              "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ee14/live/a0756920-bddc-11f1-88d5-b903d805bdb1.jpg",
+              "published_at": "2026-10-01T22:56:09+00:00",
+              "publisher": "BBC Sport",
+              "publisher_slug": "bbci-co-uk",
+              "tier": 2,
+              "title": "Bellamy says Wales 'stick' hurt as Norway win lifts mood",
+              "url": "https://www.bbc.co.uk/sport/football/articles/c6zxzx1d484zo"
+            }
+          ],
+          "score": 0.433,
+          "section": "sports",
+          "slug": "bellamy-urges-wales-improvement-ahead-of-norway-clash-38948",
+          "source_count": 7,
+          "summary": "Neco Williams scores the winner as Wales defeat Norway in the Nations League, ending a long winless streak for Craig Bellamy's side.",
+          "top_market": {
+            "end_date": "2026-10-06T18:45:00+00:00",
+            "explainer": "Denmark wins the Wales vs Denmark professional UEFA Nations League soccer game originally scheduled for Oct 4, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties), then the market resolves to Yes.",
+            "id": "kalshi:KXUEFANLGAME-26OCT04WALDEN-DEN",
+            "liquidity": 392686.15,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "price": 0.86
+              },
+              {
+                "name": "No",
+                "price": 0.14
+              }
+            ],
+            "polymarket_url": "https://kalshi.com/markets/kxuefanlgame-26oct04walden/kxuefanlgame-26oct04walden-den",
+            "price_24h_ago": 0.49,
+            "question": "Denmark",
+            "similarity": 0.7819470167160034,
+            "slug": "kxuefanlgame-26oct04walden/kxuefanlgame-26oct04walden-den",
+            "volume_24h": 345364.98,
+            "volume_total": 392686.15,
+            "yes_price": 0.86
+          },
+          "verdict": {
+            "kind": "moved",
+            "moved": 0.37
+          }
+        }
+      },
+      {
+        "market": {
+          "end_date": "2026-11-09T03:00:00+00:00",
+          "explainer": "The market resolves to Yes if Novak Djokovic wins the 2026 ATP Beijing professional tennis tournament. Readers often mistake this for any tournament he enters or confuse the deadline with the linked story's date.",
+          "id": "kalshi:KXATP-26BEIJIN-DJO",
+          "liquidity": 35877.59,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.27
+            },
+            {
+              "name": "No",
+              "price": 0.73
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxatp-26beijin/kxatp-26beijin-djo",
+          "price_24h_ago": 0.12,
+          "question": "Novak Djokovic",
+          "similarity": 0.8489866256713867,
+          "slug": "kxatp-26beijin/kxatp-26beijin-djo",
+          "volume_24h": 15365.57,
+          "volume_total": 35877.59,
+          "yes_price": 0.27
+        },
+        "publishers_24h": 0,
+        "story": {
+          "distinct_publishers": 2,
+          "first_seen_at": "2026-10-02T18:25:58+00:00",
+          "headline": "Djokovic Overcomes Fitness Issues to Advance at China Open",
+          "hot": "Odds moved 15 points in 24 hours",
+          "id": 42267,
+          "image_url": "https://images2.minutemediacdn.com/image/upload/c_crop,w_8640,h_4860,x_0,y_664/c_fill,w_2880,ar_16:9,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/serve-on-si/01m3z1mfn7yye3rmytep.jpg",
+          "last_seen_at": "2026-10-03T13:00:00+00:00",
+          "publishers": [
+            {
+              "image_url": "https://images2.minutemediacdn.com/image/upload/c_crop,w_8640,h_4860,x_0,y_664/c_fill,w_2880,ar_16:9,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/serve-on-si/01m3z1mfn7yye3rmytep.jpg",
+              "published_at": "2026-10-03T13:00:00+00:00",
+              "publisher": "SI Feed",
+              "publisher_slug": "si-com",
+              "tier": 2,
+              "title": "Novak Djokovic Addresses Health Concerns and Aims To Play ATP Finals",
+              "url": "https://www.si.com/onsi/serve/news/novak-djokovic-addresses-health-concerns-aims-play-atp-finals-01m3z0gx8fwp"
+            },
+            {
+              "image_url": "https://e2.365dm.com/26/10/1920x1080/skysports-novak-djokovic_7366812.jpg?20261002183521",
+              "published_at": "2026-10-02T18:25:58+00:00",
+              "publisher": "SkySports",
+              "publisher_slug": "skysports-com",
+              "tier": 2,
+              "title": "Djokovic battles through fitness issues to produce resilient China Open comeback",
+              "url": "https://www.skysports.com/tennis/news/12040/13594284/china-open-and-japan-open-novak-djokovic-aryna-sabalenka-and-naomi-osaka-all-advance-as-katie-boulter-knocked-out"
+            }
+          ],
+          "score": 0.23,
+          "section": "sports",
+          "slug": "djokovic-overcomes-fitness-issues-to-advance-at-china-open-42267",
+          "source_count": 2,
+          "summary": "Novak Djokovic battles past Yunchaokete Bu despite fitness concerns, aiming for the ATP Finals.",
+          "top_market": {
+            "end_date": "2026-11-09T03:00:00+00:00",
+            "explainer": "The market resolves to Yes if Novak Djokovic wins the 2026 ATP Beijing professional tennis tournament. Readers often mistake this for any tournament he enters or confuse the deadline with the linked story's date.",
+            "id": "kalshi:KXATP-26BEIJIN-DJO",
+            "liquidity": 35877.59,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "price": 0.27
+              },
+              {
+                "name": "No",
+                "price": 0.73
+              }
+            ],
+            "polymarket_url": "https://kalshi.com/markets/kxatp-26beijin/kxatp-26beijin-djo",
+            "price_24h_ago": 0.12,
+            "question": "Novak Djokovic",
+            "similarity": 0.8489866256713867,
+            "slug": "kxatp-26beijin/kxatp-26beijin-djo",
+            "volume_24h": 15365.57,
+            "volume_total": 35877.59,
+            "yes_price": 0.27
+          },
+          "verdict": {
+            "kind": "moved",
+            "moved": 0.15000000000000002
+          }
+        }
+      },
+      {
+        "market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "A snap election must occur by October 31, 2026, at 11:59 PM ET for the market to resolve to Yes. This requires the formal dissolution of at least one house of the Spanish Parliament or a formal scheduling of an election before the term ends. Readers often mistake general political instability or protests for the specific legal act of calling a snap election.",
+          "id": "0xc277ed97f91ffb69953a88e0751664ac16848fdb40eecfa37ed638fdf578039f",
+          "liquidity": 32243.0289,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.655
+            },
+            {
+              "name": "No",
+              "price": 0.345
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/spain-snap-election-called-by-october-31?r=alykhan3",
+          "price_24h_ago": 0.525,
+          "question": "Spain snap election called by October 31?",
+          "similarity": 0.7365528345108032,
+          "slug": "spain-snap-election-called-by-october-31",
+          "volume_24h": 15934.461742000003,
+          "volume_total": 38377.055134999995,
+          "yes_price": 0.655
+        },
+        "publishers_24h": 1,
+        "story": {
+          "distinct_publishers": 11,
+          "first_seen_at": "2026-09-23T16:58:00+00:00",
+          "headline": "Spain Parliament Rejects Housing Decrees as Protests Spread",
+          "hot": "Odds moved 37 points in 24 hours",
+          "id": 27234,
+          "image_url": "https://s.abcnews.com/images/International/wirestory_ae3ba6c786ab95b6acc30bdb02c47d0d_4x3_384.jpg",
+          "last_seen_at": "2026-10-04T10:16:49+00:00",
+          "publishers": [
+            {
+              "published_at": "2026-10-04T10:16:49+00:00",
+              "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+              "publisher_slug": "aljazeera-com",
+              "tier": 1,
+              "title": "Spain protests flare after housing bill rejected: Will it cause snap poll?",
+              "url": "https://www.aljazeera.com/news/2026/10/4/spain-protests-flare-after-housing-bill-rejected-will-it-cause-snap-poll"
+            },
+            {
+              "published_at": "2026-10-03T15:06:40+00:00",
+              "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+              "publisher_slug": "aljazeera-com",
+              "tier": 1,
+              "title": "Tens of thousands protest in Spain after failed housing reforms",
+              "url": "https://www.aljazeera.com/news/2026/10/3/tens-of-thousands-protest-in-spain-after-failed-housing-reforms"
+            },
+            {
+              "published_at": "2026-10-03T13:55:13+00:00",
+              "publisher": "Bloomberg Markets",
+              "publisher_slug": "bloomberg-com",
+              "tier": 1,
+              "title": "Madrid Housing Protests Fuel Speculation Over Spanish Election",
+              "url": "https://www.bloomberg.com/news/articles/2026-10-03/madrid-housing-protests-fuel-speculation-over-spanish-election"
+            },
+            {
+              "image_url": "https://s.abcnews.com/images/International/wirestory_ae3ba6c786ab95b6acc30bdb02c47d0d_4x3_384.jpg",
+              "published_at": "2026-10-02T15:35:31+00:00",
+              "publisher": "ABC News",
+              "publisher_slug": "abcnews-go-com",
+              "tier": 1,
+              "title": "Spain's government dealt a blow after parliament rejects housing measures amid protests",
+              "url": "https://abcnews.com/International/wireStory/spains-government-dealt-blow-after-parliament-rejects-housing-136943243"
+            },
+            {
+              "published_at": "2026-10-02T15:01:08+00:00",
+              "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+              "publisher_slug": "aljazeera-com",
+              "tier": 1,
+              "title": "Spain’s parliament rejects gov’t housing decrees amid mass protests",
+              "url": "https://www.aljazeera.com/news/2026/10/2/spains-parliament-rejects-govt-housing-decrees-amid-mass-protests"
+            },
+            {
+              "image_url": "https://s.abcnews.com/images/International/wirestory_a34d8626f4c07ec74b7eee8bf22e381c_4x3_384.jpg",
+              "published_at": "2026-09-30T15:22:09+00:00",
+              "publisher": "ABC News",
+              "publisher_slug": "abcnews-go-com",
+              "tier": 1,
+              "title": "What to know about Spain's housing protests sparked by the eviction of the 87-year-old Maricarmen",
+              "url": "https://abcnews.com/International/wireStory/spains-housing-protests-sparked-eviction-87-year-maricarmen-136889052"
+            }
+          ],
+          "score": 3.392,
+          "section": "world",
+          "slug": "eviction-of-madrid-octogenarian-sparks-housing-protests-27234",
+          "source_count": 51,
+          "summary": "Spain's parliament has rejected two government housing decrees, intensifying nationwide protests that began after the eviction of an 87-year-old woman.",
+          "top_market": {
+            "end_date": "2026-11-01T03:59:00+00:00",
+            "explainer": "A snap election must occur by October 31, 2026, at 11:59 PM ET for the market to resolve to Yes. This requires the formal dissolution of at least one house of the Spanish Parliament or a formal scheduling of an election before the term ends. Readers often mistake general political instability or protests for the specific legal act of calling a snap election.",
+            "id": "0xc277ed97f91ffb69953a88e0751664ac16848fdb40eecfa37ed638fdf578039f",
+            "liquidity": 32243.0289,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "price": 0.655
+              },
+              {
+                "name": "No",
+                "price": 0.345
+              }
+            ],
+            "polymarket_url": "https://polymarket.com/event/spain-snap-election-called-by-october-31?r=alykhan3",
+            "price_24h_ago": 0.525,
+            "question": "Spain snap election called by October 31?",
+            "similarity": 0.7365528345108032,
+            "slug": "spain-snap-election-called-by-october-31",
+            "volume_24h": 15934.461742000003,
+            "volume_total": 38377.055134999995,
+            "yes_price": 0.655
+          },
+          "verdict": {
+            "kind": "moved",
+            "moved": 0.13
+          }
+        }
+      }
+    ],
+    "loud_news_quiet_market": [
+      {
+        "market": {
+          "end_date": "2027-02-01T15:00:00+00:00",
+          "explainer": "The outcome is Yes if Republicans hold a majority in the U.S. Senate after the 2026 elections. The outcome is No if they do not. Readers often mistake current polling data for the final election result.",
+          "id": "kalshi:CONTROLS-2026-R",
+          "liquidity": 6573722.39,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.37
+            },
+            {
+              "name": "No",
+              "price": 0.63
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/controls-2026/controls-2026-r",
+          "price_24h_ago": 0.36,
+          "question": "Republican Party",
+          "similarity": 0.8205472826957703,
+          "slug": "controls-2026/controls-2026-r",
+          "volume_24h": 74117.35,
+          "volume_total": 6573722.39,
+          "yes_price": 0.37
+        },
+        "publishers_24h": 8,
+        "story": {
+          "distinct_publishers": 28,
+          "first_seen_at": "2026-09-09T13:43:51+00:00",
+          "headline": "Trump, Buttigieg Campaign as Democrats Hold Edge in Key Senate Races Ahead of Midterms",
+          "hot": "$74k traded on its market in 24 hours",
+          "id": 4267,
+          "image_url": "https://static.politico.com/c2/0e/46739ba44ca299b114cfc17bd91a/election-2020-trump-68365.jpg",
+          "last_seen_at": "2026-10-04T19:37:09+00:00",
+          "publishers": [
+            {
+              "image_url": "https://static.politico.com/c2/0e/46739ba44ca299b114cfc17bd91a/election-2020-trump-68365.jpg",
+              "published_at": "2026-10-04T19:37:09+00:00",
+              "publisher": "Politico",
+              "publisher_slug": "politico-com",
+              "tier": 1,
+              "title": "Trump’s gains among Latino voters slip ahead of midterms",
+              "url": "https://www.politico.com/news/2026/10/04/trump-latino-voters-slip-midterms-01106273"
+            },
+            {
+              "image_url": "https://static.politico.com/c1/4a/e3d786384af3a4e40f4476c76e94/https-delivery-gettyimages.com/downloads/2297904314",
+              "published_at": "2026-10-04T15:25:52+00:00",
+              "publisher": "Politico",
+              "publisher_slug": "politico-com",
+              "tier": 1,
+              "title": "Buttigieg’s midterm blitz is helping him think about his future",
+              "url": "https://www.politico.com/news/2026/10/04/buttigieg-midterms-travel-new-hampshire-01106140"
+            },
+            {
+              "image_url": "https://i.guim.co.uk/img/media/6637319d733cfbef9d83c55f125060df6ff10484/18_0_6829_5464/master/6829.jpg?width=140&quality=85&auto=format&fit=max&s=991e95eba2bbc5865243f07902b9e7eb",
+              "published_at": "2026-10-04T14:00:30+00:00",
+              "publisher": "The Guardian US",
+              "publisher_slug": "theguardian-com",
+              "tier": 1,
+              "title": "Medicare for All remains key pressure point for Democrats ahead of midterms",
+              "url": "https://www.theguardian.com/us-news/2026/oct/04/medicare-for-all-democrats-midterms"
+            },
+            {
+              "published_at": "2026-10-04T12:39:00+00:00",
+              "publisher": "CBS News Politics",
+              "publisher_slug": "cbsnews-com",
+              "tier": 1,
+              "title": "CBS News poll finds Democrats maintain House advantage amid concern about prices",
+              "url": "https://www.cbsnews.com/news/midterm-poll-battleground-tracker-democrats-house-advantage"
+            },
+            {
+              "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26277077730493-e1791115882293.jpg?w=900",
+              "published_at": "2026-10-04T12:18:08+00:00",
+              "publisher": "The Hill",
+              "publisher_slug": "thehill-com",
+              "tier": 1,
+              "title": "Trump vows GOP midterm victory: 'We're going to shove it up their a--'",
+              "url": "https://thehill.com/homenews/campaign/6128086-trump-vows-gop-win-midterms"
+            },
+            {
+              "published_at": "2026-10-04T12:06:04+00:00",
+              "publisher": "NPR Politics",
+              "publisher_slug": "npr-org",
+              "tier": 1,
+              "title": "Politics chat: Midterm polls, Senate races, Trump in Texas",
+              "url": "https://www.npr.org/2026/10/04/nx-s1-5985905/politics-chat-midterm-polls-senate-races-trump-in-texas"
+            }
+          ],
+          "score": 7.723,
+          "section": "politics",
+          "slug": "key-senate-races-will-determine-majority-control-in-november-election-4267",
+          "source_count": 286,
+          "summary": "President Trump and Pete Buttigieg campaign actively while polls show Democrats maintaining a slight advantage in critical Senate contests one month before Election Day.",
+          "top_market": {
+            "end_date": "2027-01-08T15:00:00+00:00",
+            "explainer": "The outcome is Yes if Republicans lose their majority in the U.S. House of Representatives between now and November 3, 2026. Otherwise, the outcome is No. Readers often mistake the date of the linked news story for the deadline, but only the official election results after November 3, 2026, determine the resolution.",
+            "id": "kalshi:KXLOSEMAJORITY-27JAN01",
+            "liquidity": 53183.66,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "price": 0.048
+              },
+              {
+                "name": "No",
+                "price": 0.952
+              }
+            ],
+            "polymarket_url": "https://kalshi.com/markets/kxlosemajority-27jan01/kxlosemajority-27jan01",
+            "price_24h_ago": 0.048,
+            "question": "Republican Party",
+            "similarity": 0.8546967506408691,
+            "slug": "kxlosemajority-27jan01/kxlosemajority-27jan01",
+            "volume_24h": 0,
+            "volume_total": 53183.66,
+            "yes_price": 0.048
+          },
+          "verdict": {
+            "kind": "priced_in",
+            "moved": 0.010000000000000009
+          }
+        }
+      },
+      {
+        "market": {
+          "end_date": "2027-02-01T04:59:00+00:00",
+          "explainer": "The outcome is Yes if any of the seven named defendants faces a formal felony sex crime charge or indictment from a US federal or state authority before January 31, 2027, at 11:59 PM ET. The outcome is No if no such official charge occurs by that deadline. Readers often mistake the civil complaint for a criminal charge or miss the specific January 31, 2027 cutoff date.",
+          "id": "0xa0917fc36c80b2aef40b3be6e7c8f5abb16c512174b75073923cb52b53d7bbe0",
+          "liquidity": 82739.8006,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.295
+            },
+            {
+              "name": "No",
+              "price": 0.705
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/any-of-the-cornell-7-charged-with-a-felony-sex-crime?r=alykhan3",
+          "price_24h_ago": 0.32499999999999996,
+          "question": "Any of the Cornell 7 charged with a felony sex crime?",
+          "similarity": 0.7809987664222717,
+          "slug": "any-of-the-cornell-7-charged-with-a-felony-sex-crime",
+          "volume_24h": 26897.324636,
+          "volume_total": 411901.91691899986,
+          "yes_price": 0.295
+        },
+        "publishers_24h": 7,
+        "story": {
+          "distinct_publishers": 25,
+          "first_seen_at": "2026-09-28T09:10:30+00:00",
+          "headline": "Cornell President Promises Reforms After Gang Rape Allegations Spark Outcry",
+          "id": 33864,
+          "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP25083628765899-e1791119049860.jpg?w=900",
+          "last_seen_at": "2026-10-04T16:25:01+00:00",
+          "publishers": [
+            {
+              "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP25083628765899-e1791119049860.jpg?w=900",
+              "published_at": "2026-10-04T16:08:40+00:00",
+              "publisher": "The Hill",
+              "publisher_slug": "thehill-com",
+              "tier": 1,
+              "title": "Lawyer for Cornell Jane Doe says he believes ‘there were more’ who participated in alleged gang rape",
+              "url": "https://thehill.com/regulation/court-battles/6128241-cornell-gang-rape-lawsuit"
+            },
+            {
+              "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP25083628765899-e1791119049860.jpg?w=900",
+              "published_at": "2026-10-04T13:13:35+00:00",
+              "publisher": "The Hill",
+              "publisher_slug": "thehill-com",
+              "tier": 1,
+              "title": "Cornell president promises reforms after alleged gang rape",
+              "url": "https://thehill.com/homenews/education/6128142-cornell-president-promises-reforms"
+            },
+            {
+              "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/CornellReforms_Kochi_GregNash.jpg?w=900",
+              "published_at": "2026-10-04T10:00:00+00:00",
+              "publisher": "The Hill",
+              "publisher_slug": "thehill-com",
+              "tier": 1,
+              "title": "Cornell allegations fuel bipartisan push for stronger sexual assault protections",
+              "url": "https://thehill.com/homenews/6127239-cornell-rape-allegations-spark-congressional-action"
+            },
+            {
+              "image_url": "https://i.guim.co.uk/img/media/39b573f72da01cf7d753c80a2bb8b4ddda9116e6/269_0_2500_2000/master/2500.jpg?width=140&quality=85&auto=format&fit=max&s=021cc14b2a9d17c6f750212e48c1f838",
+              "published_at": "2026-10-04T09:43:26+00:00",
+              "publisher": "The Guardian US",
+              "publisher_slug": "theguardian-com",
+              "tier": 1,
+              "title": "Cornell University to take ‘serious look’ at fraternities after rape allegations",
+              "url": "https://www.theguardian.com/us-news/2026/oct/04/cornell-president-vows-serious-look-at-fraternities-in-wake-of-allegations"
+            },
+            {
+              "published_at": "2026-10-04T08:33:54+00:00",
+              "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+              "publisher_slug": "aljazeera-com",
+              "tier": 1,
+              "title": "Cornell president says university ‘must do better’ after rape allegations",
+              "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/cornell-president-says-university-must-do-better-after-rape-allegations"
+            },
+            {
+              "published_at": "2026-10-04T01:15:58+00:00",
+              "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+              "publisher_slug": "aljazeera-com",
+              "tier": 1,
+              "title": "Cornell president vows transparency amid outrage over fraternity rape case",
+              "url": "https://www.aljazeera.com/news/2026/10/4/cornell-president-vows-transparency-amid-outrage-over-fraternity-rape-case"
+            }
+          ],
+          "score": 7.193,
+          "section": "world",
+          "slug": "florence-pugh-speaks-out-on-cornell-sexual-assault-case-33864",
+          "source_count": 91,
+          "summary": "Cornell University president Michael Kotlikoff vows reforms and a review of fraternity culture following allegations that students were drugged and raped in 2024.",
+          "top_market": {
+            "end_date": "2027-02-01T04:59:00+00:00",
+            "explainer": "The outcome is Yes if any of the seven named defendants faces a formal felony sex crime charge or indictment from a US federal or state authority before January 31, 2027, at 11:59 PM ET. The outcome is No if no such official charge occurs by that deadline. Readers often mistake the civil complaint for a criminal charge or miss the specific January 31, 2027 cutoff date.",
+            "id": "0xa0917fc36c80b2aef40b3be6e7c8f5abb16c512174b75073923cb52b53d7bbe0",
+            "liquidity": 82739.8006,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "price": 0.295
+              },
+              {
+                "name": "No",
+                "price": 0.705
+              }
+            ],
+            "polymarket_url": "https://polymarket.com/event/any-of-the-cornell-7-charged-with-a-felony-sex-crime?r=alykhan3",
+            "price_24h_ago": 0.32499999999999996,
+            "question": "Any of the Cornell 7 charged with a felony sex crime?",
+            "similarity": 0.7809987664222717,
+            "slug": "any-of-the-cornell-7-charged-with-a-felony-sex-crime",
+            "volume_24h": 26897.324636,
+            "volume_total": 411901.91691899986,
+            "yes_price": 0.295
+          },
+          "verdict": {
+            "kind": "priced_in",
+            "moved": -0.02999999999999997
+          }
+        }
+      },
+      {
+        "market": {
+          "end_date": "2026-10-13T17:00:00+00:00",
+          "explainer": "The outcome is Yes if Washington wins the NFL game against the New York Giants on October 11, 2026. The outcome is No if Washington does not win that specific game. Readers often mistake the linked story about the Indianapolis Colts for the relevant matchup.",
+          "id": "kalshi:KXNFLGAME-26OCT11NYGWAS-WAS",
+          "liquidity": 20626.88,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.61
+            },
+            {
+              "name": "No",
+              "price": 0.39
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxnflgame-26oct11nygwas/kxnflgame-26oct11nygwas-was",
+          "price_24h_ago": 0.59,
+          "question": "Washington",
+          "similarity": 0.7750365734100342,
+          "slug": "kxnflgame-26oct11nygwas/kxnflgame-26oct11nygwas-was",
+          "volume_24h": 11272.32,
+          "volume_total": 20626.88,
+          "yes_price": 0.61
+        },
+        "publishers_24h": 6,
+        "story": {
+          "distinct_publishers": 6,
+          "first_seen_at": "2026-10-01T00:08:22+00:00",
+          "headline": "Colts beat Commanders 30-13 in London with Jonathan Taylor scoring twice",
+          "hot": "Odds moved 11 points in 24 hours",
+          "id": 39195,
+          "image_url": "https://i.guim.co.uk/img/media/2af4878043e4d36c9b063631630f9eaeaa98f12e/1068_88_2777_2222/master/2777.jpg?width=140&quality=85&auto=format&fit=max&s=02ab7f74dbfec4e85a3d04d4dc1dd390",
+          "last_seen_at": "2026-10-04T20:18:50+00:00",
+          "publishers": [
+            {
+              "image_url": "https://i.guim.co.uk/img/media/2af4878043e4d36c9b063631630f9eaeaa98f12e/1068_88_2777_2222/master/2777.jpg?width=140&quality=85&auto=format&fit=max&s=02ab7f74dbfec4e85a3d04d4dc1dd390",
+              "published_at": "2026-10-04T20:18:50+00:00",
+              "publisher": "The Guardian Sport",
+              "publisher_slug": "theguardian-com",
+              "tier": 1,
+              "title": "Raiders v Chiefs, Broncos v 49ers and more: NFL – live",
+              "url": "https://www.theguardian.com/sport/live/2026/oct/04/raiders-v-chiefs-broncos-v-49ers-and-more-nfl-live"
+            },
+            {
+              "image_url": "https://i.guim.co.uk/img/media/773cd856f7d60ca33ab8c50d5835caf7e4ea6ffc/211_0_3614_2892/master/3614.jpg?width=140&quality=85&auto=format&fit=max&s=cfb565c52cd60ddb4fbe59a89a0da0e3",
+              "published_at": "2026-10-04T18:28:29+00:00",
+              "publisher": "The Guardian Sport",
+              "publisher_slug": "theguardian-com",
+              "tier": 1,
+              "title": "Jonathan Taylor’s double earns Colts win against Commanders in London",
+              "url": "https://www.theguardian.com/sport/2026/oct/04/jonathan-taylor-indianapolis-colts-washington-commanders-nfl-london"
+            },
+            {
+              "published_at": "2026-10-04T17:17:54+00:00",
+              "publisher": "www.espn.com",
+              "publisher_slug": "espn-com",
+              "tier": 1,
+              "title": "NFL Week 4 questions, takeaways: Colts defeat the Commanders in London",
+              "url": "https://www.espn.com/nfl/story/_/id/50077236/week-4-sunday-games-takeaways-questions-2026"
+            },
+            {
+              "image_url": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4631,h_2604,x_0,y_0/c_fill,w_2880,ar_16:9,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/horseshoe_huddle/01m444eeyk3d6q01q72n.jpg",
+              "published_at": "2026-10-04T20:00:00+00:00",
+              "publisher": "SI Feed",
+              "publisher_slug": "si-com",
+              "tier": 2,
+              "title": "The Good, the Bad & the Ugly from the Colts’ Victory in London",
+              "url": "https://www.si.com/nfl/colts/onsi/the-good-the-bad-the-ugly-from-the-colts-victory-in-london-01m4446m7wj3"
+            },
+            {
+              "image_url": "https://images2.minutemediacdn.com/image/upload/c_crop,w_5486,h_3085,x_0,y_517/c_fill,w_2880,ar_16:9,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/commander_country/01m444e9jshtr7nnmzea.jpg",
+              "published_at": "2026-10-04T19:19:08+00:00",
+              "publisher": "SI Feed",
+              "publisher_slug": "si-com",
+              "tier": 2,
+              "title": "5 Winners, 7 Losers From the Commanders’ 30-13 Loss to the Colts",
+              "url": "https://www.si.com/nfl/commanders/onsi/commanders-winners-losers-colts-week-4-london"
+            },
+            {
+              "image_url": "https://images2.minutemediacdn.com/image/upload/c_crop,w_3706,h_2084,x_0,y_148/c_fill,w_2880,ar_16:9,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/horseshoe_huddle/01m43wvnwqzb6x787kpg.jpg",
+              "published_at": "2026-10-04T18:11:41+00:00",
+              "publisher": "SI Feed",
+              "publisher_slug": "si-com",
+              "tier": 2,
+              "title": "6 Instant Observations on Colts' Win Over Commanders: Has Indy's Outlook Changed?",
+              "url": "https://www.si.com/nfl/colts/onsi/6-instant-observations-on-colts-win-over-commanders-has-indy-s-outlook-changed"
+            }
+          ],
+          "score": 3.479,
+          "section": "sports",
+          "slug": "nfl-week-4-odds-and-predictions-for-colts-commanders-london-showdown-39195",
+          "source_count": 21,
+          "summary": "The Indianapolis Colts defeated the Washington Commanders 30-13 at Tottenham Hotspur Stadium, marking the start of the NFL's international series.",
+          "top_market": {
+            "end_date": "2026-10-13T17:00:00+00:00",
+            "explainer": "The outcome is Yes if Washington wins the NFL game against the New York Giants on October 11, 2026. The outcome is No if Washington does not win that specific game. Readers often mistake the linked story about the Indianapolis Colts for the relevant matchup.",
+            "id": "kalshi:KXNFLGAME-26OCT11NYGWAS-WAS",
+            "liquidity": 20626.88,
+            "outcomes": [
+              {
+                "name": "Yes",
+                "price": 0.61
+              },
+              {
+                "name": "No",
+                "price": 0.39
+              }
+            ],
+            "polymarket_url": "https://kalshi.com/markets/kxnflgame-26oct11nygwas/kxnflgame-26oct11nygwas-was",
+            "price_24h_ago": 0.59,
+            "question": "Washington",
+            "similarity": 0.7750365734100342,
+            "slug": "kxnflgame-26oct11nygwas/kxnflgame-26oct11nygwas-was",
+            "volume_24h": 11272.32,
+            "volume_total": 20626.88,
+            "yes_price": 0.61
+          },
+          "verdict": {
+            "kind": "priced_in",
+            "moved": 0.020000000000000018
+          }
+        }
+      }
+    ],
+    "loud_publishers_24h": 6,
+    "min_volume_24h": 10000,
+    "quiet_publishers_24h": 1,
+    "schema_version": 1,
+    "still_move": 0.03
+  }
+}

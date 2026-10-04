@@ -1,0 +1,3053 @@
+{
+  "label": "GET /data/v1/sections/politics.json",
+  "path": "/data/v1/sections/politics.json",
+  "capturedAt": "2026-10-04T20:27:37.318Z",
+  "elapsedMs": 207,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "politics",
+    "stories": [
+      {
+        "distinct_publishers": 28,
+        "first_seen_at": "2026-09-09T13:43:51+00:00",
+        "headline": "Trump, Buttigieg Campaign as Democrats Hold Edge in Key Senate Races Ahead of Midterms",
+        "hot": "$74k traded on its market in 24 hours",
+        "id": 4267,
+        "image_url": "https://static.politico.com/c2/0e/46739ba44ca299b114cfc17bd91a/election-2020-trump-68365.jpg",
+        "last_seen_at": "2026-10-04T19:37:09+00:00",
+        "publishers": [
+          {
+            "image_url": "https://static.politico.com/c2/0e/46739ba44ca299b114cfc17bd91a/election-2020-trump-68365.jpg",
+            "published_at": "2026-10-04T19:37:09+00:00",
+            "publisher": "Politico",
+            "publisher_slug": "politico-com",
+            "tier": 1,
+            "title": "Trump’s gains among Latino voters slip ahead of midterms",
+            "url": "https://www.politico.com/news/2026/10/04/trump-latino-voters-slip-midterms-01106273"
+          },
+          {
+            "image_url": "https://static.politico.com/c1/4a/e3d786384af3a4e40f4476c76e94/https-delivery-gettyimages.com/downloads/2297904314",
+            "published_at": "2026-10-04T15:25:52+00:00",
+            "publisher": "Politico",
+            "publisher_slug": "politico-com",
+            "tier": 1,
+            "title": "Buttigieg’s midterm blitz is helping him think about his future",
+            "url": "https://www.politico.com/news/2026/10/04/buttigieg-midterms-travel-new-hampshire-01106140"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/6637319d733cfbef9d83c55f125060df6ff10484/18_0_6829_5464/master/6829.jpg?width=140&quality=85&auto=format&fit=max&s=991e95eba2bbc5865243f07902b9e7eb",
+            "published_at": "2026-10-04T14:00:30+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Medicare for All remains key pressure point for Democrats ahead of midterms",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/medicare-for-all-democrats-midterms"
+          },
+          {
+            "published_at": "2026-10-04T12:39:00+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "CBS News poll finds Democrats maintain House advantage amid concern about prices",
+            "url": "https://www.cbsnews.com/news/midterm-poll-battleground-tracker-democrats-house-advantage"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26277077730493-e1791115882293.jpg?w=900",
+            "published_at": "2026-10-04T12:18:08+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump vows GOP midterm victory: 'We're going to shove it up their a--'",
+            "url": "https://thehill.com/homenews/campaign/6128086-trump-vows-gop-win-midterms"
+          },
+          {
+            "published_at": "2026-10-04T12:06:04+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Politics chat: Midterm polls, Senate races, Trump in Texas",
+            "url": "https://www.npr.org/2026/10/04/nx-s1-5985905/politics-chat-midterm-polls-senate-races-trump-in-texas"
+          }
+        ],
+        "score": 7.723,
+        "section": "politics",
+        "slug": "key-senate-races-will-determine-majority-control-in-november-election-4267",
+        "source_count": 286,
+        "summary": "President Trump and Pete Buttigieg campaign actively while polls show Democrats maintaining a slight advantage in critical Senate contests one month before Election Day.",
+        "top_market": {
+          "end_date": "2027-01-08T15:00:00+00:00",
+          "explainer": "The outcome is Yes if Republicans lose their majority in the U.S. House of Representatives between now and November 3, 2026. Otherwise, the outcome is No. Readers often mistake the date of the linked news story for the deadline, but only the official election results after November 3, 2026, determine the resolution.",
+          "id": "kalshi:KXLOSEMAJORITY-27JAN01",
+          "liquidity": 53183.66,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.048
+            },
+            {
+              "name": "No",
+              "price": 0.952
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxlosemajority-27jan01/kxlosemajority-27jan01",
+          "price_24h_ago": 0.048,
+          "question": "Republican Party",
+          "similarity": 0.8546967506408691,
+          "slug": "kxlosemajority-27jan01/kxlosemajority-27jan01",
+          "volume_24h": 0,
+          "volume_total": 53183.66,
+          "yes_price": 0.048
+        },
+        "verdict": {
+          "kind": "priced_in",
+          "moved": 0.010000000000000009
+        }
+      },
+      {
+        "distinct_publishers": 19,
+        "first_seen_at": "2026-09-08T09:00:07+00:00",
+        "headline": "Democrats debate ethics, redistricting and campaigning ahead of midterms",
+        "id": 2671,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/07/emmanuelrahm_israel_070826-e1783524178497.jpg?w=900",
+        "last_seen_at": "2026-10-04T19:00:56+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/07/emmanuelrahm_israel_070826-e1783524178497.jpg?w=900",
+            "published_at": "2026-10-04T18:09:38+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Emanuel urges Democrats to prioritize ethics reform over potential third Trump impeachment",
+            "url": "https://thehill.com/homenews/campaign/6128366-emanuel-pushes-democrats-ethics-reform"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/00e07ed3f20e065451d4520608dd869a6f47f4f9/239_0_2250_1800/master/2250.jpg?width=140&quality=85&auto=format&fit=max&s=721ae85b10d31dd0dfc8ac29da833c2a",
+            "published_at": "2026-10-04T11:00:28+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "The desperate, failed attempt to keep one Florida district Black",
+            "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/04/florida-20th-congressional-district-black-vote"
+          },
+          {
+            "published_at": "2026-10-04T09:00:00+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Latter-day Saints women turn away from scandal-plagued Republican candidate in Arizona",
+            "url": "https://www.npr.org/2026/10/04/nx-s1-5950536/arizona-house-race-mark-lamb-lds-church"
+          },
+          {
+            "image_url": "https://static.politico.com/6c/05/d021704d475598303f777d53e4c5/election-2-26-republicans-14467.jpg",
+            "published_at": "2026-10-03T20:15:41+00:00",
+            "publisher": "Politico",
+            "publisher_slug": "politico-com",
+            "tier": 1,
+            "title": "Ted Cruz blasts JD Vance as ‘insecure,’ says he’s focused on helping GOP win midterms",
+            "url": "https://www.politico.com/news/2026/10/03/ted-cruz-blasts-jd-vance-as-insecure-says-hes-focused-on-helping-gop-win-midterms-01106033"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/912c039ef9d3d966c80a1f944744bca0f112f979/707_0_3348_2679/master/3348.jpg?width=140&quality=85&auto=format&fit=max&s=a0d6b30e7ce9d8996d6c382a1e1b59e2",
+            "published_at": "2026-10-02T20:22:10+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Hundreds gather in Mississippi to protest Republican redistricting: ‘This fight is familiar territory’",
+            "url": "https://www.theguardian.com/us-news/2026/oct/02/mississippi-republican-redistricting-protest"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/hamiltonadam_091826ap.jpg?w=900",
+            "published_at": "2026-10-02T19:31:35+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Kansas Democratic Senate nominee says 'please, no' to Harris campaigning for him",
+            "url": "https://thehill.com/homenews/campaign/6126765-hamilton-rejects-harris-campaign"
+          }
+        ],
+        "score": 6.644,
+        "section": "politics",
+        "slug": "jeffries-faces-progressive-backlash-over-house-leadership-2671",
+        "source_count": 160,
+        "summary": "Democratic strategists urge ethics reform over impeachment while candidates navigate redistricting challenges and internal disputes over campaign support.",
+        "top_market": {
+          "end_date": "2029-01-20T10:00:00+00:00",
+          "explainer": "The market resolves to Yes if JD Vance wins the 2028 presidential election against Kamala Harris. It resolves to No if he does not win. Readers often mistake this for a prediction of the midterm elections mentioned in the linked story, but the resolution depends solely on the 2028 presidential race.",
+          "id": "kalshi:KXPRESOUTCOME-28NOV07-KHARJVANR",
+          "liquidity": 4701.13,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.06
+            },
+            {
+              "name": "No",
+              "price": 0.94
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxpresoutcome-28nov07/kxpresoutcome-28nov07-kharjvanr",
+          "price_24h_ago": 0.06,
+          "question": "JD Vance defeats Kamala Harris",
+          "similarity": 0.7502291798591614,
+          "slug": "kxpresoutcome-28nov07/kxpresoutcome-28nov07-kharjvanr",
+          "volume_24h": 0,
+          "volume_total": 4701.13,
+          "yes_price": 0.06
+        }
+      },
+      {
+        "distinct_publishers": 38,
+        "first_seen_at": "2026-09-08T12:30:07+00:00",
+        "headline": "US Lawmakers Probe Chinese AI Access and Nvidia Chip Smuggling Amid Rising Tensions",
+        "id": 2831,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/05/khannaro_052126gn01_w.jpg?w=900",
+        "last_seen_at": "2026-10-04T15:00:57+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T01:00:04+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Japanese and Korean shipbuilders deploy robots to take on China",
+            "url": "https://www.ft.com/content/ea32c53d-4de7-4b34-af44-cc148b23433f"
+          },
+          {
+            "published_at": "2026-10-02T17:08:54+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Some topics are off limits in Chinese AI, researchers find",
+            "url": "https://www.cbsnews.com/news/china-ai-qwen-artificial-intelligence-bias-analysis"
+          },
+          {
+            "published_at": "2026-10-02T10:28:01+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "AI Talent Race Between US and China Is the Next Battleground",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-10-02/ai-talent-race-between-us-and-china-is-the-next-battleground"
+          },
+          {
+            "published_at": "2026-10-01T21:00:03+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Nvidia Faces Questions Over China AI Chip Smuggling Cases",
+            "url": "https://www.bloomberg.com/news/features/2026-10-01/nvidia-faces-questions-over-china-ai-chip-smuggling-cases"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/05/khannaro_052126gn01_w.jpg?w=900",
+            "published_at": "2026-10-01T20:49:13+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Khanna asks AI firms for information on efforts by China to access code",
+            "url": "https://thehill.com/policy/technology/6124282-ro-khanna-ai-theft-investigation-china"
+          },
+          {
+            "published_at": "2026-10-01T17:12:38+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "How AI is reshaping everyday life in China",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/1/how-ai-is-reshaping-everyday-life-in-china"
+          }
+        ],
+        "score": 6.506,
+        "section": "politics",
+        "slug": "us-accuses-chinese-ai-firms-of-stealing-frontier-models-beijing-denies-clai-2831",
+        "source_count": 250,
+        "summary": "Congressional leaders demand answers from major tech firms regarding Chinese access to proprietary code while officials question Nvidia over alleged chip smuggling.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "For the 'Yes' outcome, a Chinese large language model must be ranked as the top AI model before January 1, 2027. The 'No' outcome occurs if this condition is not met by that deadline. Readers often mistake the ranking source or assume any high-ranking model counts, but only the specific top-ranked status matters.",
+          "id": "kalshi:KXBESTLLMCHINA-27",
+          "liquidity": 136475.76,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.09
+            },
+            {
+              "name": "No",
+              "price": 0.91
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxbestllmchina-27/kxbestllmchina-27",
+          "price_24h_ago": 0.05,
+          "question": "Before 2027",
+          "similarity": 0.8201653957366943,
+          "slug": "kxbestllmchina-27/kxbestllmchina-27",
+          "volume_24h": 14,
+          "volume_total": 136475.76,
+          "yes_price": 0.09
+        }
+      },
+      {
+        "distinct_publishers": 18,
+        "first_seen_at": "2026-09-09T11:54:41+00:00",
+        "headline": "US Clarity Act Fails in Senate as Political Tensions Over Trump Crypto Ties Derail Bill",
+        "id": 4184,
+        "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/39aef47b93f60ebf7e668e371d51320693bb79e3-3364x1894.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+        "last_seen_at": "2026-10-04T18:30:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/39aef47b93f60ebf7e668e371d51320693bb79e3-3364x1894.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-04T18:30:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "There's an election next month: State of Crypto",
+            "url": "https://www.coindesk.com/policy/2026/10/04/there-s-an-election-next-month-state-of-crypto"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/66abae4ea7817e1052c710afba1f9fa54651f319-5434x3622.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-04T13:00:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "The Clarity Act stalled. Bankers aren’t hitting the brakes yet on crypto dealmaking",
+            "url": "https://www.coindesk.com/business/2026/10/04/the-clarity-act-stalled-crypto-dealmakers-aren-t-hitting-the-brakes-yet"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/9c67f41829d4e98f8dbf16e4e85e83dc931e2d2b-4162x4724.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-03T13:00:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Crypto's Sisyphean struggle",
+            "url": "https://www.coindesk.com/opinion/2026/10/03/crypto-s-sisyphean-struggle"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/dd2e230e2cb94447ac56eee45d7f45ea34771c7d-5184x3456.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-01T15:00:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Crypto for Advisors: The CLARITY Act failed, but the rules came anyway",
+            "url": "https://www.coindesk.com/coindesk-indices/2026/10/01/crypto-for-advisors-the-clarity-act-failed-but-the-rules-came-anyway"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/73ff5902b975f54122994ceeb39606463e975438-2732x1535.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-30T17:16:31+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Crypto industry gave $8 million to Clarity Act lobbyists who didn't close the deal",
+            "url": "https://www.coindesk.com/news-analysis/2026/09/30/crypto-industry-gave-usd8-million-to-clarity-act-lobbyists-who-didn-t-close-the-deal"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/29ec77135a680bab694339ef3ded4f33fbd2e35f-4686x3124.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-29T14:08:18+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Democrats killed the Clarity Act",
+            "url": "https://www.coindesk.com/opinion/2026/09/29/democrats-killed-the-clarity-act"
+          }
+        ],
+        "score": 6.346,
+        "section": "politics",
+        "slug": "crypto-lobbyists-target-senators-ahead-of-clarity-act-vote-4184",
+        "source_count": 136,
+        "summary": "The bill failed to advance after political tensions regarding President Donald Trump's cryptocurrency ventures derailed bipartisan negotiations.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if more than 50 Senators vote Yea on a crypto market structure bill before January 1, 2027. It resolves to No if 50 or fewer Senators vote Yea by that date. Readers often mistake the deadline for the end of the legislative session rather than the specific calendar date of January 1, 2027.",
+          "id": "kalshi:KXVOTECLARITY-26MAY16-T50",
+          "liquidity": 111545.39,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.05
+            },
+            {
+              "name": "No",
+              "price": 0.95
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxvoteclarity-26may16/kxvoteclarity-26may16-t50",
+          "price_24h_ago": 0.05,
+          "question": "Above 50",
+          "similarity": 0.7829006910324097,
+          "slug": "kxvoteclarity-26may16/kxvoteclarity-26may16-t50",
+          "volume_24h": 166.5,
+          "volume_total": 111545.39,
+          "yes_price": 0.05
+        }
+      },
+      {
+        "distinct_publishers": 44,
+        "first_seen_at": "2026-09-11T18:02:45+00:00",
+        "headline": "Trump Names Clayton, Ferguson to Lead AI Task Force as California Enacts Worker Protections",
+        "id": 8684,
+        "image_url": "https://i.guim.co.uk/img/media/144d386f8c00039748c3a55ec9b55f147d589d98/2296_881_2186_1748/master/2186.jpg?width=140&quality=85&auto=format&fit=max&s=c78eef28a6408c2241944a8febff928e",
+        "last_seen_at": "2026-10-04T13:44:50+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/144d386f8c00039748c3a55ec9b55f147d589d98/2296_881_2186_1748/master/2186.jpg?width=140&quality=85&auto=format&fit=max&s=c78eef28a6408c2241944a8febff928e",
+            "published_at": "2026-10-04T13:44:50+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Trump names intelligence chief Jay Clayton as new White House AI czar",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/trump-jay-clayton-white-house-ai-czar"
+          },
+          {
+            "published_at": "2026-10-04T13:25:08+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Trump announces AI \"Super Intelligence Force\"",
+            "url": "https://www.cbsnews.com/news/ai-super-intelligence-force-trump-jay-clayton"
+          },
+          {
+            "published_at": "2026-10-04T12:38:37+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Trump Names Clayton, Ferguson to Lead AI Task Force",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/trump-names-clayton-ferguson-to-lead-ai-task-force"
+          },
+          {
+            "published_at": "2026-10-03T23:38:35+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US AI Task Force to Report on Technology’s Risks, WSJ Reports",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-03/us-ai-task-force-to-report-on-technology-s-risks-wsj-reports"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/a7ae6b6345db6bcbca850fbce1224501d4714e2d/556_0_5556_4445/master/5556.jpg?width=140&quality=85&auto=format&fit=max&s=0e1f21ca629b1606cd7a3c18e70fadb9",
+            "published_at": "2026-10-03T14:00:00+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "California’s new laws target workers’ biggest fear of AI taking their jobs",
+            "url": "https://www.theguardian.com/technology/2026/oct/03/california-ai-laws-worker-protection"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26272747224114-e1790716554967.jpg?w=900",
+            "published_at": "2026-10-02T22:45:21+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "How did the beltway take Trump's AI accord?",
+            "url": "https://thehill.com/newsletters/technology/6127204-washington-skeptical-trump-ai-pact-newsletter"
+          }
+        ],
+        "score": 6.3,
+        "section": "politics",
+        "slug": "lawmakers-urge-mike-johnson-to-cancel-recess-over-ai-risks-8684",
+        "source_count": 365,
+        "summary": "The White House appoints Jay Clayton and Andrew Ferguson to head a new task force assessing AI risks while California signs laws banning fully automated employment decisions.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Donald Trump explicitly calls for or endorses a global pause, pacing, or slowdown in frontier AI development before January 1, 2027. It resolves to No if he does not make such a statement by that date. Readers often mistake general criticism of AI or unrelated remarks about 'super intelligence' for the required explicit endorsement of a developmental pause.",
+          "id": "kalshi:KXTRUMPAIPAUSE-27JAN01-YES",
+          "liquidity": 12253.14,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.09
+            },
+            {
+              "name": "No",
+              "price": 0.91
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtrumpaipause-27jan01/kxtrumpaipause-27jan01-yes",
+          "price_24h_ago": 0.09,
+          "question": "Before Jan 1, 2027",
+          "similarity": 0.8340722322463989,
+          "slug": "kxtrumpaipause-27jan01/kxtrumpaipause-27jan01-yes",
+          "volume_24h": 0,
+          "volume_total": 12253.14,
+          "yes_price": 0.09
+        },
+        "verdict": {
+          "kind": "priced_in",
+          "moved": 0.0050000000000000044
+        }
+      },
+      {
+        "distinct_publishers": 15,
+        "first_seen_at": "2026-09-09T05:00:01+00:00",
+        "headline": "Burnham seeks UK alternative to Palantir amid scrutiny over ties and Manchester City crisis",
+        "id": 4018,
+        "image_url": "https://i.guim.co.uk/img/media/6f6c5b66edf5a3fe4b6b1bde0b5c248210970844/813_0_6170_4934/master/6170.jpg?width=140&quality=85&auto=format&fit=max&s=bf49926f223fe9fe30c252ff4f1e1c09",
+        "last_seen_at": "2026-10-04T16:30:32+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/6f6c5b66edf5a3fe4b6b1bde0b5c248210970844/813_0_6170_4934/master/6170.jpg?width=140&quality=85&auto=format&fit=max&s=bf49926f223fe9fe30c252ff4f1e1c09",
+            "published_at": "2026-10-04T16:30:32+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "The Guardian view on trapped leaseholders: Labour must keep its promise to set them free | Editorial",
+            "url": "https://www.theguardian.com/commentisfree/2026/oct/04/the-guardian-view-on-trapped-leaseholders-labour-must-keep-its-promise-to-set-them-free"
+          },
+          {
+            "published_at": "2026-10-04T15:00:08+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Burnham could learn a thing or two from Thatcher",
+            "url": "https://www.ft.com/content/1fd3b9f8-ac07-4a7c-b968-93fba8b3a978"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/040f40c755f132693841e86a148dcdb13b584cbf/500_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=d0cb9786bc1229e6d164bae8d94df27e",
+            "published_at": "2026-10-04T12:21:16+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "The demands of Welsh devolution are simple: just give us what Scotland has | Will Hayward",
+            "url": "https://www.theguardian.com/commentisfree/2026/oct/04/demands-welsh-devolution-scotland-andy-burnham"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/550590d15b34179f6644b6dd3273afd0d6c1e56c/493_140_4101_3283/master/4101.jpg?width=140&quality=85&auto=format&fit=max&s=92c4f88a145bed6dc4341ac9032108d2",
+            "published_at": "2026-10-04T10:37:59+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Burnham’s plans for social care and its workers are admirable but changes must come quickly | Heather Stewart",
+            "url": "https://www.theguardian.com/business/2026/oct/04/andy-burnham-plans-social-care-workers-changes"
+          },
+          {
+            "published_at": "2026-10-04T04:00:15+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Andy Burnham and the art of corporate pitch-rolling",
+            "url": "https://www.ft.com/content/ac73c2aa-4998-4da4-bab0-d511f79d7559"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/6b441556c12efca4be251fe6039f1936058ad5a2/363_0_3627_2901/master/3627.jpg?width=140&quality=85&auto=format&fit=max&s=99e5cac0fbbaafea6c89e7dc8fc70b6b",
+            "published_at": "2026-10-03T15:00:02+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Burnham must remember: more regulation is not the best way to improve public services | Phillip Inman",
+            "url": "https://www.theguardian.com/business/2026/oct/03/andy-burnham-regulation-public-services-nhs"
+          }
+        ],
+        "score": 5.35,
+        "section": "politics",
+        "slug": "thinktank-urges-burnham-to-introduce-wealth-tax-and-public-energy-ownership-4018",
+        "source_count": 166,
+        "summary": "The prime minister launches a 'buy British' initiative to replace US tech group Palantir while facing pressure from the Liberal Democrats over his contacts with Manchester City owners.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Andy Burnham becomes Prime Minister of the United Kingdom before January 1, 2027. It resolves to No if he does not hold that office by that date. Readers often mistake the linked news story about local political pressure for a change in national leadership.",
+          "id": "kalshi:KXBURNHAMOUT-26JUL-27JAN01",
+          "liquidity": 12430.38,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.04
+            },
+            {
+              "name": "No",
+              "price": 0.96
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxburnhamout-26jul/kxburnhamout-26jul-27jan01",
+          "price_24h_ago": 0.03,
+          "question": "Before Jan 1, 2027",
+          "similarity": 0.8284891843795776,
+          "slug": "kxburnhamout-26jul/kxburnhamout-26jul-27jan01",
+          "volume_24h": 202.2,
+          "volume_total": 12430.38,
+          "yes_price": 0.04
+        }
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-09-29T16:16:31+00:00",
+        "headline": "Trump Rallies in Ohio After Red State Midterm Blitz",
+        "id": 36347,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26277117237114-e1791116489334.jpg?w=900",
+        "last_seen_at": "2026-10-04T18:17:52+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26277117237114-e1791116489334.jpg?w=900",
+            "published_at": "2026-10-04T12:43:56+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Live updates: Trump set for Nebraska trip after Ohio rally; Alito, Cornell victim's attorney to appear on Sunday shows",
+            "url": "https://thehill.com/homenews/administration/6127907-trump-nebraska-gop-midterms-cornell-case-alito"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/c871c8aa2d39f05f0227510b3af859a6f84ff080/199_0_2680_2145/master/2680.jpg?width=140&quality=85&auto=format&fit=max&s=5f45eec599a5a359585effb37b2790fd",
+            "published_at": "2026-10-04T11:00:28+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Trump sets off on midterm blitz – are his trademark rallies a liability for Republicans?",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/trump-midterm-rallies-campaign-republicans"
+          },
+          {
+            "published_at": "2026-10-04T04:10:17+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Trump defiant about midterm chances as he rallies for Republicans in Ohio",
+            "url": "https://www.aljazeera.com/news/2026/10/4/trump-defiant-about-midterm-chances-as-he-rallies-for-republicans-in-ohio"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/SundayPreview_Oct3.png?w=900",
+            "published_at": "2026-10-03T20:37:40+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Sunday shows preview: Trump boosts midterm candidates in final stretch; Supreme Court opens new term",
+            "url": "https://thehill.com/homenews/sunday-talk-shows/6127755-trump-midterm-campaign-iran-war"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26275743443740-e1790993092527.jpg?w=900",
+            "published_at": "2026-10-03T13:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Live updates: Trump travels to Ohio, ending 3-day red state campaigning streak",
+            "url": "https://thehill.com/homenews/administration/6127357-live-updates-trump-ohio-hegseth-army"
+          },
+          {
+            "published_at": "2026-10-02T23:51:10+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Trump continues midterms push in Alabama as his approval rating nears record low over economy",
+            "url": "https://www.cbsnews.com/video/trump-continues-midterms-push-in-alabama-as-his-approval-rating-nears-record-low-over-economy"
+          }
+        ],
+        "score": 5.11,
+        "section": "politics",
+        "slug": "trump-extends-red-state-midterm-tour-to-nebraska-36347",
+        "source_count": 24,
+        "summary": "President Trump holds a rally in Ohio, continuing his campaign blitz through red states to boost Republican midterm prospects.",
+        "top_market": {
+          "call": {
+            "correct": false,
+            "favourite": "Yes",
+            "favourite_price": 0.65
+          },
+          "end_date": "2026-10-17T14:00:00+00:00",
+          "explainer": "The market resolves to Yes if Donald Trump says \"America First\" during his rally in Vandalia, Ohio on October 3, 2026. The outcome is No if he does not use that specific phrase at this event. Readers often mistake the date of the originally scheduled rally for the only valid deadline, ignoring that the market depends on the actual occurrence of the speech.",
+          "id": "kalshi:KXTRUMPMENTION-26OCT03-AMER",
+          "liquidity": 166384.71,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.01
+            },
+            {
+              "name": "No",
+              "price": 0.99
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtrumpmention-26oct03/kxtrumpmention-26oct03-amer",
+          "price_24h_ago": 0.65,
+          "question": "America First",
+          "resolved_at": "2026-10-04T13:54:19+00:00",
+          "resolved_outcome": "No",
+          "similarity": 0.7900861501693726,
+          "slug": "kxtrumpmention-26oct03/kxtrumpmention-26oct03-amer",
+          "volume_24h": 159680.15,
+          "volume_total": 166384.71,
+          "yes_price": 0.01
+        }
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-09-28T18:27:21+00:00",
+        "headline": "Supreme Court to Hear Climate Suit Against Oil Firms as Alito Recuses Himself",
+        "id": 34655,
+        "image_url": "https://static01.nyt.com/images/2026/09/24/multimedia/00cli-boulder-01-vgtb/00cli-boulder-01-vgtb-mediumSquareAt3X.jpg",
+        "last_seen_at": "2026-10-04T16:42:40+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T16:42:40+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Supreme Court Opens Term With Climate Fight",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-04/supreme-court-opens-term-with-climate-fight-video"
+          },
+          {
+            "published_at": "2026-10-04T11:00:17+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Supreme Court to weigh energy companies' bid to end climate-change suit",
+            "url": "https://www.cbsnews.com/news/supreme-court-climate-change-suncor-energy-v-county-commissioners-of-boulder-county"
+          },
+          {
+            "published_at": "2026-10-04T10:00:01+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Should Big Oil pay for climate change? A Supreme Court case will help decide.",
+            "url": "https://www.washingtonpost.com/politics/2026/10/04/showdown-over-big-oil-climate-change-hits-supreme-court"
+          },
+          {
+            "image_url": "https://static01.nyt.com/images/2026/09/24/multimedia/00cli-boulder-01-vgtb/00cli-boulder-01-vgtb-mediumSquareAt3X.jpg",
+            "published_at": "2026-10-04T09:00:07+00:00",
+            "publisher": "The New York Times",
+            "publisher_slug": "nytimes-com",
+            "tier": 1,
+            "title": "A Supreme Court Battle Over Climate Change Begins",
+            "url": "https://www.nytimes.com/2026/10/04/climate/boulder-lawsuit-supreme-court.html"
+          },
+          {
+            "image_url": "https://images.axios.com/gw41v0Kvr3Tnq4afZ_pvW4WHYQo=/1366x768/smart/2021/10/26/220137-1635285697814.jpg",
+            "published_at": "2026-10-02T12:48:26+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "What to watch in the Supreme Court's big climate case",
+            "url": "https://www.axios.com/2026/10/02/supreme-court-state-climate-lawsuits-preemption"
+          },
+          {
+            "published_at": "2026-10-01T16:59:37+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "States sue to stop Trump’s retreat on power plant emissions",
+            "url": "https://www.washingtonpost.com/climate-environment/2026/10/01/states-sue-stop-trumps-retreat-power-plant-emissions"
+          }
+        ],
+        "score": 4.849,
+        "section": "politics",
+        "slug": "justice-alito-recuses-from-climate-case-against-oil-companies-34655",
+        "source_count": 17,
+        "summary": "The court prepares to hear arguments on whether federal law blocks state climate damage claims, with Justice Samuel Alito stepping aside due to oil stock holdings.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if the Supreme Court agrees to hear a case mainly about tariffs set by Donald Trump before January 1, 2027. It resolves to No if the Court does not take such a case within that timeframe. Readers often mistake the linked news story about Iowa for the relevant event, but only a Supreme Court decision on tariff cases counts.",
+          "id": "kalshi:KXTRUMPTARIFFHEAR-27JAN-X",
+          "liquidity": 35931.36,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.13
+            },
+            {
+              "name": "No",
+              "price": 0.87
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtrumptariffhear-27jan/kxtrumptariffhear-27jan-x",
+          "price_24h_ago": 0.098,
+          "question": "a case primarily related to tariffs imposed by Donald Trump",
+          "similarity": 0.7266333699226379,
+          "slug": "kxtrumptariffhear-27jan/kxtrumptariffhear-27jan-x",
+          "volume_24h": 81.89,
+          "volume_total": 35931.36,
+          "yes_price": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-09-30T13:00:40+00:00",
+        "headline": "Trump Announces $90 Payments to 20 Million Medicare Seniors",
+        "id": 37934,
+        "image_url": "https://i.guim.co.uk/img/media/bd42e9be2edb898c90ec401a31ecef482ae1d90a/244_0_2427_1942/master/2427.jpg?width=140&quality=85&auto=format&fit=max&s=e5add2dbfc5084a96bb4775c2e29f571",
+        "last_seen_at": "2026-10-04T16:58:12+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T14:29:39+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Trump announces plan to send $90 payments to millions of seniors",
+            "url": "https://www.washingtonpost.com/politics/2026/10/03/trump-announces-plan-send-90-payments-millions-seniors"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/bd42e9be2edb898c90ec401a31ecef482ae1d90a/244_0_2427_1942/master/2427.jpg?width=140&quality=85&auto=format&fit=max&s=e5add2dbfc5084a96bb4775c2e29f571",
+            "published_at": "2026-10-03T13:48:21+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Trump says US to send one-time $90 payment to 20m seniors enrolled in Medicare",
+            "url": "https://www.theguardian.com/us-news/2026/oct/03/trump-payment-seniors-medicare"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6aad9fe734feb6.78516780.jpeg?w=900",
+            "published_at": "2026-10-03T13:17:13+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump announces US will send $90 checks to 20 million seniors enrolled in Medicare",
+            "url": "https://thehill.com/homenews/administration/6127480-seniors-medicare-improvement-fund-checks"
+          },
+          {
+            "image_url": "https://images.axios.com/5a0mAL1kuCnNd_QMkzRWehy2Rf4=/0x860:8256x5504/1366x768/2026/10/03/1791023506701.jpeg",
+            "published_at": "2026-10-03T10:58:40+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Trump promises $100 checks for 20 million seniors for Medicare",
+            "url": "https://www.axios.com/2026/10/03/trump-medicare-100-seniors-improvement-fund"
+          },
+          {
+            "published_at": "2026-10-01T19:40:00+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Trump sends out $500 ACA refunds and a letter promoting his record",
+            "url": "https://www.washingtonpost.com/politics/2026/10/01/trump-sends-out-500-aca-refunds-letter-promoting-his-record"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/02/affordable_care_act_obamacare_11122025_GettyImages-2246416121-1.jpg?w=900",
+            "published_at": "2026-09-30T16:02:55+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "White House begins mailing $500 ObamaCare 'refund' checks",
+            "url": "https://thehill.com/policy/healthcare/6120529-whitehouse-obamacare-refunds-mailing"
+          }
+        ],
+        "score": 4.747,
+        "section": "politics",
+        "slug": "white-house-mails-500-obamacare-refund-checks-to-nearly-1-million-american-37934",
+        "source_count": 17,
+        "summary": "The White House says the one-time payments, drawn from a fund set up to improve Medicare, will begin in early October.",
+        "top_market": {
+          "end_date": "2026-11-01T15:00:00+00:00",
+          "explainer": "The outcome is Yes if the President signs more than nine bills into law during October 2026. The outcome is No if he signs nine or fewer bills in that same month. Readers often mistake the deadline, thinking it applies to any time in 2026 rather than specifically October.",
+          "id": "kalshi:KXBILLSSIGNED-26OCT-A10",
+          "liquidity": 2534.56,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.67
+            },
+            {
+              "name": "No",
+              "price": 0.32999999999999996
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxbillssigned-26oct/kxbillssigned-26oct-a10",
+          "price_24h_ago": 0.67,
+          "question": "At least 10",
+          "similarity": 0.7616854310035706,
+          "slug": "kxbillssigned-26oct/kxbillssigned-26oct-a10",
+          "volume_24h": 0,
+          "volume_total": 2534.56,
+          "yes_price": 0.67
+        }
+      },
+      {
+        "distinct_publishers": 15,
+        "first_seen_at": "2026-09-29T13:30:46+00:00",
+        "headline": "Hegseth Announces Military Overhaul, Troop Redeployment and Commander Cuts",
+        "id": 35963,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273724994109-e1790807842787.jpg?w=900",
+        "last_seen_at": "2026-10-04T13:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273724994109-e1790807842787.jpg?w=900",
+            "published_at": "2026-10-03T21:47:46+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Hegseth indicates some US troops could be redeployed from Europe to Western Hemisphere",
+            "url": "https://thehill.com/policy/defense/6127801-hegseth-redeploys-troops-western-hemisphere"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273705265485-e1790797764407.jpg?w=900",
+            "published_at": "2026-10-02T16:40:06+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Wall Street Journal editorial board knocks Hegseth's 'weirdos' line in speech",
+            "url": "https://thehill.com/homenews/media/6126293-wall-street-journal-editorial-board-knocks-hegseths-weirdos-line-in-speech"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273692694042.jpg?w=900",
+            "published_at": "2026-10-02T15:41:06+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Hegseth announces all US troops will get one day off to vote in October",
+            "url": "https://thehill.com/policy/defense/6126137-pete-hegseth-stand-down-order-troops-vote"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/6a8d8d897c1787.64861792-e1790951630675.jpeg?w=900",
+            "published_at": "2026-10-02T14:34:56+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Pentagon clears way for anti-drone tech: Hegseth memo",
+            "url": "https://thehill.com/policy/defense/6125703-pentagon-clears-way-for-anti-drone-tech-hegseth-memo"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/HegsethGOP_Timotija_AP_MarkSchiefelbein.jpg?w=900",
+            "published_at": "2026-10-01T20:30:00+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Senators give cold shoulder to Hegseth plan to cut admirals, generals",
+            "url": "https://thehill.com/policy/defense/6124198-senate-reacts-pentagon-purge"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273705265485-e1790797764407.jpg?w=900",
+            "published_at": "2026-10-01T19:55:25+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Retired major general: Hegseth 'playing Russian Roulette' with US security",
+            "url": "https://thehill.com/homenews/administration/6124325-manner-slams-hegseth-cuts"
+          }
+        ],
+        "score": 4.402,
+        "section": "politics",
+        "slug": "hegseth-to-cut-20-percent-of-admirals-and-generals-in-pentagon-overhaul-35963",
+        "source_count": 38,
+        "summary": "Defense Secretary Pete Hegseth unveiled six initiatives including a 20% cut to generals, troop redeployment from Europe, and new university partnerships.",
+        "top_market": {
+          "end_date": "2026-10-31T23:59:00+00:00",
+          "explainer": "The market resolves to Yes if Pete Hegseth stops serving as Secretary of Defense at any point before October 31 at 11:59 PM ET. An announcement of his resignation or removal by that deadline triggers a Yes outcome, even if the change takes effect later. Readers often mistake the date of an announced departure for the effective date, but only the cessation of service matters.",
+          "id": "0xdb018a01cb1f57281c656ffcfdb0e99215410836f82868cb09d4eb25a1504b2c",
+          "liquidity": 17373.95526,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.028
+            },
+            {
+              "name": "No",
+              "price": 0.972
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/pete-hegseth-out-as-secretary-of-defense-by-october-31?r=alykhan3",
+          "price_24h_ago": 0.0275,
+          "question": "Pete Hegseth out as Secretary of Defense by October 31?",
+          "similarity": 0.8184767365455627,
+          "slug": "pete-hegseth-out-as-secretary-of-defense-by-october-31",
+          "volume_24h": 105.167693,
+          "volume_total": 17766.137425999998,
+          "yes_price": 0.028
+        }
+      },
+      {
+        "distinct_publishers": 23,
+        "first_seen_at": "2026-09-13T13:35:31+00:00",
+        "headline": "Lawmakers Introduce Bills to Restrict Flock Safety Camera Use Amid Privacy Concerns",
+        "id": 10821,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/flock_cameras_va_081426gn01_w.jpg?w=900",
+        "last_seen_at": "2026-10-04T08:23:37+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/flock_cameras_va_081426gn01_w.jpg?w=900",
+            "published_at": "2026-10-03T21:43:14+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Federal judge rules warrantless Flock camera searches may violate 4th Amendment",
+            "url": "https://thehill.com/regulation/court-battles/6127775-fourth-amendment-flock-camera-ruling"
+          },
+          {
+            "published_at": "2026-10-03T19:33:15+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Federal judge calls Flock ‘indiscriminate mass surveillance’",
+            "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance"
+          },
+          {
+            "published_at": "2026-10-03T00:21:57+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Sanders introduces bill to ban the federal government from using Flock",
+            "url": "https://techcrunch.com/2026/10/02/sanders-introduces-bill-to-ban-the-federal-government-from-using-flock"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2025/05/68280b172678a5.51811425-e1790961731159.jpeg?w=900",
+            "published_at": "2026-10-02T17:32:34+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Progressives unveil legislation cracking down on Flock cameras",
+            "url": "https://thehill.com/policy/technology/6126259-sanders-merkley-ocasio-cortez-surveillance-ban"
+          },
+          {
+            "published_at": "2026-10-02T10:30:00+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "San Francisco's car crime has plunged. How much credit does Flock deserve?",
+            "url": "https://www.npr.org/sections/planet-money/2026/10/02/g-s1-146060/san-franciscos-car-crime-has-plunged-how-much-credit-does-flock-deserve"
+          },
+          {
+            "published_at": "2026-10-02T09:00:00+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Sanders, Ocasio-Cortez debut bill to crack down on Flock cameras",
+            "url": "https://www.washingtonpost.com/politics/2026/10/02/sanders-ocasio-cortez-debut-bill-crack-down-flock-cameras"
+          }
+        ],
+        "score": 3.907,
+        "section": "politics",
+        "slug": "san-jose-officer-fired-for-misusing-flock-camera-in-domestic-abuse-case-10821",
+        "source_count": 64,
+        "summary": "Congressional leaders from both parties have introduced legislation to ban or regulate the use of Flock Safety's automated license plate readers following a federal ruling on Fourth Amendment violations.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to \"Yes\" if Pennsylvania enacts a statewide ban on networked Flock Safety camera systems before January 1, 2027. Otherwise, it resolves to \"No.\" Readers often mistakenly think the linked story about Texas affects the outcome, but only laws passed in Pennsylvania count.",
+          "id": "kalshi:KXPAFLOCKBAN-27JAN01",
+          "liquidity": 2056.12,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.23
+            },
+            {
+              "name": "No",
+              "price": 0.77
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxpaflockban-27jan01/kxpaflockban-27jan01",
+          "price_24h_ago": 0.23,
+          "question": "Yes",
+          "similarity": 0.8022102117538452,
+          "slug": "kxpaflockban-27jan01/kxpaflockban-27jan01",
+          "volume_24h": 0,
+          "volume_total": 2056.12,
+          "yes_price": 0.23
+        }
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-09-30T10:00:00+00:00",
+        "headline": "Supreme Court Opens New Term With Cases on Guns, Climate and Immigration",
+        "id": 37608,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/scotus_093026gn10_w.jpg?w=900",
+        "last_seen_at": "2026-10-04T16:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/scotus_093026gn10_w.jpg?w=900",
+            "published_at": "2026-10-04T16:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Supreme Court opens new term with shaky Trump relationship",
+            "url": "https://thehill.com/regulation/court-battles/6127197-supreme-court-new-term-trump"
+          },
+          {
+            "published_at": "2026-10-04T11:00:16+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Supreme Court gears up for new term with major cases on climate change, guns",
+            "url": "https://www.cbsnews.com/news/supreme-court-new-term-2026-climate-change-immigration-guns"
+          },
+          {
+            "published_at": "2026-10-03T09:00:00+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "The Supreme Court faces another term jam-packed with controversy",
+            "url": "https://www.npr.org/2026/10/03/nx-s1-5986341/supreme-court-term-religion-guns-environment-immigration"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/The-Gavel_093026_Schofeld-Brams_Illo_CJ-GN-Adobe.png?w=900",
+            "published_at": "2026-09-30T12:00:00+00:00",
+            "publisher": "Just In News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "What to watch in Supreme Court’s new term",
+            "url": "https://thehill.com/newsletters/the-gavel/6118559-supreme-court-term-trump-climate-change-midterms-guns"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/07/6a455a7d7f2005.10593915-e1788438497794.jpeg?w=900",
+            "published_at": "2026-09-30T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "New Supreme Court term kicks off Monday: Here's what to expect",
+            "url": "https://thehill.com/newsletters/the-gavel/the-gavel-live-briefing/6118509-new-supreme-court-term-what-to-expect-live-discussion"
+          },
+          {
+            "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/05/931/523/gettyimages-2059260467.jpg?ve=1&tl=1",
+            "published_at": "2026-10-04T10:00:30+00:00",
+            "publisher": "Fox News Politics",
+            "publisher_slug": "foxnews-com",
+            "tier": 2,
+            "title": "Supreme Court kicks off new term with fresh questions over its legitimacy and its future",
+            "url": "https://www.foxnews.com/politics/supreme-court-kicks-off-new-term-fresh-questions-legitimacy-future"
+          }
+        ],
+        "score": 3.194,
+        "section": "politics",
+        "slug": "supreme-court-new-term-begins-monday-with-preview-of-key-cases-37608",
+        "source_count": 8,
+        "summary": "The court begins its term Monday with high-profile disputes involving gun rights, climate change policy and immigration, amid concerns over its legitimacy.",
+        "top_market": {
+          "end_date": "2029-01-20T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if the Supreme Court has an equal number of justices appointed by Republican and Democratic presidents on January 20, 2029. It resolves to No if that balance is not achieved by that date. Readers often mistake the resolution date for the start of the new term rather than the specific deadline of January 20, 2029.",
+          "id": "kalshi:KXSCOTUSPOWER-29-29JAN20-R0-0",
+          "liquidity": 9216.2,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.098
+            },
+            {
+              "name": "No",
+              "price": 0.902
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxscotuspower-29/kxscotuspower-29-29jan20-r0-0",
+          "price_24h_ago": 0.098,
+          "question": "Not nine justices",
+          "similarity": 0.8008096218109131,
+          "slug": "kxscotuspower-29/kxscotuspower-29-29jan20-r0-0",
+          "volume_24h": 0,
+          "volume_total": 9216.2,
+          "yes_price": 0.098
+        }
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-09-25T15:00:00+00:00",
+        "headline": "Talarico Leads Paxton in Tight Texas Senate Race Amid Polling and Campaign Drama",
+        "hot": "$190k traded on its market in 24 hours",
+        "id": 30691,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6aa471d1aaed50.04934592-e1790776198845.jpeg?w=900",
+        "last_seen_at": "2026-10-04T12:08:26+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6aa471d1aaed50.04934592-e1790776198845.jpeg?w=900",
+            "published_at": "2026-10-03T02:45:19+00:00",
+            "publisher": "Just In News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Rove says if Paxton doesn't debate Talarico, 'he loses'",
+            "url": "https://thehill.com/homenews/campaign/6127360-karl-rove-paxton-talarico-debate-warning"
+          },
+          {
+            "published_at": "2026-10-02T18:00:00+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Talarico, Paxton launch dueling ads amid heated Senate race in Texas",
+            "url": "https://www.washingtonpost.com/politics/2026/10/02/talarico-paxton-launch-dueling-ads-heated-senate-race-texas"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/Ken-Paxton-James-Talarico-June-30.png?w=900",
+            "published_at": "2026-10-02T15:31:58+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Talarico leads Paxton by 2 points in tightening Texas Senate race: Survey",
+            "url": "https://thehill.com/homenews/campaign/6126023-talarico-paxton-texas-poll"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/0a81d67f555fca63ef8276f44e320acc0ec3131f/313_0_3129_2504/master/3129.jpg?width=140&quality=85&auto=format&fit=max&s=cff545eb8f5eb14b1ed921d32239a50b",
+            "published_at": "2026-10-02T11:00:18+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Is James Talarico about to flip Texas for the Democrats? | Politics Weekly America",
+            "url": "https://www.theguardian.com/politics/video/2026/oct/02/is-james-talarico-about-to-flip-texas-for-the-democrats-politics-weekly-america"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26275089563511-e1790910598456.jpg?w=900",
+            "published_at": "2026-10-02T03:17:24+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump quips Paxton is ‘pain in the ass,’ ‘a little controversial’",
+            "url": "https://thehill.com/homenews/administration/6124986-trump-paxton-talarico-texas-senate-race"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/C-block-thumb-10126_A.jpg?w=900",
+            "published_at": "2026-10-01T17:53:29+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Ken Paxton reveals GOP polling 'dropped' after midterm convention: NYT",
+            "url": "https://thehill.com/opinion/lindseys-lens/6123990-trump-poll-numbers-drop-republicans"
+          }
+        ],
+        "score": 3.148,
+        "section": "politics",
+        "slug": "talarico-leads-paxton-in-texas-senate-race-as-he-leans-on-bill-nye-endorse-30691",
+        "source_count": 25,
+        "summary": "A new Fox News poll shows Democrat James Talarico leading Republican Ken Paxton by two points, while Trump makes candid remarks about his endorse.",
+        "top_market": {
+          "end_date": "2028-01-03T15:00:00+00:00",
+          "explainer": "The outcome is Yes if Ken Paxton wins the Republican nomination and then wins the general election before January 2027. The outcome is No if he fails to secure the nomination or loses the general election within that timeframe. Readers often mistake the linked story about his wife for a rule change, but only official election results determine the resolution.",
+          "id": "kalshi:KXTXSENOUTCOME-27JAN-PAXTAL",
+          "liquidity": 186495.12,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.37
+            },
+            {
+              "name": "No",
+              "price": 0.63
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtxsenoutcome-27jan/kxtxsenoutcome-27jan-paxtal",
+          "price_24h_ago": 0.41,
+          "question": "Paxton defeats Talarico",
+          "similarity": 0.8505380749702454,
+          "slug": "kxtxsenoutcome-27jan/kxtxsenoutcome-27jan-paxtal",
+          "volume_24h": 876.75,
+          "volume_total": 186495.12,
+          "yes_price": 0.37
+        }
+      },
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-09-28T23:06:10+00:00",
+        "headline": "Trump officials and RFK Jr. headline Make America Healthy Again summit in Washington",
+        "id": 35081,
+        "image_url": "https://i.guim.co.uk/img/media/37fb26a61509e8cd34eafba500a3ef46f35f16f3/315_0_2243_1795/master/2243.jpg?width=140&quality=85&auto=format&fit=max&s=ed7b5790f2548f286cd34c773e3d074c",
+        "last_seen_at": "2026-10-04T14:00:32+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/37fb26a61509e8cd34eafba500a3ef46f35f16f3/315_0_2243_1795/master/2243.jpg?width=140&quality=85&auto=format&fit=max&s=ed7b5790f2548f286cd34c773e3d074c",
+            "published_at": "2026-10-04T14:00:32+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "JD Vance flexing Maha connections as he eyes 2028 election",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/jd-vance-maha-2028-election"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/MAHA_Choi_AdobeStock.jpg?w=900",
+            "published_at": "2026-10-03T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "What to know about Trump's MAHA-backed push for psychedelic research",
+            "url": "https://thehill.com/policy/healthcare/6125285-trump-administration-psychedelic-medicine-maha"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/Top-Vance_092926_AP_Mark-Schiefelbein.jpg?w=900",
+            "published_at": "2026-09-30T11:30:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Vance cozies up to MAHA movement",
+            "url": "https://thehill.com/newsletters/morning-report/6119594-jd-vance-rfk-jr-maha-trump-jack-smith-eric-schmitt-midterms"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/5d92fe9dcc608d70041236c593c4a57655a6789a/0_0_3000_2400/master/3000.jpg?width=140&quality=85&auto=format&fit=max&s=e42487a26c4563bd008f47496cc2fd46",
+            "published_at": "2026-09-30T10:00:24+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "A ‘freaked out’ US food industry is hitting back at Maga – with social media influencers",
+            "url": "https://www.theguardian.com/business/2026/sep/30/us-food-industry-maga-social-media-influencers"
+          },
+          {
+            "published_at": "2026-09-30T08:41:12+00:00",
+            "publisher": "NPR Health",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Rural voters support MAHA movement, but feel little impact, poll finds",
+            "url": "https://www.npr.org/2026/09/30/nx-s1-5980339/rural-voters-support-maha-movement-but-feel-little-impact-poll-finds"
+          },
+          {
+            "image_url": "https://static01.nyt.com/images/2026/09/29/multimedia/29dc-maha-mgvh/29dc-maha-mgvh-mediumSquareAt3X.jpg",
+            "published_at": "2026-09-30T00:10:27+00:00",
+            "publisher": "The New York Times",
+            "publisher_slug": "nytimes-com",
+            "tier": 1,
+            "title": "A.I. Is ‘Better Informed’ Than Doctors, Kennedy Tells Industry-Backed MAHA Summit",
+            "url": "https://www.nytimes.com/2026/09/29/health/maha-summit-kennedy-vance.html"
+          }
+        ],
+        "score": 3.075,
+        "section": "politics",
+        "slug": "russell-brand-to-moderate-panel-at-maha-summit-in-washington-35081",
+        "source_count": 17,
+        "summary": "Health Secretary Robert F Kennedy Jr. and Vice President JD Vance addressed corporate executives and influencers at the second annual summit, discussing AI in healthcare and food policy."
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-10-02T21:09:48+00:00",
+        "headline": "Judge Halts Border Wall Construction in Texas's Big Bend National Park",
+        "id": 42551,
+        "image_url": "https://i.guim.co.uk/img/media/b76a3a8da0cf7f54065f4764b2a404b7f318db08/375_0_3750_3000/master/3750.jpg?width=140&quality=85&auto=format&fit=max&s=ab6b9e1524376b02fd19310676c5d587",
+        "last_seen_at": "2026-10-04T14:58:19+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/b76a3a8da0cf7f54065f4764b2a404b7f318db08/375_0_3750_3000/master/3750.jpg?width=140&quality=85&auto=format&fit=max&s=ab6b9e1524376b02fd19310676c5d587",
+            "published_at": "2026-10-02T23:32:22+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Federal judge halts Big Bend border wall construction in blow to Trump agenda",
+            "url": "https://www.theguardian.com/us-news/2026/oct/02/big-bend-national-park-border-wall-halt"
+          },
+          {
+            "image_url": "https://images.axios.com/yEb4MgVM8TSffZ6OYAhyK-pneo0=/0x646:8256x5290/1366x768/2026/10/02/1790975172244.jpeg",
+            "published_at": "2026-10-02T21:24:02+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Big Bend border wall construction blocked by judge",
+            "url": "https://www.axios.com/2026/10/02/judge-blocks-big-bend-border-wall-texas"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/bigbend_081426getty01_w.jpg?w=900",
+            "published_at": "2026-10-02T21:09:48+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Judge halts contentious border construction in and near Texas’s Big Bend national park",
+            "url": "https://thehill.com/policy/energy-environment/6127037-trump-administration-border-halted-texas"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134676973,imgsize-1793792.cms",
+            "published_at": "2026-10-04T14:58:19+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Texas court blocks border barrier construction in Big Bend amid landowner challenge",
+            "url": "https://timesofindia.indiatimes.com/world/us/texas-landowners-feared-border-barriers-would-cut-off-access-to-the-rio-grande-an-october-2-court-order-now-blocks-construction-in-the-big-bend-sector-while-the-legal-challenge-continues/articleshow/134676172.cms"
+          },
+          {
+            "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/10/AP26273528102830-e1791036919610.jpg?w=2048",
+            "published_at": "2026-10-03T14:23:57+00:00",
+            "publisher": "Fortune",
+            "publisher_slug": "fortune-com",
+            "tier": 2,
+            "title": "Judge temporarily blocks Trump’s border wall in Big Bend region of Texas, citing likelihood of ‘irreparable harm’ and ‘public interest’",
+            "url": "https://fortune.com/2026/10/03/judge-temporary-injunction-trump-border-wal-big-bend-region-texas-irreparable-harm-public-interest"
+          },
+          {
+            "published_at": "2026-10-02T22:46:29+00:00",
+            "publisher": "Inside Climate News",
+            "publisher_slug": "insideclimatenews-org",
+            "tier": 2,
+            "title": "Federal Judge Slams the Brakes on Big Bend Border Wall Construction",
+            "url": "https://insideclimatenews.org/news/02102026/federal-judge-halts-big-bend-border-wall-construction"
+          }
+        ],
+        "score": 3.016,
+        "section": "politics",
+        "slug": "judge-blocks-trump-admin-border-wall-construction-in-texas-big-bend-42551",
+        "source_count": 6,
+        "summary": "A federal judge issued a preliminary injunction blocking the Trump administration from building barriers in the region, citing irreparable harm to the national park.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if physical construction work on federal border security infrastructure inside Big Bend National Park resumes after the news story is published and before January 1, 2027. Otherwise, it resolves to No. Readers often mistake the date of the judge's ruling for the deadline, but the actual deadline is January 1, 2027.",
+          "id": "kalshi:KXBIGBENDRESUME-27-27JAN01",
+          "liquidity": 2934.98,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.24
+            },
+            {
+              "name": "No",
+              "price": 0.76
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxbigbendresume-27/kxbigbendresume-27-27jan01",
+          "price_24h_ago": 0.24,
+          "question": "Before Jan 1, 2027",
+          "similarity": 0.7830835580825806,
+          "slug": "kxbigbendresume-27/kxbigbendresume-27-27jan01",
+          "volume_24h": 0,
+          "volume_total": 2934.98,
+          "yes_price": 0.24
+        }
+      },
+      {
+        "distinct_publishers": 29,
+        "first_seen_at": "2026-09-18T19:20:35+00:00",
+        "headline": "White House Blocks CNN From Pool Duty Despite Court Order",
+        "id": 19772,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/The-Feed_092526_AP.jpg?w=900",
+        "last_seen_at": "2026-10-03T23:44:54+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/The-Feed_092526_AP.jpg?w=900",
+            "published_at": "2026-10-03T19:22:07+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "White House defends media outlet bans, now citing 'professionalism' standards",
+            "url": "https://thehill.com/regulation/court-battles/6127654-white-house-defends-press-ban-professionalism"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/3d7a0defaf9486501f71383f08e5c79f779df8c2/585_170_3108_2486/master/3108.jpg?width=140&quality=85&auto=format&fit=max&s=61679af1ec8c17703d7194cd61766bb4",
+            "published_at": "2026-10-01T14:07:20+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "White House removes CNN from press pool for second time in a week",
+            "url": "https://www.theguardian.com/media/2026/oct/01/nn-white-house-second-removal-media-ban"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP23088731214388-e1790821147750.jpg?w=900",
+            "published_at": "2026-10-01T02:19:23+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "White House blocks CNN from pool duty despite judge’s order",
+            "url": "https://thehill.com/homenews/6122096-white-house-blocks-cnn-pool-trump"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26246678747039-e1790686548304.jpg?w=900",
+            "published_at": "2026-09-29T13:04:13+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Banned news outlets ask judge court to extend block on White House enforcement",
+            "url": "https://thehill.com/homenews/media/6116933-cnn-msnow-politico-trump-white-house-media-ban-legal-battle"
+          },
+          {
+            "published_at": "2026-09-29T12:15:00+00:00",
+            "publisher": "Washington Post Business",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "CNN, MS NOW and Politico ask judge to extend block on Trump’s media ban",
+            "url": "https://www.washingtonpost.com/business/2026/09/30/cnn-ms-now-politico-ask-judge-extend-block-trumps-media-ban"
+          },
+          {
+            "published_at": "2026-09-29T10:37:35+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "3 news outlets seek extension of ban on their being blocked from White House",
+            "url": "https://www.cbsnews.com/news/cnn-msnow-politico-seek-extension-block-white-house-ban"
+          }
+        ],
+        "score": 2.586,
+        "section": "politics",
+        "slug": "trump-bans-cnn-ms-now-and-politico-from-white-house-over-fake-news-claims-19772",
+        "source_count": 286,
+        "summary": "The White House prevents CNN from covering President Trump despite a judge's ruling, while other networks continue pool duties and outlets seek to extend the ban.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The outcome is Yes if a journalist representing CNN is on an airplane with Donald Trump during takeoff before October 31 at 11:59 PM ET. The journalist must be actively working for CNN at that specific moment, not just previously. Readers often mistake the source of truth, but resolution depends on a consensus of credible reporting rather than official statements.",
+          "id": "0xfcb6dad845ad5ddb7bf17c0bf8263c57addbde0ac91207b263e5f3dcf5cb34e7",
+          "liquidity": 13091.5532,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.05
+            },
+            {
+              "name": "No",
+              "price": 0.95
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-cnn-fly-with-trump-by-october-31?r=alykhan3",
+          "question": "Will CNN fly with Trump by October 31?",
+          "similarity": 0.7538567781448364,
+          "slug": "will-cnn-fly-with-trump-by-october-31",
+          "volume_total": 7151.415909999997,
+          "yes_price": 0.05
+        }
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-01T11:46:40+00:00",
+        "headline": "Trump's Economic Approval Hits New Low Amid High Prices and Tariff Concerns",
+        "id": 39708,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26274795256563-e1790941719851.jpg?w=900",
+        "last_seen_at": "2026-10-04T19:40:20+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26274795256563-e1790941719851.jpg?w=900",
+            "published_at": "2026-10-04T19:40:20+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump's 2024 support from Hispanic voters dips in new poll",
+            "url": "https://thehill.com/homenews/administration/6128414-trump-hispanic-support-plummeted"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26273762372078-e1790859373103.jpg?w=900",
+            "published_at": "2026-10-01T13:13:24+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump economic approval hits new low: Survey",
+            "url": "https://thehill.com/homenews/administration/6122475-donald-trump-us-economy-approval-low-ap-norc-survey"
+          },
+          {
+            "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/04/566562.JPG",
+            "published_at": "2026-10-04T02:24:00+00:00",
+            "publisher": "Latest articles",
+            "publisher_slug": "japantimes-co-jp",
+            "tier": 2,
+            "title": "Trump tariffs a mixed bag for U.S. auto industry",
+            "url": "https://www.japantimes.co.jp/business/2026/10/04/companies/trump-tariffs-us-auto-industry"
+          },
+          {
+            "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/09/GettyImages-2243216942-e1790622082485.jpg?w=2048",
+            "published_at": "2026-10-02T13:31:50+00:00",
+            "publisher": "Fortune",
+            "publisher_slug": "fortune-com",
+            "tier": 2,
+            "title": "Americans rebel against Trump’s red-baiting, sending socialism to a record high in opinion polling",
+            "url": "https://fortune.com/2026/10/02/americans-view-socialilsm-favorably-trump-taxpayer-ads-jd-vance-affordability"
+          },
+          {
+            "image_url": "https://fortune.com/img-assets/wp-content/uploads/2026/10/AP26273756398249-e1790869366227.jpg?w=2048",
+            "published_at": "2026-10-01T15:52:17+00:00",
+            "publisher": "Fortune",
+            "publisher_slug": "fortune-com",
+            "tier": 2,
+            "title": "‘He said Make America Great Again. And I have not seen him do that’: Only 17% of Americans approve of Trump’s handling of cost of living",
+            "url": "https://fortune.com/2026/10/01/65-adults-blame-trump-costs-26-approve-economy"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134617926,imgsize-60892.cms",
+            "published_at": "2026-10-01T11:46:40+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Americans are turning against Trump's handling of economy, prices",
+            "url": "https://timesofindia.indiatimes.com/world/us/trouble-ahead-of-midterm-elections-americans-are-turning-against-trumps-handling-of-economy-prices/articleshow/134617482.cms"
+          }
+        ],
+        "score": 2.314,
+        "section": "politics",
+        "slug": "trump-s-economic-approval-hits-new-low-amid-inflation-concerns-39708",
+        "source_count": 6,
+        "summary": "A new poll shows 65 percent of Americans blame Trump's policies for high prices, marking a record low in his economic approval ratings.",
+        "top_market": {
+          "end_date": "2031-12-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if income inequality in the United States is higher in 2024 than it is in 2028. It resolves to No if inequality is lower or equal in 2024 compared to 2028. Readers often mistake the linked news story about fuel economy standards as the deciding factor, but the resolution depends solely on economic inequality data.",
+          "id": "kalshi:KXINEQUALITY-28",
+          "liquidity": 16741.71,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.22
+            },
+            {
+              "name": "No",
+              "price": 0.78
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxinequality-28/kxinequality-28",
+          "price_24h_ago": 0.22,
+          "question": "During his presidential term",
+          "similarity": 0.7600004076957703,
+          "slug": "kxinequality-28/kxinequality-28",
+          "volume_24h": 0,
+          "volume_total": 16741.71,
+          "yes_price": 0.22
+        }
+      },
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-10-02T12:02:09+00:00",
+        "headline": "Trump Shares Senator Tom Cotton’s Phone Number to Push for Permanent Daylight Saving Time",
+        "id": 41599,
+        "image_url": "https://i.guim.co.uk/img/media/29d2f5daaf6ba5b38d8de1321133731bf933f063/683_0_4218_3376/master/4218.jpg?width=140&quality=85&auto=format&fit=max&s=b053e161c82c398a21c9613ced29e678",
+        "last_seen_at": "2026-10-04T01:21:41+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T20:16:50+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Trump ramps up pressure on US Republicans to end US clock switching",
+            "url": "https://www.aljazeera.com/news/2026/10/3/trump-ramps-up-pressure-on-us-republicans-to-end-us-clock-switching"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/29d2f5daaf6ba5b38d8de1321133731bf933f063/683_0_4218_3376/master/4218.jpg?width=140&quality=85&auto=format&fit=max&s=b053e161c82c398a21c9613ced29e678",
+            "published_at": "2026-10-03T20:13:17+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Trump urges calls to Arkansas senator in push for permanent daylight saving time",
+            "url": "https://www.theguardian.com/us-news/2026/oct/03/trump-tom-cotton-daylight-saving-time"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Trump_Cotton.png?w=900",
+            "published_at": "2026-10-03T19:53:57+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump, Cotton tussle over daylight savings after cell phone number leak",
+            "url": "https://thehill.com/homenews/administration/6127691-trump-cotton-fued-daylight-savings-posts"
+          },
+          {
+            "published_at": "2026-10-03T19:36:39+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Trump reveals GOP senator’s phone number in battle over daylight saving time",
+            "url": "https://www.washingtonpost.com/politics/2026/10/03/trump-reveals-gop-senators-phone-number-battle-over-daylight-saving-time"
+          },
+          {
+            "published_at": "2026-10-03T18:33:49+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Trump urges daylight saving time bill supporters to personally call Sen. Cotton",
+            "url": "https://www.cbsnews.com/news/trump-tom-cotton-daylight-saving-bill"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/cottontom_072826gn02_w.jpg?w=900",
+            "published_at": "2026-10-03T16:20:00+00:00",
+            "publisher": "Just In News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump posts GOP senator's cell phone number over daylight savings act stall",
+            "url": "https://thehill.com/homenews/administration/6127587-trump-posts-tom-cotton-phone-number"
+          }
+        ],
+        "score": 1.827,
+        "section": "politics",
+        "slug": "trump-pressures-senate-gop-on-permanent-daylight-saving-time-bill-41599",
+        "source_count": 10,
+        "summary": "The president posted the Republican senator's number on Truth Social, urging supporters to pressure him to back the Sunshine Protection Act.",
+        "top_market": {
+          "end_date": "2028-11-08T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Tom Cotton wins the 2028 US Presidential Election and No otherwise. Resolution depends on the Associated Press, Fox News, and NBC calling the race for the same candidate. If these sources do not agree by January 20, 2029, the outcome is determined by who is inaugurated.",
+          "id": "0x75a4331e0882450f68e29c8daf376012c954b43c93af848d6ba19ffd6405bac9",
+          "liquidity": 1753484.05224,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.0005
+            },
+            {
+              "name": "No",
+              "price": 0.9995
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-tom-cotton-win-the-2028-us-presidential-election?r=alykhan3",
+          "question": "Will Tom Cotton win the 2028 US Presidential Election?",
+          "similarity": 0.7543632984161377,
+          "slug": "will-tom-cotton-win-the-2028-us-presidential-election",
+          "volume_total": 1556047.1275,
+          "yes_price": 0.0005
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-02T22:45:15+00:00",
+        "headline": "Alito Says Overturning Roe v. Wade Took Courage",
+        "id": 42654,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/06/Closer-Alito_100722_AP_J-Scott-Applewhite.jpg?w=900",
+        "last_seen_at": "2026-10-04T19:00:06+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T19:00:06+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "The Alito Court: A rare interview with the influential Supreme Court justice",
+            "url": "https://www.cbsnews.com/news/samuel-alito-supreme-court-justice-interview-dobbs-same-sex-marriage-not-retiring"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/06/Closer-Alito_100722_AP_J-Scott-Applewhite.jpg?w=900",
+            "published_at": "2026-10-02T22:45:15+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Alito: Overturning Roe v. Wade took 'courage' from Supreme Court justices",
+            "url": "https://thehill.com/regulation/court-battles/6127182-alito-roe-wade-overturn-abortion"
+          }
+        ],
+        "score": 1.826,
+        "section": "politics",
+        "slug": "alito-says-overturning-roe-v-wade-took-courage-42654",
+        "source_count": 2,
+        "summary": "Justice Samuel Alito described the Dobbs decision as requiring courage during a preview of his upcoming CBS News interview.",
+        "top_market": {
+          "end_date": "2029-01-01T15:00:00+00:00",
+          "explainer": "The outcome is Yes if the Supreme Court of the United States overturns Obergefell v. Hodges between now and December 31, 2028. The outcome is No if this does not happen within that timeframe. Readers often mistake the linked news story about a different case for the actual resolution event.",
+          "id": "kalshi:KXOBERGEFELL-29",
+          "liquidity": 104606.62,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.13
+            },
+            {
+              "name": "No",
+              "price": 0.87
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxobergefell-29/kxobergefell-29",
+          "price_24h_ago": 0.072,
+          "question": "Before 2029",
+          "similarity": 0.7443347573280334,
+          "slug": "kxobergefell-29/kxobergefell-29",
+          "volume_24h": 10.53,
+          "volume_total": 104606.62,
+          "yes_price": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-02T23:40:15+00:00",
+        "headline": "Justice Alito Says He Considered Retiring From Supreme Court Last Term",
+        "id": 42698,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP19204802772181-e1791127613186.jpg?w=900",
+        "last_seen_at": "2026-10-04T16:15:23+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP19204802772181-e1791127613186.jpg?w=900",
+            "published_at": "2026-10-04T16:15:23+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Alito on Trump's praise of him, criticism of fellow justices: 'I put all of that out of my mind'",
+            "url": "https://thehill.com/regulation/court-battles/6128234-alito-fox-news-interview-trump"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/fc4853d78dad38bdebbeb693164398743fbea53c/1_0_6164_4934/master/6164.jpg?width=140&quality=85&auto=format&fit=max&s=52c7b2e7caacb73f45fdb62d2d3e81e8",
+            "published_at": "2026-10-04T10:00:24+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Conservative US supreme court justice Samuel Alito hints at retirement in interview",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/samuel-alito-supreme-court-interview"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2025/10/Alito_Kavanaugh_AP_AndrewMedichini.jpg?w=900",
+            "published_at": "2026-10-02T23:40:15+00:00",
+            "publisher": "Just In News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Alito: 'I thought about' retiring at end of last term",
+            "url": "https://thehill.com/regulation/court-battles/6127267-alito-considered-supreme-court-retirement"
+          }
+        ],
+        "score": 1.568,
+        "section": "politics",
+        "slug": "justice-alito-says-he-considered-retiring-from-supreme-court-last-term-42698",
+        "source_count": 3,
+        "summary": "Justice Samuel Alito told CBS News he contemplated leaving the bench after his final term, responding to Republican pressure regarding his potential departure.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Justice Samuel Alito officially retires from the Supreme Court before January 1, 2027. Otherwise, it resolves to No. Readers often mistake news reports of his retirement considerations for an actual resignation.",
+          "id": "kalshi:KXALITOANNOUNCERETIRE-26JUN-JAN01",
+          "liquidity": 70689.97,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.13
+            },
+            {
+              "name": "No",
+              "price": 0.87
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxalitoannounceretire-26jun/kxalitoannounceretire-26jun-jan01",
+          "price_24h_ago": 0.14,
+          "question": "Before Jan 1, 2027",
+          "similarity": 0.7820838689804077,
+          "slug": "kxalitoannounceretire-26jun/kxalitoannounceretire-26jun-jan01",
+          "volume_24h": 1780.98,
+          "volume_total": 70689.97,
+          "yes_price": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 14,
+        "first_seen_at": "2026-09-14T15:07:22+00:00",
+        "headline": "Trump Administration Intensifies ICE Crackdown Amid Legal and Political Scrutiny",
+        "id": 12395,
+        "image_url": "https://media.wired.com/photos/6abfefc1a18993c6adb83fa3/master/pass/GettyImages-2285538235.jpg",
+        "last_seen_at": "2026-10-03T20:08:20+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T14:53:23+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Inside ICE's deportation surge",
+            "url": "https://www.cbsnews.com/video/ices-immigration-crackdown-ramps-up"
+          },
+          {
+            "image_url": "https://media.wired.com/photos/6abfefc1a18993c6adb83fa3/master/pass/GettyImages-2285538235.jpg",
+            "published_at": "2026-10-02T19:52:36+00:00",
+            "publisher": "Feed: All Latest",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "ICE Has Been Dumping Protester Photos Into a Palantir Database",
+            "url": "https://www.wired.com/story/ice-has-been-dumping-protester-photos-into-a-palantir-database"
+          },
+          {
+            "published_at": "2026-10-02T00:50:24+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Homan defends ICE crackdown: \"Give me an example of where we went too far\"",
+            "url": "https://www.cbsnews.com/news/homan-ice-crackdown-gop-criticism-salazar-trump"
+          },
+          {
+            "published_at": "2026-10-01T14:43:55+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Supreme Court agrees to review mandatory ICE detention policy for immigrants",
+            "url": "https://www.washingtonpost.com/politics/2026/10/01/supreme-court-agrees-review-ice-mandatory-detention-policy-immigrants"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/56b00a2241da4c7847956bfaacbc508074da4fc5/742_0_4585_3667/master/4585.jpg?width=140&quality=85&auto=format&fit=max&s=419e8f69049375e68e7faf0df99fc4f8",
+            "published_at": "2026-10-01T14:00:53+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Trump and his allies credit deportations with record low crime. Experts disagree",
+            "url": "https://www.theguardian.com/us-news/2026/oct/01/trump-deportations-crime-experts"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/09902a2e9189dc65aee8c6bef654896328bec1a0/202_0_3456_2764/master/3456.jpg?width=140&quality=85&auto=format&fit=max&s=a0f7982d2897162661571dc0be056e99",
+            "published_at": "2026-10-01T10:00:35+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "ICE got ‘quieter’ – then killed a father in Maine. Now watch groups are shifting their tactics too",
+            "url": "https://www.theguardian.com/us-news/2026/oct/01/ice-watch-maine-tactics"
+          }
+        ],
+        "score": 1.404,
+        "section": "politics",
+        "slug": "white-house-border-czar-denies-ice-plans-to-sweep-polling-locations-for-mi-12395",
+        "source_count": 50,
+        "summary": "The Trump administration is expanding immigration enforcement through a quieter tactical shift, facing Supreme Court review of detention policies and backlash from allies."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-03T17:09:58+00:00",
+        "headline": "Cruz Slams Tucker Carlson for WWII Comments",
+        "id": 43416,
+        "image_url": "https://i.guim.co.uk/img/media/933fc3b84b331520cc9155c62e72272492460df3/0_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=f208eb5dbbfab162acdaeb04334e8674",
+        "last_seen_at": "2026-10-04T10:53:22+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/933fc3b84b331520cc9155c62e72272492460df3/0_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=f208eb5dbbfab162acdaeb04334e8674",
+            "published_at": "2026-10-04T10:53:22+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Jacob Rees-Mogg accuses Tucker Carlson of ‘verging on defending Hitler’",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/jacob-rees-mogg-tucker-carlson-adolf-hitler-second-world-war-uk-armed-forces-vladimir-putin"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/cruzted_092926gn02_w.jpg?w=900",
+            "published_at": "2026-10-03T17:09:58+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Ted Cruz slams Tucker Carlson for World War II comments",
+            "url": "https://thehill.com/homenews/senate/6127608-ted-cruz-criticizes-tucker-carlson-wwii"
+          }
+        ],
+        "score": 1.164,
+        "section": "politics",
+        "slug": "cruz-slams-tucker-carlson-for-wwii-comments-43416",
+        "source_count": 2,
+        "summary": "Senator Ted Cruz criticized Tucker Carlson for suggesting the UK benefited from World War II.",
+        "top_market": {
+          "end_date": "2028-11-08T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Tucker Carlson wins and accepts the 2028 Republican presidential nomination, as confirmed by official party sources. It resolves to No in all other cases, including if he loses the nomination or if another candidate replaces him before the election.",
+          "id": "0x4273517fc8141d57ad1528ede46efdceebdb6a4da746d5de5bad216564209a1e",
+          "liquidity": 261740.80346,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.0315
+            },
+            {
+              "name": "No",
+              "price": 0.9685
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-tucker-carlson-win-the-2028-republican-presidential-nomination?r=alykhan3",
+          "question": "Will Tucker Carlson win the 2028 Republican presidential nomination?",
+          "similarity": 0.722071647644043,
+          "slug": "will-tucker-carlson-win-the-2028-republican-presidential-nomination",
+          "volume_24h": 13304.764371,
+          "volume_total": 13838728.963207005,
+          "yes_price": 0.0315
+        }
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-10-01T13:45:52+00:00",
+        "headline": "Kennedy Center Honors Moves to Capital One Arena Amid Legal Battle Over Trump's Name Change Efforts",
+        "id": 39941,
+        "image_url": "https://i.guim.co.uk/img/media/6f8aa02a91264fe5935e1ed9c7b161c37da944d8/829_0_6880_5504/master/6880.jpg?width=140&quality=85&auto=format&fit=max&s=1c58a6fb956c922074d02d57b1ff028a",
+        "last_seen_at": "2026-10-03T15:14:47+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/6f8aa02a91264fe5935e1ed9c7b161c37da944d8/829_0_6880_5504/master/6880.jpg?width=140&quality=85&auto=format&fit=max&s=1c58a6fb956c922074d02d57b1ff028a",
+            "published_at": "2026-10-02T19:22:37+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Kennedy Center Honors awards moved to new venue amid Trump’s onslaught",
+            "url": "https://www.theguardian.com/us-news/2026/oct/02/kennedy-center-honors-awards-venue-moved"
+          },
+          {
+            "published_at": "2026-10-02T17:59:02+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Kennedy Center Honors to take place at Capital One Arena",
+            "url": "https://www.cbsnews.com/news/kennedy-center-honors-capital-one-arena"
+          },
+          {
+            "published_at": "2026-10-02T16:00:00+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Kennedy Center Honors 2026 Sets Date, New Venue",
+            "url": "https://www.hollywoodreporter.com/news/politics-news/kennedy-center-honors-2026-date-venue-1236720964"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6ab802e29e0381.54564061.jpeg?w=900",
+            "published_at": "2026-10-01T15:26:25+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump refuses to rule out demolishing Kennedy Center",
+            "url": "https://thehill.com/homenews/administration/6123520-the-trump-kennedy-center-time-magazine-interview"
+          },
+          {
+            "published_at": "2026-10-01T15:13:02+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Trump does not rule out demolishing the Kennedy Center",
+            "url": "https://www.washingtonpost.com/politics/2026/10/01/trump-does-not-rule-out-demolishing-kennedy-center"
+          },
+          {
+            "published_at": "2026-10-03T15:14:47+00:00",
+            "publisher": "Rolling Stone",
+            "publisher_slug": "rollingstone-com",
+            "tier": 2,
+            "title": "Kennedy Center Honors Moving to Washington, D.C. Arena Amid Venue’s Closure",
+            "url": "https://www.rollingstone.com/music/music-news/kennedy-center-honors-washington-d-c-arena-venue-closure-1235636463"
+          }
+        ],
+        "score": 1.137,
+        "section": "politics",
+        "slug": "trump-does-not-rule-out-demolishing-the-kennedy-center-amid-board-dispute-39941",
+        "source_count": 10,
+        "summary": "The ceremony relocates to Washington DC’s Capital One Arena for the first time since 1978 while courts block President Donald Trump from renaming the venue.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if a listed news source confirms that the Kennedy Center's main building is fully demolished before January 1, 2027. It resolves to No if this event does not occur within that timeframe. Readers often mistake the start of legal battles or protests for the required demolition.",
+          "id": "kalshi:KXKENNEDYDEMOLITION-27-27JAN01",
+          "liquidity": 14359.75,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.05
+            },
+            {
+              "name": "No",
+              "price": 0.95
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxkennedydemolition-27/kxkennedydemolition-27-27jan01",
+          "price_24h_ago": 0.05,
+          "question": "Before Jan 1, 2027",
+          "similarity": 0.8187865614891052,
+          "slug": "kxkennedydemolition-27/kxkennedydemolition-27-27jan01",
+          "volume_24h": 0,
+          "volume_total": 14359.75,
+          "yes_price": 0.05
+        }
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-09-27T02:17:18+00:00",
+        "headline": "New Polls Show Tight Races in Wisconsin, Minnesota and North Carolina Gubernatorial and Senate Contests",
+        "id": 32573,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Tom-Tiffany-David-Crowley-10.01.png?w=900",
+        "last_seen_at": "2026-10-04T09:00:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T09:00:00+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "How Roy Cooper became Democrats’ best chance to flip a Senate seat",
+            "url": "https://www.washingtonpost.com/politics/2026/10/04/how-roy-cooper-became-democrats-best-chance-flip-senate-seat"
+          },
+          {
+            "published_at": "2026-10-03T09:00:00+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "In New Hampshire Senate race, the Democrat faces an unusually tough time",
+            "url": "https://www.washingtonpost.com/politics/2026/10/03/new-hampshire-senate-race-democrat-faces-an-unusually-tough-time"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Tom-Tiffany-David-Crowley-10.01.png?w=900",
+            "published_at": "2026-10-01T17:54:32+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Crowley, Tiffany neck and neck in Wisconsin governor's race: Poll",
+            "url": "https://thehill.com/homenews/campaign/6123950-wisconsin-poll-david-crowley-tom-tiffany-tie"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/Flanagan_Tafoya_Photo_Split.png?w=900",
+            "published_at": "2026-09-30T19:47:14+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Peggy Flanagan up 1 point in Minnesota Senate poll over Michele Tafoya",
+            "url": "https://thehill.com/homenews/campaign/6121317-flanagan-tafoya-minnseota-senate"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/Polling_Vakil_AP_AllenGBreed_JuliaDemareeNikhinson.jpg?w=900",
+            "published_at": "2026-09-28T22:40:24+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "New polls have Democrats thinking big on Senate",
+            "url": "https://thehill.com/homenews/senate/6116296-democrats-may-flip-senate-polls"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/03/MixCollage-02-Mar-2026-08-39-PM-8216.jpg?w=900",
+            "published_at": "2026-09-28T13:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Cooper holds 11-point lead over Whatley in North Carolina Senate race: Poll",
+            "url": "https://thehill.com/homenews/campaign/6114153-cooper-leads-whatley-poll"
+          }
+        ],
+        "score": 1.102,
+        "section": "politics",
+        "slug": "graham-leads-andrews-by-one-point-in-south-carolina-senate-race-32573",
+        "source_count": 9,
+        "summary": "Recent surveys indicate neck-and-neck contests for governor in Wisconsin and lieutenant governor in Minnesota, while Democrats hold leads in North Carolina Senate races."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-04T15:31:48+00:00",
+        "headline": "Jewish groups attack Greens after anti-Zionism motion passes",
+        "id": 44310,
+        "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/05/8454280d-32ec-430a-9bf3-68e9e66beed3_d41cd638.jpg?itok=ABooLcbM&v=1791131102",
+        "last_seen_at": "2026-10-04T16:26:47+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T15:31:48+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Jewish groups attack Greens after anti-Zionism motion passes",
+            "url": "https://www.ft.com/content/c608d956-22b7-4f23-a6fe-63f39c52c275"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/05/8454280d-32ec-430a-9bf3-68e9e66beed3_d41cd638.jpg?itok=ABooLcbM&v=1791131102",
+            "published_at": "2026-10-04T16:26:47+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "UK Green Party adopts ‘Zionism is racism’ policy, drawing backlash from Israel",
+            "url": "https://www.scmp.com/news/world/europe/article/3369725/uk-green-party-adopts-zionism-racism-policy-drawing-backlash-israel"
+          }
+        ],
+        "score": 1.1,
+        "section": "politics",
+        "slug": "jewish-groups-attack-greens-after-anti-zionism-motion-passes-44310",
+        "source_count": 2,
+        "summary": "Community leaders warn that the 'Zionism is Racism' motion discriminates against Jewish supporters."
+      },
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-10-01T17:59:03+00:00",
+        "headline": "Trump to Host Exclusive Memecoin Gala for Top Holders Amid Scrutiny",
+        "id": 40524,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6abb0e36914895.20256119-e1790793017272.jpeg?w=900",
+        "last_seen_at": "2026-10-03T15:01:03+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T20:44:41+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Trump memecoin plans another gala amid backlash to self-enrichment",
+            "url": "https://www.washingtonpost.com/politics/2026/10/01/trump-memecoin-plans-another-gala-amid-backlash-self-enrichment"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6abb0e36914895.20256119-e1790793017272.jpeg?w=900",
+            "published_at": "2026-10-01T20:25:58+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump meme coin invites top buyers to 'exclusive' gala with the president",
+            "url": "https://thehill.com/homenews/administration/6124439-trump-meme-coin-investor-gala"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/d57c5a353c65e31a6e602ab3904699590ce499de-3081x1733.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-01T18:45:29+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Another Trump memecoin dinner advertised for token's top investors",
+            "url": "https://www.coindesk.com/policy/2026/10/01/another-trump-memecoin-dinner-advertised-for-token-s-top-investors"
+          },
+          {
+            "published_at": "2026-10-01T17:59:03+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Trump Memecoin Dinner Returns as Democrats Threaten Scrutiny",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/trump-memecoin-dinner-returns-as-democrats-threaten-scrutiny"
+          },
+          {
+            "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2025/05/Trump-decrypt-style-10-gID_7.png@png",
+            "published_at": "2026-10-03T15:01:03+00:00",
+            "publisher": "decrypt.co",
+            "publisher_slug": "decrypt-co",
+            "tier": 2,
+            "title": "Trump Is Hosting Yet Another Meme Coin Dinner: Here Are the Details",
+            "url": "https://decrypt.co/380002/trump-third-meme-coin-dinner-details"
+          },
+          {
+            "published_at": "2026-10-02T20:23:29+00:00",
+            "publisher": "Mother Jones",
+            "publisher_slug": "motherjones-com",
+            "tier": 2,
+            "title": "Want to Attend an “Exclusive Dinner” With Trump? Just Buy His Meme Coin!",
+            "url": "https://www.motherjones.com/politics/2026/10/trump-meme-coin-exclusive-dinner"
+          }
+        ],
+        "score": 1.029,
+        "section": "politics",
+        "slug": "trump-memecoin-dinner-returns-as-democrats-threaten-scrutiny-40524",
+        "source_count": 8,
+        "summary": "The president will appear at a November dinner in Virginia for top holders of his $TRUMP token as Democrats threaten scrutiny.",
+        "top_market": {
+          "call": {
+            "correct": true,
+            "favourite": "No",
+            "favourite_price": 0.98
+          },
+          "end_date": "2026-10-17T14:00:00+00:00",
+          "explainer": "The market resolves to Yes if Donald Trump explicitly mentions Crypto or Bitcoin during his Midterm Rally in Vandalia, Ohio. This event must take place on October 3, 2026, as originally scheduled. Readers often mistake the location for any rally he hosts rather than this specific date and venue.",
+          "id": "kalshi:KXTRUMPMENTION-26OCT03-CRYP",
+          "liquidity": 138251.28,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.01
+            },
+            {
+              "name": "No",
+              "price": 0.99
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtrumpmention-26oct03/kxtrumpmention-26oct03-cryp",
+          "price_24h_ago": 0.02,
+          "question": "Crypto / Bitcoin",
+          "resolved_at": "2026-10-04T13:40:34+00:00",
+          "resolved_outcome": "No",
+          "similarity": 0.7438609004020691,
+          "slug": "kxtrumpmention-26oct03/kxtrumpmention-26oct03-cryp",
+          "volume_24h": 114330.58,
+          "volume_total": 138251.28,
+          "yes_price": 0.01
+        }
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-09-28T18:45:09+00:00",
+        "headline": "Jack Smith Defends Trump Probe Amid GOP Attacks and Basketball Mix-Up at Senate Hearing",
+        "id": 34690,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/schmitteric_092926gn01_w_9e4f7c.jpg?w=900",
+        "last_seen_at": "2026-10-03T11:00:14+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/schmitteric_092926gn01_w_9e4f7c.jpg?w=900",
+            "published_at": "2026-10-01T20:10:40+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Smith’s game-day texts reviewed by Schmitt never referenced basketball team names",
+            "url": "https://thehill.com/homenews/senate/6124359-schmitt-perjury-claim-debunked"
+          },
+          {
+            "image_url": "https://images.axios.com/rfEaprLQQ_TvJLMqVh8RiTOOf48=/0x154:6663x3902/1366x768/2026/09/30/1790790935312.jpg",
+            "published_at": "2026-09-30T18:43:41+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Jack Smith faces new lawsuit over congressional phone records",
+            "url": "https://www.axios.com/2026/09/30/jack-smith-arctic-frost-phone-records-lawsuit-blackburn"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/Raskin_Schmitt_gn_093026.png?w=900",
+            "published_at": "2026-09-30T12:35:14+00:00",
+            "publisher": "Just In News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Raskin rips Schmitt questioning of Jack Smith: 'He's basically disgraced himself'",
+            "url": "https://thehill.com/homenews/house/6119619-jamie-raskin-eric-schmitt-basketball-mix-up-jack-smith-hearing-criticism"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/schmitteric_brittkatie_092926gn01_w.jpg?w=900",
+            "published_at": "2026-09-30T11:50:58+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Schmitt on mix-up at Jack Smith hearing: 'My job is to ask questions'",
+            "url": "https://thehill.com/homenews/senate/6119588-eric-schmitt-jack-smith-senate-hearing-sports-mix-up-response"
+          },
+          {
+            "published_at": "2026-09-30T10:46:14+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Former special counsel Jack Smith defends investigation into Trump on Capitol Hill",
+            "url": "https://www.npr.org/2026/09/30/nx-s1-5984990/former-special-counsel-jack-smith-defends-investigation-into-trump-on-capitol-hill"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/schmitteric_092926gn04_w.jpg?w=900",
+            "published_at": "2026-09-30T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Schmitt faces fallout after debunked Jack Smith narrative",
+            "url": "https://thehill.com/homenews/senate/6119172-schmitt-smith-basketball-mixup"
+          }
+        ],
+        "score": 0.931,
+        "section": "politics",
+        "slug": "jack-smith-to-testify-before-senate-panel-on-trump-probes-34690",
+        "source_count": 28,
+        "summary": "Former special counsel Jack Smith defends his investigations into Donald Trump before the Senate Judiciary Committee, where Republican Senator Eric Schmitt faces scrutiny for confusing basketball teams during questioning",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Jack Smith is formally charged with a federal crime between now and January 1, 2027. It resolves to No if no such charge occurs within that window. Readers often mistake the linked news story about his testimony for the resolution event, but only a formal federal charge counts.",
+          "id": "kalshi:KXFEDERALCHARGE-27JAN01-JSMI",
+          "liquidity": 73975.29,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.13
+            },
+            {
+              "name": "No",
+              "price": 0.87
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxfederalcharge-27jan01/kxfederalcharge-27jan01-jsmi",
+          "price_24h_ago": 0.083,
+          "question": "Jack Smith",
+          "similarity": 0.7922875285148621,
+          "slug": "kxfederalcharge-27jan01/kxfederalcharge-27jan01-jsmi",
+          "volume_24h": 17.75,
+          "volume_total": 73975.29,
+          "yes_price": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-02T11:31:15+00:00",
+        "headline": "Merz Approval Rating Hits Record Low After CDU State Election Losses",
+        "id": 41530,
+        "last_seen_at": "2026-10-04T08:29:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T11:31:15+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Support for Merz plunges after CDU’s losses to Germany’s right and left",
+            "url": "https://www.aljazeera.com/news/2026/10/2/just-one-in-10-germans-thinks-merz-is-up-to-the-job-after-election-wipeout"
+          },
+          {
+            "published_at": "2026-10-04T08:29:00+00:00",
+            "publisher": "Deutsche Welle",
+            "publisher_slug": "dw-com",
+            "tier": 2,
+            "title": "Germany news: Many believe Merkel more capable than Merz",
+            "url": "https://www.dw.com/en/germany-news-many-believe-merkel-more-capable-than-merz/live-79528092"
+          }
+        ],
+        "score": 0.848,
+        "section": "politics",
+        "slug": "merz-approval-rating-hits-record-low-after-cdu-state-election-losses-41530",
+        "source_count": 2,
+        "summary": "Chancellor Friedrich Merz sees his approval rating drop to a record low following defeats for the CDU in three recent state elections.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if Friedrich Merz officially announces his intention to leave office or actually leaves as Chancellor of Germany before November 1, 2026. Otherwise, it resolves to No. Readers often mistake a drop in approval ratings for leaving office.",
+          "id": "kalshi:KXLEAVEMERZ-29JAN01-26NOV01",
+          "liquidity": 5213.59,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.05
+            },
+            {
+              "name": "No",
+              "price": 0.95
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxleavemerz-29jan01/kxleavemerz-29jan01-26nov01",
+          "price_24h_ago": 0.05,
+          "question": "Before Nov 1, 2026",
+          "similarity": 0.7628989815711975,
+          "slug": "kxleavemerz-29jan01/kxleavemerz-29jan01-26nov01",
+          "volume_24h": 0,
+          "volume_total": 5213.59,
+          "yes_price": 0.05
+        }
+      },
+      {
+        "distinct_publishers": 16,
+        "first_seen_at": "2026-09-24T19:54:29+00:00",
+        "headline": "Trump Administration Faces Scrutiny Over Taxpayer-Funded Pro-Trump Ads",
+        "id": 29435,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/OP_TrumpTaxpayerPropaganda_Truax_AP_JacquelynMartin.jpg?w=900",
+        "last_seen_at": "2026-10-03T04:41:41+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/OP_TrumpTaxpayerPropaganda_Truax_AP_JacquelynMartin.jpg?w=900",
+            "published_at": "2026-10-02T13:00:00+00:00",
+            "publisher": "Just In News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump's taxpayer-funded propaganda is blatantly illegal",
+            "url": "https://thehill.com/opinion/campaign/6123726-trump-taxpayer-campaign-ads"
+          },
+          {
+            "published_at": "2026-10-01T20:13:22+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Campaign-style Trump ads use money meant for border security, memorials",
+            "url": "https://www.washingtonpost.com/politics/2026/10/01/trump-ads-use-money-border-security-slain-officers-memorials"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/d5f96afba2723db28a9a481d5f81dd4392642349/1453_933_5715_4571/master/5715.jpg?width=140&quality=85&auto=format&fit=max&s=0a38ff278978be5438d90a4e93941dba",
+            "published_at": "2026-10-01T15:39:43+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Lawmakers call for action on ‘plainly illegal’ taxpayer-funded ads to promote Trump",
+            "url": "https://www.theguardian.com/us-news/2026/oct/01/house-democrats-letter-trump-ads"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/zoom-in_fcc_032026_ap_julia-demaree-nikhinson-e1788260778897.jpg?w=900",
+            "published_at": "2026-10-01T13:27:05+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "FCC chief: Taxpayer-funded ads touting Trump 'don't raise any red flags'",
+            "url": "https://thehill.com/homenews/media/6122576-carr-defends-trump-ads"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/09/White-House-Trump-TV-Ad-Communist-Country.png",
+            "published_at": "2026-10-01T13:23:28+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Pro-Trump Ads Funded With Taxpayer Dollars Air on CNN and MS NOW; White House Has Spent $2.9 Million on the TV Spots to Date",
+            "url": "https://variety.com/2026/tv/news/trump-taxpayer-funded-ads-air-on-cnn-ms-now-1236894714"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/trump_donald_04062026_AP26238535529297-2.jpg?w=900",
+            "published_at": "2026-10-01T13:23:18+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Latest taxpayer-funded ad promotes Trump war with Iran",
+            "url": "https://thehill.com/homenews/administration/6122506-trump-airing-taxpayer-funded-ads"
+          }
+        ],
+        "score": 0.623,
+        "section": "politics",
+        "slug": "pro-trump-tv-ad-funded-by-government-draws-fire-from-both-sides-29435",
+        "source_count": 40,
+        "summary": "Democrats demand investigations into White House spending on pro-Trump ads, while the FCC and President Trump defend the broadcasts as lawful public messaging."
+      },
+      {
+        "distinct_publishers": 15,
+        "first_seen_at": "2026-09-21T22:48:07+00:00",
+        "headline": "Appeals Court Backs Finding Trump Colluded With IRS, Treasury",
+        "id": 23864,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6abb0e36914895.20256119-e1790793017272.jpeg?w=900",
+        "last_seen_at": "2026-10-03T00:35:38+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T21:34:25+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Trump defies Democrats, diverts aid for Europe to Latin America instead",
+            "url": "https://www.washingtonpost.com/national-security/2026/10/01/trump-defies-democrats-diverts-aid-europe-latin-america-instead"
+          },
+          {
+            "published_at": "2026-09-30T23:25:45+00:00",
+            "publisher": "Washington Post Business",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Democrats fail to stop Trump from canceling $810M in funds approved by Congress",
+            "url": "https://www.washingtonpost.com/business/2026/09/30/trump-will-be-allowed-do-an-810-million-pocket-recission"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6abb0e36914895.20256119-e1790793017272.jpeg?w=900",
+            "published_at": "2026-09-30T18:53:29+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Appeals court backs finding Trump colluded with IRS, Treasury",
+            "url": "https://thehill.com/regulation/court-battles/6121107-federal-appeals-court-donald-trump-irs-treasury-collusion"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/f172125d2f3c108fed2016a1f65b2c375c5a556e/446_0_1965_1572/master/1965.jpg?width=140&quality=85&auto=format&fit=max&s=cb119159d3a5335e087cb97d5ad2e331",
+            "published_at": "2026-09-30T15:46:19+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Seth Meyers on Trump canceling $1bn in federal funds: ‘Is he adding a waterslide to the reflecting pool?’",
+            "url": "https://www.theguardian.com/culture/2026/sep/30/seth-meyers-trump-federal-funds-ai"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/41ac63906656f3420c997c8618d3b3a1a86a0811/720_0_7200_5760/master/7200.jpg?width=140&quality=85&auto=format&fit=max&s=0eae8119b24ab17bf968b2c5bced162e",
+            "published_at": "2026-09-30T12:00:42+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Top Trump figures push to direct human rights funding to rightwing causes",
+            "url": "https://www.theguardian.com/us-news/2026/sep/30/trump-state-department-human-rights-fund"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/Health-programs_093026_Weixel_AP_Alex-Brandon.jpg?w=900",
+            "published_at": "2026-09-30T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Unspent healthcare funding faces do-or-die cliff",
+            "url": "https://thehill.com/policy/healthcare/6119086-trump-health-funding-impoundment-risks"
+          }
+        ],
+        "score": 0.582,
+        "section": "politics",
+        "slug": "california-and-new-york-sue-trump-administration-over-wind-lease-buybacks-23864",
+        "source_count": 31,
+        "summary": "An appeals court upheld a lower court's determination that President Trump colluded with the Justice Department regarding a dismissed lawsuit against the IRS and Treasury.",
+        "top_market": {
+          "end_date": "2029-03-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if government spending drops by at least $500 billion below the Q4 2024 level in any single quarter through Q4 2028. It resolves to No if that specific threshold is never met during the period. Readers often mistake this for a total cumulative drop rather than a quarterly measurement.",
+          "id": "kalshi:KXGOVTCUTS-28-500",
+          "liquidity": 12217.19,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.012
+            },
+            {
+              "name": "No",
+              "price": 0.988
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxgovtcuts-28/kxgovtcuts-28-500",
+          "price_24h_ago": 0.012,
+          "question": "At least 500 billion",
+          "similarity": 0.8068394660949707,
+          "slug": "kxgovtcuts-28/kxgovtcuts-28-500",
+          "volume_24h": 0,
+          "volume_total": 12217.19,
+          "yes_price": 0.012
+        }
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-09-30T17:37:00+00:00",
+        "headline": "Trump Announces $200bn South Korean Energy Investment, Seoul Pushes Back",
+        "id": 38552,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26275722584412-e1790971911100.jpg?w=900",
+        "last_seen_at": "2026-10-03T00:34:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26275722584412-e1790971911100.jpg?w=900",
+            "published_at": "2026-10-02T21:05:47+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump shrugs off South Korea’s uncertainty on $54B Alaska energy investment",
+            "url": "https://thehill.com/homenews/administration/6126997-trump-south-korea-alaska-lng"
+          },
+          {
+            "published_at": "2026-09-30T22:55:33+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Trump unveils South Korean investment in Alaska gas pipeline",
+            "url": "https://www.cbsnews.com/news/trump-south-korean-investment-alaska-gas-pipeline"
+          },
+          {
+            "published_at": "2026-09-30T22:41:08+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Trump says South Korea will invest $200bn in US energy projects",
+            "url": "https://www.ft.com/content/f0cdc5bc-c07a-47cf-9602-064006176aef"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273756398249-e1790805413180.jpg?w=900",
+            "published_at": "2026-09-30T21:57:25+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump puts Sullivan at center stage during Alaska pipeline reveal",
+            "url": "https://thehill.com/homenews/administration/6121739-trump-praises-senator-dan-sullivan"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273746497996-e1790801214605.jpg?w=900",
+            "published_at": "2026-09-30T21:30:54+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "South Korea to invest up to $200B in Alaska LNG pipeline, US power plants, Trump announces",
+            "url": "https://thehill.com/policy/energy-environment/6121683-south-korea-alaska-lng-pipeline-texas"
+          },
+          {
+            "published_at": "2026-09-30T21:00:00+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "9/30: The Takeout with Major Garrett",
+            "url": "https://www.cbsnews.com/video/093026-the-takeout-with-major-garrett"
+          }
+        ],
+        "score": 0.521,
+        "section": "politics",
+        "slug": "trump-announces-54-billion-south-korean-investment-for-alaska-lng-pipeline-38552",
+        "source_count": 23,
+        "summary": "President Trump claims South Korea will invest $200bn in US energy projects, but Seoul disputes the deal's specifics and conditions.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if a free trade deal with China becomes law through Senate ratification and Presidential approval, or via a Congressional-Executive Agreement signed by the President before January 1, 2027. Otherwise, it resolves to No. Readers often mistake the announcement of talks for the actual passage of legislation.",
+          "id": "kalshi:KXFTACOUNTRIES-27-CHI",
+          "liquidity": 5265.48,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.13
+            },
+            {
+              "name": "No",
+              "price": 0.87
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxftacountries-27/kxftacountries-27-chi",
+          "price_24h_ago": 0.13,
+          "question": "China",
+          "similarity": 0.7593479752540588,
+          "slug": "kxftacountries-27/kxftacountries-27-chi",
+          "volume_24h": 0,
+          "volume_total": 5265.48,
+          "yes_price": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 18,
+        "first_seen_at": "2026-09-26T20:44:14+00:00",
+        "headline": "Trump Administration Rolls Back US Fuel Economy Standards for New Cars",
+        "id": 32331,
+        "image_url": "https://static01.nyt.com/images/2026/10/02/multimedia/02cli-autoemissions-wklq/02cli-autoemissions-wklq-mediumSquareAt3X.jpg",
+        "last_seen_at": "2026-10-02T20:28:07+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T20:28:07+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "California leads lawsuit against Trump fuel efficiency standards rollback",
+            "url": "https://www.aljazeera.com/economy/2026/10/2/california-leads-lawsuit-against-trump-fuel-efficiency-standards-rollback"
+          },
+          {
+            "image_url": "https://static01.nyt.com/images/2026/10/02/multimedia/02cli-autoemissions-wklq/02cli-autoemissions-wklq-mediumSquareAt3X.jpg",
+            "published_at": "2026-10-02T19:08:05+00:00",
+            "publisher": "The New York Times",
+            "publisher_slug": "nytimes-com",
+            "tier": 1,
+            "title": "California Sues to Block Trump From Weakening Fuel Economy Rules",
+            "url": "https://www.nytimes.com/2026/10/02/climate/california-trump-administration-fuel-economy.html"
+          },
+          {
+            "published_at": "2026-09-30T12:25:08+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "India Sets New Car Emission Limits, Adds Carbon Credit Trading",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/india-sets-new-car-emission-limits-adds-carbon-credit-trading"
+          },
+          {
+            "published_at": "2026-09-29T11:36:24+00:00",
+            "publisher": "NPR World",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Trump weakens fuel efficiency standards. And, Cornell fraternity rape case reopened",
+            "url": "https://www.npr.org/2026/09/29/g-s1-145422/up-first-newsletter-fuel-efficiency-standards-cornell-rape-case-terror-suspects"
+          },
+          {
+            "published_at": "2026-09-29T08:46:49+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Trump administration says it's scaling back fuel efficiency standards for new cars",
+            "url": "https://www.npr.org/2026/09/29/nx-s1-5983673/trump-administration-says-its-scaling-back-fuel-efficiency-standards-for-new-cars"
+          },
+          {
+            "published_at": "2026-09-29T08:46:41+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Pete Buttigieg discusses Trump administration's rollback of fuel efficiency standards",
+            "url": "https://www.npr.org/2026/09/29/nx-s1-5983537/pete-buttigieg-discusses-trump-administrations-rollback-of-fuel-efficiency-standards"
+          }
+        ],
+        "score": 0.492,
+        "section": "politics",
+        "slug": "trump-slashes-biden-era-fuel-economy-standards-for-cars-32331",
+        "source_count": 25,
+        "summary": "The administration has finalized rules lowering the average fuel economy requirement to 34.9 mpg by 2031, reversing Biden-era targets of 50.4 mpg.",
+        "top_market": {
+          "end_date": "2031-12-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if income inequality in the United States is higher in 2024 than it is in 2028. It resolves to No if inequality is lower or equal in 2024 compared to 2028. Readers often mistake the linked news story about fuel economy standards as the deciding factor, but the resolution depends solely on economic inequality data.",
+          "id": "kalshi:KXINEQUALITY-28",
+          "liquidity": 16741.71,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.22
+            },
+            {
+              "name": "No",
+              "price": 0.78
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxinequality-28/kxinequality-28",
+          "price_24h_ago": 0.22,
+          "question": "During his presidential term",
+          "similarity": 0.7500535249710083,
+          "slug": "kxinequality-28/kxinequality-28",
+          "volume_24h": 0,
+          "volume_total": 16741.71,
+          "yes_price": 0.22
+        }
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-09-30T17:00:09+00:00",
+        "headline": "DoJ declines to reopen criminal probe of Fed chair Jerome Powell",
+        "id": 38481,
+        "image_url": "https://i.guim.co.uk/img/media/22429908ff028233181b9f42ef6e1e7823cb4874/458_0_4583_3667/master/4583.jpg?width=140&quality=85&auto=format&fit=max&s=5d8fd9f70b586f29321947e5572fb9c7",
+        "last_seen_at": "2026-10-02T22:32:21+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/22429908ff028233181b9f42ef6e1e7823cb4874/458_0_4583_3667/master/4583.jpg?width=140&quality=85&auto=format&fit=max&s=5d8fd9f70b586f29321947e5572fb9c7",
+            "published_at": "2026-10-02T22:32:21+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "DoJ declines to reopen investigation into former Fed chair Jay Powell",
+            "url": "https://www.theguardian.com/business/2026/oct/02/doj-fed-chair-jerome-powell-investigation"
+          },
+          {
+            "published_at": "2026-10-02T21:03:19+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "DoJ will not reopen criminal probe of Fed’s Jay Powell",
+            "url": "https://www.ft.com/content/887e90a5-8456-4eba-9ed0-205c873d4846"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/07/blanchetodd_040726gn04_w.jpg?w=900",
+            "published_at": "2026-09-30T21:37:14+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump says he asked Blanche to 'study' Fed watchdog report that cleared Powell",
+            "url": "https://thehill.com/homenews/administration/6121704-trump-blanche-fed-renovation"
+          },
+          {
+            "published_at": "2026-09-30T21:26:26+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "UMich’s Stevenson on Fed Report, Inflation Reading",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-30/umich-s-stevenson-on-fed-report-inflation-reading-video"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/05/powelljerome_062525gn03_w.jpg?w=900",
+            "published_at": "2026-09-30T20:58:25+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Powell cleared in handling of Fed renovations",
+            "url": "https://thehill.com/newsletters/business-economy/6121588-powell-cleared-in-handling-of-fed-renovations"
+          },
+          {
+            "published_at": "2026-09-30T19:42:13+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Balance of Power: Fed Watchdog Finds Renovations Legal (Podcast)",
+            "url": "https://www.bloomberg.com/news/audio/2026-09-30/balance-of-power-fed-watchdog-finds-renovations-legal-podcast"
+          }
+        ],
+        "score": 0.449,
+        "section": "politics",
+        "slug": "fed-watchdog-finds-no-laws-broken-in-2-5-billion-renovation-38481",
+        "source_count": 17,
+        "summary": "The US Justice Department will not reopen a criminal investigation into former Federal Reserve Chair Jerome Powell after an internal watchdog found no evidence of illegal conduct in the bank's renovation project.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The outcome is Yes if President Trump fires Jerome Powell before January 1, 2027. The outcome is No if he does not fire him by that date. Readers often mistake the linked news story about a probe as the resolution event, but only an actual firing counts.",
+          "id": "kalshi:KXTRYFIREPOWELL-26MAY12-GOV2",
+          "liquidity": 78677.06,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.023
+            },
+            {
+              "name": "No",
+              "price": 0.977
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtryfirepowell-26may12/kxtryfirepowell-26may12-gov2",
+          "price_24h_ago": 0.023,
+          "question": "Before 2027",
+          "similarity": 0.7720685005187988,
+          "slug": "kxtryfirepowell-26may12/kxtryfirepowell-26may12-gov2",
+          "volume_24h": 97.56,
+          "volume_total": 78677.06,
+          "yes_price": 0.023
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-02T22:33:40+00:00",
+        "headline": "Kushner Denies CNN Report Linking His Firm to Israeli Military Investments",
+        "id": 42641,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/03/kushnerjared_022426gn01_w.jpg?w=900",
+        "last_seen_at": "2026-10-03T20:55:38+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/03/kushnerjared_022426gn01_w.jpg?w=900",
+            "published_at": "2026-10-02T22:33:40+00:00",
+            "publisher": "The Hill News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Kushner pushes back on CNN report about Israeli investments tied to military",
+            "url": "https://thehill.com/homenews/administration/6127113-kushner-denies-cnn-israel-investment-report"
+          },
+          {
+            "published_at": "2026-10-03T20:55:38+00:00",
+            "publisher": "Mother Jones",
+            "publisher_slug": "motherjones-com",
+            "tier": 2,
+            "title": "Does Jared Kushner Know What a Conflict of Interest Is?",
+            "url": "https://www.motherjones.com/politics/2026/10/jared-kushner-affinity-partners-israel-gaza-cnn-russia-ukraine-new-york-times-saudi-arabia-iran-diplomaacy"
+          }
+        ],
+        "score": 0.446,
+        "section": "politics",
+        "slug": "kushner-denies-cnn-report-linking-his-firm-to-israeli-military-investments-42641",
+        "source_count": 2,
+        "summary": "The US special envoy refutes allegations that his private equity firm benefited from diplomatic work in the Middle East.",
+        "top_market": {
+          "end_date": "2028-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if Jared Kushner formally announces a campaign for the 2028 Republican presidential nomination before January 1, 2028. Otherwise, it resolves to No. Readers often mistake unrelated business news or private statements for an official campaign announcement.",
+          "id": "kalshi:KX2028RRUN-28-JKUS",
+          "liquidity": 1017.99,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.1
+            },
+            {
+              "name": "No",
+              "price": 0.9
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kx2028rrun-28/kx2028rrun-28-jkus",
+          "price_24h_ago": 0.1,
+          "question": "Jared Kushner",
+          "similarity": 0.7361609935760498,
+          "slug": "kx2028rrun-28/kx2028rrun-28-jkus",
+          "volume_24h": 0,
+          "volume_total": 1017.99,
+          "yes_price": 0.1
+        }
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T14:30:00+00:00",
+        "headline": "Face the Nation Transcripts Feature Energy Secretary Wright, Iowa GOP Nominee Lahn",
+        "id": 44277,
+        "last_seen_at": "2026-10-04T17:38:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T17:38:04+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Full transcript of \"Face the Nation with Margaret Brennan,\" Oct. 4, 2026",
+            "url": "https://www.cbsnews.com/news/face-the-nation-full-transcript-10-04-2026"
+          },
+          {
+            "published_at": "2026-10-04T16:41:33+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Transcript: Zach Lahn, Iowa GOP nominee for governor, on \"Face the Nation with Margaret Brennan,\" Oct. 4, 2026",
+            "url": "https://www.cbsnews.com/news/zach-lahn-iowa-gop-nominee-governor-face-the-nation-transcript-10-04-2026"
+          },
+          {
+            "published_at": "2026-10-04T15:59:35+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Transcript: Energy Secretary Chris Wright on \"Face the Nation with Margaret Brennan,\" Oct. 4, 2026",
+            "url": "https://www.cbsnews.com/news/chris-wright-energy-secretary-face-the-nation-transcript-10-04-2026"
+          },
+          {
+            "published_at": "2026-10-04T15:16:57+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Transcript: Sen. Mark Kelly on \"Face the Nation with Margaret Brennan,\" Oct. 4, 2026",
+            "url": "https://www.cbsnews.com/news/mark-kelly-arizona-democrat-face-the-nation-transcript-10-04-2026"
+          },
+          {
+            "published_at": "2026-10-04T15:16:20+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Transcript: Brett McGurk on \"Face the Nation with Margaret Brennan,\" Oct. 4, 2026",
+            "url": "https://www.cbsnews.com/news/brett-mcgurk-face-the-nation-transcript-10-04-2026"
+          },
+          {
+            "published_at": "2026-10-04T14:30:00+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "10/4: Face The Nation",
+            "url": "https://www.cbsnews.com/video/100426-face-the-nation"
+          }
+        ],
+        "score": 0.385,
+        "section": "politics",
+        "slug": "sen-mark-kelly-and-brett-mcgurk-appear-on-face-the-nation-44277",
+        "source_count": 6,
+        "summary": "Energy Secretary Chris Wright and Iowa GOP nominee Zach Lahn appear on Face the Nation alongside Senator Mark Kelly and former adviser Brett McGurk.",
+        "top_market": {
+          "call": {
+            "correct": true,
+            "favourite": "No",
+            "favourite_price": 0.69
+          },
+          "end_date": "2026-10-18T14:00:00+00:00",
+          "id": "kalshi:KXFTNMENTION-26OCT04-AI",
+          "liquidity": 4461.25,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.01
+            },
+            {
+              "name": "No",
+              "price": 0.99
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxftnmention-26oct04/kxftnmention-26oct04-ai",
+          "price_24h_ago": 0.31,
+          "question": "AI / Artificial Intelligence",
+          "resolved_at": "2026-10-04T17:41:16+00:00",
+          "resolved_outcome": "No",
+          "similarity": 0.7352392077445984,
+          "slug": "kxftnmention-26oct04/kxftnmention-26oct04-ai",
+          "volume_24h": 4454.96,
+          "volume_total": 4461.25,
+          "yes_price": 0.01
+        }
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T19:49:08+00:00",
+        "headline": "Sen. Kennedy Predicts Republican Success in Midterms Despite Cost of Living Concerns",
+        "id": 44538,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/kennedyjohn_080426gn01_w.jpg?w=900",
+        "last_seen_at": "2026-10-04T19:49:08+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/kennedyjohn_080426gn01_w.jpg?w=900",
+            "published_at": "2026-10-04T19:49:08+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Kennedy says 'telling' Americans 'not to believe their own lying checkbooks is not going to work'",
+            "url": "https://thehill.com/homenews/senate/6128455-kennedy-midterm-cost-living"
+          }
+        ],
+        "score": 0.362,
+        "section": "politics",
+        "slug": "sen-kennedy-predicts-republican-success-in-midterms-despite-cost-of-living-44538",
+        "source_count": 1,
+        "summary": "Senator John Kennedy predicts Republicans will defy expert expectations in the upcoming midterms by telling Americans the truth about living costs."
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T19:11:23+00:00",
+        "headline": "Trump Shares Meme Labeling Obama as Most Corrupt President",
+        "id": 44505,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/02/AP25009542176502-e1770394761361.jpg?w=900",
+        "last_seen_at": "2026-10-04T19:11:23+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/02/AP25009542176502-e1770394761361.jpg?w=900",
+            "published_at": "2026-10-04T19:11:23+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump shares meme labeling Obama, not Nixon, as 'most corrupt president'",
+            "url": "https://thehill.com/homenews/administration/6128392-trump-compares-obama-nixon-corruption"
+          }
+        ],
+        "score": 0.35,
+        "section": "politics",
+        "slug": "trump-shares-meme-labeling-obama-as-most-corrupt-president-44505",
+        "source_count": 1,
+        "summary": "The president posted a meme on Truth Social comparing Barack Obama and Richard Nixon to claim the former is the most corrupt."
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-10-02T06:26:48+00:00",
+        "headline": "Miami Judge Rules Federal Noncitizen Voting Law Violates US Constitution",
+        "id": 41258,
+        "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/08/931/523/polling-place-utah.jpg?ve=1&tl=1",
+        "last_seen_at": "2026-10-03T12:00:44+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T23:05:14+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Judge says federal law banning noncitizen voting is unconstitutional",
+            "url": "https://www.cbsnews.com/news/judge-federal-law-banning-noncitizen-voting-unconstitutional"
+          },
+          {
+            "published_at": "2026-10-02T06:26:48+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Miami judge rules federal noncitizen voting law violates US Constitution",
+            "url": "https://www.aljazeera.com/news/2026/10/2/miami-judge-rules-federal-noncitizen-voting-law-violates-us-constitution"
+          },
+          {
+            "image_url": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/08/931/523/polling-place-utah.jpg?ve=1&tl=1",
+            "published_at": "2026-10-03T12:00:44+00:00",
+            "publisher": "Fox News Politics",
+            "publisher_slug": "foxnews-com",
+            "tier": 2,
+            "title": "‘Activist judge’ rules Congress cannot bar noncitizens from voting in federal elections",
+            "url": "https://www.foxnews.com/politics/activist-judge-rules-congress-cannot-bar-noncitizens-voting-federal-elections"
+          }
+        ],
+        "score": 0.343,
+        "section": "politics",
+        "slug": "miami-judge-rules-federal-noncitizen-voting-law-violates-us-constitution-41258",
+        "source_count": 3,
+        "summary": "A federal judge in Miami has declared a state law allowing noncitizens to vote in local elections unconstitutional, affirming federal authority over voter qualifications."
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T15:04:34+00:00",
+        "headline": "Farage questioned over £5m gift from crypto billionaire",
+        "id": 44289,
+        "image_url": "https://i.guim.co.uk/img/media/d2504defce6c0c66cd42eb91fb4a7a1b8eca4845/134_0_2733_2187/master/2733.jpg?width=140&quality=85&auto=format&fit=max&s=0ae8f999448f320029074138c0bc0d97",
+        "last_seen_at": "2026-10-04T15:04:34+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/d2504defce6c0c66cd42eb91fb4a7a1b8eca4845/134_0_2733_2187/master/2733.jpg?width=140&quality=85&auto=format&fit=max&s=0ae8f999448f320029074138c0bc0d97",
+            "published_at": "2026-10-04T15:04:34+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Nigel Farage questioned by standards commissioner over £5m gift",
+            "url": "https://www.theguardian.com/politics/2026/oct/04/nigel-farage-questioned-by-standards-commissioner-over-gift-reform-uk"
+          }
+        ],
+        "score": 0.334,
+        "section": "politics",
+        "slug": "farage-questioned-over-5m-gift-from-crypto-billionaire-44289",
+        "source_count": 1,
+        "summary": "The standards commissioner interviews the Reform UK leader regarding whether he should have declared a £5m donation from Christopher Harborne.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Nigel Farage steps down as Leader of Reform UK before January 1, 2027. It resolves to No if he remains in that role through that date. Readers often mistake news reports of him being questioned for an actual departure from the leadership position.",
+          "id": "kalshi:KXFARAGEOUTREFORM-26JUL-JAN01",
+          "liquidity": 14168.47,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.12
+            },
+            {
+              "name": "No",
+              "price": 0.88
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxfarageoutreform-26jul/kxfarageoutreform-26jul-jan01",
+          "price_24h_ago": 0.12,
+          "question": "Before Jan 1, 2027",
+          "similarity": 0.721887469291687,
+          "slug": "kxfarageoutreform-26jul/kxfarageoutreform-26jul-jan01",
+          "volume_24h": 0,
+          "volume_total": 14168.47,
+          "yes_price": 0.12
+        }
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T18:00:00+00:00",
+        "headline": "Data Shows Rise in Unknown Race After Supreme Court Admissions Ruling",
+        "id": 44435,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP23182014589365.jpg?w=900",
+        "last_seen_at": "2026-10-04T18:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP23182014589365.jpg?w=900",
+            "published_at": "2026-10-04T18:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "3 classes after Supreme Court's admissions ruling: What the data show",
+            "url": "https://thehill.com/opinion/education/6127046-higher-education-post-ruling-trends"
+          }
+        ],
+        "score": 0.328,
+        "section": "politics",
+        "slug": "data-shows-rise-in-unknown-race-after-supreme-court-admissions-ruling-44435",
+        "source_count": 1,
+        "summary": "Research indicates a slight nationwide increase in first-year students reporting their race or ethnicity as unknown following the Supreme Court's end of race-conscious admissions."
+      }
+    ],
+    "total": 40
+  }
+}

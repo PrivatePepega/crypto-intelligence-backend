@@ -1,0 +1,428 @@
+{
+  "label": "GET /data/v1/sections/music.json",
+  "path": "/data/v1/sections/music.json",
+  "capturedAt": "2026-10-04T20:28:03.423Z",
+  "elapsedMs": 305,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "music",
+    "stories": [
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-09-28T16:00:00+00:00",
+        "headline": "Metallica Kicks Off Las Vegas Sphere Residency With Stunning Visuals and Deep Cuts",
+        "id": 34432,
+        "image_url": "https://variety.com/wp-content/uploads/2026/09/CRJ-by-Mikayla-LoBasso-461043556-R1-66.jpg",
+        "last_seen_at": "2026-10-04T18:48:34+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T20:44:33+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Metallica Thrashes Las Vegas With Five Decades of Monumental Metal",
+            "url": "https://www.hollywoodreporter.com/music/music-features/metallica-sphere-residency-life-burns-faster-opening-night-1236721137"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/09/CRJ-by-Mikayla-LoBasso-461043556-R1-66.jpg",
+            "published_at": "2026-10-01T14:00:00+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Carly Rae Jepsen Announces ‘Day and Night’ North American 2027 Tour Dates",
+            "url": "https://variety.com/2026/music/news/carly-rae-jepsen-day-and-night-2027-tour-dates-1236894169"
+          },
+          {
+            "published_at": "2026-09-30T15:46:54+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Donnie Wahlberg Says NKOTB’s Final Las Vegas Shows Will Be “Super Emotional,” Teases New Elements and Shares What’s Next",
+            "url": "https://www.hollywoodreporter.com/music/music-features/donnie-wahlberg-interview-nkotbs-final-vegas-shows-1236714595"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2022/08/LCDSOUNDSYSTEM_JULIANABERNSTEIN_6482.jpg",
+            "published_at": "2026-09-30T14:25:24+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "LCD Soundsystem Announces 2026 NYC Residency — Including 100th Residency Show",
+            "url": "https://variety.com/2026/music/news/lcd-soundsystem-2026-nyc-residency-dates-1236893521"
+          },
+          {
+            "published_at": "2026-10-04T18:48:34+00:00",
+            "publisher": "Rolling Stone",
+            "publisher_slug": "rollingstone-com",
+            "tier": 2,
+            "title": "Metallica’s Life Burns Faster Sphere Residency May Be Bigger Than Metallica",
+            "url": "https://www.rollingstone.com/music/music-live-reviews/metallica-life-burns-faster-sphere-review-1235630290"
+          },
+          {
+            "image_url": "https://consequence.net/wp-content/uploads/2026/10/Metallica-Night-2-Sphere-featured.jpg?quality=80",
+            "published_at": "2026-10-04T16:06:03+00:00",
+            "publisher": "Consequence",
+            "publisher_slug": "consequence-net",
+            "tier": 2,
+            "title": "Metallica Bring Completely Different Show to Night Two at Sphere: Photos, Video + Setlist",
+            "url": "https://consequence.net/2026/10/metallica-night-two-sphere-photos-video-setlist"
+          }
+        ],
+        "score": 3.613,
+        "section": "music",
+        "slug": "john-mayer-announces-six-night-las-vegas-sphere-residency-for-2027-34432",
+        "source_count": 22,
+        "summary": "The band performed a 16-song set featuring '...And Justice For All' for the first time in 12 years during the debut of their Life Burns Faster residency.",
+        "top_market": {
+          "end_date": "2028-01-08T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if Coldplay performs at the Las Vegas Sphere during 2027. It resolves to No if they do not perform there in that year. Readers often mistake the linked story about John Mayer for a relevant event, but only Coldplay's performance counts.",
+          "id": "kalshi:KXVENUEPERFORMANCESPHERE-28JAN01-COL",
+          "liquidity": 9938.18,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.33
+            },
+            {
+              "name": "No",
+              "price": 0.6699999999999999
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxvenueperformancesphere-28jan01/kxvenueperformancesphere-28jan01-col",
+          "price_24h_ago": 0.33,
+          "question": "Coldplay",
+          "similarity": 0.787345290184021,
+          "slug": "kxvenueperformancesphere-28jan01/kxvenueperformancesphere-28jan01-col",
+          "volume_24h": 31.83,
+          "volume_total": 9938.18,
+          "yes_price": 0.33
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-04T16:53:01+00:00",
+        "headline": "Ed Sheeran Enlists Isaac Slade as Atlanta Concert Opener After Macklemore Drops Out",
+        "id": 44390,
+        "last_seen_at": "2026-10-04T18:37:30+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T18:37:30+00:00",
+            "publisher": "Rolling Stone",
+            "publisher_slug": "rollingstone-com",
+            "tier": 2,
+            "title": "Ed Sheeran Enlists the Fray’s Former Singer Isaac Slade to Open Atlanta Show",
+            "url": "https://www.rollingstone.com/music/music-news/ed-sheeran-the-fray-singer-isaac-slade-open-atlanta-show-1235636635"
+          },
+          {
+            "published_at": "2026-10-04T16:53:01+00:00",
+            "publisher": "Billboard",
+            "publisher_slug": "billboard-com",
+            "tier": 2,
+            "title": "Ed Sheeran Taps Former Fray Singer Isaac Slade as Atlanta Opener After Macklemore Dropped, Support Acts Quit",
+            "url": "https://www.billboard.com/music/music-news/ed-sheeran-isaac-slade-fray-atlanta-opener-macklemore-1236353911"
+          }
+        ],
+        "score": 1.192,
+        "section": "music",
+        "slug": "ed-sheeran-enlists-isaac-slade-as-atlanta-concert-opener-after-macklemore-44390",
+        "source_count": 2,
+        "summary": "Isaac Slade replaces Macklemore to open Ed Sheeran's Loop Tour show in Atlanta after the original support acts withdrew.",
+        "top_market": {
+          "end_date": "2026-12-21T05:01:00+00:00",
+          "explainer": "The outcome is Yes if Ed Sheeran has a number-one song on the Billboard Hot 100 by the chart dated for the week of December 26, 2026. The outcome is No if he does not reach that position by that specific date. Readers often mistake the release date of a single for the resolution deadline.",
+          "id": "kalshi:KX1SONG-DEC2626-ED",
+          "liquidity": 2159.64,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.05
+            },
+            {
+              "name": "No",
+              "price": 0.95
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kx1song-dec2626/kx1song-dec2626-ed",
+          "price_24h_ago": 0.05,
+          "question": "Ed Sheeran",
+          "similarity": 0.7675271034240723,
+          "slug": "kx1song-dec2626/kx1song-dec2626-ed",
+          "volume_24h": 0,
+          "volume_total": 2159.64,
+          "yes_price": 0.05
+        }
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-10-03T02:59:15+00:00",
+        "headline": "AC/DC Brings Out Dave Grohl for 'Highway to Hell' at Final Power Up Tour Show",
+        "id": 42794,
+        "image_url": "https://consequence.net/wp-content/uploads/2026/10/Dave-Grohl.jpeg?quality=80",
+        "last_seen_at": "2026-10-04T09:31:58+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T09:31:58+00:00",
+            "publisher": "NME",
+            "publisher_slug": "nme-com",
+            "tier": 2,
+            "title": "Watch Dave Grohl join AC/DC for ‘Highway To Hell’ at final ‘Power Up’ tour show",
+            "url": "https://www.nme.com/news/music/watch-dave-grohl-join-ac-dc-highway-to-hell-power-up-3972071"
+          },
+          {
+            "image_url": "https://consequence.net/wp-content/uploads/2026/10/Dave-Grohl.jpeg?quality=80",
+            "published_at": "2026-10-04T02:03:03+00:00",
+            "publisher": "Consequence",
+            "publisher_slug": "consequence-net",
+            "tier": 2,
+            "title": "Dave Grohl Dedicates “My Hero” to “New Friend Jack” at Power to the People",
+            "url": "https://consequence.net/2026/10/dave-grohl-jack-smith-my-hero"
+          },
+          {
+            "published_at": "2026-10-03T20:08:34+00:00",
+            "publisher": "Billboard",
+            "publisher_slug": "billboard-com",
+            "tier": 2,
+            "title": "AC/DC Brings Out Foo Fighters’ Dave Grohl for ‘Highway to Hell’ at MetLife Show",
+            "url": "https://www.billboard.com/music/rock/acdc-dave-grohl-highway-to-hell-metlife-stadium-1236353873"
+          },
+          {
+            "image_url": "https://consequence.net/wp-content/uploads/2026/10/ACDC-Foo-Fighters.jpg?quality=80",
+            "published_at": "2026-10-03T17:57:43+00:00",
+            "publisher": "Consequence",
+            "publisher_slug": "consequence-net",
+            "tier": 2,
+            "title": "AC/DC and Foo Fighters Deliver Epic Night of Rock ‘n’ Roll at MetLife Stadium: Review, Photos, Video + Setlists",
+            "url": "https://consequence.net/2026/10/ac-dc-and-foo-fighters-metlife-stadium-review-photos-video-setlists"
+          },
+          {
+            "image_url": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/10/GettyImages-2293589795.jpg?w=564",
+            "published_at": "2026-10-03T14:36:46+00:00",
+            "publisher": "Stereogum",
+            "publisher_slug": "stereogum-com",
+            "tier": 2,
+            "title": "Dave Grohl Joins AC/DC For “Highway To Hell” In New Jersey",
+            "url": "https://stereogum.com/2513505/dave-grohl-joins-ac-dc-for-highway-to-hell-in-new-jersey/news"
+          },
+          {
+            "published_at": "2026-10-03T13:41:17+00:00",
+            "publisher": "Rolling Stone",
+            "publisher_slug": "rollingstone-com",
+            "tier": 2,
+            "title": "See AC/DC Bring Out Dave Grohl for ‘Highway to Hell’ at Power Up Tour’s Final Show",
+            "url": "https://www.rollingstone.com/music/music-news/ac-dc-out-dave-grohl-highway-to-hell-power-up-tour-finale-1235636450"
+          }
+        ],
+        "score": 1.173,
+        "section": "music",
+        "slug": "dave-grohl-joins-ac-dc-for-final-us-show-at-metlife-stadium-42794",
+        "source_count": 7,
+        "summary": "Foo Fighters frontman Dave Grohl joined AC/DC on stage during their final MetLife Stadium concert to perform the band's hit song.",
+        "top_market": {
+          "end_date": "2027-02-15T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if Foo Fighters are officially announced as headliners for the Pro Football Championship Halftime Show before February 15, 2027. It resolves to No if that specific announcement does not happen by the deadline. Readers often mistake any performance appearance, such as opening for another band, for a headline slot.",
+          "id": "kalshi:KXSUPERBOWLHEADLINE-27-FOO",
+          "liquidity": 10422.49,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.01
+            },
+            {
+              "name": "No",
+              "price": 0.99
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxsuperbowlheadline-27/kxsuperbowlheadline-27-foo",
+          "price_24h_ago": 0.01,
+          "question": "Foo Fighters",
+          "similarity": 0.7579581141471863,
+          "slug": "kxsuperbowlheadline-27/kxsuperbowlheadline-27-foo",
+          "volume_24h": 0,
+          "volume_total": 10422.49,
+          "yes_price": 0.01
+        }
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-04T06:56:01+00:00",
+        "headline": "Turnstile Make Explosive SNL Debut With Birds And Never Enough Medley",
+        "id": 43919,
+        "image_url": "https://consequence.net/wp-content/uploads/2026/10/Turnstile-SNL.jpeg?quality=80",
+        "last_seen_at": "2026-10-04T13:39:14+00:00",
+        "publishers": [
+          {
+            "image_url": "https://consequence.net/wp-content/uploads/2026/10/Turnstile-SNL.jpeg?quality=80",
+            "published_at": "2026-10-04T13:39:14+00:00",
+            "publisher": "Consequence",
+            "publisher_slug": "consequence-net",
+            "tier": 2,
+            "title": "Turnstile’s SNL Debut Ends a 45 Year Drought of Hardcore on the Show",
+            "url": "https://consequence.net/2026/10/turnstile-snl-performance"
+          },
+          {
+            "published_at": "2026-10-04T10:37:28+00:00",
+            "publisher": "NME",
+            "publisher_slug": "nme-com",
+            "tier": 2,
+            "title": "Watch Turnstile make ‘Saturday Night Live’ debut with ‘Birds’ and ‘I Care/Dull’ medley",
+            "url": "https://www.nme.com/news/music/watch-turnstile-make-saturday-night-live-debut-with-birds-and-i-care-dull-medley-3972075"
+          },
+          {
+            "published_at": "2026-10-04T08:07:13+00:00",
+            "publisher": "Billboard",
+            "publisher_slug": "billboard-com",
+            "tier": 2,
+            "title": "Turnstile Make Explosive ‘SNL’ Debut With ‘Birds’ and ‘Never Enough’ Medley",
+            "url": "https://www.billboard.com/culture/tv-film/turnstile-snl-debut-dakota-johnson-1236353747"
+          },
+          {
+            "published_at": "2026-10-04T06:56:01+00:00",
+            "publisher": "Rolling Stone",
+            "publisher_slug": "rollingstone-com",
+            "tier": 2,
+            "title": "‘SNL’: Watch Turnstile Perform ‘Birds,’ Medley from Album ‘Never Enough’",
+            "url": "https://www.rollingstone.com/music/music-news/snl-watch-turnstile-perform-birds-medley-album-never-enough-1235636456"
+          }
+        ],
+        "score": 1.104,
+        "section": "music",
+        "slug": "turnstile-make-explosive-snl-debut-with-birds-and-never-enough-medley-43919",
+        "source_count": 4,
+        "summary": "The Grammy-winning Baltimore band performs three songs from their album during their first appearance on the show."
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-10-01T19:42:33+00:00",
+        "headline": "Charli XCX, Troye Sivan Perform at Austin City Limits as Festival Streams on Disney+ and Hulu",
+        "id": 40676,
+        "image_url": "https://consequence.net/wp-content/uploads/2026/10/Turnstile-at-ACL.jpeg?quality=80",
+        "last_seen_at": "2026-10-03T16:40:32+00:00",
+        "publishers": [
+          {
+            "image_url": "https://consequence.net/wp-content/uploads/2026/10/Turnstile-at-ACL.jpeg?quality=80",
+            "published_at": "2026-10-03T16:40:32+00:00",
+            "publisher": "Consequence",
+            "publisher_slug": "consequence-net",
+            "tier": 2,
+            "title": "Turnstile’s Set at ACL 2026 Was a Muddy Good Time: Watch",
+            "url": "https://consequence.net/2026/10/turnstiles-set-at-acl-2026-was-a-muddy-good-time-watch"
+          },
+          {
+            "image_url": "https://lede-admin.stereogum.com/wp-content/uploads/sites/64/2026/10/GettyImages-2297469461.jpg?w=564",
+            "published_at": "2026-10-03T15:15:24+00:00",
+            "publisher": "Stereogum",
+            "publisher_slug": "stereogum-com",
+            "tier": 2,
+            "title": "Troye Sivan Joins Charli XCX To Perform Two Of His New Songs At ACL",
+            "url": "https://stereogum.com/2513510/troye-sivan-joins-charli-xcx-to-perform-two-of-his-new-songs-at-acl/news"
+          },
+          {
+            "published_at": "2026-10-02T13:00:14+00:00",
+            "publisher": "Billboard",
+            "publisher_slug": "billboard-com",
+            "tier": 2,
+            "title": "Austin City Limits 2026: Here’s Where to Watch the Three-Day Music Festival Live Online for Free",
+            "url": "https://www.billboard.com/culture/product-recommendations/austin-city-limits-festival-2026-watch-livestream-online-free-1236352339"
+          },
+          {
+            "published_at": "2026-10-02T01:00:00+00:00",
+            "publisher": "Rolling Stone",
+            "publisher_slug": "rollingstone-com",
+            "tier": 2,
+            "title": "How to Stream Austin City Limits, Featuring Charli XCX, Lorde, Turnstile, and More",
+            "url": "https://www.rollingstone.com/product-recommendations/streaming/how-to-watch-austin-city-limits-disney-plus-hulu-1235635528"
+          },
+          {
+            "image_url": "https://media.pitchfork.com/photos/6abbff1d255c3d4832945ba0/master/pass/GettyImages-2240730553.jpg",
+            "published_at": "2026-10-01T20:39:58+00:00",
+            "publisher": "RSS: News",
+            "publisher_slug": "pitchfork-com",
+            "tier": 2,
+            "title": "How to Live Stream Austin City Limits Festival 2026",
+            "url": "https://pitchfork.com/story/how-to-live-stream-austin-city-limits-festival-2026"
+          },
+          {
+            "image_url": "https://consequence.net/wp-content/uploads/2026/10/Austin-City-Limits-2026-Livestream-Lineup.jpg?quality=80",
+            "published_at": "2026-10-01T19:42:33+00:00",
+            "publisher": "Consequence",
+            "publisher_slug": "consequence-net",
+            "tier": 2,
+            "title": "Austin City Limits Reveals 2026 Livestream Schedule",
+            "url": "https://consequence.net/2026/10/austin-city-limits-2026-livestream-schedule"
+          }
+        ],
+        "score": 0.46,
+        "section": "music",
+        "slug": "austin-city-limits-festival-announces-2026-livestream-schedule-on-disney-a-40676",
+        "source_count": 6,
+        "summary": "Charli XCX headlined the first night of Austin City Limits with a surprise appearance by Troye Sivan, while the festival streams live on Disney+ and Hulu.",
+        "top_market": {
+          "end_date": "2026-10-12T14:00:00+00:00",
+          "explainer": "The market resolves to Yes if Troye Sivan performs or is announced to perform at Charli XCX’s headlining sets at the 2026 Austin City Limits Music Festival during the official event timeframe. Otherwise, it resolves to No. Readers often mistake the linked news story about Disney+ and Hulu streams as the resolution criteria, but only live performances at the festival count.",
+          "id": "kalshi:KXPERFORM-ACL26-TRO",
+          "liquidity": 10716.14,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.99
+            },
+            {
+              "name": "No",
+              "price": 0.010000000000000007
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxperform-acl26/kxperform-acl26-tro",
+          "price_24h_ago": 0.99,
+          "question": "Troye Sivan",
+          "similarity": 0.8433385491371155,
+          "slug": "kxperform-acl26/kxperform-acl26-tro",
+          "volume_24h": 0,
+          "volume_total": 10716.14,
+          "yes_price": 0.99
+        }
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-10-03T16:32:23+00:00",
+        "headline": "Paul McCartney Reveals He Performed at Taylor Swift’s Wedding and Bans Larry David From Concerts",
+        "id": 43418,
+        "image_url": "https://consequence.net/wp-content/uploads/2026/10/McCartney-Larry-David.jpeg?quality=80",
+        "last_seen_at": "2026-10-03T23:55:36+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T23:55:36+00:00",
+            "publisher": "Billboard",
+            "publisher_slug": "billboard-com",
+            "tier": 2,
+            "title": "How Paul McCartney Wound Up Performing at Taylor Swift’s Wedding",
+            "url": "https://www.billboard.com/music/pop/paul-mccartney-taylor-swift-wedding-song-performance-1236353877"
+          },
+          {
+            "published_at": "2026-10-03T19:35:48+00:00",
+            "publisher": "Rolling Stone",
+            "publisher_slug": "rollingstone-com",
+            "tier": 2,
+            "title": "Paul McCartney Reveals Why He Performed at Taylor Swift’s Wedding: ‘She Asked Me to Do It’",
+            "url": "https://www.rollingstone.com/music/music-news/paul-mccartney-taylor-swift-wedding-larry-david-kimmel-1235636499"
+          },
+          {
+            "image_url": "https://consequence.net/wp-content/uploads/2026/10/McCartney-Larry-David.jpeg?quality=80",
+            "published_at": "2026-10-03T16:32:23+00:00",
+            "publisher": "Consequence",
+            "publisher_slug": "consequence-net",
+            "tier": 2,
+            "title": "Paul McCartney Won’t Be Inviting Larry David To Concerts Because He Was a Curmudgeon, of Course",
+            "url": "https://consequence.net/2026/10/paul-mccartney-on-larry-david"
+          }
+        ],
+        "score": 0.444,
+        "section": "music",
+        "slug": "paul-mccartney-reveals-he-performed-at-taylor-swift-s-wedding-and-bans-lar-43418",
+        "source_count": 3,
+        "summary": "The former Beatle explains on Jimmy Kimmel Live that he played at Taylor Swift's wedding because she asked him to, while also excluding Larry David for refusing to sing along."
+      }
+    ],
+    "total": 6
+  }
+}

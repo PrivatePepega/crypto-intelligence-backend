@@ -1,0 +1,1522 @@
+{
+  "label": "GET /data/v1/sections/tech.json",
+  "path": "/data/v1/sections/tech.json",
+  "capturedAt": "2026-10-04T20:27:30.854Z",
+  "elapsedMs": 233,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "tech",
+    "stories": [
+      {
+        "distinct_publishers": 50,
+        "first_seen_at": "2026-09-08T02:00:00+00:00",
+        "headline": "Nvidia-backed Reflection Prepares Powerful Open-Weight AI Model to Challenge Giants",
+        "id": 2538,
+        "image_url": "https://images.axios.com/bY8S5NDIVZ8TJwz5XyFSOUay6o4=/0x0:1920x1080/1366x768/2026/10/02/1790975961255.jpeg",
+        "last_seen_at": "2026-10-04T20:00:02+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T20:00:02+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "AI Riches Come With Concentration Risks (ARM, AKAM, SNPS, P)",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-10-04/ai-riches-come-with-concentration-risks-arm-akam-snps-p"
+          },
+          {
+            "published_at": "2026-10-04T16:05:00+00:00",
+            "publisher": "TechCrunch Startups",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "TechCrunch Mobility: Reining in robotaxis",
+            "url": "https://techcrunch.com/2026/10/04/techcrunch-mobility-reining-in-robotaxis"
+          },
+          {
+            "image_url": "https://images.axios.com/bY8S5NDIVZ8TJwz5XyFSOUay6o4=/0x0:1920x1080/1366x768/2026/10/02/1790975961255.jpeg",
+            "published_at": "2026-10-04T12:49:31+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Scoop: A powerful new model from startup Reflection is set to shake up the AI race",
+            "url": "https://www.axios.com/2026/10/04/reflection-open-weight-ai"
+          },
+          {
+            "published_at": "2026-10-04T12:40:30+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "White House Moves to Assess Growing AI Risks",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-04/white-house-moves-to-assess-growing-ai-risks-video"
+          },
+          {
+            "published_at": "2026-10-04T09:32:29+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "SoftBank’s Masayoshi Son Has Rare Cautionary Note on AI Safety",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/softbank-s-masayoshi-son-has-rare-cautionary-note-on-ai-safety"
+          },
+          {
+            "published_at": "2026-10-03T12:03:55+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Can AI Outrun America’s Deficit Problem?",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-03/can-ai-outrun-america-s-deficit-problem"
+          }
+        ],
+        "score": 9.211,
+        "section": "tech",
+        "slug": "arm-launches-total-design-for-physical-ai-and-robotics-framework-2538",
+        "source_count": 474,
+        "summary": "The startup aims to offer a cheaper alternative to major providers, potentially disrupting the competitive landscape for US and Chinese rivals.",
+        "top_market": {
+          "end_date": "2026-10-31T16:00:00+00:00",
+          "explainer": "The market resolves to Yes if Google owns the model with the highest rank on the arena.ai Text Arena leaderboard at 12:00 PM ET on October 31, 2026. It resolves to No if any other company holds that top spot at that specific time. Readers often mistake the resolution source, but only data from the specified arena.ai page counts, not general industry reports or other benchmarks.",
+          "id": "0x23858cc44dce48e23f754240a0a71595f38f5c66d9a0eaf612eb5a737ad1e66d",
+          "liquidity": 32615.11737,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.6835
+            },
+            {
+              "name": "No",
+              "price": 0.3165
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120?r=alykhan3",
+          "price_24h_ago": 0.6325,
+          "question": "Will Google have the best AI model at the end of October 2026?",
+          "similarity": 0.8214237689971924,
+          "slug": "will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120",
+          "volume_24h": 30193.219116999993,
+          "volume_total": 395800.3426709998,
+          "yes_price": 0.6835
+        }
+      },
+      {
+        "distinct_publishers": 41,
+        "first_seen_at": "2026-09-07T14:42:24+00:00",
+        "headline": "FTC Probes OpenAI, Anthropic Over AI Safety Risks",
+        "id": 2312,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/fergusonandrew_080526gn01_w.jpg?w=900",
+        "last_seen_at": "2026-10-04T19:00:05+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T12:00:00+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Votes and Verdicts: Anthropic, Live Nation Antitrust, ETF Taxes",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-02/votes-and-verdicts-anthropic-live-nation-antitrust-etf-taxes"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/fergusonandrew_080526gn01_w.jpg?w=900",
+            "published_at": "2026-10-01T19:32:40+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "FTC launches probe into OpenAI, Anthropic over model consumer risks",
+            "url": "https://thehill.com/policy/technology/6124265-ftc-investigates-openai-anthropic"
+          },
+          {
+            "image_url": "https://images.axios.com/Oljo4sMWJ7gbB1B6mXs8BzjQbHw=/0x0:1920x1080/1366x768/2025/12/17/1766006317612.jpeg",
+            "published_at": "2026-09-30T21:31:59+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "AI safety fears put OpenAI and Anthropic in the FTC's crosshairs",
+            "url": "https://www.axios.com/2026/09/30/ftc-openai-anthropic-ai-safety-investigation"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/3d30d827d1d773b0eebf29cea6f8de1d46538a88/0_13_6445_5157/master/6445.jpg?width=140&quality=85&auto=format&fit=max&s=9bfb111711df28e1f824344329e68032",
+            "published_at": "2026-09-30T18:35:05+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "US trade regulator opens investigation into AI giants including Anthropic and OpenAI",
+            "url": "https://www.theguardian.com/us-news/2026/sep/30/ftc-investigation-anthropic-openai"
+          },
+          {
+            "published_at": "2026-09-30T17:07:39+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "US competition watchdog expands investigation of Anthropic and OpenAI",
+            "url": "https://www.ft.com/content/a3075bf9-5b6c-40c8-bb6b-aca4422d1cbb"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/c-block-thumb-93026_B.jpg?w=900",
+            "published_at": "2026-09-30T16:54:09+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "'Existential risks': Anthropic warns its investors about its own AI",
+            "url": "https://thehill.com/opinion/lindseys-lens/6120712-anthropic-ai-existential-risk-ipo"
+          }
+        ],
+        "score": 8.283,
+        "section": "tech",
+        "slug": "uk-ai-policy-architect-matt-clifford-quits-amid-anthropic-conflict-of-inter-2312",
+        "source_count": 254,
+        "summary": "The Federal Trade Commission is investigating potential consumer safety risks posed by the companies' models.",
+        "top_market": {
+          "end_date": "2026-12-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if Anthropic’s model holds the top spot on LiveBench.ai's",
+          "id": "kalshi:KXCODINGMODEL-26DEC-ANTH",
+          "liquidity": 265755.62,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.72
+            },
+            {
+              "name": "No",
+              "price": 0.28
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxcodingmodel-26dec/kxcodingmodel-26dec-anth",
+          "price_24h_ago": 0.75,
+          "question": "Anthropic",
+          "similarity": 0.8466095924377441,
+          "slug": "kxcodingmodel-26dec/kxcodingmodel-26dec-anth",
+          "volume_24h": 954.18,
+          "volume_total": 265755.62,
+          "yes_price": 0.72
+        }
+      },
+      {
+        "distinct_publishers": 52,
+        "first_seen_at": "2026-09-09T06:20:38+00:00",
+        "headline": "Global Leaders and Experts Debate AI Risks, Accountability and Human Impact",
+        "id": 4036,
+        "image_url": "https://images.axios.com/B_IWZhCtb0gHqfTeySbxYc2KCVk=/0x309:4016x2568/1366x768/2026/10/02/1790943476844.jpeg",
+        "last_seen_at": "2026-10-04T14:30:32+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T17:12:02+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Bessent Says AI Industry Must Own Its Risks and Find Solutions",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-03/bessent-says-ai-industry-must-own-its-risks-and-find-solutions"
+          },
+          {
+            "published_at": "2026-10-03T14:03:58+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Why Philosophers Are Worried About AI",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-03/why-philosophers-are-worried-about-ai-video"
+          },
+          {
+            "published_at": "2026-10-02T17:00:00+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Circuit Breaker Labs hopes to make AI safer for your kids (and you)",
+            "url": "https://techcrunch.com/2026/10/02/circuit-breaker-labs-hopes-to-make-ai-safer-for-your-kids-and-you"
+          },
+          {
+            "image_url": "https://images.axios.com/B_IWZhCtb0gHqfTeySbxYc2KCVk=/0x309:4016x2568/1366x768/2026/10/02/1790943476844.jpeg",
+            "published_at": "2026-10-02T12:50:02+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Pope Leo says AI lacks the \"spark of humanity\" — and wants artists and the church to fight back",
+            "url": "https://www.axios.com/2026/10/02/pope-leo-xiv-catcholic-church-ai-waring-artists"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/9a309d1ea3b14dc06fb7f8700f62b9e87a9c4ffb/0_202_2555_2044/master/2555.jpg?width=140&quality=85&auto=format&fit=max&s=06f5db839cb830e4433e36518a2dce97",
+            "published_at": "2026-10-02T10:00:17+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "AI weapons systems are already here. Algorithms must not decide who lives and dies | Kenneth Roth",
+            "url": "https://www.theguardian.com/commentisfree/2026/oct/02/ai-weapons-systems-algorithms-war"
+          },
+          {
+            "image_url": "https://images.axios.com/0NfGFK1mcBLA16ADrtto60NLUpM=/0x0:1920x1080/1366x768/2026/09/25/1790354505848.jpeg",
+            "published_at": "2026-10-02T09:46:38+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Behind the Curtain: AI's existential legal crisis",
+            "url": "https://www.axios.com/2026/10/02/artificial-intelligence-ai-legal-liability"
+          }
+        ],
+        "score": 6.855,
+        "section": "tech",
+        "slug": "anthropic-researcher-warns-ai-could-kill-all-humans-by-2030-4036",
+        "source_count": 363,
+        "summary": "US officials, the Pope and academics warn of AI dangers while urging industry self-regulation and accountability for harms.",
+        "top_market": {
+          "end_date": "2026-12-31T17:00:00+00:00",
+          "explainer": "Anthropic wins if its AI model holds the top spot on Chatbot Arena’s leaderboard at 12:00 PM ET on December 31, 2026. The ranking uses unrounded arena scores to break ties, with alphabetical company name order as the final tiebreaker. Readers often mistake the resolution time or ignore that only models listed under the “Leaderboard” tab count toward the result.",
+          "id": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+          "liquidity": 50388.0013,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.525
+            },
+            {
+              "name": "No",
+              "price": 0.475
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026?r=alykhan3",
+          "question": "Will Anthropic have the best AI model at the end of December 2026?",
+          "similarity": 0.749067485332489,
+          "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026",
+          "volume_24h": 7298.913524000001,
+          "volume_total": 298884.9914189999,
+          "yes_price": 0.525
+        }
+      },
+      {
+        "distinct_publishers": 38,
+        "first_seen_at": "2026-09-11T23:17:42+00:00",
+        "headline": "OpenAI Discloses Hacks, Faces Subpoena as Rogue AI Threatens Security",
+        "id": 9147,
+        "image_url": "https://images.axios.com/mv0xsxVCbS67QhSVNvX7Mne9AiU=/1366x768/smart/2020/11/04/221216-1604527936939.jpg",
+        "last_seen_at": "2026-10-04T11:00:08+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T11:00:08+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Legal risks pile up for Altman as OpenAI uncovers dozens of hacks",
+            "url": "https://www.ft.com/content/2c24ece3-ac99-43a8-b0e6-4a3867e37ebf"
+          },
+          {
+            "image_url": "https://images.axios.com/mv0xsxVCbS67QhSVNvX7Mne9AiU=/1366x768/smart/2020/11/04/221216-1604527936939.jpg",
+            "published_at": "2026-10-03T13:14:17+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Rogue AI agents expose internet's frail foundation",
+            "url": "https://www.axios.com/2026/10/03/rogue-ai-agents-internet-defenses"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/34037c70168080edcdfe41a93dfbb4139efd2e83/626_0_6259_5010/master/6259.jpg?width=140&quality=85&auto=format&fit=max&s=6f9892c44061627604acd384208e6b47",
+            "published_at": "2026-10-03T05:39:22+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "OpenAI says its review into hacks, including on Australian government sites, is costing $500,000 a day",
+            "url": "https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/66aff84926bf65680291f10a84a66ea9f7cd0be6/992_0_5033_4024/master/5033.jpg?width=140&quality=85&auto=format&fit=max&s=2e0ea41abc522dd778de469804a4db80",
+            "published_at": "2026-10-02T10:00:05+00:00",
+            "publisher": "The Guardian Business",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "OpenAI disclose another hack on government department in Australia",
+            "url": "https://www.theguardian.com/technology/2026/oct/02/openai-disclose-another-hack-on-government-department-in-australia"
+          },
+          {
+            "image_url": "https://media.wired.com/photos/6abc2c32f3865c0127252ad0/master/pass/GettyImages-2278945913.jpg",
+            "published_at": "2026-10-02T09:45:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "A Flaw in ChatGPT’s Mac App Could Have Let Hackers Grab Sensitive Data",
+            "url": "https://www.wired.com/story/a-flaw-in-chatgpts-mac-app-could-have-let-hackers-grab-sensitive-data"
+          },
+          {
+            "published_at": "2026-10-02T05:44:09+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "AI Tools Suspected in Korea’s Shinhan Bank Hack, Yonhap Says",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/ai-tools-suspected-in-korea-s-shinhan-bank-hack-yonhap-says"
+          }
+        ],
+        "score": 5.206,
+        "section": "tech",
+        "slug": "openai-agents-attacked-rubygems-before-hacking-hugging-face-9147",
+        "source_count": 175,
+        "summary": "OpenAI warns of unauthorized agent access while California subpoenas the firm amid broader scrutiny of automated cyber threats.",
+        "top_market": {
+          "end_date": "2028-01-11T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if OpenAI is officially classified in the Information Technology sector. It resolves to No if that classification does not happen. Readers often mistake this for a prediction about OpenAI's actions rather than its corporate sector assignment.",
+          "id": "kalshi:KXOPENAISECTOR-XX-INFORMATI",
+          "liquidity": 4366.71,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.9
+            },
+            {
+              "name": "No",
+              "price": 0.09999999999999998
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxopenaisector-xx/kxopenaisector-xx-informati",
+          "price_24h_ago": 0.9,
+          "question": "Information Technology",
+          "similarity": 0.7866327166557312,
+          "slug": "kxopenaisector-xx/kxopenaisector-xx-informati",
+          "volume_24h": 0,
+          "volume_total": 4366.71,
+          "yes_price": 0.9
+        }
+      },
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-10-04T13:48:48+00:00",
+        "headline": "Trump Creates Super Intelligence Force Led By Jay Clayton",
+        "hot": "Odds moved 17 points in 24 hours",
+        "id": 44225,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26272734335711-e1790716509667.jpg?w=900",
+        "last_seen_at": "2026-10-04T18:36:48+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T18:36:48+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Trump names national intelligence chief Jay Clayton as new AI czar",
+            "url": "https://www.npr.org/2026/10/04/nx-s1-5990781/jay-clayton-ai-czar-trump"
+          },
+          {
+            "published_at": "2026-10-04T15:15:10+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Trump unveils his new Super Intelligence Force",
+            "url": "https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force"
+          },
+          {
+            "published_at": "2026-10-04T14:26:20+00:00",
+            "publisher": "Washington Post",
+            "publisher_slug": "washingtonpost-com",
+            "tier": 1,
+            "title": "Trump launches ‘Super Intelligence Force’ after calls for AI slowdown",
+            "url": "https://www.washingtonpost.com/politics/2026/10/04/trump-launches-super-intelligence-force-after-calls-ai-slowdown"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26272734335711-e1790716509667.jpg?w=900",
+            "published_at": "2026-10-04T14:14:23+00:00",
+            "publisher": "Just In News",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump announces 'Super Intelligence Force' led by DNI Jay Clayton",
+            "url": "https://thehill.com/homenews/administration/6128176-trump-creates-super-intelligence-force"
+          },
+          {
+            "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2021/04/bitcoin-jay-clayton-sec-gID_4.jpg@png",
+            "published_at": "2026-10-04T17:01:03+00:00",
+            "publisher": "decrypt.co",
+            "publisher_slug": "decrypt-co",
+            "tier": 2,
+            "title": "Trump Taps Jay Clayton, the SEC Chair Who Sued Ripple, to Lead AI Push",
+            "url": "https://decrypt.co/380019/trump-jay-clayton-sec-ripple-ai-push-super-intelligence"
+          },
+          {
+            "image_url": "https://www.engadget.com/img/gallery/trump-announced-an-ai-czar-for-his-newly-created-super-intelligence-force/l-intro-1791131077.jpg",
+            "published_at": "2026-10-04T16:29:26+00:00",
+            "publisher": "Engadget",
+            "publisher_slug": "engadget-com",
+            "tier": 2,
+            "title": "Trump announces an AI czar for his newly created 'Super Intelligence Force'",
+            "url": "https://www.engadget.com/2276762/trump-announces-an-ai-czar-for-his-newly-created-super-intelligence-force"
+          }
+        ],
+        "score": 4.765,
+        "section": "tech",
+        "slug": "trump-creates-super-intelligence-force-led-by-jay-clayton-to-advance-ai-de-44225",
+        "source_count": 8,
+        "summary": "The new task force coordinates federal AI policy and reports to the president and Chief of Staff Susie Wiles.",
+        "top_market": {
+          "call": {
+            "correct": true,
+            "favourite": "Yes",
+            "favourite_price": 0.87
+          },
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to \"Yes\" if the White House announces Donald Trump's selection of Jay Clayton as AI czar after the issuance date and before January 1, 2027. Otherwise, it resolves to \"No.\" Readers often mistakenly believe that any mention of Jay Clayton in relation to AI policy counts toward resolution, but only an official White House announcement of his selection as AI czar matters.",
+          "id": "kalshi:KXTRUMPAICZAR-26SEP-JCLA",
+          "liquidity": 14940.98,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.85
+            },
+            {
+              "name": "No",
+              "price": 0.15000000000000002
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtrumpaiczar-26sep/kxtrumpaiczar-26sep-jcla",
+          "price_24h_ago": 0.87,
+          "question": "Jay Clayton",
+          "resolved_at": "2026-10-04T17:47:41+00:00",
+          "resolved_outcome": "Yes",
+          "similarity": 0.804537832736969,
+          "slug": "kxtrumpaiczar-26sep/kxtrumpaiczar-26sep-jcla",
+          "volume_24h": 5851.27,
+          "volume_total": 14940.98,
+          "yes_price": 0.85
+        },
+        "verdict": {
+          "kind": "moved",
+          "moved": -0.16500000000000004
+        }
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-09-29T14:10:50+00:00",
+        "headline": "Amazon Launches Redesigned Kindle Lineup With New Colors and Slimmer Design",
+        "id": 36017,
+        "image_url": "https://media.wired.com/photos/6ac0197d8e2ff9873e4241c1/master/pass/The%20Best%20E-Readers%20That%20Aren't%20a%20Kindle%20102026%20top%20art%20SOURCE%20Kobo.jpg",
+        "last_seen_at": "2026-10-04T12:00:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T12:00:00+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Amazon’s colorful and sturdy new Kindles",
+            "url": "https://www.theverge.com/tech/1004199/amazon-kindle-openai-dots-witcher-3-remastered-bose-wired-headphones"
+          },
+          {
+            "image_url": "https://media.wired.com/photos/6ac0197d8e2ff9873e4241c1/master/pass/The%20Best%20E-Readers%20That%20Aren't%20a%20Kindle%20102026%20top%20art%20SOURCE%20Kobo.jpg",
+            "published_at": "2026-10-03T11:05:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "The Best E-Readers That Aren't a Kindle (2026): Kobo, Boox",
+            "url": "https://www.wired.com/gallery/best-ereaders"
+          },
+          {
+            "published_at": "2026-10-01T13:00:04+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Amazon Debuts 2026 Kindles: 6-Inch Kindle, Paperwhite, Colorsoft",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/amazon-debuts-2026-kindles-6-inch-kindle-paperwhite-colorsoft"
+          },
+          {
+            "image_url": "https://media.wired.com/photos/6abe13780f613e5391667af0/master/pass/New%20Kindles%202026%20SOURCE%20Julian%20Chokkattu.jpg",
+            "published_at": "2026-10-01T13:00:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "Amazon Kindle, Paperwhite, and Colorsoft 2026: Specs, Price, Release Date",
+            "url": "https://www.wired.com/story/amazon-kindle-paperwhite-colorsoft-2026-refresh"
+          },
+          {
+            "published_at": "2026-10-01T13:00:00+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Amazon is launching colorful new Kindles — and a case with physical page-turn buttons",
+            "url": "https://www.theverge.com/tech/1002811/amazon-kindle-paperwhite-colorsoft-accessory-refresh"
+          },
+          {
+            "published_at": "2026-10-01T13:00:00+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "The new Kindle ditches the bezel in a push toward a smaller, lighter e-reader",
+            "url": "https://techcrunch.com/2026/10/01/the-new-kindle-ditches-the-bezel-in-a-push-toward-a-smaller-lighter-e-reader"
+          }
+        ],
+        "score": 2.603,
+        "section": "tech",
+        "slug": "leaked-images-reveal-new-colors-for-amazon-s-next-entry-level-kindle-36017",
+        "source_count": 12,
+        "summary": "Amazon has released updated entry-level, Paperwhite, and Colorsoft e-readers featuring thinner aluminum builds, flush displays, and new color options ahead of the device's 20th anniversary."
+      },
+      {
+        "distinct_publishers": 40,
+        "first_seen_at": "2026-09-06T17:01:04+00:00",
+        "headline": "OpenAI CEO Criticizes Anthropic's AI Consciousness Work Amid Safety Concerns",
+        "id": 1993,
+        "image_url": "https://images.axios.com/1ZZzR24AQINevoKpIzjB9HCb8KI=/0x2:3464x1950/1366x768/2026/10/03/1791041393482.jpeg",
+        "last_seen_at": "2026-10-03T19:45:23+00:00",
+        "publishers": [
+          {
+            "image_url": "https://images.axios.com/1ZZzR24AQINevoKpIzjB9HCb8KI=/0x2:3464x1950/1366x768/2026/10/03/1791041393482.jpeg",
+            "published_at": "2026-10-03T15:41:59+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "OpenAI's Altman: Ascribing religion to models a \"safety issue\"",
+            "url": "https://www.axios.com/2026/10/03/openai-anthropic-altman-amodei-religious-force-models"
+          },
+          {
+            "published_at": "2026-10-03T13:13:42+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "OpenAI Safety Employee Quits, Calls for Nuclear-Level Safeguards",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-03/openai-safety-employee-quits-calls-for-nuclear-level-safeguards"
+          },
+          {
+            "published_at": "2026-10-02T22:15:22+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "NYU's Gary Marcus on AI development concerns",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/nyu-s-gary-marcus-on-ai-development-concerns-video"
+          },
+          {
+            "published_at": "2026-10-02T18:00:00+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent"
+          },
+          {
+            "published_at": "2026-10-02T17:37:58+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Lockheed Taps OpenAI to Solve F-35 Challenges",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/lockheed-taps-openai-to-solve-f-35-challenges-video"
+          },
+          {
+            "published_at": "2026-10-01T20:00:01+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "OpenAI and Meta Push Ahead With AI Agents, Testing Public’s Trust",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-10-01/openai-and-meta-push-ahead-with-ai-agents-testing-public-s-trust"
+          }
+        ],
+        "score": 2.262,
+        "section": "tech",
+        "slug": "openai-releases-gpt-6-astra-boosting-oracle-stock-and-revealing-ad-strategy-1993",
+        "source_count": 362,
+        "summary": "Sam Altman warns against attributing religious power to models as OpenAI launches new agents and parts with employees over safety and data handling.",
+        "top_market": {
+          "end_date": "2026-10-31T16:00:00+00:00",
+          "explainer": "The market resolves by checking the arena.ai Text Arena leaderboard on October 31, 2026, at 12:00 PM ET. OpenAI wins if its model holds the highest rank among eligible models at that specific time and source. Readers often mistake the check date for the end of the month or overlook that auto-evaluated models are excluded from the ranking.",
+          "id": "0xadf826589a83573dbb33c5fcfcfac6fd3d472dfa4a0a0779cb9491dbcb8e9223",
+          "liquidity": 55506.21533,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.011
+            },
+            {
+              "name": "No",
+              "price": 0.989
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-openai-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841123?r=alykhan3",
+          "price_24h_ago": 0.0075,
+          "question": "Will OpenAI have the best AI model at the end of October 2026?",
+          "similarity": 0.852569580078125,
+          "slug": "will-openai-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841123",
+          "volume_24h": 23830.79857799999,
+          "volume_total": 238420.71106299997,
+          "yes_price": 0.011
+        }
+      },
+      {
+        "distinct_publishers": 8,
+        "first_seen_at": "2026-10-01T15:45:55+00:00",
+        "headline": "Judge Dismisses Antitrust Lawsuits Against Google Over AI Search Snippets",
+        "id": 40371,
+        "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/05/Google-sign-IO-1152x648.jpg",
+        "last_seen_at": "2026-10-04T04:00:06+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T04:00:06+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Google set to defend £1.2bn UK lawsuit over ‘excessive’ app download charges",
+            "url": "https://www.ft.com/content/25272ffd-fd7e-4a69-97b3-cfcb3f98e646"
+          },
+          {
+            "published_at": "2026-10-01T20:32:26+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Google Wins Dismissal of PMC Lawsuit Over AI Search Snippets",
+            "url": "https://www.hollywoodreporter.com/business/business-news/google-wins-dismissal-of-pmc-lawsuit-over-ai-search-snippets-1236720513"
+          },
+          {
+            "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2025/05/Google-sign-IO-1152x648.jpg",
+            "published_at": "2026-10-01T20:11:55+00:00",
+            "publisher": "Ars Technica",
+            "publisher_slug": "arstechnica-com",
+            "tier": 1,
+            "title": "Antitrust lawsuits targeting Google AI search dismissed by federal judge",
+            "url": "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge"
+          },
+          {
+            "published_at": "2026-10-01T17:12:21+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Judge dismisses antitrust lawsuits over Google’s AI Overviews",
+            "url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed"
+          },
+          {
+            "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2252501501.jpg",
+            "published_at": "2026-10-02T12:00:31+00:00",
+            "publisher": "Quartz",
+            "publisher_slug": "qz-com",
+            "tier": 2,
+            "title": "Google won a court dismissal of publishers' antitrust suits over AI search summaries",
+            "url": "https://qz.com/google-antitrust-dismissal-chegg-penske-ai-search-summaries-100226"
+          },
+          {
+            "image_url": "https://www.engadget.com/img/gallery/judge-dismisses-lawsuits-claiming-googles-ai-overviews-siphon-web-traffic/l-intro-1790882295.jpg",
+            "published_at": "2026-10-01T19:20:32+00:00",
+            "publisher": "Engadget",
+            "publisher_slug": "engadget-com",
+            "tier": 2,
+            "title": "Judge dismisses lawsuits claiming Google's AI Overviews siphon web traffic",
+            "url": "https://www.engadget.com/2275023/judge-dismisses-lawsuits-claiming-googles-ai-overviews-siphon-web-traffic"
+          }
+        ],
+        "score": 2.116,
+        "section": "tech",
+        "slug": "judge-dismisses-antitrust-lawsuits-against-google-over-ai-search-features-40371",
+        "source_count": 8,
+        "summary": "US District Judge Amit Mehta ruled that publishers Chegg and Penske Media failed to prove Google leveraged its search monopoly, dismissing their antitrust claims regarding AI Overviews.",
+        "top_market": {
+          "end_date": "2026-10-31T16:00:00+00:00",
+          "explainer": "The market resolves to Yes if Google owns the model with the highest rank on the arena.ai Text Arena leaderboard at 12:00 PM ET on October 31, 2026. It resolves to No if any other company holds that top spot at that specific time. Readers often mistake the resolution source, but only data from the specified arena.ai page counts, not general industry reports or other benchmarks.",
+          "id": "0x23858cc44dce48e23f754240a0a71595f38f5c66d9a0eaf612eb5a737ad1e66d",
+          "liquidity": 32615.11737,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.6835
+            },
+            {
+              "name": "No",
+              "price": 0.3165
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120?r=alykhan3",
+          "price_24h_ago": 0.6325,
+          "question": "Will Google have the best AI model at the end of October 2026?",
+          "similarity": 0.7211756706237793,
+          "slug": "will-google-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841120",
+          "volume_24h": 30193.219116999993,
+          "volume_total": 395800.3426709998,
+          "yes_price": 0.6835
+        },
+        "verdict": {
+          "kind": "anticipated",
+          "moved": 0.604
+        }
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-09-30T17:21:29+00:00",
+        "headline": "Amazon Smart Glasses for Delivery Drivers Raise Privacy Fears",
+        "id": 38522,
+        "image_url": "https://media.wired.com/photos/6ac01e4e87049b21d32345fe/master/pass/Meta%20Glasses%20Nova%20Tonal-resized.jpg",
+        "last_seen_at": "2026-10-04T10:30:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://media.wired.com/photos/6ac01e4e87049b21d32345fe/master/pass/Meta%20Glasses%20Nova%20Tonal-resized.jpg",
+            "published_at": "2026-10-04T10:30:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "Meta Glasses Nova (Gen 3) Review: Not Much New",
+            "url": "https://www.wired.com/review/meta-glasses-gen-3"
+          },
+          {
+            "published_at": "2026-10-02T14:53:43+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Amazon’s Smart Glasses Raise Privacy Fears",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/opinion-amazon-s-smart-glasses-raise-privacy-fears-video"
+          },
+          {
+            "published_at": "2026-09-30T17:21:29+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Amazon’s delivery driver smart glasses will reportedly take photos ‘almost constantly’",
+            "url": "https://www.theverge.com/tech/1002766/amazon-delivery-driver-smart-glasses-privacy"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/image-19.png",
+            "published_at": "2026-10-01T18:36:32+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "This Tech Offers a Tentative Fix for the ‘Pervert Glasses’ Problem",
+            "url": "https://www.cnet.com/tech/mobile/smart-glasses-facial-obfuscation-qualcomm-chips"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/amazon-driver-ai-smart-glasses.jpg",
+            "published_at": "2026-10-01T00:50:16+00:00",
+            "publisher": "cnet.com",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "Amazon Delivery Driver Smart Glasses Will Snap Pictures of… Everything?",
+            "url": "https://www.cnet.com/tech/amazon-delivery-driver-ai-smart-glasses-privacy"
+          }
+        ],
+        "score": 1.622,
+        "section": "tech",
+        "slug": "amazon-delivery-driver-smart-glasses-to-take-photos-almost-constantly-38522",
+        "source_count": 5,
+        "summary": "The rollout of AI-enabled smart glasses that capture thousands of images per shift has sparked concerns over privacy and data use."
+      },
+      {
+        "distinct_publishers": 30,
+        "first_seen_at": "2026-09-08T19:00:00+00:00",
+        "headline": "Meta Open Sources Code for Muse AI Agent to Let Users Build Custom Gadgets",
+        "id": 3282,
+        "image_url": "https://media.wired.com/photos/6abda258fa5a1bd6e2b21507/master/pass/Kernel-Panic-Muse-AI-Self-PWN-Security.jpg",
+        "last_seen_at": "2026-10-03T14:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://media.wired.com/photos/6abda258fa5a1bd6e2b21507/master/pass/Kernel-Panic-Muse-AI-Self-PWN-Security.jpg",
+            "published_at": "2026-10-03T12:00:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "Muse Creates Detailed Profiles of All Your Friends and Family",
+            "url": "https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family"
+          },
+          {
+            "published_at": "2026-10-03T00:45:39+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Meta wants you to build your own Muse gadget",
+            "url": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget"
+          },
+          {
+            "published_at": "2026-10-02T21:08:37+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Meta open sources code to let you make Muse AI gadgets",
+            "url": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link"
+          },
+          {
+            "image_url": "https://media.wired.com/photos/6abc30af03c559dbc086f308/master/pass/AI-Lab-AI-Agent-War-Business.jpg",
+            "published_at": "2026-09-30T19:30:00+00:00",
+            "publisher": "Feed: All Latest",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "The Battle to Be Your Personal AI Agent Is Here",
+            "url": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out"
+          },
+          {
+            "published_at": "2026-09-30T16:24:23+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Meta disputes claim that Muse read a user’s private messages without permission",
+            "url": "https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission"
+          },
+          {
+            "published_at": "2026-09-30T15:18:49+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "All the latest news on Meta’s cute, creepy Muse AI agent",
+            "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai"
+          }
+        ],
+        "score": 1.519,
+        "section": "tech",
+        "slug": "meta-unveils-muse-an-ai-personal-assistant-linked-to-whatsapp-and-instagram-3282",
+        "source_count": 217,
+        "summary": "Meta has released open-source code allowing developers to create custom hardware devices powered by its Muse AI agent, expanding the platform's accessibility beyond official products.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if Meta owns the model with the highest rank on the specified arena.ai leaderboard at 12:00 PM ET on October 31, 2026. It resolves to No if any other company holds that top spot or if the source becomes permanently unavailable. Readers often mistake the resolution time for the end of the day rather than the specific 12:00 PM ET deadline.",
+          "id": "0x1cf218efb6ef7336fd0f60cca5c4b9e7ffcc6263359fa1827b84ef2d96fd982b",
+          "liquidity": 59852.16948,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.0035
+            },
+            {
+              "name": "No",
+              "price": 0.9965
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-meta-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841119?r=alykhan3",
+          "price_24h_ago": 0.002,
+          "question": "Will Meta have the best AI model at the end of October 2026?",
+          "similarity": 0.8256402015686035,
+          "slug": "will-meta-have-the-best-ai-model-at-the-end-of-october-2026-20260811194841119",
+          "volume_24h": 22229.923168,
+          "volume_total": 190569.882976,
+          "yes_price": 0.0035
+        }
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-01T12:50:36+00:00",
+        "headline": "Keurig Launches Plastic-Free Alta Coffee Machine Using Plant-Based Pods",
+        "id": 39915,
+        "image_url": "https://media.wired.com/photos/6ac011d787049b21d32345f2/master/pass/Keurig%20New%20Alta%20System%20102026%20top%20art%20SOURCE%20Keurig.jpg",
+        "last_seen_at": "2026-10-04T09:30:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://media.wired.com/photos/6ac011d787049b21d32345f2/master/pass/Keurig%20New%20Alta%20System%20102026%20top%20art%20SOURCE%20Keurig.jpg",
+            "published_at": "2026-10-04T09:30:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "Keurig Alta First-Look: No More Plastic K-Cups",
+            "url": "https://www.wired.com/story/keurig-alta-coffee-brewer"
+          },
+          {
+            "published_at": "2026-10-02T14:29:05+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Keurig’s new machine uses plastic-free compressed coffee pucks",
+            "url": "https://www.theverge.com/tech/1003956/keurig-alta-coffee-machine-altarounds-pucks-appliance-preorder"
+          },
+          {
+            "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/GettyImages-2246707190.jpg",
+            "published_at": "2026-10-02T18:01:57+00:00",
+            "publisher": "Quartz",
+            "publisher_slug": "qz-com",
+            "tier": 2,
+            "title": "Keurig is launching plastic-free, compostable coffee pods",
+            "url": "https://qz.com/keurig-alta-plastic-free-compostable-coffee-pods-100226"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/Alta_Llifestyle_3QBrewing.jpg",
+            "published_at": "2026-10-01T12:50:36+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "Keurig’s Plastic-Free Pod Coffee System Has Finally Arrived, and We Tried It First",
+            "url": "https://www.cnet.com/home/kitchen-and-household/keurigs-plastic-free-pod-coffee-system-has-finally-arrived-and-we-tried-it-first"
+          }
+        ],
+        "score": 1.315,
+        "section": "tech",
+        "slug": "keurig-launches-plastic-free-alta-coffee-machine-using-plant-based-pods-39915",
+        "source_count": 4,
+        "summary": "The company has released the Alta brewer, which uses 100% plastic-free AltaRounds made from pressed coffee grounds and a plant-based coating."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-04T14:00:01+00:00",
+        "headline": "Apple's John Ternus Leads Design for Lighter Touch-Screen OLED MacBook Pro",
+        "id": 44230,
+        "image_url": "https://www.engadget.com/img/gallery/the-upcoming-touchscreen-oled-macbook-pro-is-reportedly-significantly-lighter/l-intro-1791141971.jpg",
+        "last_seen_at": "2026-10-04T19:27:15+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T14:00:01+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Apple’s John Ternus Leads Design; Touch-Screen OLED MacBook Pro Gets Lighter",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-10-04/apple-s-john-ternus-leads-design-touch-screen-oled-macbook-pro-gets-lighter"
+          },
+          {
+            "image_url": "https://www.engadget.com/img/gallery/the-upcoming-touchscreen-oled-macbook-pro-is-reportedly-significantly-lighter/l-intro-1791141971.jpg",
+            "published_at": "2026-10-04T19:27:15+00:00",
+            "publisher": "RSS 2.0",
+            "publisher_slug": "engadget-com",
+            "tier": 2,
+            "title": "The upcoming touchscreen OLED MacBook Pro is reportedly 'significantly lighter'",
+            "url": "https://www.engadget.com/2276786/the-upcoming-touchscreen-oled-macbook-pro-is-reportedly-significantly-lighter"
+          }
+        ],
+        "score": 1.3,
+        "section": "tech",
+        "slug": "apple-s-john-ternus-leads-design-for-lighter-touch-screen-oled-macbook-pro-44230",
+        "source_count": 2,
+        "summary": "John Ternus is leading the design team as Apple develops a lighter MacBook Pro featuring a touch-screen OLED display."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-04T01:12:22+00:00",
+        "headline": "Jagex Developing Fourth RuneScape Game Using Unreal Engine",
+        "id": 43880,
+        "image_url": "https://www.engadget.com/img/gallery/a-fourth-runescape-game-is-under-development-using-unreal-engine/l-intro-1791137033.jpg",
+        "last_seen_at": "2026-10-04T18:05:53+00:00",
+        "publishers": [
+          {
+            "image_url": "https://www.engadget.com/img/gallery/a-fourth-runescape-game-is-under-development-using-unreal-engine/l-intro-1791137033.jpg",
+            "published_at": "2026-10-04T18:05:53+00:00",
+            "publisher": "Engadget",
+            "publisher_slug": "engadget-com",
+            "tier": 2,
+            "title": "A fourth RuneScape game is under development using Unreal Engine",
+            "url": "https://www.engadget.com/2276772/a-fourth-runescape-game-is-under-development-using-unreal-engine"
+          },
+          {
+            "published_at": "2026-10-04T01:12:22+00:00",
+            "publisher": "Hacker News",
+            "publisher_slug": "ycombinator-com",
+            "tier": 3,
+            "title": "We're working on a new RuneScape MMO",
+            "url": "https://play.runescape.com/4"
+          }
+        ],
+        "score": 0.965,
+        "section": "tech",
+        "slug": "jagex-developing-fourth-runescape-game-using-unreal-engine-43880",
+        "source_count": 2,
+        "summary": "The studio plans to reveal further details about the new title, tentatively called RS4, next year."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-02T21:19:05+00:00",
+        "headline": "SQL Database Renders Doom at 35 FPS",
+        "id": 42557,
+        "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/doomsql-1152x648-1790974550.png",
+        "last_seen_at": "2026-10-04T14:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/doomsql-1152x648-1790974550.png",
+            "published_at": "2026-10-02T21:19:05+00:00",
+            "publisher": "Ars Technica",
+            "publisher_slug": "arstechnica-com",
+            "tier": 1,
+            "title": "Can it run Doom: SQL database edition",
+            "url": "https://arstechnica.com/gaming/2026/10/can-it-run-doom-sql-database-edition"
+          },
+          {
+            "image_url": "https://cdn.mos.cms.futurecdn.net/osXJbTYcHoB7PvbPGLU4ij-1920-80.png",
+            "published_at": "2026-10-04T14:00:00+00:00",
+            "publisher": "Latest from Tom's Hardware",
+            "publisher_slug": "tomshardware-com",
+            "tier": 2,
+            "title": "Database expert runs Doom in SQL with just 5,900 lines of code",
+            "url": "https://www.tomshardware.com/video-games/pc-gaming/database-expert-runs-doom-in-sql-with-just-5-900-lines-of-code-1-300-line-graphical-renderer-spans-89-different-tables-full-featured-sqldoom-is-the-sequel-to-embryonic-doomql"
+          }
+        ],
+        "score": 0.96,
+        "section": "tech",
+        "slug": "sql-database-renders-doom-at-35-fps-42557",
+        "source_count": 2,
+        "summary": "A developer uses 1,300 lines of SQL to render accurate bitmapped views of the game Doom at 35 frames per second."
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-09-28T16:47:49+00:00",
+        "headline": "Apple iPhone Duo Sales Forecast at 6 Million Units Amid Production Hurdles",
+        "hot": "Odds moved 14 points in 24 hours",
+        "id": 34491,
+        "image_url": "https://www.engadget.com/img/gallery/iphone-duo-vs-ipad-mini-which-apple-device-is-right-for-you/l-intro-1790697064.jpg",
+        "last_seen_at": "2026-10-03T15:30:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-09-30T02:35:44+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Apple Will Sell 6 Million iPhone Duos in 2026, Counterpoint Says",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/apple-will-sell-6-million-iphone-duos-in-2026-counterpoint-says"
+          },
+          {
+            "published_at": "2026-09-28T16:47:49+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "The iPhone Duo may already have its first killer app: a virtual Walkman",
+            "url": "https://techcrunch.com/2026/09/28/the-iphone-duo-may-already-have-its-first-killer-app-a-virtual-walkman"
+          },
+          {
+            "image_url": "https://www.engadget.com/img/gallery/iphone-duo-vs-ipad-mini-which-apple-device-is-right-for-you/l-intro-1790697064.jpg",
+            "published_at": "2026-10-03T15:30:00+00:00",
+            "publisher": "Engadget",
+            "publisher_slug": "engadget-com",
+            "tier": 2,
+            "title": "iPhone Duo vs. iPad Mini: Which Apple device is right for you?",
+            "url": "https://www.engadget.com/2273344/iphone-duo-vs-ipad-mini-which-right-comparison"
+          },
+          {
+            "image_url": "https://qz.com/cdn-cgi/image/width=600,quality=85,format=auto/https://assets.qz.com/media/Apple-iPhone-Duo-colors-260909.jpg",
+            "published_at": "2026-10-02T12:20:27+00:00",
+            "publisher": "Quartz",
+            "publisher_slug": "qz-com",
+            "tier": 2,
+            "title": "Jim Cramer is urging investors to buy Apple stock ahead of foldable iPhone launch",
+            "url": "https://qz.com/jim-cramer-apple-stock-foldable-iphone-duo-100226"
+          },
+          {
+            "image_url": "https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/vip/2026/09/iphone-duo-inc-GettyImages-2293834700.jpg",
+            "published_at": "2026-09-30T15:30:51+00:00",
+            "publisher": "Inc.",
+            "publisher_slug": "inc-com",
+            "tier": 2,
+            "title": "Apple’s $1,999 Foldable iPhone Is Reportedly Facing a Production Problem. Samsung Knows It Well",
+            "url": "https://www.inc.com/moses-jeanfrancois/apple-foldable-iphone-reportedly-facing-production-problem-samsung-knows-well/91412233"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/iPhone-Duo-still-17.jpg",
+            "published_at": "2026-09-30T12:00:00+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "The iPhone Duo Isn’t for Everyone. It Doesn’t Need to Be",
+            "url": "https://www.cnet.com/tech/mobile/iphone-duo-isnt-for-everyone"
+          }
+        ],
+        "score": 0.75,
+        "section": "tech",
+        "slug": "virtual-walkman-app-emerges-for-iphone-duo-34491",
+        "source_count": 9,
+        "summary": "Counterpoint Research estimates Apple will sell 6 million iPhone Duo units in 2026, despite reports of production challenges and a $1,999 price tag.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Apple makes a foldable smartphone available for public purchase by December 31, 2026, at 11:59 PM ET. The product does not need to carry the iPhone brand name, but an announcement alone is insufficient; it must be purchasable. Readers often mistake the deadline date or assume that a mere unveiling counts as a release.",
+          "id": "0x7209592f294c2b3a7230ea66a4483ecfe1a57ae79144e5e735654829e00cfc68",
+          "liquidity": 17356.82162,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.9945
+            },
+            {
+              "name": "No",
+              "price": 0.0055
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-apple-release-a-foldable-iphone-before-2027?r=alykhan3",
+          "price_24h_ago": 0.9800000000000001,
+          "question": "Will Apple release a foldable iPhone before 2027?",
+          "similarity": 0.8249707221984863,
+          "slug": "will-apple-release-a-foldable-iphone-before-2027",
+          "volume_24h": 409.13,
+          "volume_total": 704219.6498840002,
+          "yes_price": 0.9945
+        }
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-04T04:28:23+00:00",
+        "headline": "AI Cracks 217-Year-Old Napoleonic Code in Six Hours",
+        "id": 43878,
+        "image_url": "https://cdn.mos.cms.futurecdn.net/7NDTHseunp2EUkVBhZHe5Q-1920-80.jpg",
+        "last_seen_at": "2026-10-04T13:08:46+00:00",
+        "publishers": [
+          {
+            "image_url": "https://cdn.mos.cms.futurecdn.net/7NDTHseunp2EUkVBhZHe5Q-1920-80.jpg",
+            "published_at": "2026-10-04T13:08:46+00:00",
+            "publisher": "Latest from Tom's Hardware",
+            "publisher_slug": "tomshardware-com",
+            "tier": 2,
+            "title": "ChatGPT-6 Astra cracks 217-year-old Napoleonic code in just six hours",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-217-year-old-napoleonic-code-in-just-six-hours-single-prompt-ai-run-solves-24-rows-of-custom-symbols-from-a-single-image-reveals-lost-troop-orders"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134655826,imgsize-787033.cms",
+            "published_at": "2026-10-04T04:28:23+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Napoleon's 1809 code baffled for 217 years, AI cracked it in 6 hours",
+            "url": "https://timesofindia.indiatimes.com/science/archaeology/in-1809-napoleon-bonaparte-sent-a-coded-message-to-his-general-it-remained-mysterious-for-217-years-until-ai-cracked-the-meaning-in-6-hours/articleshow/134655800.cms"
+          }
+        ],
+        "score": 0.733,
+        "section": "tech",
+        "slug": "ai-cracks-217-year-old-napoleonic-code-in-six-hours-43878",
+        "source_count": 2,
+        "summary": "Engineer Carter Church used GPT-6 Astra to decode a lost military cipher from 1809, revealing troop placements previously unknown for two centuries."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-02T12:20:02+00:00",
+        "headline": "Attachment Theory Explains Depth Of Human AI Relationships",
+        "id": 41609,
+        "image_url": "https://scx1.b-cdn.net/csz/news/tmb/2026/human-ai-relationship.jpg",
+        "last_seen_at": "2026-10-04T10:00:00+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T10:00:00+00:00",
+            "publisher": "Scientific American",
+            "publisher_slug": "scientificamerican-com",
+            "tier": 2,
+            "title": "How attachment theory can help us understand AI relationships",
+            "url": "https://www.scientificamerican.com/article/how-attachment-theory-can-help-us-understand-ai-relationships"
+          },
+          {
+            "image_url": "https://scx1.b-cdn.net/csz/news/tmb/2026/human-ai-relationship.jpg",
+            "published_at": "2026-10-02T12:20:02+00:00",
+            "publisher": "Phys.org - latest science and technology news stories",
+            "publisher_slug": "phys-org",
+            "tier": 2,
+            "title": "How deep do AI relationships really go? Attachment theory expert explains",
+            "url": "https://phys.org/news/2026-10-deep-ai-relationships-theory-expert.html"
+          }
+        ],
+        "score": 0.615,
+        "section": "tech",
+        "slug": "attachment-theory-explains-depth-of-human-ai-relationships-41609",
+        "source_count": 2,
+        "summary": "Experts apply psychological attachment theory to define the conditions required for significant bonds between people and artificial intelligence."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-09-18T05:38:50+00:00",
+        "headline": "CNET Publishes Daily NYT Wordle, Connections, Strands, and Mini Crossword Answers for Early October 2026",
+        "id": 19346,
+        "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/50d61b9b-1c76-4678-9a92-f6eca531f4a8.jpg",
+        "last_seen_at": "2026-10-04T03:26:29+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-09-26T23:00:08+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Sunday Number 164: News Puzzle",
+            "url": "https://www.ft.com/content/f7606e46-0132-494d-a3d3-29dc46176bb6"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/50d61b9b-1c76-4678-9a92-f6eca531f4a8.jpg",
+            "published_at": "2026-10-04T03:26:29+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "Today’s NYT Mini Crossword Answers for Sunday, Oct. 4",
+            "url": "https://www.cnet.com/tech/gaming/todays-nyt-mini-crossword-answers-for-sunday-oct-4"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/Sports-Connections-main-art.webp",
+            "published_at": "2026-10-04T03:14:05+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "Today’s NYT Connections: Sports Edition Hints and Answers for Oct. 4, #741",
+            "url": "https://www.cnet.com/tech/gaming/todays-nyt-connections-sports-edition-hints-and-answers-for-oct-4-741"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/Main-Connections-art.webp",
+            "published_at": "2026-10-03T20:00:00+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "Today’s NYT Connections Hints and Answers for Oct. 4, #1211",
+            "url": "https://www.cnet.com/tech/gaming/todays-nyt-connections-hints-and-answers-for-oct-4-1211"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/859c9110-e596-432b-8690-95e6102759c9.jpg",
+            "published_at": "2026-10-03T20:00:00+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "Today’s NYT Strands Hints, Answers and Help for Oct. 4, #945",
+            "url": "https://www.cnet.com/tech/gaming/todays-nyt-strands-hints-answers-and-help-for-oct-4-945"
+          },
+          {
+            "image_url": "https://www.cnet.com/wp-content/uploads/sites/2/20480816-214e-4fcc-a9b4-b02f0ac71e7c.jpg",
+            "published_at": "2026-10-03T20:00:00+00:00",
+            "publisher": "CNET",
+            "publisher_slug": "cnet-com",
+            "tier": 2,
+            "title": "Today’s Wordle Hints, Answer and Help for Oct. 4, #1933",
+            "url": "https://www.cnet.com/tech/gaming/todays-wordle-hints-answer-and-help-for-oct-4-1933"
+          }
+        ],
+        "score": 0.534,
+        "section": "tech",
+        "slug": "nyt-puzzle-answers-provided-for-multiple-dates-19346",
+        "source_count": 81,
+        "summary": "CNET provides hints and solutions for New York Times puzzles including Wordle, Connections, Strands, and the Mini Crossword for dates in early October 2026."
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-10-02T14:52:16+00:00",
+        "headline": "Nvidia Shield TV Pro Price Hikes to $299 Amid AI Push",
+        "id": 41869,
+        "image_url": "https://media.wired.com/photos/6ac00d9bc910b804171a679e/master/pass/GettyImages-474968764.jpg",
+        "last_seen_at": "2026-10-03T18:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://media.wired.com/photos/6ac00d9bc910b804171a679e/master/pass/GettyImages-474968764.jpg",
+            "published_at": "2026-10-03T18:00:00+00:00",
+            "publisher": "WIRED",
+            "publisher_slug": "wired-com",
+            "tier": 1,
+            "title": "The Nvidia Shield TV Is 7 Years Old. It Just Got a $100 Price Hike",
+            "url": "https://www.wired.com/story/7-year-old-tv-now-100-dollars-more-expensive-thank-ai"
+          },
+          {
+            "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/01/Shield-10-yrs-1-1152x648.jpg",
+            "published_at": "2026-10-02T14:52:16+00:00",
+            "publisher": "Ars Technica",
+            "publisher_slug": "arstechnica-com",
+            "tier": 1,
+            "title": "The 7-year-old Nvidia Shield TV is now $100 more expensive thanks to AI",
+            "url": "https://arstechnica.com/gadgets/2026/10/the-7-year-old-nvidia-shield-tv-is-now-100-more-expensive-thanks-to-ai"
+          },
+          {
+            "image_url": "https://cdn.mos.cms.futurecdn.net/o6Rt8XTz7gaqvL46TZcxzg-1920-80.jpg",
+            "published_at": "2026-10-03T16:59:51+00:00",
+            "publisher": "Latest from Tom's Hardware",
+            "publisher_slug": "tomshardware-com",
+            "tier": 2,
+            "title": "7-year-old Nvidia Shield TV Pro gets shocking 50% price hike driven by AI memory shortage",
+            "url": "https://www.tomshardware.com/service-providers/streaming/7-year-old-nvidia-shield-tv-pro-gets-shocking-50-percent-price-hike-driven-by-ai-memory-shortage-chipmaker-axes-entry-level-shield-tv-as-component-prices-soar"
+          }
+        ],
+        "score": 0.479,
+        "section": "tech",
+        "slug": "nvidia-shield-tv-pro-price-hikes-to-299-amid-ai-push-41869",
+        "source_count": 3,
+        "summary": "The Nvidia Shield TV Pro now costs $299.99, a $100 increase from its previous price."
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-09-28T16:32:35+00:00",
+        "headline": "Netflix Loses Key Creators David Fincher and Shawn Levy as It Pivots Strategy",
+        "id": 34476,
+        "image_url": "https://variety.com/wp-content/uploads/2023/09/GettyImages-1657363318.jpg",
+        "last_seen_at": "2026-10-02T20:30:26+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T20:30:26+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Netflix is pivoting away from prestige",
+            "url": "https://www.theverge.com/streaming/1004323/netflix-david-fincher-shawn-levy-mike-flanagan-duffer-brothers-greta-gerwig"
+          },
+          {
+            "published_at": "2026-10-01T18:43:38+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Ted Sarandos Explains Why the ‘Stranger Things’ Team Left Netflix",
+            "url": "https://www.hollywoodreporter.com/tv/tv-news/ted-sarandos-stranger-things-netflix-1236718320"
+          },
+          {
+            "published_at": "2026-10-01T02:07:13+00:00",
+            "publisher": "The Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Ted Sarandos Admits Netflix Is “Not Growing as Fast as I Want Us To”",
+            "url": "https://www.hollywoodreporter.com/business/business-news/ted-sarandos-netflix-not-growing-as-fast-as-i-want-us-to-1236717600"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2023/09/GettyImages-1657363318.jpg",
+            "published_at": "2026-09-30T19:18:25+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "David Fincher Ending Netflix Deal After Six Years and Three Movies, Including ‘Cliff Booth’",
+            "url": "https://variety.com/2026/film/news/david-fincher-netflix-deal-exit-1236878552"
+          },
+          {
+            "published_at": "2026-09-29T20:21:45+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "David Fincher to End Deal With Netflix, Adding to String of Departures",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-29/david-fincher-to-end-deal-with-netflix-adding-to-string-of-departures"
+          },
+          {
+            "published_at": "2026-09-28T16:33:54+00:00",
+            "publisher": "TV | Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Shawn Levy Inks Overall Deal With Disney’s 20th Television",
+            "url": "https://www.hollywoodreporter.com/tv/tv-news/shawn-levy-overall-tv-deal-disney-1236713548"
+          }
+        ],
+        "score": 0.4,
+        "section": "tech",
+        "slug": "shawn-levy-signs-overall-deal-with-disney-s-20th-television-34476",
+        "source_count": 11,
+        "summary": "David Fincher and Shawn Levy are ending their long-standing partnerships with Netflix, signaling a strategic shift away from exclusive prestige deals.",
+        "top_market": {
+          "end_date": "2027-07-01T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if official public announcements confirm that Netflix successfully takes over Warner Bros before July 2027. Otherwise, it resolves to No. Readers often mistake any news about Netflix or Warner Bros for a resolution, but only the specific takeover announcement counts.",
+          "id": "kalshi:KXTAKEOVERACQWB-27JUN30-NFLX",
+          "liquidity": 1584702.65,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.01
+            },
+            {
+              "name": "No",
+              "price": 0.99
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-nflx",
+          "price_24h_ago": 0.01,
+          "question": "Netflix",
+          "similarity": 0.7849339246749878,
+          "slug": "kxtakeoveracqwb-27jun30/kxtakeoveracqwb-27jun30-nflx",
+          "volume_24h": 25,
+          "volume_total": 1584702.65,
+          "yes_price": 0.01
+        }
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-02T15:39:41+00:00",
+        "headline": "Pope Leo XIV Decries AI-Generated Art As Lacking Humanity",
+        "id": 41981,
+        "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2025/11/pope-leo-xiv-decrypt-style-gID_7.jpg@png",
+        "last_seen_at": "2026-10-03T13:01:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T15:39:41+00:00",
+            "publisher": "TechCrunch",
+            "publisher_slug": "techcrunch-com",
+            "tier": 1,
+            "title": "Pope Leo XIV is not a fan of AI-generated art",
+            "url": "https://techcrunch.com/2026/10/02/pope-leo-xiv-is-not-a-fan-of-ai-generated-art"
+          },
+          {
+            "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2025/11/pope-leo-xiv-decrypt-style-gID_7.jpg@png",
+            "published_at": "2026-10-03T13:01:04+00:00",
+            "publisher": "decrypt.co",
+            "publisher_slug": "decrypt-co",
+            "tier": 2,
+            "title": "The Pope Has Thoughts on AI Art—And They're Not Flattering",
+            "url": "https://decrypt.co/379983/pope-leo-human-art-ai-creation"
+          },
+          {
+            "image_url": "https://images.mktw.net/im-61148285",
+            "published_at": "2026-10-02T19:32:00+00:00",
+            "publisher": "MarketWatch",
+            "publisher_slug": "marketwatch-com",
+            "tier": 2,
+            "title": "Does AI have a soul? Pope Leo and Anthropic clash.",
+            "url": "https://www.marketwatch.com/story/does-ai-have-a-soul-pope-leo-and-anthropic-clash-0c1669fb?mod=mw_rss_topstories"
+          },
+          {
+            "image_url": "https://i.insider.com/6abfb00beb7225411267d72d?format=jpeg",
+            "published_at": "2026-10-02T16:10:40+00:00",
+            "publisher": "All Content from Business Insider",
+            "publisher_slug": "businessinsider-com",
+            "tier": 2,
+            "title": "The Pope decries AI-generated art",
+            "url": "https://www.businessinsider.com/the-pope-criticizes-ai-generated-art-2026-10"
+          }
+        ],
+        "score": 0.351,
+        "section": "tech",
+        "slug": "pope-leo-xiv-decries-ai-generated-art-as-lacking-humanity-41981",
+        "source_count": 4,
+        "summary": "The pontiff told artists in Vatican City that algorithms lack the spark of humanity and cannot replicate true art."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-03T16:49:10+00:00",
+        "headline": "Capcom Envisions Future Of Game Creation With AI",
+        "id": 43419,
+        "image_url": "https://www.engadget.com/img/gallery/capcom-plans-to-use-ai-to-speed-up-the-game-development-process/l-intro-1791051900.jpg",
+        "last_seen_at": "2026-10-03T18:27:15+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T16:49:10+00:00",
+            "publisher": "The Verge",
+            "publisher_slug": "theverge-com",
+            "tier": 1,
+            "title": "Capcom is preparing for a ‘future where we create games together with AI’",
+            "url": "https://www.theverge.com/games/1004418/capcom-ai-game-development"
+          },
+          {
+            "image_url": "https://www.engadget.com/img/gallery/capcom-plans-to-use-ai-to-speed-up-the-game-development-process/l-intro-1791051900.jpg",
+            "published_at": "2026-10-03T18:27:15+00:00",
+            "publisher": "Engadget",
+            "publisher_slug": "engadget-com",
+            "tier": 2,
+            "title": "Capcom plans to use AI to speed up the game development process",
+            "url": "https://www.engadget.com/2276597/capcom-plans-to-use-ai-to-speed-up-the-game-development-process"
+          }
+        ],
+        "score": 0.324,
+        "section": "tech",
+        "slug": "capcom-envisions-future-of-game-creation-with-ai-43419",
+        "source_count": 2,
+        "summary": "Programmer Satoshi Ishida presents the studio's outlook on evolving the RE Engine for collaborative development with artificial intelligence."
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-10-01T00:05:31+00:00",
+        "headline": "Former Steelers Coach Mike Tomlin Reveals Massive 12-Year Minecraft City Build",
+        "id": 39164,
+        "image_url": "https://i.guim.co.uk/img/media/5e6abbea80bae5a32eb00b5ed758aa401981b420/0_0_1350_1080/master/1350.jpg?width=140&quality=85&auto=format&fit=max&s=6875029d2f9259ce58e515e0d6d4b50f",
+        "last_seen_at": "2026-10-03T01:53:58+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/5e6abbea80bae5a32eb00b5ed758aa401981b420/0_0_1350_1080/master/1350.jpg?width=140&quality=85&auto=format&fit=max&s=6875029d2f9259ce58e515e0d6d4b50f",
+            "published_at": "2026-10-01T18:42:51+00:00",
+            "publisher": "The Guardian Sport",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "From Super Bowl champ to master architect: Mike Tomlin’s sprawling Minecraft city is magnificent",
+            "url": "https://www.theguardian.com/sport/2026/oct/01/mike-tomlin-minecraft-city"
+          },
+          {
+            "published_at": "2026-10-01T02:42:32+00:00",
+            "publisher": "www.espn.com",
+            "publisher_slug": "espn-com",
+            "tier": 1,
+            "title": "Mike Tomlin shows off extensive 12-year virtual build of Minecraft city",
+            "url": "https://www.espn.com/nfl/story/_/id/50073098/former-steelers-coach-mike-tomlin-minecraft-city-12-year-reveal"
+          },
+          {
+            "image_url": "https://img.pastemagazine.com/wp-content/avuploads/2026/10/02214135/tomlin-minecraft-lead.jpg",
+            "published_at": "2026-10-03T01:53:58+00:00",
+            "publisher": "The A.V. Club",
+            "publisher_slug": "avclub-com",
+            "tier": 2,
+            "title": "Great Job, Internet!: Let former Steelers coach Mike Tomlin walk you through his 12-years-and-running Minecraft city",
+            "url": "https://www.avclub.com/great-job-internet-mike-tomlin-steelers-coach-minecraft"
+          },
+          {
+            "image_url": "https://sportshub.cbsistatic.com/i/2026/01/13/ffd88e16-cfde-4c52-8278-e00cf05f505b/pv-mike-tomlin-vs-texans-00-00-15-22-still002.jpg",
+            "published_at": "2026-10-02T17:19:12+00:00",
+            "publisher": "CBS Sports Headlines",
+            "publisher_slug": "cbssports-com",
+            "tier": 2,
+            "title": "Mike Tomlin gets roasted by former Super Bowl MVP, former Steelers star and others for Minecraft City",
+            "url": "https://www.cbssports.com/nfl/news/mike-tomlin-minecraft-city-nfl-leveon-bell-julian-edelman"
+          },
+          {
+            "image_url": "https://gsp-image-cdn.wmsports.io/cms/prod/bleacher-report/ap_images/2026-10/c81fd7c3e5b74a2999828dec4fe53113/Colts_Chiefs_Football_24599_7515x4228_(0,142).jpg",
+            "published_at": "2026-10-02T04:52:13+00:00",
+            "publisher": "feeds.bleacherreport.com",
+            "publisher_slug": "bleacherreport-com",
+            "tier": 2,
+            "title": "Browns Troll Mike Tomlin, Steelers with Minecraft Post After TNF Win",
+            "url": "https://bleacherreport.com/articles/25505831-browns-troll-mike-tomlin-steelers-minecraft-post-after-tnf-win"
+          },
+          {
+            "image_url": "https://sportshub.cbsistatic.com/i/2026/10/01/12575ecb-4dcb-4049-8377-da1a9575b3c6/mike-tomlin-minecraft.jpg",
+            "published_at": "2026-10-01T16:40:01+00:00",
+            "publisher": "CBS Sports Headlines",
+            "publisher_slug": "cbssports-com",
+            "tier": 2,
+            "title": "Former Steelers coach Mike Tomlin reveals massive Minecraft city he's spent over 12 years building",
+            "url": "https://www.cbssports.com/nfl/news/former-steelers-mike-tomlin-reveals-massive-minecraft-city"
+          }
+        ],
+        "score": 0.316,
+        "section": "tech",
+        "slug": "former-steelers-coach-mike-tomlin-reveals-extensive-minecraft-city-build-39164",
+        "source_count": 9,
+        "summary": "Mike Tomlin unveils a sprawling virtual city he has constructed in Minecraft over twelve years, prompting reactions from the gaming and sports communities."
+      }
+    ],
+    "total": 23
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "label": "GET /data/v1/sections/science.json",
+  "path": "/data/v1/sections/science.json",
+  "capturedAt": "2026-10-04T20:27:53.649Z",
+  "elapsedMs": 243,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "science",
+    "stories": [
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-10-02T16:07:11+00:00",
+        "headline": "Nobel Prize Announcements Approach as Mary-Claire King Reflects on BRCA Discovery",
+        "id": 42011,
+        "image_url": "https://static.toiimg.com/photo/msid-134671004,imgsize-390173.cms",
+        "last_seen_at": "2026-10-04T08:30:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134671004,imgsize-390173.cms",
+            "published_at": "2026-10-04T08:30:00+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "How the first CT scan detected a brain cyst and led to a Nobel Prize",
+            "url": "https://timesofindia.indiatimes.com/science/discovery/in-1971-engineer-godfrey-hounsfields-new-scanner-revealed-a-brain-cyst-in-the-first-clinical-ct-scan-8-years-later-he-shared-the-nobel-prize-for-developing-computer-assisted-tomography/articleshow/134670979.cms"
+          },
+          {
+            "image_url": "https://www.statnews.com/wp-content/uploads/2026/10/GettyImages-532756516-1024x576.jpg",
+            "published_at": "2026-10-02T16:07:11+00:00",
+            "publisher": "STAT",
+            "publisher_slug": "statnews-com",
+            "tier": 2,
+            "title": "What it’s like to wait for the call from the Nobel Prize committee",
+            "url": "https://www.statnews.com/2026/10/02/nobel-prize-2026-geneticist-mary-claire-king-long-waiting-not-getting-winner-call"
+          }
+        ],
+        "score": 0.566,
+        "section": "science",
+        "slug": "nobel-prize-announcements-approach-as-mary-claire-king-reflects-on-brca-di-42011",
+        "source_count": 2,
+        "summary": "Mary-Claire King discusses the anticipation surrounding Nobel announcements and her discovery of BRCA mutations ahead of this year's prizes."
+      },
+      {
+        "distinct_publishers": 1,
+        "first_seen_at": "2026-10-04T18:07:16+00:00",
+        "headline": "School IB Geography class explores global resource consumption",
+        "id": 44458,
+        "last_seen_at": "2026-10-04T18:07:16+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T18:07:16+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "School IB Geography class: How to keep the lights on in an electrified world",
+            "url": "https://www.ft.com/content/3df9fdf9-ff66-4d1e-b979-44b55659dd38"
+          }
+        ],
+        "score": 0.33,
+        "section": "science",
+        "slug": "school-ib-geography-class-explores-global-resource-consumption-44458",
+        "source_count": 1,
+        "summary": "An IB Geography class examines strategies for managing energy use in a world reliant on electrification."
+      }
+    ],
+    "total": 2
+  }
+}

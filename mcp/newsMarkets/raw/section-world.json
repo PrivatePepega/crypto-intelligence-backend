@@ -1,0 +1,3256 @@
+{
+  "label": "GET /data/v1/sections/world.json",
+  "path": "/data/v1/sections/world.json",
+  "capturedAt": "2026-10-04T20:27:40.537Z",
+  "elapsedMs": 213,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "world",
+    "stories": [
+      {
+        "distinct_publishers": 28,
+        "first_seen_at": "2026-09-08T13:12:00+00:00",
+        "headline": "Trump Vows Iran War Will End Quickly as Military Buildup Intensifies",
+        "id": 2868,
+        "image_url": "https://images.axios.com/ecIqTDlhRZGaOVKX3qe8WxfGJ_A=/0x0:5306x2985/1366x768/2026/10/03/1791054860093.jpeg",
+        "last_seen_at": "2026-10-04T19:44:29+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T18:47:22+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "War on Iran: Is escalation more likely than a deal?",
+            "url": "https://www.aljazeera.com/video/the-bottom-line/2026/10/4/war-on-iran-is-escalation-more-likely-than-a-deal-2"
+          },
+          {
+            "published_at": "2026-10-04T17:47:25+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Energy Secretary: Trump was \"aware of the risks to energy flows\" before Iran war",
+            "url": "https://www.cbsnews.com/news/chris-wright-trump-iran-war-aware-energy-flow-risks"
+          },
+          {
+            "published_at": "2026-10-04T15:06:14+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Iran tells US: there is ‘no military solution’ to end the war",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/iran-tells-us-there-is-no-military-solution-to-end-the-war"
+          },
+          {
+            "published_at": "2026-10-04T00:00:29+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Iran war live: Yemeni forces strike Sanaa as Trump warns Tehran of hard way",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/10/4/iran-war-live-yemeni-forces-strike-sanaa-as-trump-warns-tehran-of-hard-way"
+          },
+          {
+            "image_url": "https://images.axios.com/ecIqTDlhRZGaOVKX3qe8WxfGJ_A=/0x0:5306x2985/1366x768/2026/10/03/1791054860093.jpeg",
+            "published_at": "2026-10-03T19:25:43+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Iranian diplomats \"kicked out\" of U.S. after ignoring order to leave",
+            "url": "https://www.axios.com/2026/10/03/iran-un-kicked-out-rubio"
+          },
+          {
+            "published_at": "2026-10-03T16:11:07+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Iran War Pressures, Bessent Downplays Rising Yield Worries, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/iran-war-pressures-bessent-downplays-rising-yield-worries-more"
+          }
+        ],
+        "score": 7.775,
+        "section": "world",
+        "slug": "trump-says-oil-prices-will-drop-after-iran-war-win-2868",
+        "source_count": 310,
+        "summary": "President Trump vows the conflict with Iran will end quickly while deploying more troops to the Middle East amid stalled diplomacy and rising escalation risks.",
+        "top_market": {
+          "end_date": "2026-11-06T16:59:00+00:00",
+          "explainer": "The market resolves to Yes if voters identify the Iran war and foreign policy as their top priority in the 2026 national U.S. House exit poll. It resolves to No if that specific issue does not rank first in those results. Readers often mistake this for a prediction of actual military action or political outcomes rather than voter priorities.",
+          "id": "kalshi:KXEXITPOLLISSUE-26NOV06-FPOL",
+          "liquidity": 12882.31,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.04
+            },
+            {
+              "name": "No",
+              "price": 0.96
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxexitpollissue-26nov06/kxexitpollissue-26nov06-fpol",
+          "price_24h_ago": 0.04,
+          "question": "Iran war and foreign policy",
+          "similarity": 0.8189846873283386,
+          "slug": "kxexitpollissue-26nov06/kxexitpollissue-26nov06-fpol",
+          "volume_24h": 0,
+          "volume_total": 12882.31,
+          "yes_price": 0.04
+        }
+      },
+      {
+        "distinct_publishers": 26,
+        "first_seen_at": "2026-09-08T01:04:36+00:00",
+        "headline": "Russian strikes hit Kyiv bridges as German Chancellor Merz visits Ukraine",
+        "id": 2525,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_2cb9344e23445f69d5072ce661231eb3_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T19:46:58+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T11:58:14+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Russia hits Kyiv bridge as Germany’s Merz visits Ukraine’s capital",
+            "url": "https://www.aljazeera.com/news/2026/10/4/russian-strike-hits-kyiv-bridge-as-german-chancellor-visits-ukraine"
+          },
+          {
+            "published_at": "2026-10-03T12:55:54+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Five killed as Kyiv and Moscow trade strikes, Russia hits second bridge",
+            "url": "https://www.aljazeera.com/news/2026/10/3/five-killed-as-kyiv-and-moscow-trade-strikes-russia-hits-second-bridge"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_2cb9344e23445f69d5072ce661231eb3_4x3_384.jpg",
+            "published_at": "2026-10-03T10:20:50+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Russia strikes Kyiv bridge in a new tactic to disrupt life in the Ukrainian capital",
+            "url": "https://abcnews.com/International/wireStory/russia-strikes-kyivs-northern-bridge-new-tactic-disrupt-136969028"
+          },
+          {
+            "published_at": "2026-10-02T12:47:30+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Ukraine calls for tighter sanctions as Russian attacks spark Kyiv gridlock",
+            "url": "https://www.aljazeera.com/news/2026/10/2/ukraine-calls-for-tighter-sanctions-as-russian-attacks-spark-kyiv-gridlock"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_1949f2a68b6b8b4bfeba5a86878c79bd_4x3_384.jpg",
+            "published_at": "2026-10-02T11:06:01+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Russian aerial strikes snarl traffic on 3 Kyiv bridges in a new disruption tactic",
+            "url": "https://abcnews.com/International/wireStory/russian-aerial-strikes-snarl-traffic-3-kyiv-bridges-136944164"
+          },
+          {
+            "published_at": "2026-10-02T10:38:44+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Ukraine Attacks Key Russian Refinery and Oil Pipeline Hub",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/ukraine-attacks-key-russian-refinery-and-oil-pipeline-hub"
+          }
+        ],
+        "score": 7.628,
+        "section": "world",
+        "slug": "russia-resumes-strikes-on-kyiv-ending-brief-truce-for-us-envoy-talks-2525",
+        "source_count": 452,
+        "summary": "Russian attacks on Kyiv infrastructure coincide with a visit by German Chancellor Friedrich Merz, while Ukraine continues strikes on Russian oil refineries.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The Yes outcome occurs if Russian and Ukrainian officials hold an in-person meeting aimed at diplomacy by October 31, 2026, at 11:59 PM ET. The No outcome applies if no such deliberate, publicly acknowledged meeting takes place by that deadline. Readers often mistake indirect talks through mediators or remote calls for valid meetings, but only direct in-person encounters count.",
+          "id": "0x7f27abd7cf3b246e1305b494e548020ba744d788195745428bd76d1ccddab1e7",
+          "liquidity": 36343.4607,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.645
+            },
+            {
+              "name": "No",
+              "price": 0.355
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-russia-and-ukraine-hold-any-diplomatic-meeting-by-october-31-2026?r=alykhan3",
+          "price_24h_ago": 0.59,
+          "question": "Will Russia and Ukraine hold any diplomatic meeting by October 31, 2026?",
+          "similarity": 0.7714361548423767,
+          "slug": "will-russia-and-ukraine-hold-any-diplomatic-meeting-by-october-31-2026",
+          "volume_24h": 2766.9746419999997,
+          "volume_total": 63670.76486100001,
+          "yes_price": 0.645
+        }
+      },
+      {
+        "distinct_publishers": 23,
+        "first_seen_at": "2026-09-08T09:09:46+00:00",
+        "headline": "Saudi-Backed Yemeni Forces Launch Counteroffensive Against Houthis",
+        "id": 2683,
+        "image_url": "https://images.axios.com/rL9U8Ijao0T674kri5C8jXWNp30=/0x0:4698x2643/1366x768/2026/10/04/1791123132894.jpeg",
+        "last_seen_at": "2026-10-04T20:16:39+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T20:16:39+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Polls Close in Brazil, Yemen Moves to Retake Houthi Areas, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/polls-close-in-brazil-yemen-moves-to-retake-houthi-areas-more"
+          },
+          {
+            "image_url": "https://images.axios.com/rL9U8Ijao0T674kri5C8jXWNp30=/0x0:4698x2643/1366x768/2026/10/04/1791123132894.jpeg",
+            "published_at": "2026-10-04T14:38:04+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Yemeni and Saudi forces launch counteroffensive against the Houthis",
+            "url": "https://www.axios.com/2026/10/04/yemen-saudi-houthis-counteroffensive"
+          },
+          {
+            "published_at": "2026-10-04T13:31:15+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Why is fighting intensifying in Yemen’s Taiz governorate?",
+            "url": "https://www.aljazeera.com/news/2026/10/4/why-is-fighting-intensifying-in-yemens-taiz-governorate"
+          },
+          {
+            "published_at": "2026-10-04T12:48:50+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Yemen’s leader announces military operation to retake Houthi-held territory",
+            "url": "https://www.aljazeera.com/news/2026/10/4/yemens-leader-announces-military-operation-to-retake-houthi-held-territory"
+          },
+          {
+            "published_at": "2026-10-04T08:31:29+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Inside the ‘kill box’: The Yemenis who stayed behind in Houthi-held Mocha",
+            "url": "https://www.aljazeera.com/features/2026/10/4/inside-the-kill-box-the-yemenis-who-stayed-behind-in-houthi-held-mocha"
+          },
+          {
+            "published_at": "2026-10-04T05:00:40+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Somalia President: Houthis ‘not in a position’ to bring Yemen peace",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/somalia-president-houthis-not-in-a-position-to-bring-yemen-peace"
+          }
+        ],
+        "score": 7.56,
+        "section": "world",
+        "slug": "houthi-attacks-on-saudi-arabia-wound-73-and-ignite-oil-facility-fires-2683",
+        "source_count": 211,
+        "summary": "Yemeni government forces backed by Saudi Arabia have launched a military operation to retake territory from the Houthis, aiming to secure the Bab al-Mandeb Strait.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if Houthi military forces physically enter any part of Saudi Arabia by 11:59 PM ET on October 31. Bombardment, naval presence, or diplomatic visits do not count as entry. Readers often mistake threats or claims for actual ground presence.",
+          "id": "0x1c008508d424634eb01e47889e0fefb2fad4c776f973148f80a86b5be8331c63",
+          "liquidity": 18883.0288,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.11
+            },
+            {
+              "name": "No",
+              "price": 0.89
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-the-houthis-enter-saudi-arabia-by-october-31?r=alykhan3",
+          "price_24h_ago": 0.13,
+          "question": "Will the Houthis enter Saudi Arabia by October 31?",
+          "similarity": 0.8408766388893127,
+          "slug": "will-the-houthis-enter-saudi-arabia-by-october-31",
+          "volume_24h": 304.192523,
+          "volume_total": 33125.793854999996,
+          "yes_price": 0.11
+        }
+      },
+      {
+        "distinct_publishers": 20,
+        "first_seen_at": "2026-09-30T06:54:22+00:00",
+        "headline": "FlyDubai co-pilot Hamam al-Hammami accused of axe attack and attempted crash",
+        "hot": "$99k traded on its market in 24 hours",
+        "id": 37409,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_03aaa4849c590124a5fde57e92b65870_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T20:09:25+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T17:53:34+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Police investigating Flydubai co-pilot’s Australia ties",
+            "url": "https://www.aljazeera.com/news/2026/10/4/police-investigating-flydubai-co-pilots-australia-ties"
+          },
+          {
+            "published_at": "2026-10-04T13:57:24+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Hero passengers on FlyDubai flight speak",
+            "url": "https://www.cbsnews.com/news/hero-passenger-on-flydubai-flight-i-decided-that-we-are-going-to-survive"
+          },
+          {
+            "published_at": "2026-10-04T13:42:16+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "How was Flydubai co-pilot cleared despite being deemed a security risk?",
+            "url": "https://www.aljazeera.com/news/2026/10/4/how-was-flydubai-co-pilot-cleared-despite-being-deemed-a-security-risk"
+          },
+          {
+            "published_at": "2026-10-04T13:26:00+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Hero passenger on FlyDubai flight: \"I decided that we are going to survive\"",
+            "url": "https://www.cbsnews.com/video/hero-passengers-on-fly-dubai-flight-speak"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_03aaa4849c590124a5fde57e92b65870_4x3_384.jpg",
+            "published_at": "2026-10-04T11:10:35+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "UAE had shared details about FlyDubai flight with Israel, including pilots' names and nationalities",
+            "url": "https://abcnews.com/International/wireStory/uae-shared-details-flydubai-flight-israel-including-pilots-136983853"
+          },
+          {
+            "published_at": "2026-10-04T11:08:35+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "FlyDubai co-pilot was likely lone wolf, Israeli investigators believe",
+            "url": "https://www.cbsnews.com/news/flydubai-co-pilot-alleged-hijacking-lone-wolf"
+          }
+        ],
+        "score": 7.194,
+        "section": "world",
+        "slug": "flydubai-flight-to-israel-diverted-to-saudi-arabia-after-cockpit-incident-37409",
+        "source_count": 153,
+        "summary": "Israeli investigators believe the FlyDubai co-pilot acted alone in the incident, while UAE authorities classify it as a terrorist act.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The market resolves to \"Yes\" if the Israeli government officially states that Iran or its proxies deliberately caused the Flydubai pilot stabbing incident by October 31, 2026, at 11:59 PM ET. The statement must come from an authorized representative acting in an official capacity, such as a Prime Minister or Cabinet Minister.",
+          "id": "0xc90894254e1f804e3087e89288d192b529287b7de6e3f5230c06868f7777661d",
+          "liquidity": 116246.6754,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.045
+            },
+            {
+              "name": "No",
+              "price": 0.955
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/israel-accuses-iranproxies-of-plane-stabbing-incident-by-oct-31?r=alykhan3",
+          "price_24h_ago": 0.115,
+          "question": "Israel accuses Iran/proxies of plane stabbing incident by Oct 31?",
+          "similarity": 0.7538745999336243,
+          "slug": "israel-accuses-iranproxies-of-plane-stabbing-incident-by-oct-31",
+          "volume_24h": 99324.28043999996,
+          "volume_total": 460270.1899089999,
+          "yes_price": 0.045
+        },
+        "verdict": {
+          "kind": "moved",
+          "moved": -0.07
+        }
+      },
+      {
+        "distinct_publishers": 25,
+        "first_seen_at": "2026-09-28T09:10:30+00:00",
+        "headline": "Cornell President Promises Reforms After Gang Rape Allegations Spark Outcry",
+        "id": 33864,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP25083628765899-e1791119049860.jpg?w=900",
+        "last_seen_at": "2026-10-04T16:25:01+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP25083628765899-e1791119049860.jpg?w=900",
+            "published_at": "2026-10-04T16:08:40+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Lawyer for Cornell Jane Doe says he believes ‘there were more’ who participated in alleged gang rape",
+            "url": "https://thehill.com/regulation/court-battles/6128241-cornell-gang-rape-lawsuit"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP25083628765899-e1791119049860.jpg?w=900",
+            "published_at": "2026-10-04T13:13:35+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Cornell president promises reforms after alleged gang rape",
+            "url": "https://thehill.com/homenews/education/6128142-cornell-president-promises-reforms"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/CornellReforms_Kochi_GregNash.jpg?w=900",
+            "published_at": "2026-10-04T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Cornell allegations fuel bipartisan push for stronger sexual assault protections",
+            "url": "https://thehill.com/homenews/6127239-cornell-rape-allegations-spark-congressional-action"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/39b573f72da01cf7d753c80a2bb8b4ddda9116e6/269_0_2500_2000/master/2500.jpg?width=140&quality=85&auto=format&fit=max&s=021cc14b2a9d17c6f750212e48c1f838",
+            "published_at": "2026-10-04T09:43:26+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Cornell University to take ‘serious look’ at fraternities after rape allegations",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/cornell-president-vows-serious-look-at-fraternities-in-wake-of-allegations"
+          },
+          {
+            "published_at": "2026-10-04T08:33:54+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Cornell president says university ‘must do better’ after rape allegations",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/cornell-president-says-university-must-do-better-after-rape-allegations"
+          },
+          {
+            "published_at": "2026-10-04T01:15:58+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Cornell president vows transparency amid outrage over fraternity rape case",
+            "url": "https://www.aljazeera.com/news/2026/10/4/cornell-president-vows-transparency-amid-outrage-over-fraternity-rape-case"
+          }
+        ],
+        "score": 7.193,
+        "section": "world",
+        "slug": "florence-pugh-speaks-out-on-cornell-sexual-assault-case-33864",
+        "source_count": 91,
+        "summary": "Cornell University president Michael Kotlikoff vows reforms and a review of fraternity culture following allegations that students were drugged and raped in 2024.",
+        "top_market": {
+          "end_date": "2027-02-01T04:59:00+00:00",
+          "explainer": "The outcome is Yes if any of the seven named defendants faces a formal felony sex crime charge or indictment from a US federal or state authority before January 31, 2027, at 11:59 PM ET. The outcome is No if no such official charge occurs by that deadline. Readers often mistake the civil complaint for a criminal charge or miss the specific January 31, 2027 cutoff date.",
+          "id": "0xa0917fc36c80b2aef40b3be6e7c8f5abb16c512174b75073923cb52b53d7bbe0",
+          "liquidity": 82739.8006,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.295
+            },
+            {
+              "name": "No",
+              "price": 0.705
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/any-of-the-cornell-7-charged-with-a-felony-sex-crime?r=alykhan3",
+          "price_24h_ago": 0.32499999999999996,
+          "question": "Any of the Cornell 7 charged with a felony sex crime?",
+          "similarity": 0.7809987664222717,
+          "slug": "any-of-the-cornell-7-charged-with-a-felony-sex-crime",
+          "volume_24h": 26897.324636,
+          "volume_total": 411901.91691899986,
+          "yes_price": 0.295
+        },
+        "verdict": {
+          "kind": "priced_in",
+          "moved": -0.02999999999999997
+        }
+      },
+      {
+        "distinct_publishers": 34,
+        "first_seen_at": "2026-09-08T18:12:06+00:00",
+        "headline": "Trump Denies Arms Sales to Xi Amidst Taiwan Policy and GOP Backlash",
+        "id": 3237,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/jinpingxi_trumpdonald_092526gn07_w.jpg?w=900",
+        "last_seen_at": "2026-10-04T14:45:57+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T14:45:57+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Taiwan Says US Policy Remains Unchanged",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-04/taiwan-says-us-policy-remains-unchanged-video"
+          },
+          {
+            "published_at": "2026-10-03T03:27:54+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Taiwan Foreign Minister to Visit Arizona to Deepen Economic Ties",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-03/taiwan-foreign-minister-to-visit-arizona-to-deepen-economic-ties"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/jinpingxi_trumpdonald_092526gn07_w.jpg?w=900",
+            "published_at": "2026-10-02T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump’s powerful new friends are making MAGA uncomfortable",
+            "url": "https://thehill.com/homenews/administration/6124669-trump-xi-mamdani-gop-concerns"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/trumpdonald_jinpingxi_092526gn09_w.jpg?w=900",
+            "published_at": "2026-10-01T12:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump’s greatest gift to Xi: Making China America’s peer",
+            "url": "https://thehill.com/opinion/international/6115756-trumps-greatest-gift-to-xi-making-china-americas-peer"
+          },
+          {
+            "published_at": "2026-09-29T21:08:05+00:00",
+            "publisher": "CNBC",
+            "publisher_slug": "cnbc-com",
+            "tier": 1,
+            "title": "Ford CEO says it's 'too late' for Europe to fend off Chinese automakers, but not for U.S.",
+            "url": "https://www.cnbc.com/2026/09/29/ford-ceo-jim-farley-china-automakers.html"
+          },
+          {
+            "published_at": "2026-09-29T17:17:04+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Potential Taiwan tension sparked 'last minute' change in Trump-Xi National Archives visit",
+            "url": "https://www.npr.org/2026/09/29/nx-s1-5984989/digital-archives-trump-xi"
+          }
+        ],
+        "score": 6.227,
+        "section": "world",
+        "slug": "china-s-exports-surge-before-trump-xi-talks-3237",
+        "source_count": 627,
+        "summary": "President Trump denies offering weapons to Xi Jinping, while Taiwan confirms US policy remains unchanged despite stalled arms deals.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if a free trade deal with China becomes law through Senate ratification and Presidential approval, or via a Congressional-Executive Agreement signed by the President before January 1, 2027. Otherwise, it resolves to No. Readers often mistake the announcement of talks for the actual passage of legislation.",
+          "id": "kalshi:KXFTACOUNTRIES-27-CHI",
+          "liquidity": 5265.48,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.13
+            },
+            {
+              "name": "No",
+              "price": 0.87
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxftacountries-27/kxftacountries-27-chi",
+          "price_24h_ago": 0.13,
+          "question": "China",
+          "similarity": 0.8493000864982605,
+          "slug": "kxftacountries-27/kxftacountries-27-chi",
+          "volume_24h": 0,
+          "volume_total": 5265.48,
+          "yes_price": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 20,
+        "first_seen_at": "2026-09-06T04:57:43+00:00",
+        "headline": "Merz Visits Kyiv as Ukraine Prepares for US-Backed Talks With Russia",
+        "id": 1855,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/Coale_Kelly_AP_MindaugasKulbis.jpg?w=900",
+        "last_seen_at": "2026-10-04T17:26:56+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T17:17:42+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Ukraine ready for US-backed talks with Russia: Zelenskyy",
+            "url": "https://www.aljazeera.com/news/2026/10/4/ukraine-ready-for-us-backed-talks-with-russia-zelenskyy"
+          },
+          {
+            "published_at": "2026-10-04T16:38:45+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Germany’s Merz in Kyiv announces $1.5B in aid, urges Putin to end war",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/germany-merz-visits-kyiv-air-raids-ukraine"
+          },
+          {
+            "published_at": "2026-10-04T10:41:33+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Germany's Merz Visits Kyiv as Russia Attacks, Trump's OH Pledge",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/germany-s-merz-visits-kyiv-as-russia-attacks-trump-s-oh-pledge"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/Coale_Kelly_AP_MindaugasKulbis.jpg?w=900",
+            "published_at": "2026-10-04T10:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump's nominee for Hostage Affairs envoy faces scrutiny on controversial Russia plan",
+            "url": "https://thehill.com/policy/international/6124543-trump-hostage-affairs-coale-belarus-russia-ukraine"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_89bb8d2a97cc09d01a316723d08d2fb3_4x3_384.jpg",
+            "published_at": "2026-10-04T08:09:20+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Germany's Merz visits Kyiv as Russia steps up attacks on Ukrainian cities",
+            "url": "https://abcnews.com/International/wireStory/germanys-merz-visits-kyiv-russia-steps-attacks-ukrainian-136983124"
+          },
+          {
+            "published_at": "2026-10-04T06:12:15+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Germany’s Merz arrives in Kyiv to show support for Ukraine",
+            "url": "https://www.ft.com/content/b7bd5c45-1c32-4984-af37-21746a02c4ef"
+          }
+        ],
+        "score": 6.189,
+        "section": "world",
+        "slug": "witkoff-and-kushner-visit-kyiv-after-moscow-talks-as-strikes-resume-1855",
+        "source_count": 222,
+        "summary": "German Chancellor Friedrich Merz arrives in Kyiv to announce aid, while President Zelenskyy signals readiness for trilateral negotiations with Moscow.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The outcome is Yes if Donald Trump physically travels to and stays within Ukraine’s borders between now and January 1, 2027. Otherwise, the outcome is No. Readers often mistake a scheduled visit or a virtual meeting for physical presence.",
+          "id": "kalshi:KXTRUMPCOUNTRIES-27JAN01-UKR",
+          "liquidity": 13920.34,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.085
+            },
+            {
+              "name": "No",
+              "price": 0.915
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtrumpcountries-27jan01/kxtrumpcountries-27jan01-ukr",
+          "price_24h_ago": 0.085,
+          "question": "Ukraine",
+          "similarity": 0.8380494117736816,
+          "slug": "kxtrumpcountries-27jan01/kxtrumpcountries-27jan01-ukr",
+          "volume_24h": 0,
+          "volume_total": 13920.34,
+          "yes_price": 0.085
+        }
+      },
+      {
+        "distinct_publishers": 13,
+        "first_seen_at": "2026-10-02T02:07:49+00:00",
+        "headline": "Brazil Votes in Tight Presidential Race Between Lula and Bolsonaro",
+        "hot": "$132k traded on its market in 24 hours",
+        "id": 41128,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_57a4175077593f2f3517d80c3146b6bc_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T20:00:05+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T20:00:05+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Brazil election results live: Lula and Bolsonaro locked in a tight race",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/10/4/brazil-election-results-live-lula-and-bolsonaro-locked-in-a-tight-race"
+          },
+          {
+            "published_at": "2026-10-04T17:29:35+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Brazil Votes in Key Election, Hassett: Powell Should 'Move On'",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/brazil-votes-in-key-election-hassett-powell-should-move-on"
+          },
+          {
+            "published_at": "2026-10-04T15:05:37+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Lula and Bolsonaro vote in Brazil’s polarised presidential election",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/lula-and-bolsonaro-vote-in-brazils-polarised-presidential-election"
+          },
+          {
+            "published_at": "2026-10-04T14:39:02+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Lula, Bolsonaro Face Off in Brazil, Trump Pitches OH Investments",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/lula-bolsonaro-face-off-in-brazil-trump-pitches-oh-investments"
+          },
+          {
+            "published_at": "2026-10-04T13:02:42+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Brazil's Tight Presidential Race, Russia Vows to Hit Kyiv Harder",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/brazil-s-tight-presidential-race-russia-vows-to-hit-kyiv-harder"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_57a4175077593f2f3517d80c3146b6bc_4x3_384.jpg",
+            "published_at": "2026-10-04T12:04:56+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "The Latest: Brazilians vote in presidential election dominated by Lula and Bolsonaro",
+            "url": "https://abcnews.com/International/wireStory/latest-brazilians-vote-presidential-election-dominated-lula-bolsonaro-136984414"
+          }
+        ],
+        "score": 6.182,
+        "section": "world",
+        "slug": "brazil-voters-choose-between-lula-and-bolsonaro-son-in-tight-presidential-41128",
+        "source_count": 59,
+        "summary": "Voters cast ballots in a polarized election as incumbent Luiz Inacio Lula da Silva seeks a fourth term against Senator Flavio Bolsonaro.",
+        "top_market": {
+          "end_date": "2026-10-05T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if Luiz Inácio Lula da Silva advances to the runoff or wins the first round outright. It resolves to No if he fails to reach the second round or if the election result is not confirmed by June 30, 2027. Readers often mistake the polling data in the linked story for the actual election outcome.",
+          "id": "0x7b22caeed454d3c7dbd07b83d8255c74e1482c4f958b4ba4dd0c27b864cd47a2",
+          "liquidity": 79568.53006,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.9715
+            },
+            {
+              "name": "No",
+              "price": 0.0285
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-qualify-for-brazils-presidential-runoff?r=alykhan3",
+          "price_24h_ago": 0.9815,
+          "question": "Will Luiz Inácio Lula da Silva qualify for Brazil's presidential runoff?",
+          "similarity": 0.8880120515823364,
+          "slug": "will-luiz-incio-lula-da-silva-qualify-for-brazils-presidential-runoff",
+          "volume_24h": 131538.517491,
+          "volume_total": 766537.0013920005,
+          "yes_price": 0.9715
+        },
+        "verdict": {
+          "kind": "priced_in",
+          "moved": -0.010000000000000009
+        }
+      },
+      {
+        "distinct_publishers": 23,
+        "first_seen_at": "2026-09-22T13:18:01+00:00",
+        "headline": "Netanyahu Faces Election Pressure Over Oct 7 Warnings and Diplomatic Tensions",
+        "hot": "$185k traded on its market in 24 hours",
+        "id": 24707,
+        "image_url": "https://i.guim.co.uk/img/media/bf568a300521e3ebb7d9f329f99ba341a9d74768/580_0_3829_3064/master/3829.jpg?width=140&quality=85&auto=format&fit=max&s=f2d05a41a13c2bba8893b8443f75392e",
+        "last_seen_at": "2026-10-04T16:25:34+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T16:25:34+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Key Biden aide recalls \"draconian measures\" being considered against Israel",
+            "url": "https://www.cbsnews.com/news/brett-mcgurk-biden-israel-hamas-iran-brink"
+          },
+          {
+            "published_at": "2026-10-01T17:23:12+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Despite praise and White House visits, Trump avoids endorsing Netanyahu",
+            "url": "https://www.aljazeera.com/news/2026/10/1/despite-praise-and-white-house-visits-trump-avoids-endorsing-netanyahu"
+          },
+          {
+            "published_at": "2026-10-01T13:20:58+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Israel flight near-miss triggers election furore",
+            "url": "https://www.ft.com/content/4b5acc10-eb69-429b-9617-888d2172177a"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/bf568a300521e3ebb7d9f329f99ba341a9d74768/580_0_3829_3064/master/3829.jpg?width=140&quality=85&auto=format&fit=max&s=f2d05a41a13c2bba8893b8443f75392e",
+            "published_at": "2026-10-01T12:00:51+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "From Robert Kraft to Netanyahu, Israel’s supporters keep helping its critics | Peter Beinart",
+            "url": "https://www.theguardian.com/commentisfree/2026/oct/01/robert-kraft-netanyahu-israel-supporters"
+          },
+          {
+            "published_at": "2026-09-30T11:03:01+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "The October 7 warnings threatening Netanyahu’s Israeli election campaign",
+            "url": "https://www.aljazeera.com/news/2026/9/30/the-october-7-warnings-threatening-netanyahus-israel-election-campaign"
+          },
+          {
+            "published_at": "2026-09-30T04:51:01+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Israel’s Lapid accuses Netanyahu of ‘fear-mongering’ over attack warning",
+            "url": "https://www.aljazeera.com/news/2026/9/30/israels-lapid-accuses-netanyahu-of-fear-mongering-over-attack-warning"
+          }
+        ],
+        "score": 6.104,
+        "section": "world",
+        "slug": "netanyahu-to-target-mamdani-in-upcoming-un-speech-24707",
+        "source_count": 94,
+        "summary": "Israeli Prime Minister Benjamin Netanyahu faces domestic pressure over pre-attack warnings while navigating diplomatic friction with Qatar and a visit to the UAE ahead of October elections.",
+        "top_market": {
+          "end_date": "2026-10-28T03:59:00+00:00",
+          "explainer": "The Yes outcome occurs if Benjamin Netanyahu is formally sworn in as Prime Minister after an election. The No outcome applies if someone else takes that oath or if no new Prime Minister is sworn in by December 31, 2027. Readers often mistake the date of a political tour or appointment for the official swearing-in ceremony.",
+          "id": "0x7586a96520578acaaaa4ea84a2582f197f84255da1f3392a7aa300386c187b37",
+          "liquidity": 436369.5333,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.365
+            },
+            {
+              "name": "No",
+              "price": 0.635
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel?r=alykhan3",
+          "price_24h_ago": 0.345,
+          "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
+          "similarity": 0.8376791477203369,
+          "slug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
+          "volume_24h": 185475.626871,
+          "volume_total": 5854837.515381998,
+          "yes_price": 0.365
+        }
+      },
+      {
+        "distinct_publishers": 15,
+        "first_seen_at": "2026-09-13T07:08:34+00:00",
+        "headline": "Israel faces scrutiny over Gaza strikes, West Bank expansion and pre-war warnings",
+        "id": 10804,
+        "image_url": "https://media.wired.com/photos/6abbf437aaebf176f00cbd89/master/pass/GettyImages-1249548135.jpg",
+        "last_seen_at": "2026-10-04T16:18:01+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T16:18:01+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Three years of genocide in Gaza through one man’s camera",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/three-years-of-genocide-in-gaza-through-one-mans-camera"
+          },
+          {
+            "published_at": "2026-10-04T15:22:25+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "‘Did he know?’: Why Israel is rejecting an October 7 reckoning",
+            "url": "https://www.aljazeera.com/opinions/2026/10/4/did-he-know-why-israel-is-rejecting-an-october-7-reckoning"
+          },
+          {
+            "published_at": "2026-10-04T04:00:07+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Israelis rush to get new settlements past ‘starting line’ before election",
+            "url": "https://www.ft.com/content/b621ec55-fa52-4bf1-bdb7-c11bb6ec82bb"
+          },
+          {
+            "published_at": "2026-10-03T16:25:03+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Somalia won’t accept Israeli presence ‘under any circumstances’: President",
+            "url": "https://www.aljazeera.com/news/2026/10/3/somalia-wont-accept-israeli-presence-under-any-circumstances-president"
+          },
+          {
+            "published_at": "2026-10-03T15:09:17+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Egypt Flagged Hamas Threat Before Oct. 7",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-03/egypt-flagged-hamas-threat-before-oct-7-video"
+          },
+          {
+            "published_at": "2026-10-03T12:18:24+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Israeli settlers attack farmers in West Bank pogrom, soldiers hit reporters",
+            "url": "https://www.aljazeera.com/news/2026/10/3/israeli-settlers-attack-palestinian-olive-pickers-in-the-west-bank"
+          }
+        ],
+        "score": 5.288,
+        "section": "world",
+        "slug": "west-imposes-sanctions-on-israeli-settlers-as-ngo-warns-of-west-bank-displ-10804",
+        "source_count": 117,
+        "summary": "Reports detail Israeli settlement expansion in the West Bank, deadly air strikes in Gaza City, and claims that Egypt warned Israel of the October 7 Hamas attack before it occurred.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if the Israeli government officially declares sovereignty over West Bank territory by December 31, 2026, at 11:59 PM ET. It resolves to No if no such official act occurs within that timeframe. Readers often mistake informal settler control or administrative changes for annexation, but only a formal legal declaration counts.",
+          "id": "0x794fbb668b14dacd636ff47a39e2294148420577e38278e11adf14655ad6cfe0",
+          "liquidity": 20641.6085,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.04
+            },
+            {
+              "name": "No",
+              "price": 0.96
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-israel-annex-west-bank-territory-before-2027?r=alykhan3",
+          "price_24h_ago": 0.055,
+          "question": "Will Israel annex West Bank territory before 2027?",
+          "similarity": 0.7989786267280579,
+          "slug": "will-israel-annex-west-bank-territory-before-2027",
+          "volume_24h": 1277.94,
+          "volume_total": 92270.01885599998,
+          "yes_price": 0.04
+        }
+      },
+      {
+        "distinct_publishers": 20,
+        "first_seen_at": "2026-09-10T05:55:57+00:00",
+        "headline": "Putin Warns of All-Weapons Response to Attack as EU Faces Hybrid Threats",
+        "id": 5269,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_aff3356bf202ba72507f02fd1fafcede_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T13:26:51+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T11:00:08+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "EU countries shoot themselves in the foot when they veto sanctions",
+            "url": "https://www.ft.com/content/9e9f0cbd-ef77-4e19-8f6e-97063e9fe9fc"
+          },
+          {
+            "published_at": "2026-10-04T04:00:15+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Bosnia elections pit EU hopes against Russian influence",
+            "url": "https://www.ft.com/content/3401e229-1728-4a33-82d5-e52a4cd993c1"
+          },
+          {
+            "published_at": "2026-10-02T16:35:57+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Putin Views Military Drills Against Aggression on Land, Caspian",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/putin-views-military-drills-against-aggression-on-land-caspian"
+          },
+          {
+            "published_at": "2026-10-02T16:31:45+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "EU pushes Ukraine for further reforms to unlock funding",
+            "url": "https://www.ft.com/content/bab346fd-7839-4812-ab27-19309e317938"
+          },
+          {
+            "published_at": "2026-10-02T05:00:03+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Pro-Russian parties jostle with Kyiv supporters in crowded Latvian election",
+            "url": "https://www.ft.com/content/71a2ec5f-3f28-4462-af96-bab58c86a777"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_aff3356bf202ba72507f02fd1fafcede_4x3_384.jpg",
+            "published_at": "2026-10-01T19:58:10+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Putin warns of using 'all weapons' in its arsenal if any Russia territory is attacked",
+            "url": "https://abcnews.com/International/wireStory/putin-warns-weapons-arsenal-russia-territory-attacked-136930888"
+          }
+        ],
+        "score": 4.956,
+        "section": "world",
+        "slug": "europe-s-far-right-gains-threaten-to-deepen-divisions-over-ukraine-and-russ-5269",
+        "source_count": 157,
+        "summary": "Vladimir Putin vows to use all available weapons if Russia is attacked, while Germany warns of severe hybrid attacks and the EU struggles with internal divisions over sanctions.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "Russia must start a military offensive to control part of a UN member state's territory by December 31, 2026, at 11:59 PM ET for the market to resolve to Yes. The outcome depends on credible reporting consensus regarding actions outside Ukraine. Readers often mistake the deadline or assume any Russian military activity counts, but only new offensives against other UN members matter.",
+          "id": "0x8011cff605bac25673a202332b678e823cd7d82abad9e9770db01ea625808229",
+          "liquidity": 54737.6152,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.065
+            },
+            {
+              "name": "No",
+              "price": 0.935
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-russia-invade-another-country-in-2026?r=alykhan3",
+          "question": "Will Russia invade another country in 2026?",
+          "similarity": 0.8033621311187744,
+          "slug": "will-russia-invade-another-country-in-2026",
+          "volume_24h": 117.05766,
+          "volume_total": 587171.381765,
+          "yes_price": 0.065
+        }
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-09-28T18:57:37+00:00",
+        "headline": "French Student Protests Over School Conditions Spark Violence and Arrests",
+        "id": 34714,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_8d7e85c276be051571d4df7df442cb9e_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T19:41:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T19:41:04+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "France to shutter up to 500 schools as more student protests called",
+            "url": "https://www.aljazeera.com/news/2026/10/4/france-to-shutter-up-to-500-schools-as-more-student-protests-called"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_8d7e85c276be051571d4df7df442cb9e_4x3_384.jpg",
+            "published_at": "2026-10-04T10:06:45+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "What to expect from school protests rattling France's government",
+            "url": "https://abcnews.com/International/wireStory/expect-week-school-protests-rattling-frances-government-136983506"
+          },
+          {
+            "published_at": "2026-10-03T21:57:35+00:00",
+            "publisher": "NPR World",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "France arrests 5,000 people, mostly teens, as school protests spread",
+            "url": "https://www.npr.org/2026/10/03/nx-s1-5989532/france-arrests-5-000-people-mostly-teens-as-school-protests-spread"
+          },
+          {
+            "published_at": "2026-10-03T15:58:00+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "French police clash with student protesters over school improvement demonstrations",
+            "url": "https://www.cbsnews.com/video/french-police-clash-with-student-protestors-over-school-improvement-demonstrations"
+          },
+          {
+            "published_at": "2026-10-03T12:59:27+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "French high school engulfed in flames as student protests continue",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/3/french-high-school-engulfed-in-flames-as-student-protests-continue"
+          },
+          {
+            "published_at": "2026-10-03T01:46:10+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Schools ablaze as student protests spread across France",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/3/schools-ablaze-as-student-protests-spread-across-france"
+          }
+        ],
+        "score": 4.766,
+        "section": "world",
+        "slug": "french-presidential-campaign-heats-up-as-student-protests-fuel-political-c-34714",
+        "source_count": 47,
+        "summary": "Thousands of high school students in France are protesting overcrowded classrooms and teacher shortages, leading to violent clashes with police and widespread arrests."
+      },
+      {
+        "distinct_publishers": 15,
+        "first_seen_at": "2026-09-09T04:29:08+00:00",
+        "headline": "Saudi Coalition Denies Houthi Riyadh Attack as Regional Tensions Rise",
+        "id": 3923,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/08/AP26212584862660-e1786189886515.jpg?w=900",
+        "last_seen_at": "2026-10-04T14:04:54+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T07:39:04+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Saudi-led coalition dismisses ‘misleading’ Houthi claim of Riyadh attack",
+            "url": "https://www.aljazeera.com/news/2026/10/4/houthi-claims-of-targeting-riyadh-are-misleading-saudi-led"
+          },
+          {
+            "published_at": "2026-10-01T19:03:14+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Saudi-led coalition says power station attacked in Medina, blames Houthis",
+            "url": "https://www.aljazeera.com/news/2026/10/1/saudi-led-coalition-says-power-station-attacked-in-medina-blames-houthis"
+          },
+          {
+            "published_at": "2026-09-30T19:20:04+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Saudi Arabia not to compromise on security as Houthis choose ‘chaos’: MBS",
+            "url": "https://www.aljazeera.com/news/2026/9/30/saudi-crown-prince-says-no-compromise-on-kingdoms-security-against-threats"
+          },
+          {
+            "published_at": "2026-09-30T07:22:52+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Pakistan vows to defend Saudi Arabia against Houthis",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/9/30/pakistan-vows-to-defend-saudi-arabia-against-houthis"
+          },
+          {
+            "published_at": "2026-09-29T13:58:42+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Sheikh Mansour visits Riyadh in push to mend UAE-Saudi Arabia rift",
+            "url": "https://www.ft.com/content/87bfd2b4-aab6-4dcb-9c77-3d2606185578"
+          },
+          {
+            "published_at": "2026-09-29T04:46:38+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Rubio, Saudi Arabia’s foreign minister hold talks on Yemen, Hormuz Strait",
+            "url": "https://www.aljazeera.com/news/2026/9/29/rubio-saudi-arabias-foreign-minister-hold-talks-on-yemen-hormuz-strait"
+          }
+        ],
+        "score": 4.675,
+        "section": "world",
+        "slug": "pakistan-pledges-to-honor-security-pact-if-saudi-arabia-attacked-3923",
+        "source_count": 103,
+        "summary": "Saudi Arabia and its allies reject Houthi claims of striking Riyadh while Pakistan vows military support against threats to holy sites.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The market resolves to Yes if Houthi military forces physically enter any part of Saudi Arabia by 11:59 PM ET on October 31. Bombardment, naval presence, or diplomatic visits do not count as entry. Readers often mistake threats or claims for actual ground presence.",
+          "id": "0x1c008508d424634eb01e47889e0fefb2fad4c776f973148f80a86b5be8331c63",
+          "liquidity": 18883.0288,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.11
+            },
+            {
+              "name": "No",
+              "price": 0.89
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-the-houthis-enter-saudi-arabia-by-october-31?r=alykhan3",
+          "price_24h_ago": 0.13,
+          "question": "Will the Houthis enter Saudi Arabia by October 31?",
+          "similarity": 0.8391653895378113,
+          "slug": "will-the-houthis-enter-saudi-arabia-by-october-31",
+          "volume_24h": 304.192523,
+          "volume_total": 33125.793854999996,
+          "yes_price": 0.11
+        }
+      },
+      {
+        "distinct_publishers": 24,
+        "first_seen_at": "2026-09-08T21:42:36+00:00",
+        "headline": "US Deploys Additional Troops and Aircraft Carrier to Middle East Amid Iran Tensions",
+        "hot": "$256k traded on its market in 24 hours",
+        "id": 3468,
+        "image_url": "https://images.axios.com/SIkrr2BAassbxGMmN7_0x2EOnXQ=/0x0:4517x2541/1366x768/2026/10/02/1790900009364.jpeg",
+        "last_seen_at": "2026-10-04T11:00:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T14:08:35+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Iran War Pressures, G7 Oil Release, FlyDubai Terror Attack, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/iran-war-pressures-g7-oil-release-flydubai-terror-attack-more"
+          },
+          {
+            "published_at": "2026-10-03T12:49:45+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Iran Pressure Builds as US Deploys More Troops, FlyDubai Suspect",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/iran-pressure-builds-as-us-deploys-more-troops-flydubai-suspect"
+          },
+          {
+            "published_at": "2026-10-03T12:48:27+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Iran Pressure Builds as US Deploys More Troops, FlyDubai Attack",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/iran-pressure-builds-as-us-deploys-more-troops-flydubai-attack"
+          },
+          {
+            "published_at": "2026-10-03T11:48:11+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Iran Feeling Strain of War, US Troop Boost, G7 Oil Release, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/iran-feeling-strain-of-war-us-troop-boost-g7-oil-release-more"
+          },
+          {
+            "published_at": "2026-10-02T10:06:21+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "New aircraft carrier, 10,000 US troops: Is the Iran war about to escalate?",
+            "url": "https://www.aljazeera.com/news/2026/10/2/new-aircraft-carrier-10000-us-troops-is-the-iran-war-about-to-escalate"
+          },
+          {
+            "published_at": "2026-10-02T04:54:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US Adds Carrier and 10,000 Troops to Mideast",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/us-adds-carrier-and-10-000-troops-to-mideast-video"
+          }
+        ],
+        "score": 4.574,
+        "section": "world",
+        "slug": "us-destroys-five-iranian-tankers-after-missile-attacks-on-warship-iran-stri-3468",
+        "source_count": 122,
+        "summary": "The Pentagon is sending more forces to the Persian Gulf to pressure Tehran as President Trump weighs potential strikes.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The Yes outcome occurs if the United States starts a military offensive to control any part of Iran by December 31, 2026, at 11:59 PM ET. The No outcome applies if this specific action does not happen within that timeframe. Readers often mistake the deadline for the end of 2027 or assume diplomatic talks count as an invasion.",
+          "id": "0x5db999fad322cea2914535aae5517060c3f80ad6d8c0231cde2124a434d16846",
+          "liquidity": 920722.2999,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.155
+            },
+            {
+              "name": "No",
+              "price": 0.845
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027?r=alykhan3",
+          "question": "Will the U.S. invade Iran before 2027?",
+          "similarity": 0.7932488918304443,
+          "slug": "will-the-us-invade-iran-before-2027",
+          "volume_24h": 256487.80117800008,
+          "volume_total": 71601224.45228902,
+          "yes_price": 0.155
+        }
+      },
+      {
+        "distinct_publishers": 12,
+        "first_seen_at": "2026-09-08T01:30:10+00:00",
+        "headline": "Japan Faces Diplomatic Strain as China, Russia Protest Its Military Moves and Taiwan Ties",
+        "id": 2527,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_fc0ee565826281e98794e9798522f2df_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T14:00:06+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-02T01:54:08+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Asia Bankers Hope Japan, Australia Can Lift M&A From Doldrums",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-02/asia-bankers-hope-japan-australia-can-lift-m-a-from-doldrums"
+          },
+          {
+            "published_at": "2026-10-02T00:00:04+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Japanese watchmakers push for overseas growth",
+            "url": "https://www.ft.com/content/c018a2e8-1318-4dd7-9604-a272c96c2e2a"
+          },
+          {
+            "published_at": "2026-10-01T07:18:04+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Japanese companies exit China in record numbers",
+            "url": "https://www.ft.com/content/3d58c75e-035b-4958-89e7-2b2369e3a432"
+          },
+          {
+            "published_at": "2026-09-29T07:00:50+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "China Says Japan Ties Need ‘Normalization’ Again Over Taiwan Row",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-29/china-says-japan-ties-need-normalization-again-over-taiwan-row"
+          },
+          {
+            "published_at": "2026-09-28T09:03:56+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Yen Gains After Japan’s Currency Czar Warns Against Weakness",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-28/yen-gains-after-japan-s-currency-czar-warns-against-weakness"
+          },
+          {
+            "published_at": "2026-09-28T04:26:05+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Aida: Japan’s Defense Buildup Won’t Rattle Markets",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-28/aida-japan-s-defense-buildup-won-t-rattle-markets-video"
+          }
+        ],
+        "score": 4.306,
+        "section": "world",
+        "slug": "former-pm-ishiba-calls-for-closer-ties-with-south-korea-in-seoul-visit-2527",
+        "source_count": 92,
+        "summary": "China and Russia lodge protests against Japan's military cooperation with the US and its ties to Taiwan, while Tokyo tightens immigration rules.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "Japan must officially recognize Palestine before January 1, 2027 for the outcome to be Yes. Any recognition after that date or by any other country does not count. Readers often mistake the linked story about Taiwan as relevant to this specific resolution criteria.",
+          "id": "kalshi:KXRECOGPALESTINE-27-JAP",
+          "liquidity": 14638.05,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.07
+            },
+            {
+              "name": "No",
+              "price": 0.93
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxrecogpalestine-27/kxrecogpalestine-27-jap",
+          "price_24h_ago": 0.07,
+          "question": "Japan",
+          "similarity": 0.8027259111404419,
+          "slug": "kxrecogpalestine-27/kxrecogpalestine-27-jap",
+          "volume_24h": 0,
+          "volume_total": 14638.05,
+          "yes_price": 0.07
+        }
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-09-23T10:46:36+00:00",
+        "headline": "India protests over election chief as police detain demonstrators",
+        "id": 26434,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_1d43de28dfd6fa920133d98e9d0e8e35_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T20:04:02+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T16:55:03+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Mass protests demanding poll chief resignation shake India for third day",
+            "url": "https://www.aljazeera.com/news/2026/10/4/mass-protests-demanding-poll-chief-resignation-shake-india-for-third-day"
+          },
+          {
+            "published_at": "2026-10-03T19:00:01+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Is the CJP changing India’s political landscape?",
+            "url": "https://www.aljazeera.com/video/inside-story/2026/10/3/is-the-cjp-changing-indias-political-landscape"
+          },
+          {
+            "published_at": "2026-10-03T04:28:03+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "India’s Cockroach Party headlines day of anti-establishment protests",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/3/indias-cockroach-party-headlines-day-of-anti-establishment-protests"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_1d43de28dfd6fa920133d98e9d0e8e35_4x3_384.jpg",
+            "published_at": "2026-10-02T15:31:08+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "'Cockroach' protesters demand India's election chief resign over voter list changes",
+            "url": "https://abcnews.com/International/wireStory/cockroach-protesters-demand-indias-election-chief-resign-voter-136942017"
+          },
+          {
+            "published_at": "2026-10-02T13:50:06+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Can India’s ‘cockroach’ movement oust Modi’s election chief?",
+            "url": "https://www.aljazeera.com/features/2026/10/2/can-indias-cockroach-movement-oust-modis-election-chief"
+          },
+          {
+            "published_at": "2026-10-02T10:46:47+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Indian authorities clamp down as ‘cockroach’ movement launches new protests",
+            "url": "https://www.aljazeera.com/news/2026/10/2/indian-authorities-clamp-down-as-cockroach-movement-launches-new-protests"
+          }
+        ],
+        "score": 4.003,
+        "section": "world",
+        "slug": "indian-opposition-demands-cec-resignation-over-voter-list-dispute-26434",
+        "source_count": 126,
+        "summary": "Youth-led 'Cockroach' movement and opposition parties demand Chief Election Commissioner Gyanesh Kumar's resignation amid voter roll controversies.",
+        "top_market": {
+          "end_date": "2028-05-21T14:00:00+00:00",
+          "explainer": "The market resolves to Yes if the Bahujan Samaj Party wins the 2027 Uttar Pradesh Legislative Assembly election. It resolves to No if the party does not win that specific contest. Readers often mistake this for a prediction about the current electoral roll disputes mentioned in the linked story, but those events do not determine the outcome.",
+          "id": "kalshi:KXUPASSEMBLY-27MAY22-BSP",
+          "liquidity": 1220,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.03
+            },
+            {
+              "name": "No",
+              "price": 0.97
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxupassembly-27may22/kxupassembly-27may22-bsp",
+          "price_24h_ago": 0.03,
+          "question": "Bahujan Samaj Party",
+          "similarity": 0.7296939492225647,
+          "slug": "kxupassembly-27may22/kxupassembly-27may22-bsp",
+          "volume_24h": 0,
+          "volume_total": 1220,
+          "yes_price": 0.03
+        }
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-09-06T23:14:13+00:00",
+        "headline": "Trump Ignores AI Rules, Milei Renegotiates Trade, Mexico Seeks US Deal",
+        "id": 2053,
+        "image_url": "https://media.es.wired.com/photos/6a9ef8bd98d156729f3c3c6f/master/pass/lobo%20gris%20mexicano%20Estados%20Unidos%201975776129.jpg",
+        "last_seen_at": "2026-10-04T19:33:29+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T18:07:51+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Chile: Kast encuentra más margen para gastar ante auge del cobre",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/chile-kast-encuentra-mas-margen-para-gastar-ante-auge-del-cobre"
+          },
+          {
+            "published_at": "2026-10-01T09:00:00+00:00",
+            "publisher": "NPR Politics",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "En esta ciudad de Pensilvania, los dos partidos políticos buscan el voto latino",
+            "url": "https://www.npr.org/2026/10/01/g-s1-145488/en-esta-ciudad-de-pensilvania-los-dos-partidos-politicos-buscan-el-voto-latino"
+          },
+          {
+            "published_at": "2026-09-30T15:33:10+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "El repunte bursátil de Argentina se limita a las empresas petroleras",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-30/el-repunte-bursatil-de-argentina-se-limita-a-las-empresas-petroleras"
+          },
+          {
+            "published_at": "2026-09-30T15:29:52+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Trump descarta nuevas reglas federales de seguridad para la IA",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-30/trump-descarta-nuevas-reglas-federales-de-seguridad-para-la-ia"
+          },
+          {
+            "published_at": "2026-09-30T15:28:51+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "México confía cada vez más en alcanzar un acuerdo con EE.UU.",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-30/mexico-confia-cada-vez-mas-en-alcanzar-un-acuerdo-con-ee-uu"
+          },
+          {
+            "published_at": "2026-09-29T17:26:24+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Afores en auge alcanzan récord de deuda pública en México",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-29/afores-en-auge-alcanzan-record-de-deuda-publica-en-mexico-mumy7c0i"
+          }
+        ],
+        "score": 3.892,
+        "section": "world",
+        "slug": "trump-and-putin-discuss-ukraine-peace-as-rubio-visits-latin-america-2053",
+        "source_count": 441,
+        "summary": "Donald Trump rejects new AI regulations while Javier Milei seeks to renegotiate a trade pact and Mexico pursues commercial agreements with the US.",
+        "top_market": {
+          "end_date": "2027-01-01T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if a free trade deal with Argentina becomes law through Senate ratification and Presidential approval, or via a Congressional-Executive Agreement signed by the President before January 1, 2027. Otherwise, it resolves to No. Readers often mistake the signing of implementing legislation for the final resolution without confirming that the deal has actually become law.",
+          "id": "kalshi:KXFTACOUNTRIES-27-ARG",
+          "liquidity": 4136.45,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.1
+            },
+            {
+              "name": "No",
+              "price": 0.9
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxftacountries-27/kxftacountries-27-arg",
+          "price_24h_ago": 0.1,
+          "question": "Argentina",
+          "similarity": 0.7417930960655212,
+          "slug": "kxftacountries-27/kxftacountries-27-arg",
+          "volume_24h": 0,
+          "volume_total": 4136.45,
+          "yes_price": 0.1
+        }
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-10-04T03:36:00+00:00",
+        "headline": "Japan Summons US Envoy After Marine Arrested in Okinawa Murder",
+        "id": 43837,
+        "image_url": "https://i.guim.co.uk/img/media/a11ce07042861ed5807107c909fcf42bc13b11d6/417_0_4167_3333/master/4167.jpg?width=140&quality=85&auto=format&fit=max&s=e0fc36d50af725b45511b403471908d3",
+        "last_seen_at": "2026-10-04T15:45:04+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T15:45:04+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Japan summons US envoy as marine arrested over Okinawa murder",
+            "url": "https://www.aljazeera.com/news/2026/10/4/japan-summons-us-envoy-as-marine-arrested-over-okinawa-murder"
+          },
+          {
+            "published_at": "2026-10-04T15:15:09+00:00",
+            "publisher": "NPR World",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "U.S. Marine arrested for alleged murder of a woman in Okinawa, Japan",
+            "url": "https://www.npr.org/2026/10/04/nx-s1-5990790/us-marine-arrested-for-alleged-murder-woman-on-okinawa"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/a11ce07042861ed5807107c909fcf42bc13b11d6/417_0_4167_3333/master/4167.jpg?width=140&quality=85&auto=format&fit=max&s=e0fc36d50af725b45511b403471908d3",
+            "published_at": "2026-10-04T13:46:19+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "US marine arrested in Japan on suspicion of killing woman, police say",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/marine-arrested-japan-suspicion-murder"
+          },
+          {
+            "published_at": "2026-10-04T13:43:28+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "U.S. Marine arrested, accused of killing Japanese woman in Okinawa",
+            "url": "https://www.cbsnews.com/news/us-marine-arrested-japan-accused-murder-okinawa"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/US/wirestory_e2ba88380a55f9b8af559dd616b92b11_4x3_384.jpg",
+            "published_at": "2026-10-04T13:42:29+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "US Marine arrested for alleged murder of a woman on Okinawa, triggers outrage from Japan",
+            "url": "https://abcnews.com/International/wireStory/us-marine-arrested-alleged-murder-woman-okinawa-triggers-136985677"
+          },
+          {
+            "published_at": "2026-10-04T04:50:43+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Japan Calls US Envoy After Marine Arrest Over Okinawa Murder",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/japan-calls-us-envoy-after-marine-arrest-over-okinawa-murder"
+          }
+        ],
+        "score": 3.831,
+        "section": "world",
+        "slug": "us-marine-arrested-in-japan-over-murder-robbery-of-local-woman-43837",
+        "source_count": 11,
+        "summary": "Japanese police arrested Lance Cpl. Devin Jacob Ballard for the robbery and murder of Anna Yagi, prompting Tokyo to lodge a strong protest with Washington."
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-09-21T00:34:30+00:00",
+        "headline": "Ethiopian Forces Seize Mekelle as TPLF Rebels Retreat",
+        "id": 22248,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_792f66094d4cc5171ec5478e8a994931_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T12:04:58+00:00",
+        "publishers": [
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_792f66094d4cc5171ec5478e8a994931_4x3_384.jpg",
+            "published_at": "2026-10-04T12:04:58+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Opposition fighters in northern Ethiopia's Tigray withdraw from regional capital",
+            "url": "https://abcnews.com/International/wireStory/opposition-fighters-northern-ethiopias-tigray-withdraw-regional-capital-136984315"
+          },
+          {
+            "published_at": "2026-10-04T11:05:02+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Ethiopian government forces seize Tigray capital Mekelle as TPLF withdraws",
+            "url": "https://www.aljazeera.com/news/2026/10/4/government-forces-seize-capital-of-ethiopias-tigray-region-from-rebels"
+          },
+          {
+            "published_at": "2026-10-04T07:47:44+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Ethiopia Recaptures Tigray Airport as Northern Rebels Retreat",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-04/ethiopia-recaptures-tigray-airport-as-northern-rebels-retreat"
+          },
+          {
+            "published_at": "2026-10-04T01:41:28+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Ethiopian government troops seize Tigray’s capital Mekelle",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/ethiopian-government-troops-seize-tigrays-capital-mekelle"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_87740d41b686614b63ccdba54dbd3168_4x3_384.jpg",
+            "published_at": "2026-10-03T19:46:36+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Ethiopian federal forces retake Mekelle airport from Tigrayan fighters, residents say",
+            "url": "https://abcnews.com/International/wireStory/ethiopian-federal-forces-retake-mekelle-airport-tigrayan-fighters-136975196"
+          },
+          {
+            "published_at": "2026-10-03T13:00:57+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Ethiopian gov’t forces advance in Tigray as rebels retreat: What to know",
+            "url": "https://www.aljazeera.com/news/2026/10/3/ethiopian-govt-forces-advance-in-tigray-as-rebels-retreat-what-to-know"
+          }
+        ],
+        "score": 3.618,
+        "section": "world",
+        "slug": "ethiopian-armed-groups-forge-alliance-against-government-22248",
+        "source_count": 78,
+        "summary": "Federal troops and allies have seized control of the regional capital Mekelle after Tigray People’s Liberation Front fighters withdrew from the city.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The outcome is Yes if an official report confirms a human Ebola case in Ethiopia between now and January 1, 2027. The outcome is No if no such confirmed case occurs within that timeframe. Readers often mistake the start date for the resolution deadline.",
+          "id": "kalshi:KXEBOLACOUNTRY-27-ETHI",
+          "liquidity": 8282,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.09
+            },
+            {
+              "name": "No",
+              "price": 0.91
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxebolacountry-27/kxebolacountry-27-ethi",
+          "price_24h_ago": 0.16,
+          "question": "Ethiopia",
+          "similarity": 0.7704591751098633,
+          "slug": "kxebolacountry-27/kxebolacountry-27-ethi",
+          "volume_24h": 3464.31,
+          "volume_total": 8282,
+          "yes_price": 0.09
+        }
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-09-23T16:58:00+00:00",
+        "headline": "Spain Parliament Rejects Housing Decrees as Protests Spread",
+        "hot": "Odds moved 37 points in 24 hours",
+        "id": 27234,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_ae3ba6c786ab95b6acc30bdb02c47d0d_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T10:16:49+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T10:16:49+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Spain protests flare after housing bill rejected: Will it cause snap poll?",
+            "url": "https://www.aljazeera.com/news/2026/10/4/spain-protests-flare-after-housing-bill-rejected-will-it-cause-snap-poll"
+          },
+          {
+            "published_at": "2026-10-03T15:06:40+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Tens of thousands protest in Spain after failed housing reforms",
+            "url": "https://www.aljazeera.com/news/2026/10/3/tens-of-thousands-protest-in-spain-after-failed-housing-reforms"
+          },
+          {
+            "published_at": "2026-10-03T13:55:13+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Madrid Housing Protests Fuel Speculation Over Spanish Election",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-03/madrid-housing-protests-fuel-speculation-over-spanish-election"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_ae3ba6c786ab95b6acc30bdb02c47d0d_4x3_384.jpg",
+            "published_at": "2026-10-02T15:35:31+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Spain's government dealt a blow after parliament rejects housing measures amid protests",
+            "url": "https://abcnews.com/International/wireStory/spains-government-dealt-blow-after-parliament-rejects-housing-136943243"
+          },
+          {
+            "published_at": "2026-10-02T15:01:08+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Spain’s parliament rejects gov’t housing decrees amid mass protests",
+            "url": "https://www.aljazeera.com/news/2026/10/2/spains-parliament-rejects-govt-housing-decrees-amid-mass-protests"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_a34d8626f4c07ec74b7eee8bf22e381c_4x3_384.jpg",
+            "published_at": "2026-09-30T15:22:09+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "What to know about Spain's housing protests sparked by the eviction of the 87-year-old Maricarmen",
+            "url": "https://abcnews.com/International/wireStory/spains-housing-protests-sparked-eviction-87-year-maricarmen-136889052"
+          }
+        ],
+        "score": 3.392,
+        "section": "world",
+        "slug": "eviction-of-madrid-octogenarian-sparks-housing-protests-27234",
+        "source_count": 51,
+        "summary": "Spain's parliament has rejected two government housing decrees, intensifying nationwide protests that began after the eviction of an 87-year-old woman.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "A snap election must occur by October 31, 2026, at 11:59 PM ET for the market to resolve to Yes. This requires the formal dissolution of at least one house of the Spanish Parliament or a formal scheduling of an election before the term ends. Readers often mistake general political instability or protests for the specific legal act of calling a snap election.",
+          "id": "0xc277ed97f91ffb69953a88e0751664ac16848fdb40eecfa37ed638fdf578039f",
+          "liquidity": 32243.0289,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.655
+            },
+            {
+              "name": "No",
+              "price": 0.345
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/spain-snap-election-called-by-october-31?r=alykhan3",
+          "price_24h_ago": 0.525,
+          "question": "Spain snap election called by October 31?",
+          "similarity": 0.7365528345108032,
+          "slug": "spain-snap-election-called-by-october-31",
+          "volume_24h": 15934.461742000003,
+          "volume_total": 38377.055134999995,
+          "yes_price": 0.655
+        },
+        "verdict": {
+          "kind": "moved",
+          "moved": 0.13
+        }
+      },
+      {
+        "distinct_publishers": 9,
+        "first_seen_at": "2026-09-08T15:00:07+00:00",
+        "headline": "Asian Games close in Japan amid organisational chaos and sporting triumphs",
+        "id": 2993,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_b3f6af7cc3d114c88c9941e38d8b003a_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T16:23:12+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T12:53:33+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Amid teen triumph and organisational chaos, Asian Games close in Japan",
+            "url": "https://www.aljazeera.com/sports/2026/10/4/amid-teen-triumph-and-organisational-chaos-asian-games-close-in-japan"
+          },
+          {
+            "published_at": "2026-10-03T08:18:40+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "India beat arch-rivals Pakistan to win Asian Games T20 cricket gold",
+            "url": "https://www.aljazeera.com/sports/2026/10/3/india-beat-arch-rivals-pakistan-to-win-asian-games-t20-cricket-gold"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_b3f6af7cc3d114c88c9941e38d8b003a_4x3_384.jpg",
+            "published_at": "2026-10-03T08:07:05+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "South Korean golfer Tom Kim receives a military exemption with a gold medal at the Asian Games",
+            "url": "https://abcnews.com/International/wireStory/south-korean-golfer-tom-kim-receives-military-exemption-136968461"
+          },
+          {
+            "published_at": "2026-10-02T06:03:19+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Asian Games 2026: Taiwan’s gender-row boxer Lin Yu-ting wins gold medal",
+            "url": "https://www.aljazeera.com/sports/2026/10/2/asian-games-aichi-nagoya-2026-boxing-taiwan-lin-yu-ting-gold"
+          },
+          {
+            "published_at": "2026-09-30T14:54:34+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "China extends 52-year unbeaten record as Asian Games organisers apologise",
+            "url": "https://www.aljazeera.com/sports/2026/9/30/china-extends-52-year-unbeaten-record-as-asian-games-organisers-apologise"
+          },
+          {
+            "published_at": "2026-09-29T07:09:09+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Asian Games: South Korea volleyball team latest to be taken to wrong venue",
+            "url": "https://www.aljazeera.com/sports/2026/9/29/asian-games-2026-aichi-nagoya-south-korea-volley-team-bus-wrong-location"
+          }
+        ],
+        "score": 3.218,
+        "section": "world",
+        "slug": "asian-games-venues-unharmed-by-nagoya-floods-as-organisers-boost-ticket-sal-2993",
+        "source_count": 317,
+        "summary": "The Aichi-Nagoya Asian Games conclude with India defeating Pakistan in cricket gold and China extending its diving record, despite widespread logistical failures."
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-10-01T17:57:00+00:00",
+        "headline": "Latvian PM Kulbergs' pro-Ukraine party wins parliamentary election",
+        "id": 40680,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_e8f2309be23c2bb394a738a2dfcfe623_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T15:57:13+00:00",
+        "publishers": [
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_e8f2309be23c2bb394a738a2dfcfe623_4x3_384.jpg",
+            "published_at": "2026-10-04T11:10:31+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Pro-Ukraine governing coalition wins 35% in Latvian election",
+            "url": "https://abcnews.com/International/wireStory/pro-ukraine-governing-coalition-wins-35-latvian-election-136984034"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_6026bf32a75acf1f671da1e6f34bb520_4x3_384.jpg",
+            "published_at": "2026-10-03T10:19:19+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Latvians vote for a new parliament as fears of Russian hybrid attacks loom",
+            "url": "https://abcnews.com/International/wireStory/latvians-vote-new-parliament-fears-russian-hybrid-attacks-136968645"
+          },
+          {
+            "published_at": "2026-10-03T08:21:23+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Polls open in Latvia against backdrop of perceived Russia threat",
+            "url": "https://www.aljazeera.com/news/2026/10/3/latvians-head-to-polls-with-security-and-cost-of-living-in-focus"
+          },
+          {
+            "image_url": "https://assets.kyivindependent.com/content/images/2026/10/GettyImages-2297848298_20261004-154041_20261004-155659.jpg",
+            "published_at": "2026-10-04T15:57:13+00:00",
+            "publisher": "kyivindependent.com",
+            "publisher_slug": "kyivindependent-com",
+            "tier": 2,
+            "title": "Latvia's pro-Ukraine party wins parliamentary election by wide margin",
+            "url": "https://kyivindependent.com/latvias-pro-ukraine-party-wins-parliamentary-election-by-wide-margin"
+          },
+          {
+            "image_url": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/04/566529.jpg",
+            "published_at": "2026-10-04T04:38:00+00:00",
+            "publisher": "Latest articles",
+            "publisher_slug": "japantimes-co-jp",
+            "tier": 2,
+            "title": "Latvian Prime Minister Andris Kulbergs wins election held under shadow of Ukraine war",
+            "url": "https://www.japantimes.co.jp/news/2026/10/04/world/politics/andris-kulbergs-latvia-election"
+          },
+          {
+            "image_url": "https://assets.kyivindependent.com/content/images/2026/10/GettyImages-2297358009_20261002-153156_20261002-153732.jpg",
+            "published_at": "2026-10-03T23:28:31+00:00",
+            "publisher": "kyivindependent.com",
+            "publisher_slug": "kyivindependent-com",
+            "tier": 2,
+            "title": "Exit polls show pro-Ukraine United List party leading Latvian parliamentary elections as counting begins",
+            "url": "https://kyivindependent.com/exit-polls-show-pro-ukraine-united-list-party-leading-latvian-parliamentary-elections-as-counting-begins"
+          }
+        ],
+        "score": 2.918,
+        "section": "world",
+        "slug": "latvians-vote-for-parliament-amid-russia-threat-and-cost-of-living-crisis-40680",
+        "source_count": 14,
+        "summary": "Exit polls show the United List securing 35% of the vote, prompting President Zelensky to congratulate Prime Minister Andris Kulbergs on a historic victory.",
+        "top_market": {
+          "call": {
+            "correct": true,
+            "favourite": "Yes",
+            "favourite_price": 0.989
+          },
+          "end_date": "2027-12-31T15:00:00+00:00",
+          "explainer": "The market resolves to Yes if the United List party wins the 2026 Latvian parliamentary election. It resolves to No if any other party wins. Readers often mistake the linked news story about current voting trends for the final election result.",
+          "id": "kalshi:KXLATVIAPARLIAMENT-26DEC31-AS",
+          "liquidity": 8667.44,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.988
+            },
+            {
+              "name": "No",
+              "price": 0.01200000000000001
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxlatviaparliament-26dec31/kxlatviaparliament-26dec31-as",
+          "price_24h_ago": 0.989,
+          "question": "United List",
+          "resolved_at": "2026-10-04T18:54:27+00:00",
+          "resolved_outcome": "Yes",
+          "similarity": 0.826839029788971,
+          "slug": "kxlatviaparliament-26dec31/kxlatviaparliament-26dec31-as",
+          "volume_24h": 696,
+          "volume_total": 8667.44,
+          "yes_price": 0.988
+        }
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-04T04:12:54+00:00",
+        "headline": "Bosnia votes in complex general election amid ethnic tensions and EU bid",
+        "hot": "Odds moved 43 points in 24 hours",
+        "id": 43869,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_8d8ce8f6a3c676ef8ba3422f68ea9d11_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T19:46:34+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T19:46:34+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Will elections bring change to multi-ethnic Bosnia and Herzegovina?",
+            "url": "https://www.aljazeera.com/video/inside-story/2026/10/4/will-elections-bring-change-to-multi-ethnic-bosnia-and-herzegovina"
+          },
+          {
+            "published_at": "2026-10-04T08:36:17+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Bosnia votes in one of world’s most complicated general elections",
+            "url": "https://www.aljazeera.com/news/2026/10/4/economic-woes-ethnic-rivalries-shape-bosnias-closely-watched-elections"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_8d8ce8f6a3c676ef8ba3422f68ea9d11_4x3_384.jpg",
+            "published_at": "2026-10-04T04:12:54+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Bosnia votes as pro-Russian politician looms large over the race and ethnic tensions simmer",
+            "url": "https://abcnews.com/International/wireStory/bosnia-votes-pro-russian-politician-looms-large-race-136981747"
+          },
+          {
+            "image_url": "https://s.france24.com/media/display/8e75a348-c02a-11f1-bde0-578a4b968fd6/w:1024/p:16x9/2026-10-04T095934Z-55156460-RC28WNAS0KSJ-RTRMADP-3-BOSNIA-ELECTION.jpg",
+            "published_at": "2026-10-04T19:42:06+00:00",
+            "publisher": "France 24 - Noticias y actualidad internacional en vivo",
+            "publisher_slug": "france24-com",
+            "tier": 2,
+            "title": "Bosnia: la izquierda y los nacionalistas lideran las elecciones a la presidencia tripartita",
+            "url": "https://www.france24.com/es/europa/20261004-bosnia-la-izquierda-y-los-nacionalistas-lideran-las-elecciones-a-la-presidencia-tripartita"
+          },
+          {
+            "published_at": "2026-10-04T19:15:00+00:00",
+            "publisher": "Deutsche Welle",
+            "publisher_slug": "dw-com",
+            "tier": 2,
+            "title": "Polls close in Bosnia-Herzegovina's divisive election",
+            "url": "https://www.dw.com/en/polls-close-in-bosnia-herzegovina-s-divisive-election/a-79535336"
+          },
+          {
+            "published_at": "2026-10-04T09:30:00+00:00",
+            "publisher": "Deutsche Welle",
+            "publisher_slug": "dw-com",
+            "tier": 2,
+            "title": "Bosnia-Herzegovina votes amid divisive campaigns, EU bid",
+            "url": "https://www.dw.com/en/bosnia-herzegovina-votes-amid-divisive-campaigns-eu-bid/a-79535336"
+          }
+        ],
+        "score": 2.793,
+        "section": "world",
+        "slug": "bosnia-holds-general-election-amid-ethnic-tensions-and-pro-russian-influen-43869",
+        "source_count": 8,
+        "summary": "Voters elect a tripartite presidency and parliament, with nationalist candidates leading preliminary results.",
+        "top_market": {
+          "end_date": "2027-10-04T14:00:00+00:00",
+          "explainer": "The market resolves to Yes if Denis Becirovic wins the 2026 election for the Bosniak member of the Presidency of Bosnia and Herzegovina. It resolves to No if he does not win that specific seat. Readers often mistake the general election date for the resolution deadline, but the outcome depends solely on whether Becirovic secures this particular presidency role.",
+          "id": "kalshi:KXBOSNIAKPRES-26OCT04-DBEC",
+          "liquidity": 1827.1,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.8
+            },
+            {
+              "name": "No",
+              "price": 0.19999999999999996
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxbosniakpres-26oct04/kxbosniakpres-26oct04-dbec",
+          "price_24h_ago": 0.8,
+          "question": "Denis Becirovic",
+          "similarity": 0.7831423878669739,
+          "slug": "kxbosniakpres-26oct04/kxbosniakpres-26oct04-dbec",
+          "volume_24h": 0,
+          "volume_total": 1827.1,
+          "yes_price": 0.8
+        }
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-10-02T16:34:00+00:00",
+        "headline": "G7 Agrees to Release 100 Million Barrels of Oil and Diesel Reserves",
+        "id": 42121,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/GasPrices_Manchester_AP_NamYHuh.jpg?w=900",
+        "last_seen_at": "2026-10-04T12:07:56+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T12:07:56+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "G7 Fuel Release Offers Temporary Price Relief",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-04/g7-fuel-release-offers-temporary-price-relief-video"
+          },
+          {
+            "published_at": "2026-10-03T09:27:38+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "G7 to release 100 million barrels of oil and diesel, will it curb prices?",
+            "url": "https://www.aljazeera.com/news/2026/10/3/g7-to-release-100-million-barrels-of-oil-and-diesel-will-it-curb-prices"
+          },
+          {
+            "published_at": "2026-10-03T03:46:09+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Trump to Name A.I. Czar, G7 to Release Diesel Fuel Stocks, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/trump-to-name-a-i-czar-g7-to-release-diesel-fuel-stocks-more"
+          },
+          {
+            "published_at": "2026-10-03T01:24:21+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "G7 to Release Diesel Fuel Stocks, Latest on FlyDubai Pilot, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/g7-to-release-diesel-fuel-stocks-latest-on-flydubai-pilot-more"
+          },
+          {
+            "published_at": "2026-10-03T00:36:15+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Powell Case Not Reopened, G7 to Release Diesel Fuel Stocks, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/powell-case-not-reopened-g7-to-release-diesel-fuel-stocks-more"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/GasPrices_Manchester_AP_NamYHuh.jpg?w=900",
+            "published_at": "2026-10-02T22:43:11+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Big economies to release 100M barrels of fuel",
+            "url": "https://thehill.com/newsletters/energy-environment/6127198-big-economies-to-release-100m-barrels-of-fuel"
+          }
+        ],
+        "score": 2.622,
+        "section": "world",
+        "slug": "g-7-agrees-to-release-100-million-barrels-of-oil-reserves-42121",
+        "source_count": 11,
+        "summary": "The G7 will release 100 million barrels of oil and diesel over four months via the IEA to counter soaring global fuel prices."
+      },
+      {
+        "distinct_publishers": 7,
+        "first_seen_at": "2026-09-27T19:34:30+00:00",
+        "headline": "Bardella Denies Antisemitism Claims Amid Le Pen Campaign",
+        "id": 33284,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_fe0cd3948436b14d057279d2962ebf99_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T09:18:46+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-01T20:22:48+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Investigative outlet deepens antisemitism claims against French far right’s Jordan Bardella",
+            "url": "https://www.ft.com/content/e567ed25-d871-44ac-ad39-aee135eeb6d6"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_fe0cd3948436b14d057279d2962ebf99_4x3_384.jpg",
+            "published_at": "2026-09-29T13:21:25+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Antisemitism allegations against running mate cloud Le Pen's presidential campaign",
+            "url": "https://abcnews.com/International/wireStory/antisemitism-allegations-running-mate-cloud-le-pens-presidential-136849957"
+          },
+          {
+            "published_at": "2026-09-29T11:59:27+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Le Pen deputy engulfed by antisemitism scandal",
+            "url": "https://www.ft.com/content/11a29b88-5293-4574-8660-e9ec3107c819"
+          },
+          {
+            "published_at": "2026-09-28T20:52:03+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "French far-right leader Bardella refutes anti-Semitism allegations",
+            "url": "https://www.aljazeera.com/news/2026/9/28/french-far-right-leader-bardella-refutes-anti-semitism-allegations"
+          },
+          {
+            "published_at": "2026-09-28T08:10:17+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "France’s far-right National Rally gains ground in Senate vote",
+            "url": "https://www.aljazeera.com/news/2026/9/28/frances-far-right-national-rally-gains-ground-in-senate-vote"
+          },
+          {
+            "image_url": "https://s.france24.com/media/display/99af787a-bfd4-11f1-b77c-13e372f41e70/w:1024/p:16x9/5bcdefe6050c8def5ba58d655bc70cebfba4d78a.jpg",
+            "published_at": "2026-10-04T09:18:46+00:00",
+            "publisher": "France 24 - International breaking news, top stories and headlines",
+            "publisher_slug": "france24-com",
+            "tier": 2,
+            "title": "Le Pen stands by top ally Bardella as anti-Semitism claims hit star of French far right",
+            "url": "https://www.france24.com/en/france/20261004-le-pen-stands-by-top-ally-bardella-as-anti-semitism-claims-hit-star-of-french-far-right"
+          }
+        ],
+        "score": 2.354,
+        "section": "world",
+        "slug": "france-s-far-right-national-rally-forms-first-senate-parliamentary-group-33284",
+        "source_count": 28,
+        "summary": "Mediapart publishes authenticated messages, prompting Bardella to deny the allegations and threaten legal action while Le Pen defends her ally.",
+        "top_market": {
+          "end_date": "2028-05-30T14:00:00+00:00",
+          "explainer": "The outcome is Yes if Marine Le Pen wins the next French presidential election. The outcome is No if she does not win. Readers often mistake the date of the linked Senate news story for the resolution deadline.",
+          "id": "kalshi:KXFRENCHPRES-27-MLEP",
+          "liquidity": 119923.79,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.49
+            },
+            {
+              "name": "No",
+              "price": 0.51
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxfrenchpres-27/kxfrenchpres-27-mlep",
+          "price_24h_ago": 0.5,
+          "question": "Marine Le Pen",
+          "similarity": 0.7892431616783142,
+          "slug": "kxfrenchpres-27/kxfrenchpres-27-mlep",
+          "volume_24h": 1162.04,
+          "volume_total": 119923.79,
+          "yes_price": 0.49
+        }
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-09-30T15:31:45+00:00",
+        "headline": "Flydubai Attack Investigation Continues Amid Geopolitical Tensions",
+        "id": 38235,
+        "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/02/79122cf5-a8f6-4c32-82d4-ad871f427f0f_28ca0366.jpg?itok=JISF0S6I&v=1790886956",
+        "last_seen_at": "2026-10-04T13:11:27+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T13:11:27+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "What are the five questions being asked regarding the Flydubai attack?",
+            "url": "https://www.aljazeera.com/news/2026/10/4/what-are-the-five-questions-being-asked-regarding-the-flydubai-attack"
+          },
+          {
+            "published_at": "2026-10-04T00:57:00+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Bessent Criticizes A.I Alarmists, More on FlyDubai Suspect, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/bessent-criticizes-a-i-alarmists-more-on-flydubai-suspect-more"
+          },
+          {
+            "published_at": "2026-10-04T00:19:23+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Latest on FlyDubai Terror Attack, More A.I Safety Concerns, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-04/latest-on-flydubai-terror-attack-more-a-i-safety-concerns-more"
+          },
+          {
+            "published_at": "2026-10-03T23:20:18+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Latest on FlyDubai Terror Attack, More A.I. Safety Worries, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/latest-on-flydubai-terror-attack-more-a-i-safety-worries-more"
+          },
+          {
+            "published_at": "2026-10-03T22:11:29+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "More on FlyDubai Suspect, Bessent Criticizes A.I Alarmists, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/more-on-flydubai-suspect-bessent-criticizes-a-i-alarmists-more"
+          },
+          {
+            "published_at": "2026-10-03T21:12:46+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "FlyDubai Suspect Named, Trump Says Gas Price Will Go Down, More",
+            "url": "https://www.bloomberg.com/news/audio/2026-10-03/flydubai-suspect-named-trump-says-gas-price-will-go-down-more"
+          }
+        ],
+        "score": 2.277,
+        "section": "world",
+        "slug": "flydubai-investigates-pilot-attack-as-apple-enters-smart-home-market-38235",
+        "source_count": 34,
+        "summary": "Officials scrutinize the incident as investigations proceed, while broader concerns regarding AI safety and regional pressures persist."
+      },
+      {
+        "distinct_publishers": 14,
+        "first_seen_at": "2026-09-30T19:42:19+00:00",
+        "headline": "Stabbed FlyDubai Pilot Smit Machchhar Recounts Attack to Indian PM Modi",
+        "id": 38783,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26274795256563-e1790941719851.jpg?w=900",
+        "last_seen_at": "2026-10-04T00:55:13+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26274795256563-e1790941719851.jpg?w=900",
+            "published_at": "2026-10-03T15:19:26+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump thanks man who helped save Flydubai flight: 'What a job he did, he's a hero'",
+            "url": "https://thehill.com/homenews/administration/6127540-trump-praises-yaniv-hayoun"
+          },
+          {
+            "published_at": "2026-10-02T23:50:08+00:00",
+            "publisher": "CBS News",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "FlyDubai captain stabbed mid-flight by \"radicalized\" co-pilot speaks out",
+            "url": "https://www.cbsnews.com/video/flydubai-captain-stabbed-mid-flight-by-radicalized-co-pilot-speaks-out"
+          },
+          {
+            "published_at": "2026-10-02T22:50:23+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Flydubai pilot recounts cockpit stabbing in call with Indian PM Modi",
+            "url": "https://www.aljazeera.com/news/2026/10/2/flydubai-pilot-recounts-cockpit-stabbing-in-call-with-indian-pm-modi"
+          },
+          {
+            "published_at": "2026-10-02T20:54:49+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "FlyDubai pilot hailed as ‘national hero’ as he describes attack",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/2/flydubai-pilot-hailed-as-national-hero-as-he-describes-attack"
+          },
+          {
+            "published_at": "2026-10-02T18:03:34+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Indian Pilot Recalls FlyDubai Cockpit Attack",
+            "url": "https://www.bloomberg.com/news/videos/2026-10-02/indian-pilot-recalls-flydubai-cockpit-attack-video"
+          },
+          {
+            "published_at": "2026-10-02T12:57:05+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Flydubai pilot recounts battle to save plane",
+            "url": "https://www.ft.com/content/3f64eed5-586b-4736-8fd2-e4219f822ad6"
+          }
+        ],
+        "score": 2.198,
+        "section": "world",
+        "slug": "netanyahu-praises-indian-pilot-who-stopped-co-pilot-from-crashing-flydubai-38783",
+        "source_count": 41,
+        "summary": "Captain Smit Machchhar describes the mid-air stabbing by his co-pilot during a video call with Indian Prime Minister Narendra Modi.",
+        "top_market": {
+          "end_date": "2026-11-01T03:59:00+00:00",
+          "explainer": "The outcome is Yes if the co-pilot physically enters Israeli territory by October 31, 2026, at 11:59 PM ET. The outcome is No if he does not enter Israel within that timeframe or if the event occurs outside the specified period. Readers often mistake official announcements of intent for actual transfer, but only physical entry into Israel counts.",
+          "id": "0x5f43dc0aab133d114a3253374315a44f7c812a3304ef5df717c9510998872713",
+          "liquidity": 11705.6275,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.007
+            },
+            {
+              "name": "No",
+              "price": 0.993
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/flydubai-co-pilot-transferred-to-israel-by-octpt-31?r=alykhan3",
+          "price_24h_ago": 0.035500000000000004,
+          "question": "FlyDubai co-pilot transferred to Israel by Oct. 31?",
+          "similarity": 0.7700040340423584,
+          "slug": "flydubai-co-pilot-transferred-to-israel-by-octpt-31",
+          "volume_24h": 1546.79,
+          "volume_total": 9126.89607,
+          "yes_price": 0.007
+        }
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-10-04T07:19:45+00:00",
+        "headline": "Imran Khan supporters march on Islamabad after talks fail",
+        "id": 43989,
+        "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-pakistan-imran-khan_7368185.jpg?20261004183721",
+        "last_seen_at": "2026-10-04T19:53:55+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T19:53:55+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Imran Khan’s party launches march to Islamabad demanding his release",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/imran-khans-party-launches-march-to-islamabad-demanding-his-release"
+          },
+          {
+            "published_at": "2026-10-04T19:20:08+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Pro-Imran Khan mass rally launched after Pakistan government talks fail",
+            "url": "https://www.aljazeera.com/news/2026/10/4/pro-imran-khan-mass-rally-launched-after-pakistan-government-talks-fail"
+          },
+          {
+            "published_at": "2026-10-04T18:22:00+00:00",
+            "publisher": "Deutsche Welle",
+            "publisher_slug": "dw-com",
+            "tier": 2,
+            "title": "Pakistan: Imran Khan supporters demand ex-PM's release",
+            "url": "https://www.dw.com/en/pakistan-imran-khan-supporters-demand-ex-pm-s-release/a-79539221"
+          },
+          {
+            "image_url": "https://e3.365dm.com/26/10/1920x1080/skynews-pakistan-imran-khan_7368185.jpg?20261004183721",
+            "published_at": "2026-10-04T17:33:00+00:00",
+            "publisher": "Sky News",
+            "publisher_slug": "skynews-com",
+            "tier": 2,
+            "title": "Thousands of Imran Khan supporters march towards Pakistan's barricaded capital",
+            "url": "https://news.sky.com/story/thousands-of-imran-khan-supporters-march-towards-pakistans-barricaded-capital-islamabad-13595103"
+          },
+          {
+            "image_url": "https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/10/04/8af93a1d-8778-49b8-8f63-e4579414d954_e10a7f60.jpg?itok=gpxYVt7y&v=1791127376",
+            "published_at": "2026-10-04T15:23:05+00:00",
+            "publisher": "South China Morning Post",
+            "publisher_slug": "scmp-com",
+            "tier": 2,
+            "title": "Supporters of Imran Khan begin ‘long march’ to Islamabad",
+            "url": "https://www.scmp.com/news/asia/south-asia/article/3369723/supporters-imran-khan-begin-long-march-islamabad"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134671257,imgsize-697370.cms",
+            "published_at": "2026-10-04T07:19:45+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "Pakistan braces for showdown as Imran Khan’s party pushes ahead with march",
+            "url": "https://timesofindia.indiatimes.com/world/pakistan/pakistan-braces-for-showdown-as-talks-collapse-imran-khans-party-pushes-ahead-with-march/articleshow/134670771.cms"
+          }
+        ],
+        "score": 2.174,
+        "section": "world",
+        "slug": "supporters-of-imran-khan-begin-long-march-to-islamabad-43989",
+        "source_count": 6,
+        "summary": "Thousands of supporters begin a trek to the capital to demand the former prime minister's release from prison."
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-10-02T03:15:14+00:00",
+        "headline": "Gypsy-Rose Blanchard's Partner Ken Urker Dies in Apparent Overdose",
+        "id": 41149,
+        "image_url": "https://variety.com/wp-content/uploads/2026/10/TCDGYRO_LT001.jpg",
+        "last_seen_at": "2026-10-04T18:19:44+00:00",
+        "publishers": [
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/10/TCDGYRO_LT001.jpg",
+            "published_at": "2026-10-04T18:19:44+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Gypsy-Rose Blanchard Launches Petition to ‘Fight Online Harassment’ Following Partner Ken Urker’s Death: ‘Fame Does Not Erase Humanity’",
+            "url": "https://variety.com/2026/tv/news/gypsy-rose-blanchard-petition-online-harassment-ken-urker-1236898652"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/3a6a4f29c56b4a191ed3da3414876b4445abca78/2_0_1666_1333/master/1666.jpg?width=140&quality=85&auto=format&fit=max&s=7cf4cf1a0e80041a3e62355ebe83642e",
+            "published_at": "2026-10-02T22:24:33+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Partner of Gypsy Rose Blanchard found dead in Louisiana home",
+            "url": "https://www.theguardian.com/us-news/2026/oct/02/gypsy-rose-blanchard-ken-urker-dead"
+          },
+          {
+            "image_url": "https://variety.com/wp-content/uploads/2026/10/TCDGYRO_LT001.jpg",
+            "published_at": "2026-10-02T03:52:01+00:00",
+            "publisher": "Variety",
+            "publisher_slug": "variety-com",
+            "tier": 1,
+            "title": "Ken Urker, Gypsy-Rose Blanchard’s Partner, Dies at 34",
+            "url": "https://variety.com/2026/tv/news/ken-urker-dead-gypsy-rose-blanchard-partner-1236897303"
+          },
+          {
+            "published_at": "2026-10-02T03:15:14+00:00",
+            "publisher": "TV | Hollywood Reporter",
+            "publisher_slug": "hollywoodreporter-com",
+            "tier": 1,
+            "title": "Ken Urker, the Father of Gypsy-Rose Blanchard’s Daughter, Dies at 34",
+            "url": "https://www.hollywoodreporter.com/tv/tv-news/ken-urker-dead-father-gypsy-rose-blanchard-daughter-1236720726"
+          }
+        ],
+        "score": 2.158,
+        "section": "world",
+        "slug": "father-of-gypsy-rose-blanchard-s-daughter-ken-urker-dies-at-34-41149",
+        "source_count": 4,
+        "summary": "Ken Urker was found dead in his Louisiana home, prompting Blanchard to launch a petition against online harassment."
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-09-29T07:00:01+00:00",
+        "headline": "Malaysia begins repatriating Myanmar nationals despite safety warnings",
+        "id": 35370,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_df7f92788f7c5029ab204ec3dc3a736b_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T11:10:37+00:00",
+        "publishers": [
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_df7f92788f7c5029ab204ec3dc3a736b_4x3_384.jpg",
+            "published_at": "2026-10-04T11:10:37+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Nearly 1,500 Myanmar nationals repatriated from Malaysia as UN warns of risks",
+            "url": "https://abcnews.com/International/wireStory/1500-myanmar-nationals-repatriated-malaysia-warns-risks-136983695"
+          },
+          {
+            "published_at": "2026-10-02T08:14:18+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "‘They are crying’: Refugees in Malaysia in fear amid Myanmar deportation",
+            "url": "https://www.aljazeera.com/features/2026/10/2/they-are-crying-refugees-in-malaysia-in-fear-amid-myanmar-deportation"
+          },
+          {
+            "published_at": "2026-09-30T17:55:59+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Why is Malaysia sending back Rohingya refugees to Myanmar?",
+            "url": "https://www.aljazeera.com/video/inside-story/2026/9/30/why-is-malaysia-sending-back-rohingya-refugees-to-myanmar"
+          },
+          {
+            "published_at": "2026-09-29T12:08:40+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Malaysia sends Rohingya back Myanmar despite safety warnings",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/9/29/malaysia-sends-rohingya-back-myanmar-despite-safety-warnings"
+          },
+          {
+            "published_at": "2026-09-29T11:22:40+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Malaysia gave refuge to Rohingya; now it wants them to go",
+            "url": "https://www.aljazeera.com/features/2026/9/29/malaysia-gave-refuge-to-rohingya-now-it-wants-them-to-go"
+          },
+          {
+            "published_at": "2026-09-29T09:27:06+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Malaysia begins sending back Rohingya refugees despite safety warnings",
+            "url": "https://www.aljazeera.com/news/2026/9/29/malaysia-begins-returning-myanmar-nationals-despite-safety-warnings"
+          }
+        ],
+        "score": 1.928,
+        "section": "world",
+        "slug": "malaysia-begins-repatriation-of-myanmar-nationals-despite-safety-warnings-35370",
+        "source_count": 12,
+        "summary": "Kuala Lumpur sends nearly 1,500 people back to a country in civil war, defying UN and rights group concerns over safety.",
+        "top_market": {
+          "end_date": "2026-10-07T05:15:00+00:00",
+          "explainer": "The market resolves to \"Yes\" if Bhutan wins its men's professional T20 World Cup Asia Sub-Regional Qualifier A cricket match against Myanmar, originally scheduled for October 4, 2026, at 9:15 PM EDT. The outcome depends solely on the official result of this specific cricket match.",
+          "id": "kalshi:KXT20MATCH-26OCT042115MYABHU-BHU",
+          "liquidity": 3879.79,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.86
+            },
+            {
+              "name": "No",
+              "price": 0.14
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxt20match-26oct042115myabhu/kxt20match-26oct042115myabhu-bhu",
+          "price_24h_ago": 0.84,
+          "question": "Bhutan",
+          "similarity": 0.7213044166564941,
+          "slug": "kxt20match-26oct042115myabhu/kxt20match-26oct042115myabhu-bhu",
+          "volume_24h": 2846.81,
+          "volume_total": 3879.79,
+          "yes_price": 0.86
+        }
+      },
+      {
+        "distinct_publishers": 16,
+        "first_seen_at": "2026-09-28T22:54:58+00:00",
+        "headline": "Tennessee Corrections Commissioner Resigns After Botched Execution of Christa Pike",
+        "id": 35057,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Memo-Death-penalty-Pike_100226_Stanage_AP_George-Walker-IV.jpg?w=900",
+        "last_seen_at": "2026-10-04T00:23:58+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T17:31:54+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Tennessee prisons official resigns after Christa Pike’s failed US execution",
+            "url": "https://www.aljazeera.com/news/2026/10/3/tennessee-prisons-official-resigns-after-christa-pikes-failed-us-execution"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Memo-Death-penalty-Pike_100226_Stanage_AP_George-Walker-IV.jpg?w=900",
+            "published_at": "2026-10-03T17:24:23+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Tennessee corrections commissioner to resign after botched Christa Pike execution",
+            "url": "https://thehill.com/homenews/state-watch/6127622-tennessee-corrections-commissioner-to-resign-after-botched-christa-pike-execution"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/0c200f21448e17a4a9d68a1be552144f63db1aff/0_38_2012_1609/master/2012.jpg?width=140&quality=85&auto=format&fit=max&s=a15c20c471cb1453f18c41673403a340",
+            "published_at": "2026-10-03T17:09:05+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Tennessee’s top prison official resigning after botched execution of Christa Pike",
+            "url": "https://www.theguardian.com/us-news/2026/oct/03/tennessee-christa-pike-frank-strada"
+          },
+          {
+            "image_url": "https://images.axios.com/nmCO74QIItzp9SNdtLg61CeEYIs=/0x0:1920x1080/1366x768/2026/10/03/1791043605868.jpeg",
+            "published_at": "2026-10-03T16:24:36+00:00",
+            "publisher": "Axios",
+            "publisher_slug": "axios-com",
+            "tier": 1,
+            "title": "Departure comes as the state investigates what went wrong during Pike's lethal injection.",
+            "url": "https://www.axios.com/local/nashville/2026/10/03/christa-pike-execution-tennessee-prison-chief-resigns"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/Pike_100326_Brams_CP_Kiichiro-Sato.jpg?w=900",
+            "published_at": "2026-10-03T16:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Pike's botched execution renews death penalty scrutiny",
+            "url": "https://thehill.com/regulation/court-battles/6127156-death-penalty-christa-pike-eighth-amendment"
+          },
+          {
+            "published_at": "2026-10-03T11:32:42+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "The double standards of a failed execution",
+            "url": "https://www.aljazeera.com/opinions/2026/10/3/the-double-standards-of-a-failed-execution"
+          }
+        ],
+        "score": 1.861,
+        "section": "world",
+        "slug": "tennessee-to-execute-woman-for-first-time-in-200-years-35057",
+        "source_count": 66,
+        "summary": "Frank Strada steps down as Tennessee launches an independent investigation into the failed lethal injection of death row inmate Christa Pike, who remains in critical condition."
+      },
+      {
+        "distinct_publishers": 6,
+        "first_seen_at": "2026-09-10T07:58:49+00:00",
+        "headline": "Russia Adds 15,000 Soldiers as Troop Losses Mount in Ukraine War",
+        "id": 5398,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_fe0926d8b3f42ebd9e43f9eb003df5ae_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T08:08:12+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-09-29T14:46:53+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Why has Putin added 15,000 new soldiers to Russia’s army?",
+            "url": "https://www.aljazeera.com/news/2026/9/29/why-has-putin-added-15000-new-soldiers-to-russias-army"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_fe0926d8b3f42ebd9e43f9eb003df5ae_4x3_384.jpg",
+            "published_at": "2026-09-16T05:41:30+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Russia touts candidates who fought in Ukraine for its wartime parliamentary election",
+            "url": "https://abcnews.com/International/wireStory/russia-touts-candidates-fought-ukraine-wartime-parliamentary-election-136483924"
+          },
+          {
+            "image_url": "https://assets.kyivindependent.com/content/images/2026/10/GettyImages-2294475881_20261004-070308.jpg",
+            "published_at": "2026-10-04T08:08:12+00:00",
+            "publisher": "kyivindependent.com",
+            "publisher_slug": "kyivindependent-com",
+            "tier": 2,
+            "title": "General Staff: Russia has lost 1,540,700 troops in Ukraine since Feb. 24, 2022",
+            "url": "https://kyivindependent.com/general-staff-russia-has-lost-1-540-700-troops-in-ukraine-since-feb-24-2022"
+          },
+          {
+            "image_url": "https://assets.kyivindependent.com/content/images/2025/04/GettyImages-2208340503-1.jpg",
+            "published_at": "2026-10-04T02:17:32+00:00",
+            "publisher": "kyivindependent.com",
+            "publisher_slug": "kyivindependent-com",
+            "tier": 2,
+            "title": "At least 15,000 civilian casualties documented in Ukraine in 2026, UN report finds",
+            "url": "https://kyivindependent.com/at-least-15-000-civilian-casualties-documented-in-ukraine-in-2026-un-report-finds"
+          },
+          {
+            "image_url": "https://assets.kyivindependent.com/content/images/2026/10/GettyImages-2292152705_20261003-062709.jpg",
+            "published_at": "2026-10-03T06:59:56+00:00",
+            "publisher": "kyivindependent.com",
+            "publisher_slug": "kyivindependent-com",
+            "tier": 2,
+            "title": "General Staff: Russia has lost 1,538,950 troops in Ukraine since Feb. 24, 2022",
+            "url": "https://kyivindependent.com/general-staff-russia-has-lost-1-538-950-troops-in-ukraine-since-feb-24-2022-2"
+          },
+          {
+            "image_url": "https://assets.kyivindependent.com/content/images/2026/10/GettyImages-2175025209_20261002-063247.jpg",
+            "published_at": "2026-10-02T06:37:37+00:00",
+            "publisher": "kyivindependent.com",
+            "publisher_slug": "kyivindependent-com",
+            "tier": 2,
+            "title": "General Staff: Russia has lost 1,537,390 troops in Ukraine since Feb. 24, 2022",
+            "url": "https://kyivindependent.com/general-staff-russia-has-lost-1-537-390-troops-in-ukraine-since-feb-24-2022"
+          }
+        ],
+        "score": 1.769,
+        "section": "world",
+        "slug": "ukraine-reports-russian-troop-losses-exceed-1-5-million-5398",
+        "source_count": 41,
+        "summary": "Moscow expands its army while Kyiv reports rising casualties and warns of North Korean recruitment.",
+        "top_market": {
+          "end_date": "2027-01-01T04:59:00+00:00",
+          "explainer": "The market resolves to \"Yes\" if Ukraine agrees to cede territory to Russia in a publicly announced deal by December 31, 2026, at 11:59 PM ET. The agreement must involve the transfer of de facto military control or a formal concession, confirmed by an official announcement from either side or overwhelming consensus among credible news sources.",
+          "id": "0x21bf9a7dae81b6bd51acae73185686ab8997b81b1401e4be10e114d472599c26",
+          "liquidity": 41792.3101,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.065
+            },
+            {
+              "name": "No",
+              "price": 0.935
+            }
+          ],
+          "polymarket_url": "https://polymarket.com/event/will-ukraine-agree-to-cede-territory-to-russia-before-2027?r=alykhan3",
+          "question": "Will Ukraine agree to cede territory to Russia before 2027?",
+          "similarity": 0.763004720211029,
+          "slug": "will-ukraine-agree-to-cede-territory-to-russia-before-2027",
+          "volume_24h": 523.77991,
+          "volume_total": 786871.265838,
+          "yes_price": 0.065
+        }
+      },
+      {
+        "distinct_publishers": 23,
+        "first_seen_at": "2026-09-20T13:05:47+00:00",
+        "headline": "Strong El Niño Expected to Disrupt Global Climate, Agriculture and Sea Levels",
+        "id": 21724,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/GettyImages-52014284-e1790280428969.jpg?w=900",
+        "last_seen_at": "2026-10-03T21:00:01+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/GettyImages-52014284-e1790280428969.jpg?w=900",
+            "published_at": "2026-10-01T14:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "This year's El Niño looks a lot like 1997. What happened then?",
+            "url": "https://thehill.com/policy/energy-environment/6109860-this-years-el-nino-looks-a-lot-like-1997-what-happened-then"
+          },
+          {
+            "published_at": "2026-10-01T00:06:28+00:00",
+            "publisher": "News Feed",
+            "publisher_slug": "ft-com",
+            "tier": 1,
+            "title": "Philippines central bank braces for ‘Godzilla’ El Niño",
+            "url": "https://www.ft.com/content/390fafe6-88bf-4564-978d-4774e2b75e8d"
+          },
+          {
+            "image_url": "https://static01.nyt.com/images/2026/09/30/multimedia/30cli-elnino-wave-fzkw/30cli-elnino-wave-fzkw-mediumSquareAt3X.jpg",
+            "published_at": "2026-09-30T09:01:36+00:00",
+            "publisher": "The New York Times",
+            "publisher_slug": "nytimes-com",
+            "tier": 1,
+            "title": "See How El Niño Is Washing Ashore in California",
+            "url": "https://www.nytimes.com/2026/09/30/climate/el-nino-storm-flooding-kelvin-waves.html"
+          },
+          {
+            "published_at": "2026-09-30T00:00:00+00:00",
+            "publisher": "Nature",
+            "publisher_slug": "nature-com",
+            "tier": 1,
+            "title": "The super El Niño is cooking coral reefs — can lullabies and probiotics save them?",
+            "url": "https://www.nature.com/articles/d41586-026-02965-9"
+          },
+          {
+            "published_at": "2026-09-30T00:00:00+00:00",
+            "publisher": "Nature",
+            "publisher_slug": "nature-com",
+            "tier": 1,
+            "title": "Daily briefing: How to save corals from the El Niño",
+            "url": "https://www.nature.com/articles/d41586-026-03138-4"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/9e5107f1d6a166f37f2f8a6a9f3796bed818b2b4/671_0_6713_5372/master/6713.jpg?width=140&quality=85&auto=format&fit=max&s=d6e24b94cd444b0d91f9f434736a578b",
+            "published_at": "2026-09-28T11:00:33+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Concern mounts over slow-moving, planetary-scale ‘kelvin’ wave heading for California",
+            "url": "https://www.theguardian.com/us-news/2026/sep/28/california-kelvin-wave"
+          }
+        ],
+        "score": 1.729,
+        "section": "world",
+        "slug": "super-el-nino-reshapes-weather-patterns-and-pushes-up-food-prices-21724",
+        "source_count": 59,
+        "summary": "A powerful El Niño is projected to cause severe weather in California, reduce crop yields in Asia and Africa, and stress coral reefs worldwide."
+      },
+      {
+        "distinct_publishers": 5,
+        "first_seen_at": "2026-09-17T17:50:10+00:00",
+        "headline": "Women in New Delhi protest sexual violence amid string of rape cases",
+        "id": 19235,
+        "image_url": "https://static.toiimg.com/photo/msid-134676851,imgsize-41975.cms",
+        "last_seen_at": "2026-10-04T15:20:48+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T15:20:48+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "‘We need freedom’: New Delhi women protest sexual violence",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/4/we-need-freedom-new-delhi-women-protest-sexual-violence"
+          },
+          {
+            "published_at": "2026-09-30T03:53:50+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "String of rapes in Delhi triggers social campaign for women’s safety",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/9/30/string-of-rapes-in-delhi-triggers-social-campaign-for-womens-safety"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134676851,imgsize-41975.cms",
+            "published_at": "2026-10-04T14:42:48+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "'Pulled out dagger’: 'Drunk' driver attacks BJP MLA in Assam; 2 home guards injured",
+            "url": "https://timesofindia.indiatimes.com/city/guwahati/pulled-out-a-dagger-drunk-truck-driver-attacks-bjp-mla-ritu-baran-in-assam/articleshow/134676730.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134673520,imgsize-67232.cms",
+            "published_at": "2026-10-04T10:50:45+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "'Assault on her private parts, hit with cooker': Woman tortured over dowry in Saudi",
+            "url": "https://timesofindia.indiatimes.com/city/thiruvananthapuram/forced-to-say-i-wanted-to-work-in-sex-racket-newlywed-alleges-dowry-torture-assault-by-husband/articleshow/134672565.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134672852,imgsize-134528.cms",
+            "published_at": "2026-10-04T09:51:09+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "'Hit by nearly 10 bullets': Former sarpanch shot dead by masked bikers in Ludhiana",
+            "url": "https://timesofindia.indiatimes.com/city/ludhiana/he-was-hit-by-nearly-10-bullets-former-sarpanch-shot-dead-by-masked-bikers-in-ludhiana/articleshow/134672737.cms"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134672315,imgsize-55838.cms",
+            "published_at": "2026-10-04T09:01:54+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "‘Utterly shameful’: Tharoor slams police action against women protesters in Delhi",
+            "url": "https://timesofindia.indiatimes.com/india/utterly-shameful-tharoor-slams-police-action-against-women-protesters-in-delhi/articleshow/134672256.cms"
+          }
+        ],
+        "score": 1.688,
+        "section": "world",
+        "slug": "congress-leaders-condemn-delhi-violence-amid-bihar-harassment-probe-19235",
+        "source_count": 83,
+        "summary": "Protesters demand safer public spaces and justice following recent assaults, with officials condemning police conduct during the demonstrations."
+      },
+      {
+        "distinct_publishers": 17,
+        "first_seen_at": "2026-09-27T21:14:43+00:00",
+        "headline": "US Completes Troop Withdrawal from Iraq, Ending 20-Year Mission",
+        "id": 33398,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273639063559-e1790793107856.jpg?w=900",
+        "last_seen_at": "2026-10-03T21:57:33+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T21:57:33+00:00",
+            "publisher": "NPR World",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "U.S. withdrawal from Iraq is complete",
+            "url": "https://www.npr.org/2026/10/03/nx-s1-5987758/u-s-withdrawal-from-iraq-is-complete"
+          },
+          {
+            "published_at": "2026-10-01T10:14:07+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Iraq’s Kurdish forces look to a new era after US withdrawal",
+            "url": "https://www.aljazeera.com/news/2026/10/1/iraqs-kurdish-forces-look-to-a-new-era-after-us-withdrawal"
+          },
+          {
+            "published_at": "2026-10-01T01:11:22+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Iraq celebrates Sovereignty Day as US troops complete withdrawal",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/1/iraq-celebrates-sovereignty-day-as-us-troops-complete-withdrawal"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/AP26273639063559-e1790793107856.jpg?w=900",
+            "published_at": "2026-09-30T18:43:16+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump says US exit from Iraq a 'victory' for both countries",
+            "url": "https://thehill.com/homenews/administration/6121110-trump-iraq-troop-withdrawal"
+          },
+          {
+            "published_at": "2026-09-30T18:35:59+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "US Formally Concludes Operation Inherent Resolve in Iraq",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-30/us-formally-concludes-operation-inherent-resolve-in-iraq-video"
+          },
+          {
+            "published_at": "2026-09-30T16:33:02+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Pentagon says US troop withdrawal from Iraq is complete",
+            "url": "https://www.aljazeera.com/news/2026/9/30/pentagon-says-us-troop-withdrawal-from-iraq-is-complete"
+          }
+        ],
+        "score": 1.658,
+        "section": "world",
+        "slug": "u-s-forces-prepare-to-end-two-decade-presence-in-iraq-33398",
+        "source_count": 39,
+        "summary": "The Pentagon confirms the formal conclusion of Operation Inherent Resolve and the departure of all US forces, marking the end of two decades of military involvement in Iraq."
+      },
+      {
+        "distinct_publishers": 2,
+        "first_seen_at": "2026-09-27T08:55:07+00:00",
+        "headline": "Hurricane Rachel Strengthens to 105 MPH Winds Off Baja California Coast",
+        "hot": "Odds moved 27 points in 24 hours",
+        "id": 32714,
+        "image_url": "https://s.abcnews.com/images/International/wirestory_8752e5abd8b0a52aa01976a4cf3f1462_4x3_384.jpg",
+        "last_seen_at": "2026-10-04T14:35:16+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-04T14:35:16+00:00",
+            "publisher": "NOAA NHC Pacific",
+            "publisher_slug": "noaa-gov",
+            "tier": 1,
+            "title": "Hurricane Rachel Forecast Discussion Number 30",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCDEP3+shtml/041435.shtml"
+          },
+          {
+            "published_at": "2026-10-04T14:34:51+00:00",
+            "publisher": "NOAA NHC Pacific",
+            "publisher_slug": "noaa-gov",
+            "tier": 1,
+            "title": "Hurricane Rachel Public Advisory Number 30",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/041434.shtml"
+          },
+          {
+            "published_at": "2026-10-04T14:34:51+00:00",
+            "publisher": "NOAA NHC Pacific",
+            "publisher_slug": "noaa-gov",
+            "tier": 1,
+            "title": "Hurricane Rachel Wind Speed Probabilities Number 30",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIAPWSEP3+shtml/041434.shtml"
+          },
+          {
+            "published_at": "2026-10-04T14:34:18+00:00",
+            "publisher": "NOAA NHC Pacific",
+            "publisher_slug": "noaa-gov",
+            "tier": 1,
+            "title": "Hurricane Rachel Forecast Advisory Number 30",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCMEP3+shtml/041434.shtml"
+          },
+          {
+            "published_at": "2026-10-04T08:34:43+00:00",
+            "publisher": "NOAA NHC Pacific",
+            "publisher_slug": "noaa-gov",
+            "tier": 1,
+            "title": "Hurricane Rachel Forecast Discussion Number 29",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCDEP3+shtml/040834.shtml"
+          },
+          {
+            "published_at": "2026-10-04T08:34:14+00:00",
+            "publisher": "NOAA NHC Pacific",
+            "publisher_slug": "noaa-gov",
+            "tier": 1,
+            "title": "Hurricane Rachel Wind Speed Probabilities Number 29",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIAPWSEP3+shtml/040834.shtml"
+          }
+        ],
+        "score": 1.429,
+        "section": "world",
+        "slug": "tropical-depression-eighteen-e-forms-south-of-mexico-32714",
+        "source_count": 126,
+        "summary": "The storm moves west-northwestward with maximum sustained winds of 105 mph and a minimum central pressure of 965 mb.",
+        "top_market": {
+          "end_date": "2026-12-02T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if Hurricane Rachel achieves maximum sustained winds of at least 130 mph. It resolves to No if the storm does not reach that wind speed threshold. Readers often mistake the current category or intensity for the final resolution, but only the specific wind speed matters.",
+          "id": "kalshi:KXHURCAT-26RACHEL-T4",
+          "liquidity": 9199.92,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.01
+            },
+            {
+              "name": "No",
+              "price": 0.99
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxhurcat-26rachel/kxhurcat-26rachel-t4",
+          "price_24h_ago": 0.28,
+          "question": "Category 4 or above",
+          "similarity": 0.7915562391281128,
+          "slug": "kxhurcat-26rachel/kxhurcat-26rachel-t4",
+          "volume_24h": 10.5,
+          "volume_total": 9199.92,
+          "yes_price": 0.01
+        }
+      },
+      {
+        "distinct_publishers": 3,
+        "first_seen_at": "2026-10-03T17:03:54+00:00",
+        "headline": "Debris from missing medical plane found off Nantucket",
+        "id": 43415,
+        "image_url": "https://i.guim.co.uk/img/media/c5fe1cbe8688e1cf1f3b91169e1d78884accb9fb/246_0_3371_2697/master/3371.jpg?width=140&quality=85&auto=format&fit=max&s=7331f3d479dca8d268e20ad717c6eeb6",
+        "last_seen_at": "2026-10-04T13:27:13+00:00",
+        "publishers": [
+          {
+            "image_url": "https://i.guim.co.uk/img/media/c5fe1cbe8688e1cf1f3b91169e1d78884accb9fb/246_0_3371_2697/master/3371.jpg?width=140&quality=85&auto=format&fit=max&s=7331f3d479dca8d268e20ad717c6eeb6",
+            "published_at": "2026-10-04T13:27:13+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Debris found after medical plane carrying six people went missing off Nantucket",
+            "url": "https://www.theguardian.com/us-news/2026/oct/04/missing-air-ambulance-massachusetts-debris-found"
+          },
+          {
+            "published_at": "2026-10-03T23:03:44+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Air ambulance missing on flight from Bermuda to Boston",
+            "url": "https://www.aljazeera.com/news/2026/10/3/air-ambulance-missing-on-flight-from-bermuda-to-boston"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/c72e4c08a553f2f02138a8eb41356396a9108d22/408_0_2436_1949/master/2436.jpg?width=140&quality=85&auto=format&fit=max&s=28557931dc407585b90b2be0d0444e6b",
+            "published_at": "2026-10-03T17:03:54+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "US Coast Guard searches for missing air ambulance off coast of Massachusetts",
+            "url": "https://www.theguardian.com/us-news/2026/oct/03/us-coast-guard-missing-air-ambulance-massachusetts"
+          },
+          {
+            "image_url": "https://static.toiimg.com/photo/msid-134669071,imgsize-52596.cms",
+            "published_at": "2026-10-04T02:55:34+00:00",
+            "publisher": "Times of India",
+            "publisher_slug": "indiatimes-com",
+            "tier": 2,
+            "title": "‘You’re coming in blind?’ Chilling audio before medical jet carrying 6 vanished",
+            "url": "https://timesofindia.indiatimes.com/world/us/youre-coming-in-blind-chilling-audio-before-medical-jet-carrying-6-vanished-over-atlantic/articleshow/134669054.cms"
+          }
+        ],
+        "score": 1.411,
+        "section": "world",
+        "slug": "us-coast-guard-searches-for-missing-air-ambulance-off-massachusetts-coast-43415",
+        "source_count": 4,
+        "summary": "The US Coast Guard has located debris from a Gulfstream G-100 air ambulance carrying six people that vanished during a flight from Bermuda to Boston."
+      },
+      {
+        "distinct_publishers": 22,
+        "first_seen_at": "2026-09-20T22:02:18+00:00",
+        "headline": "G7 Agrees to Release 100 Million Barrels of Diesel and Oil Amid US Pressure",
+        "id": 22099,
+        "image_url": "https://static.politico.com/68/0a/cfb022c34689a0cbbcadfebd94b7/white-house-43935.jpg",
+        "last_seen_at": "2026-10-03T14:13:41+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T03:54:58+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "G7 nations bow to US pressure and avoid crippling diesel ban",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/3/g7-nations-bow-to-us-pressure-and-avoid-crippling-diesel-ban"
+          },
+          {
+            "image_url": "https://static.politico.com/68/0a/cfb022c34689a0cbbcadfebd94b7/white-house-43935.jpg",
+            "published_at": "2026-10-02T21:30:37+00:00",
+            "publisher": "Energy & Environment",
+            "publisher_slug": "politico-com",
+            "tier": 1,
+            "title": "Trump rules out diesel export ban after Europe agrees to tap stockpiles",
+            "url": "https://www.politico.com/news/2026/10/02/trump-rules-out-diesel-export-ban-after-europe-agrees-to-tap-stockpiles-01105569"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/AP26275723233410-e1790971946988.jpg?w=900",
+            "published_at": "2026-10-02T20:43:59+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Trump says the U.S. won’t ban diesel exports",
+            "url": "https://thehill.com/policy/energy-environment/6126914-g7-releases-massive-fuel-stock"
+          },
+          {
+            "published_at": "2026-10-02T19:01:45+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Trump says Europe agreed to release ‘massive amount’ of diesel reserves",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/2/aje-onl-nf_ig_thumb_diesel-021026"
+          },
+          {
+            "image_url": "https://static.politico.com/3e/05/a01157d4407388cbf94a409712ef/https-delivery-gettyimages.com/downloads/2295962661",
+            "published_at": "2026-10-02T18:05:46+00:00",
+            "publisher": "Energy & Environment",
+            "publisher_slug": "politico-com",
+            "tier": 1,
+            "title": "‘Blackmail’: Europe fumes against White House demand for more diesel",
+            "url": "https://www.politico.com/news/2026/10/02/white-house-diesel-europe-01104936"
+          },
+          {
+            "published_at": "2026-10-02T16:25:57+00:00",
+            "publisher": "Bloomberg.com",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "G7 Agrees to Release 100 Million Barrels of Diesel and Crude Amid Trump Pressure",
+            "url": "https://www.bloomberg.com/news/newsletters/2026-10-02/g7-agrees-to-release-100-million-barrels-of-diesel-and-crude-amid-trump-pressure"
+          }
+        ],
+        "score": 1.405,
+        "section": "world",
+        "slug": "grassley-urges-trump-to-impose-diesel-export-embargo-amid-high-prices-22099",
+        "source_count": 110,
+        "summary": "G7 leaders agreed to a coordinated release of up to 100 million barrels of emergency diesel and crude oil reserves within four months to ease surging fuel prices.",
+        "top_market": {
+          "end_date": "2026-11-03T04:59:00+00:00",
+          "explainer": "The market resolves to Yes if the United States imposes a ban on diesel exports that goes into effect between now and November 3, 2026. Otherwise, it resolves to No. Readers often mistake the news headline for the resolution, but only an actual enacted ban counts.",
+          "id": "kalshi:KXDIESELEXPORTBAN-26",
+          "liquidity": 130428.95,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.03
+            },
+            {
+              "name": "No",
+              "price": 0.97
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxdieselexportban-26/kxdieselexportban-26",
+          "price_24h_ago": 0.03,
+          "question": "Yes",
+          "similarity": 0.8663743138313293,
+          "slug": "kxdieselexportban-26/kxdieselexportban-26",
+          "volume_24h": 1013.79,
+          "volume_total": 130428.95,
+          "yes_price": 0.03
+        }
+      },
+      {
+        "distinct_publishers": 21,
+        "first_seen_at": "2026-09-20T17:08:45+00:00",
+        "headline": "Supreme Court Allows Third-Country Deportations to Resume",
+        "id": 21857,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/05/AP24304488177102-e1777985451520.jpg?w=900",
+        "last_seen_at": "2026-10-03T14:00:28+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/05/AP24304488177102-e1777985451520.jpg?w=900",
+            "published_at": "2026-10-01T22:59:18+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Judge rejects Trump administration arguments for withholding boat strike justification memo",
+            "url": "https://thehill.com/regulation/court-battles/6124784-judge-orders-doj-memo-release"
+          },
+          {
+            "image_url": "https://i.guim.co.uk/img/media/b225ffe93aaca30bfb4579ee38bccddee09e6672/500_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=71fbc6359fa2b2c9193ba2f4dc91b223",
+            "published_at": "2026-10-01T20:20:49+00:00",
+            "publisher": "The Guardian US",
+            "publisher_slug": "theguardian-com",
+            "tier": 1,
+            "title": "Supreme court to hear case challenging Trump’s immigration detention policy",
+            "url": "https://www.theguardian.com/us-news/2026/oct/01/supreme-court-case-trump-immigration-detention"
+          },
+          {
+            "published_at": "2026-10-01T17:35:58+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "US Supreme Court agrees to take up Trump’s ICE detention policy",
+            "url": "https://www.aljazeera.com/news/2026/10/1/us-supreme-court-agrees-to-take-up-trumps-ice-detention-policy"
+          },
+          {
+            "published_at": "2026-10-01T13:51:59+00:00",
+            "publisher": "CBS News Politics",
+            "publisher_slug": "cbsnews-com",
+            "tier": 1,
+            "title": "Supreme Court to hear dispute over Trump's mandatory detention policy",
+            "url": "https://www.cbsnews.com/news/supreme-court-trump-mandatory-detention-policy-rhoney-v-barbosa-da-cunha"
+          },
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/09/6abc1969a70bf6.14474873-e1790858897547.jpeg?w=900",
+            "published_at": "2026-10-01T13:39:09+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Supreme Court takes up Trump’s mandatory detention policy",
+            "url": "https://thehill.com/regulation/court-battles/6122542-supreme-court-mandatory-detention-policy-trump"
+          },
+          {
+            "published_at": "2026-10-01T09:00:00+00:00",
+            "publisher": "NPR Health",
+            "publisher_slug": "npr-org",
+            "tier": 1,
+            "title": "Trump administration reverses stance on integration of people with disabilities",
+            "url": "https://www.npr.org/2026/10/01/nx-s1-5981375/integration-mandate-disabilities-reversed-trump"
+          }
+        ],
+        "score": 1.368,
+        "section": "world",
+        "slug": "trump-administration-deports-over-25-000-migrants-to-third-countries-in-se-21857",
+        "source_count": 75,
+        "summary": "The US Supreme Court permits the Trump administration to resume deporting immigrants to third countries without prior notice or a chance to contest removal.",
+        "top_market": {
+          "call": {
+            "correct": true,
+            "favourite": "No",
+            "favourite_price": 0.78
+          },
+          "end_date": "2026-10-17T14:00:00+00:00",
+          "explainer": "The market resolves to Yes if Donald Trump uses the words \"Deport,\" \"Deported,\" or \"Deportation\" during his Midterm Rally in Vandalia, Ohio. The event must take place at this specific location, regardless of whether it occurs on the originally scheduled date of October 3, 2026, or a rescheduled time. Readers often mistake the deadline for the actual trigger, but only the spoken words at the rally matter.",
+          "id": "kalshi:KXTRUMPMENTION-26OCT03-DEPO",
+          "liquidity": 38121.56,
+          "outcomes": [
+            {
+              "name": "Yes",
+              "price": 0.01
+            },
+            {
+              "name": "No",
+              "price": 0.99
+            }
+          ],
+          "polymarket_url": "https://kalshi.com/markets/kxtrumpmention-26oct03/kxtrumpmention-26oct03-depo",
+          "price_24h_ago": 0.22,
+          "question": "Deport / Deported / Deportation",
+          "resolved_at": "2026-10-04T13:40:28+00:00",
+          "resolved_outcome": "No",
+          "similarity": 0.7562296986579895,
+          "slug": "kxtrumpmention-26oct03/kxtrumpmention-26oct03-depo",
+          "volume_24h": 34142.23,
+          "volume_total": 38121.56,
+          "yes_price": 0.01
+        }
+      },
+      {
+        "distinct_publishers": 21,
+        "first_seen_at": "2026-09-07T09:00:07+00:00",
+        "headline": "Nepal Avalanche Toll Rises to 15 as Rescuers Recover Bodies on Mount Himlung",
+        "id": 2163,
+        "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/nepal_flood_aftermath_09022026_AP26245592352348.png?w=900",
+        "last_seen_at": "2026-10-03T17:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://thehill.com/wp-content/uploads/sites/2/2026/10/nepal_flood_aftermath_09022026_AP26245592352348.png?w=900",
+            "published_at": "2026-10-03T17:00:00+00:00",
+            "publisher": "The Hill",
+            "publisher_slug": "thehill-com",
+            "tier": 1,
+            "title": "Nepal's catastrophic flooding is a red alert for the world's mountain towns",
+            "url": "https://thehill.com/opinion/energy-environment/6124065-glacial-lake-flood-risks"
+          },
+          {
+            "image_url": "https://s.abcnews.com/images/International/wirestory_9b6a65a5e965b43b8238a73aff363bde_4x3_384.jpg",
+            "published_at": "2026-10-02T06:39:52+00:00",
+            "publisher": "ABC News",
+            "publisher_slug": "abcnews-go-com",
+            "tier": 1,
+            "title": "Nepal avalanche toll rises to 15 deaths with discovery of 8 bodies on Mount Himlung",
+            "url": "https://abcnews.com/International/wireStory/nepal-avalanche-toll-rises-15-deaths-discovery-8-136941238"
+          },
+          {
+            "published_at": "2026-10-02T04:53:49+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Nepal avalanche kills at least 15 expedition workers",
+            "url": "https://www.aljazeera.com/news/2026/10/2/nepal-avalanche-kills-at-least-15-expedition-workers"
+          },
+          {
+            "published_at": "2026-09-28T19:59:36+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Nepal hit by deadly floods, landslides, and avalanche",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/9/28/aje-onl-nf_nepal-hit-by-deadly-floods-landslides-avalanche-280926"
+          },
+          {
+            "published_at": "2026-09-28T13:14:18+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "Heavy rain triggers landslide in Nepal’s Mustang District",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/9/28/heavy-rain-triggers-landslide-in-nepals-mustang-district"
+          },
+          {
+            "published_at": "2026-09-28T05:28:29+00:00",
+            "publisher": "Al Jazeera – Breaking News, World News and Video from Al Jazeera",
+            "publisher_slug": "aljazeera-com",
+            "tier": 1,
+            "title": "‘Still a lockdown’: Deadly floods hit Nepal tourism as peak season begins",
+            "url": "https://www.aljazeera.com/news/2026/9/28/still-a-lockdown-deadly-floods-hit-nepal-tourism-as-peak-season-begins"
+          }
+        ],
+        "score": 1.346,
+        "section": "world",
+        "slug": "nepal-seeks-climate-compensation-for-deadly-floods-that-killed-thousands-2163",
+        "source_count": 94,
+        "summary": "Rescuers have recovered eight more bodies from an avalanche at Mount Himlung, raising the death toll to 15 in Nepal's Himalayan region."
+      }
+    ],
+    "total": 68
+  }
+}

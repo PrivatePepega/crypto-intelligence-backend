@@ -22,6 +22,7 @@ import { cvBreakingTool } from "../../tools/cvBreaking.js";
 import { cvNewsTool } from "../../tools/cvNews.js";
 import { cvSearchTool } from "../../tools/cvSearch.js";
 import { cvTrendingTool } from "../../tools/cvTrending.js";
+import { finnhubCryptoNewsTool } from "../../tools/finnhubCryptoNews.js";
 
 
 // --------------------------------------------------
@@ -66,6 +67,8 @@ const observerTools = {
   // cvSearchTool, //sucks max3
 
   // cvTrendingTool,
+
+  finnhubCryptoNewsTool,
 
 };
 

@@ -1,0 +1,287 @@
+{
+  "label": "GET /data/v1/sections/crypto.json",
+  "path": "/data/v1/sections/crypto.json",
+  "capturedAt": "2026-10-04T20:27:24.253Z",
+  "elapsedMs": 272,
+  "generatedAt": "2026-10-04T20:26:12.967230+00:00",
+  "response": {
+    "generated_at": "2026-10-04T20:26:12.967230+00:00",
+    "schema_version": 1,
+    "section": "crypto",
+    "stories": [
+      {
+        "distinct_publishers": 12,
+        "first_seen_at": "2026-09-24T21:15:38+00:00",
+        "headline": "Bitget Hackers Move Stolen Funds as Exchanges Block Transfers",
+        "id": 29600,
+        "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/5844591d4fc53908b4ecc1fda0511af88a269620-6024x4024.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+        "last_seen_at": "2026-10-03T17:01:03+00:00",
+        "publishers": [
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/5844591d4fc53908b4ecc1fda0511af88a269620-6024x4024.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-01T14:18:14+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "NEAR Intents hit by $3.8 million exploit as crypto's rough year of hacks continues",
+            "url": "https://www.coindesk.com/tech/2026/10/01/near-intents-hit-by-usd3-8-million-exploit-as-crypto-s-rough-year-of-hacks-continues"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/119bf0aabe528fee5ad647289cb1f8eec26626e8-1318x738.png?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-30T11:04:09+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Bitget hackers move $4 million into Zcash’s private pool, making funds harder to trace",
+            "url": "https://www.coindesk.com/markets/2026/09/30/bitget-hackers-move-usd4-million-into-zcash-s-private-pool-making-funds-harder-to-trace"
+          },
+          {
+            "published_at": "2026-09-29T18:09:50+00:00",
+            "publisher": "Bloomberg Technology",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Flows Stabilizing: Bitget CEO Discusses Crypto Hack",
+            "url": "https://www.bloomberg.com/news/videos/2026-09-29/flows-stabilizing-bitget-ceo-discusses-crypto-hack-video"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/715902191aa8f46558dbd6a00c7b125cde303fe5-6000x4000.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-29T06:23:47+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Near Intents blocks $50 million in Bitget hacker swaps, here's what happened",
+            "url": "https://www.coindesk.com/tech/2026/09/29/usd50-million-in-bitget-hacker-swaps-puts-near-intents-permissionless-claim-to-the-test"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/46896a614298dcf705810c12a113e9dab6ce84fb-4416x2488.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-28T12:13:09+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "THORChain rejects Bitget request to block hacker as $6 million moves to bitcoin",
+            "url": "https://www.coindesk.com/tech/2026/09/28/thorchain-rejects-bitget-request-to-block-hacker-as-usd6-million-moves-to-bitcoin"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/2334c8f6eda3e4f6be934696bc4538b3f1603be7-1336x746.png?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-26T12:56:41+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Bitget hacker moves $83 million in stolen XRP that Ripple cannot freeze",
+            "url": "https://www.coindesk.com/markets/2026/09/26/bitget-hacker-moves-usd83-million-in-stolen-xrp-that-ripple-cannot-freeze"
+          }
+        ],
+        "score": 1.118,
+        "section": "crypto",
+        "slug": "bitget-hacked-as-350-million-vanishes-from-crypto-exchange-wallets-29600",
+        "source_count": 45,
+        "summary": "Hackers linked to North Korea moved $350 million from Bitget, prompting exchanges like THORChain and NEAR Intents to block transfers while stablecoin issuers froze specific wallets."
+      },
+      {
+        "distinct_publishers": 4,
+        "first_seen_at": "2026-10-01T14:18:12+00:00",
+        "headline": "NEAR Intents Halted After $3.8M Exploit, Promises Compensation",
+        "id": 40028,
+        "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2025/05/Crime-crypto-decrypt-style-01-gID_7.png@png",
+        "last_seen_at": "2026-10-04T13:01:03+00:00",
+        "publishers": [
+          {
+            "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2025/05/Crime-crypto-decrypt-style-01-gID_7.png@png",
+            "published_at": "2026-10-04T13:01:03+00:00",
+            "publisher": "decrypt.co",
+            "publisher_slug": "decrypt-co",
+            "tier": 2,
+            "title": "'We Have Identified You, Sir': Near Intents Recovers $3.8 Million After 48-Hour Ultimatum",
+            "url": "https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum"
+          },
+          {
+            "image_url": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M40T1J9CWEBBB07G6QG02X27/hi-5-greatest-hacks-in-the-cryptocurrency-industry.png",
+            "published_at": "2026-10-03T11:59:10+00:00",
+            "publisher": "Cointelegraph.com News",
+            "publisher_slug": "cointelegraph-com",
+            "tier": 2,
+            "title": "NEAR Intents recovers entire stolen $3.8M after ultimatum to exploiter",
+            "url": "https://cointelegraph.com/news/near-intents-recovers-entire-stolen-38m-after-ultimatum-to-exploiter"
+          },
+          {
+            "image_url": "https://img.decrypt.co/insecure/rs:fill:1024:512:1:0/plain/https://cdn.decrypt.co/wp-content/uploads/2025/08/crime_hacker-gID_7.png@png",
+            "published_at": "2026-10-02T12:19:00+00:00",
+            "publisher": "decrypt.co",
+            "publisher_slug": "decrypt-co",
+            "tier": 2,
+            "title": "Morning Minute: NEAR Intents Hacked for $3.8M - Was It A Bullish Hack?",
+            "url": "https://decrypt.co/379929/morning-minute-near-intents-hacked-for-3-8m-was-it-a-bullish-hack"
+          },
+          {
+            "image_url": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M3X5BHCXH6SN25VJD4G0A2MX/hacker.jpg",
+            "published_at": "2026-10-02T02:02:13+00:00",
+            "publisher": "Cointelegraph.com News",
+            "publisher_slug": "cointelegraph-com",
+            "tier": 2,
+            "title": "NEAR Intents says its identified the hacker, gives 48-hour ultimatum",
+            "url": "https://cointelegraph.com/news/near-intents-says-its-identified-the-hacker-gives-48-hour-ultimatum"
+          },
+          {
+            "image_url": "https://protos-media.s3.eu-west-2.amazonaws.com/wp-content/uploads/2026/10/01163232/Protos-Artwork-NearPaused.jpg",
+            "published_at": "2026-10-01T18:18:28+00:00",
+            "publisher": "Protos",
+            "publisher_slug": "protos-com",
+            "tier": 2,
+            "title": "NEAR Intents hacked days after freezing stolen Bitget funds",
+            "url": "https://protos.com/near-intents-hacked-days-after-freezing-stolen-bitget-funds"
+          },
+          {
+            "image_url": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M3VRGAM4CAXBR2PFX0KGFSCH/hi-how-scammers-exploit-trusted-platforms-for-crypto-fraud-4.jpg",
+            "published_at": "2026-10-01T15:43:34+00:00",
+            "publisher": "Cointelegraph.com News",
+            "publisher_slug": "cointelegraph-com",
+            "tier": 2,
+            "title": "NEAR Intents suffers $3.8M exploit after assistance with Bitget breach",
+            "url": "https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack"
+          }
+        ],
+        "score": 1.066,
+        "section": "crypto",
+        "slug": "near-intents-exploited-for-3-8-million-promises-compensation-40028",
+        "source_count": 7,
+        "summary": "The protocol halted services and identified the attacker after a deposit and withdrawal bug caused a $3.8 million loss."
+      },
+      {
+        "distinct_publishers": 10,
+        "first_seen_at": "2026-09-17T13:00:00+00:00",
+        "headline": "SEC Clears Path for Tokenized Stock Trading in US Markets",
+        "id": 17886,
+        "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/ebc74e2355bdaf89e5b68901d1642e7e17f7a651-5637x3824.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+        "last_seen_at": "2026-10-03T13:00:00+00:00",
+        "publishers": [
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/ebc74e2355bdaf89e5b68901d1642e7e17f7a651-5637x3824.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-03T13:00:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "BlackRock offers a glimpse of how tokenization may change your investment portfolio",
+            "url": "https://www.coindesk.com/business/2026/10/03/blackrock-offers-a-glimpse-of-how-tokenization-may-change-your-investment-portfolio"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/a4c0d4fa0c8a1705ed3379cd5ac19747d3eba29c-6000x4000.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-01T11:00:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Synthetic tokenized stocks are bad for American investors",
+            "url": "https://www.coindesk.com/opinion/2026/10/01/synthetic-tokenized-stocks-are-bad-for-american-investors"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/75a8d0235f9094e9a1e34d054f39f2b76bb4db07-3127x2235.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-30T11:00:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "The SEC Is finally modernizing transfer-agent rules. Wall Street must not repeat the ‘paperwork crisis’",
+            "url": "https://www.coindesk.com/opinion/2026/09/30/the-sec-is-finally-modernizing-transfer-agent-rules-wall-street-must-not-repeat-the-paperwork-crisis"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/d0addd3beebf7db0c5d99bb184575683d088e02b-1440x1080.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-29T18:21:07+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Cboe, S&P Dow Jones may explore tokenized options contracts under extended licensing deal",
+            "url": "https://www.coindesk.com/business/2026/09/29/cboe-s-and-p-dow-jones-may-explore-tokenized-options-contracts-under-extended-licensing-deal"
+          },
+          {
+            "published_at": "2026-09-29T11:00:00+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Morgan Stanley Builds Crypto Lab to Test Future of Wall Street",
+            "url": "https://www.bloomberg.com/news/articles/2026-09-29/morgan-stanley-builds-crypto-lab-to-test-future-of-wall-street"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/6d8345ab102c51714055bd408fc49095d52d1019-4000x1868.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-24T20:05:00+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Bullish, Alpaca and Apex Fintech form coalition to push issuer-backed tokenized stocks",
+            "url": "https://www.coindesk.com/business/2026/09/24/bullish-alpaca-and-apex-fintech-form-coalition-to-push-issuer-backed-tokenized-stocks"
+          }
+        ],
+        "score": 0.951,
+        "section": "crypto",
+        "slug": "sec-grants-five-year-exemption-for-tokenized-securities-venues-17886",
+        "source_count": 39,
+        "summary": "The SEC approves a regulated pathway for tokenized stocks, prompting firms like Morgan Stanley and Coinbase to develop infrastructure while analysts debate market demand."
+      },
+      {
+        "distinct_publishers": 11,
+        "first_seen_at": "2026-09-17T12:41:53+00:00",
+        "headline": "Kalshi Loses Court Ruling on Prediction Markets as SEC Commissioner Departs",
+        "id": 17952,
+        "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/26bc7ac9cd7444c2c14bec14b2e397a0fb35c8aa-6000x3376.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+        "last_seen_at": "2026-10-03T09:47:10+00:00",
+        "publishers": [
+          {
+            "published_at": "2026-10-03T09:47:10+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "India Mulls Commodity Derivatives Changes to Boost Liquidity",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-03/india-mulls-commodity-derivatives-changes-to-boost-liquidity"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/26bc7ac9cd7444c2c14bec14b2e397a0fb35c8aa-6000x3376.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-02T21:23:20+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Bank group sues U.S. regulator over granting crypto trust charters",
+            "url": "https://www.coindesk.com/policy/2026/10/02/bank-group-sues-u-s-regulator-over-granting-crypto-trust-charters"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/dee7ca3ec92ba77eecf6dabbabbc08eb9f261f9b-6345x4230.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-02T17:12:48+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "Possible next crypto czar, Jay Clayton, began crypto's regulation-by-enforcement at SEC",
+            "url": "https://www.coindesk.com/news-analysis/2026/10/02/possible-next-crypto-czar-jay-clayton-began-crypto-s-regulation-by-enforcement-at-sec"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/333db2ac6429c13170ebdacdfd4cae413b017a08-4922x2769.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-10-01T20:20:04+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "U.S. SEC maps out crypto custody in new proposal that furthers its digital assets agenda",
+            "url": "https://www.coindesk.com/policy/2026/10/01/u-s-sec-maps-out-crypto-custody-in-new-proposal-that-furthers-its-digital-assets-agenda"
+          },
+          {
+            "published_at": "2026-10-01T17:02:18+00:00",
+            "publisher": "Bloomberg Markets",
+            "publisher_slug": "bloomberg-com",
+            "tier": 1,
+            "title": "Cboe Eyes VIX Perpetual Futures as Exchanges Move Beyond Crypto",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-01/cboe-eyes-vix-perpetual-futures-as-exchanges-move-beyond-crypto"
+          },
+          {
+            "image_url": "https://cdn.sanity.io/images/s3y3vcno/production/2ea663e27b7a8aedacb15a99a17ec144f1ef72ac-4928x2772.jpg?fm=jpg&w=1920&h=1080&crop=focalpoint&fit=clip",
+            "published_at": "2026-09-30T15:19:36+00:00",
+            "publisher": "CoinDesk",
+            "publisher_slug": "coindesk-com",
+            "tier": 1,
+            "title": "U.S. CFTC seeks event contract definitions that may defy states' gambling claims",
+            "url": "https://www.coindesk.com/policy/2026/09/30/u-s-cftc-seeks-event-contract-definitions-that-may-defy-states-gambling-claims"
+          }
+        ],
+        "score": 0.725,
+        "section": "crypto",
+        "slug": "crypto-com-clears-sec-hurdle-to-offer-single-stock-futures-in-us-17952",
+        "source_count": 67,
+        "summary": "A US court rules prediction markets must obey state gambling laws, while the SEC issues new custody proposals and its crypto advocate Hester Peirce prepares to depart."
+      }
+    ],
+    "total": 4
+  }
+}
