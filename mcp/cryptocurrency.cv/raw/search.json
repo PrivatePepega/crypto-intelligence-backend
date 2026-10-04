@@ -1,0 +1,11 @@
+{
+  "label": "GET /api/search?q=bitcoin",
+  "capturedAt": "2026-10-04T01:59:04.502Z",
+  "ok": false,
+  "params": {
+    "q": "bitcoin",
+    "limit": 5
+  },
+  "httpStatus": 403,
+  "error": "cryptocurrency.cv /api/search failed (HTTP 403): {\"error\":\"Forbidden\",\"code\":\"REPEAT_RATE_LIMIT_ABUSE\",\"message\":\"Too many rate-limited requests. You are temporarily blocked.\",\"retryAfter\":3600,\"requestId\":\"req_mut6a0w0_e426a6da\"}"
+}

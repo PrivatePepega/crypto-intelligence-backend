@@ -1,0 +1,4 @@
+{
+  "capture": "failed",
+  "error": "cryptocurrency.cv /api/tags/bitcoin failed (HTTP 403): {\"error\":\"Forbidden\",\"code\":\"REPEAT_RATE_LIMIT_ABUSE\",\""
+}

@@ -1,0 +1,22 @@
+{
+  "label": "GET /api/article",
+  "capturedAt": "2026-10-04T01:56:58.685Z",
+  "elapsedMs": 753,
+  "params": {},
+  "recordCount": 0,
+  "fieldCount": 0,
+  "fields": [],
+  "response": {
+    "url": "https://news.bitcoin.com/featured/xrp-ledger-nears-12-million-x402-payments-as-ai-agents-buy-services/",
+    "title": "Untitled",
+    "source": "Unknown",
+    "content": "News › Featured › XRP Ledger Nears 12 Million x402 Payments as AI Agents Buy Services Published:Oct 3, 2026, 9:45 PM EDT BTC$84,781(+0.21%) ETH$2,693(+0.54%) XRP Ledger Nears 12 Million x402 Payments as AI Agents Buy Services The XRP Ledger has reached nearly 12 million x402 payments as AI agents purchase computing, data, and other online services. Ripple’s engineering leadership describes expanding automated commerce as software buys computing, data, and emerging financial offerings. WRITTEN BY Kevin Helms SHAREPublished: Oct 3, 2026, 9:45 PM EDT Key Takeaways RippleX’s head of engineering reported growth from 1 million to 10 million in under three months. XRPL AI Hub data showed a seven-day average of 525,618 payments per day. Available services are expanding into financial data, risk, and credit. AI Service Purchases Push XRPL Near 12 Million Payments AI agents’ purchases of digital services have helped bring tracked x402 payments on the XRP Ledger (XRPL) above 11 million. x402 is an internet payment protocol that lets software pay for online access. Its name comes from the “402 Payment Required” response, which tells a program that payment is needed before it can obtain a resource. J. Ayo Akinyele, head of engineering at RippleX, the blockchain development arm of Ripple, shared the 10 million milestone on X on Oct. 1. By Oct. 3, t54, which operates the settlement infrastructure and activity dashboard, showed 11,965,947 entries in its x402 transaction history . Its homepage reported a seven-day average of 525,618 per day. Akinyele presented the increase as evidence of a broader role for blockchain settlement, writing: “The latest 7-day run rate is now 500K payments per day. Pretty incredible to see how quickly this is growing as agents start to autonomously discover, pay for and consume services. And the XRP Ledger is increasingly becoming infrastructure for the machine economy!” Software Pays Automatically Before Receiving a Resource An online provider can request payment before supplying information or computing capacity to an automated buyer. Under t54’s XRPL payment flow , a service responds with a price and payment requirements. The buyer signs a transaction, and the facilitator verifies it before submitting the transfer to the blockchain. The provider then delivers the requested resource. Developers can connect autonomous software to wallets through Ripple’s AI payment tools . An AI agent is software that can carry out tasks on a user’s behalf, including purchasing resources within an automated workflow. The toolkit supports wallet creation, balance checks, and tracking, allowing applications to monitor spending and confirm completion. Purchases can use XRP or Ripple USD (RLUSD), giving developers different ways to denominate payments for digital products. RLUSD is a dollar-backed stablecoin, a cryptocurrency designed to track a reference asset’s value . That option lets buyers and sellers price their exchanges in dollar terms. Financial",
+    "summary": "News › Featured › XRP Ledger Nears 12 Million x402 Payments as AI Agents Buy Services Published:Oct 3, 2026, 9:45 PM EDT BTC$84,781(+0.21%) ETH$2,693(+0.54%) XRP Ledger Nears 12 Million x402 Payments as AI Agents Buy Services The XRP Ledger has reached nearly 12 million x402 payments as AI agents purchase computing, data, and other online services. Ripple’s engineering leadership describes expanding automated commerce as software buys computing, data, and emerging financial offerings. WRITTEN BY...",
+    "keyPoints": [
+      "Content extracted from source"
+    ],
+    "sentiment": "neutral",
+    "fetchedAt": "2026-10-04T01:56:58.872Z",
+    "translations": {}
+  }
+}

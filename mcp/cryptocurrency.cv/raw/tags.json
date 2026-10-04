@@ -1,0 +1,10 @@
+{
+  "label": "GET /api/tags (metadata, kept un-normalized)",
+  "capturedAt": "2026-10-04T01:59:04.732Z",
+  "ok": false,
+  "params": {
+    "limit": 5
+  },
+  "httpStatus": 403,
+  "error": "cryptocurrency.cv /api/tags failed (HTTP 403): {\"error\":\"Forbidden\",\"code\":\"REPEAT_RATE_LIMIT_ABUSE\",\"message\":\"Too many rate-limited requests. You are temporarily blocked.\",\"retryAfter\":3600,\"requestId\":\"req_mut6a12c_5ccfebc7\"}"
+}

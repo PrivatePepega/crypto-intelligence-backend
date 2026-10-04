@@ -1,0 +1,10 @@
+{
+  "label": "GET /api/defi",
+  "capturedAt": "2026-10-04T01:59:04.330Z",
+  "ok": false,
+  "params": {
+    "limit": 5
+  },
+  "httpStatus": 403,
+  "error": "cryptocurrency.cv /api/defi failed (HTTP 403): {\"error\":\"Forbidden\",\"code\":\"REPEAT_RATE_LIMIT_ABUSE\",\"message\":\"Too many rate-limited requests. You are temporarily blocked.\",\"retryAfter\":3600,\"requestId\":\"req_mut6a0r6_df7b29c8\"}"
+}
