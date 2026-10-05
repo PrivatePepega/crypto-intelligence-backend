@@ -1,6 +1,10 @@
-import { tool } from "ai";
+﻿import { tool } from "ai";
 import { z } from "zod";
-import { callMcpTool } from "../../mcp/client.js";
+import {
+  fetchMarketauxNews,
+  normalizeMarketauxNews,
+  type NormalizedMarketauxNews,
+} from "../../mcp/marketaux/newsSearch.normalizer.js";
 
 
 
@@ -11,7 +15,11 @@ import { callMcpTool } from "../../mcp/client.js";
 
 export const marketauxSearchTool = tool({
     description:
-      "Search Marketaux for recent financial and market news relevant to the Observer's domain. This tool is for discovering meaningful current events, not exhaustive research. ALWAYS return English-language articles. Keep search queries short and focused. Marketaux search supports | for OR, + for AND, -token for NOT, quoted phrases, prefix*, and parentheses. Prefer queries such as 'Bitcoin|Ethereum|DeFi|stablecoin' rather than long natural-language sentences. Do not put dates inside search when published_on, published_after, or published_before can express the date. Use published_on for today's coverage. Prefer group_similar=true to reduce duplicate coverage. Marketaux already sorts recent articles by publication time by default when no search-specific relevance sort is requested.",
+      "Search Marketaux for financial and market articles, returning title, description and snippet per hit. " +
+  "Use this as a BACKGROUND and entity tool, not as a news feed. It is genuinely useful for two things: pulling articles about a named company or sector via symbols, industries, countries and entity_types, and quietly narrowing the rest of the corpus by excluding sources and sentiment thresholds. " +
+  "Do NOT use it for important or trending news. It returns a loosely date-sorted article backlog, not a ranked feed, and the measured crypto query returned only 3 articles against a limit of 10 - two of them evergreen SEO explainers ('BTCFi vs Ethereum DeFi: What's Different') and a ZeroHedge opinion post. Nothing in the output marks an item as significant. " +
+  "Also expect `description` to be truncated mid-word by the provider, so treat it as a hint rather than quotable text. `entities` are stripped from this output, though every entity filter below still applies upstream. " +
+  "For what is happening now use an events tool, the headline scan, or a web search; for company financial news use the market news tool.",
   
     inputSchema: z.object({
       symbols: z
@@ -127,7 +135,7 @@ export const marketauxSearchTool = tool({
         .boolean()
         .optional()
         .describe(
-          "When true, group similar coverage of the same story. Prefer true for Observer research so duplicate reporting does not dominate observations.",
+          "When true, group similar coverage of the same story, reducing duplicates. Worth setting for most research - the feed is a flat article backlog, so duplicate coverage of one event is otherwise common. Note this is one of the few controls that meaningfully improves signal here, since results carry no importance ranking.",
         ),
   
       published_after: z
@@ -179,39 +187,22 @@ export const marketauxSearchTool = tool({
     },
   })
 
-
-
-
-
 /**
- * Calls the Marketaux news search through the backend MCP server.
+ * Calls the Marketaux news search through the backend MCP server, normalized.
  *
- * The Observer talks to MCP instead of calling the Marketaux API directly.
- * This keeps provider access behind the generic MCP boundary.
+ * The Observer talks to MCP rather than calling Marketaux directly, which keeps
+ * provider access behind the generic MCP boundary. The result is passed through
+ * `mcp/marketaux/newsSearch.normalizer.ts`, which drops the `entities` block and
+ * keeps `title`, `description` and `snippet`.
+ *
+ * Re-exported so the normalizer stays reachable from this module, which is the
+ * only place the agent-facing Marketaux path is wired up.
  */
+export { normalizeMarketauxNews };
+
 export const searchMarketauxNews = async (
-    input: Record<string, unknown>,
-    signal?: AbortSignal,
-  ) => {
-  
-    const response = await callMcpTool(
-      "marketaux_news_search",
-      input,
-      signal,
-    );
-  
-    return normalizeMarketauxNews(response);
-  };
-  
-
-
-  export const normalizeMarketauxNews = (response: any) => {
-    return {
-      ...response,
-      articles: (response.articles ?? []).map((article: any) => {
-        const { entities, ...normalizedArticle } = article;
-  
-        return normalizedArticle;
-      }),
-    };
-  };
+  input: Record<string, unknown>,
+  signal?: AbortSignal,
+): Promise<NormalizedMarketauxNews> => {
+  return await fetchMarketauxNews(input, signal);
+};

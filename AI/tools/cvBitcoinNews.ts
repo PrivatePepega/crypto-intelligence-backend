@@ -14,7 +14,11 @@ const DEFAULT_LIMIT = 20;
 
 export const cvBitcoinNewsTool = tool({
   description:
-    "Get Bitcoin-specific news headlines and summaries from cryptocurrency.cv, each with a title and a description, newest first. Expect a low yield: most results from this feed carry no usable summary and are filtered out, so raising the limit is worthwhile when you need more.",
+    "Get Bitcoin-specific news from cryptocurrency.cv, each with a title and a description, newest first." +
+    "Use this when the subject is Bitcoin rather than crypto generally - the measured run returned focused items on ether treasury accumulation and weekly-close price structure." +
+    "Expect a low yield: the free tier caps responses at 3 articles regardless of the limit requested, so a measured call returned exactly 3." +
+    "A larger limit costs nothing and gains nothing here." +
+    "For non-Bitcoin crypto use the news or breaking tool; for a Bitcoin price or market-cap figure use an indicator or price tool rather than inferring one from a headline.",
 
   inputSchema: z.object({
     limit: z

@@ -49,13 +49,17 @@ export const searchProviders = {
 
 export const webSearchTool = tool({
   description:
-    "Search the public web for recent information relevant to the Observer's domain. Use this to discover current events, announcements, regulatory developments, security incidents, market narratives, and other developments that may not be available through deterministic database indicators.",
+    "Search the public web and return ranked results with a title and highlighted excerpt per hit, typically 15 results." +
+    "This is the best tool for finding ACTUAL PUBLISHED PAGES with real source names attached - a measured markets query surfaced Reuters and CNBC directly - which makes it the right choice when you need something citable, when a specific company, filing, announcement or report is named, or when the other feeds have nothing." +
+    "It also reaches beyond curated news to primary sources." +
+    "Be aware of what it does not give you: results carry no publication date, publisher or URL in the output, so you cannot assess recency or cite precisely from the payload alone, and the highlights are extracted fragments rather than summaries." +
+    "For understanding what happened use an events tool; for figures use an indicator tool.",
 
   inputSchema: z.object({
     query: z
       .string()
       .describe(
-        "A focused search query describing the information needed from the public web.",
+        "A focused search query describing the information needed from the public web. Good examples: 'SEC tokenized stock approval filing', 'Birkenstock IPO valuation', 'OpenAI Super Intelligence Force'. Name the specific company, filing, report or event you want rather than a broad theme - this tool finds pages, so specificity is what makes the results useful.",
       ),
   }),
 

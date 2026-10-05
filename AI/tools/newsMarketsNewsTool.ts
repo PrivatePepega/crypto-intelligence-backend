@@ -14,18 +14,20 @@ import { getSectionNews } from "../../mcp/newsMarkets/fetchers/index.js";
  * takes no parameters at all. So this is a slice of whatever the section
  * happened to carry, capped by the server at 40 stories.
  */
-const NEWS_LIMIT = 10;
+const NEWS_LIMIT = 20;
 
 /** Ceiling accepted from the caller. Kept aligned with the constant above. */
 const MAX_LIMIT = 40;
 
 export const newsMarketsNewsTool = tool({
   description:
-    "Get curated NewsMarkets headlines and short summaries for one category: 'crypto', 'ai', 'tech', or 'business'. " +
-    "Each call returns a periodically refreshed snapshot with no paging or offset, so repeating the same category returns the same stories. " +
-    "To broaden coverage, call different categories instead. The response includes 'total' (all stories available) and 'count' (stories returned); if they differ, the section exceeds the provider's 40-story cap. " +
-    "'generatedAt' shows when the snapshot was built and may lag the current time; different categories may have different snapshot times. " +
-    "Sections can be small, so a high limit does not guarantee many results.",
+    "Get curated NewsMarkets headlines and short summaries for one category: 'crypto', 'ai', 'tech', or 'business'. Clean output - plain text, no HTML, no entity escaping - with a summary on every story measured so far. " +
+    "Best for a tidy, section-scoped digest: 'ai' and 'tech' return well-written AI and technology coverage, 'business' returns markets and company news, 'crypto' is the smallest and thinnest. " +
+    "IMPORTANT - this is a periodically republished SNAPSHOT, not a live feed, and it accepts no paging or offset. Repeating the same category returns the same stories, so vary the category to get breadth rather than repeating a call for volume. " +
+    "Sections differ enormously in size and limit will not fix it: measured 2 stories for crypto, 30 for tech, and business capped at 40 against a reported total of 51. A high limit only produces a high count for business. " +
+    "Because it is a snapshot, 'generatedAt' shows when the data was built and may lag the present - one section was measured 5.5 hours staler than its siblings. Check it before presenting anything as current. " +
+    "If 'total' exceeds 'count', the section was truncated at the provider's 40-story cap and more exist. " +
+    "For breaking news or anything needing sourcing, use a news or web search; for real figures, use an indicator tool.",
 
   inputSchema: z.object({
     category: z

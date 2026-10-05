@@ -19,13 +19,17 @@ import {
 
 export const gdeltSearchStoriesTool = tool({
   description:
-    "Search GDELT for broad recent story intelligence. Use this to discover clusters of related news coverage around a topic rather than searching for one exact article or event. Use topic for broad monitoring and query when a more specific subject is relevant. This tool is useful for geopolitics, finance, crypto, technology, energy, macroeconomics, and regulation.",
+    "Search GDELT for recent story headlines on a topic, returning a large batch with no accompanying text - each item is just an id, title, category, region and significance score. " +
+    "Best for breadth: scanning how much attention a topic is getting and catching titles you did not think to search for. A finance query surfaced 20 titles including a $30 billion OpenAI investment and a Saudi sukuk offering. " +
+    "Do NOT use this to understand an event. There is no summary and no article text, so anything beyond the headline itself is unavailable, and at 40-80 items per call there is a lot of surface area with no depth behind it - use the events tool when you need to know what actually happened. " +
+    "The topic filter is broad and the categories overlap: topic=crypto returned 80 items that were mostly economic stories about central banks and bond markets rather than crypto. Always pass a query to narrow it, and treat the result as leads to follow up rather than as an answer. " +
+    "For real web pages with source names use the web search tool.",
 
   inputSchema: z.object({
     topic: z
       .enum(gdeltAgentTopics)
       .describe(
-        "Broad intelligence topic to monitor, such as crypto, finance, technology, geopolitics, energy, macro, or regulation.",
+        "Broad topic to scan. Note the mapping is loose: 'crypto' fans out across four story categories and a measured run returned 80 items that were mostly general economic stories about central banks and bond markets, not crypto. Always pair it with a query. 'finance' and 'technology' are the tighter mappings.",
       ),
 
     query: z

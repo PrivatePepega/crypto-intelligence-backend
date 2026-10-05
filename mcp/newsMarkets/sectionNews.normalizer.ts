@@ -145,12 +145,31 @@ export const normalizeSectionNews = (
   };
 };
 
-/** Trims a normalized result to `limit` stories, keeping `total` intact. */
+/**
+ * Trims a normalized result to `limit` stories, keeping `total` intact.
+ *
+ * A missing or non-numeric `limit` means **no trimming**, not zero stories.
+ *
+ * That case is not hypothetical. `Math.max(0, undefined)` is `NaN`, and
+ * `items.slice(0, NaN)` is `[]` - so a caller reaching this function without a
+ * limit silently got an empty result. In production the tool's Zod schema
+ * supplies a default, which hides it; the qualifying round found it by calling
+ * `execute` directly. Guarding here means the function is correct on its own
+ * terms rather than depending on a caller having parsed a schema first.
+ */
 export const sliceNormalized = (
   normalized: NormalizedSectionNews,
-  limit: number,
-): NormalizedSectionNews => ({
-  ...normalized,
-  count: Math.min(normalized.count, Math.max(0, limit)),
-  items: normalized.items.slice(0, Math.max(0, limit)),
-});
+  limit?: number,
+): NormalizedSectionNews => {
+  if (typeof limit !== "number" || !Number.isFinite(limit)) {
+    return normalized;
+  }
+
+  const bounded = Math.max(0, Math.floor(limit));
+
+  return {
+    ...normalized,
+    count: Math.min(normalized.count, bounded),
+    items: normalized.items.slice(0, bounded),
+  };
+};

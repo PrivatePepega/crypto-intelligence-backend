@@ -13,7 +13,11 @@ const LIMIT = 20;
 
 export const newsDataLatestNewsTool = tool({
   description:
-    "Get the latest general news headlines and summaries from NewsData.io, covering the last 48 hours. Returns at most 5 articles, each with a title and a description, newest first. Use this for broad current-events coverage across any subject. Note this feed substantially overlaps with crypto news when the query is crypto-related, so prefer the crypto news tool for crypto and the market news tool for listed companies.",
+    "Get the latest general news headlines and summaries from NewsData.io, covering roughly the last 48 hours, returning at most 5 articles with a title and description, newest first." +
+    "Use this for broad current-events coverage across any subject, and it is the most genuinely general-purpose of the three NewsData tools - the measured run returned a housing-versus-bond-market analysis and a White House story, neither crypto-related." +
+    "Expect at most 5 articles: the free plan caps a page at 10 and this tool requests 5, so this is a small sample rather than a feed." +
+    "This feed overlaps heavily with the crypto tool when the subject is crypto, so prefer the crypto tool for crypto and the market tool for listed companies." +
+    "For significant or ranked financial events use an events tool instead.",
 
   inputSchema: z.object({
     q: z

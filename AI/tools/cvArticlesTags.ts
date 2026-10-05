@@ -32,13 +32,17 @@ const KNOWN_TAGS = [
 
 export const cvArticlesTagsTool = tool({
   description:
-    "Get crypto news articles carrying a specific tag from cryptocurrency.cv, each with a title and a description. Use this to follow a theme across publishers, such as a coin, sector or regulatory topic. Slow: a request typically takes around ten seconds. For broad coverage use the news tool instead.",
+    "Get crypto news articles carrying a specific tag from cryptocurrency.cv, each with a title and a description. " +
+    "Use this to follow one theme across publishers - a coin, a sector, a regulatory topic. Every available tag is crypto-specific, so this tool has no use outside crypto. " +
+    "Weigh the cost: this is the slowest tool here at roughly 14 seconds per call, because the tag endpoint is slow upstream. " +
+    "Results are also thin - a 'bitcoin' tag request returned only 2 articles, and the free tier caps responses at 3 regardless of the limit you ask for, so a larger limit costs nothing and gains nothing. " +
+    "For broad crypto coverage use the news or breaking tool instead; for a single coin's market data use an indicator or price tool.",
 
   inputSchema: z.object({
     slug: z
       .string()
       .describe(
-        `Tag slug, such as "bitcoin" or "ethereum". Common values: ${KNOWN_TAGS.join(", ")}.`,
+        `Tag slug, such as "bitcoin" or "ethereum". All available tags are crypto-specific. Common values: ${KNOWN_TAGS.join(", ")}. Note results are thin - a 'bitcoin' request returned 2 articles - and the free tier caps responses at 3.`,
       ),
 
     limit: z

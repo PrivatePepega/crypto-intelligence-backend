@@ -13,7 +13,13 @@ const LIMIT = 20;
 
 export const newsDataMarketNewsTool = tool({
   description:
-    "Get stock market and financial news headlines and summaries from NewsData.io, covering analyst ratings, price targets and company developments. Returns at most 5 articles, each with a title and a description, newest first. Use this to follow publicly listed companies and their analyst coverage. Note there is no ticker filter on this endpoint - filter with the query field, not a symbol. Descriptions are frequently stock-promotion content, so weigh them critically.",
+    "Get stock market and financial news from NewsData.io - analyst ratings, price targets and listed-company developments - returning at most 5 articles with a title and description, newest first." +
+    "Use this to follow publicly listed companies and their analyst coverage." +
+    "Two things to know before relying on it." +
+    "There is no ticker or symbol filter on this endpoint; filter with the query field instead, and note that a symbol or market_id filter is rejected outright." +
+    "And descriptions are frequently stock-promotion content rather than reporting, so read them critically and cross-check anything load-bearing." +
+    "Expect at most 5 articles, as the free plan caps a page at 10." +
+    "For broader market context use an events tool or the latest news tool.",
 
   inputSchema: z.object({
     q: z

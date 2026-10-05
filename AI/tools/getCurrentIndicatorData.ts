@@ -19,13 +19,18 @@ import { z } from "zod";
 export const getCurrentIndicatorTool = {
   get_current_indicator: tool({
     description:
-      "Find up to four relevant deterministic indicators for a natural-language request and return their current datasets together with metadata explaining what each indicator measures, how it is used, and why it is significant. Use this when current quantitative data is needed to understand a development or change.",
+      "Find up to four deterministic quantitative indicators matching a natural-language request and return their current data with metadata explaining what each one measures and why it matters." +
+      "This is the tool for questions about actual figures - prices, flows, rates, volumes, market structure - and it is the only tool here that returns numbers you can quote." +
+      "A measured crypto request returned four well-matched indicators including a Bitcoin spot ETF flow series and aggregate CoinMarketCap market metrics, each with a substantive description." +
+      "Prefer this over inferring a number from a news headline." +
+      "It reports found: true or false, so a false means nothing in the catalogue matched and you should rephrase rather than treat it as an empty dataset." +
+      "This returns structured indicator data, not news, and it will not summarise events.",
 
     inputSchema: z.object({
       query: z
         .string()
         .describe(
-          "Describe the current quantitative information needed in natural language.",
+          "Describe the current quantitative information needed, in natural language. Name the subject and the figure: 'current Bitcoin price and market cap', 'US federal funds rate', 'Tesla quarterly revenue'. Returns up to four matching indicators with their current data, or found: false if nothing in the catalogue matches - if that happens, rephrase with different terminology rather than assuming no data exists.",
         ),
     }),
 

@@ -92,6 +92,13 @@ export interface NewsArticle {
   title: string;
   description?: string | undefined;
   snippet?: string | undefined;
+  /**
+   * Entities Marketaux identified, with sentiment scores.
+   *
+   * Still produced by the `marketaux_news_search` MCP tool for any client that
+   * wants them. The AI-facing path strips this in
+   * `mcp/marketaux/newsSearch.normalizer.ts` - it is not removed at the source.
+   */
   entities: NewsEntity[];
 }
 
