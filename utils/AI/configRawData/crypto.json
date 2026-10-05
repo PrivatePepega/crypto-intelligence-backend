@@ -1,0 +1,34 @@
+{
+  "domain": "crypto",
+  "generatedAt": "2026-10-05T19:12:33.092Z",
+  "tokenization": {
+    "model": "gpt-4o",
+    "encoding": "o200k_base"
+  },
+  "summary": {
+    "configuredDatasetCount": 17,
+    "datasetCount": 0,
+    "missingDatasetCount": 17,
+    "totalTokens": 0
+  },
+  "missingTables": [
+    "coinmarketcapGeneralCryptoMetric",
+    "coinmarketcapAltSeasonFearGreed",
+    "alternativeFearGreed",
+    "binanceBtcusdt",
+    "binanceEthusdt",
+    "binanceSolusdt",
+    "btcSpotEtf",
+    "ethSpotEtf",
+    "solSpotEtf",
+    "cftcBitcoin",
+    "cftcEthereum",
+    "sp500",
+    "nasdaqComposite",
+    "vix",
+    "tenYearTreasuryYield",
+    "broadUsdIndex",
+    "gold"
+  ],
+  "datasets": {}
+}
