@@ -1,0 +1,45 @@
+{
+  "tool": "marketauxNewsSearch.crypto",
+  "capturedAt": "2026-10-05T16:02:12.142Z",
+  "elapsedMs": 1581,
+  "ok": true,
+  "args": {
+    "search": "Bitcoin|Ethereum|DeFi",
+    "limit": 10,
+    "group_similar": true
+  },
+  "shape": {
+    "kind": "object",
+    "recordCount": 3,
+    "containerKey": "articles",
+    "topLevelKeys": [
+      "articles"
+    ],
+    "recordKeys": [
+      "title",
+      "description",
+      "snippet"
+    ],
+    "charCount": 1121,
+    "empty": false
+  },
+  "response": {
+    "articles": [
+      {
+        "title": "BTCFi vs Ethereum DeFi: What’s Different",
+        "description": "This shift has introduced an interesting comparison between BTCFi vs Ethereum DeFi. If you don’t know the difference between these ecosystems, this piece is",
+        "snippet": "BTCFi vs Ethereum DeFi: What’s Different\n\nThe way financial services operate has gone several notches higher thanks to Decentralized Finance (DeFi). Through b..."
+      },
+      {
+        "title": "Bitcoin Is De-dollarization. Ethereum Is DeFi-nancialization",
+        "description": "ZeroHedge - On a long enough timeline, the survival rate for everyone drops to zero",
+        "snippet": "Authored by Mark Jeftovic via BombThrower.com,\n\nLately I have been thinking a lot about the difference between Bitcoin and Ethereum while at the same time the w..."
+      },
+      {
+        "title": "Bitcoin Could Be One Upgrade Away From Overtaking Ethereum DeFi",
+        "description": "ZeroHedge - On a long enough timeline, the survival rate for everyone drops to zero",
+        "snippet": "Authored by Tom MitchelHill via CoinTelegraph.com,\n\nA single, long-dormant string of code, hidden deep within the original Bitcoin stack, can introduce a suite ..."
+      }
+    ]
+  }
+}

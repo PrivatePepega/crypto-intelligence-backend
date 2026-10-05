@@ -9,7 +9,7 @@ import {
 import { normalizeMarketNews } from "../../mcp/newsData.io/marketNews.normalizer.js";
 
 /** Articles returned per call. Matches `MARKET_NEWS_LIMIT`. */
-const LIMIT = 10;
+const LIMIT = 20;
 
 export const newsDataMarketNewsTool = tool({
   description:

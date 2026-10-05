@@ -9,7 +9,7 @@ import {
 import { normalizeCryptoNews } from "../../mcp/newsData.io/cryptoNews.normalizer.js";
 
 /** Articles returned per call. Matches `CRYPTO_NEWS_LIMIT`. */
-const LIMIT = 10;
+const LIMIT = 20;
 
 export const newsDataCryptoNewsTool = tool({
   description:

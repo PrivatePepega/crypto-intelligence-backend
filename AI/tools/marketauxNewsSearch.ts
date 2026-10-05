@@ -194,9 +194,24 @@ export const searchMarketauxNews = async (
     signal?: AbortSignal,
   ) => {
   
-    return await callMcpTool(
+    const response = await callMcpTool(
       "marketaux_news_search",
       input,
       signal,
     );
+  
+    return normalizeMarketauxNews(response);
+  };
+  
+
+
+  export const normalizeMarketauxNews = (response: any) => {
+    return {
+      ...response,
+      articles: (response.articles ?? []).map((article: any) => {
+        const { entities, ...normalizedArticle } = article;
+  
+        return normalizedArticle;
+      }),
+    };
   };

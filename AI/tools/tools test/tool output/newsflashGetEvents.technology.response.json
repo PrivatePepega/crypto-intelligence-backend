@@ -1,0 +1,26 @@
+{
+  "tool": "newsflashGetEvents.technology",
+  "capturedAt": "2026-10-05T16:03:00.366Z",
+  "elapsedMs": 54,
+  "ok": false,
+  "args": {
+    "q": "artificial intelligence",
+    "category": "tech",
+    "limit": 10,
+    "min_sources": 2
+  },
+  "error": {
+    "message": "fetch failed",
+    "stack": "TypeError: fetch failed"
+  },
+  "shape": {
+    "kind": "null",
+    "recordCount": null,
+    "containerKey": null,
+    "topLevelKeys": null,
+    "recordKeys": null,
+    "charCount": 4,
+    "empty": true
+  },
+  "response": null
+}

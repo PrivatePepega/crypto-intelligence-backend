@@ -1,0 +1,25 @@
+{
+  "tool": "newsflashSearchArticles.crypto",
+  "capturedAt": "2026-10-05T16:03:05.245Z",
+  "elapsedMs": 55,
+  "ok": false,
+  "args": {
+    "q": "Bitcoin",
+    "category": "crypto",
+    "limit": 10
+  },
+  "error": {
+    "message": "fetch failed",
+    "stack": "TypeError: fetch failed"
+  },
+  "shape": {
+    "kind": "null",
+    "recordCount": null,
+    "containerKey": null,
+    "topLevelKeys": null,
+    "recordKeys": null,
+    "charCount": 4,
+    "empty": true
+  },
+  "response": null
+}

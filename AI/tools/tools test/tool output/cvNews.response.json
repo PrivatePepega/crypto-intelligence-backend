@@ -1,0 +1,35 @@
+{
+  "tool": "cvNews",
+  "capturedAt": "2026-10-05T15:27:44.137Z",
+  "elapsedMs": 5256,
+  "ok": true,
+  "args": {},
+  "shape": {
+    "kind": "object",
+    "recordCount": 2,
+    "containerKey": "items",
+    "topLevelKeys": [
+      "count",
+      "items"
+    ],
+    "recordKeys": [
+      "title",
+      "description"
+    ],
+    "charCount": 428,
+    "empty": false
+  },
+  "response": {
+    "count": 2,
+    "items": [
+      {
+        "title": "Anthropic, OpenAI, Google and Meta execs set to testify at NYC Council hearing on AI risks",
+        "description": "The leading AI labs facing intensifying scrutiny over their safety and security practices."
+      },
+      {
+        "title": "⛽ ETH Gas: 🐢 0.986935592 | 🚶 0.986952077 | 🚀 1.036935593 Gwei",
+        "description": "Current Ethereum gas prices. Fast: 1.036935593 Gwei, Standard: 0.986952077 Gwei, Safe: 0.986935592 Gwei"
+      }
+    ]
+  }
+}

@@ -14,7 +14,7 @@ import { getCryptoNews } from "../../mcp/finnhub/cryptoNews.normalizer.js";
  * records. `getCryptoNews` therefore trims after fetching, and this value is
  * what survives.
  */
-const CRYPTO_NEWS_LIMIT = 5;
+const CRYPTO_NEWS_LIMIT = 20;
 
 /** Ceiling accepted from the caller. Kept aligned with the constant above. */
 const MAX_LIMIT = 25;

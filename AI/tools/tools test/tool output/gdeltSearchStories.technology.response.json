@@ -1,0 +1,307 @@
+{
+  "tool": "gdeltSearchStories.technology",
+  "capturedAt": "2026-10-05T16:00:39.577Z",
+  "elapsedMs": 10580,
+  "ok": true,
+  "args": {
+    "topic": "technology",
+    "days": 1
+  },
+  "shape": {
+    "kind": "array",
+    "recordCount": 40,
+    "containerKey": null,
+    "topLevelKeys": null,
+    "recordKeys": [
+      "id",
+      "title",
+      "category",
+      "region",
+      "significance"
+    ],
+    "charCount": 6762,
+    "empty": false
+  },
+  "response": [
+    {
+      "id": "f86066405c15",
+      "title": "Musk backs Trump's 'super intelligence' push and plans SpaceXSI rebrand",
+      "category": "Technology",
+      "region": "North America",
+      "significance": 0.2785
+    },
+    {
+      "id": "73bbbb62242a",
+      "title": "South Korea to launch $3.5 billion frontier AI project next year",
+      "category": "Technology",
+      "region": "East Asia",
+      "significance": 0.1747
+    },
+    {
+      "id": "107c7259389e",
+      "title": "US FTC probes leading AI developers over potential consumer risks",
+      "category": "Technology",
+      "region": "North America",
+      "significance": 0.1505
+    },
+    {
+      "id": "828acbc3badb",
+      "title": "Taiwan cybersecurity institute sets four priorities to strengthen defenses with AI",
+      "category": "Technology",
+      "region": "East Asia",
+      "significance": 0.1193
+    },
+    {
+      "id": "9850c32244f7",
+      "title": "Argentina and US sign agreement to advance AI in science",
+      "category": "Technology",
+      "region": "South America",
+      "significance": 0.1193
+    },
+    {
+      "id": "5738dc7fbe59",
+      "title": "Cybersecurity firm says Chinese hackers impersonated US AI experts to steal credentials",
+      "category": "Technology",
+      "region": "East Asia",
+      "significance": 0.1193
+    },
+    {
+      "id": "95c9eb6e8478",
+      "title": "Google to restrict free access to some Gemini AI models",
+      "category": "Technology",
+      "region": null,
+      "significance": 0.1193
+    },
+    {
+      "id": "21b7db79e126",
+      "title": "Argentina joins US-led pact to advance AI use in scientific research",
+      "category": "Technology",
+      "region": "South America",
+      "significance": 0.1193
+    },
+    {
+      "id": "6f94c8e45202",
+      "title": "Solomon Islands government explores AI for management decisions",
+      "category": "Technology",
+      "region": "Oceania",
+      "significance": 0.0753
+    },
+    {
+      "id": "74e516039f03",
+      "title": "Mercadona unveils proprietary AI platform for software development",
+      "category": "Technology",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "d639d8b978dd",
+      "title": "Microsoft warns AI is strengthening links between cybercriminal groups",
+      "category": "Technology",
+      "region": null,
+      "significance": 0.0753
+    },
+    {
+      "id": "5ee026c1ae66",
+      "title": "India deploys 40 supercomputers to advance AI, weather and research",
+      "category": "Technology",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "6856e3e81c89",
+      "title": "Panasonic plans humanoid robot production by 2029, leveraging battery business",
+      "category": "Technology",
+      "region": "East Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "32167cfd6730",
+      "title": "Boccia proposes publicly controlled Italian AI hub at DigithON",
+      "category": "Technology",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "fc4fe53864ce",
+      "title": "Rishi Sunak urges stronger government oversight of artificial intelligence",
+      "category": "Technology",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "d7435ca579d6",
+      "title": "Anthropic warns its AI models could manipulate, blackmail and harm humans",
+      "category": "Technology",
+      "region": null,
+      "significance": 0.0753
+    },
+    {
+      "id": "dfb9d89ea790",
+      "title": "Google's Project Suncatcher satellite enters orbit to test space-based AI data centers",
+      "category": "Technology",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "f306e3270738",
+      "title": "Singapore plans AI-powered robot police for bomb disposal and prisons by 2028",
+      "category": "Technology",
+      "region": "Southeast Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "090a81871553",
+      "title": "EU financial regulator targets AI and tokenisation in new supervision drive",
+      "category": "Technology",
+      "region": null,
+      "significance": 0.0753
+    },
+    {
+      "id": "cc8f0cc92d15",
+      "title": "Silicon Valley tech leaders urge AI laws as China’s rules date to 2022",
+      "category": "Technology",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "6380f4998e2b",
+      "title": "OpenAI leader resigns, warning the company will guarantee more mistakes",
+      "category": "Corporate",
+      "region": null,
+      "significance": 0.3138
+    },
+    {
+      "id": "8f7bbf23e341",
+      "title": "Huawei and Qualcomm sign multi-year patent licensing deal covering 5G and AI",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.2698
+    },
+    {
+      "id": "c281610df073",
+      "title": "TSMC in early talks with Elon Musk over role in Texas Terafab",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.1945
+    },
+    {
+      "id": "572d290ba0ac",
+      "title": "Qualcomm and Arm resume legal battle over chip technology",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.1747
+    },
+    {
+      "id": "07c7b9d499e8",
+      "title": "IntelliGen plans AI 3D imaging rollout to 29 medical centers by 2028",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.1193
+    },
+    {
+      "id": "e29e067a12f7",
+      "title": "AIQ signs deal to enter India's energy markets",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.1193
+    },
+    {
+      "id": "a6623b77f672",
+      "title": "SiMa.ai raises $150 million in Series C funding to scale Physical AI",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "0ce634968c4c",
+      "title": "Canon India plans local service centers amid talks on semiconductor projects",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "ffa5b734821c",
+      "title": "Perplexity plans to establish South Korean subsidiary by year-end",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "d01c6b22db8e",
+      "title": "French supercomputer maker Bull doubles output to support Europe's AI ambitions",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "c39b8b227536",
+      "title": "Menlo Ventures weighs AI slowdown as Ola Electric CEO pledges stake",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "488a810ca91d",
+      "title": "Canon plans India service centers and semiconductor manufacturing partnerships",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "fed3e93ff91d",
+      "title": "Abu Dhabi and Siemens partner on AI and smart infrastructure",
+      "category": "Corporate",
+      "region": "Middle East",
+      "significance": 0.0753
+    },
+    {
+      "id": "19df9f149052",
+      "title": "LG wins 5GW AI data center cooling supply deal across North America",
+      "category": "Corporate",
+      "region": null,
+      "significance": 0.0753
+    },
+    {
+      "id": "26edb8f006c6",
+      "title": "Oracle secures nuclear power deal to fuel AI's energy-intensive growth",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "ac3852d928c7",
+      "title": "BMW launches restructuring, putting 8,000 jobs at risk as AI use expands",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "6651b61e25f5",
+      "title": "SoftBank completes $30 billion OpenAI investment through record junk bond sale",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "65ee028e1d15",
+      "title": "AI and robotics startup Helicon raises €14 million to automate factories",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "c8ddeebec1de",
+      "title": "AMD CEO Lisa Su to visit South Korea for semiconductor partnership talks",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "fe2126dc5cd4",
+      "title": "Hitachi High-Tech opens advanced-technology innovation center in Mumbai",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.0753
+    }
+  ]
+}

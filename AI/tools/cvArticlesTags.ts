@@ -4,7 +4,7 @@ import { z } from "zod";
 import { getTagArticles } from "../../mcp/cryptocurrency.cv/fetchers/tags.js";
 
 /** Articles requested when the caller does not specify. */
-const DEFAULT_LIMIT = 10;
+const DEFAULT_LIMIT = 15;
 
 /**
  * Tag slugs to suggest when the caller does not name one.
@@ -44,7 +44,7 @@ export const cvArticlesTagsTool = tool({
     limit: z
       .number()
       .int()
-      .min(1)
+      .min(15)
       .max(100)
       .default(DEFAULT_LIMIT)
       .describe(

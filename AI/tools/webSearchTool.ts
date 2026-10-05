@@ -19,25 +19,25 @@ import { normalizeYouResults } from "../providers/webSearch/you/normalizer.js";
 
 export const searchProviders = {
   exa: {
-    searchCounter: 5,
+    searchCounter: 20,
     search: searchExa,
     normalize: normalizeExaResults,
   },
 
   tavily: {
-    searchCounter: 5,
+    searchCounter: 20,
     search: searchTavily,
     normalize: normalizeTavilyResults,
   },
 
   brave: {
-    searchCounter: 5,
+    searchCounter: 20,
     search: searchBrave,
     normalize: normalizeBraveResults,
   },
 
   you: {
-    searchCounter: 5,
+    searchCounter: 20,
     search: searchYou,
     normalize: normalizeYouResults,
   },

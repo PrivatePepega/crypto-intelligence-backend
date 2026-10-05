@@ -1,0 +1,100 @@
+{
+  "tool": "currentsNewsSearch.technology",
+  "capturedAt": "2026-10-05T15:26:31.369Z",
+  "elapsedMs": 1506,
+  "ok": true,
+  "args": {
+    "keywords": "artificial intelligence chips",
+    "page_size": 10
+  },
+  "shape": {
+    "kind": "array",
+    "recordCount": 10,
+    "containerKey": null,
+    "topLevelKeys": null,
+    "recordKeys": [
+      "category",
+      "description",
+      "title"
+    ],
+    "charCount": 3121,
+    "empty": false
+  },
+  "response": [
+    {
+      "category": [
+        "finance"
+      ],
+      "description": "On this episode of Stock Movers: - PTC (PTC) shares are rallying as Schneider Electric agreed to buy PTC for about $22.6 billion in an all-cash deal to tap into the artificial-intelligence boom. - Qualcomm (QCOM) shares are higher as the company agreed to license patents underpinning Huawei Technolo...",
+      "title": "Watch PTC Rallies on Deal; Qualcomm Up on Chip Patent Licensing | Stock Movers - Bloomberg"
+    },
+    {
+      "category": [
+        "startup"
+      ],
+      "description": "Clockwork.io bags $31M in funding to keep AI inference and training workloads running like ... clockwork - SiliconANGLE",
+      "title": "Clockwork.io bags $31M in funding to keep AI inference and training workloads running like ... clockwork - SiliconANGLE"
+    },
+    {
+      "category": [
+        "semicon",
+        "industry"
+      ],
+      "description": "If you're not a stock picker, these five tech ETFs are among the best ways to enjoy any technology-sector gains.",
+      "title": "5 Best Tech ETFs to Gain From AI, Chips + More"
+    },
+    {
+      "category": [
+        "finance",
+        "education"
+      ],
+      "description": "Taiwan Semiconductor hits new 52-week high as surging AI chip demand fuels capacity expansion and strong revenue projections.",
+      "title": "Taiwan Semiconductor Stock Hits 52-Week High — What's Going On? - Taiwan Semiconductor (NYSE:TSM)"
+    },
+    {
+      "category": [
+        "business",
+        "economy"
+      ],
+      "description": "KUALA LUMPUR: SkyeChip Bhd has joined the Rapidus Collaborative Open Rapid Ecosystem (Rapidus CORE) as a Design Solution Associate, giving the Malaysian integrated circuit (IC) design company a role in the Japanese chipmaker's advanced semiconductor ecosystem.",
+      "title": "SkyeChip joins Rapidus ecosystem for Japan's 2nm chip platform"
+    },
+    {
+      "category": [
+        "technology",
+        "regional"
+      ],
+      "description": "Qualcomm to tap on Huawei’s LogicFolding chip technology under a new patent deal that covers 5G, AI, computing and networking. The deal is said to exceed USD6.9 billion.",
+      "title": "Qualcomm to gain access to Huawei LogicFolding patents"
+    },
+    {
+      "category": [
+        "regional"
+      ],
+      "description": "Lisa Su, chief executive officer of Advanced Micro Devices (AMD), will visit Korea this week to meet semiconductor industry executives and governme...",
+      "title": "AMD CEO to visit Korea this week for partnerships - The Korea Times"
+    },
+    {
+      "category": [
+        "finance",
+        "education"
+      ],
+      "description": "Musk backs warning of worsening AI compute shortages, highlighting Tesla’s custom chips, AI5/AI6 roadmap and Terafab supply plans.",
+      "title": "Elon Musk Agrees Tesla's Early Custom AI Chit Bet May be More Important Than Ever, Backs TSLA Engineer's"
+    },
+    {
+      "category": [
+        "business"
+      ],
+      "description": "The \"China plus one\" strategy that drew global manufacturers to Southeast Asia is yielding mixed results for the region. While billions of dollars have been invested in new factories, Southeast Asia is not reaping the full benefits it had anticipated. Meng-Chun Liu of the Chung-Hua Institution for E...",
+      "title": "Southeast Asia Grapples with Challenges as ‘China Plus One’ Strategy Falls Short"
+    },
+    {
+      "category": [
+        "technology"
+      ],
+      "description": "Pivot away from big tech with these three blue chip dividend stocks.",
+      "title": "My 3 Favorite Dividend Stocks to Buy in October | The Motley Fool"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ import {
 import { normalizeLatestNews } from "../../mcp/newsData.io/latestNews.normalizer.js";
 
 /** Articles returned per call. Matches `LATEST_NEWS_LIMIT`. */
-const LIMIT = 10;
+const LIMIT = 20;
 
 export const newsDataLatestNewsTool = tool({
   description:

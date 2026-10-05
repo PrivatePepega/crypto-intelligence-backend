@@ -1,0 +1,31 @@
+{
+  "tool": "newsMarketsNewsTool.markets",
+  "capturedAt": "2026-10-05T16:03:25.239Z",
+  "elapsedMs": 331,
+  "ok": true,
+  "args": {
+    "category": "business"
+  },
+  "shape": {
+    "kind": "object",
+    "recordCount": 0,
+    "containerKey": "items",
+    "topLevelKeys": [
+      "section",
+      "total",
+      "count",
+      "generatedAt",
+      "items"
+    ],
+    "recordKeys": [],
+    "charCount": 106,
+    "empty": true
+  },
+  "response": {
+    "section": "business",
+    "total": 50,
+    "count": null,
+    "generatedAt": "2026-10-05T15:56:47.933882+00:00",
+    "items": []
+  }
+}

@@ -55,7 +55,7 @@ export const currentsSearchTool = tool({
     page_size: z
       .number()
       .int()
-      .min(1)
+      .min(15)
       .max(30)
       .default(20)
       .describe(

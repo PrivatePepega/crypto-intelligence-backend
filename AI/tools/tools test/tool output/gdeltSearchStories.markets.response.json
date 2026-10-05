@@ -1,0 +1,307 @@
+{
+  "tool": "gdeltSearchStories.markets",
+  "capturedAt": "2026-10-05T16:00:24.138Z",
+  "elapsedMs": 11816,
+  "ok": true,
+  "args": {
+    "topic": "finance",
+    "days": 1
+  },
+  "shape": {
+    "kind": "array",
+    "recordCount": 40,
+    "containerKey": null,
+    "topLevelKeys": null,
+    "recordKeys": [
+      "id",
+      "title",
+      "category",
+      "region",
+      "significance"
+    ],
+    "charCount": 6790,
+    "empty": false
+  },
+  "response": [
+    {
+      "id": "9101a3972540",
+      "title": "ECB proposes regulatory relief for small banks across the eurozone",
+      "category": "Economic",
+      "region": "Europe",
+      "significance": 0.1747
+    },
+    {
+      "id": "e7f97984806c",
+      "title": "Qatar Central Bank partners with Euroclear to expand access to government bonds",
+      "category": "Economic",
+      "region": "Middle East",
+      "significance": 0.1505
+    },
+    {
+      "id": "0af4d28fb867",
+      "title": "India's SEBI chief warns investors against finfluencers and guaranteed returns",
+      "category": "Economic",
+      "region": "South Asia",
+      "significance": 0.1193
+    },
+    {
+      "id": "425b676887e0",
+      "title": "Suriname government prepares new foreign loans and domestic borrowing",
+      "category": "Economic",
+      "region": "South America",
+      "significance": 0.1193
+    },
+    {
+      "id": "2c015b41015f",
+      "title": "Hunt warns Healey that raising UK bank taxes will cost jobs",
+      "category": "Economic",
+      "region": "Europe",
+      "significance": 0.1193
+    },
+    {
+      "id": "b0aa15293a4f",
+      "title": "ICD and Eastern Bank close $10 million Shariah-compliant facility for Bangladesh shipping firm",
+      "category": "Economic",
+      "region": "South Asia",
+      "significance": 0.1193
+    },
+    {
+      "id": "065b8926b80a",
+      "title": "Turkey to tighten capital markets oversight with early-warning, automated action system",
+      "category": "Economic",
+      "region": "Middle East",
+      "significance": 0.1193
+    },
+    {
+      "id": "5bcce57637c7",
+      "title": "India's BPCL plans $3 billion bond sale to fund Brazil oil investment",
+      "category": "Economic",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "fb8fbce13e24",
+      "title": "Eurobank buys back 1.05 million shares for €5.02 million",
+      "category": "Economic",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "0d262cc54bb2",
+      "title": "Egypt's Financial Regulatory Authority approves 12 firms for nonbank financial activities",
+      "category": "Economic",
+      "region": "Northern Africa",
+      "significance": 0.0753
+    },
+    {
+      "id": "b10b06a30461",
+      "title": "Bank of England warns energy prices and AI debt raise financial stability risks",
+      "category": "Economic",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "a496f75ebd7b",
+      "title": "India's NSE flags dabba trading and Sankhat Bulls, warns investors",
+      "category": "Economic",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "08cbc19f6145",
+      "title": "India’s gross FDI reaches a 15-year high in Q1 FY27",
+      "category": "Economic",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "0d11af24a63e",
+      "title": "Armenia's Evocabank secures $10 million in subordinated financing",
+      "category": "Economic",
+      "region": "Central Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "7c59ae664daf",
+      "title": "Cyprus regulator CySEC suspends trading in shares of four listed firms",
+      "category": "Economic",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "f399c8422c0b",
+      "title": "IMF urges Ghana’s central bank and SEC to align crypto risk assessments",
+      "category": "Economic",
+      "region": "Western Africa",
+      "significance": 0.0753
+    },
+    {
+      "id": "cd9c83996648",
+      "title": "EU fisheries funding battle focuses on renewing the fishing fleet",
+      "category": "Economic",
+      "region": null,
+      "significance": 0.0753
+    },
+    {
+      "id": "141e6ba0df50",
+      "title": "Greek Fiscal Council approves 2027 budget, warns of investment and energy risks",
+      "category": "Economic",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "92342d59ff38",
+      "title": "R.K. Fashion Accessories SME IPO opens for subscription in India",
+      "category": "Economic",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "c3c7be580811",
+      "title": "Kyrgyz deposit protection agency proposes five risk-based bank categories",
+      "category": "Economic",
+      "region": "Central Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "cfb97d877553",
+      "title": "Anup Bagchi’s appointment eases leadership succession concerns at HDFC Bank",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.1945
+    },
+    {
+      "id": "788e05d74377",
+      "title": "Schneider Electric shares fall as investors fret over PTC acquisition cost",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.1747
+    },
+    {
+      "id": "864f60ee9719",
+      "title": "Payward and Singapore Gulf Bank partner for 24/7 digital asset settlement",
+      "category": "Corporate",
+      "region": "Southeast Asia",
+      "significance": 0.1505
+    },
+    {
+      "id": "27b3ac5d2098",
+      "title": "Intesa Sanpaolo revives MPS bid as takeover offer falters amid BPM, Generali offers",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.1505
+    },
+    {
+      "id": "776f0d378636",
+      "title": "Sidoarjo secures Rp2.3 trillion investment commitment at EJIF 2026",
+      "category": "Corporate",
+      "region": "Southeast Asia",
+      "significance": 0.1505
+    },
+    {
+      "id": "3ab8ea9b4966",
+      "title": "Janulevičius identifies causes behind appliance maker Snaigė’s bankruptcy",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.1505
+    },
+    {
+      "id": "da72cfd7417b",
+      "title": "Bakai Bank secures Hong Kong license, becoming first Central Asian bank in Asia-Pacific",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.1505
+    },
+    {
+      "id": "502cfe2a2da9",
+      "title": "Attijariwafa Bank to acquire majority stake in Société Générale Ghana",
+      "category": "Corporate",
+      "region": "Western Africa",
+      "significance": 0.1193
+    },
+    {
+      "id": "6836ad1e6c84",
+      "title": "Halifax banking app begins closing as customers switch to Lloyds",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.1193
+    },
+    {
+      "id": "10426c09abcc",
+      "title": "Alpha Bank’s treasury holdings rise to 0.55% after latest buyback",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "91e2860979ec",
+      "title": "South Street Securities expands into UK with FCA-authorized subsidiary",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "6651b61e25f5",
+      "title": "SoftBank completes $30 billion OpenAI investment through record junk bond sale",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "2bb5c5e91be2",
+      "title": "Iccrea and Equita launch new corporate lending platform in Italy",
+      "category": "Corporate",
+      "region": "Europe",
+      "significance": 0.0753
+    },
+    {
+      "id": "dd023ffb460f",
+      "title": "EarnIn secures an additional $150 million debt facility",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "f039d39ef099",
+      "title": "Bangladesh Bank aims to revive Padma Bank rather than liquidate it",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "777ee8b2f519",
+      "title": "Polymarket names Lisa Mantil head of institutional growth",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "03bd1acc3eee",
+      "title": "Philippine National Bank open to selling stake in PNB Holdings",
+      "category": "Corporate",
+      "region": "Southeast Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "9ab81fc8b488",
+      "title": "AMD offers OpenAI and Meta up to 320 million shares for a penny each",
+      "category": "Corporate",
+      "region": "North America",
+      "significance": 0.0753
+    },
+    {
+      "id": "acce2a0dcd68",
+      "title": "South Korean financial groups begin CEO selections amid governance scrutiny",
+      "category": "Corporate",
+      "region": "East Asia",
+      "significance": 0.0753
+    },
+    {
+      "id": "0ce634968c4c",
+      "title": "Canon India plans local service centers amid talks on semiconductor projects",
+      "category": "Corporate",
+      "region": "South Asia",
+      "significance": 0.0753
+    }
+  ]
+}

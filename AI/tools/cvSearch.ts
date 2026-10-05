@@ -4,7 +4,7 @@ import { z } from "zod";
 import { searchNews } from "../../mcp/cryptocurrency.cv/fetchers/search.js";
 
 /** Results requested when the caller does not specify. */
-const DEFAULT_LIMIT = 10;
+const DEFAULT_LIMIT = 20;
 
 export const cvSearchTool = tool({
   description:

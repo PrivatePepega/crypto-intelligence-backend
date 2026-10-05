@@ -10,7 +10,7 @@ import { getNews } from "../../mcp/cryptocurrency.cv/fetchers/news.js";
  * tool without editing provider code. The free tier caps the actual response at
  * 3 regardless, so a higher value only takes effect on a paid plan.
  */
-const DEFAULT_LIMIT = 10;
+const DEFAULT_LIMIT = 20;
 
 export const cvNewsTool = tool({
   description:

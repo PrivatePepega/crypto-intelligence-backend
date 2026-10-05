@@ -1,0 +1,21 @@
+{
+  "tool": "newsflashGetEvent",
+  "capturedAt": "2026-10-05T16:02:45.817Z",
+  "elapsedMs": 3,
+  "ok": false,
+  "args": {},
+  "error": {
+    "message": "fetch failed",
+    "stack": "TypeError: fetch failed"
+  },
+  "shape": {
+    "kind": "null",
+    "recordCount": null,
+    "containerKey": null,
+    "topLevelKeys": null,
+    "recordKeys": null,
+    "charCount": 4,
+    "empty": true
+  },
+  "response": null
+}

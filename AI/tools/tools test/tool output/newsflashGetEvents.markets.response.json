@@ -1,0 +1,26 @@
+{
+  "tool": "newsflashGetEvents.markets",
+  "capturedAt": "2026-10-05T16:02:55.516Z",
+  "elapsedMs": 55,
+  "ok": false,
+  "args": {
+    "q": "stock market",
+    "category": "business",
+    "limit": 10,
+    "min_sources": 2
+  },
+  "error": {
+    "message": "fetch failed",
+    "stack": "TypeError: fetch failed"
+  },
+  "shape": {
+    "kind": "null",
+    "recordCount": null,
+    "containerKey": null,
+    "topLevelKeys": null,
+    "recordKeys": null,
+    "charCount": 4,
+    "empty": true
+  },
+  "response": null
+}

@@ -1,0 +1,67 @@
+{
+  "tool": "cvBreaking",
+  "capturedAt": "2026-10-05T15:27:20.898Z",
+  "elapsedMs": 17521,
+  "ok": true,
+  "args": {},
+  "shape": {
+    "kind": "object",
+    "recordCount": 10,
+    "containerKey": "items",
+    "topLevelKeys": [
+      "count",
+      "items"
+    ],
+    "recordKeys": [
+      "title",
+      "description"
+    ],
+    "charCount": 2691,
+    "empty": false
+  },
+  "response": {
+    "count": 10,
+    "items": [
+      {
+        "title": "Strive adds 2,000 bitcoin in biggest buy since June, closes in on MARA",
+        "description": "Strive’s bitcoin holdings near 30,000 BTC as the race among the largest public treasuries heats up."
+      },
+      {
+        "title": "Bitcoin price fails to break higher after best weekly close in eight months",
+        "description": "Bitcoin’s highest weekly close in eight months formed low-timeframe resistance at the start of Monday’s US trading session."
+      },
+      {
+        "title": "Bitmine Buys $41M More Ethereum, Reaching 99% of Its 'Alchemy of 5%' Target",
+        "description": "The purchase lifts Bitmine's stash past 6 million ETH—4.9% of supply and 99% of the way to its \"Alchemy of 5%\" goal—as chairman Tom Lee says Ethereum is \"dwarfing\" other macro assets."
+      },
+      {
+        "title": "DeFi Development sees NAV per share more than doubling, holds 2.56 million SOL",
+        "description": "DFDV says preliminary Q3 estimates show NAV per share more than doubled as its Solana treasury grew to 2.56 million SOL."
+      },
+      {
+        "title": "Cerebras stock pops 9% after Sam Altman calls the chipmaker a 'close partner'",
+        "description": "Cerebras stock climbed in premarket trading after OpenAI's CEO Sam Altman reassured investors that the firm is a \"close partner.\""
+      },
+      {
+        "title": "Bullish exchange lists Sui Dollar stablecoin for trading",
+        "description": "The listing of USDsui on Bullish could enhance Sui's DeFi ecosystem, attracting institutional interest and boosting blockchain activity. The post Bullish exchange lists Sui Dollar stablecoin for tradi"
+      },
+      {
+        "title": "Strategy Estimates a $20.9 Billion Q3 Bitcoin Gain, Reversing Its Second-Quarter Loss",
+        "description": "The preliminary figure came with a roughly $4.12 billion tax benefit, as Strategy added 334 BTC and spent $176.3 million buying back STRC last week. The post Strategy Estimates a $20.9 Billion Q3 Bitc"
+      },
+      {
+        "title": "FinCEN Withdraws Proposed Crypto Mixer and Unhosted Wallet Reporting Rules",
+        "description": "The Treasury bureau is pulling a 2023 mixer proposal and a 2020 self-custody wallet proposal, citing a White House crypto report. The post FinCEN Withdraws Proposed Crypto Mixer and Unhosted Wallet Re"
+      },
+      {
+        "title": "Metaplanet reveals net income strategy to fuel Bitcoin accumulation",
+        "description": "Metaplanet revealed a revised capital allocation framework proposing to allocate as much as 15% of total assets to strategic investments to fund its Bitcoin accumulation."
+      },
+      {
+        "title": "Strive Buys 2,000 Bitcoin and Discloses a Buyback Facility for Its Preferred Stock",
+        "description": "The bitcoin treasury company now holds 29,462 BTC, and its CEO said 61.5% of the capital it raised came from its SATA preferred stock. The post Strive Buys 2,000 Bitcoin and Discloses a Buyback Facili"
+      }
+    ]
+  }
+}

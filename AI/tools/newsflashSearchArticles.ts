@@ -59,7 +59,7 @@ export const newsflashSearchArticlesTool = tool({
     limit: z
       .number()
       .int()
-      .min(1)
+      .min(15)
       .max(100)
       .optional()
       .describe("Maximum number of articles to return."),

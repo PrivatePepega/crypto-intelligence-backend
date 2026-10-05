@@ -24,6 +24,7 @@ import { cvSearchTool } from "../../tools/cvSearch.js";
 import { cvTrendingTool } from "../../tools/cvTrending.js";
 import { finnhubCryptoNewsTool } from "../../tools/finnhubCryptoNews.js";
 import { newsMarketsNewsTool } from "../../tools/newsMarketsNewsTool.js";
+import { wabbleImportantHeadlineSearchTool } from "../../tools/wabbleImportantHeadlineSearch.js";
 
 
 // --------------------------------------------------
@@ -71,7 +72,9 @@ const observerTools = {
 
   // finnhubCryptoNewsTool,
 
-  // newsMarketsNewsTool
+  // newsMarketsNewsTool,
+
+  wabbleImportantHeadlineSearchTool,
 };
 
 // --------------------------------------------------

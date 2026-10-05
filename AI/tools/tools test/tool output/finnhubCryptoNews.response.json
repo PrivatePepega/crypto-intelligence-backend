@@ -1,0 +1,47 @@
+{
+  "tool": "finnhubCryptoNews",
+  "capturedAt": "2026-10-05T15:28:40.656Z",
+  "elapsedMs": 348,
+  "ok": true,
+  "args": {},
+  "shape": {
+    "kind": "object",
+    "recordCount": 5,
+    "containerKey": "items",
+    "topLevelKeys": [
+      "count",
+      "items"
+    ],
+    "recordKeys": [
+      "headline",
+      "summary"
+    ],
+    "charCount": 4627,
+    "empty": false
+  },
+  "response": {
+    "count": 5,
+    "items": [
+      {
+        "headline": "Bitcoin price fails to break higher after best weekly close in eight months",
+        "summary": "Bitcoin’s highest weekly close in eight months formed low-timeframe resistance at the start of Monday’s US trading session."
+      },
+      {
+        "headline": "Stripe to expand stablecoin cards to over 100 countries by the end of the year",
+        "summary": null
+      },
+      {
+        "headline": "Bitcoin rally stalls below $87,334. What must buyers and sellers do next?",
+        "summary": "Bitcoin is trading above and below the unchanged level in trading today.   From a fundamental perspective, institutional demand has come back. Spot Bitcoin ETFs took in $2.7 billion in September, and total US spot ETF assets under management now top $111 billion. Wall Street is turning more positive too. Citigroup raised its 12-month Bitcoin target to $113,000 from $82,000, citing stronger crypto activity, a more supportive macro backdrop, and renewed ETF inflows. Helping as well is that the price is back above JPMorgan's estimated production cost of $85,000. That cost estimate is often watched as a rough floor, since miners are reluctant to sell below it. In contrast to that bias, the macro conditions remain the biggest headwind. High government bond yields raise the discount rate on assets like Bitcoin that pay no yield. Liquidity is thin. Stablecoin supply is around $270 billion, down $14 billion since May, which suggests less fresh capital waiting to buy crypto. Geopolitics is adding volatility. On October 2, Bitcoin rallied toward $87,000 before a tanker strike in the Strait of Hormuz, tied to the Iran war, wiped out the gain. There's also supply overhang. In the US, the regulatory picture is unsettled. BitGo's CEO argued that the failure of the Clarity Act left capital markets exposed to risk he compared to Lehman. Technically speaking... The fundamentals tell a story about what people think.  Technicals tell the story about what they are doing. You see that from the price action and applying tools to the price action. IN the video above, I speak to the technicals from the price action of Bitcoin and what it means to you as a trader.   Technically, Bitcoin buyers had another shot at the topside swing area, but the rally fell short of $87,334. The high price on Friday reached $87,144 just short of that target and rotated lower.  The price moved lower on Friday but stalled near the rising 100 and 200 hour MAs and stalled.  Since then, the price rebuilt and moved higher through the weekend. That rally peaked on late Sunday at $86771 and rotated back lower. The low price today reached $85408 which was just below the low of the swing area between $85578 to $87334.  On the downside, in addition to the $85578, the rising 100 hour MA at $85177, the 200 hour MA comes in at $84469 and the 38.2% of the move down from the October 2025 all-time high.   So buyers have not cleared the ceiling. However, sellers still need to break the support underneath to take more control. What buyers need to do Buyers need to get above and stay above $87,334. That would strengthen the bullish bias and open the door toward: $90,554: Higher resistance. $92,003: The 50% retracement. A break above resistance those levels quickly reverses would weaken the bullish signal. Staying above matters. What sellers need to do The first task is to move below and stay below $85,878. The price is currently trading just above that level at $86098. A move below that, the next tests are: $85,153: The 100-hour moving average. $84,461: The 200-hour moving average. $82,833–$81,517: The lower swing support area if the decline extends. Holding the moving averages would keep buyers in play. Breaking both and staying below would give sellers more control. Trading education A rally that stalls at resistance does not automatically turn the market bearish. It identifies where buyers ran into trouble. Sellers then need to break support to confirm that control is shifting. That is the lesson here. Watch the levels, watch the reaction, and look for breaks that can stick. This article was written by Greg Michalowski at investinglive.com."
+      },
+      {
+        "headline": "China P2P stablecoin wallets grew 43x despite crypto restrictions: Chainalysis",
+        "summary": "Unique wallets sending P2P stablecoin transactions in China grew 43-fold between Q1 2024 and Q2 2026 as crypto activity increasingly shifted toward direct wallet-to-wallet transfers."
+      },
+      {
+        "headline": "Strategy opts for bigger spending on STRC buybacks over BTC purchases",
+        "summary": "Strategy bought 334 Bitcoin for $28.7 million last week while spending $176.3 million to repurchase about 1.77 million shares of STRC."
+      }
+    ]
+  }
+}

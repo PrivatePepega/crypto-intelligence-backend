@@ -1,0 +1,47 @@
+{
+  "tool": "newsDataCryptoNews",
+  "capturedAt": "2026-10-05T16:02:30.884Z",
+  "elapsedMs": 261,
+  "ok": true,
+  "args": {},
+  "shape": {
+    "kind": "object",
+    "recordCount": 5,
+    "containerKey": "items",
+    "topLevelKeys": [
+      "count",
+      "items"
+    ],
+    "recordKeys": [
+      "title",
+      "description"
+    ],
+    "charCount": 1981,
+    "empty": false
+  },
+  "response": {
+    "count": 5,
+    "items": [
+      {
+        "title": "Tokenized Stock Trading Moves Closer to US Launch via OKX SEC Filing",
+        "description": "The crypto exchange seeks regulatory clearance to bring blockchain-based equity products to American investors. OKX has filed paperwork with the US Securities and Exchange Commission, according to reports from CryptoBriefing and Coinfomania. The filing seeks approval to launch tokenized-stock trading for customers in the United States. The post Tokenized Stock Trading Moves Closer to US Launch via OKX SEC Filing appeared first on TheCoinrise.com ."
+      },
+      {
+        "title": "Trump Announces Creation of \"Super Intelligence Force\" to Coordinate Federal Government Efforts",
+        "description": "PANews reported on October 5 that U.S. President Trump announced the creation of the \"Super Intelligence Force\" (SIF) after the White House reached a superin..."
+      },
+      {
+        "title": "Japan Sanctions Garantex, 33 Entities Over Russia’s War",
+        "description": "BitcoinWorld Japan Sanctions Garantex, 33 Entities Over Russia’s War Japan’s government added Russian cryptocurrency exchange Garantex to an expanded sanctions list on Oct. 2, 2026, folding the platform into a package that also freezes the assets of… This post Japan Sanctions Garantex, 33 Entities Over Russia’s War first appeared on BitcoinWorld ."
+      },
+      {
+        "title": "Sonic’s rally has a money flow problem – THIS level decides what’s next for S",
+        "description": "Indicator analysis shows that a rally is possible, but significant risks remain."
+      },
+      {
+        "title": "EU regulator plans wider supervisory role over crypto, clearing and tech providers",
+        "description": "The European Securities and Markets Authority (ESMA) recently published its 2027 Work Programme, setting out plans to expand financial market supervision, simplify regulation and make greater use of data and artificial intelligence. The EU financial markets regulator and supervisor said the programme marked a shift from preparing major initiatives to delivering them, as it continues […]"
+      }
+    ]
+  }
+}

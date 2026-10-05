@@ -1,0 +1,65 @@
+{
+  "tool": "cvSearch.crypto",
+  "capturedAt": "2026-10-05T15:27:55.413Z",
+  "elapsedMs": 6554,
+  "ok": true,
+  "args": {
+    "q": "Bitcoin"
+  },
+  "shape": {
+    "kind": "object",
+    "recordCount": 9,
+    "containerKey": "items",
+    "topLevelKeys": [
+      "count",
+      "items"
+    ],
+    "recordKeys": [
+      "title",
+      "description"
+    ],
+    "charCount": 2658,
+    "empty": false
+  },
+  "response": {
+    "count": 9,
+    "items": [
+      {
+        "title": "Strive Buys 2,000 Bitcoin as Its Treasury Push Picks up Steam",
+        "description": "Strive bought 2,000 bitcoin for roughly $169 million in a single week, lifting its treasury total to 29,462 BTC. The purchase was about six times larger than Strategy’s latest 334 BTC addition, even t"
+      },
+      {
+        "title": "Strategy Estimates a $20.9 Billion Q3 Bitcoin Gain, Reversing Its Second-Quarter Loss",
+        "description": "The preliminary figure came with a roughly $4.12 billion tax benefit, as Strategy added 334 BTC and spent $176.3 million buying back STRC last week. The post Strategy Estimates a $20.9 Billion Q3 Bitc"
+      },
+      {
+        "title": "Strive Buys 2,000 Bitcoin and Discloses a Buyback Facility for Its Preferred Stock",
+        "description": "The bitcoin treasury company now holds 29,462 BTC, and its CEO said 61.5% of the capital it raised came from its SATA preferred stock. The post Strive Buys 2,000 Bitcoin and Discloses a Buyback Facili"
+      },
+      {
+        "title": "Metaplanet Sells and Rebuys Its Bitcoin in a Bid for a Credit Rating",
+        "description": "The Tokyo-listed bitcoin treasury company says the round trip was meant to show credit rating agencies and bond investors that it is willing to sell when needed. The post Metaplanet Sells and Rebuys I"
+      },
+      {
+        "title": "Bitcoin ETFs Add $241M as 3-Week Streak Holds Despite 90% Slowdown",
+        "description": "U.S. bitcoin ETFs attracted $241.08 million in the week through Oct. 2, extending their winning streak to three weeks even as inflows slowed sharply from the previous period. Blackrock Adds $450M as B"
+      },
+      {
+        "title": "Bitcoin Price Grinds at $86K as Resistance Refuses to Give Way",
+        "description": "Bitcoin’s price held between $85,800 to $86,000 per unit on Oct. 5 at 8:45 a.m. Eastern time, with its larger trend still favoring bulls, yet the market was pressing directly into resistance rather th"
+      },
+      {
+        "title": "Strategy and Strive Add Bitcoin as Corporate Buying Accelerates",
+        "description": "Strategy and Strive add Bitcoin, but their latest disclosures reveal two increasingly different approaches to corporate BTC accumulation."
+      },
+      {
+        "title": "Strategy’s Bitcoin Treasury Reaches 848,000 After 334 BTC Buy",
+        "description": "Strategy added another 334 BTC for $28.7 million, bringing its bitcoin holdings to exactly 848,000 BTC as of Oct. 4. The company paid an average $85,838.80 per coin in the latest purchase, while its e"
+      },
+      {
+        "title": "Bitcoin trades near $86,000 as weaker US jobs data dims October Fed rate hike bets",
+        "description": "Bitcoin traded near $86,000 on Monday after weaker US jobs data sharply reduced expectations of an October Fed rate hike. Analysts said the softer macro backdrop, improving institutional demand and ET"
+      }
+    ]
+  }
+}
