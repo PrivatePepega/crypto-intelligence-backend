@@ -11,6 +11,7 @@ export const injectFederalFundsRateFull = async (
     await client.query("BEGIN");
 
     for (const observation of data.observations) {
+      if (observation.value === null) continue;
       await client.query(
         `
           INSERT INTO historical.federal_funds_rate (

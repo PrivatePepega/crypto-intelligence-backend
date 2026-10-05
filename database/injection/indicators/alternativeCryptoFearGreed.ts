@@ -26,35 +26,21 @@ export const alternativeCryptoFearGreed: Indicator = {
     "The Alternative.me Crypto Fear & Greed Index combines multiple market and sentiment signals into a single 0-to-100 measure. Alternative.me's published methodology assigns 25% weight to volatility, 25% to market momentum and volume, 15% to social media, 15% to surveys, 10% to Bitcoin dominance, and 10% to Google Trends, although Alternative.me currently states that its surveys are paused. The index therefore captures several dimensions of market behavior rather than directly measuring investor sentiment through a single survey. It can be analyzed alongside price trends, volatility, trading volume, derivatives positioning, funding rates, market breadth, Bitcoin dominance, and other sentiment indicators to provide broader context for changes in crypto-market conditions.",
 
   relationTags: [
-    "alternative_crypto_fear_greed",
-    "alternative_me",
-    "fear_greed_index",
-    "market_sentiment",
-    "crypto_sentiment",
-
-    "bitcoin",
-    "bitcoin_sentiment",
-    "crypto_market",
-    "crypto_market_sentiment",
-
-    "volatility",
-    "market_momentum",
-    "trading_volume",
-    "bitcoin_dominance",
-
-    "social_media_sentiment",
-    "google_trends",
-    "investor_sentiment",
-    "sentiment_indicators",
-
-    "fear",
-    "greed",
-    "market_psychology",
-    "risk_sentiment",
-
-    "price_action",
-    "market_conditions",
-    "crypto_markets"
+  "alternative_crypto_fear_greed",
+  "alternative_me",
+  "fear_greed_index",
+  "market_sentiment",
+  "crypto_sentiment",
+  "bitcoin",
+  "bitcoin_sentiment",
+  "crypto_market",
+  "crypto_market_sentiment",
+  "volatility",
+  "market_momentum",
+  "trading_volume",
+  "bitcoin_dominance",
+  "social_media_sentiment",
+  "google_trends",
   ],
 
   status: "active",

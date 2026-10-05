@@ -70,34 +70,14 @@ export const injectMortgageRateLatest = async (
       );
     };
 
-    const movingAverage3w = calculateMovingAverage(
+    const movingAverage30d = calculateMovingAverage(
       historicalValues,
       3,
     );
 
-    const movingAverage6w = calculateMovingAverage(
-      historicalValues,
-      6,
-    );
-
-    const movingAverage12w = calculateMovingAverage(
-      historicalValues,
-      12,
-    );
-
-    const currentVs3wMa =
-      movingAverage3w !== null
-        ? currentValue - movingAverage3w
-        : null;
-
-    const currentVs6wMa =
-      movingAverage6w !== null
-        ? currentValue - movingAverage6w
-        : null;
-
-    const currentVs12wMa =
-      movingAverage12w !== null
-        ? currentValue - movingAverage12w
+    const currentVs30dMa =
+      movingAverage30d !== null
+        ? currentValue - movingAverage30d
         : null;
 
     await client.query(
@@ -105,31 +85,22 @@ export const injectMortgageRateLatest = async (
         INSERT INTO current.mortgage_rate (
           indicator,
           series_id,
-
           current_value,
           previous_week_value,
-
           net_change,
-
-          moving_average_3w,
-          current_vs_3w_ma,
-
-          moving_average_6w,
-          current_vs_6w_ma,
-
-          moving_average_12w,
-          current_vs_12w_ma,
-
+          moving_average_30d,
+          current_vs_30d_ma,
           observed_at
         )
         VALUES (
-          $1, $2,
-          $3, $4,
+          $1,
+          $2,
+          $3,
+          $4,
           $5,
-          $6, $7,
-          $8, $9,
-          $10, $11,
-          $12
+          $6,
+          $7,
+          $8
         )
         ON CONFLICT (indicator)
         DO UPDATE SET
@@ -140,14 +111,8 @@ export const injectMortgageRateLatest = async (
 
           net_change = EXCLUDED.net_change,
 
-          moving_average_3w = EXCLUDED.moving_average_3w,
-          current_vs_3w_ma = EXCLUDED.current_vs_3w_ma,
-
-          moving_average_6w = EXCLUDED.moving_average_6w,
-          current_vs_6w_ma = EXCLUDED.current_vs_6w_ma,
-
-          moving_average_12w = EXCLUDED.moving_average_12w,
-          current_vs_12w_ma = EXCLUDED.current_vs_12w_ma,
+          moving_average_30d = EXCLUDED.moving_average_30d,
+          current_vs_30d_ma = EXCLUDED.current_vs_30d_ma,
 
           observed_at = EXCLUDED.observed_at,
 
@@ -162,14 +127,8 @@ export const injectMortgageRateLatest = async (
 
         netChange,
 
-        movingAverage3w,
-        currentVs3wMa,
-
-        movingAverage6w,
-        currentVs6wMa,
-
-        movingAverage12w,
-        currentVs12wMa,
+        movingAverage30d,
+        currentVs30dMa,
 
         currentObservation.date,
       ],
@@ -183,12 +142,8 @@ export const injectMortgageRateLatest = async (
       currentValue,
       previousWeekValue,
       netChange,
-      movingAverage3w,
-      currentVs3wMa,
-      movingAverage6w,
-      currentVs6wMa,
-      movingAverage12w,
-      currentVs12wMa,
+      movingAverage30d,
+      currentVs30dMa,
       observedAt: currentObservation.date,
     };
   } finally {

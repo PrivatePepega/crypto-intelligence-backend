@@ -114,68 +114,28 @@ export const injectAaiiSentimentLatest = async (data: AaiiSentimentData) => {
         : (bullBearSpreadNetChange / previousWeekBullBearSpread) * 100;
 
     const movingAverageResult = await client.query<{
-      moving_average_3w_bullish: string | null;
-      moving_average_6w_bullish: string | null;
-      moving_average_12w_bullish: string | null;
-      moving_average_3w_neutral: string | null;
-      moving_average_6w_neutral: string | null;
-      moving_average_12w_neutral: string | null;
-      moving_average_3w_bearish: string | null;
-      moving_average_6w_bearish: string | null;
-      moving_average_12w_bearish: string | null;
-      moving_average_3w_bull_bear_spread: string | null;
-      moving_average_6w_bull_bear_spread: string | null;
-      moving_average_12w_bull_bear_spread: string | null;
+      moving_average_30d_bullish: string | null;
+      moving_average_30d_neutral: string | null;
+      moving_average_30d_bearish: string | null;
+      moving_average_30d_bull_bear_spread: string | null;
     }>(
       `
         SELECT
           AVG(bullish) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_bullish,
-
-          AVG(bullish) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_bullish,
-
-          AVG(bullish) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_bullish,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_bullish,
 
           AVG(neutral) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_neutral,
-
-          AVG(neutral) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_neutral,
-
-          AVG(neutral) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_neutral,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_neutral,
 
           AVG(bearish) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_bearish,
-
-          AVG(bearish) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_bearish,
-
-          AVG(bearish) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_bearish,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_bearish,
 
           AVG(bull_bear_spread) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_bull_bear_spread,
-
-          AVG(bull_bear_spread) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_bull_bear_spread,
-
-          AVG(bull_bear_spread) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_bull_bear_spread
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_bull_bear_spread
 
         FROM historical.aaii_sentiment
         WHERE date < $1::date
@@ -192,178 +152,92 @@ export const injectAaiiSentimentLatest = async (data: AaiiSentimentData) => {
     const toNumber = (value: string | null) =>
       value === null ? null : Number(value);
 
-    const movingAverage3wBullish = toNumber(row.moving_average_3w_bullish);
-    const movingAverage6wBullish = toNumber(row.moving_average_6w_bullish);
-    const movingAverage12wBullish = toNumber(
-      row.moving_average_12w_bullish,
+    const movingAverage30dBullish = toNumber(row.moving_average_30d_bullish);
+    const movingAverage30dNeutral = toNumber(row.moving_average_30d_neutral);
+    const movingAverage30dBearish = toNumber(row.moving_average_30d_bearish);
+    const movingAverage30dBullBearSpread = toNumber(
+      row.moving_average_30d_bull_bear_spread,
     );
 
-    const movingAverage3wNeutral = toNumber(row.moving_average_3w_neutral);
-    const movingAverage6wNeutral = toNumber(row.moving_average_6w_neutral);
-    const movingAverage12wNeutral = toNumber(
-      row.moving_average_12w_neutral,
-    );
-
-    const movingAverage3wBearish = toNumber(row.moving_average_3w_bearish);
-    const movingAverage6wBearish = toNumber(row.moving_average_6w_bearish);
-    const movingAverage12wBearish = toNumber(
-      row.moving_average_12w_bearish,
-    );
-
-    const movingAverage3wBullBearSpread = toNumber(
-      row.moving_average_3w_bull_bear_spread,
-    );
-    const movingAverage6wBullBearSpread = toNumber(
-      row.moving_average_6w_bull_bear_spread,
-    );
-    const movingAverage12wBullBearSpread = toNumber(
-      row.moving_average_12w_bull_bear_spread,
-    );
-
-    const currentVs3wMaBullish =
-      movingAverage3wBullish === null
+    const currentVs30dMaBullish =
+      movingAverage30dBullish === null
         ? null
-        : currentBullish - movingAverage3wBullish;
+        : currentBullish - movingAverage30dBullish;
 
-    const currentVs6wMaBullish =
-      movingAverage6wBullish === null
+    const currentVs30dMaNeutral =
+      movingAverage30dNeutral === null
         ? null
-        : currentBullish - movingAverage6wBullish;
+        : currentNeutral - movingAverage30dNeutral;
 
-    const currentVs12wMaBullish =
-      movingAverage12wBullish === null
+    const currentVs30dMaBearish =
+      movingAverage30dBearish === null
         ? null
-        : currentBullish - movingAverage12wBullish;
+        : currentBearish - movingAverage30dBearish;
 
-    const currentVs3wMaNeutral =
-      movingAverage3wNeutral === null
+    const currentVs30dMaBullBearSpread =
+      movingAverage30dBullBearSpread === null
         ? null
-        : currentNeutral - movingAverage3wNeutral;
-
-    const currentVs6wMaNeutral =
-      movingAverage6wNeutral === null
-        ? null
-        : currentNeutral - movingAverage6wNeutral;
-
-    const currentVs12wMaNeutral =
-      movingAverage12wNeutral === null
-        ? null
-        : currentNeutral - movingAverage12wNeutral;
-
-    const currentVs3wMaBearish =
-      movingAverage3wBearish === null
-        ? null
-        : currentBearish - movingAverage3wBearish;
-
-    const currentVs6wMaBearish =
-      movingAverage6wBearish === null
-        ? null
-        : currentBearish - movingAverage6wBearish;
-
-    const currentVs12wMaBearish =
-      movingAverage12wBearish === null
-        ? null
-        : currentBearish - movingAverage12wBearish;
-
-    const currentVs3wMaBullBearSpread =
-      movingAverage3wBullBearSpread === null
-        ? null
-        : currentBullBearSpread - movingAverage3wBullBearSpread;
-
-    const currentVs6wMaBullBearSpread =
-      movingAverage6wBullBearSpread === null
-        ? null
-        : currentBullBearSpread - movingAverage6wBullBearSpread;
-
-    const currentVs12wMaBullBearSpread =
-      movingAverage12wBullBearSpread === null
-        ? null
-        : currentBullBearSpread - movingAverage12wBullBearSpread;
+        : currentBullBearSpread - movingAverage30dBullBearSpread;
 
     await client.query(
       `
         INSERT INTO current.aaii_sentiment (
           indicator,
           series_id,
-
           current_bullish,
           current_neutral,
           current_bearish,
           current_bull_bear_spread,
-
           previous_week_bullish,
           previous_week_neutral,
           previous_week_bearish,
           previous_week_bull_bear_spread,
-
           bullish_net_change,
           neutral_net_change,
           bearish_net_change,
           bull_bear_spread_net_change,
-
           bullish_percent_change,
           neutral_percent_change,
           bearish_percent_change,
           bull_bear_spread_percent_change,
-
-          moving_average_3w_bullish,
-          current_vs_3w_ma_bullish,
-          moving_average_6w_bullish,
-          current_vs_6w_ma_bullish,
-          moving_average_12w_bullish,
-          current_vs_12w_ma_bullish,
-
-          moving_average_3w_neutral,
-          current_vs_3w_ma_neutral,
-          moving_average_6w_neutral,
-          current_vs_6w_ma_neutral,
-          moving_average_12w_neutral,
-          current_vs_12w_ma_neutral,
-
-          moving_average_3w_bearish,
-          current_vs_3w_ma_bearish,
-          moving_average_6w_bearish,
-          current_vs_6w_ma_bearish,
-          moving_average_12w_bearish,
-          current_vs_12w_ma_bearish,
-
-          moving_average_3w_bull_bear_spread,
-          current_vs_3w_ma_bull_bear_spread,
-          moving_average_6w_bull_bear_spread,
-          current_vs_6w_ma_bull_bear_spread,
-          moving_average_12w_bull_bear_spread,
-          current_vs_12w_ma_bull_bear_spread,
-
+          moving_average_30d_bullish,
+          current_vs_30d_ma_bullish,
+          moving_average_30d_neutral,
+          current_vs_30d_ma_neutral,
+          moving_average_30d_bearish,
+          current_vs_30d_ma_bearish,
+          moving_average_30d_bull_bear_spread,
+          current_vs_30d_ma_bull_bear_spread,
           observed_at
         )
         VALUES (
-          $1, $2,
-
-          $3, $4, $5, $6,
-
-          $7, $8, $9, $10,
-
-          $11, $12, $13, $14,
-
-          $15, $16, $17, $18,
-
-          $19, $20,
-          $21, $22,
-          $23, $24,
-
-          $25, $26,
-          $27, $28,
-          $29, $30,
-
-          $31, $32,
-          $33, $34,
-          $35, $36,
-
-          $37, $38,
-          $39, $40,
-          $41, $42,
-
-          $43
+          $1,
+          $2,
+          $3,
+          $4,
+          $5,
+          $6,
+          $7,
+          $8,
+          $9,
+          $10,
+          $11,
+          $12,
+          $13,
+          $14,
+          $15,
+          $16,
+          $17,
+          $18,
+          $19,
+          $20,
+          $21,
+          $22,
+          $23,
+          $24,
+          $25,
+          $26,
+          $27
         )
         ON CONFLICT (indicator)
         DO UPDATE SET
@@ -389,33 +263,17 @@ export const injectAaiiSentimentLatest = async (data: AaiiSentimentData) => {
           bearish_percent_change = EXCLUDED.bearish_percent_change,
           bull_bear_spread_percent_change = EXCLUDED.bull_bear_spread_percent_change,
 
-          moving_average_3w_bullish = EXCLUDED.moving_average_3w_bullish,
-          current_vs_3w_ma_bullish = EXCLUDED.current_vs_3w_ma_bullish,
-          moving_average_6w_bullish = EXCLUDED.moving_average_6w_bullish,
-          current_vs_6w_ma_bullish = EXCLUDED.current_vs_6w_ma_bullish,
-          moving_average_12w_bullish = EXCLUDED.moving_average_12w_bullish,
-          current_vs_12w_ma_bullish = EXCLUDED.current_vs_12w_ma_bullish,
+          moving_average_30d_bullish = EXCLUDED.moving_average_30d_bullish,
+          current_vs_30d_ma_bullish = EXCLUDED.current_vs_30d_ma_bullish,
 
-          moving_average_3w_neutral = EXCLUDED.moving_average_3w_neutral,
-          current_vs_3w_ma_neutral = EXCLUDED.current_vs_3w_ma_neutral,
-          moving_average_6w_neutral = EXCLUDED.moving_average_6w_neutral,
-          current_vs_6w_ma_neutral = EXCLUDED.current_vs_6w_ma_neutral,
-          moving_average_12w_neutral = EXCLUDED.moving_average_12w_neutral,
-          current_vs_12w_ma_neutral = EXCLUDED.current_vs_12w_ma_neutral,
+          moving_average_30d_neutral = EXCLUDED.moving_average_30d_neutral,
+          current_vs_30d_ma_neutral = EXCLUDED.current_vs_30d_ma_neutral,
 
-          moving_average_3w_bearish = EXCLUDED.moving_average_3w_bearish,
-          current_vs_3w_ma_bearish = EXCLUDED.current_vs_3w_ma_bearish,
-          moving_average_6w_bearish = EXCLUDED.moving_average_6w_bearish,
-          current_vs_6w_ma_bearish = EXCLUDED.current_vs_6w_ma_bearish,
-          moving_average_12w_bearish = EXCLUDED.moving_average_12w_bearish,
-          current_vs_12w_ma_bearish = EXCLUDED.current_vs_12w_ma_bearish,
+          moving_average_30d_bearish = EXCLUDED.moving_average_30d_bearish,
+          current_vs_30d_ma_bearish = EXCLUDED.current_vs_30d_ma_bearish,
 
-          moving_average_3w_bull_bear_spread = EXCLUDED.moving_average_3w_bull_bear_spread,
-          current_vs_3w_ma_bull_bear_spread = EXCLUDED.current_vs_3w_ma_bull_bear_spread,
-          moving_average_6w_bull_bear_spread = EXCLUDED.moving_average_6w_bull_bear_spread,
-          current_vs_6w_ma_bull_bear_spread = EXCLUDED.current_vs_6w_ma_bull_bear_spread,
-          moving_average_12w_bull_bear_spread = EXCLUDED.moving_average_12w_bull_bear_spread,
-          current_vs_12w_ma_bull_bear_spread = EXCLUDED.current_vs_12w_ma_bull_bear_spread,
+          moving_average_30d_bull_bear_spread = EXCLUDED.moving_average_30d_bull_bear_spread,
+          current_vs_30d_ma_bull_bear_spread = EXCLUDED.current_vs_30d_ma_bull_bear_spread,
 
           observed_at = EXCLUDED.observed_at,
           updated_at = NOW()
@@ -444,33 +302,17 @@ export const injectAaiiSentimentLatest = async (data: AaiiSentimentData) => {
         bearishPercentChange,
         bullBearSpreadPercentChange,
 
-        movingAverage3wBullish,
-        currentVs3wMaBullish,
-        movingAverage6wBullish,
-        currentVs6wMaBullish,
-        movingAverage12wBullish,
-        currentVs12wMaBullish,
+        movingAverage30dBullish,
+        currentVs30dMaBullish,
 
-        movingAverage3wNeutral,
-        currentVs3wMaNeutral,
-        movingAverage6wNeutral,
-        currentVs6wMaNeutral,
-        movingAverage12wNeutral,
-        currentVs12wMaNeutral,
+        movingAverage30dNeutral,
+        currentVs30dMaNeutral,
 
-        movingAverage3wBearish,
-        currentVs3wMaBearish,
-        movingAverage6wBearish,
-        currentVs6wMaBearish,
-        movingAverage12wBearish,
-        currentVs12wMaBearish,
+        movingAverage30dBearish,
+        currentVs30dMaBearish,
 
-        movingAverage3wBullBearSpread,
-        currentVs3wMaBullBearSpread,
-        movingAverage6wBullBearSpread,
-        currentVs6wMaBullBearSpread,
-        movingAverage12wBullBearSpread,
-        currentVs12wMaBullBearSpread,
+        movingAverage30dBullBearSpread,
+        currentVs30dMaBullBearSpread,
 
         currentObservation.date,
       ],
@@ -504,33 +346,17 @@ export const injectAaiiSentimentLatest = async (data: AaiiSentimentData) => {
       bearishPercentChange,
       bullBearSpreadPercentChange,
 
-      movingAverage3wBullish,
-      currentVs3wMaBullish,
-      movingAverage6wBullish,
-      currentVs6wMaBullish,
-      movingAverage12wBullish,
-      currentVs12wMaBullish,
+      movingAverage30dBullish,
+      currentVs30dMaBullish,
 
-      movingAverage3wNeutral,
-      currentVs3wMaNeutral,
-      movingAverage6wNeutral,
-      currentVs6wMaNeutral,
-      movingAverage12wNeutral,
-      currentVs12wMaNeutral,
+      movingAverage30dNeutral,
+      currentVs30dMaNeutral,
 
-      movingAverage3wBearish,
-      currentVs3wMaBearish,
-      movingAverage6wBearish,
-      currentVs6wMaBearish,
-      movingAverage12wBearish,
-      currentVs12wMaBearish,
+      movingAverage30dBearish,
+      currentVs30dMaBearish,
 
-      movingAverage3wBullBearSpread,
-      currentVs3wMaBullBearSpread,
-      movingAverage6wBullBearSpread,
-      currentVs6wMaBullBearSpread,
-      movingAverage12wBullBearSpread,
-      currentVs12wMaBullBearSpread,
+      movingAverage30dBullBearSpread,
+      currentVs30dMaBullBearSpread,
 
       observedAt: currentObservation.date,
     };

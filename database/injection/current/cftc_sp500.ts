@@ -129,98 +129,38 @@ export const injectCftcSp500Latest = async (data: CftcSp500Data) => {
         : (nonReportablesNetChange / previousWeekNonReportablesNet) * 100;
 
     const movingAverageResult = await client.query<{
-      moving_average_3w_open_interest: string | null;
-      moving_average_6w_open_interest: string | null;
-      moving_average_12w_open_interest: string | null;
-      moving_average_3w_dealer_net: string | null;
-      moving_average_6w_dealer_net: string | null;
-      moving_average_12w_dealer_net: string | null;
-      moving_average_3w_asset_manager_net: string | null;
-      moving_average_6w_asset_manager_net: string | null;
-      moving_average_12w_asset_manager_net: string | null;
-      moving_average_3w_leveraged_money_net: string | null;
-      moving_average_6w_leveraged_money_net: string | null;
-      moving_average_12w_leveraged_money_net: string | null;
-      moving_average_3w_other_reportables_net: string | null;
-      moving_average_6w_other_reportables_net: string | null;
-      moving_average_12w_other_reportables_net: string | null;
-      moving_average_3w_non_reportables_net: string | null;
-      moving_average_6w_non_reportables_net: string | null;
-      moving_average_12w_non_reportables_net: string | null;
+      moving_average_30d_open_interest: string | null;
+      moving_average_30d_dealer_net: string | null;
+      moving_average_30d_asset_manager_net: string | null;
+      moving_average_30d_leveraged_money_net: string | null;
+      moving_average_30d_other_reportables_net: string | null;
+      moving_average_30d_non_reportables_net: string | null;
     }>(
       `
         SELECT
           AVG(open_interest) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_open_interest,
-
-          AVG(open_interest) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_open_interest,
-
-          AVG(open_interest) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_open_interest,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_open_interest,
 
           AVG(dealer_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_dealer_net,
-
-          AVG(dealer_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_dealer_net,
-
-          AVG(dealer_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_dealer_net,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_dealer_net,
 
           AVG(asset_manager_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_asset_manager_net,
-
-          AVG(asset_manager_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_asset_manager_net,
-
-          AVG(asset_manager_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_asset_manager_net,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_asset_manager_net,
 
           AVG(leveraged_money_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_leveraged_money_net,
-
-          AVG(leveraged_money_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_leveraged_money_net,
-
-          AVG(leveraged_money_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_leveraged_money_net,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_leveraged_money_net,
 
           AVG(other_reportables_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_other_reportables_net,
-
-          AVG(other_reportables_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_other_reportables_net,
-
-          AVG(other_reportables_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_other_reportables_net,
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_other_reportables_net,
 
           AVG(non_reportables_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '3 weeks'
-          ) AS moving_average_3w_non_reportables_net,
-
-          AVG(non_reportables_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '7 weeks'
-          ) AS moving_average_6w_non_reportables_net,
-
-          AVG(non_reportables_net) FILTER (
-            WHERE date >= $1::date - INTERVAL '13 weeks'
-          ) AS moving_average_12w_non_reportables_net
+            WHERE date >= $1::date - INTERVAL '30 days'
+          ) AS moving_average_30d_non_reportables_net
 
         FROM historical.cftc_sp500
         WHERE date < $1::date
@@ -237,269 +177,149 @@ export const injectCftcSp500Latest = async (data: CftcSp500Data) => {
     const toNumber = (value: string | null) =>
       value === null ? null : Number(value);
 
-    const movingAverage3wOpenInterest = toNumber(
-      row.moving_average_3w_open_interest,
-    );
-    const movingAverage6wOpenInterest = toNumber(
-      row.moving_average_6w_open_interest,
-    );
-    const movingAverage12wOpenInterest = toNumber(
-      row.moving_average_12w_open_interest,
+    const movingAverage30dOpenInterest = toNumber(
+      row.moving_average_30d_open_interest,
     );
 
-    const movingAverage3wDealerNet = toNumber(
-      row.moving_average_3w_dealer_net,
-    );
-    const movingAverage6wDealerNet = toNumber(
-      row.moving_average_6w_dealer_net,
-    );
-    const movingAverage12wDealerNet = toNumber(
-      row.moving_average_12w_dealer_net,
+    const movingAverage30dDealerNet = toNumber(
+      row.moving_average_30d_dealer_net,
     );
 
-    const movingAverage3wAssetManagerNet = toNumber(
-      row.moving_average_3w_asset_manager_net,
-    );
-    const movingAverage6wAssetManagerNet = toNumber(
-      row.moving_average_6w_asset_manager_net,
-    );
-    const movingAverage12wAssetManagerNet = toNumber(
-      row.moving_average_12w_asset_manager_net,
+    const movingAverage30dAssetManagerNet = toNumber(
+      row.moving_average_30d_asset_manager_net,
     );
 
-    const movingAverage3wLeveragedMoneyNet = toNumber(
-      row.moving_average_3w_leveraged_money_net,
-    );
-    const movingAverage6wLeveragedMoneyNet = toNumber(
-      row.moving_average_6w_leveraged_money_net,
-    );
-    const movingAverage12wLeveragedMoneyNet = toNumber(
-      row.moving_average_12w_leveraged_money_net,
+    const movingAverage30dLeveragedMoneyNet = toNumber(
+      row.moving_average_30d_leveraged_money_net,
     );
 
-    const movingAverage3wOtherReportablesNet = toNumber(
-      row.moving_average_3w_other_reportables_net,
-    );
-    const movingAverage6wOtherReportablesNet = toNumber(
-      row.moving_average_6w_other_reportables_net,
-    );
-    const movingAverage12wOtherReportablesNet = toNumber(
-      row.moving_average_12w_other_reportables_net,
+    const movingAverage30dOtherReportablesNet = toNumber(
+      row.moving_average_30d_other_reportables_net,
     );
 
-    const movingAverage3wNonReportablesNet = toNumber(
-      row.moving_average_3w_non_reportables_net,
-    );
-    const movingAverage6wNonReportablesNet = toNumber(
-      row.moving_average_6w_non_reportables_net,
-    );
-    const movingAverage12wNonReportablesNet = toNumber(
-      row.moving_average_12w_non_reportables_net,
+    const movingAverage30dNonReportablesNet = toNumber(
+      row.moving_average_30d_non_reportables_net,
     );
 
-    const currentVs3wMaOpenInterest =
-      movingAverage3wOpenInterest === null
+    const currentVs30dMaOpenInterest =
+      movingAverage30dOpenInterest === null
         ? null
-        : currentOpenInterest - movingAverage3wOpenInterest;
-    const currentVs6wMaOpenInterest =
-      movingAverage6wOpenInterest === null
-        ? null
-        : currentOpenInterest - movingAverage6wOpenInterest;
-    const currentVs12wMaOpenInterest =
-      movingAverage12wOpenInterest === null
-        ? null
-        : currentOpenInterest - movingAverage12wOpenInterest;
+        : currentOpenInterest - movingAverage30dOpenInterest;
 
-    const currentVs3wMaDealerNet =
-      movingAverage3wDealerNet === null
+    const currentVs30dMaDealerNet =
+      movingAverage30dDealerNet === null
         ? null
-        : currentDealerNet - movingAverage3wDealerNet;
-    const currentVs6wMaDealerNet =
-      movingAverage6wDealerNet === null
-        ? null
-        : currentDealerNet - movingAverage6wDealerNet;
-    const currentVs12wMaDealerNet =
-      movingAverage12wDealerNet === null
-        ? null
-        : currentDealerNet - movingAverage12wDealerNet;
+        : currentDealerNet - movingAverage30dDealerNet;
 
-    const currentVs3wMaAssetManagerNet =
-      movingAverage3wAssetManagerNet === null
+    const currentVs30dMaAssetManagerNet =
+      movingAverage30dAssetManagerNet === null
         ? null
-        : currentAssetManagerNet - movingAverage3wAssetManagerNet;
-    const currentVs6wMaAssetManagerNet =
-      movingAverage6wAssetManagerNet === null
-        ? null
-        : currentAssetManagerNet - movingAverage6wAssetManagerNet;
-    const currentVs12wMaAssetManagerNet =
-      movingAverage12wAssetManagerNet === null
-        ? null
-        : currentAssetManagerNet - movingAverage12wAssetManagerNet;
+        : currentAssetManagerNet - movingAverage30dAssetManagerNet;
 
-    const currentVs3wMaLeveragedMoneyNet =
-      movingAverage3wLeveragedMoneyNet === null
+    const currentVs30dMaLeveragedMoneyNet =
+      movingAverage30dLeveragedMoneyNet === null
         ? null
-        : currentLeveragedMoneyNet - movingAverage3wLeveragedMoneyNet;
-    const currentVs6wMaLeveragedMoneyNet =
-      movingAverage6wLeveragedMoneyNet === null
-        ? null
-        : currentLeveragedMoneyNet - movingAverage6wLeveragedMoneyNet;
-    const currentVs12wMaLeveragedMoneyNet =
-      movingAverage12wLeveragedMoneyNet === null
-        ? null
-        : currentLeveragedMoneyNet - movingAverage12wLeveragedMoneyNet;
+        : currentLeveragedMoneyNet - movingAverage30dLeveragedMoneyNet;
 
-    const currentVs3wMaOtherReportablesNet =
-      movingAverage3wOtherReportablesNet === null
+    const currentVs30dMaOtherReportablesNet =
+      movingAverage30dOtherReportablesNet === null
         ? null
-        : currentOtherReportablesNet - movingAverage3wOtherReportablesNet;
-    const currentVs6wMaOtherReportablesNet =
-      movingAverage6wOtherReportablesNet === null
-        ? null
-        : currentOtherReportablesNet - movingAverage6wOtherReportablesNet;
-    const currentVs12wMaOtherReportablesNet =
-      movingAverage12wOtherReportablesNet === null
-        ? null
-        : currentOtherReportablesNet - movingAverage12wOtherReportablesNet;
+        : currentOtherReportablesNet - movingAverage30dOtherReportablesNet;
 
-    const currentVs3wMaNonReportablesNet =
-      movingAverage3wNonReportablesNet === null
+    const currentVs30dMaNonReportablesNet =
+      movingAverage30dNonReportablesNet === null
         ? null
-        : currentNonReportablesNet - movingAverage3wNonReportablesNet;
-    const currentVs6wMaNonReportablesNet =
-      movingAverage6wNonReportablesNet === null
-        ? null
-        : currentNonReportablesNet - movingAverage6wNonReportablesNet;
-    const currentVs12wMaNonReportablesNet =
-      movingAverage12wNonReportablesNet === null
-        ? null
-        : currentNonReportablesNet - movingAverage12wNonReportablesNet;
+        : currentNonReportablesNet - movingAverage30dNonReportablesNet;
 
     await client.query(
       `
         INSERT INTO current.cftc_sp500 (
           indicator,
           series_id,
-
           current_open_interest,
-
           current_dealer_net,
           current_asset_manager_net,
           current_leveraged_money_net,
           current_other_reportables_net,
           current_non_reportables_net,
-
           previous_week_open_interest,
-
           previous_week_dealer_net,
           previous_week_asset_manager_net,
           previous_week_leveraged_money_net,
           previous_week_other_reportables_net,
           previous_week_non_reportables_net,
-
           open_interest_net_change,
           dealer_net_change,
           asset_manager_net_change,
           leveraged_money_net_change,
           other_reportables_net_change,
           non_reportables_net_change,
-
           open_interest_percent_change,
           dealer_net_percent_change,
           asset_manager_net_percent_change,
           leveraged_money_net_percent_change,
           other_reportables_net_percent_change,
           non_reportables_net_percent_change,
-
-          moving_average_3w_open_interest,
-          current_vs_3w_ma_open_interest,
-          moving_average_6w_open_interest,
-          current_vs_6w_ma_open_interest,
-          moving_average_12w_open_interest,
-          current_vs_12w_ma_open_interest,
-
-          moving_average_3w_dealer_net,
-          current_vs_3w_ma_dealer_net,
-          moving_average_6w_dealer_net,
-          current_vs_6w_ma_dealer_net,
-          moving_average_12w_dealer_net,
-          current_vs_12w_ma_dealer_net,
-
-          moving_average_3w_asset_manager_net,
-          current_vs_3w_ma_asset_manager_net,
-          moving_average_6w_asset_manager_net,
-          current_vs_6w_ma_asset_manager_net,
-          moving_average_12w_asset_manager_net,
-          current_vs_12w_ma_asset_manager_net,
-
-          moving_average_3w_leveraged_money_net,
-          current_vs_3w_ma_leveraged_money_net,
-          moving_average_6w_leveraged_money_net,
-          current_vs_6w_ma_leveraged_money_net,
-          moving_average_12w_leveraged_money_net,
-          current_vs_12w_ma_leveraged_money_net,
-
-          moving_average_3w_other_reportables_net,
-          current_vs_3w_ma_other_reportables_net,
-          moving_average_6w_other_reportables_net,
-          current_vs_6w_ma_other_reportables_net,
-          moving_average_12w_other_reportables_net,
-          current_vs_12w_ma_other_reportables_net,
-
-          moving_average_3w_non_reportables_net,
-          current_vs_3w_ma_non_reportables_net,
-          moving_average_6w_non_reportables_net,
-          current_vs_6w_ma_non_reportables_net,
-          moving_average_12w_non_reportables_net,
-          current_vs_12w_ma_non_reportables_net,
-
+          moving_average_30d_open_interest,
+          current_vs_30d_ma_open_interest,
+          moving_average_30d_dealer_net,
+          current_vs_30d_ma_dealer_net,
+          moving_average_30d_asset_manager_net,
+          current_vs_30d_ma_asset_manager_net,
+          moving_average_30d_leveraged_money_net,
+          current_vs_30d_ma_leveraged_money_net,
+          moving_average_30d_other_reportables_net,
+          current_vs_30d_ma_other_reportables_net,
+          moving_average_30d_non_reportables_net,
+          current_vs_30d_ma_non_reportables_net,
           contract,
           commodity,
           subgroup,
-
           observed_at
         )
         VALUES (
-          $1, $2,
-
+          $1,
+          $2,
           $3,
-
-          $4, $5, $6, $7, $8,
-
+          $4,
+          $5,
+          $6,
+          $7,
+          $8,
           $9,
-
-          $10, $11, $12, $13, $14,
-
-          $15, $16, $17, $18, $19, $20,
-
-          $21, $22, $23, $24, $25, $26,
-
-          $27, $28,
-          $29, $30,
-          $31, $32,
-
-          $33, $34,
-          $35, $36,
-          $37, $38,
-
-          $39, $40,
-          $41, $42,
-          $43, $44,
-
-          $45, $46,
-          $47, $48,
-          $49, $50,
-
-          $51, $52,
-          $53, $54,
-          $55, $56,
-
-          $57, $58,
-          $59, $60,
-          $61, $62,
-
-          $63, $64,
-          $65, $66
+          $10,
+          $11,
+          $12,
+          $13,
+          $14,
+          $15,
+          $16,
+          $17,
+          $18,
+          $19,
+          $20,
+          $21,
+          $22,
+          $23,
+          $24,
+          $25,
+          $26,
+          $27,
+          $28,
+          $29,
+          $30,
+          $31,
+          $32,
+          $33,
+          $34,
+          $35,
+          $36,
+          $37,
+          $38,
+          $39,
+          $40,
+          $41,
+          $42
         )
         ON CONFLICT (indicator)
         DO UPDATE SET
@@ -535,47 +355,23 @@ export const injectCftcSp500Latest = async (data: CftcSp500Data) => {
           other_reportables_net_percent_change = EXCLUDED.other_reportables_net_percent_change,
           non_reportables_net_percent_change = EXCLUDED.non_reportables_net_percent_change,
 
-          moving_average_3w_open_interest = EXCLUDED.moving_average_3w_open_interest,
-          current_vs_3w_ma_open_interest = EXCLUDED.current_vs_3w_ma_open_interest,
-          moving_average_6w_open_interest = EXCLUDED.moving_average_6w_open_interest,
-          current_vs_6w_ma_open_interest = EXCLUDED.current_vs_6w_ma_open_interest,
-          moving_average_12w_open_interest = EXCLUDED.moving_average_12w_open_interest,
-          current_vs_12w_ma_open_interest = EXCLUDED.current_vs_12w_ma_open_interest,
+          moving_average_30d_open_interest = EXCLUDED.moving_average_30d_open_interest,
+          current_vs_30d_ma_open_interest = EXCLUDED.current_vs_30d_ma_open_interest,
 
-          moving_average_3w_dealer_net = EXCLUDED.moving_average_3w_dealer_net,
-          current_vs_3w_ma_dealer_net = EXCLUDED.current_vs_3w_ma_dealer_net,
-          moving_average_6w_dealer_net = EXCLUDED.moving_average_6w_dealer_net,
-          current_vs_6w_ma_dealer_net = EXCLUDED.current_vs_6w_ma_dealer_net,
-          moving_average_12w_dealer_net = EXCLUDED.moving_average_12w_dealer_net,
-          current_vs_12w_ma_dealer_net = EXCLUDED.current_vs_12w_ma_dealer_net,
+          moving_average_30d_dealer_net = EXCLUDED.moving_average_30d_dealer_net,
+          current_vs_30d_ma_dealer_net = EXCLUDED.current_vs_30d_ma_dealer_net,
 
-          moving_average_3w_asset_manager_net = EXCLUDED.moving_average_3w_asset_manager_net,
-          current_vs_3w_ma_asset_manager_net = EXCLUDED.current_vs_3w_ma_asset_manager_net,
-          moving_average_6w_asset_manager_net = EXCLUDED.moving_average_6w_asset_manager_net,
-          current_vs_6w_ma_asset_manager_net = EXCLUDED.current_vs_6w_ma_asset_manager_net,
-          moving_average_12w_asset_manager_net = EXCLUDED.moving_average_12w_asset_manager_net,
-          current_vs_12w_ma_asset_manager_net = EXCLUDED.current_vs_12w_ma_asset_manager_net,
+          moving_average_30d_asset_manager_net = EXCLUDED.moving_average_30d_asset_manager_net,
+          current_vs_30d_ma_asset_manager_net = EXCLUDED.current_vs_30d_ma_asset_manager_net,
 
-          moving_average_3w_leveraged_money_net = EXCLUDED.moving_average_3w_leveraged_money_net,
-          current_vs_3w_ma_leveraged_money_net = EXCLUDED.current_vs_3w_ma_leveraged_money_net,
-          moving_average_6w_leveraged_money_net = EXCLUDED.moving_average_6w_leveraged_money_net,
-          current_vs_6w_ma_leveraged_money_net = EXCLUDED.current_vs_6w_ma_leveraged_money_net,
-          moving_average_12w_leveraged_money_net = EXCLUDED.moving_average_12w_leveraged_money_net,
-          current_vs_12w_ma_leveraged_money_net = EXCLUDED.current_vs_12w_ma_leveraged_money_net,
+          moving_average_30d_leveraged_money_net = EXCLUDED.moving_average_30d_leveraged_money_net,
+          current_vs_30d_ma_leveraged_money_net = EXCLUDED.current_vs_30d_ma_leveraged_money_net,
 
-          moving_average_3w_other_reportables_net = EXCLUDED.moving_average_3w_other_reportables_net,
-          current_vs_3w_ma_other_reportables_net = EXCLUDED.current_vs_3w_ma_other_reportables_net,
-          moving_average_6w_other_reportables_net = EXCLUDED.moving_average_6w_other_reportables_net,
-          current_vs_6w_ma_other_reportables_net = EXCLUDED.current_vs_6w_ma_other_reportables_net,
-          moving_average_12w_other_reportables_net = EXCLUDED.moving_average_12w_other_reportables_net,
-          current_vs_12w_ma_other_reportables_net = EXCLUDED.current_vs_12w_ma_other_reportables_net,
+          moving_average_30d_other_reportables_net = EXCLUDED.moving_average_30d_other_reportables_net,
+          current_vs_30d_ma_other_reportables_net = EXCLUDED.current_vs_30d_ma_other_reportables_net,
 
-          moving_average_3w_non_reportables_net = EXCLUDED.moving_average_3w_non_reportables_net,
-          current_vs_3w_ma_non_reportables_net = EXCLUDED.current_vs_3w_ma_non_reportables_net,
-          moving_average_6w_non_reportables_net = EXCLUDED.moving_average_6w_non_reportables_net,
-          current_vs_6w_ma_non_reportables_net = EXCLUDED.current_vs_6w_ma_non_reportables_net,
-          moving_average_12w_non_reportables_net = EXCLUDED.moving_average_12w_non_reportables_net,
-          current_vs_12w_ma_non_reportables_net = EXCLUDED.current_vs_12w_ma_non_reportables_net,
+          moving_average_30d_non_reportables_net = EXCLUDED.moving_average_30d_non_reportables_net,
+          current_vs_30d_ma_non_reportables_net = EXCLUDED.current_vs_30d_ma_non_reportables_net,
 
           contract = EXCLUDED.contract,
           commodity = EXCLUDED.commodity,
@@ -618,47 +414,23 @@ export const injectCftcSp500Latest = async (data: CftcSp500Data) => {
         otherReportablesNetPercentChange,
         nonReportablesNetPercentChange,
 
-        movingAverage3wOpenInterest,
-        currentVs3wMaOpenInterest,
-        movingAverage6wOpenInterest,
-        currentVs6wMaOpenInterest,
-        movingAverage12wOpenInterest,
-        currentVs12wMaOpenInterest,
+        movingAverage30dOpenInterest,
+        currentVs30dMaOpenInterest,
 
-        movingAverage3wDealerNet,
-        currentVs3wMaDealerNet,
-        movingAverage6wDealerNet,
-        currentVs6wMaDealerNet,
-        movingAverage12wDealerNet,
-        currentVs12wMaDealerNet,
+        movingAverage30dDealerNet,
+        currentVs30dMaDealerNet,
 
-        movingAverage3wAssetManagerNet,
-        currentVs3wMaAssetManagerNet,
-        movingAverage6wAssetManagerNet,
-        currentVs6wMaAssetManagerNet,
-        movingAverage12wAssetManagerNet,
-        currentVs12wMaAssetManagerNet,
+        movingAverage30dAssetManagerNet,
+        currentVs30dMaAssetManagerNet,
 
-        movingAverage3wLeveragedMoneyNet,
-        currentVs3wMaLeveragedMoneyNet,
-        movingAverage6wLeveragedMoneyNet,
-        currentVs6wMaLeveragedMoneyNet,
-        movingAverage12wLeveragedMoneyNet,
-        currentVs12wMaLeveragedMoneyNet,
+        movingAverage30dLeveragedMoneyNet,
+        currentVs30dMaLeveragedMoneyNet,
 
-        movingAverage3wOtherReportablesNet,
-        currentVs3wMaOtherReportablesNet,
-        movingAverage6wOtherReportablesNet,
-        currentVs6wMaOtherReportablesNet,
-        movingAverage12wOtherReportablesNet,
-        currentVs12wMaOtherReportablesNet,
+        movingAverage30dOtherReportablesNet,
+        currentVs30dMaOtherReportablesNet,
 
-        movingAverage3wNonReportablesNet,
-        currentVs3wMaNonReportablesNet,
-        movingAverage6wNonReportablesNet,
-        currentVs6wMaNonReportablesNet,
-        movingAverage12wNonReportablesNet,
-        currentVs12wMaNonReportablesNet,
+        movingAverage30dNonReportablesNet,
+        currentVs30dMaNonReportablesNet,
 
         currentObservation.contract,
         currentObservation.commodity,
@@ -704,47 +476,23 @@ export const injectCftcSp500Latest = async (data: CftcSp500Data) => {
       otherReportablesNetPercentChange,
       nonReportablesNetPercentChange,
 
-      movingAverage3wOpenInterest,
-      currentVs3wMaOpenInterest,
-      movingAverage6wOpenInterest,
-      currentVs6wMaOpenInterest,
-      movingAverage12wOpenInterest,
-      currentVs12wMaOpenInterest,
+      movingAverage30dOpenInterest,
+      currentVs30dMaOpenInterest,
 
-      movingAverage3wDealerNet,
-      currentVs3wMaDealerNet,
-      movingAverage6wDealerNet,
-      currentVs6wMaDealerNet,
-      movingAverage12wDealerNet,
-      currentVs12wMaDealerNet,
+      movingAverage30dDealerNet,
+      currentVs30dMaDealerNet,
 
-      movingAverage3wAssetManagerNet,
-      currentVs3wMaAssetManagerNet,
-      movingAverage6wAssetManagerNet,
-      currentVs6wMaAssetManagerNet,
-      movingAverage12wAssetManagerNet,
-      currentVs12wMaAssetManagerNet,
+      movingAverage30dAssetManagerNet,
+      currentVs30dMaAssetManagerNet,
 
-      movingAverage3wLeveragedMoneyNet,
-      currentVs3wMaLeveragedMoneyNet,
-      movingAverage6wLeveragedMoneyNet,
-      currentVs6wMaLeveragedMoneyNet,
-      movingAverage12wLeveragedMoneyNet,
-      currentVs12wMaLeveragedMoneyNet,
+      movingAverage30dLeveragedMoneyNet,
+      currentVs30dMaLeveragedMoneyNet,
 
-      movingAverage3wOtherReportablesNet,
-      currentVs3wMaOtherReportablesNet,
-      movingAverage6wOtherReportablesNet,
-      currentVs6wMaOtherReportablesNet,
-      movingAverage12wOtherReportablesNet,
-      currentVs12wMaOtherReportablesNet,
+      movingAverage30dOtherReportablesNet,
+      currentVs30dMaOtherReportablesNet,
 
-      movingAverage3wNonReportablesNet,
-      currentVs3wMaNonReportablesNet,
-      movingAverage6wNonReportablesNet,
-      currentVs6wMaNonReportablesNet,
-      movingAverage12wNonReportablesNet,
-      currentVs12wMaNonReportablesNet,
+      movingAverage30dNonReportablesNet,
+      currentVs30dMaNonReportablesNet,
 
       observedAt: currentObservation.date,
     };

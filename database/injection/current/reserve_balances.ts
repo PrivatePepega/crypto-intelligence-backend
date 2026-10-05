@@ -58,36 +58,12 @@ export const injectReserveBalancesLatest = async (
       );
     }
 
-    const movingAverage3w =
+    const movingAverage30d =
       historicalValues
         .slice(0, 3)
         .reduce((sum, value) => sum + value, 0) / 3;
 
-    const movingAverage6w =
-      historicalValues.length >= 6
-        ? historicalValues
-            .slice(0, 6)
-            .reduce((sum, value) => sum + value, 0) / 6
-        : null;
-
-    const movingAverage12w =
-      historicalValues.length >= 12
-        ? historicalValues
-            .slice(0, 12)
-            .reduce((sum, value) => sum + value, 0) / 12
-        : null;
-
-    const currentVs3wMa = currentValue - movingAverage3w;
-
-    const currentVs6wMa =
-      movingAverage6w !== null
-        ? currentValue - movingAverage6w
-        : null;
-
-    const currentVs12wMa =
-      movingAverage12w !== null
-        ? currentValue - movingAverage12w
-        : null;
+    const currentVs30dMa = currentValue - movingAverage30d;
 
     await client.query(
       `
@@ -97,16 +73,19 @@ export const injectReserveBalancesLatest = async (
           current_value,
           previous_week_value,
           net_change,
-          moving_average_3w,
-          current_vs_3w_ma,
-          moving_average_6w,
-          current_vs_6w_ma,
-          moving_average_12w,
-          current_vs_12w_ma,
+          moving_average_30d,
+          current_vs_30d_ma,
           observed_at
         )
         VALUES (
-          $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12
+          $1,
+          $2,
+          $3,
+          $4,
+          $5,
+          $6,
+          $7,
+          $8
         )
         ON CONFLICT (indicator)
         DO UPDATE SET
@@ -114,12 +93,8 @@ export const injectReserveBalancesLatest = async (
           current_value = EXCLUDED.current_value,
           previous_week_value = EXCLUDED.previous_week_value,
           net_change = EXCLUDED.net_change,
-          moving_average_3w = EXCLUDED.moving_average_3w,
-          current_vs_3w_ma = EXCLUDED.current_vs_3w_ma,
-          moving_average_6w = EXCLUDED.moving_average_6w,
-          current_vs_6w_ma = EXCLUDED.current_vs_6w_ma,
-          moving_average_12w = EXCLUDED.moving_average_12w,
-          current_vs_12w_ma = EXCLUDED.current_vs_12w_ma,
+          moving_average_30d = EXCLUDED.moving_average_30d,
+          current_vs_30d_ma = EXCLUDED.current_vs_30d_ma,
           observed_at = EXCLUDED.observed_at,
           updated_at = NOW()
       `,
@@ -129,12 +104,8 @@ export const injectReserveBalancesLatest = async (
         currentValue,
         previousWeekValue,
         netChange,
-        movingAverage3w,
-        currentVs3wMa,
-        movingAverage6w,
-        currentVs6wMa,
-        movingAverage12w,
-        currentVs12wMa,
+        movingAverage30d,
+        currentVs30dMa,
         currentObservation.date,
       ],
     );
@@ -147,12 +118,8 @@ export const injectReserveBalancesLatest = async (
       currentValue,
       previousWeekValue,
       netChange,
-      movingAverage3w,
-      currentVs3wMa,
-      movingAverage6w,
-      currentVs6wMa,
-      movingAverage12w,
-      currentVs12wMa,
+      movingAverage30d,
+      currentVs30dMa,
       observedAt: currentObservation.date,
     };
   } finally {

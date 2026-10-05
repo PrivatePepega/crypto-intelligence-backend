@@ -26,41 +26,21 @@ export const binanceEthereum: Indicator = {
     "Binance Ethereum retail positioning provides a daily view of directional exposure among traders in Binance's ETHUSDT market. Global account positioning can provide context for the distribution of long and short accounts, while top-account and top-position metrics provide additional information about positioning among Binance's largest or most active accounts. Because the dataset represents Binance's own trader pool rather than the entire Ethereum derivatives market, it should be interpreted as an exchange-specific positioning signal rather than a comprehensive measure of market-wide positioning. Binance positioning can be analyzed alongside Ethereum price, open interest, funding rates, taker flow, derivatives activity, Ethereum network activity, staking conditions, DeFi activity, and broader crypto-market conditions to provide additional context for changes in Ethereum market positioning.",
 
   relationTags: [
-    "binance_ethereum",
-    "binance",
-    "exchange_positioning",
-    "retail_positioning",
-    "retail_sentiment",
-
-    "ethereum",
-    "eth",
-    "ethusdt",
-    "ethereum_market",
-    "ethereum_derivatives",
-
-    "long_positions",
-    "short_positions",
-    "long_short_ratio",
-    "long_accounts",
-    "short_accounts",
-    "directional_exposure",
-    "positioning_changes",
-
-    "global_account_positioning",
-    "top_account_positioning",
-    "top_position_positioning",
-
-    "open_interest",
-    "funding_rate",
-    "derivatives_activity",
-
-    "ethereum_price",
-    "ethereum_network",
-    "ethereum_staking",
-    "defi",
-
-    "crypto_market",
-    "crypto_market_sentiment"
+  "binance_ethereum",
+  "binance",
+  "exchange_positioning",
+  "retail_positioning",
+  "retail_sentiment",
+  "ethereum",
+  "eth",
+  "ethusdt",
+  "ethereum_market",
+  "ethereum_derivatives",
+  "long_positions",
+  "short_positions",
+  "long_short_ratio",
+  "long_accounts",
+  "short_accounts",
   ],
 
   status: "active",

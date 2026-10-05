@@ -149,464 +149,463 @@ import { injectCftcMicroEthereumFull } from "../../injection/historical/cftc_mic
 const runFullInjection = async () => {
     console.log("Full Injection initialized");
 
-    // const fedRates = await getFederalFundsRate("full")
-    // await injectFederalFundsRateFull(fedRates)
+    const fedRates = await getFederalFundsRate("full")
+    await injectFederalFundsRateFull(fedRates)
 
+    const twoYearTYields = await getTwoYearTreasuryYield("full")
+    await injectTwoYearTreasuryYieldFull(twoYearTYields)
 
-    // const twoYearTYields = await getTwoYearTreasuryYield("full")
-    // await injectTwoYearTreasuryYieldFull(twoYearTYields)
+    const tenYeatTYields = await getTenYearTreasuryYield("full")
+    await injectTenYearTreasuryYieldFull(tenYeatTYields)
 
-    // const tenYeatTYields = await getTenYearTreasuryYield("full")
-    // await injectTenYearTreasuryYieldFull(tenYeatTYields)
+    const tenYearBreakevenInflation = await getTenYearBreakevenInflation("full")
+    await injectTenYearBreakevenInflationFull(tenYearBreakevenInflation)
 
-    // const tenYearBreakevenInflation = await getTenYearBreakevenInflation("full")
-    // await injectTenYearBreakevenInflationFull(tenYearBreakevenInflation)
+    const realTenYearTreasuryYield = await getRealTenYearTreasuryYield("full")
+    await injectRealTenYearTreasuryYieldFull(realTenYearTreasuryYield)
 
-    // const realTenYearTreasuryYield = await getRealTenYearTreasuryYield("full")
-    // await injectRealTenYearTreasuryYieldFull(realTenYearTreasuryYield)
+    const consumerPriceIndex = await getCpi("full")
+    await injectConsumerPriceIndexFull(consumerPriceIndex)
 
-    // const consumerPriceIndex = await getCpi("full")
-    // await injectConsumerPriceIndexFull(consumerPriceIndex)
+    const coreCPI = await getCoreCpi("full")
+    await injectCoreConsumerPriceIndexFull(coreCPI)
 
-    // const coreCPI = await getCoreCpi("full")
-    // await injectCoreConsumerPriceIndexFull(coreCPI)
+    const pce = await getPce("full")
+    await injectPersonalConsumptionExpendituresFull(pce)
 
-    // const pce = await getPce("full")
-    // await injectPersonalConsumptionExpendituresFull(pce)
+    const corePce = await getCorePce("full")
+    await injectCorePersonalConsumptionExpendituresFull(corePce)
 
-    // const corePce = await getCorePce("full")
-    // await injectCorePersonalConsumptionExpendituresFull(corePce)
+    const ppi = await getPpi("full")
+    await injectProducerPriceIndexFull(ppi)
 
-    // const ppi = await getPpi("full")
-    // await injectProducerPriceIndexFull(ppi)
+    const fiveYearInflationExpectations = await getFiveYearInflationExpectations("full")
+    await injectFiveYearInflationExpectationsFull(fiveYearInflationExpectations)
 
-    // const fiveYearInflationExpectations = await getFiveYearInflationExpectations("full")
-    // await injectFiveYearInflationExpectationsFull(fiveYearInflationExpectations)
+    const unemploymentRate = await getUnemploymentRate("full")
+    await injectUnemploymentRateFull(unemploymentRate)
 
-    // const unemploymentRate = await getUnemploymentRate("full")
-    // await injectUnemploymentRateFull(unemploymentRate)
+    const laborForceParticipation = await getLaborForceParticipation("full")
+    await injectLaborForceParticipationFull(laborForceParticipation)
 
-    // const laborForceParticipation = await getLaborForceParticipation("full")
-    // await injectLaborForceParticipationFull(laborForceParticipation)
+    const nonFarmPayRolls = await getNonfarmPayrolls("full")
+    await injectNonfarmPayrollsFull(nonFarmPayRolls)
 
-    // const nonFarmPayRolls = await getNonfarmPayrolls("full")
-    // await injectNonfarmPayrollsFull(nonFarmPayRolls)
+    const averageHourlyEarning = await getAverageHourlyEarnings("full")
+    await injectAverageHourlyEarningsFull(averageHourlyEarning)
 
-    // const averageHourlyEarning = await getAverageHourlyEarnings("full")
-    // await injectAverageHourlyEarningsFull(averageHourlyEarning)
-
-    // const jobOpenings = await getJobOpenings("full")
-    // await injectJobOpeningsFull(jobOpenings)
+    const jobOpenings = await getJobOpenings("full")
+    await injectJobOpeningsFull(jobOpenings)
   
-    // const initialJoblessClaims = await getInitialJoblessClaims("full")
-    // await injectInitialJoblessClaimsFull(initialJoblessClaims)
+    const initialJoblessClaims = await getInitialJoblessClaims("full")
+    await injectInitialJoblessClaimsFull(initialJoblessClaims)
 
-    // const realGDP = await getRealGdp("full")
-    // await injectRealGdpFull(realGDP)
+    const realGDP = await getRealGdp("full")
+    await injectRealGdpFull(realGDP)
 
-    // const realGDPGrowth = await getRealGdpGrowth("full")
-    // await injectRealGdpGrowthFull(realGDPGrowth)
+    const realGDPGrowth = await getRealGdpGrowth("full")
+    await injectRealGdpGrowthFull(realGDPGrowth)
 
-    // const industrialProduction = await getIndustrialProduction("full")
-    // await injectIndustrialProductionFull(industrialProduction)
+    const industrialProduction = await getIndustrialProduction("full")
+    await injectIndustrialProductionFull(industrialProduction)
 
-    // const retailSales = await getRetailSales("full")
-    // await injectRetailSalesFull(retailSales)
+    const retailSales = await getRetailSales("full")
+    await injectRetailSalesFull(retailSales)
 
-    // const personalIncome = await getPersonalIncome("full")
-    // await injectPersonalIncomeFull(personalIncome)
+    const personalIncome = await getPersonalIncome("full")
+    await injectPersonalIncomeFull(personalIncome)
 
-    // const m2MoneySupply = await getM2MoneySupply("full")
-    // await injectM2MoneySupplyFull(m2MoneySupply)
+    const m2MoneySupply = await getM2MoneySupply("full")
+    await injectM2MoneySupplyFull(m2MoneySupply)
 
-    // const fedTotalAssets = await getFedTotalAssets("full")
-    // await injectFedTotalAssetsFull(fedTotalAssets)
+    const fedTotalAssets = await getFedTotalAssets("full")
+    await injectFedTotalAssetsFull(fedTotalAssets)
 
-    // const reserveBalances = await getReserveBalances("full")
-    // await injectReserveBalancesFull(reserveBalances)
+    const reserveBalances = await getReserveBalances("full")
+    await injectReserveBalancesFull(reserveBalances)
 
-    // const reverseRepoUsage = await getReverseRepoUsage("full")
-    // await injectReverseRepoUsageFull(reverseRepoUsage)
-
-    // const vix = await getVix("full")
-    // await injectVixFull(vix)
+    const reverseRepoUsage = await getReverseRepoUsage("full")
+    await injectReverseRepoUsageFull(reverseRepoUsage)
+
+    const vix = await getVix("full")
+    await injectVixFull(vix)
 
-    // const highYieldCreditSpread = await getHighYieldCreditSpread("full")
-    // await injectHighYieldCreditSpreadFull(highYieldCreditSpread)
-
-    // const investmentGradeCreditSpread = await getInvestmentGradeCreditSpread("full")
-    // await injectInvestmentGradeCreditSpreadFull(investmentGradeCreditSpread)
-
-    // const consumerSentiment = await getConsumerSentiment("full")
-    // await injectConsumerSentimentFull(consumerSentiment)
-
-    // const housingStarts = await getHousingStarts("full")
-    // await injectHousingStartsFull(housingStarts)
-
-    // const buildingPermits = await getBuildingPermits("full")
-    // await injectBuildingPermitsFull(buildingPermits)
-
-    // const existingHomeSales = await getExistingHomeSales("full")
-    // await injectExistingHomeSalesFull(existingHomeSales)
-
-    // const mortgageRate = await getMortgageRate("full")
-    // await injectMortgageRateFull(mortgageRate)
-
-    // const homePriceIndex = await getHomePriceIndex("full")
-    // await injectHomePriceIndexFull(homePriceIndex)
-
-    // const sp500 = await getSp500("full")
-    // await injectSp500Full(sp500)
-
-    // const nasdaqComposite = await getNasdaqComposite("full")
-    // await injectNasdaqCompositeFull(nasdaqComposite)
-
-    // const dowJones = await getDowJones("full")
-    // await injectDowJonesFull(dowJones)
-
-    // const broadUsdIndex = await getBroadUsdIndex("full")
-    // await injectBroadUsdIndexFull(broadUsdIndex)
-
-    // const realBroadUsdIndex = await getRealBroadUsdIndex("full")
-    // await injectRealBroadUsdIndexFull(realBroadUsdIndex)
-
-    // const advancedEconomyUsdIndex = await getAdvancedEconomyUsdIndex("full")
-    // await injectAdvancedEconomyUsdIndexFull(advancedEconomyUsdIndex)
-
-    // const emergingMarketUsdIndex = await getEmergingMarketUsdIndex("full")
-    // await injectEmergingMarketUsdIndexFull(emergingMarketUsdIndex)
-
-    // const threeMonthTreasury = await get3mTreasury("full")
-    // await injectThreeMonthTreasuryFull(threeMonthTreasury)
-
-    // const fiveYearTreasury = await get5yTreasury("full")
-    // await injectFiveYearTreasuryFull(fiveYearTreasury)
-
-    // const { full: fullFxData } = await getFxData();
-
-    // const eurUsdObservations = fullFxData.filter(
-    //   (observation) => observation.pair === "EUR/USD",
-    // )
-    // await injectEurUsdFull({
-    //   indicator: "eur_usd",
-    //   seriesId: "EURUSD",
-    //   observations: eurUsdObservations,
-    // })
-
-    // const gbpUsdObservations = fullFxData.filter(
-    //   (observation) => observation.pair === "GBP/USD",
-    // )
-    // if (gbpUsdObservations.length === 0) {
-    //   throw new Error("No GBP/USD observations found")
-    // }
-    // await injectGbpUsdFull({
-    //   indicator: "gbp_usd",
-    //   seriesId: "GBPUSD",
-    //   observations: gbpUsdObservations,
-    // })
-
-    // const usdJpyObservations = fullFxData.filter(
-    //   (observation) => observation.pair === "USD/JPY",
-    // )
-    // if (usdJpyObservations.length === 0) {
-    //   throw new Error("No USD/JPY observations found")
-    // }
-    // await injectUsdJpyFull({
-    //   indicator: "usd_jpy",
-    //   seriesId: "USDJPY",
-    //   observations: usdJpyObservations,
-    // })
-
-    // const usdChfObservations = fullFxData.filter(
-    //   (observation) => observation.pair === "USD/CHF",
-    // )
-    // if (usdChfObservations.length === 0) {
-    //   throw new Error("No USD/CHF observations found")
-    // }
-    // await injectUsdChfFull({
-    //   indicator: "usd_chf",
-    //   seriesId: "USDCHF",
-    //   observations: usdChfObservations,
-    // })
-
-    // const audUsdObservations = fullFxData.filter(
-    //   (observation) => observation.pair === "AUD/USD",
-    // )
-    // if (audUsdObservations.length === 0) {
-    //   throw new Error("No AUD/USD observations found")
-    // }
-    // await injectAudUsdFull({
-    //   indicator: "aud_usd",
-    //   seriesId: "AUDUSD",
-    //   observations: audUsdObservations,
-    // })
-
-    // const usdCadObservations = fullFxData.filter(
-    //   (observation) => observation.pair === "USD/CAD",
-    // )
-    // if (usdCadObservations.length === 0) {
-    //   throw new Error("No USD/CAD observations found")
-    // }
-    // await injectUsdCadFull({
-    //   indicator: "usd_cad",
-    //   seriesId: "USDCAD",
-    //   observations: usdCadObservations,
-    // })
-
-    // const nzdUsdObservations = fullFxData.filter(
-    //   (observation) => observation.pair === "NZD/USD",
-    // )
-    // if (nzdUsdObservations.length === 0) {
-    //   throw new Error("No NZD/USD observations found")
-    // }
-    // await injectNzdUsdFull({
-    //   indicator: "nzd_usd",
-    //   seriesId: "NZDUSD",
-    //   observations: nzdUsdObservations,
-    // })
-
-    // const { full: fullCommodityData } = await getCommodityData();
-
-    // const goldObservations = fullCommodityData.filter(
-    //   (observation) => observation.commodity === "gold",
-    // )
-    // if (goldObservations.length === 0) {
-    //   throw new Error("No gold observations found")
-    // }
-    // await injectGoldFull({
-    //   indicator: "gold",
-    //   seriesId: "GOLD",
-    //   observations: goldObservations,
-    // })
-
-    // const silverObservations = fullCommodityData.filter(
-    //   (observation) => observation.commodity === "silver",
-    // )
-    // if (silverObservations.length === 0) {
-    //   throw new Error("No silver observations found")
-    // }
-    // await injectSilverFull({
-    //   indicator: "silver",
-    //   seriesId: "SILVER",
-    //   observations: silverObservations,
-    // })
-
-    // const wtiObservations = fullCommodityData.filter(
-    //   (observation) => observation.commodity === "wti",
-    // )
-    // if (wtiObservations.length === 0) {
-    //   throw new Error("No WTI observations found")
-    // }
-    // await injectWtiFull({
-    //   indicator: "wti",
-    //   seriesId: "WTI",
-    //   observations: wtiObservations,
-    // })
-
-    // const brentObservations = fullCommodityData.filter(
-    //   (observation) => observation.commodity === "brent",
-    // )
-    // if (brentObservations.length === 0) {
-    //   throw new Error("No Brent observations found")
-    // }
-    // await injectBrentFull({
-    //   indicator: "brent",
-    //   seriesId: "BRENT",
-    //   observations: brentObservations,
-    // })
-
-    // const naturalGasObservations = fullCommodityData.filter(
-    //   (observation) => observation.commodity === "natural_gas",
-    // )
-    // if (naturalGasObservations.length === 0) {
-    //   throw new Error("No natural gas observations found")
-    // }
-    // await injectNaturalGasFull({
-    //   indicator: "natural_gas",
-    //   seriesId: "NATURAL_GAS",
-    //   observations: naturalGasObservations,
-    // })
-
-    // const copperObservations = fullCommodityData.filter(
-    //   (observation) => observation.commodity === "copper",
-    // )
-    // if (copperObservations.length === 0) {
-    //   throw new Error("No copper observations found")
-    // }
-    // await injectCopperFull({
-    //   indicator: "copper",
-    //   seriesId: "COPPER",
-    //   observations: copperObservations,
-    // })
-
-    // const aluminumObservations = fullCommodityData.filter(
-    //   (observation) => observation.commodity === "aluminum",
-    // )
-    // if (aluminumObservations.length === 0) {
-    //   throw new Error("No aluminum observations found")
-    // }
-    // await injectAluminumFull({
-    //   indicator: "aluminum",
-    //   seriesId: "ALUMINUM",
-    //   observations: aluminumObservations,
-    // })
-
-    // const cnnIndicators = await getCnnFearGreed("full");
-
-    // const cnnFearGreed = cnnIndicators.cnn_fear_greed;
-    // if (!cnnFearGreed || cnnFearGreed.observations.length === 0) {
-    //   throw new Error("No CNN Fear & Greed observations found");
-    // }
-    // await injectCnnFearGreedFull(cnnFearGreed);
-
-    // const cnnMarketMomentumSp125 =
-    //   cnnIndicators.cnn_market_momentum_sp125;
-    // if (
-    //   !cnnMarketMomentumSp125 ||
-    //   cnnMarketMomentumSp125.observations.length === 0
-    // ) {
-    //   throw new Error(
-    //     "No CNN Market Momentum S&P 125 observations found",
-    //   );
-    // }
-    // await injectCnnMarketMomentumSp125Full(cnnMarketMomentumSp125);
-
-    // const cnnStockPriceBreadth = cnnIndicators.cnn_stock_price_breadth;
-    // if (
-    //   !cnnStockPriceBreadth ||
-    //   cnnStockPriceBreadth.observations.length === 0
-    // ) {
-    //   throw new Error(
-    //     "No CNN Stock Price Breadth observations found",
-    //   );
-    // }
-    // await injectCnnStockPriceBreadthFull(cnnStockPriceBreadth);
-
-    // const cnnPutCallOptions = cnnIndicators.cnn_put_call_options;
-    // if (
-    //   !cnnPutCallOptions ||
-    //   cnnPutCallOptions.observations.length === 0
-    // ) {
-    //   throw new Error(
-    //     "No CNN Put/Call Options observations found",
-    //   );
-    // }
-    // await injectCnnPutCallOptionsFull(cnnPutCallOptions);
-
-    // const cnnMarketVolatilityVix50 =
-    //   cnnIndicators.cnn_market_volatility_vix_50;
-    // if (
-    //   !cnnMarketVolatilityVix50 ||
-    //   cnnMarketVolatilityVix50.observations.length === 0
-    // ) {
-    //   throw new Error(
-    //     "No CNN Market Volatility VIX 50 observations found",
-    //   );
-    // }
-    // await injectCnnMarketVolatilityVix50Full(cnnMarketVolatilityVix50);
-
-    // const cnnSafeHavenDemand = cnnIndicators.cnn_safe_haven_demand;
-    // if (
-    //   !cnnSafeHavenDemand ||
-    //   cnnSafeHavenDemand.observations.length === 0
-    // ) {
-    //   throw new Error(
-    //     "No CNN Safe Haven Demand observations found",
-    //   );
-    // }
-    // await injectCnnSafeHavenDemandFull(cnnSafeHavenDemand);
-
-    // const aaiiSentiment = await getAaiiSentiment("full");
-
-    // if (aaiiSentiment.observations.length === 0) {
-    //   throw new Error("No AAII Sentiment observations found");
-    // }
-
-    // await injectAaiiSentimentFull(aaiiSentiment);
-
-    // const cftcTff = await getCftcTff("full");
-
-    // if (cftcTff.observations.length === 0) {
-    //   throw new Error("No CFTC TFF observations found");
-    // }
-
-    // await injectCftcBitcoinFull(cftcTff);
-    // await injectCftcSp500Full(cftcTff);
-    // await injectCftcNasdaqFull(cftcTff);
-    // await injectCftcUst2yNoteFull(cftcTff);
-    // await injectCftcUst10yNoteFull(cftcTff);
-    // await injectCftcEuroFxFull(cftcTff);
-    // await injectCftcJapaneseYenFull(cftcTff);
-    // await injectCftcUsdIndexFull(cftcTff);
-    // await injectCftcEthereumFull(cftcTff);
-    // await injectCftcMicroEthereumFull(cftcTff);
-
-    // const russell2000 = await getRussell2000("full");
-    // await injectRussell2000Full(russell2000);
-
-    // const igSentiment = await getIgSentiment("full");
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.sp500, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.gold, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.nasdaq, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.dowJones, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.silver, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.wti, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.brent, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.eurUsd, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.gbpUsd, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.usdJpy, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.audUsd, igSentiment);
-    // await injectIgHistorical(IG_SENTIMENT_MARKETS.usdCad, igSentiment);
-
-    // const binancePositioning = await fetchBinancePositioning("full");
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.btcusdt, binancePositioning);
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.ethusdt, binancePositioning);
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.solusdt, binancePositioning);
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.bnbusdt, binancePositioning);
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.xrpusdt, binancePositioning);
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.dogeusdt, binancePositioning);
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.linkusdt, binancePositioning);
-    // await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.aaveusdt, binancePositioning);
-
-    // const alternativeFearGreed = await fetchFearGreed();
-    // await injectAlternativeCryptoFearGreedHistorical({
-    //   observations: [alternativeFearGreed],
-    // });
-
-    // const altcoinSeason = await withRetry(
-    //   () => fetchAltcoinSeason("full"),
-    //   {
-    //     label: "CoinMarketCap altcoin season (historical)",
-    //     attempts: 5,
-    //     delayMs: 5000,
-    //     isEmptyResult: (result) => result.observations.length === 0,
-    //   },
-    // );
-
-    // await injectCoinMarketCapAltcoinSeasonHistorical({
-    //   observations: altcoinSeason.observations,
-    //   source: altcoinSeason.source,
-    // });
-
-    // const cmcMarketMetrics = await withRetry(
-    //   () => fetchCoinMarketCapGlobalMetrics(),
-    //   {
-    //     label: "CoinMarketCap crypto market metrics (historical)",
-    //     attempts: 5,
-    //     delayMs: 5000,
-    //     isEmptyResult: (result) => !Number.isFinite(result.totalMarketCap),
-    //   },
-    // );
-
-    // await injectCoinMarketCapCryptoMarketMetricsHistorical({
-    //   observations: [
-    //     {
-    //       ...cmcMarketMetrics,
-    //       date: cmcMarketMetrics.observedAt.slice(0, 10),
-    //     },
-    //   ],
-    //   source: cmcMarketMetrics.source,
-    // });
+    const highYieldCreditSpread = await getHighYieldCreditSpread("full")
+    await injectHighYieldCreditSpreadFull(highYieldCreditSpread)
+
+    const investmentGradeCreditSpread = await getInvestmentGradeCreditSpread("full")
+    await injectInvestmentGradeCreditSpreadFull(investmentGradeCreditSpread)
+
+    const consumerSentiment = await getConsumerSentiment("full")
+    await injectConsumerSentimentFull(consumerSentiment)
+
+    const housingStarts = await getHousingStarts("full")
+    await injectHousingStartsFull(housingStarts)
+
+    const buildingPermits = await getBuildingPermits("full")
+    await injectBuildingPermitsFull(buildingPermits)
+
+    const existingHomeSales = await getExistingHomeSales("full")
+    await injectExistingHomeSalesFull(existingHomeSales)
+
+    const mortgageRate = await getMortgageRate("full")
+    await injectMortgageRateFull(mortgageRate)
+
+    const homePriceIndex = await getHomePriceIndex("full")
+    await injectHomePriceIndexFull(homePriceIndex)
+
+    const sp500 = await getSp500("full")
+    await injectSp500Full(sp500)
+
+    const nasdaqComposite = await getNasdaqComposite("full")
+    await injectNasdaqCompositeFull(nasdaqComposite)
+
+    const dowJones = await getDowJones("full")
+    await injectDowJonesFull(dowJones)
+
+    const broadUsdIndex = await getBroadUsdIndex("full")
+    await injectBroadUsdIndexFull(broadUsdIndex)
+
+    const realBroadUsdIndex = await getRealBroadUsdIndex("full")
+    await injectRealBroadUsdIndexFull(realBroadUsdIndex)
+
+    const advancedEconomyUsdIndex = await getAdvancedEconomyUsdIndex("full")
+    await injectAdvancedEconomyUsdIndexFull(advancedEconomyUsdIndex)
+
+    const emergingMarketUsdIndex = await getEmergingMarketUsdIndex("full")
+    await injectEmergingMarketUsdIndexFull(emergingMarketUsdIndex)
+
+    const threeMonthTreasury = await get3mTreasury("full")
+    await injectThreeMonthTreasuryFull(threeMonthTreasury)
+
+    const fiveYearTreasury = await get5yTreasury("full")
+    await injectFiveYearTreasuryFull(fiveYearTreasury)
+
+    const { full: fullFxData } = await getFxData();
+
+    const eurUsdObservations = fullFxData.filter(
+      (observation) => observation.pair === "EUR/USD",
+    )
+    await injectEurUsdFull({
+      indicator: "eur_usd",
+      seriesId: "EURUSD",
+      observations: eurUsdObservations,
+    })
+
+    const gbpUsdObservations = fullFxData.filter(
+      (observation) => observation.pair === "GBP/USD",
+    )
+    if (gbpUsdObservations.length === 0) {
+      throw new Error("No GBP/USD observations found")
+    }
+    await injectGbpUsdFull({
+      indicator: "gbp_usd",
+      seriesId: "GBPUSD",
+      observations: gbpUsdObservations,
+    })
+
+    const usdJpyObservations = fullFxData.filter(
+      (observation) => observation.pair === "USD/JPY",
+    )
+    if (usdJpyObservations.length === 0) {
+      throw new Error("No USD/JPY observations found")
+    }
+    await injectUsdJpyFull({
+      indicator: "usd_jpy",
+      seriesId: "USDJPY",
+      observations: usdJpyObservations,
+    })
+
+    const usdChfObservations = fullFxData.filter(
+      (observation) => observation.pair === "USD/CHF",
+    )
+    if (usdChfObservations.length === 0) {
+      throw new Error("No USD/CHF observations found")
+    }
+    await injectUsdChfFull({
+      indicator: "usd_chf",
+      seriesId: "USDCHF",
+      observations: usdChfObservations,
+    })
+
+    const audUsdObservations = fullFxData.filter(
+      (observation) => observation.pair === "AUD/USD",
+    )
+    if (audUsdObservations.length === 0) {
+      throw new Error("No AUD/USD observations found")
+    }
+    await injectAudUsdFull({
+      indicator: "aud_usd",
+      seriesId: "AUDUSD",
+      observations: audUsdObservations,
+    })
+
+    const usdCadObservations = fullFxData.filter(
+      (observation) => observation.pair === "USD/CAD",
+    )
+    if (usdCadObservations.length === 0) {
+      throw new Error("No USD/CAD observations found")
+    }
+    await injectUsdCadFull({
+      indicator: "usd_cad",
+      seriesId: "USDCAD",
+      observations: usdCadObservations,
+    })
+
+    const nzdUsdObservations = fullFxData.filter(
+      (observation) => observation.pair === "NZD/USD",
+    )
+    if (nzdUsdObservations.length === 0) {
+      throw new Error("No NZD/USD observations found")
+    }
+    await injectNzdUsdFull({
+      indicator: "nzd_usd",
+      seriesId: "NZDUSD",
+      observations: nzdUsdObservations,
+    })
+
+    const { full: fullCommodityData } = await getCommodityData();
+
+    const goldObservations = fullCommodityData.filter(
+      (observation) => observation.commodity === "gold",
+    )
+    if (goldObservations.length === 0) {
+      throw new Error("No gold observations found")
+    }
+    await injectGoldFull({
+      indicator: "gold",
+      seriesId: "GOLD",
+      observations: goldObservations,
+    })
+
+    const silverObservations = fullCommodityData.filter(
+      (observation) => observation.commodity === "silver",
+    )
+    if (silverObservations.length === 0) {
+      throw new Error("No silver observations found")
+    }
+    await injectSilverFull({
+      indicator: "silver",
+      seriesId: "SILVER",
+      observations: silverObservations,
+    })
+
+    const wtiObservations = fullCommodityData.filter(
+      (observation) => observation.commodity === "wti",
+    )
+    if (wtiObservations.length === 0) {
+      throw new Error("No WTI observations found")
+    }
+    await injectWtiFull({
+      indicator: "wti",
+      seriesId: "WTI",
+      observations: wtiObservations,
+    })
+
+    const brentObservations = fullCommodityData.filter(
+      (observation) => observation.commodity === "brent",
+    )
+    if (brentObservations.length === 0) {
+      throw new Error("No Brent observations found")
+    }
+    await injectBrentFull({
+      indicator: "brent",
+      seriesId: "BRENT",
+      observations: brentObservations,
+    })
+
+    const naturalGasObservations = fullCommodityData.filter(
+      (observation) => observation.commodity === "natural_gas",
+    )
+    if (naturalGasObservations.length === 0) {
+      throw new Error("No natural gas observations found")
+    }
+    await injectNaturalGasFull({
+      indicator: "natural_gas",
+      seriesId: "NATURAL_GAS",
+      observations: naturalGasObservations,
+    })
+
+    const copperObservations = fullCommodityData.filter(
+      (observation) => observation.commodity === "copper",
+    )
+    if (copperObservations.length === 0) {
+      throw new Error("No copper observations found")
+    }
+    await injectCopperFull({
+      indicator: "copper",
+      seriesId: "COPPER",
+      observations: copperObservations,
+    })
+
+    const aluminumObservations = fullCommodityData.filter(
+      (observation) => observation.commodity === "aluminum",
+    )
+    if (aluminumObservations.length === 0) {
+      throw new Error("No aluminum observations found")
+    }
+    await injectAluminumFull({
+      indicator: "aluminum",
+      seriesId: "ALUMINUM",
+      observations: aluminumObservations,
+    })
+
+    const cnnIndicators = await getCnnFearGreed("full");
+
+    const cnnFearGreed = cnnIndicators.cnn_fear_greed;
+    if (!cnnFearGreed || cnnFearGreed.observations.length === 0) {
+      throw new Error("No CNN Fear & Greed observations found");
+    }
+    await injectCnnFearGreedFull(cnnFearGreed);
+
+    const cnnMarketMomentumSp125 =
+      cnnIndicators.cnn_market_momentum_sp125;
+    if (
+      !cnnMarketMomentumSp125 ||
+      cnnMarketMomentumSp125.observations.length === 0
+    ) {
+      throw new Error(
+        "No CNN Market Momentum S&P 125 observations found",
+      );
+    }
+    await injectCnnMarketMomentumSp125Full(cnnMarketMomentumSp125);
+
+    const cnnStockPriceBreadth = cnnIndicators.cnn_stock_price_breadth;
+    if (
+      !cnnStockPriceBreadth ||
+      cnnStockPriceBreadth.observations.length === 0
+    ) {
+      throw new Error(
+        "No CNN Stock Price Breadth observations found",
+      );
+    }
+    await injectCnnStockPriceBreadthFull(cnnStockPriceBreadth);
+
+    const cnnPutCallOptions = cnnIndicators.cnn_put_call_options;
+    if (
+      !cnnPutCallOptions ||
+      cnnPutCallOptions.observations.length === 0
+    ) {
+      throw new Error(
+        "No CNN Put/Call Options observations found",
+      );
+    }
+    await injectCnnPutCallOptionsFull(cnnPutCallOptions);
+
+    const cnnMarketVolatilityVix50 =
+      cnnIndicators.cnn_market_volatility_vix_50;
+    if (
+      !cnnMarketVolatilityVix50 ||
+      cnnMarketVolatilityVix50.observations.length === 0
+    ) {
+      throw new Error(
+        "No CNN Market Volatility VIX 50 observations found",
+      );
+    }
+    await injectCnnMarketVolatilityVix50Full(cnnMarketVolatilityVix50);
+
+    const cnnSafeHavenDemand = cnnIndicators.cnn_safe_haven_demand;
+    if (
+      !cnnSafeHavenDemand ||
+      cnnSafeHavenDemand.observations.length === 0
+    ) {
+      throw new Error(
+        "No CNN Safe Haven Demand observations found",
+      );
+    }
+    await injectCnnSafeHavenDemandFull(cnnSafeHavenDemand);
+
+    const aaiiSentiment = await getAaiiSentiment("full");
+
+    if (aaiiSentiment.observations.length === 0) {
+      throw new Error("No AAII Sentiment observations found");
+    }
+
+    await injectAaiiSentimentFull(aaiiSentiment);
+
+    const cftcTff = await getCftcTff("full");
+
+    if (cftcTff.observations.length === 0) {
+      throw new Error("No CFTC TFF observations found");
+    }
+
+    await injectCftcBitcoinFull(cftcTff);
+    await injectCftcSp500Full(cftcTff);
+    await injectCftcNasdaqFull(cftcTff);
+    await injectCftcUst2yNoteFull(cftcTff);
+    await injectCftcUst10yNoteFull(cftcTff);
+    await injectCftcEuroFxFull(cftcTff);
+    await injectCftcJapaneseYenFull(cftcTff);
+    await injectCftcUsdIndexFull(cftcTff);
+    await injectCftcEthereumFull(cftcTff);
+    await injectCftcMicroEthereumFull(cftcTff);
+
+    const russell2000 = await getRussell2000("full");
+    await injectRussell2000Full(russell2000);
+
+    const igSentiment = await getIgSentiment("full");
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.sp500, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.gold, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.nasdaq, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.dowJones, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.silver, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.wti, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.brent, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.eurUsd, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.gbpUsd, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.usdJpy, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.audUsd, igSentiment);
+    await injectIgHistorical(IG_SENTIMENT_MARKETS.usdCad, igSentiment);
+
+    const binancePositioning = await fetchBinancePositioning("full");
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.btcusdt, binancePositioning);
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.ethusdt, binancePositioning);
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.solusdt, binancePositioning);
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.bnbusdt, binancePositioning);
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.xrpusdt, binancePositioning);
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.dogeusdt, binancePositioning);
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.linkusdt, binancePositioning);
+    await injectBinancePositioningFull(BINANCE_POSITIONING_MARKETS.aaveusdt, binancePositioning);
+
+    const alternativeFearGreed = await fetchFearGreed();
+    await injectAlternativeCryptoFearGreedHistorical({
+      observations: [alternativeFearGreed],
+    });
+
+    const altcoinSeason = await withRetry(
+      () => fetchAltcoinSeason("full"),
+      {
+        label: "CoinMarketCap altcoin season (historical)",
+        attempts: 5,
+        delayMs: 5000,
+        isEmptyResult: (result) => result.observations.length === 0,
+      },
+    );
+
+    await injectCoinMarketCapAltcoinSeasonHistorical({
+      observations: altcoinSeason.observations,
+      source: altcoinSeason.source,
+    });
+
+    const cmcMarketMetrics = await withRetry(
+      () => fetchCoinMarketCapGlobalMetrics(),
+      {
+        label: "CoinMarketCap crypto market metrics (historical)",
+        attempts: 5,
+        delayMs: 5000,
+        isEmptyResult: (result) => !Number.isFinite(result.totalMarketCap),
+      },
+    );
+
+    await injectCoinMarketCapCryptoMarketMetricsHistorical({
+      observations: [
+        {
+          ...cmcMarketMetrics,
+          date: cmcMarketMetrics.observedAt.slice(0, 10),
+        },
+      ],
+      source: cmcMarketMetrics.source,
+    });
 
     const spotEtfs = await withRetry(
       () => collectAllSosoValueEtfs("full"),

@@ -9,14 +9,8 @@ CREATE TABLE IF NOT EXISTS current.initial_jobless_claims (
 
     net_change NUMERIC NOT NULL,
 
-    moving_average_3w NUMERIC,
-    current_vs_3w_ma NUMERIC,
-
-    moving_average_6w NUMERIC,
-    current_vs_6w_ma NUMERIC,
-
-    moving_average_12w NUMERIC,
-    current_vs_12w_ma NUMERIC,
+    moving_average_30d NUMERIC,
+    current_vs_30d_ma NUMERIC,
 
     observed_at DATE NOT NULL,
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),

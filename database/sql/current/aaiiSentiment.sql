@@ -24,41 +24,17 @@ CREATE TABLE IF NOT EXISTS current.aaii_sentiment (
     bearish_percent_change NUMERIC NOT NULL,
     bull_bear_spread_percent_change NUMERIC NOT NULL,
 
-    moving_average_3w_bullish NUMERIC,
-    current_vs_3w_ma_bullish NUMERIC,
+    moving_average_30d_bullish NUMERIC,
+    current_vs_30d_ma_bullish NUMERIC,
 
-    moving_average_6w_bullish NUMERIC,
-    current_vs_6w_ma_bullish NUMERIC,
+    moving_average_30d_neutral NUMERIC,
+    current_vs_30d_ma_neutral NUMERIC,
 
-    moving_average_12w_bullish NUMERIC,
-    current_vs_12w_ma_bullish NUMERIC,
+    moving_average_30d_bearish NUMERIC,
+    current_vs_30d_ma_bearish NUMERIC,
 
-    moving_average_3w_neutral NUMERIC,
-    current_vs_3w_ma_neutral NUMERIC,
-
-    moving_average_6w_neutral NUMERIC,
-    current_vs_6w_ma_neutral NUMERIC,
-
-    moving_average_12w_neutral NUMERIC,
-    current_vs_12w_ma_neutral NUMERIC,
-
-    moving_average_3w_bearish NUMERIC,
-    current_vs_3w_ma_bearish NUMERIC,
-
-    moving_average_6w_bearish NUMERIC,
-    current_vs_6w_ma_bearish NUMERIC,
-
-    moving_average_12w_bearish NUMERIC,
-    current_vs_12w_ma_bearish NUMERIC,
-
-    moving_average_3w_bull_bear_spread NUMERIC,
-    current_vs_3w_ma_bull_bear_spread NUMERIC,
-
-    moving_average_6w_bull_bear_spread NUMERIC,
-    current_vs_6w_ma_bull_bear_spread NUMERIC,
-
-    moving_average_12w_bull_bear_spread NUMERIC,
-    current_vs_12w_ma_bull_bear_spread NUMERIC,
+    moving_average_30d_bull_bear_spread NUMERIC,
+    current_vs_30d_ma_bull_bear_spread NUMERIC,
 
     observed_at DATE NOT NULL,
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),

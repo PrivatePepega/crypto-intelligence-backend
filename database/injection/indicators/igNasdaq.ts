@@ -26,52 +26,21 @@ export const igNasdaq: Indicator = {
     "IG Nasdaq-100 retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to large-cap technology and growth-oriented equities. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. Nasdaq-100 positioning can be analyzed alongside technology-sector performance, Federal Reserve policy, interest rates, Treasury yields, volatility, market breadth, economic growth, and broader equity-market conditions to provide additional context for U.S. technology and growth-equity markets.",
 
   relationTags: [
-    "ig_nasdaq",
-    "ig_retail_traders",
-    "retail_positioning",
-    "retail_sentiment",
-    "broker_specific_positioning",
-
-    "nasdaq",
-    "nasdaq_100",
-    "nasdaq_100_index",
-    "ndx",
-    "us_equities",
-    "equity_index",
-    "large_cap_equities",
-
-    "technology_stocks",
-    "technology_sector",
-    "growth_stocks",
-    "growth_equities",
-
-    "long_positions",
-    "short_positions",
-    "net_position",
-    "directional_exposure",
-    "positioning_changes",
-
-    "federal_reserve",
-    "fed_policy",
-    "monetary_policy",
-    "interest_rates",
-    "treasury_yields",
-    "financial_conditions",
-
-    "economic_growth",
-    "us_economy",
-
-    "volatility",
-    "vix",
-    "equity_market_breadth",
-
-    "sp500",
-    "dow_jones",
-    "russell_2000",
-    "us_stock_market",
-
-    "risk_sentiment",
-    "financial_markets"
+  "ig_nasdaq",
+  "ig_retail_traders",
+  "retail_positioning",
+  "retail_sentiment",
+  "broker_specific_positioning",
+  "nasdaq",
+  "nasdaq_100",
+  "nasdaq_100_index",
+  "ndx",
+  "us_equities",
+  "equity_index",
+  "large_cap_equities",
+  "technology_stocks",
+  "technology_sector",
+  "growth_stocks",
   ],
 
   status: "active",

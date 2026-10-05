@@ -34,59 +34,23 @@ CREATE TABLE IF NOT EXISTS current.cftc_usd_index (
     other_reportables_net_percent_change NUMERIC NOT NULL,
     non_reportables_net_percent_change NUMERIC NOT NULL,
 
-    moving_average_3w_open_interest NUMERIC,
-    current_vs_3w_ma_open_interest NUMERIC,
+    moving_average_30d_open_interest NUMERIC,
+    current_vs_30d_ma_open_interest NUMERIC,
 
-    moving_average_6w_open_interest NUMERIC,
-    current_vs_6w_ma_open_interest NUMERIC,
+    moving_average_30d_dealer_net NUMERIC,
+    current_vs_30d_ma_dealer_net NUMERIC,
 
-    moving_average_12w_open_interest NUMERIC,
-    current_vs_12w_ma_open_interest NUMERIC,
+    moving_average_30d_asset_manager_net NUMERIC,
+    current_vs_30d_ma_asset_manager_net NUMERIC,
 
-    moving_average_3w_dealer_net NUMERIC,
-    current_vs_3w_ma_dealer_net NUMERIC,
+    moving_average_30d_leveraged_money_net NUMERIC,
+    current_vs_30d_ma_leveraged_money_net NUMERIC,
 
-    moving_average_6w_dealer_net NUMERIC,
-    current_vs_6w_ma_dealer_net NUMERIC,
+    moving_average_30d_other_reportables_net NUMERIC,
+    current_vs_30d_ma_other_reportables_net NUMERIC,
 
-    moving_average_12w_dealer_net NUMERIC,
-    current_vs_12w_ma_dealer_net NUMERIC,
-
-    moving_average_3w_asset_manager_net NUMERIC,
-    current_vs_3w_ma_asset_manager_net NUMERIC,
-
-    moving_average_6w_asset_manager_net NUMERIC,
-    current_vs_6w_ma_asset_manager_net NUMERIC,
-
-    moving_average_12w_asset_manager_net NUMERIC,
-    current_vs_12w_ma_asset_manager_net NUMERIC,
-
-    moving_average_3w_leveraged_money_net NUMERIC,
-    current_vs_3w_ma_leveraged_money_net NUMERIC,
-
-    moving_average_6w_leveraged_money_net NUMERIC,
-    current_vs_6w_ma_leveraged_money_net NUMERIC,
-
-    moving_average_12w_leveraged_money_net NUMERIC,
-    current_vs_12w_ma_leveraged_money_net NUMERIC,
-
-    moving_average_3w_other_reportables_net NUMERIC,
-    current_vs_3w_ma_other_reportables_net NUMERIC,
-
-    moving_average_6w_other_reportables_net NUMERIC,
-    current_vs_6w_ma_other_reportables_net NUMERIC,
-
-    moving_average_12w_other_reportables_net NUMERIC,
-    current_vs_12w_ma_other_reportables_net NUMERIC,
-
-    moving_average_3w_non_reportables_net NUMERIC,
-    current_vs_3w_ma_non_reportables_net NUMERIC,
-
-    moving_average_6w_non_reportables_net NUMERIC,
-    current_vs_6w_ma_non_reportables_net NUMERIC,
-
-    moving_average_12w_non_reportables_net NUMERIC,
-    current_vs_12w_ma_non_reportables_net NUMERIC,
+    moving_average_30d_non_reportables_net NUMERIC,
+    current_vs_30d_ma_non_reportables_net NUMERIC,
 
     contract TEXT NOT NULL,
     commodity TEXT NOT NULL,

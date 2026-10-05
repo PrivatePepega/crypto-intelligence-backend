@@ -284,181 +284,181 @@ const runLatestInjection = async () => {
   // const fiveYearTreasury = await get5yTreasury("latest")
   // await injectFiveYearTreasuryLatest(fiveYearTreasury)
 
-  // const { latest: fxData } = await getFxData();
+  const { latest: fxData } = await getFxData();
 
-  // const eurUsdObservation = fxData.find(
-  //   (observation) => observation?.pair === "EUR/USD",
-  // )
+  const eurUsdObservation = fxData.find(
+    (observation) => observation?.pair === "EUR/USD",
+  )
   
-  // if (!eurUsdObservation) {
-  //   throw new Error("No USD/JPY observation found")
-  // }
+  if (!eurUsdObservation) {
+    throw new Error("No USD/JPY observation found")
+  }
 
-  // await injectEurUsdLatest({
-  //   indicator: "eur_usd",
-  //   seriesId: "EURUSD",
-  //   observations: [eurUsdObservation],
-  // })
+  await injectEurUsdLatest({
+    indicator: "eur_usd",
+    seriesId: "EURUSD",
+    observations: [eurUsdObservation],
+  })
 
-  // const gbpUsdObservation = fxData.find(
-  //   (observation) => observation?.pair === "GBP/USD",
-  // )
+  const gbpUsdObservation = fxData.find(
+    (observation) => observation?.pair === "GBP/USD",
+  )
 
-  // if (!gbpUsdObservation) {
-  //   throw new Error("No USD/JPY observation found")
-  // }
+  if (!gbpUsdObservation) {
+    throw new Error("No USD/JPY observation found")
+  }
 
-  // await injectGbpUsdLatest({
-  //   indicator: "gbp_usd",
-  //   seriesId: "GBPUSD",
-  //   observations: [gbpUsdObservation],
-  // })
+  await injectGbpUsdLatest({
+    indicator: "gbp_usd",
+    seriesId: "GBPUSD",
+    observations: [gbpUsdObservation],
+  })
 
-  // const usdJpyObservation = fxData.find(
-  //   (observation) => observation?.pair === "USD/JPY",
-  // )
-  // if (!usdJpyObservation) {
-  //   throw new Error("No USD/JPY observation found")
-  // }
-  // await injectUsdJpyLatest({
-  //   indicator: "usd_jpy",
-  //   seriesId: "USDJPY",
-  //   observations: [usdJpyObservation],
-  // })
+  const usdJpyObservation = fxData.find(
+    (observation) => observation?.pair === "USD/JPY",
+  )
+  if (!usdJpyObservation) {
+    throw new Error("No USD/JPY observation found")
+  }
+  await injectUsdJpyLatest({
+    indicator: "usd_jpy",
+    seriesId: "USDJPY",
+    observations: [usdJpyObservation],
+  })
 
-  // const usdChfObservation = fxData.find(
-  //   (observation) => observation?.pair === "USD/CHF",
-  // )
-  // if (!usdChfObservation) {
-  //   throw new Error("No USD/CHF observation found")
-  // }
-  // await injectUsdChfLatest({
-  //   indicator: "usd_chf",
-  //   seriesId: "USDCHF",
-  //   observations: [usdChfObservation],
-  // })
+  const usdChfObservation = fxData.find(
+    (observation) => observation?.pair === "USD/CHF",
+  )
+  if (!usdChfObservation) {
+    throw new Error("No USD/CHF observation found")
+  }
+  await injectUsdChfLatest({
+    indicator: "usd_chf",
+    seriesId: "USDCHF",
+    observations: [usdChfObservation],
+  })
 
-  // const audUsdObservation = fxData.find(
-  //   (observation) => observation?.pair === "AUD/USD",
-  // )
-  // if (!audUsdObservation) {
-  //   throw new Error("No AUD/USD observation found")
-  // }
-  // await injectAudUsdLatest({
-  //   indicator: "aud_usd",
-  //   seriesId: "AUDUSD",
-  //   observations: [audUsdObservation],
-  // })
+  const audUsdObservation = fxData.find(
+    (observation) => observation?.pair === "AUD/USD",
+  )
+  if (!audUsdObservation) {
+    throw new Error("No AUD/USD observation found")
+  }
+  await injectAudUsdLatest({
+    indicator: "aud_usd",
+    seriesId: "AUDUSD",
+    observations: [audUsdObservation],
+  })
 
-  // const usdCadObservation = fxData.find(
-  //   (observation) => observation?.pair === "USD/CAD",
-  // )
-  // if (!usdCadObservation) {
-  //   throw new Error("No USD/CAD observation found")
-  // }
-  // await injectUsdCadLatest({
-  //   indicator: "usd_cad",
-  //   seriesId: "USDCAD",
-  //   observations: [usdCadObservation],
-  // })
+  const usdCadObservation = fxData.find(
+    (observation) => observation?.pair === "USD/CAD",
+  )
+  if (!usdCadObservation) {
+    throw new Error("No USD/CAD observation found")
+  }
+  await injectUsdCadLatest({
+    indicator: "usd_cad",
+    seriesId: "USDCAD",
+    observations: [usdCadObservation],
+  })
 
-  // const nzdUsdObservation = fxData.find(
-  //   (observation) => observation?.pair === "NZD/USD",
-  // )
-  // if (!nzdUsdObservation) {
-  //   throw new Error("No NZD/USD observation found")
-  // }
-  // await injectNzdUsdLatest({
-  //   indicator: "nzd_usd",
-  //   seriesId: "NZDUSD",
-  //   observations: [nzdUsdObservation],
-  // })
+  const nzdUsdObservation = fxData.find(
+    (observation) => observation?.pair === "NZD/USD",
+  )
+  if (!nzdUsdObservation) {
+    throw new Error("No NZD/USD observation found")
+  }
+  await injectNzdUsdLatest({
+    indicator: "nzd_usd",
+    seriesId: "NZDUSD",
+    observations: [nzdUsdObservation],
+  })
 
-  // const { latest: commodityData } = await getCommodityData();
+  const { latest: commodityData } = await getCommodityData();
 
-  // const goldObservation = commodityData.find(
-  //   (observation) => observation.commodity === "gold",
-  // )
-  // if (!goldObservation) {
-  //   throw new Error("No gold observation found")
-  // }
-  // await injectGoldLatest({
-  //   indicator: "gold",
-  //   seriesId: "GOLD",
-  //   observations: [goldObservation],
-  // })
+  const goldObservation = commodityData.find(
+    (observation) => observation.commodity === "gold",
+  )
+  if (!goldObservation) {
+    throw new Error("No gold observation found")
+  }
+  await injectGoldLatest({
+    indicator: "gold",
+    seriesId: "GOLD",
+    observations: [goldObservation],
+  })
 
-  // const silverObservation = commodityData.find(
-  //   (observation) => observation.commodity === "silver",
-  // )
-  // if (!silverObservation) {
-  //   throw new Error("No silver observation found")
-  // }
-  // await injectSilverLatest({
-  //   indicator: "silver",
-  //   seriesId: "SILVER",
-  //   observations: [silverObservation],
-  // })
+  const silverObservation = commodityData.find(
+    (observation) => observation.commodity === "silver",
+  )
+  if (!silverObservation) {
+    throw new Error("No silver observation found")
+  }
+  await injectSilverLatest({
+    indicator: "silver",
+    seriesId: "SILVER",
+    observations: [silverObservation],
+  })
 
-  // const wtiObservation = commodityData.find(
-  //   (observation) => observation.commodity === "wti",
-  // )
-  // if (!wtiObservation) {
-  //   throw new Error("No WTI observation found")
-  // }
-  // await injectWtiLatest({
-  //   indicator: "wti",
-  //   seriesId: "WTI",
-  //   observations: [wtiObservation],
-  // })
+  const wtiObservation = commodityData.find(
+    (observation) => observation.commodity === "wti",
+  )
+  if (!wtiObservation) {
+    throw new Error("No WTI observation found")
+  }
+  await injectWtiLatest({
+    indicator: "wti",
+    seriesId: "WTI",
+    observations: [wtiObservation],
+  })
 
-  // const brentObservation = commodityData.find(
-  //   (observation) => observation.commodity === "brent",
-  // )
-  // if (!brentObservation) {
-  //   throw new Error("No Brent observation found")
-  // }
-  // await injectBrentLatest({
-  //   indicator: "brent",
-  //   seriesId: "BRENT",
-  //   observations: [brentObservation],
-  // })
+  const brentObservation = commodityData.find(
+    (observation) => observation.commodity === "brent",
+  )
+  if (!brentObservation) {
+    throw new Error("No Brent observation found")
+  }
+  await injectBrentLatest({
+    indicator: "brent",
+    seriesId: "BRENT",
+    observations: [brentObservation],
+  })
 
-  // const naturalGasObservation = commodityData.find(
-  //   (observation) => observation.commodity === "natural_gas",
-  // )
-  // if (!naturalGasObservation) {
-  //   throw new Error("No natural gas observation found")
-  // }
-  // await injectNaturalGasLatest({
-  //   indicator: "natural_gas",
-  //   seriesId: "NATURAL_GAS",
-  //   observations: [naturalGasObservation],
-  // })
+  const naturalGasObservation = commodityData.find(
+    (observation) => observation.commodity === "natural_gas",
+  )
+  if (!naturalGasObservation) {
+    throw new Error("No natural gas observation found")
+  }
+  await injectNaturalGasLatest({
+    indicator: "natural_gas",
+    seriesId: "NATURAL_GAS",
+    observations: [naturalGasObservation],
+  })
 
-  // const copperObservation = commodityData.find(
-  //   (observation) => observation.commodity === "copper",
-  // )
-  // if (!copperObservation) {
-  //   throw new Error("No copper observation found")
-  // }
-  // await injectCopperLatest({
-  //   indicator: "copper",
-  //   seriesId: "COPPER",
-  //   observations: [copperObservation],
-  // })
+  const copperObservation = commodityData.find(
+    (observation) => observation.commodity === "copper",
+  )
+  if (!copperObservation) {
+    throw new Error("No copper observation found")
+  }
+  await injectCopperLatest({
+    indicator: "copper",
+    seriesId: "COPPER",
+    observations: [copperObservation],
+  })
 
-  // const aluminumObservation = commodityData.find(
-  //   (observation) => observation.commodity === "aluminum",
-  // )
-  // if (!aluminumObservation) {
-  //   throw new Error("No aluminum observation found")
-  // }
-  // await injectAluminumLatest({
-  //   indicator: "aluminum",
-  //   seriesId: "ALUMINUM",
-  //   observations: [aluminumObservation],
-  // })
+  const aluminumObservation = commodityData.find(
+    (observation) => observation.commodity === "aluminum",
+  )
+  if (!aluminumObservation) {
+    throw new Error("No aluminum observation found")
+  }
+  await injectAluminumLatest({
+    indicator: "aluminum",
+    seriesId: "ALUMINUM",
+    observations: [aluminumObservation],
+  })
 
   // const cnnIndicators = await getCnnFearGreed("latest");
 
@@ -619,26 +619,26 @@ const runLatestInjection = async () => {
 
   // await injectCoinMarketCapCryptoMarketMetricsCurrent(cmcMarketMetrics);
 
-  const spotEtfs = await withRetry(
-    () => collectAllSosoValueEtfs("latest"),
-    {
-      label: "SoSoValue spot ETF (current)",
-      attempts: 5,
-      delayMs: 5000,
-      isEmptyResult: (result) =>
-        result.every((etf) => !Number.isFinite(etf.current.netFlow)),
-    },
-  );
+  // const spotEtfs = await withRetry(
+  //   () => collectAllSosoValueEtfs("latest"),
+  //   {
+  //     label: "SoSoValue spot ETF (current)",
+  //     attempts: 5,
+  //     delayMs: 5000,
+  //     isEmptyResult: (result) =>
+  //       result.every((etf) => !Number.isFinite(etf.current.netFlow)),
+  //   },
+  // );
 
-  for (const market of Object.values(SPOT_ETF_MARKETS)) {
-    const payload = spotEtfs.find((etf) => etf.asset === market.symbol);
+  // for (const market of Object.values(SPOT_ETF_MARKETS)) {
+  //   const payload = spotEtfs.find((etf) => etf.asset === market.symbol);
 
-    if (!payload) {
-      throw new Error(`SoSoValue returned no ${market.symbol} spot ETF data`);
-    }
+  //   if (!payload) {
+  //     throw new Error(`SoSoValue returned no ${market.symbol} spot ETF data`);
+  //   }
 
-    await injectSpotEtfCurrent(market, payload.current);
-  }
+  //   await injectSpotEtfCurrent(market, payload.current);
+  // }
 
 
 
