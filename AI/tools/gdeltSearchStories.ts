@@ -19,11 +19,16 @@ import {
 
 export const gdeltSearchStoriesTool = tool({
   description:
-    "Search GDELT for recent story headlines on a topic, returning a large batch with no accompanying text - each item is just an id, title, category, region and significance score. " +
-    "Best for breadth: scanning how much attention a topic is getting and catching titles you did not think to search for. A finance query surfaced 20 titles including a $30 billion OpenAI investment and a Saudi sukuk offering. " +
-    "Do NOT use this to understand an event. There is no summary and no article text, so anything beyond the headline itself is unavailable, and at 40-80 items per call there is a lot of surface area with no depth behind it - use the events tool when you need to know what actually happened. " +
-    "The topic filter is broad and the categories overlap: topic=crypto returned 80 items that were mostly economic stories about central banks and bond markets rather than crypto. Always pass a query to narrow it, and treat the result as leads to follow up rather than as an answer. " +
-    "For real web pages with source names use the web search tool.",
+    "GDELT story search. Title only - each item is an id, title, category, region and significance score, with no summary or article text.\n\n" +
+    "Best for:\n" +
+    "- breadth - catching headlines you did not think to search for\n" +
+    "- measuring how much attention a topic is getting\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- no summary or body, so it cannot explain an event\n" +
+    "- topic=crypto returned 80 mostly-economic stories - always pass a query\n" +
+    "- 40-80 items per call, so duplicates are likely\n" +
+    "- use the events tool when you need to understand something",
 
   inputSchema: z.object({
     topic: z

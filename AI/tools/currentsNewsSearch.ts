@@ -5,11 +5,16 @@ import { normalizeCurrentsNews } from "../../mcp/composio/currentsApiNormalizer.
 
 export const currentsSearchTool = tool({
     description:
-        "Search Currents for recent news by keyword, category, country and date, returning title, description and category per article. " +
-  "Good for breadth of ordinary daily news coverage - company announcements, product news, general current events - across a chosen category and country. " +
-  "Do NOT use it for important market or financial news. It has no significance ranking, and a measured 'stock market earnings' query returned mostly corporate housekeeping: two insider-transaction reports ('SVP Paul Williams sold 3,000 shares', 'insider Patrick Coveney sold 91,027 shares'), both categorised 'regional'. A result set is a raw keyword match, so expect a low signal-to-noise ratio and read the descriptions rather than trusting relevance order. " +
-  "For ranked or significant financial events use an events tool; for sourced reporting use a web search. " +
-  "Keep keyword searches short and focused, and always request English.",
+      "Currents search by keyword, category, country and date, returning title, description and category per article.\n\n" +
+      "Best for:\n" +
+      "- breadth of ordinary daily company and product news\n" +
+      "- category and country filtering\n" +
+      "\n" +
+      "Limitations:\n" +
+      "- no significance ranking - heavy on corporate housekeeping\n" +
+      "- a 'stock market earnings' query returned insider-transaction reports\n" +
+      "- maximum 7-day window\n" +
+      "- keep keyword searches short",
     inputSchema: z.object({
     category: z
       .string()

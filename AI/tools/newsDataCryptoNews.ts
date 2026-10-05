@@ -13,11 +13,14 @@ const LIMIT = 20;
 
 export const newsDataCryptoNewsTool = tool({
   description:
-    "Get crypto news headlines and summaries from NewsData.io, returning at most 5 articles, each with a title and a description, newest first." +
-    "Use this for crypto-specific coverage of a coin or the crypto market generally." +
-    "The measured run mixed a genuinely relevant regulatory story (tokenized stock trading moving toward a US launch via an OKX SEC filing) with an unrelated political item, so check relevance per article rather than assuming the feed is on-topic." +
-    "Expect price-prediction and promotional content to be common, and note that the free plan caps a page at 10 articles, so raising a limit here will not yield more." +
-    "For general news use the latest news tool; for listed companies and analyst coverage use the market news tool.",
+    "NewsData.io crypto headlines and summaries, at most 5 articles, newest first.\n\n" +
+    "Best for:\n" +
+    "- crypto-specific coverage of a coin or the crypto market generally\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- at most 5 articles - the free plan caps a page at 10\n" +
+    "- includes unrelated and promotional items, so check each for relevance\n" +
+    "- overlaps the latest feed when the subject is crypto",
 
   inputSchema: z.object({
     coin: z

@@ -19,10 +19,17 @@ import {
 
 export const gdeltSearchEventsTool = tool({
   description:
-    "Search GDELT for recent event intelligence on a topic. This is the strongest research tool here for geopolitics and global financial events: each event comes back with a written summary explaining what happened, dated evidence for when, the source domain, the region it applies to, and a significance score from 0 to 1. A finance query returned events like a $30 billion investment into OpenAI and a Saudi sovereign bond offering, each detailed enough to understand without opening a source. " +
-    "Use topic for broad monitoring and query to narrow within it. Prefer this over a web search when you want to know WHAT HAPPENED rather than to find pages. " +
-    "Two limits worth knowing: the topic filter is broad, so topic=crypto still returns many general economic stories - pass a query when you need precision; and event coverage follows GDELT's global English-language sources, so some countries and local outlets are thin. " +
-    "For headline-only breadth use the stories tool; for actual web pages with source names use the web search tool.",
+    "GDELT event search. Each event carries a written summary, dated evidence, source domain, region and a 0-1 significance score.\n\n" +
+    "Best for:\n" +
+    "- geopolitics and global financial events\n" +
+    "- understanding what happened, not just what was published\n" +
+    "- significant developments with enough context to act on\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- topic filter is broad - topic=crypto returns general economic stories, so pass a query\n" +
+    "- coverage follows GDELT's English-language global sources\n" +
+    "- some regions and local outlets are thin\n" +
+    "- for headline-only breadth use the stories tool",
 
   inputSchema: z.object({
     topic: z

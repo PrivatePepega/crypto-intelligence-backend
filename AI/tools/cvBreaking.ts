@@ -13,11 +13,16 @@ const DEFAULT_LIMIT = 20;
 
 export const cvBreakingTool = tool({
   description:
-    "Get breaking crypto news from cryptocurrency.cv, covering roughly the last two hours, each with a title and a description, newest first." +
-    "Use this when recency matters more than breadth - it is the best-populated of the cryptocurrency.cv feeds, returning a full 10 articles on the last measured run, including substantive items like a public bitcoin treasury adding 2,000 BTC and a weekly-close resistance note." +
-    "Note that this endpoint can interleave Ethereum gas price tickers with real headlines, so check that each title reads as news and discard ticker items." +
-    "The free tier caps responses at 3 articles regardless of the limit requested, so the count you get may not match the limit you asked for." +
-    "For breadth rather than recency use the news tool.",
+    "Breaking crypto news from cryptocurrency.cv, covering roughly the last two hours, each with a title and description, newest first.\n\n" +
+    "Best for:\n" +
+    "- recent crypto breaking news\n" +
+    "- price and market-structure headlines\n" +
+    "- the freshest crypto feed available\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- free tier returns <=3 articles regardless of limit\n" +
+    "- Ethereum gas tickers can appear among headlines\n" +
+    "- crypto only - no general news",
 
   inputSchema: z.object({
     limit: z

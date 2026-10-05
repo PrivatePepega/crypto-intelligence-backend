@@ -9,11 +9,15 @@ import {
 
 export const newsflashSearchArticlesTool = tool({
   description:
-    "Search Newsflash's underlying news articles by keyword, category and date, returning article titles and summaries." +
-    "Use this when you need the individual reporting behind a story rather than a deduplicated event - for example to see how several outlets framed the same development." +
-    "Because it returns flat articles it does not group duplicates, so the same story may appear more than once; when that matters, use the event search tool instead and read its clusters." +
-    "Output is deliberately compact - titles and summaries only, no bodies - to keep agent context small." +
-    "Keep the query focused on one subject.",
+    "Newsflash article search returning titles and summaries only.\n\n" +
+    "Best for:\n" +
+    "- seeing how several outlets framed the same story\n" +
+    "- individual reporting behind a clustered event\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- no deduplication, so the same story may repeat\n" +
+    "- titles and summaries only - no article bodies\n" +
+    "- keep queries focused",
 
   inputSchema: z.object({
     q: z

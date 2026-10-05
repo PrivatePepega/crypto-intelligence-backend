@@ -49,11 +49,16 @@ export const searchProviders = {
 
 export const webSearchTool = tool({
   description:
-    "Search the public web and return ranked results with a title and highlighted excerpt per hit, typically 15 results." +
-    "This is the best tool for finding ACTUAL PUBLISHED PAGES with real source names attached - a measured markets query surfaced Reuters and CNBC directly - which makes it the right choice when you need something citable, when a specific company, filing, announcement or report is named, or when the other feeds have nothing." +
-    "It also reaches beyond curated news to primary sources." +
-    "Be aware of what it does not give you: results carry no publication date, publisher or URL in the output, so you cannot assess recency or cite precisely from the payload alone, and the highlights are extracted fragments rather than summaries." +
-    "For understanding what happened use an events tool; for figures use an indicator tool.",
+    "Public web search returning ranked results with a title and highlighted excerpt, typically 15 per call.\n\n" +
+    "Best for:\n" +
+    "- finding actual published pages with real source names\n" +
+    "- named companies, filings, announcements or reports\n" +
+    "- reaching primary sources beyond curated news\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- no publication date, publisher or URL in the output\n" +
+    "- cannot assess recency or cite precisely from the payload alone\n" +
+    "- highlights are extracted fragments, not summaries",
 
   inputSchema: z.object({
     query: z

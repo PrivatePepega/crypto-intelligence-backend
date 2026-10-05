@@ -15,11 +15,16 @@ import {
 
 export const marketauxSearchTool = tool({
     description:
-      "Search Marketaux for financial and market articles, returning title, description and snippet per hit. " +
-  "Use this as a BACKGROUND and entity tool, not as a news feed. It is genuinely useful for two things: pulling articles about a named company or sector via symbols, industries, countries and entity_types, and quietly narrowing the rest of the corpus by excluding sources and sentiment thresholds. " +
-  "Do NOT use it for important or trending news. It returns a loosely date-sorted article backlog, not a ranked feed, and the measured crypto query returned only 3 articles against a limit of 10 - two of them evergreen SEO explainers ('BTCFi vs Ethereum DeFi: What's Different') and a ZeroHedge opinion post. Nothing in the output marks an item as significant. " +
-  "Also expect `description` to be truncated mid-word by the provider, so treat it as a hint rather than quotable text. `entities` are stripped from this output, though every entity filter below still applies upstream. " +
-  "For what is happening now use an events tool, the headline scan, or a web search; for company financial news use the market news tool.",
+      "Marketaux article search returning title, description and snippet. Entities are stripped from the output, though entity filters still apply.\n\n" +
+      "Best for:\n" +
+      "- background articles on a named company or sector\n" +
+      "- entity filters - symbols, industries, countries, sentiment thresholds\n" +
+      "\n" +
+      "Limitations:\n" +
+      "- not a news feed - a flat, loosely date-sorted backlog with no importance ranking\n" +
+      "- a crypto query returned 3 of 10 requested, mostly SEO explainers\n" +
+      "- descriptions truncate mid-word\n" +
+      "- for what is happening now use an events tool",
   
     inputSchema: z.object({
       symbols: z

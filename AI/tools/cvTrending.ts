@@ -8,11 +8,16 @@ const DEFAULT_LIMIT = 20;
 
 export const cvTrendingTool = tool({
   description:
-    "Get trending crypto topics from cryptocurrency.cv, each with a topic name, an overall sentiment label and its recent headlines." +
-    "Use this to see what the market is currently focused on, rather than to read individual articles - it is a good first call for orienting on the day's themes before drilling in." +
-    "A measured run returned 6 topics, the top being 'AI' with sentiment 'bullish' and three supporting headlines." +
-    "Two caveats: the same headline can appear under several topics, so topic counts are not distinct article counts, and the sentiment label reflects coverage volume rather than price direction, so do not read it as a market signal." +
-    "The free tier caps responses at 3 topics regardless of the limit requested.",
+    "Trending crypto topics from cryptocurrency.cv, each with a topic name, a sentiment label and its recent headlines.\n\n" +
+    "Best for:\n" +
+    "- crypto topic trends\n" +
+    "- seeing what the market is focused on right now\n" +
+    "- a quick orientation before drilling in\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- free tier returns <=3 topics regardless of limit\n" +
+    "- the same headline can appear under several topics\n" +
+    "- sentiment reflects coverage volume, not price direction",
 
   inputSchema: z.object({
     limit: z

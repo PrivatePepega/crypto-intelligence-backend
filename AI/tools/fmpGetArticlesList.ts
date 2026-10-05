@@ -20,11 +20,14 @@ const ARTICLE_LIMIT = 40;
 
 export const fmpGetArticlesListTool = tool({
   description:
-    "Get the latest financial news headlines written by Financial Modeling Prep's own editorial team. Returns 40 headlines, newest first, and requires no FMP plan - this is the only FMP feed available on a free plan. " +
-  "This tool returns HEADLINES ONLY. No article text, no publication date, no ticker and no link, so nothing in the output can be cited or dated, and a headline cannot be followed up through this tool. " +
-  "The measured batch was also low-signal for general research: nearly every item was a single-stock formulaic piece ('SPX Technologies (NYSE: SPXC) Stock Analysis: Analyst Ratings and Market Reaction', 'PBF Energy (NYSE: PBF): U.S. Oil Refiner Gains...') rather than market-moving news. " +
-  "Use it for a quick read on what equities desks are publishing, not for identifying what matters. " +
-  "For anything that needs a date, a source, a body or significance ranking, use an events tool, a news search, or a web search instead.",
+    "40 financial headlines from FMP's own editorial team, newest first.\n\n" +
+    "Best for:\n" +
+    "- a quick read on what equities desks are publishing\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- headlines only - no body, date, ticker or link, so nothing is citable\n" +
+    "- nearly all items are formulaic single-stock analyst pieces\n" +
+    "- no FMP plan needed - the only feed available on free",
 
   // No inputs. Every parameter is fixed, which keeps the tool's schema - and
   // therefore the tokens spent describing it - at zero.

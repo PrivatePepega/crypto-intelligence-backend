@@ -9,11 +9,14 @@ import {
 
 export const newsflashGetEventsTool = tool({
   description:
-    "Search Newsflash for current deduplicated news events, optionally filtered by category and date." +
-    "Use this as the primary Newsflash tool when researching what is happening around a topic, company, market or event." +
-    "Its distinguishing feature is clustering: multiple articles about the same event are grouped into one entry, and min_sources lets you demand corroboration, so setting min_sources to 2 or 3 filters out single-source noise and is the best available signal for whether something is genuinely being picked up." +
-    "Keep the query focused on one subject rather than a broad theme." +
-    "If you need the individual articles behind a cluster rather than the cluster itself, use the article search tool instead.",
+    "Newsflash search returning deduplicated events, clustered so many articles on one story collapse into a single entry.\n\n" +
+    "Best for:\n" +
+    "- corroborated, deduplicated current events\n" +
+    "- setting min_sources to 2-3 to filter single-source noise\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- clusters hide the individual articles - use the article tool for those\n" +
+    "- keep queries focused; broad themes return little",
 
   inputSchema: z.object({
     q: z

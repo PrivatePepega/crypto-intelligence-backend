@@ -14,13 +14,15 @@ const DEFAULT_LIMIT = 20;
 
 export const cvNewsTool = tool({
   description:
-    "Get general crypto news headlines from cryptocurrency.cv, each with a title and a description, newest first." +
-    "Use this as a broad crypto sweep only when nothing more specific applies." +
-    "Expect very few results and expect noise." +
-    "A measured call returned just 2 items, and one of them was not news at all - a live Ethereum gas price ticker ('ETH Gas: 0.986935592 | 0.986952077 | 1.036935593 Gwei') whose title also had characters replaced by '?', so the encoding is lossy on some items." +
-    "Treat the output as a small, imperfect sample rather than a feed: check that each title actually reads as news and discard ticker or garbled items." +
-    "The free tier caps responses at 3 articles regardless of the limit requested." +
-    "For fresher and better-populated crypto headlines use the breaking tool instead; for Bitcoin specifically use the bitcoin tool.",
+    "General crypto news from cryptocurrency.cv, each with a title and description, newest first.\n\n" +
+    "Best for:\n" +
+    "- a broad crypto sweep when nothing more specific applies\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- free tier returns <=3 articles regardless of limit\n" +
+    "- low coverage - a measured call returned 2 items\n" +
+    "- ticker noise possible and some titles are garbled\n" +
+    "- prefer the breaking tool, which is better populated",
 
   inputSchema: z.object({
     limit: z

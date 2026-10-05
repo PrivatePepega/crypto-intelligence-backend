@@ -21,12 +21,14 @@ const MAX_LIMIT = 25;
 
 export const finnhubCryptoNewsTool = tool({
   description:
-    "Get the latest crypto news headlines and summaries from Finnhub, newest first, returning a title and summary per article." +
-    "Use this for general crypto market coverage from a mainstream financial feed rather than a crypto-native index." +
-    "A measured run returned 5 well-formed items including a stablecoin expansion story and a bitcoin price-structure note." +
-    "Expect some articles to carry no summary at all - publishers such as CoinDesk and SeekingAlpha supply a headline only - so an absent summary is normal rather than a failure, and roughly a third of items are affected." +
-    "Summaries vary hugely in length, from around 80 characters to several thousand, so do not assume a consistent article size." +
-    "For a specific coin's price or market data use a crypto data tool instead.",
+    "Latest crypto news from Finnhub, newest first, with a title and summary per article.\n\n" +
+    "Best for:\n" +
+    "- general crypto market coverage\n" +
+    "- a mainstream financial feed rather than a crypto-native index\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- roughly a third of articles carry no summary at all\n" +
+    "- summary length ranges from about 80 to several thousand characters",
 
   inputSchema: z.object({
     limit: z

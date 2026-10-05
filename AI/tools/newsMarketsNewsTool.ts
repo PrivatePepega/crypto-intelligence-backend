@@ -21,13 +21,16 @@ const MAX_LIMIT = 40;
 
 export const newsMarketsNewsTool = tool({
   description:
-    "Get curated NewsMarkets headlines and short summaries for one category: 'crypto', 'ai', 'tech', or 'business'. Clean output - plain text, no HTML, no entity escaping - with a summary on every story measured so far. " +
-    "Best for a tidy, section-scoped digest: 'ai' and 'tech' return well-written AI and technology coverage, 'business' returns markets and company news, 'crypto' is the smallest and thinnest. " +
-    "IMPORTANT - this is a periodically republished SNAPSHOT, not a live feed, and it accepts no paging or offset. Repeating the same category returns the same stories, so vary the category to get breadth rather than repeating a call for volume. " +
-    "Sections differ enormously in size and limit will not fix it: measured 2 stories for crypto, 30 for tech, and business capped at 40 against a reported total of 51. A high limit only produces a high count for business. " +
-    "Because it is a snapshot, 'generatedAt' shows when the data was built and may lag the present - one section was measured 5.5 hours staler than its siblings. Check it before presenting anything as current. " +
-    "If 'total' exceeds 'count', the section was truncated at the provider's 40-story cap and more exist. " +
-    "For breaking news or anything needing sourcing, use a news or web search; for real figures, use an indicator tool.",
+    "Curated headlines and summaries from NewsMarkets for one section, served from a periodically republished snapshot.\n\n" +
+    "Best for:\n" +
+    "- tidy section digests - ai, tech, business, crypto\n" +
+    "- clean summaries with no HTML or entity escaping\n" +
+    "\n" +
+    "Limitations:\n" +
+    "- a snapshot, not a live feed - check generatedAt before calling it current\n" +
+    "- no paging, so repeating a category returns the same stories\n" +
+    "- sections vary hugely - crypto returned 2 stories, business 40 against a total of 51\n" +
+    "- for breaking or sourced news use a news or web search",
 
   inputSchema: z.object({
     category: z
