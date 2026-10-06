@@ -3,39 +3,19 @@ import { z } from "zod";
 
 import { getBreakingNews } from "../../mcp/cryptocurrency.cv/fetchers/breaking.js";
 
-/**
- * Articles requested when the caller does not specify.
- *
- * Small by default: the window is only about two hours, so a large page mostly
- * returns duplicate or near-duplicate coverage of the same events.
- */
-const DEFAULT_LIMIT = 20;
+const DEFAULT_LIMIT = 3;
 
 export const cvBreakingTool = tool({
   description:
-    "Breaking crypto news from cryptocurrency.cv, covering roughly the last two hours, each with a title and description, newest first.\n\n" +
-    "Best for:\n" +
-    "- recent crypto breaking news\n" +
-    "- price and market-structure headlines\n" +
-    "- the freshest crypto feed available\n" +
-    "\n" +
-    "Limitations:\n" +
-    "- free tier returns <=3 articles regardless of limit\n" +
-    "- Ethereum gas tickers can appear among headlines\n" +
-    "- crypto only - no general news",
-
+    "Fetches the freshest cryptocurrency.cv breaking-news feed, covering roughly the last two hours.\n\n" +
+    "Does: detect very recent crypto developments, market-moving headlines, and breaking narratives.\n" +
+    "Does not: cover non-crypto news or guarantee that every headline is important. Automated market tickers such as gas/fee updates can appear. The free tier returns at most 3 items.\n\n" +
+    "High-priority first-pass tool for the Crypto Observer.",
   inputSchema: z.object({
-    limit: z
-      .number()
-      .int()
-      .min(1)
-      .max(100)
-      .default(DEFAULT_LIMIT)
-      .describe(
-        "Maximum articles to return. The window is only about two hours, so a smaller value is usually enough.",
-      ),
+    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+      "Maximum breaking items. Free access is capped at 3.",
+    ),
   }),
-
   execute: async (input, options) => {
     return await getBreakingNews({
       limit: input.limit,
