@@ -3,33 +3,19 @@ import { z } from "zod";
 
 import { getDefiNews } from "../../mcp/cryptocurrency.cv/fetchers/defi.js";
 
-/** Articles requested when the caller does not specify. */
-const DEFAULT_LIMIT = 20;
+const DEFAULT_LIMIT = 3;
 
-export const cvDefiTool = tool({
+export const cvDefiNewsTool = tool({
   description:
-    "DeFi and prediction-market news from cryptocurrency.cv, each with a title and description, newest first.\n\n" +
-    "Best for:\n" +
-    "- DeFi protocol news - lending, DEXs, stablecoins, governance\n" +
-    "- prediction-market developments\n" +
-    "\n" +
-    "Limitations:\n" +
-    "- free tier returns <=3 articles regardless of limit\n" +
-    "- leans toward prediction markets and betting promos\n" +
-    "- descriptions are often promotional",
-
+    "Fetches recent DeFi and prediction-market news from cryptocurrency.cv.\n\n" +
+    "Does: investigate DeFi protocols, DEXs, lending, stablecoins, governance, and prediction markets.\n" +
+    "Does not: provide broad crypto coverage or reliably filter promotional material. The free tier returns at most 3 items and the feed can lean toward betting/prediction-market content.\n\n" +
+    "Use for focused DeFi follow-up.",
   inputSchema: z.object({
-    limit: z
-      .number()
-      .int()
-      .min(1)
-      .max(100)
-      .default(DEFAULT_LIMIT)
-      .describe(
-        "Maximum articles to return. The free tier caps responses at 3 regardless.",
-      ),
+    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+      "Maximum DeFi items. Free access is capped at 3.",
+    ),
   }),
-
   execute: async (input, options) => {
     return await getDefiNews({
       limit: input.limit,
