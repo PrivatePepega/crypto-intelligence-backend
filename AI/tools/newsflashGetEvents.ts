@@ -14,7 +14,7 @@ export const newsflashGetEventsTool = tool({
     semantic: z.boolean().optional().describe("Use semantic matching for a conceptual query."),
     category: z.enum(["crypto","tradfi","business","tech","politics","world","science","health","energy","sports"]).optional().describe("Optional Newsflash category."),
     min_sources: z.number().int().min(1).max(10).optional().describe("Minimum distinct sources. Use 2 for corroborated events."),
-    limit: z.number().int().min(5).max(25).default(10).describe("Maximum clustered events. Keep small for Observer context."),
+    limit: z.number().int().min(15).max(25).default(15).describe("Maximum clustered events. Keep small for Observer context."),
   }),
   execute: async (input, options) => {
     const result = await callMcpTool("newsflash_get_events", input, options.abortSignal);
