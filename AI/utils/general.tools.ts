@@ -36,12 +36,12 @@ import { exposeCurrentData } from "../../utils/AI/currentDataExpose.js";
 
 
 // --------------------------------------------------
-// Observer tools
+// Agentic tooling
 // --------------------------------------------------
 
 
 
-export const observerTools = {
+export const agenticTooling = {
     getCurrentIndicatorData: getCurrentIndicatorTool,
   
     marketauxNewsSearch: marketauxSearchTool,
@@ -121,23 +121,23 @@ export const observerTools = {
   };
   
   // --------------------------------------------------
-  // Build Observer ToolSet
+  // Build agentic ToolSet
   // --------------------------------------------------
   
-  export const getObserverTools = (
+  export const getAgenticTooling = (
     config: ObserverConfig,
   ): ToolSet => {
     const tools = {} as ToolSet;
   
     for (const toolName of config.tools) {
       const configuredTool =
-        observerTools[
-          toolName as keyof typeof observerTools
+        agenticTooling[
+          toolName as keyof typeof agenticTooling
         ];
   
       if (!configuredTool) {
         throw new Error(
-          `Observer tool "${toolName}" is configured but not registered.`,
+          `Agentic tool "${toolName}" is configured but not registered.`,
         );
       }
   
@@ -165,7 +165,7 @@ export const observerTools = {
       }
   
       throw new Error(
-        `Observer tool "${toolName}" has an unsupported shape. ` +
+        `Agentic tool "${toolName}" has an unsupported shape. ` +
           `Expected an AI SDK tool or ToolSet.`,
       );
     }
@@ -174,7 +174,7 @@ export const observerTools = {
   };
   
   // --------------------------------------------------
-  // Observer context
+  // Agentic context
   // --------------------------------------------------
   
   type CurrentDataEntry = {
@@ -187,7 +187,7 @@ export const observerTools = {
     currentData: Record<string, CurrentDataEntry>;
   };
   
-  export const getObserverContext = async (
+  export const getAgenticContext = async (
     config: ObserverConfig,
   ) => {
     const data =

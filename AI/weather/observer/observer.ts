@@ -9,8 +9,8 @@ import {
 } from "./observer.config.js";
 
 import {
-  getObserverContext,
-  getObserverTools,
+  getAgenticContext,
+  getAgenticTooling,
 } from "../../utils/general.tools.js";
 
 import {
@@ -39,7 +39,7 @@ export const runObserver = async (
   config: ObserverConfig,
 ) => {
   const observerContext =
-    await getObserverContext(config);
+    await getAgenticContext(config);
 
   logAgentStart(
     "Observer",
@@ -245,7 +245,7 @@ Identify meaningful developments and produce observations.
       prompt,
 
       tools:
-        getObserverTools(config),
+        getAgenticTooling(config),
 
       maxSteps:
         MAX_AGENT_STEPS,
