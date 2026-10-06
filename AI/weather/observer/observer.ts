@@ -29,20 +29,66 @@ import {
   runAgentResearch,
 } from "../../utils/agentResearch.js";
 
+import {
+  createAgentRunLog,
+  type AgentRunLog,
+} from "../../utils/agentRunLog.js";
+
 // --------------------------------------------------
 // Observer
 // --------------------------------------------------
 
 const MAX_AGENT_STEPS = 5;
 
+/**
+ * This agent's name.
+ *
+ * Used for every console heading, and for the run-log folder and file name, so
+ * one value identifies the agent everywhere.
+ */
+const AGENT_NAME = "Weather Observer";
+
+/**
+ * Runs the Observer, capturing the run to a numbered log file.
+ *
+ * Console capture swaps the global `console` methods, so it is stopped in a
+ * `finally`: a run that throws must not leave the console patched for
+ * everything that runs after it.
+ */
 export const runObserver = async (
   config: ObserverConfig,
+) => {
+  const runLog =
+    await createAgentRunLog(AGENT_NAME);
+
+  const stopConsoleCapture =
+    runLog.captureConsole();
+
+  try {
+    return await runObserverLogged(
+      config,
+      runLog,
+    );
+  } finally {
+    stopConsoleCapture();
+  }
+};
+
+/**
+ * The Observer run itself.
+ *
+ * Split out of {@link runObserver} so console capture can wrap the whole run
+ * without re-indenting it.
+ */
+const runObserverLogged = async (
+  config: ObserverConfig,
+  runLog: AgentRunLog,
 ) => {
   const observerContext =
     await getAgenticContext(config);
 
   logAgentStart(
-    "Observer",
+    AGENT_NAME,
     observerContext,
   );
 
@@ -219,9 +265,35 @@ Identify meaningful developments and produce observations.
   // Prompt diagnostics
   // --------------------------------------------------
 
+  await runLog.record(
+    "initializer",
+    {
+      domain: config.domain,
+      objective: config.objective,
+      categories: config.categories,
+      configuredTools: config.tools,
+      maxSteps: MAX_AGENT_STEPS,
+      instructionsCharacters:
+        observerPrompt.length,
+      finalInstructionsCharacters:
+        finalObserverPrompt.length,
+      contextCharacters:
+        observerContext.length,
+      context:
+        JSON.parse(observerContext),
+    },
+  );
+
   logAgentPrompt(
-    "Observer",
+    AGENT_NAME,
     prompt,
+  );
+
+  await runLog.record(
+    "prompt",
+    {
+      prompt,
+    },
   );
 
   // --------------------------------------------------
@@ -254,8 +326,18 @@ Identify meaningful developments and produce observations.
         step,
       ) => {
         logAgentStep(
-          "Observer",
+          AGENT_NAME,
           step,
+        );
+
+        await runLog.record(
+          "step",
+          {
+            stepNumber: step.stepNumber,
+            text: step.text,
+            toolCalls: step.toolCalls,
+            toolResults: step.toolResults,
+          },
         );
       },
     });
@@ -265,7 +347,12 @@ Identify meaningful developments and produce observations.
   // --------------------------------------------------
 
   logAgentReasoning(
-    "Observer",
+    AGENT_NAME,
+    lastReasoningText,
+  );
+
+  await runLog.record(
+    "reasoning",
     lastReasoningText,
   );
 
@@ -274,7 +361,12 @@ Identify meaningful developments and produce observations.
   // --------------------------------------------------
 
   logAgentResearchEvidence(
-    "Observer",
+    AGENT_NAME,
+    researchEvidence,
+  );
+
+  await runLog.record(
+    "evidence",
     researchEvidence,
   );
 
@@ -332,7 +424,12 @@ Important:
   // --------------------------------------------------
 
   logAgentSynthesisStart(
-    "Observer",
+    AGENT_NAME,
+    synthesisPrompt,
+  );
+
+  await runLog.record(
+    "synthesis",
     synthesisPrompt,
   );
 
@@ -374,7 +471,7 @@ Important:
 
   logAgentUsage({
     agentName:
-      "Observer",
+      AGENT_NAME,
 
     researchUsage,
 
@@ -384,14 +481,31 @@ Important:
       researchSteps.length,
   });
 
+  await runLog.record(
+    "usage",
+    {
+      researchUsage,
+      synthesisUsage,
+      researchSteps:
+        researchSteps.length,
+    },
+  );
+
   logAgentToolUsage(
-    "Observer",
+    AGENT_NAME,
     researchSteps,
   );
 
   logAgentOutput(
-    "Observer",
+    AGENT_NAME,
     finalText,
+  );
+
+  const runLogPath =
+    await runLog.finish(finalText);
+
+  runLog.note(
+    `Run log written to ${runLogPath}`,
   );
 
   return finalText;
