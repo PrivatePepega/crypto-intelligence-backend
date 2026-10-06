@@ -1,38 +1,21 @@
 import { tool } from "ai";
 import { z } from "zod";
-
 import { getTrendingTopics } from "../../mcp/cryptocurrency.cv/fetchers/trending.js";
 
-/** Trends requested when the caller does not specify. */
-const DEFAULT_LIMIT = 20;
+const DEFAULT_LIMIT = 3;
 
 export const cvTrendingTool = tool({
   description:
-    "Trending crypto topics from cryptocurrency.cv, each with a topic name, a sentiment label and its recent headlines.\n\n" +
-    "Best for:\n" +
-    "- crypto topic trends\n" +
-    "- seeing what the market is focused on right now\n" +
-    "- a quick orientation before drilling in\n" +
-    "\n" +
-    "Limitations:\n" +
-    "- free tier returns <=3 topics regardless of limit\n" +
-    "- the same headline can appear under several topics\n" +
-    "- sentiment reflects coverage volume, not price direction",
-
+    "Trending topics from cryptocurrency.cv with recent headlines and a coverage-based sentiment label.\n\n" +
+    "Does: show what crypto coverage is concentrating on right now and help discover emerging topics.\n" +
+    "Does not: measure price direction or guarantee that a trend is important. Headlines may repeat across topics. The free tier returns at most 3 topics.\n\n" +
+    "Use early in the Crypto Observer when topic discovery matters.",
   inputSchema: z.object({
-    limit: z
-      .number()
-      .int()
-      .min(1)
-      .max(100)
-      .default(DEFAULT_LIMIT)
-      .describe("Maximum trending topics to return."),
+    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+      "Maximum trending topics. Free access is capped at 3.",
+    ),
   }),
-
   execute: async (input, options) => {
-    return await getTrendingTopics({
-      limit: input.limit,
-      signal: options.abortSignal,
-    });
+    return await getTrendingTopics({ limit: input.limit, signal: options.abortSignal });
   },
 });
