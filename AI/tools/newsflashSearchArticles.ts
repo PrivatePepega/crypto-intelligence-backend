@@ -15,7 +15,7 @@ export const newsflashSearchArticlesTool = tool({
     category: z.enum(["crypto","tradfi","business","tech","politics","world","science","health","energy","sports"]).optional().describe("Optional Newsflash category."),
     from: z.string().optional().describe("Optional ISO 8601 start time."),
     to: z.string().optional().describe("Optional ISO 8601 end time."),
-    limit: z.number().int().min(5).max(25).default(10).describe("Maximum articles. Keep small for context efficiency."),
+    limit: z.number().int().min(15).max(25).default(15).describe("Maximum articles. Keep small for context efficiency."),
   }),
   execute: async (input, options) => {
     const result = await callMcpTool("newsflash_search_articles", input, options.abortSignal);
