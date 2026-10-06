@@ -3,39 +3,19 @@ import { z } from "zod";
 
 import { getBitcoinNews } from "../../mcp/cryptocurrency.cv/fetchers/bitcoin.js";
 
-/**
- * Articles requested when the caller does not specify.
- *
- * Higher than the other news tools by default, because this feed's yield is low:
- * most articles carry only the literal description `Comments` and are dropped,
- * so 5 requested commonly yields only 1 or 2 usable items.
- */
-const DEFAULT_LIMIT = 20;
+const DEFAULT_LIMIT = 3;
 
 export const cvBitcoinNewsTool = tool({
   description:
-    "Bitcoin-specific news from cryptocurrency.cv, each with a title and description, newest first.\n\n" +
-    "Best for:\n" +
-    "- Bitcoin-specific news\n" +
-    "- bitcoin treasury and ETF coverage\n" +
-    "\n" +
-    "Limitations:\n" +
-    "- free tier returns <=3 articles regardless of limit\n" +
-    "- not suitable for non-Bitcoin crypto\n" +
-    "- headline counts are small by nature",
-
+    "Fetches recent Bitcoin-specific news from cryptocurrency.cv.\n\n" +
+    "Does: Bitcoin-specific headlines, including treasury, ETF, market, and ecosystem coverage.\n" +
+    "Does not: cover the broader crypto ecosystem well or guarantee meaningful event-level news. The free tier returns at most 3 articles.\n\n" +
+    "Use when the Observer has a Bitcoin-specific observation to investigate.",
   inputSchema: z.object({
-    limit: z
-      .number()
-      .int()
-      .min(1)
-      .max(100)
-      .default(DEFAULT_LIMIT)
-      .describe(
-        "Maximum articles to request. Most are filtered for missing summaries, so a larger value returns more usable results.",
-      ),
+    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+      "Maximum Bitcoin articles. Free access is capped at 3.",
+    ),
   }),
-
   execute: async (input, options) => {
     return await getBitcoinNews({
       limit: input.limit,
