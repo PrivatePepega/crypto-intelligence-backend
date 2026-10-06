@@ -5,8 +5,7 @@ import { models } from "../../../AI/providers/model.js";
 import { getCurrentIndicatorTool } from "../../../AI/tools/getCurrentIndicatorData.js";
 import { marketauxSearchTool } from "../../../AI/tools/marketauxNewsSearch.js";
 import { webSearchTool } from "../../../AI/tools/webSearchTool.js";
-import { cryptoObserverConfig } from "./observer.config.js";
-import { currentsSearchTool } from "../../tools/currentsNewsSearch.js";
+import {observerConfigs, type ObserverConfig,} from "./observer.config.js";import { currentsSearchTool } from "../../tools/currentsNewsSearch.js";
 import { newsflashGetEventsTool } from "../../tools/newsflashGetEvents.js";
 import { newsflashSearchArticlesTool } from "../../tools/newsflashSearchArticles.js";
 import { gdeltSearchEventsTool } from "../../tools/gdeltSearchEvents.js";
@@ -18,7 +17,7 @@ import { newsDataMarketNewsTool } from "../../tools/newsDataMarketNews.js";
 import { cvArticlesTagsTool } from "../../tools/cvArticlesTags.js";
 import { cvBitcoinNewsTool } from "../../tools/cvBitcoinNews.js";
 import { cvBreakingTool } from "../../tools/cvBreaking.js";
-// import { cvDefiTool } from "../../tools/cvDefi.js";
+import { cvDefiTool } from "../../tools/cvDefi.js";
 import { cvNewsTool } from "../../tools/cvNews.js";
 import { cvSearchTool } from "../../tools/cvSearch.js";
 import { cvTrendingTool } from "../../tools/cvTrending.js";
@@ -32,47 +31,47 @@ import { wabbleImportantHeadlineSearchTool } from "../../tools/wabbleImportantHe
 // --------------------------------------------------
 
 const observerTools = {
-  // ...getCurrentIndicatorTool,
+  ...getCurrentIndicatorTool,
 
-  // marketaux_news_search: marketauxSearchTool,
+  marketaux_news_search: marketauxSearchTool,
 
-  // web_search: webSearchTool,
+  web_search: webSearchTool,
 
-  // currentsSearchTool,
+  currentsSearchTool,
 
-  // newsflashGetEventsTool,
+  newsflashGetEventsTool,
 
-  // newsflashSearchArticlesTool,
+  newsflashSearchArticlesTool,
 
-  // gdeltSearchEventsTool,
+  gdeltSearchEventsTool,
 
-  // gdeltSearchStoriesTool,
+  gdeltSearchStoriesTool,
 
-  // fmpGetArticlesListTool,
+  fmpGetArticlesListTool,
 
-  // newsDataCryptoNewsTool,
+  newsDataCryptoNewsTool,
 
-  // newsDataLatestNewsTool,
+  newsDataLatestNewsTool,
 
-  // newsDataMarketNewsTool,
+  newsDataMarketNewsTool,
 
-  // cvArticlesTagsTool,
+  cvArticlesTagsTool,
 
-  // cvBitcoinNewsTool,
+  cvBitcoinNewsTool,
 
-  // cvBreakingTool,
+  cvBreakingTool,
 
-  // cvDefiTool, //sucks max3
+  cvDefiTool, //sucks max3
 
-  // cvNewsTool, //sucks max3
+  cvNewsTool, //sucks max3
 
-  // cvSearchTool, //sucks max3
+  cvSearchTool, //sucks max3
 
-  // cvTrendingTool,
+  cvTrendingTool,
 
-  // finnhubCryptoNewsTool,
+  finnhubCryptoNewsTool,
 
-  // newsMarketsNewsTool,
+  newsMarketsNewsTool,
 
   wabbleImportantHeadlineSearchTool,
 };
@@ -120,7 +119,7 @@ const countCharacters = (value: unknown): number => {
 // --------------------------------------------------
 
 export const runObserver = async (
-  config = cryptoObserverConfig,
+  config : ObserverConfig,
 ) => {
   const observerPrompt = `
 You are the Observer agent for a market intelligence platform.
@@ -358,13 +357,6 @@ Identify meaningful developments and produce observations.
             `Arguments: ${JSON.stringify(toolCall.input)}`,
           );
 
-          console.log(
-            `Argument characters: ${argumentCharacters}`,
-          );
-
-          console.log(
-            `Argument estimated tokens: ${argumentTokens}`,
-          );
         }
       }
 
@@ -387,15 +379,11 @@ Identify meaningful developments and produce observations.
           console.log(`Tool: ${toolResult.toolName}`);
 
           console.log(
-            `Result characters: ${resultCharacters}`,
+            `Result: ${JSON.stringify(toolResult.output)}`,
           );
 
           console.log(
             `Result estimated tokens: ${resultTokens}`,
-          );
-
-          console.log(
-            `Result: ${JSON.stringify(toolResult.output)}`,
           );
         }
       }
@@ -551,15 +539,7 @@ Important:
     estimateTokens(synthesisPrompt);
 
   console.log("");
-  console.log("Synthesis Input Context:");
 
-  console.log(
-    `Estimated synthesis prompt tokens: ${synthesisPromptTokens}`,
-  );
-
-  console.log(
-    "Note: estimated with GPT-4o tokenizer.",
-  );
 
   // --------------------------------------------------
   // Final synthesis

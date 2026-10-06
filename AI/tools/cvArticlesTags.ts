@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { getTagArticles } from "../../mcp/cryptocurrency.cv/fetchers/tags.js";
 
-const DEFAULT_LIMIT = 3;
+const DEFAULT_LIMIT = 20;
 
 export const cvArticlesTagsTool = tool({
   description:
@@ -15,7 +15,7 @@ export const cvArticlesTagsTool = tool({
     slug: z.string().describe(
       'Crypto tag slug, such as "bitcoin", "ethereum", "etf", "defi", "stablecoin", "regulation", "hack", "institutional", or "rwa".',
     ),
-    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+    limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
       "Maximum articles. Free access is capped at 3.",
     ),
   }),

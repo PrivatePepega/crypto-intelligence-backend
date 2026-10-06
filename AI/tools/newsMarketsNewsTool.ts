@@ -3,7 +3,7 @@ import { z } from "zod";
 import { NEWSMARKETS_IN_SCOPE_SECTIONS } from "../../mcp/newsMarkets/client.js";
 import { getSectionNews } from "../../mcp/newsMarkets/fetchers/index.js";
 
-const NEWS_LIMIT = 10;
+const NEWS_LIMIT = 15;
 
 export const newsMarketsNewsTool = tool({
   description:

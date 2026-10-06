@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { getBitcoinNews } from "../../mcp/cryptocurrency.cv/fetchers/bitcoin.js";
 
-const DEFAULT_LIMIT = 3;
+const DEFAULT_LIMIT = 20;
 
 export const cvBitcoinNewsTool = tool({
   description:
@@ -12,7 +12,7 @@ export const cvBitcoinNewsTool = tool({
     "Does not: cover the broader crypto ecosystem well or guarantee meaningful event-level news. The free tier returns at most 3 articles.\n\n" +
     "Use when the Observer has a Bitcoin-specific observation to investigate.",
   inputSchema: z.object({
-    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+    limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
       "Maximum Bitcoin articles. Free access is capped at 3.",
     ),
   }),

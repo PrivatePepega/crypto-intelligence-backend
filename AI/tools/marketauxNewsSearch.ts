@@ -55,7 +55,7 @@ export const marketauxSearchTool = tool({
     published_on: z.string().optional().describe(
       "Optional exact UTC date in YYYY-MM-DD format.",
     ),
-    limit: z.number().int().min(5).max(15).default(10).describe(
+    limit: z.number().int().min(1).max(20).default(15).describe(
       "Maximum articles. Keep small for Observer context efficiency.",
     ),
     page: z.number().int().min(1).optional().describe(

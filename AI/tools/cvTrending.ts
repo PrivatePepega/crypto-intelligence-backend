@@ -2,7 +2,7 @@ import { tool } from "ai";
 import { z } from "zod";
 import { getTrendingTopics } from "../../mcp/cryptocurrency.cv/fetchers/trending.js";
 
-const DEFAULT_LIMIT = 3;
+const DEFAULT_LIMIT = 20;
 
 export const cvTrendingTool = tool({
   description:
@@ -11,7 +11,7 @@ export const cvTrendingTool = tool({
     "Does not: measure price direction or guarantee that a trend is important. Headlines may repeat across topics. The free tier returns at most 3 topics.\n\n" +
     "Use early in the Crypto Observer when topic discovery matters.",
   inputSchema: z.object({
-    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+    limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
       "Maximum trending topics. Free access is capped at 3.",
     ),
   }),

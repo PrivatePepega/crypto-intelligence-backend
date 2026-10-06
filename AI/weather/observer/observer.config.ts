@@ -1,3 +1,6 @@
+
+
+
 export const observerConfigs = {
   geopolitics: {
     domain: "geopolitics",
@@ -74,10 +77,18 @@ export const observerConfigs = {
       "A191RL1Q225SBEA",
     ],
 
-    tools:[
-// adds tool list here and in other indexes
+    tools: [
+      "gdeltSearchEvents",
+      "cvBreaking",
+      "newsflashGetEvents",
+      "gdeltSearchStories",
+      "currentsNewsSearch",
+      "wabbleImportantHeadlineSearch",
+      "marketauxNewsSearch",
+      "newsflashSearchArticles",
+      "newsDataLatestNews",
+      "webSearchTool",
     ],
-
 
     limits: {
       maxToolCalls: 12,
@@ -158,6 +169,19 @@ export const observerConfigs = {
       "ig_euro_usd",
       "ig_gbp_usd",
       "ig_usd_jpy",
+    ],
+
+    tools: [
+      "newsMarketsNewsTool",
+      "cvBreaking",
+      "marketauxNewsSearch",
+      "newsDataMarketNews",
+      "newsflashGetEvents",
+      "currentsNewsSearch",
+      "gdeltSearchStories",
+      "wabbleImportantHeadlineSearch",
+      "newsflashSearchArticles",
+      "webSearchTool",
     ],
 
     limits: {
@@ -247,6 +271,20 @@ export const observerConfigs = {
       "cnn_fear_greed",
     ],
 
+    tools: [
+      "newsflashGetEvents",
+      "gdeltSearchEvents",
+      "cvBreaking",
+      "newsDataMarketNews",
+      "marketauxNewsSearch",
+      "newsMarketsNewsTool",
+      "currentsNewsSearch",
+      "gdeltSearchStories",
+      "wabbleImportantHeadlineSearch",
+      "newsflashSearchArticles",
+      "webSearchTool",
+    ],
+
     limits: {
       maxToolCalls: 12,
       maxSameToolCalls: 2,
@@ -319,6 +357,20 @@ export const observerConfigs = {
       // Related FX positioning
       "ig_aud_usd",
       "ig_usd_cad",
+    ],
+
+    tools: [
+      "cvBreaking",
+      "newsflashGetEvents",
+      "newsDataMarketNews",
+      "newsMarketsNewsTool",
+      "marketauxNewsSearch",
+      "gdeltSearchEvents",
+      "gdeltSearchStories",
+      "currentsNewsSearch",
+      "wabbleImportantHeadlineSearch",
+      "newsflashSearchArticles",
+      "webSearchTool",
     ],
 
     limits: {
@@ -409,6 +461,24 @@ export const observerConfigs = {
 
       // Precious-metal / defensive context
       "ig_gold",
+    ],
+
+    tools: [
+      "cvBreaking",
+      "cvTrending",
+      "cvBitcoinNews",
+      "cvDefi",
+      "finnhubCryptoNews",
+      "newsDataCryptoNews",
+      "cvNews",
+      "cvSearch",
+      "marketauxNewsSearch",
+      "newsflashGetEvents",
+      "gdeltSearchEvents",
+      "currentsNewsSearch",
+      "wabbleImportantHeadlineSearch",
+      "newsflashSearchArticles",
+      "webSearchTool",
     ],
 
     limits: {
@@ -502,9 +572,46 @@ export const observerConfigs = {
       "USDJPY",
     ],
 
+    tools: [
+      "cvBreaking",
+      "cvTrending",
+      "newsflashGetEvents",
+      "newsDataLatestNews",
+      "marketauxNewsSearch",
+      "newsMarketsNewsTool",
+      "newsDataMarketNews",
+      "gdeltSearchEvents",
+      "gdeltSearchStories",
+      "currentsNewsSearch",
+      "wabbleImportantHeadlineSearch",
+      "newsflashSearchArticles",
+      "webSearchTool",
+    ],
+
     limits: {
       maxToolCalls: 12,
       maxSameToolCalls: 2,
     },
   },
+} satisfies Record<string, ObserverConfig>;
+
+
+export type ObserverDomain =
+  | "geopolitics"
+  | "financial_markets"
+  | "macro"
+  | "commodities_energy"
+  | "crypto"
+  | "ai_technology_industry";
+
+export type ObserverConfig = {
+  domain: ObserverDomain;
+  objective: string;
+  categories: string[];
+  foundationalData: string[];
+  tools: string[];
+  limits: {
+    maxToolCalls: number;
+    maxSameToolCalls: number;
+  };
 };

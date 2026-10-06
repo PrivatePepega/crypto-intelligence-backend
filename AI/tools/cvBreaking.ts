@@ -3,7 +3,7 @@ import { z } from "zod";
 
 import { getBreakingNews } from "../../mcp/cryptocurrency.cv/fetchers/breaking.js";
 
-const DEFAULT_LIMIT = 3;
+const DEFAULT_LIMIT = 20;
 
 export const cvBreakingTool = tool({
   description:
@@ -12,7 +12,7 @@ export const cvBreakingTool = tool({
     "Does not: cover non-crypto news or guarantee that every headline is important. Automated market tickers such as gas/fee updates can appear. The free tier returns at most 3 items.\n\n" +
     "High-priority first-pass tool for the Crypto Observer.",
   inputSchema: z.object({
-    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+    limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
       "Maximum breaking items. Free access is capped at 3.",
     ),
   }),

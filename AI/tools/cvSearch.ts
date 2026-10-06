@@ -2,7 +2,7 @@ import { tool } from "ai";
 import { z } from "zod";
 import { searchNews } from "../../mcp/cryptocurrency.cv/fetchers/search.js";
 
-const DEFAULT_LIMIT = 3;
+const DEFAULT_LIMIT = 20;
 
 export const cvSearchTool = tool({
   description:
@@ -14,7 +14,7 @@ export const cvSearchTool = tool({
     q: z.string().describe(
       'Focused Boolean query, such as "bitcoin AND (etf OR approval)".',
     ),
-    limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
+    limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
       "Maximum results. Free access is capped at 3.",
     ),
   }),

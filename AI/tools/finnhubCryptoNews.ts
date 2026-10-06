@@ -2,8 +2,8 @@ import { tool } from "ai";
 import { z } from "zod";
 import { getCryptoNews } from "../../mcp/finnhub/cryptoNews.normalizer.js";
 
-const CRYPTO_NEWS_LIMIT = 10;
-const MAX_LIMIT = 15;
+const NEWS_LIMIT = 10;
+const MAX_LIMIT = 25;
 
 export const finnhubCryptoNewsTool = tool({
   description:
@@ -12,7 +12,7 @@ export const finnhubCryptoNewsTool = tool({
     "Does not: guarantee complete summaries; many articles lack summaries and some summaries are long.\n\n" +
     "Use for broader crypto coverage after the highest-signal feeds.",
   inputSchema: z.object({
-    limit: z.number().int().min(1).max(MAX_LIMIT).default(CRYPTO_NEWS_LIMIT).describe(
+    limit: z.number().int().min(1).max(MAX_LIMIT).default(NEWS_LIMIT).describe(
       "Maximum articles to return. Results are trimmed after the provider fetch.",
     ),
   }),

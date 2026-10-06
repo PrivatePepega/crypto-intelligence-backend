@@ -1,4 +1,4 @@
-import { cryptoObserverConfig } from "./observer/observer.config.js";
+import { observerConfigs } from "./observer/observer.config.js";
 import { runObserver } from "./observer/observer.js";
 
 
@@ -10,7 +10,7 @@ import { runObserver } from "./observer/observer.js";
 
 export async function runWeather() {
 
-  runObserver(cryptoObserverConfig);
+  runObserver(observerConfigs.crypto);
 
 }
 
