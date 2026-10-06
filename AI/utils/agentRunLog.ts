@@ -537,11 +537,14 @@ export type AgentRunLog = {
    *
    * Persisting per record rather than at the end means a run that dies
    * mid-flight still leaves everything recorded up to that point.
+   *
+   * Resolves to the entry's `sequence`, so a later entry can point back at this
+   * one instead of duplicating its payload. Resolves to `0` if the write failed.
    */
   record: (
     section: AgentRunSection,
     data?: unknown,
-  ) => Promise<void>;
+  ) => Promise<number>;
   /** Appends one line to the console transcript. */
   note: (line: string) => void;
   /** Tees the console into the transcript until the returned function runs. */
@@ -671,15 +674,19 @@ export const createAgentRunLog = async (
   const record = async (
     section: AgentRunSection,
     data?: unknown,
-  ): Promise<void> => {
+  ): Promise<number> => {
+    const sequence = entries.length + 1;
+
     entries.push({
-      sequence: entries.length + 1,
+      sequence,
       section,
       at: new Date().toISOString(),
       data: data === undefined ? null : data,
     });
 
     await persist();
+
+    return sequence;
   };
 
   return {
@@ -690,7 +697,7 @@ export const createAgentRunLog = async (
 
     record: async (section, data) => {
       try {
-        await record(section, data);
+        return await record(section, data);
       } catch (error) {
         // A logging failure must not abort the agent run it is describing.
         note(
@@ -700,6 +707,8 @@ export const createAgentRunLog = async (
               : String(error)
           }]`,
         );
+
+        return 0;
       }
     },
 

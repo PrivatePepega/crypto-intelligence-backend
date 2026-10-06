@@ -49,6 +49,28 @@ const MAX_AGENT_STEPS = 5;
 const AGENT_NAME = "Weather Observer";
 
 /**
+ * Markers left in the stored synthesis prompt where a large embedded value was
+ * removed.
+ *
+ * The synthesis prompt has to inline the research evidence as pretty-printed
+ * JSON - the model reads it as text. Storing that rendered prompt would put a
+ * second copy of the evidence inside a string, where it reads as JSON-shaped
+ * text rather than JSON, and would make up most of the entry. The evidence is
+ * already recorded as real JSON in its own entry, so the stored prompt keeps
+ * these markers plus the sequence number of that entry. Substituting the
+ * recorded value back in reproduces the prompt exactly.
+ */
+const RESEARCH_NOTES_MARKER =
+  "{{researchNotes}}";
+
+const RESEARCH_EVIDENCE_MARKER =
+  "{{researchEvidence}}";
+
+/** How the evidence is inlined, so the prompt can be rebuilt exactly. */
+const RESEARCH_EVIDENCE_FORMAT =
+  "JSON.stringify(researchEvidence, null, 2)";
+
+/**
  * Runs the Observer, capturing the run to a numbered log file.
  *
  * Console capture swaps the global `console` methods, so it is stopped in a
@@ -58,11 +80,9 @@ const AGENT_NAME = "Weather Observer";
 export const runObserver = async (
   config: ObserverConfig,
 ) => {
-  const runLog =
-    await createAgentRunLog(AGENT_NAME);
+  const runLog = await createAgentRunLog(AGENT_NAME);
 
-  const stopConsoleCapture =
-    runLog.captureConsole();
+  const stopConsoleCapture = runLog.captureConsole();
 
   try {
     return await runObserverLogged(
@@ -84,13 +104,9 @@ const runObserverLogged = async (
   config: ObserverConfig,
   runLog: AgentRunLog,
 ) => {
-  const observerContext =
-    await getAgenticContext(config);
+  const observerContext = await getAgenticContext(config);
 
-  logAgentStart(
-    AGENT_NAME,
-    observerContext,
-  );
+  logAgentStart( AGENT_NAME, observerContext,);
 
   const observerPrompt = `
 You are the Observer agent for a market intelligence platform.
@@ -365,14 +381,28 @@ Identify meaningful developments and produce observations.
     researchEvidence,
   );
 
-  await runLog.record(
-    "evidence",
-    researchEvidence,
-  );
+  const researchEvidenceEntrySequence =
+    await runLog.record(
+      "evidence",
+      researchEvidence,
+    );
 
   // --------------------------------------------------
   // Synthesis prompt
   // --------------------------------------------------
+
+  // Extracted so the prompt and the run log reference the same value, and so
+  // the run log can strip it back out without re-serialising.
+  const researchNotes =
+    researchText ||
+    "No research notes were produced.";
+
+  const embeddedEvidence =
+    JSON.stringify(
+      researchEvidence,
+      null,
+      2,
+    );
 
   const synthesisPrompt = `
 Produce the final Observer observations.
@@ -392,17 +422,13 @@ ${config.categories.join(", ")}
 The research model's notes are:
 
 <research_notes>
-${researchText || "No research notes were produced."}
+${researchNotes}
 </research_notes>
 
 The following is the raw evidence returned by the tools during the research phase.
 
 <research_evidence>
-${JSON.stringify(
-    researchEvidence,
-    null,
-    2,
-  )}
+${embeddedEvidence}
 </research_evidence>
 
 Use the raw tool evidence as the factual basis for the final observations.
@@ -428,9 +454,37 @@ Important:
     synthesisPrompt,
   );
 
+  // The prompt actually sent is logged above in full. What is stored here is the
+  // same prompt with the two large embedded values pulled out: the notes and the
+  // evidence are each recorded as their own entry, so keeping pretty-printed
+  // copies inside this string would duplicate them as JSON-shaped text.
   await runLog.record(
     "synthesis",
-    synthesisPrompt,
+    {
+      prompt:
+        synthesisPrompt
+          .replace(
+            embeddedEvidence,
+            RESEARCH_EVIDENCE_MARKER,
+          )
+          .replace(
+            researchNotes,
+            RESEARCH_NOTES_MARKER,
+          ),
+
+      researchNotes,
+
+      researchEvidenceEntry:
+        researchEvidenceEntrySequence,
+
+      embeddedValues: {
+        [RESEARCH_NOTES_MARKER]:
+          "researchNotes, verbatim",
+
+        [RESEARCH_EVIDENCE_MARKER]:
+          `${RESEARCH_EVIDENCE_FORMAT} of the entry named by researchEvidenceEntry`,
+      },
+    },
   );
 
   // --------------------------------------------------
