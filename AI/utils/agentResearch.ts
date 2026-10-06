@@ -3,7 +3,44 @@ import {
     streamText,
   } from "ai";
   
-  const getReasoningText = (
+  /**
+   * Flattens one `reasoning_details` entry to text.
+   *
+   * Providers deliver reasoning two ways: as a single string, or as an array of
+   * streamed chunks separated by empty strings. Reading only the string form
+   * silently discarded the reasoning for every chunked response.
+   *
+   * Chunks are joined with a newline because the empty strings between them are
+   * the paragraph separators: joining with `""` would weld the paragraphs
+   * together.
+   */
+  const getReasoningDetailText = (
+    item: any,
+  ): string => {
+    if (typeof item?.text === "string") {
+      return item.text;
+    }
+
+    if (Array.isArray(item?.text)) {
+      return item.text
+        .filter(
+          (chunk: unknown) =>
+            typeof chunk === "string",
+        )
+        .join("\n");
+    }
+
+    return "";
+  };
+
+  /**
+   * Pulls the provider's reasoning text off a step.
+   *
+   * Exported because a step's reasoning is needed per step when recording a run,
+   * not only for the final one, and re-deriving it here would risk the two
+   * disagreeing about where providers hide it.
+   */
+  export const getReasoningText = (
     step: any,
   ): string | null => {
     if (
@@ -47,14 +84,10 @@ import {
           .filter(
             (item: any) =>
               item?.type ===
-                "reasoning.text" &&
-              typeof item?.text ===
-                "string",
+                "reasoning.text",
           )
-          .map(
-            (item: any) =>
-              item.text,
-          )
+          .map(getReasoningDetailText)
+          .filter(Boolean)
           .join("\n")
           .trim();
   

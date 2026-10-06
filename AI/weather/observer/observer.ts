@@ -26,6 +26,7 @@ import {
 } from "../../utils/logger.js";
 
 import {
+  getReasoningText,
   runAgentResearch,
 } from "../../utils/agentResearch.js";
 
@@ -70,35 +71,169 @@ const RESEARCH_EVIDENCE_MARKER =
 const RESEARCH_EVIDENCE_FORMAT =
   "JSON.stringify(researchEvidence, null, 2)";
 
+/** Structural view of the SDK shapes this module reads. */
+type SdkToolCall = {
+  toolCallId: string;
+  toolName: string;
+  input: unknown;
+
+  /** Reasoning is frequently attached here rather than on the step. */
+  providerMetadata?: unknown;
+};
+
+type SdkToolResult = {
+  toolCallId: string;
+  toolName: string;
+  output: unknown;
+
+  /** Reasoning is frequently attached here rather than on the step. */
+  providerMetadata?: unknown;
+};
+
+type SdkStep = {
+  stepNumber: number;
+  text?: string;
+  toolCalls?: SdkToolCall[];
+  toolResults?: SdkToolResult[];
+
+  // Reasoning fields are read dynamically by getReasoningText.
+  [key: string]: unknown;
+};
+
+/** One tool call paired with its response. */
+type RecordedToolCall = {
+  toolCallId: string;
+  tool: string;
+  input: unknown;
+  output: unknown;
+};
+
+/** One research step, holding each value exactly once. */
+type RecordedStep = {
+  stepNumber: number;
+  text: string;
+  reasoning: string | null;
+  toolCalls: RecordedToolCall[];
+};
+
 /**
- * Runs the Observer, capturing the run to a numbered log file.
+ * Reads a step's reasoning, wherever the provider put it.
  *
- * Console capture swaps the global `console` methods, so it is stopped in a
- * `finally`: a run that throws must not leave the console patched for
- * everything that runs after it.
+ * Providers differ: some expose reasoning on the step, others only on the tool
+ * call or tool result. Checking the step alone would record `null` and lose the
+ * reasoning, so each carrier is tried in turn and the first hit wins - still one
+ * copy per step.
+ */
+const stepReasoning = (
+  step: SdkStep,
+): string | null => {
+  const carriers: unknown[] = [
+    step,
+    ...(step.toolCalls ?? []),
+    ...(step.toolResults ?? []),
+  ];
+
+  for (const carrier of carriers) {
+    const found = getReasoningText(
+      carrier as SdkStep,
+    );
+
+    if (found) {
+      return found;
+    }
+  }
+
+  return null;
+};
+
+/**
+ * Collapses a research step to reasoning, query input and tool response.
+ *
+ * The SDK reports a call and its result as two objects that each repeat the
+ * tool name, the input and the provider metadata, so recording them verbatim
+ * stores the same payload four times over. Pairing them by `toolCallId` keeps
+ * each value once and drops the duplicated metadata.
+ *
+ * A result whose call was not reported is kept rather than dropped, so no tool
+ * response is ever lost.
+ */
+export const normalizeStep = (
+  step: SdkStep,
+): RecordedStep => {
+  const toolCalls = step.toolCalls ?? [];
+  const toolResults = step.toolResults ?? [];
+
+  const outputByCallId = new Map<string, unknown>();
+
+  for (const toolResult of toolResults) {
+    outputByCallId.set(
+      toolResult.toolCallId,
+      toolResult.output,
+    );
+  }
+
+  const paired: RecordedToolCall[] =
+    toolCalls.map((toolCall) => ({
+      toolCallId: toolCall.toolCallId,
+      tool: toolCall.toolName,
+      input: toolCall.input,
+      output:
+        outputByCallId.get(toolCall.toolCallId) ??
+        null,
+    }));
+
+  const pairedIds = new Set(
+    paired.map((call) => call.toolCallId),
+  );
+
+  for (const toolResult of toolResults) {
+    if (pairedIds.has(toolResult.toolCallId)) {
+      continue;
+    }
+
+    paired.push({
+      toolCallId: toolResult.toolCallId,
+      tool: toolResult.toolName,
+      input: null,
+      output: toolResult.output,
+    });
+  }
+
+  return {
+    stepNumber: step.stepNumber,
+    text: step.text ?? "",
+    reasoning: stepReasoning(step),
+    toolCalls: paired,
+  };
+};
+
+/**
+ * Runs the Observer, recording the run to a numbered log file.
+ *
+ * The console transcript is deliberately not captured. Every line the logger
+ * prints is already recorded as a structured entry - the step logs, the
+ * reasoning, the evidence, the prompt, the usage and the output all appear
+ * below - so storing it repeated the entire run a second time inside strings.
+ * That was the largest single part of the file and the least readable.
+ * `runLog.captureConsole()` remains available for an agent that has no
+ * structured equivalent.
  */
 export const runObserver = async (
   config: ObserverConfig,
 ) => {
   const runLog = await createAgentRunLog(AGENT_NAME);
 
-  const stopConsoleCapture = runLog.captureConsole();
-
-  try {
-    return await runObserverLogged(
-      config,
-      runLog,
-    );
-  } finally {
-    stopConsoleCapture();
-  }
+  return runObserverLogged(
+    config,
+    runLog,
+  );
 };
 
 /**
  * The Observer run itself.
  *
- * Split out of {@link runObserver} so console capture can wrap the whole run
- * without re-indenting it.
+ * Split out of {@link runObserver} so the run-log handle stays an explicit
+ * dependency rather than something reached for from module scope.
  */
 const runObserverLogged = async (
   config: ObserverConfig,
@@ -316,6 +451,8 @@ Identify meaningful developments and produce observations.
   // Research
   // --------------------------------------------------
 
+  const stepEntrySequences: number[] = [];
+
   const {
     researchText,
     researchSteps,
@@ -346,14 +483,11 @@ Identify meaningful developments and produce observations.
           step,
         );
 
-        await runLog.record(
-          "step",
-          {
-            stepNumber: step.stepNumber,
-            text: step.text,
-            toolCalls: step.toolCalls,
-            toolResults: step.toolResults,
-          },
+        stepEntrySequences.push(
+          await runLog.record(
+            "step",
+            normalizeStep(step),
+          ),
         );
       },
     });
@@ -381,11 +515,9 @@ Identify meaningful developments and produce observations.
     researchEvidence,
   );
 
-  const researchEvidenceEntrySequence =
-    await runLog.record(
-      "evidence",
-      researchEvidence,
-    );
+  // No `evidence` entry: every value it holds is already recorded once in the
+  // `step` entries above. Storing it again doubled the step payloads for
+  // nothing.
 
   // --------------------------------------------------
   // Synthesis prompt
@@ -455,9 +587,8 @@ Important:
   );
 
   // The prompt actually sent is logged above in full. What is stored here is the
-  // same prompt with the two large embedded values pulled out: the notes and the
-  // evidence are each recorded as their own entry, so keeping pretty-printed
-  // copies inside this string would duplicate them as JSON-shaped text.
+  // same prompt with the two large embedded values pulled out: the notes, and
+  // the evidence, which is already recorded once across the step entries.
   await runLog.record(
     "synthesis",
     {
@@ -474,15 +605,15 @@ Important:
 
       researchNotes,
 
-      researchEvidenceEntry:
-        researchEvidenceEntrySequence,
+      researchEvidenceEntries:
+        stepEntrySequences,
 
       embeddedValues: {
         [RESEARCH_NOTES_MARKER]:
           "researchNotes, verbatim",
 
         [RESEARCH_EVIDENCE_MARKER]:
-          `${RESEARCH_EVIDENCE_FORMAT} of the entry named by researchEvidenceEntry`,
+          `${RESEARCH_EVIDENCE_FORMAT} over the entries named by researchEvidenceEntries, in order`,
       },
     },
   );

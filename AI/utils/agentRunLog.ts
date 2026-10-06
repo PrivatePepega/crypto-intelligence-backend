@@ -524,7 +524,15 @@ export type AgentRunDocument = {
   entryCount: number;
   entries: AgentRunEntry[];
   response: AgentRunText | null;
-  console: AgentRunText[];
+
+  /**
+   * Console transcript, present only when console capture was enabled.
+   *
+   * Omitted rather than written empty: an agent whose every log line is also
+   * recorded as a structured entry gains nothing from a transcript that only
+   * repeats those entries.
+   */
+  console?: AgentRunText[];
 };
 
 export type AgentRunLog = {
@@ -585,31 +593,38 @@ export const createAgentRunLog = async (
 
   let relativeFile = "";
 
-  const buildDocument = (): AgentRunDocument => ({
-    agentName,
-    runNumber,
-    file: relativeFile,
-    startedAt,
-    updatedAt: new Date().toISOString(),
-    entryCount: entries.length,
-
+  const buildDocument = (): AgentRunDocument => {
     // Applied here rather than at capture time, so the transcript keeps one
     // entry per console call and only the written form is split into lines.
-    entries: normalizeMultiline(
-      entries,
-    ) as AgentRunEntry[],
+    const document: AgentRunDocument = {
+      agentName,
+      runNumber,
+      file: relativeFile,
+      startedAt,
+      updatedAt: new Date().toISOString(),
+      entryCount: entries.length,
 
-    response:
-      response === null
-        ? null
-        : (normalizeMultiline(
-            response,
-          ) as AgentRunText),
+      entries: normalizeMultiline(
+        entries,
+      ) as AgentRunEntry[],
 
-    console: normalizeMultiline(
-      transcript,
-    ) as AgentRunText[],
-  });
+      response:
+        response === null
+          ? null
+          : (normalizeMultiline(
+              response,
+            ) as AgentRunText),
+    };
+
+    if (transcript.length > 0) {
+      document.console =
+        normalizeMultiline(
+          transcript,
+        ) as AgentRunText[];
+    }
+
+    return document;
+  };
 
   // Claim the file name before anything is recorded, so ownership is settled up
   // front and every later write can safely overwrite its own file.
