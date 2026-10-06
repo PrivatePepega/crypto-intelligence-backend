@@ -1,5 +1,4 @@
 import {
-  isStepCount,
   streamText,
 } from "ai";
 
@@ -15,29 +14,26 @@ import {
 } from "../../utils/general.tools.js";
 
 import {
-  logObserverStart,
-  logObserverPrompt,
-  logResearchEvidence,
-  logSynthesisStart,
-  logObserverUsage,
-  logObserverToolUsage,
-  logObserverOutput,
-  logObservableReasoning,
-} from "./observer.logger.js";
+  logAgentStart,
+  logAgentPrompt,
+  logAgentResearchEvidence,
+  logAgentSynthesisStart,
+  logAgentUsage,
+  logAgentToolUsage,
+  logAgentOutput,
+  logAgentReasoning,
+  logAgentStep,
+} from "../../utils/logger.js";
 
 import {
-  runObserverResearch,
-} from "./observer.research.js";
-
-// --------------------------------------------------
-// Observer limits
-// --------------------------------------------------
-
-const MAX_AGENT_STEPS = 5;
+  runAgentResearch,
+} from "../../utils/agentResearch.js";
 
 // --------------------------------------------------
 // Observer
 // --------------------------------------------------
+
+const MAX_AGENT_STEPS = 5;
 
 export const runObserver = async (
   config: ObserverConfig,
@@ -45,7 +41,8 @@ export const runObserver = async (
   const observerContext =
     await getObserverContext(config);
 
-  logObserverStart(
+  logAgentStart(
+    "Observer",
     observerContext,
   );
 
@@ -222,7 +219,8 @@ Identify meaningful developments and produce observations.
   // Prompt diagnostics
   // --------------------------------------------------
 
-  logObserverPrompt(
+  logAgentPrompt(
+    "Observer",
     prompt,
   );
 
@@ -237,17 +235,37 @@ Identify meaningful developments and produce observations.
     researchEvidence,
     lastReasoningText,
   } =
-    await runObserverResearch({
-      config,
-      observerPrompt,
+    await runAgentResearch({
+      model:
+        models.openrouter,
+
+      instructions:
+        observerPrompt,
+
       prompt,
+
+      tools:
+        getObserverTools(config),
+
+      maxSteps:
+        MAX_AGENT_STEPS,
+
+      onStepEnd: async (
+        step,
+      ) => {
+        logAgentStep(
+          "Observer",
+          step,
+        );
+      },
     });
 
   // --------------------------------------------------
   // Final observable reasoning
   // --------------------------------------------------
 
-  logObservableReasoning(
+  logAgentReasoning(
+    "Observer",
     lastReasoningText,
   );
 
@@ -255,7 +273,8 @@ Identify meaningful developments and produce observations.
   // Research evidence diagnostics
   // --------------------------------------------------
 
-  logResearchEvidence(
+  logAgentResearchEvidence(
+    "Observer",
     researchEvidence,
   );
 
@@ -312,7 +331,8 @@ Important:
   // Synthesis diagnostics
   // --------------------------------------------------
 
-  logSynthesisStart(
+  logAgentSynthesisStart(
+    "Observer",
     synthesisPrompt,
   );
 
@@ -322,7 +342,8 @@ Important:
 
   const synthesisResult =
     streamText({
-      model: models.openrouter,
+      model:
+        models.openrouter,
 
       instructions:
         finalObserverPrompt,
@@ -351,18 +372,25 @@ Important:
   // Final diagnostics
   // --------------------------------------------------
 
-  logObserverUsage({
+  logAgentUsage({
+    agentName:
+      "Observer",
+
     researchUsage,
+
     synthesisUsage,
+
     researchSteps:
       researchSteps.length,
   });
 
-  logObserverToolUsage(
+  logAgentToolUsage(
+    "Observer",
     researchSteps,
   );
 
-  logObserverOutput(
+  logAgentOutput(
+    "Observer",
     finalText,
   );
 

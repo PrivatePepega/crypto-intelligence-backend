@@ -2,28 +2,38 @@ import type {
     LanguageModelUsage,
   } from "ai";
   
-  export const logObserverStart = (
-    observerContext: string,
+  // --------------------------------------------------
+  // Agent start
+  // --------------------------------------------------
+  
+  export const logAgentStart = (
+    agentName: string,
+    context: string,
   ) => {
     console.log("");
     console.log(
       "==============================================",
     );
     console.log(
-      "Observer Starting",
+      `${agentName} Starting`,
     );
     console.log(
       "==============================================",
     );
   
     console.log(
-      `Observer context characters: ${
-        observerContext.length
+      `${agentName} context characters: ${
+        context.length
       }`,
     );
   };
   
-  export const logObserverPrompt = (
+  // --------------------------------------------------
+  // Agent prompt
+  // --------------------------------------------------
+  
+  export const logAgentPrompt = (
+    agentName: string,
     prompt: string,
   ) => {
     console.log("");
@@ -31,7 +41,7 @@ import type {
       "----------------------------------------------",
     );
     console.log(
-      "Observer Prompt",
+      `${agentName} Prompt`,
     );
     console.log(
       "----------------------------------------------",
@@ -40,7 +50,12 @@ import type {
     console.log(prompt);
   };
   
-  export const logObserverStep = (
+  // --------------------------------------------------
+  // Agent research step
+  // --------------------------------------------------
+  
+  export const logAgentStep = (
+    agentName: string,
     step: any,
   ) => {
     console.log("");
@@ -48,7 +63,7 @@ import type {
       "----------------------------------------------",
     );
     console.log(
-      `Observer Research Step ${
+      `${agentName} Research Step ${
         step.stepNumber + 1
       }`,
     );
@@ -95,13 +110,18 @@ import type {
   
     console.log("");
     console.log(
-      `Observer Research Step ${
+      `${agentName} Research Step ${
         step.stepNumber + 1
       } complete.`,
     );
   };
   
-  export const logObservableReasoning = (
+  // --------------------------------------------------
+  // Observable reasoning
+  // --------------------------------------------------
+  
+  export const logAgentReasoning = (
+    agentName: string,
     reasoningText: string | null,
   ) => {
     if (!reasoningText) {
@@ -113,7 +133,7 @@ import type {
       "----------------------------------------------",
     );
     console.log(
-      "Observable reasoning",
+      `${agentName} Observable Reasoning`,
     );
     console.log(
       "----------------------------------------------",
@@ -122,7 +142,12 @@ import type {
     console.log(reasoningText);
   };
   
-  export const logResearchEvidence = (
+  // --------------------------------------------------
+  // Research evidence
+  // --------------------------------------------------
+  
+  export const logAgentResearchEvidence = (
+    agentName: string,
     researchEvidence: unknown,
   ) => {
     console.log("");
@@ -130,7 +155,7 @@ import type {
       "----------------------------------------------",
     );
     console.log(
-      "Research Evidence",
+      `${agentName} Research Evidence`,
     );
     console.log(
       "----------------------------------------------",
@@ -145,7 +170,12 @@ import type {
     );
   };
   
-  export const logSynthesisStart = (
+  // --------------------------------------------------
+  // Synthesis start
+  // --------------------------------------------------
+  
+  export const logAgentSynthesisStart = (
+    agentName: string,
     synthesisPrompt: string,
   ) => {
     console.log("");
@@ -153,7 +183,7 @@ import type {
       "==============================================",
     );
     console.log(
-      "Final Synthesis Starting",
+      `${agentName} Final Synthesis Starting`,
     );
     console.log(
       "==============================================",
@@ -172,11 +202,17 @@ import type {
     );
   };
   
-  export const logObserverUsage = ({
+  // --------------------------------------------------
+  // Usage
+  // --------------------------------------------------
+  
+  export const logAgentUsage = ({
+    agentName,
     researchUsage,
     synthesisUsage,
     researchSteps,
   }: {
+    agentName: string;
     researchUsage: LanguageModelUsage;
     synthesisUsage: LanguageModelUsage;
     researchSteps: number;
@@ -186,7 +222,7 @@ import type {
       "==============================================",
     );
     console.log(
-      "Observer Usage",
+      `${agentName} Usage`,
     );
     console.log(
       "==============================================",
@@ -229,7 +265,12 @@ import type {
     );
   };
   
-  export const logObserverToolUsage = (
+  // --------------------------------------------------
+  // Tool usage
+  // --------------------------------------------------
+  
+  export const logAgentToolUsage = (
+    agentName: string,
     researchSteps: any[],
   ) => {
     console.log("");
@@ -237,7 +278,7 @@ import type {
       "==============================================",
     );
     console.log(
-      "Observer Tool Usage",
+      `${agentName} Tool Usage`,
     );
     console.log(
       "==============================================",
@@ -254,7 +295,12 @@ import type {
     }
   };
   
-  export const logObserverOutput = (
+  // --------------------------------------------------
+  // Final output
+  // --------------------------------------------------
+  
+  export const logAgentOutput = (
+    agentName: string,
     finalText: string,
   ) => {
     console.log("");
@@ -262,7 +308,7 @@ import type {
       "==============================================",
     );
     console.log(
-      "Observer Output",
+      `${agentName} Output`,
     );
     console.log(
       "==============================================",

@@ -1,53 +1,7 @@
 import {
     isStepCount,
     streamText,
-    type LanguageModelUsage,
   } from "ai";
-  
-  import { models } from "../../../AI/providers/model.js";
-  
-  import {
-    type ObserverConfig,
-  } from "./observer.config.js";
-  
-  import {
-    getObserverTools,
-  } from "../../utils/general.tools.js";
-  
-  import {
-    logObserverStep,
-  } from "./observer.logger.js";
-  
-  const MAX_AGENT_STEPS = 5;
-  
-  type ResearchEvidence = {
-    step: number;
-    text: string | null;
-    toolCalls: {
-      tool: string;
-      arguments: unknown;
-    }[];
-    toolResults: {
-      tool: string;
-      result: unknown;
-    }[];
-  };
-  
-  type ObserverResearchResult = {
-    researchText: string;
-    researchSteps: Awaited<
-      ReturnType<typeof getResearchSteps>
-    >;
-    researchUsage: LanguageModelUsage;
-    researchEvidence: ResearchEvidence[];
-    lastReasoningText: string | null;
-  };
-  
-  const getResearchSteps = async (
-    result: ReturnType<typeof streamText>,
-  ) => {
-    return await result.steps;
-  };
   
   const getReasoningText = (
     step: any,
@@ -112,44 +66,62 @@ import {
     return null;
   };
   
-  export const runObserverResearch = async ({
-    config,
-    observerPrompt,
+  export const runAgentResearch = async ({
+    model,
+    instructions,
     prompt,
+    tools,
+    maxSteps,
+    onStepEnd,
   }: {
-    config: ObserverConfig;
-    observerPrompt: string;
+    model: Parameters<
+      typeof streamText
+    >[0]["model"];
+  
+    instructions: string;
+  
     prompt: string;
-  }): Promise<ObserverResearchResult> => {
+  
+    tools?: Parameters<
+      typeof streamText
+    >[0]["tools"];
+  
+    maxSteps: number;
+  
+    onStepEnd?: Parameters<
+      typeof streamText
+    >[0]["onStepEnd"];
+  }) => {
+    const researchOptions = {
+      model,
+      instructions,
+      prompt,
+      stopWhen:
+        isStepCount(maxSteps),
+    } as Parameters<
+      typeof streamText
+    >[0];
+  
+    if (tools) {
+      researchOptions.tools =
+        tools;
+    }
+  
+    if (onStepEnd) {
+      researchOptions.onStepEnd =
+        onStepEnd;
+    }
+  
     const researchResult =
-      streamText({
-        model: models.openrouter,
-  
-        instructions:
-          observerPrompt,
-  
-        prompt,
-  
-        tools:
-          getObserverTools(config),
-  
-        stopWhen:
-          isStepCount(
-            MAX_AGENT_STEPS,
-          ),
-  
-        onStepEnd: async (step) => {
-          logObserverStep(step);
-        },
-      });
+      streamText(
+        researchOptions,
+      );
   
     const researchText =
       await researchResult.text;
   
     const researchSteps =
-      await getResearchSteps(
-        researchResult,
-      );
+      await researchResult.steps;
   
     const researchUsage =
       await researchResult.usage;
