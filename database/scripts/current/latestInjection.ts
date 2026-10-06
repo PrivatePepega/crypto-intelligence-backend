@@ -152,137 +152,137 @@ import { injectCftcMicroEthereumLatest } from "../../injection/current/cftc_micr
 const runLatestInjection = async () => {
   console.log("Latest injection initialized");
 
-  // const fedRates = await getFederalFundsRate("latest");
-  // await injectFederalFundsRateLatest(fedRates);
+  const fedRates = await getFederalFundsRate("latest");
+  await injectFederalFundsRateLatest(fedRates);
 
-  // const twoYearTYields = await getTwoYearTreasuryYield("latest");
-  // await injectTwoYearTreasuryYieldLatest(twoYearTYields);
+  const twoYearTYields = await getTwoYearTreasuryYield("latest");
+  await injectTwoYearTreasuryYieldLatest(twoYearTYields);
 
-  // const tenYeatTYields = await getTenYearTreasuryYield("latest")
-  // await injectTenYearTreasuryYieldLatest(tenYeatTYields)
+  const tenYeatTYields = await getTenYearTreasuryYield("latest")
+  await injectTenYearTreasuryYieldLatest(tenYeatTYields)
 
-  // const tenYearBreakevenInflation = await getTenYearBreakevenInflation("latest")
-  // await injectTenYearBreakevenInflationLatest(tenYearBreakevenInflation)
+  const tenYearBreakevenInflation = await getTenYearBreakevenInflation("latest")
+  await injectTenYearBreakevenInflationLatest(tenYearBreakevenInflation)
 
-  // const realTenYearTreasuryYield = await getRealTenYearTreasuryYield("latest")
-  // await injectRealTenYearTreasuryYieldLatest(realTenYearTreasuryYield)
+  const realTenYearTreasuryYield = await getRealTenYearTreasuryYield("latest")
+  await injectRealTenYearTreasuryYieldLatest(realTenYearTreasuryYield)
 
-  // const consumerPriceIndex = await getCpi("latest")
-  // await injectConsumerPriceIndexLatest(consumerPriceIndex)
+  const consumerPriceIndex = await getCpi("latest")
+  await injectConsumerPriceIndexLatest(consumerPriceIndex)
 
-  // const coreCPI = await getCoreCpi("latest")
-  // await injectCoreConsumerPriceIndexLatest(coreCPI)
+  const coreCPI = await getCoreCpi("latest")
+  await injectCoreConsumerPriceIndexLatest(coreCPI)
 
-  // const pce = await getPce("latest")
-  // await injectPersonalConsumptionExpendituresLatest(pce)
+  const pce = await getPce("latest")
+  await injectPersonalConsumptionExpendituresLatest(pce)
 
-  // const corePce = await getCorePce("latest")
-  // await injectCorePersonalConsumptionExpendituresLatest(corePce)
+  const corePce = await getCorePce("latest")
+  await injectCorePersonalConsumptionExpendituresLatest(corePce)
 
-  // const ppi = await getPpi("latest")
-  // await injectProducerPriceIndexLatest(ppi)
+  const ppi = await getPpi("latest")
+  await injectProducerPriceIndexLatest(ppi)
 
-  // const fiveYearInflationExpectations = await getFiveYearInflationExpectations("latest")
-  // await injectFiveYearInflationExpectationsLatest(fiveYearInflationExpectations)
+  const fiveYearInflationExpectations = await getFiveYearInflationExpectations("latest")
+  await injectFiveYearInflationExpectationsLatest(fiveYearInflationExpectations)
 
-  // const unemploymentRate = await getUnemploymentRate("latest")
-  // await injectUnemploymentRateLatest(unemploymentRate)
+  const unemploymentRate = await getUnemploymentRate("latest")
+  await injectUnemploymentRateLatest(unemploymentRate)
 
-  // const laborForceParticipation = await getLaborForceParticipation("latest")
-  // await injectLaborForceParticipationLatest(laborForceParticipation)
+  const laborForceParticipation = await getLaborForceParticipation("latest")
+  await injectLaborForceParticipationLatest(laborForceParticipation)
 
-  // const nonFarmPayRolls = await getNonfarmPayrolls("latest")
-  // await injectNonfarmPayrollsLatest(nonFarmPayRolls)
+  const nonFarmPayRolls = await getNonfarmPayrolls("latest")
+  await injectNonfarmPayrollsLatest(nonFarmPayRolls)
 
-  // const averageHourlyEarning = await getAverageHourlyEarnings("latest")
-  // await injectAverageHourlyEarningsLatest(averageHourlyEarning)
+  const averageHourlyEarning = await getAverageHourlyEarnings("latest")
+  await injectAverageHourlyEarningsLatest(averageHourlyEarning)
 
-  // const jobOpenings = await getJobOpenings("latest")
-  // await injectJobOpeningsLatest(jobOpenings)
+  const jobOpenings = await getJobOpenings("latest")
+  await injectJobOpeningsLatest(jobOpenings)
 
-  // const initialJoblessClaims = await getInitialJoblessClaims("latest")
-  // await injectInitialJoblessClaimsLatest(initialJoblessClaims)
+  const initialJoblessClaims = await getInitialJoblessClaims("latest")
+  await injectInitialJoblessClaimsLatest(initialJoblessClaims)
 
-  // const realGDP = await getRealGdp("latest")
-  // await injectRealGdpLatest(realGDP)
+  const realGDP = await getRealGdp("latest")
+  await injectRealGdpLatest(realGDP)
 
-  // const realGDPGrowth = await getRealGdpGrowth("latest")
-  // await injectRealGdpGrowthLatest(realGDPGrowth)
+  const realGDPGrowth = await getRealGdpGrowth("latest")
+  await injectRealGdpGrowthLatest(realGDPGrowth)
 
-  // const industrialProduction = await getIndustrialProduction("latest")
-  // await injectIndustrialProductionLatest(industrialProduction)
+  const industrialProduction = await getIndustrialProduction("latest")
+  await injectIndustrialProductionLatest(industrialProduction)
 
-  // const retailSales = await getRetailSales("latest")
-  // await injectRetailSalesLatest(retailSales)
+  const retailSales = await getRetailSales("latest")
+  await injectRetailSalesLatest(retailSales)
 
-  // const personalIncome = await getPersonalIncome("latest")
-  // await injectPersonalIncomeLatest(personalIncome)
+  const personalIncome = await getPersonalIncome("latest")
+  await injectPersonalIncomeLatest(personalIncome)
 
-  // const m2MoneySupply = await getM2MoneySupply("latest")
-  // await injectM2MoneySupplyLatest(m2MoneySupply)
+  const m2MoneySupply = await getM2MoneySupply("latest")
+  await injectM2MoneySupplyLatest(m2MoneySupply)
 
-  // const fedTotalAssets = await getFedTotalAssets("latest")
-  // await injectFedTotalAssetsLatest(fedTotalAssets)
+  const fedTotalAssets = await getFedTotalAssets("latest")
+  await injectFedTotalAssetsLatest(fedTotalAssets)
 
-  // const reserveBalances = await getReserveBalances("latest")
-  // await injectReserveBalancesLatest(reserveBalances)
+  const reserveBalances = await getReserveBalances("latest")
+  await injectReserveBalancesLatest(reserveBalances)
 
-  // const reverseRepoUsage = await getReverseRepoUsage("latest")
-  // await injectReverseRepoUsageLatest(reverseRepoUsage)
+  const reverseRepoUsage = await getReverseRepoUsage("latest")
+  await injectReverseRepoUsageLatest(reverseRepoUsage)
 
-  // const vix = await getVix("latest")
-  // await injectVixLatest(vix)
+  const vix = await getVix("latest")
+  await injectVixLatest(vix)
 
-  // const highYieldCreditSpread = await getHighYieldCreditSpread("latest")
-  // await injectHighYieldCreditSpreadLatest(highYieldCreditSpread)
+  const highYieldCreditSpread = await getHighYieldCreditSpread("latest")
+  await injectHighYieldCreditSpreadLatest(highYieldCreditSpread)
 
-  // const investmentGradeCreditSpread = await getInvestmentGradeCreditSpread("latest")
-  // await injectInvestmentGradeCreditSpreadLatest(investmentGradeCreditSpread)
+  const investmentGradeCreditSpread = await getInvestmentGradeCreditSpread("latest")
+  await injectInvestmentGradeCreditSpreadLatest(investmentGradeCreditSpread)
 
-  // const consumerSentiment = await getConsumerSentiment("latest")
-  // await injectConsumerSentimentLatest(consumerSentiment)
+  const consumerSentiment = await getConsumerSentiment("latest")
+  await injectConsumerSentimentLatest(consumerSentiment)
 
-  // const housingStarts = await getHousingStarts("latest")
-  // await injectHousingStartsLatest(housingStarts)
+  const housingStarts = await getHousingStarts("latest")
+  await injectHousingStartsLatest(housingStarts)
 
-  // const buildingPermits = await getBuildingPermits("latest")
-  // await injectBuildingPermitsLatest(buildingPermits)
+  const buildingPermits = await getBuildingPermits("latest")
+  await injectBuildingPermitsLatest(buildingPermits)
 
-  // const existingHomeSales = await getExistingHomeSales("latest")
-  // await injectExistingHomeSalesLatest(existingHomeSales)
+  const existingHomeSales = await getExistingHomeSales("latest")
+  await injectExistingHomeSalesLatest(existingHomeSales)
 
-  // const mortgageRate = await getMortgageRate("latest")
-  // await injectMortgageRateLatest(mortgageRate)
+  const mortgageRate = await getMortgageRate("latest")
+  await injectMortgageRateLatest(mortgageRate)
 
-  // const homePriceIndex = await getHomePriceIndex("latest")
-  // await injectHomePriceIndexLatest(homePriceIndex)
+  const homePriceIndex = await getHomePriceIndex("latest")
+  await injectHomePriceIndexLatest(homePriceIndex)
 
-  // const sp500 = await getSp500("latest")
-  // await injectSp500Latest(sp500)
+  const sp500 = await getSp500("latest")
+  await injectSp500Latest(sp500)
 
-  // const nasdaqComposite = await getNasdaqComposite("latest")
-  // await injectNasdaqCompositeLatest(nasdaqComposite)
+  const nasdaqComposite = await getNasdaqComposite("latest")
+  await injectNasdaqCompositeLatest(nasdaqComposite)
 
-  // const dowJones = await getDowJones("latest")
-  // await injectDowJonesLatest(dowJones)
+  const dowJones = await getDowJones("latest")
+  await injectDowJonesLatest(dowJones)
 
-  // const broadUsdIndex = await getBroadUsdIndex("latest")
-  // await injectBroadUsdIndexLatest(broadUsdIndex)
+  const broadUsdIndex = await getBroadUsdIndex("latest")
+  await injectBroadUsdIndexLatest(broadUsdIndex)
 
-  // const realBroadUsdIndex = await getRealBroadUsdIndex("latest")
-  // await injectRealBroadUsdIndexLatest(realBroadUsdIndex)
+  const realBroadUsdIndex = await getRealBroadUsdIndex("latest")
+  await injectRealBroadUsdIndexLatest(realBroadUsdIndex)
 
-  // const advancedEconomyUsdIndex = await getAdvancedEconomyUsdIndex("latest")
-  // await injectAdvancedEconomyUsdIndexLatest(advancedEconomyUsdIndex)
+  const advancedEconomyUsdIndex = await getAdvancedEconomyUsdIndex("latest")
+  await injectAdvancedEconomyUsdIndexLatest(advancedEconomyUsdIndex)
 
-  // const emergingMarketUsdIndex = await getEmergingMarketUsdIndex("latest")
-  // await injectEmergingMarketUsdIndexLatest(emergingMarketUsdIndex)
+  const emergingMarketUsdIndex = await getEmergingMarketUsdIndex("latest")
+  await injectEmergingMarketUsdIndexLatest(emergingMarketUsdIndex)
 
-  // const threeMonthTreasury = await get3mTreasury("latest")
-  // await injectThreeMonthTreasuryLatest(threeMonthTreasury)
+  const threeMonthTreasury = await get3mTreasury("latest")
+  await injectThreeMonthTreasuryLatest(threeMonthTreasury)
 
-  // const fiveYearTreasury = await get5yTreasury("latest")
-  // await injectFiveYearTreasuryLatest(fiveYearTreasury)
+  const fiveYearTreasury = await get5yTreasury("latest")
+  await injectFiveYearTreasuryLatest(fiveYearTreasury)
 
   const { latest: fxData } = await getFxData();
 
@@ -460,185 +460,185 @@ const runLatestInjection = async () => {
     observations: [aluminumObservation],
   })
 
-  // const cnnIndicators = await getCnnFearGreed("latest");
+  const cnnIndicators = await getCnnFearGreed("latest");
 
-  // const cnnFearGreed = cnnIndicators.cnn_fear_greed;
-  // const cnnFearGreedCurrent = cnnFearGreed?.historical;
-  // if (!cnnFearGreed || !cnnFearGreedCurrent) {
-  //   throw new Error("No CNN Fear & Greed current observation found");
-  // }
-  // await injectCnnFearGreedLatest({
-  //   indicator: cnnFearGreed.indicator,
-  //   observations: [cnnFearGreedCurrent],
-  // });
+  const cnnFearGreed = cnnIndicators.cnn_fear_greed;
+  const cnnFearGreedCurrent = cnnFearGreed?.historical;
+  if (!cnnFearGreed || !cnnFearGreedCurrent) {
+    throw new Error("No CNN Fear & Greed current observation found");
+  }
+  await injectCnnFearGreedLatest({
+    indicator: cnnFearGreed.indicator,
+    observations: [cnnFearGreedCurrent],
+  });
 
-  // const cnnMarketMomentumSp125 =
-  //   cnnIndicators.cnn_market_momentum_sp125;
-  // const cnnMarketMomentumSp125Current =
-  //   cnnMarketMomentumSp125?.historical;
-  // if (!cnnMarketMomentumSp125 || !cnnMarketMomentumSp125Current) {
-  //   throw new Error(
-  //     "No CNN Market Momentum S&P 125 current observation found",
-  //   );
-  // }
-  // await injectCnnMarketMomentumSp125Latest({
-  //   indicator: cnnMarketMomentumSp125.indicator,
-  //   observations: [cnnMarketMomentumSp125Current],
-  // });
+  const cnnMarketMomentumSp125 =
+    cnnIndicators.cnn_market_momentum_sp125;
+  const cnnMarketMomentumSp125Current =
+    cnnMarketMomentumSp125?.historical;
+  if (!cnnMarketMomentumSp125 || !cnnMarketMomentumSp125Current) {
+    throw new Error(
+      "No CNN Market Momentum S&P 125 current observation found",
+    );
+  }
+  await injectCnnMarketMomentumSp125Latest({
+    indicator: cnnMarketMomentumSp125.indicator,
+    observations: [cnnMarketMomentumSp125Current],
+  });
 
-  // const cnnStockPriceBreadth = cnnIndicators.cnn_stock_price_breadth;
-  // const cnnStockPriceBreadthCurrent = cnnStockPriceBreadth?.historical;
-  // if (!cnnStockPriceBreadth || !cnnStockPriceBreadthCurrent) {
-  //   throw new Error(
-  //     "No CNN Stock Price Breadth current observation found",
-  //   );
-  // }
-  // await injectCnnStockPriceBreadthLatest({
-  //   indicator: cnnStockPriceBreadth.indicator,
-  //   observations: [cnnStockPriceBreadthCurrent],
-  // });
+  const cnnStockPriceBreadth = cnnIndicators.cnn_stock_price_breadth;
+  const cnnStockPriceBreadthCurrent = cnnStockPriceBreadth?.historical;
+  if (!cnnStockPriceBreadth || !cnnStockPriceBreadthCurrent) {
+    throw new Error(
+      "No CNN Stock Price Breadth current observation found",
+    );
+  }
+  await injectCnnStockPriceBreadthLatest({
+    indicator: cnnStockPriceBreadth.indicator,
+    observations: [cnnStockPriceBreadthCurrent],
+  });
 
-  // const cnnPutCallOptions = cnnIndicators.cnn_put_call_options;
-  // const cnnPutCallOptionsCurrent = cnnPutCallOptions?.historical;
-  // if (!cnnPutCallOptions || !cnnPutCallOptionsCurrent) {
-  //   throw new Error(
-  //     "No CNN Put/Call Options current observation found",
-  //   );
-  // }
-  // await injectCnnPutCallOptionsLatest({
-  //   indicator: cnnPutCallOptions.indicator,
-  //   observations: [cnnPutCallOptionsCurrent],
-  // });
+  const cnnPutCallOptions = cnnIndicators.cnn_put_call_options;
+  const cnnPutCallOptionsCurrent = cnnPutCallOptions?.historical;
+  if (!cnnPutCallOptions || !cnnPutCallOptionsCurrent) {
+    throw new Error(
+      "No CNN Put/Call Options current observation found",
+    );
+  }
+  await injectCnnPutCallOptionsLatest({
+    indicator: cnnPutCallOptions.indicator,
+    observations: [cnnPutCallOptionsCurrent],
+  });
 
-  // const cnnMarketVolatilityVix50 =
-  //   cnnIndicators.cnn_market_volatility_vix_50;
-  // const cnnMarketVolatilityVix50Current =
-  //   cnnMarketVolatilityVix50?.historical;
-  // if (!cnnMarketVolatilityVix50 || !cnnMarketVolatilityVix50Current) {
-  //   throw new Error(
-  //     "No CNN Market Volatility VIX 50 current observation found",
-  //   );
-  // }
-  // await injectCnnMarketVolatilityVix50Latest({
-  //   indicator: cnnMarketVolatilityVix50.indicator,
-  //   observations: [cnnMarketVolatilityVix50Current],
-  // });
+  const cnnMarketVolatilityVix50 =
+    cnnIndicators.cnn_market_volatility_vix_50;
+  const cnnMarketVolatilityVix50Current =
+    cnnMarketVolatilityVix50?.historical;
+  if (!cnnMarketVolatilityVix50 || !cnnMarketVolatilityVix50Current) {
+    throw new Error(
+      "No CNN Market Volatility VIX 50 current observation found",
+    );
+  }
+  await injectCnnMarketVolatilityVix50Latest({
+    indicator: cnnMarketVolatilityVix50.indicator,
+    observations: [cnnMarketVolatilityVix50Current],
+  });
 
-  // const cnnSafeHavenDemand = cnnIndicators.cnn_safe_haven_demand;
-  // const cnnSafeHavenDemandCurrent = cnnSafeHavenDemand?.historical;
-  // if (!cnnSafeHavenDemand || !cnnSafeHavenDemandCurrent) {
-  //   throw new Error(
-  //     "No CNN Safe Haven Demand current observation found",
-  //   );
-  // }
-  // await injectCnnSafeHavenDemandLatest({
-  //   indicator: cnnSafeHavenDemand.indicator,
-  //   observations: [cnnSafeHavenDemandCurrent],
-  // });
+  const cnnSafeHavenDemand = cnnIndicators.cnn_safe_haven_demand;
+  const cnnSafeHavenDemandCurrent = cnnSafeHavenDemand?.historical;
+  if (!cnnSafeHavenDemand || !cnnSafeHavenDemandCurrent) {
+    throw new Error(
+      "No CNN Safe Haven Demand current observation found",
+    );
+  }
+  await injectCnnSafeHavenDemandLatest({
+    indicator: cnnSafeHavenDemand.indicator,
+    observations: [cnnSafeHavenDemandCurrent],
+  });
 
-  // const aaiiSentiment = await getAaiiSentiment("latest");
-  // const aaiiSentimentCurrent = aaiiSentiment.historical;
+  const aaiiSentiment = await getAaiiSentiment("latest");
+  const aaiiSentimentCurrent = aaiiSentiment.historical;
 
-  // if (!aaiiSentimentCurrent) {
-  //   throw new Error("No AAII Sentiment current observation found");
-  // }
+  if (!aaiiSentimentCurrent) {
+    throw new Error("No AAII Sentiment current observation found");
+  }
 
-  // await injectAaiiSentimentLatest(aaiiSentiment);
+  await injectAaiiSentimentLatest(aaiiSentiment);
 
-  // const cftcTff = await getCftcTff("latest");
+  const cftcTff = await getCftcTff("latest");
 
-  // if (cftcTff.observations.length === 0) {
-  //   throw new Error("No CFTC TFF observations found");
-  // }
+  if (cftcTff.observations.length === 0) {
+    throw new Error("No CFTC TFF observations found");
+  }
 
-  // await injectCftcBitcoinLatest(cftcTff);
-  // await injectCftcSp500Latest(cftcTff);
-  // await injectCftcNasdaqLatest(cftcTff);
-  // await injectCftcUst2yNoteLatest(cftcTff);
-  // await injectCftcUst10yNoteLatest(cftcTff);
-  // await injectCftcEuroFxLatest(cftcTff);
-  // await injectCftcJapaneseYenLatest(cftcTff);
-  // await injectCftcUsdIndexLatest(cftcTff);
-  // await injectCftcEthereumLatest(cftcTff);
-  // await injectCftcMicroEthereumLatest(cftcTff);
+  await injectCftcBitcoinLatest(cftcTff);
+  await injectCftcSp500Latest(cftcTff);
+  await injectCftcNasdaqLatest(cftcTff);
+  await injectCftcUst2yNoteLatest(cftcTff);
+  await injectCftcUst10yNoteLatest(cftcTff);
+  await injectCftcEuroFxLatest(cftcTff);
+  await injectCftcJapaneseYenLatest(cftcTff);
+  await injectCftcUsdIndexLatest(cftcTff);
+  await injectCftcEthereumLatest(cftcTff);
+  await injectCftcMicroEthereumLatest(cftcTff);
 
 
-  // const russell2000 = await getRussell2000("latest");
-  // await injectRussell2000Latest(russell2000);
+  const russell2000 = await getRussell2000("latest");
+  await injectRussell2000Latest(russell2000);
 
-  // const igSentiment = await getIgSentiment("latest");
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.sp500, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.gold, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.nasdaq, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.dowJones, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.silver, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.wti, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.brent, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.eurUsd, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.gbpUsd, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.usdJpy, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.audUsd, igSentiment);
-  // await injectIgCurrent(IG_SENTIMENT_MARKETS.usdCad, igSentiment);
+  const igSentiment = await getIgSentiment("latest");
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.sp500, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.gold, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.nasdaq, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.dowJones, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.silver, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.wti, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.brent, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.eurUsd, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.gbpUsd, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.usdJpy, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.audUsd, igSentiment);
+  await injectIgCurrent(IG_SENTIMENT_MARKETS.usdCad, igSentiment);
 
-  // const binancePositioning = await fetchBinancePositioning("latest");
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.btcusdt, binancePositioning);
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.ethusdt, binancePositioning);
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.solusdt, binancePositioning);
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.bnbusdt, binancePositioning);
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.xrpusdt, binancePositioning);
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.dogeusdt, binancePositioning);
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.linkusdt, binancePositioning);
-  // await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.aaveusdt, binancePositioning);
+  const binancePositioning = await fetchBinancePositioning("latest");
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.btcusdt, binancePositioning);
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.ethusdt, binancePositioning);
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.solusdt, binancePositioning);
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.bnbusdt, binancePositioning);
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.xrpusdt, binancePositioning);
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.dogeusdt, binancePositioning);
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.linkusdt, binancePositioning);
+  await injectBinancePositioningLatest(BINANCE_POSITIONING_MARKETS.aaveusdt, binancePositioning);
 
-  // const alternativeFearGreed = await fetchFearGreed();
-  // await injectAlternativeCryptoFearGreedCurrent({
-  //   observation: alternativeFearGreed,
-  // });
+  const alternativeFearGreed = await fetchFearGreed();
+  await injectAlternativeCryptoFearGreedCurrent({
+    observation: alternativeFearGreed,
+  });
 
-  // const altcoinSeason = await withRetry(
-  //   () => fetchAltcoinSeason("latest"),
-  //   {
-  //     label: "CoinMarketCap altcoin season (current)",
-  //     attempts: 5,
-  //     delayMs: 5000,
-  //     isEmptyResult: (result) => !Number.isFinite(result.index),
-  //   },
-  // );
+  const altcoinSeason = await withRetry(
+    () => fetchAltcoinSeason("latest"),
+    {
+      label: "CoinMarketCap altcoin season (current)",
+      attempts: 5,
+      delayMs: 5000,
+      isEmptyResult: (result) => !Number.isFinite(result.index),
+    },
+  );
 
-  // await injectCoinMarketCapAltcoinSeasonCurrent(altcoinSeason);
+  await injectCoinMarketCapAltcoinSeasonCurrent(altcoinSeason);
 
-  // const cmcMarketMetrics = await withRetry(
-  //   () => fetchCoinMarketCapGlobalMetrics(),
-  //   {
-  //     label: "CoinMarketCap crypto market metrics (current)",
-  //     attempts: 5,
-  //     delayMs: 5000,
-  //     isEmptyResult: (result) => !Number.isFinite(result.totalMarketCap),
-  //   },
-  // );
+  const cmcMarketMetrics = await withRetry(
+    () => fetchCoinMarketCapGlobalMetrics(),
+    {
+      label: "CoinMarketCap crypto market metrics (current)",
+      attempts: 5,
+      delayMs: 5000,
+      isEmptyResult: (result) => !Number.isFinite(result.totalMarketCap),
+    },
+  );
 
-  // await injectCoinMarketCapCryptoMarketMetricsCurrent(cmcMarketMetrics);
+  await injectCoinMarketCapCryptoMarketMetricsCurrent(cmcMarketMetrics);
 
-  // const spotEtfs = await withRetry(
-  //   () => collectAllSosoValueEtfs("latest"),
-  //   {
-  //     label: "SoSoValue spot ETF (current)",
-  //     attempts: 5,
-  //     delayMs: 5000,
-  //     isEmptyResult: (result) =>
-  //       result.every((etf) => !Number.isFinite(etf.current.netFlow)),
-  //   },
-  // );
+  const spotEtfs = await withRetry(
+    () => collectAllSosoValueEtfs("latest"),
+    {
+      label: "SoSoValue spot ETF (current)",
+      attempts: 5,
+      delayMs: 5000,
+      isEmptyResult: (result) =>
+        result.every((etf) => !Number.isFinite(etf.current.netFlow)),
+    },
+  );
 
-  // for (const market of Object.values(SPOT_ETF_MARKETS)) {
-  //   const payload = spotEtfs.find((etf) => etf.asset === market.symbol);
+  for (const market of Object.values(SPOT_ETF_MARKETS)) {
+    const payload = spotEtfs.find((etf) => etf.asset === market.symbol);
 
-  //   if (!payload) {
-  //     throw new Error(`SoSoValue returned no ${market.symbol} spot ETF data`);
-  //   }
+    if (!payload) {
+      throw new Error(`SoSoValue returned no ${market.symbol} spot ETF data`);
+    }
 
-  //   await injectSpotEtfCurrent(market, payload.current);
-  // }
+    await injectSpotEtfCurrent(market, payload.current);
+  }
 
 
 
