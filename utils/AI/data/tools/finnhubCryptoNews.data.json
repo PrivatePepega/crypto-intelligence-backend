@@ -1,0 +1,123 @@
+{
+  "tool": "finnhubCryptoNews",
+  "source": "finnhubCryptoNews.ts#finnhubCryptoNewsTool",
+  "kind": "feed",
+  "generatedAt": "2026-10-06T00:46:38.320Z",
+  "domains": null,
+  "summary": {
+    "runs": 1,
+    "ok": 1,
+    "empty": 0,
+    "totalRecords": 20
+  },
+  "runs": [
+    {
+      "domain": "feed",
+      "ok": true,
+      "elapsedMs": 304,
+      "args": {
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 20,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 7560,
+        "empty": false
+      },
+      "response": {
+        "count": 20,
+        "items": [
+          {
+            "headline": "A year after its $126,000 peak, bitcoin trades like a rates bet, not an inflation hedge",
+            "summary": "Bitcoin's direction now looks tied more to US rates and the dollar than to crypto-specific news, which makes Wednesday's Fed minutes and this week's US data key catalysts. Slowing ETF inflows point to cooling institutional demand, leaving the rally reliant on macro relief rather than fresh buying. Light leverage and normal funding rates reduce the risk of a forced-selling cascade, but they also suggest limited conviction behind the move. Oil is a swing factor too: another leg higher in crude would revive inflation and rate-hike fears, historically a headwind for the token. --- A year after its peak, bitcoin has learned the hard way that it answers to the bond market, and the Fed still holds the key to its recovery. Summary: Bitcoin hit a record of about $126,000 on 6 October 2025 and now trades around $86,000, roughly 32% lower. Rate hikes, an oil shock and 10-year Treasury yields near their highest since 2007 have weighed on the token. A weak September payrolls report cut October Fed hike odds and lifted bitcoin about 3% last week. Spot bitcoin ETF inflows slowed sharply to around $80 million from about $2.4 billion the week before. Futures leverage is near this year's lows, and Citigroup has raised its 12-month target to $113,000. Bitcoin marks one year since its record high on Tuesday, trading around $86,000, roughly a third below the peak of about $126,000 it reached on 6 October 2025. The decline leaves the world's largest cryptocurrency needing a gain of almost 50% just to return to its high. The path from the peak has been a long slide followed by an extended sideways phase rather than a collapse, and bitcoin has recovered about 8% over the past month. The backdrop explains much of the underperformance. The past year has brought an energy shock from the war in Iran, a renewed cycle of rate hikes and a sharp rise in borrowing costs. US 10-year Treasury yields climbed to around 5.3% last week, their highest since 2007. Higher risk-free returns raise the opportunity cost of holding an asset that pays no income, and bitcoin has tended to trade as a high-risk asset sensitive to liquidity rather than as a hedge against inflation. That sensitivity was on display last week. US payrolls rose by just 29,000 in September, well short of expectations for 84,000, and markets cut the odds of an October Federal Reserve rate hike from around 70% to below 20%. Bitcoin rose about 3% on the week and briefly touched $87,000. The quality of the rally is mixed. Inflows into US spot bitcoin exchange-traded funds slowed to around $80 million last week from roughly $2.4 billion the week before, suggesting institutional demand has cooled. At the same time, bitcoin futures open interest sits near its lowest level of the year and funding rates in perpetual futures have normalised, meaning the latest gains have not been driven by heavy leverage. Some analysts see room for recovery. Citigroup last week raised its 12-month bitcoin price target to $113,000, still below the record but well above current levels. Technical analysts have also noted that bitcoin's 50-, 100- and 200-day moving averages are moving towards their first fully bullish alignment since 2025. Whether that recovery materialises is likely to depend less on crypto-specific news than on the macro picture, particularly the path of US rates, the dollar and oil prices. Minutes from the Fed's latest meeting, due on Wednesday, are the next test. This article was written by Eamonn Sheridan at investinglive.com."
+          },
+          {
+            "headline": "Crypto PAC announces support for 32 House candidates in US midterms",
+            "summary": "Fairshake said it would financially back 32 House candidates who all voted in favor of the CLARITY market structure bill in 2025, as the bill remains in limbo in the Senate."
+          },
+          {
+            "headline": "FinCEN withdraws proposed crypto mixing rule over ‘legitimate activity’ concerns",
+            "summary": "The bureau under the US Treasury said it was withdrawing two proposed rules on unhosted wallets and crypto mixers ”as part of the Trump Administration’s deregulatory agenda.”"
+          },
+          {
+            "headline": "Modern Treasury seeks US trust bank charter for digital asset custody",
+            "summary": "The payments infrastructure company is seeking federal approval to offer stablecoin custody and related fiat services through a limited-purpose national trust bank."
+          },
+          {
+            "headline": "Crypto's campaign arm, Fairshake, sets lists of U.S. House favorites it'll spend on",
+            "summary": null
+          },
+          {
+            "headline": "Advocacy group pushes back on banks’ lawsuit against OCC over charters",
+            "summary": "CCI CEO Ji Hun Kim said that the organization “remains confident“ in the OCC’s approval of charters for crypto companies, despite a recent lawsuit and pushback from some lawmakers."
+          },
+          {
+            "headline": "S&P Global brings risk assessments to growing crypto lending vault sector",
+            "summary": "S&P Global’s new framework evaluates digital asset lending vaults across six risk categories as deposits in the sector climb to about $10 billion."
+          },
+          {
+            "headline": "CFTC joins SEC in proposing crypto framework after failed CLARITY vote",
+            "summary": "CFTC Chair Michael Selig claimed that the agency was using its “existing statutory authorities“ to address crypto regulation after Congress failed to advance a market structure bill."
+          },
+          {
+            "headline": "More than 60 U.S. stocks including Nvidia and Tesla are headed onchain. Here’s how it works",
+            "summary": null
+          },
+          {
+            "headline": "Treasury yields at 5% threaten extending Bitcoin’s best quarter since 2017",
+            "summary": "Weak US jobs data has narrowed expectations for another Fed hike in October, offering Bitcoin some relief as investors continue to embrace the debasement trade."
+          },
+          {
+            "headline": "U.S. CFTC joins SEC in proposing crypto regulations, though spot-market gap lingers",
+            "summary": null
+          },
+          {
+            "headline": "Bitcoin price fails to break higher after best weekly close in eight months",
+            "summary": "Bitcoin’s highest weekly close in eight months formed low-timeframe resistance at the start of Monday’s US trading session."
+          },
+          {
+            "headline": "Stripe to expand stablecoin cards to over 100 countries by the end of the year",
+            "summary": null
+          },
+          {
+            "headline": "China P2P stablecoin wallets grew 43x despite crypto restrictions: Chainalysis",
+            "summary": "Unique wallets sending P2P stablecoin transactions in China grew 43-fold between Q1 2024 and Q2 2026 as crypto activity increasingly shifted toward direct wallet-to-wallet transfers."
+          },
+          {
+            "headline": "Strategy opts for bigger spending on STRC buybacks over BTC purchases",
+            "summary": "Strategy bought 334 Bitcoin for $28.7 million last week while spending $176.3 million to repurchase about 1.77 million shares of STRC."
+          },
+          {
+            "headline": "Too big to pause: Could an AI slowdown crash the economy?",
+            "summary": "Calls to slow down development of the most powerful AI models are colliding with an $800 billion investment boom. Could an AI slowdown tank the US economy?"
+          },
+          {
+            "headline": "Metaplanet reveals net income strategy to fuel Bitcoin accumulation",
+            "summary": "Metaplanet revealed a revised capital allocation framework proposing to allocate as much as 15% of total assets to strategic investments to fund its Bitcoin accumulation."
+          },
+          {
+            "headline": "An XRP treasury SPAC surges nearly 300% ahead of Evernorth merger",
+            "summary": null
+          },
+          {
+            "headline": "SEC approves a 3x fix for bitcoin and ether traders who miss the wild swings",
+            "summary": null
+          },
+          {
+            "headline": "Treasury crackdown exposes crypto's role in $2 million Hamas fundraising network",
+            "summary": null
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,929 @@
+{
+  "tool": "newsflashSearchArticles",
+  "source": "newsflashSearchArticles.ts#newsflashSearchArticlesTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:57:28.432Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "skippedDomains": [],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 1,
+    "totalRecords": 175
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 1222,
+      "args": {
+        "q": "geopolitics"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 25,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "summary"
+        ],
+        "charCount": 5966,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Soccer Gets Geopolitical As Abu Dhabi Threatens Britain Over Manchester City Case",
+            "summary": "The English Premier League's ruling that Mancheter City has beached its financial rules is set to become one the most contentious issues in club football history, as geopolitics,…"
+          },
+          {
+            "title": "Giving practitioners academic scaffolding: RSIS leaders reflect as think-tank turns 30",
+            "summary": "The school has been supporting policymaking and providing practitioners with intellectual grounding in geopolitics."
+          },
+          {
+            "title": "China urged to build ‘system’ to protect expanding overseas interests",
+            "summary": "Beijing has been urged to do more to protect its overseas interests with a call for diplomatic engagement to reshape international rules and deeper security cooperation with other…"
+          },
+          {
+            "title": "When geopolitics becomes economics",
+            "summary": "From the Red Sea to the Strait of Hormuz, economic interests are driving a new contest for global influence"
+          },
+          {
+            "title": "U.S. Exit Leaves Iraq With a Militia Problem",
+            "summary": "Politics, Geopolitics & Conflict U.S. troops have withdrawn from Iraq, but this isn’t Biden’s Iraq. The withdrawal was agreed in 2024 when Biden determined that Iraqi forces could…"
+          },
+          {
+            "title": "ConocoPhillips Signs 20-Year LNG Deal With Venture Global",
+            "summary": "ConocoPhillips and Venture Global have signed a deal that would see the liquefied natural gas major supply 1 million tons to Conoco beginning in 2030. The deal is part of a broade…"
+          },
+          {
+            "title": "Making sense of modern day Middle East conflicts",
+            "summary": "British historian Simon Sebag Montefiore joins \"CBS Mornings\" to discuss his new book, \"The Cauldron: The Making of the Modern Middle East,\" which breaks down conflict in the Midd…"
+          },
+          {
+            "title": "How fraught Middle East geopolitics could complicate FlyDubai investigation.",
+            "summary": ""
+          },
+          {
+            "title": "How should Nepal navigate a world in reorder? Rajib Upadhya on geopolitics and foreign policy",
+            "summary": "In his new book, ‘Giants at the Gates’, Upadhya examines the rise of multipolarity, Nepal’s place between India and China, and the need to rethink its foreign policy."
+          },
+          {
+            "title": "Football Daily | The big story is of course … Scotland fans pining for another home run",
+            "summary": "Sign up now! Sign up now! Sign up now? Sign up now! In the four matches they’ve sat through since their unconvincing Geopolitics World Cup win over Haiti, it must rankle among die…"
+          },
+          {
+            "title": "Bosnia elections: Polls overshadowed by exhaustion, exodus and geopolitics as ethnic politics eclipse real problems",
+            "summary": "Bosnia goes to the polls on October 4 to elect several parliaments and presidents. While voters worry about the economy and emigration, the campaign is focused on ethnicity, expos…"
+          },
+          {
+            "title": "Eurovision remains marred by geopolitics: Ireland will boycott again because of Israel's participation. Still, the song contest is expanding",
+            "summary": "The 2026 Eurovision Song Contest was marred by boycotts in protest against Israel's participation in the midst of its war on Gaza. It still aims to keep growing."
+          },
+          {
+            "title": "South Island spaceport for European rocket launches found to be feasible",
+            "summary": "A study says a New Zealand spaceport could help Europeans spread the risks of \"weather, technical problems and geopolitics\"."
+          },
+          {
+            "title": "American exodus: why do so many US NHL stars want out of Canada?",
+            "summary": "Players across the league are leaving their teams up north to return home. It’s prompted questions around money, tax rates, geopolitics and respect"
+          },
+          {
+            "title": "American exodus: why do so many US NHL stars want out of Canada?",
+            "summary": "Players across the league are leaving their teams up north to return home. It’s prompted questions around money, tax rates, geopolitics and respect Back in September 1925, Frederi…"
+          },
+          {
+            "title": "Stocks fall, oil rises and bond yields surge as geopolitics keeps markets on edge",
+            "summary": "Stocks fell on Monday alongside jumps in both bond yields and the price of oil as geopolitical upheaval remained front and center for traders."
+          },
+          {
+            "title": "Trump’s ‘Greater North America’ Is Fascist Geopolitics",
+            "summary": "The administration’s hemispheric vision has dangerous roots and dangerous implications."
+          },
+          {
+            "title": "Geopolitics keeps PSX range bound",
+            "summary": "KSE-100 index ends week lower as uncertainty weighs"
+          },
+          {
+            "title": "US, Iran Explore Phased Hormuz Deal",
+            "summary": "Oil prices declined as US and Iranian negotiators explored a plan that would see Tehran reopen the Strait of Hormuz. The two countries were pushing for a breakthrough on the sidel…"
+          },
+          {
+            "title": "U.S.-Iran Talks Revive June Plan for Ending Hormuz Standoff",
+            "summary": "Politics, Geopolitics & Conflict The U.S. and Iran are back to negotiating over the same basic bargain that briefly ended the war in June: reopen Hormuz, ease the U.S. blockade, a…"
+          },
+          {
+            "title": "France: Pope Leo XIV begins Paris diplomacy at the Élysée",
+            "summary": "Pope Leo XIV has arrived in Paris, and was welcomed at the Élysée Palace by French president Emmanuel Macron. They are having closed-door talks on international geopolitics, artif…"
+          },
+          {
+            "title": "Trump Trying to Buy Time With Xi; Amundi's Rosenberg",
+            "summary": "Anna Rosenberg, Amundi Investment Institute Head of Geopolitics, joins Bloomberg's Anna Edwards on \"Bloomberg Brief\" to discuss the key takeaways from the Trump-Xi Summit, suggest…"
+          },
+          {
+            "title": "From California to Greece",
+            "summary": "It is beneficial for Greece that its prime minister maintains contacts at both the European and global levels, and is able to actively participate in discussions regarding the fut…"
+          },
+          {
+            "title": "PSX reverses gains as geopolitics weigh",
+            "summary": "KSE-100 down around 1,740 points on mounting ME, oil concerns"
+          },
+          {
+            "title": "Trump and Xi hold US-China talks in Oval Office",
+            "summary": "The presidents of the world's two largest economies are in Washington for what Donald Trump has billed a \"big day.\" Bilateral trade, AI and geopolitics are all on the menu. Follow…"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 1306,
+      "args": {
+        "q": "financial markets"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 25,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "summary"
+        ],
+        "charCount": 6908,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Brazil Stocks Hit Record as Dollar Crashes After Election Shock",
+            "summary": "Brazil’s election delivered a dramatic impact on its financial markets today. The Ibovespa crossed 200,000 points for the first time in history on Monday after right-wing leader F…"
+          },
+          {
+            "title": "BT strikes deal to rescue broadband firm TalkTalk; euro slides amid France debt burden fears – business live",
+            "summary": "TalkTalk’s wholesale and consumer arms will be sold to BT on a debt-free basis Good morning, and welcome to our rolling coverage of business, the financial markets and the world e…"
+          },
+          {
+            "title": "Asia among most vulnerable to AI correction, report shows",
+            "summary": "The region is particularly exposed due to its central role in global AI supply chains and growing integration into AI-related financial markets."
+          },
+          {
+            "title": "Rising global capital costs pose challenge for emerging economies: Anurada Thakur",
+            "summary": "Pointing to changes in global financial markets, economic affairs secretary Anuradha Thakur said bond markets were assuming a larger share of financing, with government papers alo…"
+          },
+          {
+            "title": "Africa’s new credit agency: why it’s about a lot more than just ratings",
+            "summary": "The new Africa Credit Rating Agency (AfCRA) has already generated an important debate. Some analysts have portrayed it as a rival to the three established global rating agencies –…"
+          },
+          {
+            "title": "'Fuel, finance shocks hit world economy'",
+            "summary": "New Delhi: Higher fuel costs and tighter financial conditions are already weighing on global demand and raising the cost of capital, with India better placed than several develope…"
+          },
+          {
+            "title": "Jio Platforms IPO may open on October 21, issue estimated at $3.8 billion: Report",
+            "summary": "Jio Platforms Ltd, the digital holding company of Reliance Industries that houses Reliance Jio Infocomm, is putting the finishing touches on its much-awaited initial public offeri…"
+          },
+          {
+            "title": "RWA Foundation report tracks 10,322 tokenized real-world assets",
+            "summary": "The growing tokenization of real-world assets signifies a shift towards more integrated and accessible financial markets, enhancing liquidity and innovation. The post RWA Foundati…"
+          },
+          {
+            "title": "Fed’s Jefferson urges patience on rates; Kashkari sees more hikes ahead",
+            "summary": "Federal Reserve Vice Chair Philip Jefferson said Thursday that while he supported last month’s interest-rate increase, he saw no urgency for the US central bank to act again, acco…"
+          },
+          {
+            "title": "Bitwise CIO Matt Hougan predicts stablecoins will rise significantly",
+            "summary": "Stablecoins' rise could reshape financial markets, influencing US Treasury demand and prompting shifts in capital market strategies. The post Bitwise CIO Matt Hougan predicts stab…"
+          },
+          {
+            "title": "RWA perps market hits $117.3B in monthly volume, up 44x in a year",
+            "summary": "The surge in onchain trading of RWA perps highlights the transformative impact of decentralized platforms on financial markets. The post RWA perps market hits $117.3B in monthly v…"
+          },
+          {
+            "title": "Tech stocks support Wall Street as pressure from rising bond yields rattles markets worldwide",
+            "summary": "Strength for artificial-intelligence stocks is helping the U.S. market to hold firmer on Thursday, even as pressure from the bond market continues to rattle financial markets worl…"
+          },
+          {
+            "title": "AI optimism is fueling tech stocks amid rising oil prices and bond yields",
+            "summary": "Strength for artificial-intelligence stocks is helping the U.S. market to hold firmer on Thursday, even as pressure from the bond market continues to rattle financial markets."
+          },
+          {
+            "title": "Bank of England’s Bailey warns the AI boom could bring market shocks",
+            "summary": "AI could set off shocks in financial markets, and the UK has to be ready for them, Bank of England governor Andrew Bailey told the BBC on Thursday. He said the Bank is watching th…"
+          },
+          {
+            "title": "Binance Research projects tokenized equities could hit $349 billion by 2030",
+            "summary": "The projected growth of tokenized equities could significantly transform financial markets, emphasizing the importance of asset utilization. The post Binance Research projects tok…"
+          },
+          {
+            "title": "Turkey to Start Payments to Investors Caught in Fund Crisis",
+            "summary": "Turkey’s markets regulator ordered interim payments of as much as 1 million liras ($20,400) to investors whose money has been trapped in some funds being liquidated as authorities…"
+          },
+          {
+            "title": "Annual UK house price growth halves as mortgage rates rise – business live",
+            "summary": "Rolling coverage of the latest economic and financial news, as Nationwide reports house prices fell in September Good morning, and welcome to our rolling coverage of business, the…"
+          },
+          {
+            "title": "Lighter CEO points to fixed income as DeFi’s next big opportunity at Korea Blockchain Week 2026",
+            "summary": "DeFi's expansion into fixed income could bridge traditional finance and blockchain, potentially reshaping global financial markets. The post Lighter CEO points to fixed income as…"
+          },
+          {
+            "title": "Orca’s legal chief says SEC exemption lets DeFi test its efficiency claims",
+            "summary": "The SEC's exemption could redefine DeFi's role in financial markets, influencing future regulatory frameworks and market dynamics by 2031. The post Orca’s legal chief says SEC exe…"
+          },
+          {
+            "title": "Bitcoin gains as rate hike expectations ease after soft PCE data",
+            "summary": "Bitcoin's sensitivity to macroeconomic data highlights its evolving role in financial markets, with institutional demand showing structural resilience. The post Bitcoin gains as r…"
+          },
+          {
+            "title": "US inflation rises below expectations in August; consumer spending robust",
+            "summary": "WASHINGTON — U.S. inflation increased less than expected in August and price pressures were more moderate in the prior month than previously reported, likely reducing the urgency…"
+          },
+          {
+            "title": "Coinbase builds financial accounts for super intelligence",
+            "summary": "Coinbase's AI-focused financial infrastructure could revolutionize autonomous transactions, potentially reshaping financial markets and compliance norms. The post Coinbase builds…"
+          },
+          {
+            "title": "US PCE Inflation Is a Big Test for Stocks, Crypto, and Trump",
+            "summary": "Today could set the tone for financial markets heading into the final quarter of 2026. It could also land at an awkward moment for Donald Trump, with voters increasingly focused o…"
+          },
+          {
+            "title": "Dunamu targets growth beyond Korea's crypto market",
+            "summary": "Dunamu is pursuing its next phase of growth beyond Korea, aiming to connect the country's digital asset ecosystem with global financial markets, company CEO Oh Kyoung-suk said Wed…"
+          },
+          {
+            "title": "UK economy ‘slightly larger’ than previously estimated after April-June growth revised up – business live",
+            "summary": "Rolling coverage of the latest economic and financial news Good morning, and welcome to our rolling coverage of business, the financial markets and the world economy. The UK econo…"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 286,
+      "args": {
+        "q": "macro"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 25,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "summary"
+        ],
+        "charCount": 6933,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "US Moves Bombers From UK Airbase as Threats Linger",
+            "summary": "\"Balance of Power\" focuses on the intersection of politics and global business. On today's show, Sen. Mark Warner (D-VA), Vice Chairman of the Senate Select Committee on Intellige…"
+          },
+          {
+            "title": "Conley: Refined Fuels Remain The Energy Problem",
+            "summary": "Heather Conley, senior fellow at AEI, a senior advisor at Evenflow Macro LLC and a former Deputy Assistant Secretary of State in the Bureau of European and Eurasian Affairs, says…"
+          },
+          {
+            "title": "AMRO naikkan proyeksi pertumbuhan ASEAN+3 jadi 4,1 persen pada 2027",
+            "summary": "Kantor Penelitian Makroekonomi ASEAN+3 (ASEAN+3 Macroeconomic Research Office/AMRO) pada Senin (5/10) menaikkan ..."
+          },
+          {
+            "title": "Caitlin Long: Fiscal Dominance, Stablecoins & the Macro Case for Bitcoin",
+            "summary": "Bitcoin Magazine Caitlin Long: Fiscal Dominance, Stablecoins & the Macro Case for Bitcoin Will tokenized deposits crowd out stablecoins? Custodia Bank's Caitlin Long explains why…"
+          },
+          {
+            "title": "Primer balance del Cyber Monday 2026: Más personas han comprado, pero están gastando menos",
+            "summary": "“Este comportamiento es consistente con el contexto macroeconómico, en que ante la mayor inflación y alto desempleo los consumidores se resguardan realizando compras de montos más…"
+          },
+          {
+            "title": "Stocks Get Tech Lift Despite Renewed Bond Losses",
+            "summary": "A rally in giant technology companies drove stocks higher, overshadowing concerns about still-elevated oil prices and bond yields. The S&P 500 approached a record as a gauge of me…"
+          },
+          {
+            "title": "Le président du Bénin Romuald Wadagni reçu à Paris par son homologue français Emmanuel Macron",
+            "summary": "Le président français Emmanuel Macron a reçu son homologue béninois ce 5 octobre 2026 à Paris, dans la première visite officielle de Romuald Wadagni en France. Au cœur des échange…"
+          },
+          {
+            "title": "Bitcoin surges 43% in Q3 as Treasury yields hit highest levels since 2007",
+            "summary": "Bitcoin's Q3 surge highlights its vulnerability to macroeconomic shifts, as rising Treasury yields challenge its appeal amid tightening policies. The post Bitcoin surges 43% in Q3…"
+          },
+          {
+            "title": "Francia encara una nueva semana de protestas estudiantiles, las mayores en décadas",
+            "summary": "El Gobierno de Macron es criticado por la dura represión policial. El martes se celebrará una gran manifestación nacional para reivindicar más inversiones"
+          },
+          {
+            "title": "Merz, Macron seek tougher EU measures against unfair trade",
+            "summary": "Emmanuel Macron and Friedrich Merz have written to Ursula von der Leyen, calling for tougher EU mechanisms against unfair trade practices by other states. They name no names but s…"
+          },
+          {
+            "title": "L’Allemagne et la France passent à l’offensive pour rééquilibrer les échanges commerciaux avec la Chine",
+            "summary": "Dans une lettre à la Commission européenne, le chancelier allemand, Friedrich Merz, et le président français, Emmanuel Macron, proposent un nouvel arsenal qui permettrait d’exclur…"
+          },
+          {
+            "title": "France, Germany seek new EU rapid response tool against trade threats",
+            "summary": "France and Germany proposed a new legal tool to enable the EU to respond rapidly to trade wars or measures, such as dumping, that could economically harm the bloc. While French Pr…"
+          },
+          {
+            "title": "Ukrainian Pilots Could Begin Training on French Rafale Jets Soon, Zelensky Says",
+            "summary": "Ukrainian pilots will soon begin Rafale training in France, President Volodymyr Zelensky announced on Monday, Oct. 5, following a telephone discussion with French President Emmanu…"
+          },
+          {
+            "title": "iPhone 13 Pro vs. iPhone 18 Pro Buyer's Guide: Is It Worth Upgrading?",
+            "summary": "Apple released the iPhone 18 Pro and iPhone 18 Pro Max in September 2026, five years after the iPhone 13 Pro and iPhone 13 Pro Max. The 2021 models introduced ProMotion displays,…"
+          },
+          {
+            "title": "Bitmine Buys $41M More Ethereum, Reaching 99% of Its 'Alchemy of 5%' Target",
+            "summary": "The purchase lifts Bitmine's stash past 6 million ETH—4.9% of supply and 99% of the way to its \"Alchemy of 5%\" goal—as chairman Tom Lee says Ethereum is \"dwarfing\" other macro ass…"
+          },
+          {
+            "title": "Macron slams Russia’s ‘irresponsible’ strikes on Ukraine’s civilian infrastructure",
+            "summary": "French President Emmanuel Macron on Monday slammed Russia's increased strikes on Ukrainian civilian infrastructure. In a phone call with Ukrainian President Volodymyr Zelensky, Ma…"
+          },
+          {
+            "title": "Ukraine : Macron dénonce le \"choix irresponsable\" de la Russie d'\"intensifier\" ses frappes",
+            "summary": "Après un échange avec le président ukrainien Volodymyr Zelensky, Emmanuel Macron a réitéré \"le plein soutien de la France\" à Kiev alors que la Russie a prévenu dimanche qu'elle al…"
+          },
+          {
+            "title": "EU: Deutschland und Frankreich drängen auf neue Instrumente gegen unfaire Handelspartner",
+            "summary": "Die EU soll im Fall eines Handelskriegs rasch unfaire Handelspartner vom Binnenmarkt ausschließen können, dafür setzen sich Friedrich Merz und Emmanuel Macron ein. Der Vorstoß dür…"
+          },
+          {
+            "title": "Tom Lee says ether ‘dwarfing other macro assets’ as Bitmine adds 15,112 ETH",
+            "summary": "Bitmine added 15,112 ETH as Chairman Tom Lee said Ethereum outperformed the S&P 500 by 6,832 basis points in Q3."
+          },
+          {
+            "title": "Merz and Macron want the EU to hit back harder — and faster — against trade threats",
+            "summary": "France and Germany want to give Brussels new powers to rapidly block imports deemed an economic or security threat."
+          },
+          {
+            "title": "Guerre en Ukraine : Emmanuel Macron dénonce le «choix irresponsable» de Moscou «d’intensifier ses frappes contre les infrastructures et les objectifs civils»",
+            "summary": "Après un échange avec Volodymyr Zelensky, Emmanuel Macron a dénoncé lundi l’intensification des frappes russes contre les infrastructures et les objectifs civils en Ukraine. Le pr…"
+          },
+          {
+            "title": "France high school protests: Can the government regain control?",
+            "summary": "Up to 500 schools are expected to be totally or partially closed in France as student protests continue to rock the country. The demonstrations, which have been going on for over…"
+          },
+          {
+            "title": "Neuer China-Kurs: Unglaubwürdige Nuklearoption",
+            "summary": "Merz und Macron fordern eine Zweitschlagwaffe, um in Handelskonflikten mit China reagieren zu können. Das klingt sinnvoll, nur kann die EU diese Waffe nicht glaubwürdig einsetzen."
+          },
+          {
+            "title": "La Fiscalía reduce su petición de penas en el primer juicio del ‘caso Lezo’",
+            "summary": "El ministerio público aprecia dilaciones indebidas y abre la puerta a extender esa medida a otras vistas de la macrocausa, que sentarán en el banquillo al expresidente Ignacio Gon…"
+          },
+          {
+            "title": "EN DIRECT, guerre en Ukraine : Emmanuel Macron dénonce le « choix irresponsable » de la Russie « d’intensifier ses frappes » contre les objectifs civils",
+            "summary": "« Alors que la Russie est dans l’impasse sur le front, elle refuse obstinément tous les appels au cessez-le-feu », écrit le président de la République, sur X, après un entretien a…"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 2909,
+      "args": {
+        "q": "commodities energy"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 0,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [],
+        "charCount": 15,
+        "empty": true
+      },
+      "response": {
+        "articles": []
+      }
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 150,
+      "args": {
+        "q": "crypto"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 25,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "summary"
+        ],
+        "charCount": 6797,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Kraken parent joins Singapore Gulf Bank, opening 24/7 institutional dollar rails",
+            "summary": "Payward's SGB Net link supports round-the-clock US-dollar funding in eligible jurisdictions, while SGB customer-trade pricing is planned for coming months. The post Kraken parent…"
+          },
+          {
+            "title": "Asian banks pour record debt into AI chip and data center boom",
+            "summary": "The surge in AI-related lending heightens financial concentration risks, potentially destabilizing economies reliant on tech investments. The post Asian banks pour record debt int…"
+          },
+          {
+            "title": "Cardano (ADA), XRP, Zcash (ZEC) and Sui (SUI) Price Analysis October 6: Market Retains Momentum",
+            "summary": "Ripple effect from growth on larger cryptocurrencies have reached smaller networks."
+          },
+          {
+            "title": "How Trump’s $5K payout promise can become crypto’s next liquidity shock",
+            "summary": "Bitcoin is holding above $80k as institutional demand stays strong. Could Trump’s $5k initiative fuel a 2021-style liquidity-driven rally?"
+          },
+          {
+            "title": "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names",
+            "summary": "The Bitcoin rally's optimism at TOKEN2049 Singapore could signal renewed investor confidence, potentially revitalizing the crypto market. The post Bitcoin rally sets the mood as T…"
+          },
+          {
+            "title": "Microsoft Copilot AI Predicts Chainlink (LINK) Could Hit $100 in 2026",
+            "summary": "Microsoft Copilot AI predicts that in a world where Chainlink becomes the backbone of a major global settlement system, such as SWIFT, LINK could surge to $100 by January 1, 2027,…"
+          },
+          {
+            "title": "Broadcom faces scrutiny over $42 billion Anthropic loan in IPO filing",
+            "summary": "Broadcom's multifaceted involvement with Anthropic highlights potential conflicts of interest, posing risks to both companies' financial stability. The post Broadcom faces scrutin…"
+          },
+          {
+            "title": "Broadcom faces scrutiny over $42B financing deal with Anthropic ahead of IPO",
+            "summary": "Broadcom's dual role may lead to regulatory scrutiny and investor caution, impacting Anthropic's IPO valuation and market dynamics. The post Broadcom faces scrutiny over $42B fina…"
+          },
+          {
+            "title": "Trump Says Hormuz No Longer Impacts Gas Prices. Is He Right?",
+            "summary": "Trump says Hormuz no longer drives gas prices. Minutes later, a tanker burned there. See what oil charts show. The post Trump Says Hormuz No Longer Impacts Gas Prices. Is He Right…"
+          },
+          {
+            "title": "IRS Risk Chief Gives an Uncomfortable AI Warning for Regulators",
+            "summary": "Two years ago, we were using AI for research, writing, and making information easier to access. Then came more advanced capabilities — coding, building sophisticated apps and syst…"
+          },
+          {
+            "title": "Nokia CEO says AI data centers could be built twice as fast without supply limits",
+            "summary": "Supply constraints in AI data centers highlight the urgent need for innovation in chip production and energy solutions to meet growing demand. The post Nokia CEO says AI data cent…"
+          },
+          {
+            "title": "CFTC makes its biggest move yet to bring offshore crypto trading back to the US",
+            "summary": "The Commodity Futures Trading Commission (CFTC) is offering US crypto exchanges a federal route to retail leverage as Congress remains stalled on market-structure legislation. On…"
+          },
+          {
+            "title": "Mark Zuckerberg Meta AI Predicts Double-Digit XRP Price by 2026",
+            "summary": "Currently priced at approximately $1.50, Mark Zuckerberg’s Meta AI predicts that XRP could surge above $10 this year, a gain of around 8x, in the event of a massive crypto bull ma…"
+          },
+          {
+            "title": "Goldman Sachs and Morgan Stanley dissect the AI debt binge as the credit party cools",
+            "summary": "The AI sector's reliance on debt could lead to increased financial scrutiny and potential instability, especially for lower-rated borrowers. The post Goldman Sachs and Morgan Stan…"
+          },
+          {
+            "title": "Fairshake PAC backs 32 House incumbents who voted for the CLARITY Act",
+            "summary": "Fairshake PAC's support for incumbents may solidify House backing but doesn't address Senate hurdles, impacting crypto policy progress. The post Fairshake PAC backs 32 House incum…"
+          },
+          {
+            "title": "Stonebriar and Wingspire turn AI computing demand into asset-backed bonds",
+            "summary": "AI-driven asset-backed bonds offer investors stable returns while supporting tech infrastructure, but increased AI concentration poses credit risks. The post Stonebriar and Wingsp…"
+          },
+          {
+            "title": "THORChain cofounder argues protocol is more decentralized than Bitcoin and Ethereum",
+            "summary": "THORChain's governance model highlights the need for DeFi investors to scrutinize decentralization claims and assess actual control mechanisms. The post THORChain cofounder argues…"
+          },
+          {
+            "title": "Crypto PAC announces support for 32 House candidates in US midterms",
+            "summary": "Fairshake said it would financially back 32 House candidates who all voted in favor of the CLARITY market structure bill in 2025, as the bill remains in limbo in the Senate."
+          },
+          {
+            "title": "Trump endorses Darline Graham in 2026 South Carolina Senate race",
+            "summary": "Trump's endorsement may bolster Graham's campaign by reinforcing her Republican ties, but its impact is limited by its niche platform origin. The post Trump endorses Darline Graha…"
+          },
+          {
+            "title": "Wall Street banks launch record $60 billion chip financing package for Anthropic",
+            "summary": "The financing package underscores the growing financial risks and dependencies in the AI sector, highlighting potential volatility and market shifts. The post Wall Street banks la…"
+          },
+          {
+            "title": "OpenAI seeks $30B funding at $1.4T valuation with UAE, BlackRock: Bloomberg",
+            "summary": "OpenAI's potential funding boost signals increased market confidence, potentially paving the way for a significant IPO and enhanced financial stability. The post OpenAI seeks $30B…"
+          },
+          {
+            "title": "Binance enables 1:1 conversion between stocks and bStocks",
+            "summary": "Binance's 1:1 stock-to-bStock conversion could revolutionize trading flexibility, but it hinges on custodian reliability and crypto security. The post Binance enables 1:1 conversi…"
+          },
+          {
+            "title": "Trump administration proposes new crypto rules",
+            "summary": "Presented by PolitiSizeIT {beacon} Business & Economy Business & Economy PRESENTED BY The Big Story Trump admin proposes new crypto rules The Commodity Futures Trading Commission…"
+          },
+          {
+            "title": "ZachXBT infiltrates $1B crypto syndicate to expose Lazarus Group",
+            "summary": "His October 5 disclosure describes 2025 trades and private chats that he says helped trace Bybit funds and secure a 442,000 USDT freeze. The post ZachXBT infiltrates $1B crypto sy…"
+          },
+          {
+            "title": "Anthropic plans to spend ~$518 billion on AI compute over the next decade",
+            "summary": "Anthropic's massive AI compute investment could reshape industry dynamics, potentially elevating its market position and valuation significantly. The post Anthropic plans to spend…"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 829,
+      "args": {
+        "q": "ai technology"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 25,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "summary"
+        ],
+        "charCount": 6873,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "SoftBank’s Masayoshi Son, after selling Nvidia stake for OpenAI, now has a ‘request’",
+            "summary": "Masayoshi Son, the visionary behind SoftBank Group, voiced serious worries about the safety challenges posed by AI advancements at a forum in Kyoto. He stressed the urgent need fo…"
+          },
+          {
+            "title": "After warning AI may hurt everyone; Sam Altman says it should be broadly accessible",
+            "summary": "Sam Altman, the visionary CEO of OpenAI, asserts that the global community must embrace certain inherent risks tied to the evolution of AI technology. He posits that the benefits…"
+          },
+          {
+            "title": "North Korea’s Kim oversees missile launch with AI guidance",
+            "summary": "Kim Jong Un's powerful sister says AI technology allows the missile to change its flight orbit at a low altitude, making an attack 'impossible to avoid'."
+          },
+          {
+            "title": "Napoleon's 1809 code baffled for 217 years, AI cracked it in 6 hours",
+            "summary": "Carter Church, a skilled AI engineer, has managed to crack an elusive military message from 1809, originally ordered by Napoleon. The document remained indecipherable for 217 year…"
+          },
+          {
+            "title": "Capcom is preparing for a ‘future where we create games together with AI’",
+            "summary": "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech. During the Capcom Open Conference RE: 2026 programmer Satoshi…"
+          },
+          {
+            "title": "US man arrested over alleged $300 million scheme to smuggle Nvidia AI servers to China",
+            "summary": "Amid intensifying competition in the AI technology race, US authorities have arrested a California technology company owner accused of using Malaysia and Singapore as transit poin…"
+          },
+          {
+            "title": "AI is getting more powerful, but safeguards aren't keeping up",
+            "summary": "Competition and innovation in AI technology are moving at extraordinary speed. But the technologies designed to monitor and govern its development have fallen behind. In other wor…"
+          },
+          {
+            "title": "Can states try to regulate AI technology? A lawyer says yes.",
+            "summary": "Florida's Republican attorney general wants to stop OpenAI from developing its artificial intelligence products until a court determines they are safe. University of Florida law p…"
+          },
+          {
+            "title": "Bill Gates does not agree with possibility of AI Kill Switch",
+            "summary": "Bill Gates questions the reliability of AI Kill Switches in today's technology landscape. He points out that diligent monitoring and solid regulations are crucial to prevent explo…"
+          },
+          {
+            "title": "Confronting demons: How acoustic and AI technology brought ancient Etruscan tombs back to life",
+            "summary": "Although it is not always obvious, sound guides how we experience the world around us. And the latest archaeoacoustic techniques show that even the world's earliest architects und…"
+          },
+          {
+            "title": "Senator Hawley looks to reign in Flock camera abuse with new bill",
+            "summary": "Sen. Josh Hawley, a Republican from Missouri, introduced a bill to enact guardrails and prevent the abuse of Flock cameras and similar AI technology."
+          },
+          {
+            "title": "Confronting demons: how acoustic and AI technology brought ancient Etruscan tombs back to life",
+            "summary": "A demonic figure painted on the wall of the Tomba dei Demoni Azzurri (Tomb of the Blue Demons, 420-410BC). Sailko via Wikimedia Commons, CC BY-ND Although it not always obvious, s…"
+          },
+          {
+            "title": "More than 44,000 file legal objections to Palantir NHS platform handling their data",
+            "summary": "Exclusive: Campaign comes amid backlash against tech company’s involvement with Israeli military and Trump’s ICE crackdown UK politics live – latest updates Tens of thousands of p…"
+          },
+          {
+            "title": "SoundHound AI technology deployed in Kia Sorento in India",
+            "summary": ""
+          },
+          {
+            "title": "Trump and major AI executives sign \"morally binding\" voluntary controls",
+            "summary": "President Trump and the leaders of the country's largest artificial intelligence companies have signed a set of voluntary safety standards, as calls mount for tighter guardrails o…"
+          },
+          {
+            "title": "‘We can’t stifle it’: Trump says AI leaders ‘have to self-police’ AI technology that ‘will be bigger than the industrial revolution’",
+            "summary": "Top AI executives lunched with Trump at the White House Tuesday, including Dario Amodei, CEO of Anthropic, Greg Brockman, president of OpenAI, Jeff Bezos, founder of Amazon, and E…"
+          },
+          {
+            "title": "Anthropic warns of AI ‘existential risk’ as concerns emerge over Meta’s Muse and OpenAI’s model | First Thing",
+            "summary": "Anthropic’s prospectus makes chilling claim as new revelations emerge about Muse and Astra models. Plus the silent movie rediscovered in the strangest of places Good morning. Anth…"
+          },
+          {
+            "title": "Days after AI agents hacked government networks, Meta launches AI platform for businesses",
+            "summary": "Meta has unveiled the Meta Enterprise Platform, designed to unify its AI technology suite for businesses. This endeavor seeks to harness AI for growth while tackling concerns abou…"
+          },
+          {
+            "title": "OpenAI halts model release over safety concerns: \"Didn't quite meet the bar\"",
+            "summary": "OpenAI said it has chosen not to release its new GPT-6.1 Astra model due to concerns about safety, as industry leaders warn of the risks posed by ever-more-powerful AI technology."
+          },
+          {
+            "title": "Hong Kong delays AI copyright law to focus on guidelines first",
+            "summary": "Hong Kong authorities will delay a proposed legal amendment to protect copyrighted works from being used to train artificial intelligence (AI) models and will issue operational gu…"
+          },
+          {
+            "title": "Andy Burnham condemns 'disturbing' case of paedophile who snapped women and girls before using AI to 'nudify' them while repeatedly freed on bail - as PM backs calls for review",
+            "summary": "Zafer Dogan admitted to taking thousands of images of his victims which he then altered using AI technology to 'nudify' them for his own sexual gratification."
+          },
+          {
+            "title": "KuCoin Opens 20x Moonshot AI Pre-IPO Perpetual Trading",
+            "summary": "TL;DR KuCoin has listed a MOONSHOTUSDT pre-IPO stock index perpetual linked to Beijing Moonshot AI Technology. The contract trades 24/7 with up to 20x leverage and settles in USDT…"
+          },
+          {
+            "title": "CEA flags 3 'near term' headwinds for Indian economy: What are they",
+            "summary": "India is currently grappling with a host of challenges tied to its international relations, fluctuating energy prices, and evolving AI technology. V Anantha Nageswaran, the Chief…"
+          },
+          {
+            "title": "Met chief criticises court system after paedophile granted bail",
+            "summary": "Officers left feeling ‘hamstrung’, says Mark Rowley after offender allowed to return to flat overlooking playground Pressure to cut the number of prisoners on remand has led to “d…"
+          },
+          {
+            "title": "75 percent fearful, concerned about AI: Poll",
+            "summary": "A majority of Americans are worried about AI's progress as tech industry leaders and lawmakers call for its development to slow, according to a poll released Thursday. Three quart…"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 167,
+      "args": {
+        "q": "bitcoin"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 25,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "summary"
+        ],
+        "charCount": 6317,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "How Trump’s $5K payout promise can become crypto’s next liquidity shock",
+            "summary": "Bitcoin is holding above $80k as institutional demand stays strong. Could Trump’s $5k initiative fuel a 2021-style liquidity-driven rally?"
+          },
+          {
+            "title": "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names",
+            "summary": "The Bitcoin rally's optimism at TOKEN2049 Singapore could signal renewed investor confidence, potentially revitalizing the crypto market. The post Bitcoin rally sets the mood as T…"
+          },
+          {
+            "title": "Strive Adds $169M Bitcoin in Its Biggest Buy in Four Months",
+            "summary": "The Nasdaq-listed bitcoin treasury company, co-founded by Vivek Ramaswamy, paid roughly $169 million for 2,000 coins last week and now holds 29,462 BTC."
+          },
+          {
+            "title": "Strive CEO Says ASST Can Outrun Strategy in the Next Bitcoin Bull Market",
+            "summary": "Cole expects Bitcoin to reach $400,000 to $500,000 by late 2029, built on a US debt crisis that forces long-term yields lower."
+          },
+          {
+            "title": "Bitcoin Spot volume climbed in September – It’s not enough for BTC’s $90K dreams",
+            "summary": "Bitcoin’s recovery is gaining traction, but repeated rejection near $87,400 keeps the breakout unconfirmed."
+          },
+          {
+            "title": "THORChain cofounder argues protocol is more decentralized than Bitcoin and Ethereum",
+            "summary": "THORChain's governance model highlights the need for DeFi investors to scrutinize decentralization claims and assess actual control mechanisms. The post THORChain cofounder argues…"
+          },
+          {
+            "title": "Coinbase’s Ryan VanGrack: CFTC Approval “Opens Many Doors” for Bitcoin",
+            "summary": "Bitcoin Magazine Coinbase’s Ryan VanGrack: CFTC Approval “Opens Many Doors” for Bitcoin Proposed SEC rules could boost direct Bitcoin ownership for advisors. Coinbase’s Ryan VanGr…"
+          },
+          {
+            "title": "Coinbase Business Chief: Big Banks Increasing BTC Exposure | Shan Aggarwal",
+            "summary": "Bitcoin Magazine Coinbase Business Chief: Big Banks Increasing BTC Exposure | Shan Aggarwal New SEC rules could unlock advisor access to Bitcoin. Coinbase CBO Shan Aggarwal explai…"
+          },
+          {
+            "title": "TD Cowen’s Lance Vitanza: BTC to $132k in 2027 & MSTR Price Outlook",
+            "summary": "Bitcoin Magazine TD Cowen’s Lance Vitanza: BTC to $132k in 2027 & MSTR Price Outlook Institutions aren't asking IF to buy Bitcoin, but HOW. TD Cowen’s Lance Vitanza breaks down th…"
+          },
+          {
+            "title": "Lyn Alden: Nothing Stops This Train – BTC, AI Equities, Bond Market Analysis",
+            "summary": "Bitcoin Magazine Lyn Alden: Nothing Stops This Train – BTC, AI Equities, Bond Market Analysis Will AI end inflation? Lyn Alden breaks down how AI drives service price deflation wh…"
+          },
+          {
+            "title": "Caitlin Long: Fiscal Dominance, Stablecoins & the Macro Case for Bitcoin",
+            "summary": "Bitcoin Magazine Caitlin Long: Fiscal Dominance, Stablecoins & the Macro Case for Bitcoin Will tokenized deposits crowd out stablecoins? Custodia Bank's Caitlin Long explains why…"
+          },
+          {
+            "title": "$1.3B iTrust Capital CEO: 50% of Clients are Buying Bitcoin | Kevin Maloney",
+            "summary": "Bitcoin Magazine $1.3B iTrust Capital CEO: 50% of Clients are Buying Bitcoin | Kevin Maloney Are investors deploying cash into Bitcoin? iTrustCapital CEO Kevin Maloney breaks down…"
+          },
+          {
+            "title": "Why a 4chan Bitcoin Prophecy Says Today Is the End of Crypto Winter",
+            "summary": "An anonymous 4chan user called Bitcoin's October 2025 peak to the day way back in 2023. Could they be right again?"
+          },
+          {
+            "title": "VanEck’s Matthew Sigel: Path to $500k BTC Runs Through Gold",
+            "summary": "Bitcoin Magazine VanEck’s Matthew Sigel: Path to $500k BTC Runs Through Gold Bitcoin miners with power contracts hold AI’s scarcest asset. VanEck’s Matthew Sigel explains how long…"
+          },
+          {
+            "title": "CryptoQuant: BTC “Bull Run Has Started” – 3x to 5x Cycle Outlook | Ki Young Ju",
+            "summary": "Bitcoin Magazine CryptoQuant: BTC “Bull Run Has Started” – 3x to 5x Cycle Outlook | Ki Young Ju Will Bitcoin 10x or 3–5x? CryptoQuant’s Ki Young Ju sees a 3–5x gain from the lows…"
+          },
+          {
+            "title": "Jim Rickards: Stabelcoins “Dangerous” for Bond Market – $10,000 Gold Outlook",
+            "summary": "Bitcoin Magazine Jim Rickards: Stabelcoins “Dangerous” for Bond Market – $10,000 Gold Outlook Jim Rickards says gold could hit $10,000 faster than expected, calling it simple math…"
+          },
+          {
+            "title": "Coinbase Asset Management President: Bitcoin to $300k by 2030 | Anthony Bassili",
+            "summary": "Bitcoin Magazine Coinbase Asset Management President: Bitcoin to $300k by 2030 | Anthony Bassili Coinbase Asset Management target: $300K+ Bitcoin by 2030. President Anthony Bassil…"
+          },
+          {
+            "title": "US credit spreads eased on October 2 after widening beyond the weakest borrowers",
+            "summary": "Credit premiums rose across rating segments, but their uneven widening does not establish Bitcoin selling or systemic stress. The post US credit spreads eased on October 2 after w…"
+          },
+          {
+            "title": "Stacks Opens Second Bitcoin Staking Bond as Liquid Staking Takes the Majority of Capacity",
+            "summary": ""
+          },
+          {
+            "title": "Bitcoin ETFs Bring in $241M To Kick Start ‘Uptober’",
+            "summary": "Bitcoin Magazine Bitcoin ETFs Bring in $241M To Kick Start ‘Uptober’ October has historically given bitcoin investors good returns. ETF buyers are helping the legendary month — ‘U…"
+          },
+          {
+            "title": "Bitcoin battles $83,900 support amid fading momentum: Live levels",
+            "summary": ""
+          },
+          {
+            "title": "China is Shutting Hundreds of Banks. Should Bitcoin Investors Be Worried?",
+            "summary": "China is shutting banks at a record pace as bad loans rise. See what Fitch says about contagion and how Bitcoin could feel it. The post China is Shutting Hundreds of Banks. Should…"
+          },
+          {
+            "title": "Top Reasons Why Cardano Price Is Up Today",
+            "summary": "Cardano price surged to $0.273 on Monday, extending a nearly 10% advance after gaining 6% the previous day. The move put ADA among the session’s strongest major tokens. Cardano pr…"
+          },
+          {
+            "title": "Japanese Bitcoin Treasury Metaplanet Sold BTC Last Quarter To Demonstrate Liquidity",
+            "summary": "Bitcoin Magazine Japanese Bitcoin Treasury Metaplanet Sold BTC Last Quarter To Demonstrate Liquidity The second largest corporate holder of bitcoin sold 10,000 BTC before buying b…"
+          },
+          {
+            "title": "SEC Clears 3x Leveraged Bitcoin and Ethereum Funds for Trading",
+            "summary": "The agency approved a Cboe rule letting six Volatility Shares funds that triple the daily moves of Bitcoin, Ethereum, gold, silver, oil, and natural gas list on a U.S. exchange."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 212,
+      "args": {
+        "q": "ethereum"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 25,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "summary"
+        ],
+        "charCount": 6275,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "THORChain cofounder argues protocol is more decentralized than Bitcoin and Ethereum",
+            "summary": "THORChain's governance model highlights the need for DeFi investors to scrutinize decentralization claims and assess actual control mechanisms. The post THORChain cofounder argues…"
+          },
+          {
+            "title": "Ethereum exit queue eases to 767,349 ETH after MetaMask exits",
+            "summary": "The reduced exit queue highlights Ethereum's resilience and ongoing staking demand, despite security concerns impacting major operators. The post Ethereum exit queue eases to 767,…"
+          },
+          {
+            "title": "Top Reasons Why Cardano Price Is Up Today",
+            "summary": "Cardano price surged to $0.273 on Monday, extending a nearly 10% advance after gaining 6% the previous day. The move put ADA among the session’s strongest major tokens. Cardano pr…"
+          },
+          {
+            "title": "SEC Clears 3x Leveraged Bitcoin and Ethereum Funds for Trading",
+            "summary": "The agency approved a Cboe rule letting six Volatility Shares funds that triple the daily moves of Bitcoin, Ethereum, gold, silver, oil, and natural gas list on a U.S. exchange."
+          },
+          {
+            "title": "Solana lost ground to Ethereum in Q3 DEX volume – An early sign of SOL/ETH’s Q4 breakout?",
+            "summary": "Solana leads Ethereum in DEX volume as record tokenized stock activity raises the odds of a SOL/ETH breakout in Q4."
+          },
+          {
+            "title": "Ethereum proposes native transaction assertions to tackle blind signing",
+            "summary": "Ethereum's proposal could enhance transaction security, reducing reliance on wallet interfaces and appealing to institutions seeking robust risk controls. The post Ethereum propos…"
+          },
+          {
+            "title": "SEC Approves First 3x Leveraged Bitcoin and Ethereum ETFs in the US",
+            "summary": "The SEC has approved the first 3x leveraged Bitcoin and Ethereum ETFs in the United States, paving the way for more highly leveraged bitcoin trading products linked to regulated f…"
+          },
+          {
+            "title": "Bitmine Buys $41M More Ethereum, Reaching 99% of Its 'Alchemy of 5%' Target",
+            "summary": "The purchase lifts Bitmine's stash past 6 million ETH—4.9% of supply and 99% of the way to its \"Alchemy of 5%\" goal—as chairman Tom Lee says Ethereum is \"dwarfing\" other macro ass…"
+          },
+          {
+            "title": "Why Analysts Think Ethereum Price Could Rally to $3K This Week",
+            "summary": "Ethereum price reached $2,707 on Monday, rising 0.52% over 24 hours while holding above $2,700. The move keeps a near-term advance toward $3,000 in focus for the week. The wider c…"
+          },
+          {
+            "title": "Tom Lee’s BitMine Adds $41M in ETH as Holdings Reach 6.02M Tokens",
+            "summary": "Tom Lee’s BitMine has added about $41 million worth of Ethereum, lifting its total ETH holdings above 6.02 million tokens as the company moves closer to its 5% supply target. Ad A…"
+          },
+          {
+            "title": "Tom Lee says ether ‘dwarfing other macro assets’ as Bitmine adds 15,112 ETH",
+            "summary": "Bitmine added 15,112 ETH as Chairman Tom Lee said Ethereum outperformed the S&P 500 by 6,832 basis points in Q3."
+          },
+          {
+            "title": "Bitmine acquires 15,112 Ethereum, raising total to 6.02M ETH",
+            "summary": "Bitmine's aggressive ETH acquisition strategy could amplify Ethereum's market influence and attract increased institutional investment. The post Bitmine acquires 15,112 Ethereum,…"
+          },
+          {
+            "title": "Ethereum Price Prediction: ETH Liquidity Drops 45% Below BTC",
+            "summary": "Ethereum trades near $2,722 as order-book depth trails Bitcoin. Key ETH levels, liquidity risks, and the conditions for a move toward $3,000. The post Ethereum Price Prediction: E…"
+          },
+          {
+            "title": "Top Crypto Market Events To Watch This Week: Bullish or Bearish?",
+            "summary": "The crypto market rose 1.03% over 24 hours to $2.93 trillion on Monday, extending its October recovery. Bitcoin was at the forefront as short positions were being unwound, and Eth…"
+          },
+          {
+            "title": "The SEC approved a 3x Ethereum ETF – Here’s what it means",
+            "summary": "Ethereum’s 3x ETF listing path faces weak Spot ETF demand, while ETH remains above $2,700."
+          },
+          {
+            "title": "Technicals signal bitcoin shift, Ethereum gears up for Glamsterdam: Crypto Week Ahead",
+            "summary": "Your look at what's coming in the week starting Oct. 5."
+          },
+          {
+            "title": "Analyst Warns of Bitcoin Monday Dump After Sunday Gain",
+            "summary": "A four-hour TD Sequential sell signal is also showing on Ethereum and Solana, whose past signals were followed by declines of up to 5.76%"
+          },
+          {
+            "title": "Ethereum Outruns Bitcoin in Q3 With 70% Gain, But Order-Book Depth Shrinks Sharply",
+            "summary": "Jay Clayton, the former SEC chair who launched the December 2020 lawsuit against Ripple over XRP, is back in the spotlight. On October 4, 2026, President Donald Trump named him to…"
+          },
+          {
+            "title": "Ethereum surges nearly 70% in Q3, but its order books thin out against Bitcoin",
+            "summary": "Ethereum's liquidity challenges could lead to increased market volatility, impacting traders' strategies and potentially amplifying price swings. The post Ethereum surges nearly 7…"
+          },
+          {
+            "title": "Ethereum has a 25-day wait to start staking, with nearly 1.5 million ETH in line",
+            "summary": "Ether waiting to enter staking has fallen by more than a quarter since early September, while the exit queue hit its longest of 2026."
+          },
+          {
+            "title": "Ethereum Price Analysis: ETH Holds Bullish Structure, but $2.8K Remains the Key Hurdle",
+            "summary": "Ethereum is holding at $2.7K after another rejection from overhead resistance. Buyers have preserved the broader upward structure, but a sustained breakout is still needed to turn…"
+          },
+          {
+            "title": "Ethereum liquidity drops below 50% of Bitcoin’s level",
+            "summary": "Ethereum's reduced liquidity compared to Bitcoin may lead to increased trading costs and volatility, impacting institutional trading strategies. The post Ethereum liquidity drops…"
+          },
+          {
+            "title": "‘Ethereum risks being left behind’ – Analysts debate L1’s role in tokenization boom",
+            "summary": "Tokenized stocks market supply is at $3.2B and projected to hit $2T by 2028-2030."
+          },
+          {
+            "title": "Ethereum’s past outflow charts can change when more exchange wallets are identified",
+            "summary": "Coin Metrics rebuilt ETH Standard flows, but an outflow trading claim still needs the data available at the decision time. The post Ethereum’s past outflow charts can change when…"
+          },
+          {
+            "title": "Mapping the altcoin cycle setup as Ethereum’s bear trap risk grows",
+            "summary": "Ethereum's rising leverage could prevent the broader altcoin market from rising further."
+          }
+        ]
+      }
+    }
+  ]
+}

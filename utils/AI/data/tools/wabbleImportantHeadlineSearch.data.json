@@ -1,0 +1,308 @@
+{
+  "tool": "wabbleImportantHeadlineSearch",
+  "source": "wabbleImportantHeadlineSearch.ts#wabbleImportantHeadlineSearchTool",
+  "kind": "feed",
+  "generatedAt": "2026-10-06T00:51:55.794Z",
+  "domains": null,
+  "summary": {
+    "runs": 1,
+    "ok": 1,
+    "empty": 0,
+    "totalRecords": 64
+  },
+  "runs": [
+    {
+      "domain": "feed",
+      "ok": true,
+      "elapsedMs": 7226,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 64,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items",
+          "slices"
+        ],
+        "recordKeys": [
+          "headline",
+          "importance"
+        ],
+        "charCount": 9009,
+        "empty": false
+      },
+      "response": {
+        "count": 64,
+        "items": [
+          {
+            "headline": "Iran agrees to suspend uranium enrichment in exchange for US sanctions relief.",
+            "importance": "high"
+          },
+          {
+            "headline": "U.S. Treasury Secretary Bessent says interest rates should decrease following the conflict.",
+            "importance": "high"
+          },
+          {
+            "headline": "President Trump says the war with Iran will end soon.",
+            "importance": "high"
+          },
+          {
+            "headline": "UK government urges households to prepare for potential war with Russia, BBC reports.",
+            "importance": "high"
+          },
+          {
+            "headline": "President Trump says the war with Iran will conclude very soon.",
+            "importance": "high"
+          },
+          {
+            "headline": "Iran's Foreign Minister Araghchi says the Strait of Hormuz would fully reopen within seven days if Iran's conditions were accepted and the US blockade was lifted.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says he will not impose a diesel export ban.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says he now has to make a decision on Iran, adding that either Iran signs a deal or it won’t exist any longer.",
+            "importance": "medium"
+          },
+          {
+            "headline": "A senior US official tells Channel 12 the US military is sending a third aircraft carrier and a second Marine unit to the Middle East.",
+            "importance": "medium"
+          },
+          {
+            "headline": "ChatGPT has started showing a new Wallet section in the app, currently marked “Coming soon.”",
+            "importance": "medium"
+          },
+          {
+            "headline": "Israeli Prime Minister Netanyahu says there are indications that Iran and its proxies want to attack Israel.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says you will see important events regarding Iran very soon.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Wabble AI has received $35,000 in support from AWS.",
+            "importance": "medium"
+          },
+          {
+            "headline": "OpenAI agents accessed a United Nations Trade and Development website more than 16,000 times between April and June.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says the U.S. will win against Iran in military and economic warfare.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran says it is prepared for any US attacks.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran threatens to cut off all air traffic in the Middle East if its ability to fly and access airport services is restricted.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran's President Pezeshkian says Iran no longer trusts talks with United States.",
+            "importance": "medium"
+          },
+          {
+            "headline": "OpenAI says its agents leaked some user images, and it is still working to understand the scope of the rogue activity.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran-US talks enter technical stage, Al Jazeera journalist reports – CBS.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Fed's Schmid says U.S. debt seems \"extreme\".",
+            "importance": "medium"
+          },
+          {
+            "headline": "A security vulnerability on Magic Eden allowed ethical hackers to transfer 3,832 NFTs from hundreds of wallets.",
+            "importance": "medium"
+          },
+          {
+            "headline": "USA Treasury accepts $4.08B of offers for buyback, short of max $6B.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Xi Jinping urges the U.S. and Iran to return to the track of resolving issues through negotiation as soon as possible, according to Xinhua.",
+            "importance": "medium"
+          },
+          {
+            "headline": "The U.S. and Iran are discussing a phased deal to reopen the Strait of Hormuz and end the U.S. blockade, according to sources.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran threatens to shut down the Bab el-Mandeb Strait, stating that linking it with the Strait of Hormuz will change the battlefield.",
+            "importance": "medium"
+          },
+          {
+            "headline": "OpenAI agents reportedly accessed Australian Medicare statistics.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran's security chief Mohsen Rezaei states that the Strait of Hormuz will not be reopened and no negotiations will occur until Iran's conditions are met.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran sets conditions for reopening the Strait of Hormuz, according to IRIB.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says Witkoff and Kushner met with Iran and shared many good thoughts.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says a meeting between U.S. officials and an Iranian delegation that lasted three hours went very well.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump calls on Iran to reach an agreement.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Explosions occurred in the Strait of Hormuz after the Islamic Revolutionary Guard Corps attacked ships.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump told advisors he would be open to meeting with Iranian officials in New York if conditions are right, CNN reports.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iranian sources deny reports of deals to reopen the Strait of Hormuz, according to Fars.",
+            "importance": "medium"
+          },
+          {
+            "headline": "A senior Iranian official states that Tehran welcomes the revival of diplomacy if the United States takes tangible steps.",
+            "importance": "medium"
+          },
+          {
+            "headline": "A senior Iranian official says an Iranian delegation is in New York with full authority to revive diplomacy with the United States.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran's Parliament Speaker Ghalibaf states that Iran will not surrender and will stand up to the United States.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Israeli Defense Minister Israel Katz warns that the kidnapping of any Israeli soldier or civilian will result in the evacuation of Gaza City and the targeting of its infra",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran proposes opening the Strait of Hormuz within seven days if the United States lifts its blockade, Kyodo reports.",
+            "importance": "medium"
+          },
+          {
+            "headline": "The United States has proposed extending the trade truce with China by six months, according to the New York Times.",
+            "importance": "medium"
+          },
+          {
+            "headline": "More than 234 cryptocurrencies now have an RSI above 70, which puts them in overbought territory.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran warns world has not yet seen power and precision of new weapons and threatens additional enemy targets.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says he is in a deciding mode regarding Iran and warns that very big things could happen in the near future.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran warns regional states that any participation in a U.S. strike on Iran will result in retaliation by Iranian forces.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran's military central command warns of reported United States plans to attack Iran with the approval of regional countries, according to state media.",
+            "importance": "medium"
+          },
+          {
+            "headline": "The Iranian Armed Forces reportedly launched three cruise missiles at targets in the Strait of Hormuz.",
+            "importance": "medium"
+          },
+          {
+            "headline": "B1 bombers have taken off from the United Kingom.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Start trading with an extra 30% on your first deposit. If you're looking for a non-KYC exchange with no identity verification required and plenty of rewards, even if you're startin",
+            "importance": "medium"
+          },
+          {
+            "headline": "Yemen's Houthis state they will continue targeting Saudi military build-ups until the blockade ends.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump bans CNN, MSNBC, and Politico from the White House.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says he will see on whether to annihilate Iran.",
+            "importance": "medium"
+          },
+          {
+            "headline": "The Commodity Futures Trading Commission is seeking a White House review on cryptocurrency regulations following the failure of a legislative bill.",
+            "importance": "medium"
+          },
+          {
+            "headline": "More than 248 cryptocurrencies now have an RSI above 70, which puts them in overbought territory.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says the U.S. may need to resume large-scale military operations against Iran.",
+            "importance": "medium"
+          },
+          {
+            "headline": "An explosion has occurred in the Strait of Hormuz.",
+            "importance": "medium"
+          },
+          {
+            "headline": "The Iranian Revolutionary Guard Corps states it will not open the Strait of Hormuz while President Trump and Benjamin Netanyahu remain in power.",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says he is open to the concept of engaging with Iran to determine if the U.S. will choose to do so. Iran states it does not seek",
+            "importance": "medium"
+          },
+          {
+            "headline": "President Trump says he is open to the concept of engaging with Iran to determine if the U.S. will choose to do so.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Ukraine and Russia have agreed not to hit each other's energy targets, President Trump says.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran launches ballistic missiles, initial report.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran's President Pezeshkian says Tehran will not surrender to the United States.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran says negotiations are not possible until its conditions are met, according to Al Mayadeen.",
+            "importance": "medium"
+          },
+          {
+            "headline": "Iran's Revolutionary Guards claim they destroyed a U.S. drone in the Strait of Hormuz and warn that hostile vessels will be targeted.",
+            "importance": "medium"
+          }
+        ],
+        "slices": [
+          {
+            "importance": "high",
+            "count": 5
+          },
+          {
+            "importance": "medium",
+            "count": 59
+          }
+        ]
+      }
+    }
+  ]
+}

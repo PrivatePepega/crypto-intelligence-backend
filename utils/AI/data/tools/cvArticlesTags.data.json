@@ -1,0 +1,174 @@
+{
+  "tool": "cvArticlesTags",
+  "source": "cvArticlesTags.ts#cvArticlesTagsTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:55:19.811Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "skippedDomains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy"
+  ],
+  "summary": {
+    "runs": 4,
+    "ok": 4,
+    "empty": 0,
+    "totalRecords": 7
+  },
+  "runs": [
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 13554,
+      "args": {
+        "slug": "bitcoin",
+        "limit": 15
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 1,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 330,
+        "empty": false
+      },
+      "response": {
+        "count": 1,
+        "items": [
+          {
+            "title": "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names",
+            "description": "The Bitcoin rally's optimism at TOKEN2049 Singapore could signal renewed investor confidence, potentially revitalizing the crypto market. The post Bitcoin rally sets the mood as TOKEN2049 Singapore dr"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 5221,
+      "args": {
+        "slug": "ai-crypto",
+        "limit": 15
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 4,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1194,
+        "empty": false
+      },
+      "response": {
+        "count": 4,
+        "items": [
+          {
+            "title": "Former AI researchers warn NYC Council humanity could lose control of AI",
+            "description": "Jacob Coxon, who left Anthropic in September warning the technology could kill everyone before the decade ends, opened his sworn testimony by calling the approach to building advanced systems extremel"
+          },
+          {
+            "title": "Corporate AI costs are falling, but companies are using the savings to deploy more AI",
+            "description": "Companies in the United States continue to pay less for AI despite increasing usage levels, according to a recent study released by Ramp AI Index. This information indicates that the AI price wars are"
+          },
+          {
+            "title": "Asian banks pour record debt into AI chip and data center boom",
+            "description": "The surge in AI-related lending heightens financial concentration risks, potentially destabilizing economies reliant on tech investments. The post Asian banks pour record debt into AI chip and data ce"
+          },
+          {
+            "title": "A.I. Officials Stonewall on Questions About Technology’s Risks",
+            "description": "A New York City Council hearing on artificial intelligence yielded few answers or assurances about how the industry would provide safeguards against catastrophic scenarios."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 5186,
+      "args": {
+        "slug": "bitcoin",
+        "limit": 15
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 1,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 330,
+        "empty": false
+      },
+      "response": {
+        "count": 1,
+        "items": [
+          {
+            "title": "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names",
+            "description": "The Bitcoin rally's optimism at TOKEN2049 Singapore could signal renewed investor confidence, potentially revitalizing the crypto market. The post Bitcoin rally sets the mood as TOKEN2049 Singapore dr"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 13308,
+      "args": {
+        "slug": "ethereum",
+        "limit": 15
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 1,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 218,
+        "empty": false
+      },
+      "response": {
+        "count": 1,
+        "items": [
+          {
+            "title": "⛽ ETH Gas: 🐢 0.125453981 | 🚶 0.126453981 | 🚀 0.143919554 Gwei",
+            "description": "Current Ethereum gas prices. Fast: 0.143919554 Gwei, Standard: 0.126453981 Gwei, Safe: 0.125453981 Gwei"
+          }
+        ]
+      }
+    }
+  ]
+}

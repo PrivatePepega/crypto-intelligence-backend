@@ -1,0 +1,97 @@
+{
+  "tool": "cvTrending",
+  "source": "cvTrending.ts#cvTrendingTool",
+  "kind": "feed",
+  "generatedAt": "2026-10-06T00:46:36.808Z",
+  "domains": null,
+  "summary": {
+    "runs": 1,
+    "ok": 1,
+    "empty": 0,
+    "totalRecords": 7
+  },
+  "runs": [
+    {
+      "domain": "feed",
+      "ok": true,
+      "elapsedMs": 5208,
+      "args": {
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 7,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "topic",
+          "sentiment",
+          "recentHeadlines"
+        ],
+        "charCount": 1247,
+        "empty": false
+      },
+      "response": {
+        "count": 7,
+        "items": [
+          {
+            "topic": "AI",
+            "sentiment": "neutral",
+            "recentHeadlines": [
+              "Corporate AI costs are falling, but companies are using the savings to deploy more AI",
+              "Asian banks pour record debt into AI chip and data center boom",
+              "A.I. Officials Stonewall on Questions About Technology’s Risks"
+            ]
+          },
+          {
+            "topic": "XRP",
+            "sentiment": "bullish",
+            "recentHeadlines": [
+              "Peter Brandt Hints at Bullish XRP Pattern With a Coffee Cup Chart",
+              "Ripple’s Schwartz Slams Fee Metric as 100x XRP Fee Hike Is Floated"
+            ]
+          },
+          {
+            "topic": "Stablecoins",
+            "sentiment": "neutral",
+            "recentHeadlines": [
+              "Morph Joins Mastercard Crypto Partner Program for Stablecoin Settlement",
+              "SUI/USDT: Bullish Structure Builds Toward a $1.35 Breakout"
+            ]
+          },
+          {
+            "topic": "Ethereum",
+            "sentiment": "neutral",
+            "recentHeadlines": [
+              "⛽ ETH Gas: 🐢 0.089282157 | 🚶 0.090531246 | 🚀 0.09958437 Gwei"
+            ]
+          },
+          {
+            "topic": "DeFi",
+            "sentiment": "neutral",
+            "recentHeadlines": [
+              "Compound votes on treasury delays and veto powers as DeFi governance strains"
+            ]
+          },
+          {
+            "topic": "Bitcoin",
+            "sentiment": "neutral",
+            "recentHeadlines": [
+              "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names"
+            ]
+          },
+          {
+            "topic": "Layer 2",
+            "sentiment": "neutral",
+            "recentHeadlines": [
+              "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

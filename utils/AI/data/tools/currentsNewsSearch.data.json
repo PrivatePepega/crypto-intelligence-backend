@@ -1,0 +1,1431 @@
+{
+  "tool": "currentsNewsSearch",
+  "source": "currentsNewsSearch.ts#currentsSearchTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:54:37.702Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "skippedDomains": [],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 0,
+    "totalRecords": 160
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 1624,
+      "args": {
+        "keywords": "geopolitics",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 6098,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "business"
+          ],
+          "description": "For decades, humble phosphate fertiliser was a simple story of digging up rock to help grow crops. Now, amid the US-Iran war, prices are surging and major global supply chains are at a tipping point.",
+          "title": "Phosphate: An old workhorse turned critical commodity"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "For decades, humble phosphate fertiliser was a simple story of digging up rock to help grow crops. Now, amid the US-Iran war, prices are surging and major global supply chains are at a tipping point.",
+          "title": "Phosphate: An old workhorse turned critical commodity"
+        },
+        {
+          "category": [
+            "sports"
+          ],
+          "description": "For decades, humble phosphate fertiliser was a simple story of digging up rock to help grow crops. Now, amid the US-Iran war, prices are surging and major global supply chains are at a tipping point.",
+          "title": "Phosphate: An old workhorse turned critical commodity"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "For decades, humble phosphate fertiliser was a simple story of digging up rock to help grow crops. Now, amid the US-Iran war, prices are surging and major global supply chains are at a tipping point.",
+          "title": "Phosphate: An old workhorse turned critical commodity"
+        },
+        {
+          "category": [
+            "world"
+          ],
+          "description": "Starbucks struck one of Asia's most closely watched deals last year. Now it is getting headaches over choices made by a partner that leans toward Beijing.",
+          "title": "CNBC's The China Connection newsletter: Starbucks enters Xinjiang in calculated geopolitical risk"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "Its commercial bank revenue in Singapore is up 21% in the first seven months against a year ago Read more at The Business Times.",
+          "title": "Citi targets globally ambitious firms as geopolitical de-risking drives Singapore flows"
+        },
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "The Metric Is Not the Mission is a ten-part examination of how Big Tech moved from building and expanding the open internet to increasingly shaping it around its own metrics, incentives and as…",
+          "title": "The Metric Is Not The Mission: The Finished Internet"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "West Texas Intermediate futures drop 1.8% to settle near US$89 a barrel; Brent closes around US$100 Read more at The Business Times.",
+          "title": "Oil falls with focus on Saudi supplies, flows through Hormuz"
+        },
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "Tiffany McGhee, CEO and CIO of Pivotal Advisors, described the market as resilient but still sensitive to interest rates. Ahead of earnings season, which begins Tuesday the 13th, she said investors will focus on whether companies can demonstrate monetization of their AI investments, as well as wheth...",
+          "title": "Tiffany McGhee Says Earnings Must Show AI Spending Is Paying Off"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "WELLINGTON, Oct 6 (Reuters) – New Zealand’s business ​confidence rose ‌in the third quarter even as fuel ‌prices ​increase ⁠and geopolitics remain ⁠a headwind for the country, a private ​think tank said ⁠on Tuesday.\nA ⁠net 43% ​of firms ​surveyed expected general business ‌conditions to improve comp...",
+          "title": "New Zealand third quarter business confidence jumps, says think tank"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "Jaishankar said geopolitical tensions were creating new challenges for countries, from energy and food security to fertilisers and trade.",
+          "title": "'Age Of Flux': Jaishankar Warns Of Turbulent Times, Says India Will 'Rise To Challenges'"
+        },
+        {
+          "category": [
+            "industry",
+            "mining"
+          ],
+          "description": "Ordinary investors have largely sat out gold’s rally, leaving room for another leg higher while central banks keep buying on price dips, veteran mining Colorado summit video: Giustra says gold rally is missing retail",
+          "title": "Colorado summit video: Giustra says gold rally is missing retail - The Northern Miner"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "/PRNewswire/ -- Ramaco Resources, Inc. (NASDAQ: METC, METCB) (\"Ramaco\" or the \"Company\") announced today that its Chairman and Chief Executive Officer, Randall...",
+          "title": "Ramaco Resources Chairman and CEO Randall Atkins to Speak at Baker Botts 10th Annual Energy Summit"
+        },
+        {
+          "category": [
+            "politics"
+          ],
+          "description": "You can win every battle on the ground, but there is a weapon that destroys you without making a sound.Continue reading on The Geopolitical Economist »",
+          "title": "NAZA: Israel is losing the only war that really matters"
+        },
+        {
+          "category": [
+            "company"
+          ],
+          "description": "Net Asset Value Expected to be $12.25 to $12.75 Per Share...",
+          "title": "Neostellar Capital Corp. Announces Third Quarter 2026 Preliminary Investment Portfolio Update"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "ENOR ETF offers concentrated Norway exposure (oil, shipping, financials) benefiting from Hormuz tensions. Learn more about the ENOR ETF here.",
+          "title": "ENOR: 40% Of The Portfolio Clear Winners In Enduring, Asymmetric Hormuz Situation"
+        },
+        {
+          "category": [
+            "world"
+          ],
+          "description": "The nearest wild population of penguins lives some 4,900 miles away from Greenland, in the Galapagos Islands",
+          "title": "Trump posts AI image of penguins welcoming him to Greenland - an island without them"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "Amidst ongoing geopolitical tensions and global economic uncertainty, India is showcasing remarkable resilience, paving the way for enhanced leadership. This trajectory is supported by a steady growth in exports and robust foreign investment. However, the emergence of artificial intelligence necessi...",
+          "title": "India’s economic resilience strengthens global leadership prospects: Jean-Pierre Landau"
+        },
+        {
+          "category": [
+            "research"
+          ],
+          "description": "How hedge fund speculation destabilized the bond market",
+          "title": "Stefano Sgambati | Private Leverage, Public Costs"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "The English Premier League's ruling that Mancheter City has beached its financial rules is set to become one the most contentious issues in club football history, as geopolitics, money, power and fans clash.",
+          "title": "Soccer Gets Geopolitical As Abu Dhabi Threatens Britain Over Manchester City Case"
+        }
+      ]
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 935,
+      "args": {
+        "keywords": "financial markets",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 6455,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "news",
+            "business",
+            "finances",
+            "money",
+            "banking"
+          ],
+          "description": "The Ellison media empire has assumed control of WBD, dumped all over the bond markets, and named its leadership team.",
+          "title": "Ellison Empire Settles on Skydance, Takes Big Bond Hit, Names Team"
+        },
+        {
+          "category": [
+            "news",
+            "business",
+            "finances",
+            "money",
+            "banking"
+          ],
+          "description": "The Ellison media empire has assumed control of WBD, dumped all over the bond markets, and named its leadership team.",
+          "title": "Ellison Empire Settles on Skydance, Takes Big Bond Hit, Names Team"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "Hong Kong Exchanges and Clearing Limited and The Stock Exchange of Hong Kong Limited take no responsibility for the \ncontents of this announcement, make no representation as to its accuracy or completeness and expressly disclaim any liability \nwhatsoever for any loss howsoever arising from or in rel...",
+          "title": "[00017.HK] LAUNCH OF EXCHANGE..."
+        },
+        {
+          "category": [
+            "sports"
+          ],
+          "description": "Oct 5 - BC Partners Credit on Monday said it had made an initial committed investment in LIV Golf and plans to provide up to $300 million in financing to help the professional men's golf league emerge from restructuring and strengthen its financial footing ahead of the 2027 season. Read more at stra...",
+          "title": "LIV Golf secures BC Partners ' credit funding to support restructuring"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Pedevco (NYSEAMERICAN:PED) outlined plans to accelerate development across its Rocky Mountain oil and gas portfolio while pursuing selective acquisitions, as Interim President, Chief Executive Officer and Chief Operating Officer R.T. Dukes said the company has strengthened its balance sheet and is p",
+          "title": "Pedevco Targets Rockies Growth, Cost Savings and Acquisitions Into 2027"
+        },
+        {
+          "category": [
+            "finance",
+            "business"
+          ],
+          "description": "LIV Golf secures BC Partners ’ credit funding to support restructuring",
+          "title": "LIV Golf secures BC Partners ’ credit funding to support restructuring By Reuters"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "Oct 5 (Reuters) – BC Partners Credit on Monday said it had made an initial committed investment ​in LIV Golf and ‌plans to provide up to $300 million in financing to help the professional men’s golf league emerge from restructuring and strengthen ‌its ​financial footing ahead of ⁠the 2027 season.\nLI...",
+          "title": "LIV Golf secures BC Partners ‘ credit funding to support restructuring"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "Oct 5 : BC Partners Credit on Monday said it had made an initial committed investment in LIV Golf and plans to provide up to $300 million in financing to help the professional men's golf league emerge from restructuring and strengthen its financial footing ahead of the 2027 season.LIV Golf filed for...",
+          "title": "LIV Golf secures BC Partners ' credit funding to support restructuring"
+        },
+        {
+          "category": [
+            "news",
+            "business",
+            "finances",
+            "money",
+            "banking"
+          ],
+          "description": "The Ellison media empire has assumed control of WBD, dumped all over the bond markets, and named its leadership team.",
+          "title": "Ellison Empire Settles on Skydance, Takes Big Bond Hit, Names Team"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Everspin Tech (NASDAQ:MRAM - Get Free Report) CFO William Cooper sold 3,115 shares of Everspin Tech stock in a transaction dated Friday, October 2nd. The stock was sold at an average price of $19.08, for a total value of $59,434.20. Following the sale, the chief financial officer directly owned 154,...",
+          "title": "Everspin Tech (NASDAQ:MRAM) CFO Sells $59,434.20 in Stock"
+        },
+        {
+          "category": [
+            "finance",
+            "crypto"
+          ],
+          "description": "Microsoft Copilot AI predicts that LINK could hit $100 this year, in the event of its CCIP tech being adopted on a global scale",
+          "title": "Microsoft Copilot AI Predicts LINK Could Hit $100 in 2026"
+        },
+        {
+          "category": [
+            "news",
+            "business",
+            "finances",
+            "money",
+            "banking"
+          ],
+          "description": "The Ellison media empire has assumed control of WBD, dumped all over the bond markets, and named its leadership team.",
+          "title": "Ellison Empire Settles on Skydance, Takes Big Bond Hit, Names Team"
+        },
+        {
+          "category": [
+            "research"
+          ],
+          "description": "The former British banker who spent more than 35 years working in financial markets has died by suicide",
+          "title": "Whistleblower who flagged Lutnick’s links to Epstein dies"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Carvana Co. (NYSE:CVNA - Get Free Report) CFO Mark Jenkins sold 63,750 shares of the business's stock in a transaction that occurred on Thursday, October 1st. The shares were sold at an average price of $61.64, for a total value of $3,929,550.00. Following the completion of the sale, the chief finan...",
+          "title": "Carvana (NYSE:CVNA) Stock: Insider Mark Jenkins Sells 63,750 Shares"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Crypto’s movers and shakers are gathering in Singapore for one of their biggest conferences of the year as a Bitcoin-led rally revives hopes that a new bull market is taking shape.",
+          "title": "Crypto Elite Gather in Singapore as Bitcoin’s Rally Buoys Bulls"
+        },
+        {
+          "category": [
+            "company",
+            "applied-materials"
+          ],
+          "description": "Form 4 Applied Materials Inc For: 5 October",
+          "title": "Form 4 Applied Materials Inc For: 5 October By Investing.com"
+        },
+        {
+          "category": [
+            "company"
+          ],
+          "description": "THE WOODLANDS, Texas, Oct. 05, 2026 (GLOBE NEWSWIRE) -- LGI Homes, Inc. (NASDAQ: LGIH) today announced it closed 386 homes in September 2026, including 8...",
+          "title": "LGI Homes, Inc. Reports September and Third Quarter 2026 Home Closings and Announces Date for Third Quarter Earnings Conference Call"
+        },
+        {
+          "category": [
+            "regional",
+            "chicago"
+          ],
+          "description": "After almost eight years in business, Black & Gray Brewing Co. in downtown East Dundee has poured its last pint of beer. “This was not a decision that we wanted to make, but one that — financi...",
+          "title": "Black & Gray Brewing shuts its doors in downtown East Dundee"
+        },
+        {
+          "category": [
+            "politics"
+          ],
+          "description": "Patrick McHenry, Former House Financial Services Chair, says Republicans are playing defense in the 2026 midterms as campaign money moves toward races the party considers more urgent to protect. McHenry says Republicans should address the debt ceiling while they control Congress and the White House,...",
+          "title": "Watch McHenry Says Debt Fight Could Hit Treasuries Harder - Bloomberg"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "One Nation is set to move into a new HQ, as the party pushes to expand across the country.",
+          "title": "One Nation will move into a Gina Rinehart-owned office"
+        }
+      ]
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 645,
+      "args": {
+        "keywords": "macro",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 5739,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "TPR downgraded to Hold amid weakening consumer confidence and luxury macro risk.",
+          "title": "Tapestry: The Macro Is Becoming A Problem Again (NYSE:TPR)"
+        },
+        {
+          "category": [
+            "national"
+          ],
+          "description": "The iPhone 18 Pro Max phone showcased by the merchant located in Yichang City, Hubei Province, China on October 5, 2026.",
+          "title": "China: iPhone 18 Pro Max. | Flipboard"
+        },
+        {
+          "category": [
+            "politics"
+          ],
+          "description": "\"Balance of Power\" focuses on the intersection of politics and global business. On today's show, Sen. Mark Warner (D-VA), Vice Chairman of the Senate Select Committee on Intelligence, says the Senate Intelligence Committee was not briefed about US bombers leaving a UK base and says lawmakers are not...",
+          "title": "Watch US Moves Bombers From UK Airbase as Threats Linger - Bloomberg"
+        },
+        {
+          "category": [
+            "politics"
+          ],
+          "description": "Heather Conley, senior fellow at AEI, a senior advisor at Evenflow Macro LLC and a former Deputy Assistant Secretary of State in the Bureau of European and Eurasian Affairs, says conflicting explanations from the administration over the movement of US bombers from the UK's Fairford airbase raise que...",
+          "title": "Watch Conley: Refined Fuels Remain The Energy Problem - Bloomberg"
+        },
+        {
+          "category": [
+            "company",
+            "rio-tinto"
+          ],
+          "description": "Rio Tinto ( ($RIO) ) is experiencing volatility. Read on for a possible explanation for the stock’s unusual movement. Rio Tinto shares are sliding as investors flee...",
+          "title": "Rio Tinto Tumbles As Commodity Jitters Rattle Investors - TipRanks.com"
+        },
+        {
+          "category": [
+            "business",
+            "entrepreneur"
+          ],
+          "description": "YuChiang Cheng saw a different path forward — and it's paying off big time.",
+          "title": "The CEO of a Company That Cut Ties With Subway Reveals How It Went From Running Out of Cash to $54 Million a Year"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "A whole image can be a link in two clicks. Separate clickable areas on one picture cannot be done natively, because Confluence Cloud has no HTML macro. The four honest options.",
+          "title": "How to make an image clickable in Confluence Cloud"
+        },
+        {
+          "category": [
+            "politics"
+          ],
+          "description": "A rally in giant technology companies drove stocks higher, overshadowing concerns about still-elevated oil prices and bond yields. The S&P 500 approached a record as a gauge of megacaps climbed 1.3%. Political upheaval in Europe and fiscal worries sent the euro to its weakest since May 2025, boostin...",
+          "title": "Stocks Get Tech Lift Despite Renewed Bond Losses"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Unity Software shares are rising Monday. Piper Sandler reiterated its rating and price target ahead of the company's third-quarter report.",
+          "title": "Unity Stock Climbs: What's Going On? - Unity Software (NYSE:U)"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "Today I applied to a kaggle competition, it's actually a college project. Training a ML model. Some...",
+          "title": "Day 6"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "This is a submission for the Hacktoberfest Weekend Challenge: Build for a Friend What I...",
+          "title": "NutriTracker - Build an app for my gym rat friend to track on his nutritions"
+        },
+        {
+          "category": [
+            "finance",
+            "trading"
+          ],
+          "description": "Heading into the afternoon session, small-cap benchmarks are holding near their early baseline levels, maintaining a tightly rangebound structure following Friday’s soft Nonfarm Payrolls print. Index & Benchmark Snapshot iShares - Russell 2000 ETF (IWM): Hovering around $281.50–$281.70, essentially ...",
+          "title": "Midday Small-Cap & Momentum Market Brief - 10/5/2026 13:30 Eastern"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "MercadoLibre stock rises on Brazil election results",
+          "title": "MercadoLibre stock rises on Brazil election results By Investing.com"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "Solid Power stock analysis: Q2 loss, strong cash, and key solid-state battery milestones. Click for more on SLDP stock.",
+          "title": "Solid Power Still Has Promise (NASDAQ:SLDP)"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "Confluence Cloud has a Live Search macro. It searches the space rather than the page, and it cannot match the middle of a word. Here is what it really does and when a list beats a box.",
+          "title": "The Confluence Live Search macro: what it does, and where it breaks"
+        },
+        {
+          "category": [
+            "crypto"
+          ],
+          "description": "Bitcoin gained 43% in the third quarter as the debasement trade helped offset rising bond yields, while weaker payrolls shifted the Fed outlook.",
+          "title": "Bitcoin’s 43% Q3 Rally Meets a Tougher Macro Test"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "Macro Ops: Unparalleled Investing Research | Vol Street Journal™ :: Episode 42",
+          "title": "Vol Street Journal™ :: Episode 42 | Macro Ops: Unparalleled Investing Research"
+        },
+        {
+          "category": [],
+          "description": "Spain's economy is still outpacing the eurozone and employment is at its highest since 2008, but Sánchez's term end is marred by inflation, weak productivity and a housing crisis now dominating the election debate.",
+          "title": "When growth is not enough: housing and inflation, Sánchez's key election challenges"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "Bridgestone beats in H1 as profits and margins rise. Click for more on BRDCF stock.",
+          "title": "Bridgestone: Reorganization Shines In A World Energy Crisis (OTCMKTS:BRDCF)"
+        },
+        {
+          "category": [
+            "photography",
+            "lifestyle"
+          ],
+          "description": "SmallRig is well known for its video-related accessories. Everyone knows about cages and all that comes with them. Perhaps also about the tripods and video lights. Now SmallRig has added a backpack to its ever-increasing product line. I’ve been using it for some time now. These are my findings. I’ve...",
+          "title": "Review of the SmallRig 25L Outdoor Camera Backpack"
+        }
+      ]
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 737,
+      "args": {
+        "keywords": "commodities energy",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 6496,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "First Solar, Enphase Energy, Nextpower, Solaris Energy Infrastructure, T1 Energy, SolarEdge Technologies, and Sunrun are the seven Solar stocks to watch today, according to MarketBeat's stock screener tool. Solar stocks are shares of publicly traded companies involved in the solar energy industry,",
+          "title": "Solar Stocks To Watch Today - October 5th"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Quanta Services, WEC Energy Group, NOV, Clearway Energy, HA Sustainable Infrastructure Capital, Forum Energy Technologies, and Enlight Renewable Energy are the seven Renewable Energy stocks to watch today, according to MarketBeat's stock screener tool. Renewable energy stocks are shares of publicly",
+          "title": "Promising Renewable Energy Stocks To Follow Now - October 5th"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "Energy Transfer (ET) posts record earnings/volumes, raises guidance, and signals faster distribution growth. Click here to read my latest analysis.",
+          "title": "Energy Transfer: Guidance Keeps Rising, And A Bigger Distribution Hike Is Coming (NYSE:ET)"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "Horizon Kinetics Inflation Beneficiaries ETF is set to benefit from real asset inflation, with a focus on commodity-driven equities. Read more on INFL ETF here.",
+          "title": "INFL: Why An Inflation ETF Isn't A Clear Buy In An Inflationary Market (NYSEARCA:INFL)"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Oklo, NuScale Power, BWX Technologies, Centrus Energy, X-Energy, Nano Nuclear Energy, and Terrestrial Energy are the seven Nuclear stocks to watch today, according to MarketBeat's stock screener tool. **Nuclear stocks** are shares of publicly traded companies involved in nuclear energy, such as ura",
+          "title": "Nuclear Stocks To Watch Now - October 5th"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "The US-Israeli war with Iran has raised prices of energy and related products and led to shortages of commodities shipped through the Strait of Hormuz. Diesel prices are at record highs, hitting farmers and truckers. Economists warned that higher prices could soon spill over to other sectors and bro...",
+          "title": "US services sector cools in September, price pressures building"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "Global commodities trader Gunvor has rebranded as Centalion Group and announced plans to move its corporate headquarters from Cyprus to Singapore, marking a significant change for one of the international energy trading groups that has used the island as its legal base. The employee partnership that...",
+          "title": "Global commodities giant is moving its corporate headquarters out of Cyprus"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "By Lucia Mutikani\nWASHINGTON, Oct 5 (Reuters) – US services sector activity slowed in September, with strong domestic demand stretching supply chains and raising prices paid by businesses for inputs, indicating that inflation could remain high into next year.\nThe Institute ​for Supply Management sai...",
+          "title": "US services sector activity slows in September; price pressures mount"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "Stock Futures Drift As Attention Turns To European Debt Crisis \n\n            Futures are lower to start the week and global markets struggle for direction, as political upheaval and mounting concern over Europe’s public finances dampened risk sentiment and sent the euro to a 17-month low against the...",
+          "title": "Stock Futures Drift As Attention Turns To European Debt Crisis"
+        },
+        {
+          "category": [
+            "awesome_rss"
+          ],
+          "description": "India is facilitating the deployment of 70,000 skilled workers to Russia while pushing to diversify exports across seven sectors to balance bilateral trade.",
+          "title": "India to deploy 70,000 skilled workers to Russia as New Delhi seeks to diversify trade"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "Shipping companies boost drone defenses after Black Sea attacks",
+          "title": "Shipping companies boost drone defenses after Black Sea attacks By Investing.com"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Bank Negara Malaysia, West Asia, geopolitical tens",
+          "title": "West Asia Conflict Poses Downside Risks, But Impact On Malaysia's Financial Stability Manageable -- BNM"
+        },
+        {
+          "category": [
+            "finance",
+            "business"
+          ],
+          "description": "Alternative routes, higher insurance costs, and expensive commodities add up to a troubled picture",
+          "title": "Gulf oil flows are returning to normal but fuel prices are soaring. Here’s why"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Noraini Ahmad, B15, Biodiesel, Oil and gas, Dewa",
+          "title": "B15 Implementation Saves 23.62 Mln Litres Of Diesel A Month"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "The Straight of Hormuz’s closure this year highlighted the fragility of trade routes and the Middle East’s importance for supplying the world. What can be done to be better in securing exports?",
+          "title": "Securing energy and trade flows in geo-economic conflicts"
+        },
+        {
+          "category": [
+            "finance",
+            "business"
+          ],
+          "description": "G7 oil release reflects the growing tightness in the diesel market",
+          "title": "The Commodities Feed: Diesel release drives down distillate margins, capping oil"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "\"Deeply Flawed\": Biggest US Grid Scraps Emergency Data Center Power Auction One Day After FERC Smackdown\n\n            We have been documenting the slow-motion collision between the AI capex fantasy and the laws of physics since late 2025, when we noted that some of Oracle's OpenAI data centers were ...",
+          "title": "\"Deeply Flawed\": Biggest US Grid Scraps Emergency Data Center Power Auction One Day After FERC Smackdown"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "By Rae Wee\nSINGAPORE, Oct 5 (Reuters) – Stocks were off to a strong start on Monday while the dollar edged lower and bonds steadied, as investors trimmed bets on an aggressive policy tightening cycle by the Federal Reserve following cooler-than-expected US jobs data.\nTrading was thin in Asia with ho...",
+          "title": "Stocks upbeat, dollar wobbles as Fed hike bets recede"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Creditors sue Radiant World in possibly the biggest commodities fraud since Enron",
+          "title": "Singapore a battleground of commodities fraud lawsuits"
+        },
+        {
+          "category": [
+            "us",
+            "business"
+          ],
+          "description": "Mining remained Australia's largest corporate taxpayer in 2024–25, even as weaker commodity prices cut profits and tax payable, according to a new report.",
+          "title": "Mining remains Australia’s top company taxpayer - Australian Mining"
+        }
+      ]
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 1374,
+      "args": {
+        "keywords": "crypto",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 5842,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "Oct 5 (Reuters) - The US commodities regulator proposed on Monday a new federal framework for cryptocurrency exchanges that offer leveraged digital asset trading, seeking to bring parts of the spot crypto market under federal oversight weeks after Congress failed to advance comprehensive crypto regu...",
+          "title": "US commodities regulator proposes new federal crypto oversight rules"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "A working Python client for GMO Coin's spot API — request signing, the timestamp trap, post-only limit orders via timeInForce SOK, and size/tick rounding. Every mistake here cost me a real debugging session.",
+          "title": "GMO Coin API in Python: HMAC signing, post-only limit orders, and the 4 errors that will bite you"
+        },
+        {
+          "category": [
+            "finance",
+            "crypto"
+          ],
+          "description": "Microsoft Copilot AI predicts that LINK could hit $100 this year, in the event of its CCIP tech being adopted on a global scale",
+          "title": "Microsoft Copilot AI Predicts LINK Could Hit $100 in 2026"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Crypto’s movers and shakers are gathering in Singapore for one of their biggest conferences of the year as a Bitcoin-led rally revives hopes that a new bull market is taking shape.",
+          "title": "Crypto Elite Gather in Singapore as Bitcoin’s Rally Buoys Bulls"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "Bitcoin price today: Bitcoin has shown potential for rapid gains but struggles to maintain them. Today, BTC stands near $87,000, amidst rising ETF inflows and leveraged positions that could affect future price movements. Will Bitcoin reclaim its momentum and reach $90,000?",
+          "title": "Bitcoin price today: BTC USD nears $88,000 as short sellers pile up - will the crypto hit $93,000 next?"
+        },
+        {
+          "category": [
+            "finance",
+            "crypto"
+          ],
+          "description": "Mark Zuckerberg Meta AI predicts that XRP could hit $10 or more by 2027 if Ripple is selected as a global settlement option",
+          "title": "Mark Zuckerberg Meta AI Predicts Double-Digit XRP Price by 2026"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Adam Iza, 26, hired off-duty L.A. County sheriff's deputies to act as his personal enforcers, using them to set people up for arrest, extort money and commit other crimes.",
+          "title": "Crypto 'godfather' who used L.A. sheriff's deputies against his enemies sentenced to prison"
+        },
+        {
+          "category": [
+            "finance",
+            "business"
+          ],
+          "description": "Nasdaq-listed DeFi Development Corp's latest SEC filing shows its Solana stash grew 1%, to about 2.56 million SOL and SOL equivalents.",
+          "title": "DeFi Development Corp Adds $3 Million in Solana as SOL Buys Slow - Decrypt"
+        },
+        {
+          "category": [
+            "crypto"
+          ],
+          "description": "The Fairshake PAC said it would back 32 House of Representatives candidates ahead of the 2026 US midterm elections in its latest move attempting to secure a “pro-crypto“ Congress.",
+          "title": "Fairshake PAC to Initially Spend $6M on House Races as US Midterms Loom"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "Presented by PolitiSizeIT{beacon} Business & Economy Business & Economy PRESENTED BY The Big Story Trump admin proposes new crypto rules The Commodity Futures Trading Commissi…",
+          "title": "Trump administration proposes new crypto rules"
+        },
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "The conservative-aligned bank still plans to go public, but will do so in a way that bypasses the need for the Federal Reserve's approval. Old Glory's CEO said the Fed failed to approve its recent application because the bank is \"pro-crypto.\"",
+          "title": "Old Glory Bank raises $8M, chides Fed over blocked deal"
+        },
+        {
+          "category": [
+            "company"
+          ],
+          "description": "The token debuts at $0.10 on Uniswap. It is backed by $1 million in locked liquidity. ...",
+          "title": "Sectora launches $SECT, the quantum cybersecurity and RWA token, with a supply capped at 50 million"
+        },
+        {
+          "category": [
+            "crypto"
+          ],
+          "description": "A US financial bureau withdrew two rules initially proposed in 2020 and 2023 as part of efforts to regulate activity related to unhosted wallets and crypto mixers.",
+          "title": "US Treasury’s FinCEN Withdraws Proposed Rules on Unhosted Wallets, Mixers"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "A top cryptocurrency campaign organization is unveiling a bipartisan list of House members, including Republican Rep. French Hill of Arkansas, that it will support in the November midterms.",
+          "title": "Crypto Super PAC to spend $1 million in support of French Hill | Arkansas Democrat Gazette"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "CFTC proposes federal crypto market rules for exchanges, enabling regulated retail leverage while boosting transparency, customer protection and market",
+          "title": "CLARITY Act Failure Spurs New CFTC Crypto Rules, Chairman Selig Says It's 'Just The Beginning'"
+        },
+        {
+          "category": [
+            "company"
+          ],
+          "description": "Arqitech to deliver a branded capital markets platform for ThinkEquity a New York Stock Exchange and FINRA member firm...",
+          "title": "Arqitech signs agreement with ThinkEquity to build a multi-asset platform under the ThinkEquity brand"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Peter Schiff says Strategy can no longer fund major Bitcoin buys, even as it adds 334 BTC and spends $176 million repurchasing STRC.",
+          "title": "Is Strategy's Bitcoin Machine Broken? Peter Schiff Says It Is - Strategy (NASDAQ:MSTR)"
+        },
+        {
+          "category": [
+            "business",
+            "finance",
+            "general"
+          ],
+          "description": "CFTC proposes new crypto market rules (Reg CTX/CAM) after Clarity Act failure, aiming to curb fraud and set best practices.",
+          "title": "U.S. regulator offers proposal for crypto market oversight (BTC-USD:Cryptocurrency)"
+        },
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "",
+          "title": "WebKit Igalia Periodical #80"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "Crypto's campaign arm, Fairshake, sets lists of U.S. House favorites it'll spend on",
+          "title": "Crypto's campaign arm, Fairshake, sets lists of U.S. House favorites it'll spend on"
+        }
+      ]
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 724,
+      "args": {
+        "keywords": "ai technology",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 5520,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "general"
+          ],
+          "description": "AI smart glasses at beaches, parks, museums and shopping centers could be banned in Norway over growing concerns about the hidden recording of citizens.",
+          "title": "Privacy fears push vacation spot to consider ban on favorite accessory for travelers"
+        },
+        {
+          "category": [
+            "finance",
+            "trading"
+          ],
+          "description": "Key PointsNvidia dominates the AI hardware market with a platform-based strategy that has driven revenue growth to over $215 billion.",
+          "title": "Nvidia vs. Taiwan Semiconductor Manufacturing: Which Technology Stock Is a Better Buy in 2026?"
+        },
+        {
+          "category": [
+            "research"
+          ],
+          "description": "Generative AI has been promoted as the technology that could transform education by providing every student a personal tutor. We provide some of the first large-scale experimental evidence, from a two-year cluster randomized trial in 18 Tennessee middle schools in which randomly assigned students us...",
+          "title": "One Click Away: AI Tutoring with Khanmigo in a Two-Year School Experiment"
+        },
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "Anthropic reported a Claude chat in which a woman allegedly threatened to ‘shoot up’ a Florida sheriff’s office. Deputies arrested her at home.",
+          "title": "‘You are never truly anonymous’: Anthropic flags Claude chat to police"
+        },
+        {
+          "category": [
+            "research"
+          ],
+          "description": "We're a nonprofit exposing the negative effects of persuasive technology and social media and empowering people to take action. Discover The Social Dilemma, our podcast, course, and more.",
+          "title": "Strategic Update, October 1, 2026"
+        },
+        {
+          "category": [
+            "entertainment",
+            "celebrity",
+            "television",
+            "music"
+          ],
+          "description": "Neon has set its Oscar campaign for Luca Guadagnino’s “Artificial,” with Andrew Garfield in supporting actor and Yura Borisov in lead actor.",
+          "title": "Neon Sets ‘Artificial’ Oscar Campaign With Andrew Garfield in Supporting Actor, Yura Borisov in Lead (EXCLUSIVE)"
+        },
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "As Walmart prepares to bring drone delivery to the region, Colorado cities are trying to figure out how much control they have over the technology.",
+          "title": "Delivery drones are coming to Denver. But who regulates them?"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Korea's 78th Armed Forces Day ceremony at Gyeryongdae on Thursday has much to appreciate: service members standing in formation, aircraft overhead...",
+          "title": "Our gratitude can't be a single-day event - The Korea Times"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "By Bhanvi Satija\nLONDON, Oct 6 (Reuters) – AI-based medical devices will need constant monitoring even after they’re approved for use, ​rather than a single pre-approval safety ‌check, the head of the UK’s medicines regulator said on Tuesday.\nThe UK government will accept all 44 recommendations from...",
+          "title": "UK says it will monitor AI-based medical devices continually"
+        },
+        {
+          "category": [
+            "world"
+          ],
+          "description": "Leading artificial intelligence companies do not know how to keep AI systems from pursuing objectives their developers d...",
+          "title": "Reckless AI firms can't control models: whistleblower"
+        },
+        {
+          "category": [
+            "general",
+            "world",
+            "regional"
+          ],
+          "description": "Representatives from the ABC are the first to appear at a special inquiry into artificial intelligence.",
+          "title": "ABC has no plans to create AI newsreaders"
+        },
+        {
+          "category": [
+            "sports"
+          ],
+          "description": "Representatives from the ABC are the first to appear at a special inquiry into artificial intelligence.",
+          "title": "ABC has no plans to create AI newsreaders"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "Representatives from the ABC are the first to appear at a special inquiry into artificial intelligence.",
+          "title": "ABC has no plans to create AI newsreaders"
+        },
+        {
+          "category": [
+            "technology",
+            "science"
+          ],
+          "description": "OpenAI’s textGrain watermark will reach EU ChatGPT users as the company tackles new transparency requirements.",
+          "title": "OpenAI adds invisible watermarks to ChatGPT text under EU rules"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "OpenAI is preparing to add invisible watermarks to text generated by ChatGPT and Codex in the European Union.",
+          "title": "OpenAI is adding invisible watermarks to ChatGPT and Codex text in the EU"
+        },
+        {
+          "category": [
+            "technology"
+          ],
+          "description": "Senator Bernie Moreno accuses Anthropic’s Dario Amodei of an ‘alarmist approach’ to AI before the IPO and calls his comments ‘panic-inducing’.",
+          "title": "‘Panic-inducing’: Bernie Moreno takes on Anthropic’s Dario Amodei"
+        },
+        {
+          "category": [
+            "regional",
+            "pittsburgh"
+          ],
+          "description": "If you drive or park in Pittsburgh, you're more than likely under some kind of technological surveillance. And if you don't obey the rules, it's going to cost you.",
+          "title": "Automated cameras blanket Pittsburgh, generating record number of tickets and millions of dollars in fines"
+        },
+        {
+          "category": [
+            "regional",
+            "windsor"
+          ],
+          "description": "A 73-year-old man has died after being struck by car while crossing the street Sunday evening.",
+          "title": "Senior in motorized wheelchair killed in Riverside Drive crash"
+        },
+        {
+          "category": [
+            "government",
+            "industry-science"
+          ],
+          "description": "Interview discusses Artificial Intelligence, Bell Bay Aluminium, Credit Card Surcharges, 5 per cent Home Deposit Scheme",
+          "title": "Interview with Laura Jayes, AM Agenda | Senator the Hon Tim Ayres | Ministers for the Department of Industry, Science and Resources"
+        },
+        {
+          "category": [
+            "finance",
+            "business",
+            "regional",
+            "trading"
+          ],
+          "description": "Here are three ASX ETFs that offer exposure to some of the best tech stocks in the world...",
+          "title": "3 amazing ASX tech ETFs for growth investors"
+        }
+      ]
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 895,
+      "args": {
+        "keywords": "bitcoin",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 5862,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Crypto’s movers and shakers are gathering in Singapore for one of their biggest conferences of the year as a Bitcoin-led rally revives hopes that a new bull market is taking shape.",
+          "title": "Crypto Elite Gather in Singapore as Bitcoin’s Rally Buoys Bulls"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "Bitcoin price today: Bitcoin has shown potential for rapid gains but struggles to maintain them. Today, BTC stands near $87,000, amidst rising ETF inflows and leveraged positions that could affect future price movements. Will Bitcoin reclaim its momentum and reach $90,000?",
+          "title": "Bitcoin price today: BTC USD nears $88,000 as short sellers pile up - will the crypto hit $93,000 next?"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Adam Iza, 26, hired off-duty L.A. County sheriff's deputies to act as his personal enforcers, using them to set people up for arrest, extort money and commit other crimes.",
+          "title": "Crypto 'godfather' who used L.A. sheriff's deputies against his enemies sentenced to prison"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "IREN (NASDAQ:IREN) Stock Falls 3.1% - Time to Sell?",
+          "title": "IREN (NASDAQ:IREN) Stock Falls 3.1% - Here's What Happened"
+        },
+        {
+          "category": [
+            "finance",
+            "business"
+          ],
+          "description": "Bitcoin Magazine TV's Sean Hagan shares his case for three stocks. Sean Hagan, lead market analyst at Bitcoin Magazine TV, sees upside in three names …",
+          "title": "Analyst picks three stocks he says deserve a bump on Roundtable 100"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "CFTC proposes federal crypto market rules for exchanges, enabling regulated retail leverage while boosting transparency, customer protection and market",
+          "title": "CLARITY Act Failure Spurs New CFTC Crypto Rules, Chairman Selig Says It's 'Just The Beginning'"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "Stacks Opens Second Bitcoin Staking Bond as Liquid Staking Takes the Majority of Capacity",
+          "title": "Stacks Opens Second Bitcoin Staking Bond as Liquid Staking Takes the Majority of Capacity By Bitwire"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Peter Schiff says Strategy can no longer fund major Bitcoin buys, even as it adds 334 BTC and spends $176 million repurchasing STRC.",
+          "title": "Is Strategy's Bitcoin Machine Broken? Peter Schiff Says It Is - Strategy (NASDAQ:MSTR)"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Bitwise says all 15 surveyed institutions maintained or increased crypto exposure during Bitcoin’s bear market, with ETFs gaining favor.",
+          "title": "After Bitcoin Crashed, Bitwise Asked 15 Institutions if They Sold: None Did"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Crypto markets stayed flat as the dollar hit an 18-month high; Bitcoin ETF inflows and future debt monetization kept liquidity in focus.",
+          "title": "Bitcoin, Ethereum, XRP, Dogecoin Trade Flat as Dollar Hits 18-Month High"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "Payment infrastructure is only becoming more complex, but an unlikely tool could simplify the interfacing process. Anyone can check the Bitcoin price in seconds, but paying in Bitcoin involves more moving parts, and a QR code lets a smartphone camera handle much of that work. Since a Bitcoin payment...",
+          "title": "How QR Codes Hide the Complexities of Digital Infrastructure From the User"
+        },
+        {
+          "category": [
+            "crypto"
+          ],
+          "description": "S&P Global introduced a framework for evaluating risks in digital asset lending vaults as the sector expands into Bitcoin, DeFi and tokenized stocks.",
+          "title": "Here’s what happened in crypto today"
+        },
+        {
+          "category": [
+            "crypto"
+          ],
+          "description": "Michael Selig, who chairs the US Commodity Futures Trading Commission, said that the agency was proposing new rules for exchanges in accordance with Donald Trump’s crypto agenda.",
+          "title": "Advocacy group pushes back on banks’ lawsuit against OCC over charters"
+        },
+        {
+          "category": [
+            "regional"
+          ],
+          "description": "Bitfarms, Galaxy Digital, HIVE Digital Technologies, Ionic Digital, Soluna, Digi Power X, and BTC Digital are the seven Cryptocurrency stocks to watch today, according to MarketBeat's stock screener tool. Cryptocurrency stocks are shares of publicly traded companies whose businesses are tied to the",
+          "title": "Promising Cryptocurrency Stocks To Add to Your Watchlist - October 5th"
+        },
+        {
+          "category": [
+            "crypto"
+          ],
+          "description": "Bitcoin gained 43% in the third quarter as the debasement trade helped offset rising bond yields, while weaker payrolls shifted the Fed outlook.",
+          "title": "Bitcoin’s 43% Q3 Rally Meets a Tougher Macro Test"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Raoul Pal says improving liquidity and a weaker dollar could boost crypto, favoring Bitcoin, Ethereum, Solana and Sui as tokenization and AI adoption grow.",
+          "title": "How Raoul Pal Built His Crypto Portfolio: BTC, ETH, SOL and 1 Surprise Coin"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "Bitcoin is entering a new bull market. That is our base case as trend and on-chain indicators recover from the 2026 downturn.",
+          "title": "Bitcoin's New Bull Market: No More Boom And Bust (BTC-USD)"
+        },
+        {
+          "category": [
+            "finance",
+            "business"
+          ],
+          "description": "The Bitcoin rally keeps bumping into the same wall, but a second, stronger golden cross suggests the trend is built to last.",
+          "title": "Bitcoin Just Flashed a Second, Stronger Golden Cross: Here's What That Means - Decrypt"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Benjamin Cowen says Bitcoin now matches every past bear market bottom, shifting the burden of proof to bears.",
+          "title": "Bitcoin Has Never Failed a Setup Like This, Analyst Says"
+        },
+        {
+          "category": [
+            "general",
+            "business"
+          ],
+          "description": "In just 10 months, Hyperliquid Strategies amassed more than 35 million HYPE tokens—one of crypto’s fastest-rising assets.",
+          "title": "How Hyperliquid defied crypto’s DAT death spiral—and built the industry’s only flourishing digital asset treasury | Fortune"
+        }
+      ]
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 733,
+      "args": {
+        "keywords": "ethereum",
+        "language": "en",
+        "page_number": 1,
+        "page_size": 20
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "category",
+          "description",
+          "title"
+        ],
+        "charCount": 5346,
+        "empty": false
+      },
+      "response": [
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "Governance Attack Surface Review: Maple Target Protocol: Maple (TVL: $3057.9M) ...",
+          "title": "Governance Attack Surface Review: Maple"
+        },
+        {
+          "category": [
+            "company"
+          ],
+          "description": "The token debuts at $0.10 on Uniswap. It is backed by $1 million in locked liquidity. ...",
+          "title": "Sectora launches $SECT, the quantum cybersecurity and RWA token, with a supply capped at 50 million"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "CFTC proposes federal crypto market rules for exchanges, enabling regulated retail leverage while boosting transparency, customer protection and market",
+          "title": "CLARITY Act Failure Spurs New CFTC Crypto Rules, Chairman Selig Says It's 'Just The Beginning'"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Crypto markets stayed flat as the dollar hit an 18-month high; Bitcoin ETF inflows and future debt monetization kept liquidity in focus.",
+          "title": "Bitcoin, Ethereum, XRP, Dogecoin Trade Flat as Dollar Hits 18-Month High"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Raoul Pal says improving liquidity and a weaker dollar could boost crypto, favoring Bitcoin, Ethereum, Solana and Sui as tokenization and AI adoption grow.",
+          "title": "How Raoul Pal Built His Crypto Portfolio: BTC, ETH, SOL and 1 Surprise Coin"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Bitmine buys 15,112 Ethereum, lifting holdings to 6.02 million ETH as Tom Lee says the company beat the crypto bear market.",
+          "title": "Bitmine Buys 15,112 ETH as BMNR Hits a Make-Or-Break Level - BitMine Immersion (NYSE:BMNR)"
+        },
+        {
+          "category": [
+            "company"
+          ],
+          "description": "Stockholm, 5th of October 2026 – Virtune AB (Publ) (“Virtune”) today announces that it has completed the monthly rebalancing of the Virtune Crypto Altcoin...",
+          "title": "Virtune AB (Publ) (“Virtune”) has completed the monthly rebalancing for October 2026 of its Virtune Crypto Altcoin Index ETP"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "When I first entered the Web3 space two decades ago, connecting a web application to a blockchain...",
+          "title": "André Dias Moreira Prol explains: Build a Crypto Wallet with Next.js"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "EOS Climbs 12% As Investors Gain Confidence",
+          "title": "EOS Climbs 12% As Investors Gain Confidence By Investing.com"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Cardano jumps 11% to a five-month high, outpacing Bitcoin, Ethereum and XRP as RealFi and upgrade hopes lift ADA.",
+          "title": "Cardano Surges 11% While Bitcoin, Ethereum, XRP Barely Move"
+        },
+        {
+          "category": [
+            "business"
+          ],
+          "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the...",
+          "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Bitcoin, Ethereum and Solana flash short-term sell signals as Monday reversal risk rises, though analysts remain bullish long term and note BTC’s strong October start.",
+          "title": "Will Bitcoin, ETH, SOL See a 'Sunday Pump, Monday Dump?'"
+        },
+        {
+          "category": [
+            "general"
+          ],
+          "description": "Crypto majors and alts are rallying to start October. What’s driving the early action and will it continue?",
+          "title": "Morning Minute: Uptober Off to a Green Start - Decrypt"
+        },
+        {
+          "category": [
+            "finance",
+            "crypto"
+          ],
+          "description": "ETH trades near $2,725 as order-book depth trails Bitcoin. Ethereum price prediction, key ETH levels, and liquidity risks.",
+          "title": "Ethereum Price Prediction: ETH Liquidity Drops 45% Below BTC"
+        },
+        {
+          "category": [
+            "finance",
+            "business"
+          ],
+          "description": "Your look at what's coming in the week starting Oct. 5.",
+          "title": "Technicals signal bitcoin shift, Ethereum gears up for Glamsterdam: Crypto Week Ahead"
+        },
+        {
+          "category": [
+            "business",
+            "finance"
+          ],
+          "description": "NEOS Ethereum High Income ETF offers high-yield, actively managed exposure to Ethereum via a synthetic covered call options strategy. But I rate the NEHI ETF as Hold.",
+          "title": "NEHI: Wait Out The November Call Cycle Before Buying (BATS:NEHI)"
+        },
+        {
+          "category": [
+            "finance"
+          ],
+          "description": "Ethereum has a 25-day wait to start staking, with nearly 1.5 million ETH in line",
+          "title": "Ethereum has a 25-day wait to start staking, with nearly 1.5 million ETH in line"
+        },
+        {
+          "category": [
+            "academic",
+            "CS",
+            "CY"
+          ],
+          "description": "Ethereum's electricity use fell by about 99.95% after the move from proof of work to proof of stake. Service providers still need to report operational energy use, e.g. under the EU Markets in Crypto-Assets Regulation (MiCAR). Existing estimates either apply one typical wattage to every node or star...",
+          "title": "Quantifying Ethereum Energy Consumption via Network Mapping"
+        },
+        {
+          "category": [
+            "finance",
+            "education"
+          ],
+          "description": "Leading cryptocurrencies gained Sunday, October 4, overnight as investors weighed in on Treasury yields and the Federal Reserve's cues on interest rate policy.",
+          "title": "Bitcoin, Ethereum, XRP, Dogecoin Rise Amid Treasury Yields Pressure: Analyst Flags BTC's Sunday Spikes Th"
+        },
+        {
+          "category": [
+            "programming"
+          ],
+          "description": "If you have ever built anything that moves USDT on TRON, you have hit this question from users:...",
+          "title": "TRON energy explained: why the same USDT transfer costs 0 or several TRX"
+        }
+      ]
+    }
+  ]
+}

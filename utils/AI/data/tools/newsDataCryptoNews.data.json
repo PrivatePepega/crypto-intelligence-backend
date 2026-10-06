@@ -1,0 +1,392 @@
+{
+  "tool": "newsDataCryptoNews",
+  "source": "newsDataCryptoNews.ts#newsDataCryptoNewsTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:50:52.345Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 0,
+    "totalRecords": 40
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 343,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 436,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 204,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 205,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 214,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 231,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 214,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 249,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1008,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Kaspa Price Prediction: Could KAS Reach $1 Before Remittix Opens RTX Trading on November 24?",
+            "description": "Kaspa at $1 is the kind of price target that makes traders revisit an entire investment thesis. It would require a dramatic move from KAS’s current level. Remittix has a different near-term… Read the full article on TechBullion."
+          },
+          {
+            "title": "A newly established ETH whale address has once again withdrawn 1,236 ETH from OKX.",
+            "description": ""
+          },
+          {
+            "title": "Tom Cruise's latest release 'Digger' bombs at box office, rakes in only USD 8 Million in opening weekend",
+            "description": "Hollywood icon Tom Cruise has failed to recreate his box-office magic with his latest release, 'Digger', as the film raked in just USD 8 million domestically during its opening weekend."
+          },
+          {
+            "title": "Binance launches AI product stack Binance Intelligence, including AI Pro and Agent OS",
+            "description": ""
+          },
+          {
+            "title": "Philippine exports hit 35-year high of 9.11 bln USD in August",
+            "description": ""
+          }
+        ]
+      }
+    }
+  ]
+}

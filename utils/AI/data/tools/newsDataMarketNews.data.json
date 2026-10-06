@@ -1,0 +1,408 @@
+{
+  "tool": "newsDataMarketNews",
+  "source": "newsDataMarketNews.ts#newsDataMarketNewsTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:51:17.165Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 0,
+    "totalRecords": 40
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 454,
+      "args": {
+        "q": "geopolitics"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1790,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Rheinmetall sends first satellite into orbit to strengthen air defense",
+            "description": "Rheinmetall and Argotec have launched their first satellite, beginning development of a space-based capability for air defense surveillance."
+          },
+          {
+            "title": "Intercontinental Exchange: ICE Launches New VLCC Tanker and Container Freight Contracts as Customers Hedge Freight Risk Across Global Trade Routes",
+            "description": "Includes First Futures on the TD34 Gulf of Oman to China and TD15 West Africa to China VLCC Routes as Geopolitics Reshape Global Freight Markets Intercontinental Exchange, Inc. (NYSE: ICE), one of..."
+          },
+          {
+            "title": "ICE Launches New VLCC Tanker and Container Freight Contracts as Customers Hedge Freight Risk Across Global Trade Routes",
+            "description": "Intercontinental Exchange, Inc. (NYSE: ICE), one of the world's leading providers of financial market technology and data powering global capital markets, and home to the largest and most liquid energy derivatives markets in the world, today announced the launch of new tanker and container freight futures and options as average daily volume (ADV) across ICE’s freight markets is up 33% year-to-date."
+          },
+          {
+            "title": "Dow futures fall as elevated bond yields weigh on sentiment",
+            "description": "S&P 500 and Nasdaq futures also edged lower ahead of the Fed's September meeting minutes release later this week"
+          },
+          {
+            "title": "Citi sees room for further equities upside in 2027 on resilient earnings growth",
+            "description": "Investing.com -- Citi said it sees global equities extending gains on resilient earnings growth, even though a growing list of headwinds, including geopolitics and higher rates, raises the question of whether markets are showing resilience or complacency. Strategists led by Beata Manthey said…"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 316,
+      "args": {
+        "q": "financial markets"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 13972,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Lina Khan Warns AI Firms: Self-Regulation Is a Repeat of Big Tech’s Costly Mistakes",
+            "description": "Former FTC Chair Lina Khan sharply criticizes AI leaders' self-policing pledge, calling it a repeat of Big Tech's failed social media oversight that led to widespread harms. She insists existing consumer protection and competition laws already apply, urging enforcement against dangerous models and CEO accountability instead of new exemptions. Recent breaches by OpenAI and Anthropic agents underscore her warnings."
+          },
+          {
+            "title": "Tectonic Metals Appoints Eduard Epshtein as CFO, Bolstering Executive Team for Next Stage of Growth",
+            "description": "VANCOUVER, BC / ACCESS Newswire / October 5, 2026 / Tectonic Metals Inc. (\"Tectonic\" or the \"Company\") (TSXV:TECT,OTC:TETOF)(OTCQX:TETOF) is pleased to announce the appointment of Eduard Epshtein, CPA, CA, as Chief Financial Officer (\"CFO\") and Corporate Secretary, effective October 1, 2026.Mr. Epsh..."
+          },
+          {
+            "title": "Galway Metals Drilling Highlights Potential for Deeper Resource Expansion at Southwest Deposit",
+            "description": "TORONTO, ON / ACCESS Newswire / October 5, 2026 / Galway Metals Inc. (TSX-V:GWM)(OTCQB:GAYMF) (the \"Company\" or \"Galway\") is pleased to report assay results from drilling southwest of Craig Lake at the Southwest Deposit, part of its 100%-owned Clarence Stream Gold Project in New Brunswick. Drill hol..."
+          },
+          {
+            "title": "Skyworks Completes Combination with Qorvo",
+            "description": "Expands technology portfolio and addressable market, with $500 million or more in expected annual cost synergies and immediate non-GAAP EPS accretion IRVINE, Calif., Oct. 05, 2026 (GLOBE NEWSWIRE) -- Skyworks (Nasdaq: SWKS) today announced the successful completion of its combination with Qorvo. The close of the transaction creates a U.S.-based, global leader in high-performance radio frequency (RF), power management, and analog and mixed-signal semiconductor solutions. \"This combination is about far more than bringing two companies together,” said Phil Brace, chief executive officer and president of Skyworks. \"Our customers are tackling increasingly complex challenges and need partners with the capabilities, engineering expertise and scale to help them innovate faster. Together, we are well positioned to deliver more integrated, system-level solutions and accelerate the next generation of connected technologies. Today marks an important milestone-but it is only the beginning. We see an extraordinary opportunity to create long-term value for our customers, shareholders and employees while helping shape the future of our industry.” The transaction creates a larger, more diversified semiconductor company, combining complementary RF, analog, and power technologies with expanded engineering capabilities - approximately 8,000 engineers and more than 12,000 issued and pending patents. In Mobile, the combination broadens its RF front-end portfolio, positioning the company to benefit from rising RF complexity. As 5G-Advanced evolves and the industry moves toward 6G, smartphones are expected to support more frequency bands, new spectrum and AI-driven features, increasing demand for highly integrated RF solutions. Beyond Mobile, the combination more than doubles Skyworks' addressable market and establishes a platform spanning physical AI and connected edge, defense and aerospace, data center and networking, and automotive. It also broadens the technology portfolio into RF GaN, low-voltage power, and wired broadband. Skyworks will benefit from greater end-market breadth, strengthened domestic manufacturing, and annualized cost synergies of $500 million or more, expected to be realized within 24 to 36 months post-close when the companies are fully integrated. The transaction is expected to be immediately accretive to non-GAAP EPS while maintaining a favorable capital structure. Skyworks will provide financial guidance on its fiscal fourth-quarter earnings call on Nov. 3. Bob Bruggeworth, former chief executive officer and president of Qorvo and a member of the Skyworks Board of Directors, added, \"This next chapter begins with an immense amount of pride. I've had the opportunity to see firsthand our teams preparing for this moment with tremendous focus and discipline. I have great confidence in the future of the combined company and its ability to deliver on the promise of the combination.” Under the terms of the merger agreement, Qorvo shareholders are entitled to receive $32.50 in cash and 0.960 of Skyworks’ common share for each share of Qorvo common stock they owned. Legacy Skyworks shareholders own approximately 63% of the combined company and legacy Qorvo shareholders own approximately 37%, on a fully diluted basis. The company will continue to operate as Skyworks and trade under the SWKS ticker symbol on the NASDAQ market. As previously announced, Phil Brace will continue to serve as chief executive officer and president of Skyworks. Bob Bruggeworth, Richard Clemmer and Chris Koopmans, formerly on the Qorvo board of directors, have each joined the Skyworks Board of Directors. Advisors Qatalyst Partners and Goldman Sachs & Co. LLC acted as financial advisors to Skyworks, with Skadden, Arps, Slate, Meagher & Flom LLP serving as Skyworks’ legal advisor. Centerview Partners LLC was exclusive financial advisor and Davis Polk & Wardwell LLP acted as legal advisor to Qorvo. About Skyworks Skyworks® is a global leader in high-performance RF, precision timing, power management and mixed-signal solutions that power the intelligent, connected world. Through deep engineering expertise, Skyworks helps customers address rising complexity and deliver seamless connectivity across smartphones, vehicles, networks and critical infrastructure. From defense and aerospace systems to the connected edge, AI infrastructure and next-generation automotive platforms, Skyworks provides the essential technologies that connect, synchronize and power physical AI, as intelligence moves out of the data center and into the real world. Harnessing decades of technical leadership and trusted partnerships across the technology ecosystem, Skyworks helps the world's leading innovators bring next-generation products and services to market. Skyworks is a member of the S&P 500® market index (Nasdaq: SWKS). For more information, please visit www.skyworksinc.com. Forward Looking Statements This press release includes \"forward-looking statements” intended to qualify for the safe harbor from liability established by the Private Securities Litigation Reform Act of 1995. These forward-looking statements include information relating to future events, prospects, expectations and results of Skyworks (e.g., certain projections and business trends, including with respect to future sales and revenue, as well as statements regarding the recently completed combination with Qorvo, Inc. (\"Qorvo”)). Forward-looking statements can often be identified by words such as \"anticipates,” \"estimates,” \"expects,” \"forecasts,” \"intends,” \"believes,” \"plans,” \"may,” \"will” or \"continue,” and similar expressions and variations or negatives of these words. All such statements are subject to certain risks, uncertainties and other important factors that could cause actual results to differ materially and adversely from those projected and may affect our future operating results, financial position and cash flows. These risks, uncertainties and other important factors include: the potential impacts on our business, reputation, relationships, results of operations, cash flows and financial condition as a result of the combination with Qorvo, Inc.; the possibility that expected benefits related to such transactions with Qorvo may not materialize as expected; our business experiencing disruptions as a result of the acquisition, including factors making it more difficult to maintain relationships with employees, customers, other business partners or governmental entities; the diversion of management time to integration of the business; our being unable to successfully implement integration strategies or to achieve expected synergies and operating efficiencies within the expected time-frames or at all; the costs, fees, expenses and other charges related to the transactions with Qorvo, including with respect to any related litigation; reduced flexibility in operating our business as a result of the substantial amount of additional indebtedness we have incurred and may in the future incur in connection with the Qorvo transactions; unexpected costs, charges and expenses related to the integration of the parties’ businesses; the risks of doing business internationally, including from trade war or trade protection measures (e.g., tariffs, retaliatory tariffs and other countermeasures or taxes), increased import/export restrictions and controls (e.g., our ability to obtain foreign-sourced raw materials, including from Chinese-based sources, as well as our ability to sell products to certain specified foreign entities only pursuant to a limited export license from the U.S. Department of Commerce), the susceptibility of the semiconductor industry and the markets addressed by our, and our customers’, products to economic cycles or changes in economic conditions, including inflation and recession that could result from trade war or trade protection measures; our reliance on a small number of key customers for a large percentage of our sales; decreased gross margins and loss of market share as a result of increased competition; our ability to obtain design wins from customers; our ability to convert design wins into revenue; market acceptance of our products and our customers’ products, including market acceptance of new, emerging technologies such as AI; the mix and volume of phone models sold by our largest customer; delays in the deployment of commercial 5G networks or in consumer adoption of 5G-enabled devices; the volatility of our stock price; changes in laws, regulations and/or policies that could adversely affect our operations and financial results, the economy and our customers’ demand for our products, or the financial markets and our ability to raise capital; fluctuations in our manufacturing yields due to our complex and specialized manufacturing processes; our ability to develop, manufacture and market innovative products, avoid product obsolescence, reduce costs in a timely manner, transition our products to smaller geometry process technologies and achieve higher levels of design integration; the quality of our products and any defect remediation costs; our products’ ability to perform under stringent operating conditions; the availability and pricing of third-party semiconductor foundry, assembly and test capacity, raw materials, including rare earth and similar minerals, supplier components, equipment and shipping and logistics services, including limits on our customers’ ability to obtain such services and materials; risks that we may not be able to optimize our manufacturing footprint and achieve any financial and operational benefits from such efforts, including reducing fixed costs or improving utilization rates, disruptions to our manufacturing processes, including relating to any relocation of our key facilities; our ability to successfully manage our senior management transitions; our ability to retain, recruit and hire key executives or the departure of any such executives, technical personnel and other employees in the positions and numbers, with the experience and capabilities, and at the compensation levels needed to implement our business and product plans; the timing, rescheduling or cancellation of significant customer orders and our ability, as well as the ability of our customers, to manage inventory; other economic, social, military and geopolitical conditions in the countries in which we, our customers or our suppliers operate, including the conflicts in Ukraine, Iran and other regions in the Middle East, possible disruptions in transportation networks, and fluctuations in foreign currency exchange rates; the effects of global health crises on business conditions in our industry, including the risk of significant disruptions to our business operations, as well as negative impacts to our financial condition; our ability to prevent theft of our intellectual property, disclosure of confidential information or breaches of our information technology systems; uncertainties of litigation, including potential disputes over intellectual property infringement and rights, as well as payments related to the licensing and/or sale of such rights; our ability to continue to grow and maintain an intellectual property portfolio and obtain needed licenses from third parties; our ability to make certain investments and acquisitions, integrate Qorvo and other companies we acquire and/or enter into strategic alliances; and other risks and uncertainties, including those detailed from time to time in our filings with the Securities and Exchange Commission. The forward-looking statements contained in this press release are made only as of the date hereof, and we undertake no obligation to update or revise the forward-looking statements, whether as a result of new information, future events or otherwise, except as required by law. Note to Editors: Skyworks, Qorvo, the Skyworks symbol, and the Qorvo symbol are trademarks or registered trademarks of Skyworks Solutions, Inc., or its subsidiaries in the United States and other countries. Third-party brands and names are for identification purposes only and are the property of their respective owners. Media Relations: Constance Griffiths (949) 230-4867 Constance.Griffiths@skyworks.com Investor Relations: Raji Gill (949) 508-0973 Raji.Gill@skyworks.com"
+          },
+          {
+            "title": "Malaysia's financial stability risks from Mideast conflict remain manageable: central bank",
+            "description": ""
+          }
+        ]
+      }
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 261,
+      "args": {
+        "q": "macro"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 2146,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Five numbers showing how GTCO’s payment strategy is taking shape",
+            "description": "This is Follow the Money, our weekly series that unpacks the earnings, business, and scaling strategies of African fintechs, financial institutions, companies, and governments. A new edition drops every Monday. Segun Agbaje, the group chief executive officer of Guaranty Trust Holding Company Plc (GTCO), one of Nigeria’s largest financial services groups, told analysts in 2020 that […]"
+          },
+          {
+            "title": "Upstart Publishes September 2026 Originations and Latest UMI",
+            "description": "Upstart Holdings, Inc. (NASDAQ: UPST), the leading artificial intelligence (AI) lending marketplace, today published its monthly origination volume for September 2026 along with the latest Upstart Macro Index (UMI) reading. For historical data and more information, see upstart.com/volume and up..."
+          },
+          {
+            "title": "Fiserv Q2 2026 Earnings Call Transcript",
+            "description": "Fiserv (NASDAQ:FISV) reported second-quarter financial results on Thursday. The transcript from the company's second-quarter earnings call has been provided below. This content is powered by Benzinga APIs. For"
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 398,
+      "args": {
+        "q": "commodities energy"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 4090,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "ENI (NYSE:E) and Kinder Morgan (NYSE:KMI) Critical Contrast",
+            "description": "Kinder Morgan (NYSE:KMI – Get Free Report) and ENI (NYSE:E – Get Free Report) are both large-cap energy companies, but which is the superior business? We will contrast the two companies based on the strength of their risk, earnings, profitability, analyst recommendations, institutional ownership, valuation and dividends. Earnings and Valuation This table compares Kinder Morgan […]"
+          },
+          {
+            "title": "Head to Head Review: Montauk Renewables (NASDAQ:MNTK) versus Teekay Tankers (NYSE:TNK)",
+            "description": "Montauk Renewables (NASDAQ:MNTK – Get Free Report) and Teekay Tankers (NYSE:TNK – Get Free Report) are both energy companies, but which is the better stock? We will compare the two companies based on the strength of their valuation, analyst recommendations, institutional ownership, dividends, profitability, earnings and risk. Volatility and Risk Montauk Renewables has a beta […]"
+          },
+          {
+            "title": "Surge Battery Metals to Host Analyst Conference Call to Discuss Pre-Feasibility Study Results at the Nevada North Lithium Project",
+            "description": "Surge Battery Metals Inc. (TSXV: NILI,OTC:NILIF) (OTCQX: NILIF) (FSE: DJ5C) (the \"Company\" or \"Surge\") will host an analyst conference call today, Monday, October 5, 2026 at 1:30 p.m. Pacific Time (4:30 p.m. Eastern Time) to discuss the results of the Pre-Feasibility Study (\"PFS\") for the Nevada Nor..."
+          },
+          {
+            "title": "Aramco drops oil price for Asian buyers",
+            "description": "Saudi Aramco will sell oil to Asian markets next month at its highest discount since Covid. The Saudi state-owned energy company is offering an average cut of $5.24 per barrel against Oman and Dubai benchmarks, according to its pricing sheet for November. Heavy crude will receive the biggest discount, selling at $7.35 below the benchmark […]"
+          },
+          {
+            "title": "Sensex gains 473 points, Nifty tops 22,500; ITC leads as crude eases, HCLTech drags",
+            "description": "New Delhi: Indian equity benchmarks rebounded on Monday, with the Sensex gaining 473 points and the Nifty reclaiming the 22,500 level as FMCG, energy and banking stocks rallied amid relatively supportive global cues. The Sensex closed 472.77 points, or 0.66 per cent, higher at 72,382.47, while the Nifty advanced 133.80 points, or 0.60 per cent, to 22,555.75. Both indices recovered after the recent bout of selling. FMCG emerged as the top-performing sector, gaining 1.67 per cent, followed by telecom, consumer durables and financial services. Healthcare lagged, while IT and pharma stocks also remained under pressure. ITC was the standout performer, jumping about 5 per cent. Bajaj Finance, Adani Ports, Eternal, Reliance Industries, ICICI Bank, Bharti Airtel, NTPC, TCS and Power Grid were among the other major gainers. HCL Technologies was the biggest laggard, falling around 3.3 per cent. Max Healthcare, HDFC Bank, Sun Pharma, Infosys, Cipla, Apollo Hospitals and Asian Paints were among the other prominent losers. Market sentiment was supported by easing crude oil prices from recent highs and softer-than-expected US jobs data, which moderated expectations of aggressive monetary tightening by the US Federal Reserve. Foreign institutional investor selling and elevated global bond yields, however, remained key risks. Brent crude traded around USD 102 a barrel during the session, offering some relief to an oil-importing economy such as India. Meanwhile, the rupee depreciated 5 paise to close provisionally at 96.30 against the US dollar. It opened at 96.20 and touched an intraday low of 96.31 as elevated crude prices and persistent foreign fund outflows kept the currency under pressure. Forex traders said improved risk appetite provided some support, while attention is now shifting to foreign capital flows and the Reserve Bank of India's upcoming monetary policy decision. In commodities, MCX gold was around Rs 1,47,170 per 10 grams, down about 0.47 per cent, while December silver futures rose around 1 per cent to Rs 2,28,150 per kg, reflecting divergent trends in precious metals."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 262,
+      "args": {
+        "q": "crypto"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 2980,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "BNB holds near $790 as bullish derivatives meet weak ETF demand",
+            "description": "BNB is consolidating on Monday, trading around $790 as the token consolidates following three consecutive weeks of gains. Its near-term technical structure remains bullish, although the contrast between active derivatives markets and quiet ETF flows raises questions about the recovery’s durability. The token continues to trade above its major daily moving averages, suggesting the recent advance has retained much of its strength. However, buyers have yet to overcome resistance near $798, a level that could determine whether the rally extends or gives way to a deeper pullback. For now, the market presents a mixed picture. Derivatives positioning favors further upside, while demand through spot exchange-traded funds remains subdued. Momentum indicators also suggest a constructive trend with limited immediate acceleration. Rising…"
+          },
+          {
+            "title": "Can SpaceX Price Rally Extends: Morgan Stanley’s Sees $300 Target",
+            "description": "The post Can SpaceX Price Rally Extends: Morgan Stanley’s Sees $300 Target appeared first on Coinpedia Fintech News SpaceX stock is back on investors’ radar after a sharp 7% rally pushed SPCX stock toward $160, putting a key breakout level within reach. The move comes as Morgan Stanley maintains a $300 price target, while Starship milestones and expanding AI-computing operations strengthen the long-term growth case. But the stock now faces a critical technical …"
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 306,
+      "args": {
+        "q": "ai technology"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 28588,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Lina Khan Warns AI Firms: Self-Regulation Is a Repeat of Big Tech’s Costly Mistakes",
+            "description": "Former FTC Chair Lina Khan sharply criticizes AI leaders' self-policing pledge, calling it a repeat of Big Tech's failed social media oversight that led to widespread harms. She insists existing consumer protection and competition laws already apply, urging enforcement against dangerous models and CEO accountability instead of new exemptions. Recent breaches by OpenAI and Anthropic agents underscore her warnings."
+          },
+          {
+            "title": "Skyworks Completes Combination with Qorvo",
+            "description": "Expands technology portfolio and addressable market, with $500 million or more in expected annual cost synergies and immediate non-GAAP EPS accretion IRVINE, Calif., Oct. 05, 2026 (GLOBE NEWSWIRE) -- Skyworks (Nasdaq: SWKS) today announced the successful completion of its combination with Qorvo. The close of the transaction creates a U.S.-based, global leader in high-performance radio frequency (RF), power management, and analog and mixed-signal semiconductor solutions. \"This combination is about far more than bringing two companies together,” said Phil Brace, chief executive officer and president of Skyworks. \"Our customers are tackling increasingly complex challenges and need partners with the capabilities, engineering expertise and scale to help them innovate faster. Together, we are well positioned to deliver more integrated, system-level solutions and accelerate the next generation of connected technologies. Today marks an important milestone-but it is only the beginning. We see an extraordinary opportunity to create long-term value for our customers, shareholders and employees while helping shape the future of our industry.” The transaction creates a larger, more diversified semiconductor company, combining complementary RF, analog, and power technologies with expanded engineering capabilities - approximately 8,000 engineers and more than 12,000 issued and pending patents. In Mobile, the combination broadens its RF front-end portfolio, positioning the company to benefit from rising RF complexity. As 5G-Advanced evolves and the industry moves toward 6G, smartphones are expected to support more frequency bands, new spectrum and AI-driven features, increasing demand for highly integrated RF solutions. Beyond Mobile, the combination more than doubles Skyworks' addressable market and establishes a platform spanning physical AI and connected edge, defense and aerospace, data center and networking, and automotive. It also broadens the technology portfolio into RF GaN, low-voltage power, and wired broadband. Skyworks will benefit from greater end-market breadth, strengthened domestic manufacturing, and annualized cost synergies of $500 million or more, expected to be realized within 24 to 36 months post-close when the companies are fully integrated. The transaction is expected to be immediately accretive to non-GAAP EPS while maintaining a favorable capital structure. Skyworks will provide financial guidance on its fiscal fourth-quarter earnings call on Nov. 3. Bob Bruggeworth, former chief executive officer and president of Qorvo and a member of the Skyworks Board of Directors, added, \"This next chapter begins with an immense amount of pride. I've had the opportunity to see firsthand our teams preparing for this moment with tremendous focus and discipline. I have great confidence in the future of the combined company and its ability to deliver on the promise of the combination.” Under the terms of the merger agreement, Qorvo shareholders are entitled to receive $32.50 in cash and 0.960 of Skyworks’ common share for each share of Qorvo common stock they owned. Legacy Skyworks shareholders own approximately 63% of the combined company and legacy Qorvo shareholders own approximately 37%, on a fully diluted basis. The company will continue to operate as Skyworks and trade under the SWKS ticker symbol on the NASDAQ market. As previously announced, Phil Brace will continue to serve as chief executive officer and president of Skyworks. Bob Bruggeworth, Richard Clemmer and Chris Koopmans, formerly on the Qorvo board of directors, have each joined the Skyworks Board of Directors. Advisors Qatalyst Partners and Goldman Sachs & Co. LLC acted as financial advisors to Skyworks, with Skadden, Arps, Slate, Meagher & Flom LLP serving as Skyworks’ legal advisor. Centerview Partners LLC was exclusive financial advisor and Davis Polk & Wardwell LLP acted as legal advisor to Qorvo. About Skyworks Skyworks® is a global leader in high-performance RF, precision timing, power management and mixed-signal solutions that power the intelligent, connected world. Through deep engineering expertise, Skyworks helps customers address rising complexity and deliver seamless connectivity across smartphones, vehicles, networks and critical infrastructure. From defense and aerospace systems to the connected edge, AI infrastructure and next-generation automotive platforms, Skyworks provides the essential technologies that connect, synchronize and power physical AI, as intelligence moves out of the data center and into the real world. Harnessing decades of technical leadership and trusted partnerships across the technology ecosystem, Skyworks helps the world's leading innovators bring next-generation products and services to market. Skyworks is a member of the S&P 500® market index (Nasdaq: SWKS). For more information, please visit www.skyworksinc.com. Forward Looking Statements This press release includes \"forward-looking statements” intended to qualify for the safe harbor from liability established by the Private Securities Litigation Reform Act of 1995. These forward-looking statements include information relating to future events, prospects, expectations and results of Skyworks (e.g., certain projections and business trends, including with respect to future sales and revenue, as well as statements regarding the recently completed combination with Qorvo, Inc. (\"Qorvo”)). Forward-looking statements can often be identified by words such as \"anticipates,” \"estimates,” \"expects,” \"forecasts,” \"intends,” \"believes,” \"plans,” \"may,” \"will” or \"continue,” and similar expressions and variations or negatives of these words. All such statements are subject to certain risks, uncertainties and other important factors that could cause actual results to differ materially and adversely from those projected and may affect our future operating results, financial position and cash flows. These risks, uncertainties and other important factors include: the potential impacts on our business, reputation, relationships, results of operations, cash flows and financial condition as a result of the combination with Qorvo, Inc.; the possibility that expected benefits related to such transactions with Qorvo may not materialize as expected; our business experiencing disruptions as a result of the acquisition, including factors making it more difficult to maintain relationships with employees, customers, other business partners or governmental entities; the diversion of management time to integration of the business; our being unable to successfully implement integration strategies or to achieve expected synergies and operating efficiencies within the expected time-frames or at all; the costs, fees, expenses and other charges related to the transactions with Qorvo, including with respect to any related litigation; reduced flexibility in operating our business as a result of the substantial amount of additional indebtedness we have incurred and may in the future incur in connection with the Qorvo transactions; unexpected costs, charges and expenses related to the integration of the parties’ businesses; the risks of doing business internationally, including from trade war or trade protection measures (e.g., tariffs, retaliatory tariffs and other countermeasures or taxes), increased import/export restrictions and controls (e.g., our ability to obtain foreign-sourced raw materials, including from Chinese-based sources, as well as our ability to sell products to certain specified foreign entities only pursuant to a limited export license from the U.S. Department of Commerce), the susceptibility of the semiconductor industry and the markets addressed by our, and our customers’, products to economic cycles or changes in economic conditions, including inflation and recession that could result from trade war or trade protection measures; our reliance on a small number of key customers for a large percentage of our sales; decreased gross margins and loss of market share as a result of increased competition; our ability to obtain design wins from customers; our ability to convert design wins into revenue; market acceptance of our products and our customers’ products, including market acceptance of new, emerging technologies such as AI; the mix and volume of phone models sold by our largest customer; delays in the deployment of commercial 5G networks or in consumer adoption of 5G-enabled devices; the volatility of our stock price; changes in laws, regulations and/or policies that could adversely affect our operations and financial results, the economy and our customers’ demand for our products, or the financial markets and our ability to raise capital; fluctuations in our manufacturing yields due to our complex and specialized manufacturing processes; our ability to develop, manufacture and market innovative products, avoid product obsolescence, reduce costs in a timely manner, transition our products to smaller geometry process technologies and achieve higher levels of design integration; the quality of our products and any defect remediation costs; our products’ ability to perform under stringent operating conditions; the availability and pricing of third-party semiconductor foundry, assembly and test capacity, raw materials, including rare earth and similar minerals, supplier components, equipment and shipping and logistics services, including limits on our customers’ ability to obtain such services and materials; risks that we may not be able to optimize our manufacturing footprint and achieve any financial and operational benefits from such efforts, including reducing fixed costs or improving utilization rates, disruptions to our manufacturing processes, including relating to any relocation of our key facilities; our ability to successfully manage our senior management transitions; our ability to retain, recruit and hire key executives or the departure of any such executives, technical personnel and other employees in the positions and numbers, with the experience and capabilities, and at the compensation levels needed to implement our business and product plans; the timing, rescheduling or cancellation of significant customer orders and our ability, as well as the ability of our customers, to manage inventory; other economic, social, military and geopolitical conditions in the countries in which we, our customers or our suppliers operate, including the conflicts in Ukraine, Iran and other regions in the Middle East, possible disruptions in transportation networks, and fluctuations in foreign currency exchange rates; the effects of global health crises on business conditions in our industry, including the risk of significant disruptions to our business operations, as well as negative impacts to our financial condition; our ability to prevent theft of our intellectual property, disclosure of confidential information or breaches of our information technology systems; uncertainties of litigation, including potential disputes over intellectual property infringement and rights, as well as payments related to the licensing and/or sale of such rights; our ability to continue to grow and maintain an intellectual property portfolio and obtain needed licenses from third parties; our ability to make certain investments and acquisitions, integrate Qorvo and other companies we acquire and/or enter into strategic alliances; and other risks and uncertainties, including those detailed from time to time in our filings with the Securities and Exchange Commission. The forward-looking statements contained in this press release are made only as of the date hereof, and we undertake no obligation to update or revise the forward-looking statements, whether as a result of new information, future events or otherwise, except as required by law. Note to Editors: Skyworks, Qorvo, the Skyworks symbol, and the Qorvo symbol are trademarks or registered trademarks of Skyworks Solutions, Inc., or its subsidiaries in the United States and other countries. Third-party brands and names are for identification purposes only and are the property of their respective owners. Media Relations: Constance Griffiths (949) 230-4867 Constance.Griffiths@skyworks.com Investor Relations: Raji Gill (949) 508-0973 Raji.Gill@skyworks.com"
+          },
+          {
+            "title": "DLH Wins $2 Million NIH Data Governance Pilot Task Order",
+            "description": "ATLANTA, Oct. 05, 2026 (GLOBE NEWSWIRE) -- DLH Holdings Corp. (NASDAQ: DLHC) (\"DLH” or the \"Company”), a leading provider of digital, engineering, and scientific solutions for health and defense missions, today announced that it has been awarded a task order to design, develop, and pilot a data governance framework for secure access to controlled biomedical research data by the National Institutes of Health (\"NIH”). Under this task order, DLH will serve as a technical advisor to harmonize NIH and federal data policies and integrate governance workflows across biomedical data platforms, piloting a data management approach within the National Heart, Lung, and Blood Institute (\"NHLBI”) and at least one other NIH Institute or Center which could serve as a roadmap for NIH-wide adoption. DLH will incorporate security, privacy, data rights, and artificial intelligence (\"AI”) governance requirements where applicable, and collect performance metrics related to usability, compliance, interoperability, and stakeholder satisfaction. \"This award expands our role as a technical and strategic advisor to NIH and brings together DLH’s expertise in biomedical research, data governance, and secure digital solutions,” said Brooke Pierce, President of DLH’s Health business group. \"We believe this work will strengthen our foundation for pursuing future enterprise-scale modernization opportunities as NIH evaluates broader adoption of the framework.” This task order represents new work for DLH and has a total value of $2 million over an eighteen-month period of performance. About DLH DLH (NASDAQ: DLHC) enhances technology, public health, and cyber security readiness missions through science, technology, cyber, and engineering solutions and services. Our experts solve some of the most complex and critical missions faced by federal customers, leveraging digital transformation, artificial intelligence, advanced analytics, cloud-based applications, telehealth systems, and more. With a world-class workforce dedicated to the idea that \"Your Mission is Our Passion,” DLH brings a unique combination of government sector experience, proven methodology, and unwavering commitment to innovative solutions to improve the lives of millions. For more information, visit www.DLHcorp.com. Contact Information: Investor Relations investorrelations@dlhcorp.com Media communications@dlhcorp.com Safe Harbor Statement under the Private Securities Litigation Reform Act of 1995: This press release may contain forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These statements relate to future events or DLH`s future financial performance. Any statements that refer to expectations, projections or other characterizations of future events or circumstances or that are not statements of historical fact (including without limitation statements to the effect that the Company or its management \"believes”, \"expects”, \"anticipates”, \"plans”, \"intends” and similar expressions) should be considered forward-looking statements that involve risks and uncertainties which could cause actual events or DLH’s actual results to differ materially from those indicated by the forward-looking statements. Forward-looking statements in this release include, among others, statements regarding expected contract performance, future task order value, and anticipated operational benefits. These statements reflect our belief and assumptions as to future events that may not prove to be accurate. Our actual results may differ materially from such forward-looking statements due to a variety of factors, including: the failure to achieve the anticipated benefits of any future acquisition (including anticipated future financial operating performance and results); the inability to retain employees and customers; contract awards in connection with re-competes for present business and/or competition for new business; our ability to manage our debt obligations; compliance with bank financial and other covenants; changes in client budgetary priorities; government contract procurement (such as bid and award protests, small business set asides, loss of work due to organizational conflicts of interest, etc.) and termination risks; significant delays or reductions in appropriations for our programs and broader changes in U.S. government funding and spending patterns; legislation that amends or changes discretionary spending levels or budget priorities; legal, regulatory, and political changes from the federal government that could result in economic uncertainty; the impact of inflation and higher interest rates; and other risks described in our SEC filings. For a discussion of such risks and uncertainties which could cause actual results to differ from those contained in the forward-looking statements, see \"Risk Factors” in the Company’s periodic reports filed with the SEC, including our Annual Report on Form 10-K for the fiscal year ended September 30, 2025, as well as interim quarterly filings thereafter. The forward-looking statements contained herein are not historical facts, but rather are based on current expectations, estimates, assumptions and projections about our industry and business. Such forward-looking statements are made as of the date hereof and may become outdated over time. The Company does not assume any responsibility for updating forward-looking statements."
+          },
+          {
+            "title": "Stifel raises Lumentum stock price target on laser demand outlook",
+            "description": "Stifel raises Lumentum stock price target on laser demand outlook"
+          },
+          {
+            "title": "Duos Technologies Sells Its GPU-as-a-Service Entity to Axe Compute, Accelerating Its Shift to a Pure-Play AI Colocation Platform",
+            "description": "Sale removes approximately $98.1 million of prospective equipment financing and frees capital for new AI colocation sites Columbus customer continues without interruption under a new five-year agreement JACKSONVILLE, Fla., Oct. 05, 2026 (GLOBE NEWSWIRE) -- Duos Technologies Group, Inc. (\"Duos” or the \"Company”) (Nasdaq: DUOT), a provider of adaptive, modular architecture data center colocation and infrastructure solutions, today announced that it has completed the sale of its GPU-as-a-Service entity, Duos Edge AI - GPUaaS, LLC (the \"GPUaaS Entity”), to Axe Compute, Inc. (\"Axe Compute”) (Nasdaq: AGPU), a neocloud AI infrastructure company delivering dedicated, bare-metal GPU compute and large-scale AI cluster build-outs at global scale, pursuant to which Axe Compute will acquire all of the outstanding equity interests of the GPUaaS Entity, the special purpose subsidiary formed to hold the Company's GPU compute cluster and the related equipment supply and financing positions. Duos built the Columbus campus to demonstrate that its modular architecture could deploy quickly and support frontier AI workloads at scale. The rapid development, energization, and operation of the facility proved the Company's deployment model and showed that operating AI infrastructure assets built this way can attract institutional capital. The sale of the GPUaaS Entity monetizes that success, allowing Duos to recycle capital into additional edge data center deployments while maintaining service to its customer. The transaction sharpens Duos into a pure-play landlord for AI compute, owning and operating the site, the power, and the colocation infrastructure while its customers bring and operate the hardware, and it frees the Company's capital for long-lived AI colocation sites in high-demand U.S. markets. \"Columbus proves that our rapid deployment, modular architecture model can serve the most demanding AI workloads anywhere,” said Duos CEO Doug Recker. \"That proof brought us an anchor, hyperscale customer and additional investment from a trusted partner in Axe Compute. Just as importantly, it demonstrated that assets developed through our model can attract institutional capital once they are operating and performing, creating opportunities to reinvest capital into the next generation of deployments. The job now is to advance the platform. We continue serving our existing Columbus customer under a revised five-year agreement with improved terms. Our capital belongs in colocation capacity, new sites, new campuses, and new customers.” This year's commercial momentum reflects that model, including a 10 MW hyperscaler colocation agreement with a total contract value over $111 million signed in July 2026, and, separately, a five-year hosting service order with Axe Compute across an aggregate 55 MW of U.S. sites with a total contract value over $500 million signed in August 2026. Duos is now directing its capital exclusively to developing and operating 10 to 30 MW modular colocation sites across the United States. Duos is now singularly focused on being the colocation landlord. Duos provides the site, the power, and the colocation services, and is paid for delivering them. The tenant brings and operates the compute equipment. Compute equipment ownership, GPU utilization, and technology refresh sit with the counterparty whose core business that is, while Duos retains what a landlord retains: the asset, the power capacity, the customer relationship, and contracted revenue tied to capacity rather than to hardware cycles. Duos will continue to serve the customer that was previously contracted for these GPUs at the Columbus, Georgia facility without interruption. Additionally, Duos and the customer have also entered into a revised five-year agreement that is expected to increase the revenue Duos recognizes from the customer over the life of the contract. Following the closing of the Agreement, Duos will lease the underlying GPU compute capacity from Axe Compute under a capacity supply arrangement rather than owning and financing the equipment itself. Duos will continue to own and operate the colocation facility at Columbus, Georgia and continue to provide scalable power, cooling, security, and managed infrastructure services on which the site runs. \"Selling the GPU fleet sharpens Duos into a pure-play edge data center operator,” said Chris DeAlmeida, Duos CFO. \"We keep the customer and the economics, we shed roughly $98.1 million of prospective equipment debt, and we free the balance sheet to fund sites instead of servers. Our outlook for 2026 is unchanged: full year revenue above $50 million and positive adjusted EBITDA.\" Transaction Highlights Sale of the GPUaaS Entity: Axe Compute acquires 100% of the equity interests of the Special Purpose Vehicle GPUaaS Entity, including the GPU clusters and all associated equipment supply obligations. Continuity of service to the end customer: Duos will continue to deliver service to the existing end customer at Columbus under a revised five-year agreement. Rather than taking on the risk of owning the GPU compute capacity, Duos will now lease the capacity from Axe Compute. Termination of future equipment debt: In connection with the closing, the approximately $98.1 million GPU equipment financing facility, together with the associated covenants and debt service, was satisfied by Axe Compute and removed any debt obligations for Duos. Capital redeployment: Capital that would have funded GPU equipment and its associated debt service is available for new modular architecture sites and campus development, where it is deployed once into a long-lived asset serving multiple contract cycles. This repositioning allows Duos to more meaningfully deploy available capital to further advance its focus on colocation and providing the infrastructure customers increasingly demand. Balance sheet capacity: Eliminating the prospective equipment facility preserves the Company's debt capacity and covenant headroom for additional site development financing to meet the accelerating demand, rather than equipment financing. Sale consideration and capital recycling: Duos will receive $42.9 million in consideration for the GPUaaS Special Purpose Vehicle Entity through evenly scheduled monthly payments over the next 60 months. The transaction closed on September 30, 2026. About Duos Technologies Group, Inc. Duos Technologies Group, Inc. (Nasdaq: DUOT), headquartered in Jacksonville, Florida, provides and manages modular architecture colocation data centers and infrastructure solutions. Through its Duos Edge AI brand, the Company delivers high-performance computing infrastructure built on its proprietary, scalable Duos Modular Architecture, designed to support the high-power environments required for AI and enterprise computing. Separately, Duos Technology Solutions provides manufacturer-agnostic sourcing and fulfillment services that enable efficient deployment of data centers and IT environments. Together, these platforms position the Company to address growing demand for distributed digital infrastructure in underserved Tier 3 and Tier 4 markets. For more information, visit www.duostech.com and www.duosedge.ai. About Axe Compute, Inc. Axe Compute Inc. (NASDAQ: AGPU) is a neocloud AI infrastructure platform built on a fundamental premise: AI innovation should not be constrained by hardware choice or availability. The company provides enterprises and AI innovators with flexibility across hardware, geography, and deployment models. Axe Compute provides the design, deployment, ownership, and operation of large-scale, dedicated AI infrastructure worldwide, supported by enterprise-grade SLAs and operational expertise. Axe Compute is headquartered in Pittsburgh, Pennsylvania. For more information, visit axecompute.com. Forward-Looking Statements This news release includes forward-looking statements within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934, as amended, regarding, among other things, our plans, strategies and prospects -- both business and financial. Although we believe that our plans, intentions and expectations reflected in or suggested by these forward-looking statements are reasonable, we cannot assure you that we will achieve or realize these plans, intentions or expectations. Forward-looking statements are inherently subject to risks, uncertainties and assumptions. Many of the forward-looking statements contained in this news release may be identified by the use of forward-looking words such as \"believe,\" \"expect,\" \"anticipate,\" \"should,\" \"planned,\" \"will,\" \"may,\" \"intend,\" \"estimated\" and \"potential,\" among others. Important factors that could cause actual results to differ materially from the forward-looking statements we make in this news release include market conditions and those set forth in reports or documents that we file from time to time with the United States Securities and Exchange Commission. We do not undertake or accept any obligation or undertaking to release publicly any updates or revisions to any forward-looking statements to reflect any change in our expectations or any change in events, conditions or circumstances on which any such statement is based, except as required by law. All forward-looking statements attributable to Duos Technologies Group, Inc. or a person acting on its behalf are expressly qualified in their entirety by this cautionary language. Contacts Investor Relations Tom Colton & Greg Bradbury Gateway Group, Inc. +1 949-574-3860 | DUOT@duostech.com Media Contact Duos Technologies Group iMiller Public Relations +1.914.315.6424 duot@imillerpr.com"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 242,
+      "args": {
+        "q": "bitcoin"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 2628,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "BNB holds near $790 as bullish derivatives meet weak ETF demand",
+            "description": "BNB is consolidating on Monday, trading around $790 as the token consolidates following three consecutive weeks of gains. Its near-term technical structure remains bullish, although the contrast between active derivatives markets and quiet ETF flows raises questions about the recovery’s durability. The token continues to trade above its major daily moving averages, suggesting the recent advance has retained much of its strength. However, buyers have yet to overcome resistance near $798, a level that could determine whether the rally extends or gives way to a deeper pullback. For now, the market presents a mixed picture. Derivatives positioning favors further upside, while demand through spot exchange-traded funds remains subdued. Momentum indicators also suggest a constructive trend with limited immediate acceleration. Rising…"
+          },
+          {
+            "title": "Head-To-Head Survey: Magic Software Enterprises (NASDAQ:MGIC) & MARA (NASDAQ:MARA)",
+            "description": "Magic Software Enterprises (NASDAQ:MGIC – Get Free Report) and MARA (NASDAQ:MARA – Get Free Report) are both technology companies, but which is the superior business? We will contrast the two businesses based on the strength of their institutional ownership, risk, profitability, analyst recommendations, valuation, earnings and dividends. Earnings and Valuation This table compares Magic Software […]"
+          },
+          {
+            "title": "Can SpaceX Price Rally Extends: Morgan Stanley’s Sees $300 Target",
+            "description": "The post Can SpaceX Price Rally Extends: Morgan Stanley’s Sees $300 Target appeared first on Coinpedia Fintech News SpaceX stock is back on investors’ radar after a sharp 7% rally pushed SPCX stock toward $160, putting a key breakout level within reach. The move comes as Morgan Stanley maintains a $300 price target, while Starship milestones and expanding AI-computing operations strengthen the long-term growth case. But the stock now faces a critical technical …"
+          },
+          {
+            "title": "AXP Gets A Slew Of Price Target Cuts Ahead Of Q3 Report This Month – Latest Targets Still Show Room For Upside",
+            "description": "According to TheFly, Barclays lowered its AXP price target to $342 from $364 while maintaining an 'Equal Weight' rating."
+          },
+          {
+            "title": "Vulcan Infrastructure and Power Inc.: Vulcan Announces Redemption of All Outstanding 8.50% Senior Notes Due 2026",
+            "description": "Redemption Will Eliminate Vulcan's 2026 Debt MaturityCompany Estimates $16.9 Million in Cash and Digital Assets Following Redemption Based on Preliminary Unaudited Quarter-End BalancesPredevelopmen..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 255,
+      "args": {
+        "q": "ethereum"
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 2387,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the keynote at Token2049 on October 7, 2026 in Singapore Bitmine was added to the Russell 1000 Large-cap index on June 26, 2026 Bitmine's..."
+          },
+          {
+            "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.02 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $17.4 Billion",
+            "description": "Bitmine owns 4.9% of the total ETH coin supply of 122.1 million Bitmine is 99% of the way to the 'Alchemy of 5%' in just 15 months Tom Lee to deliver the..."
+          },
+          {
+            "title": "Here Are Monday’s Top Wall Street Analyst Research Calls: Align Technology, AutoNation, Estee Lauder, Harley-Davidson, HubSpot, Microsoft, Mosaic, Ryder System, Wells Fargo & Company, and More",
+            "description": "Pre-Market Stock Futures: Futures are trading lower as we get ready for the first full week of trading for the fourth quarter of 2026 after an outstanding Friday, which saw all of the major indices finish the day higher, after the non-farm payroll numbers for September came in well below estimates before the open and […]"
+          }
+        ]
+      }
+    }
+  ]
+}

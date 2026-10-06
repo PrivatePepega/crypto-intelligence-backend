@@ -1,0 +1,115 @@
+{
+  "tool": "cvBreaking",
+  "source": "cvBreaking.ts#cvBreakingTool",
+  "kind": "feed",
+  "generatedAt": "2026-10-06T00:45:13.821Z",
+  "domains": null,
+  "summary": {
+    "runs": 1,
+    "ok": 1,
+    "empty": 0,
+    "totalRecords": 18
+  },
+  "runs": [
+    {
+      "domain": "feed",
+      "ok": true,
+      "elapsedMs": 5174,
+      "args": {
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 18,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 4646,
+        "empty": false
+      },
+      "response": {
+        "count": 18,
+        "items": [
+          {
+            "title": "Russian gold floods Hong Kong as Western sanctions redraw bullion trade",
+            "description": "The surge underscores how Russia's gold trade has been rerouted after its invasion of Ukraine in 2022 shut its producers out of major Western markets."
+          },
+          {
+            "title": "Peter Brandt Hints at Bullish XRP Pattern With a Coffee Cup Chart",
+            "description": "XRP’s recent price recovery may be forming a bullish chart pattern, judging from a coffee cup image Peter Brandt placed beneath the cryptocurrency’s trading history. His latest post hints at a possibl"
+          },
+          {
+            "title": "⛽ ETH Gas: 🐢 0.117145731 | 🚶 0.117180848 | 🚀 0.140282591 Gwei",
+            "description": "Current Ethereum gas prices. Fast: 0.140282591 Gwei, Standard: 0.117180848 Gwei, Safe: 0.117145731 Gwei"
+          },
+          {
+            "title": "₿ Bitcoin Network: 0.0 EH/s hashrate, 904,772 txs today",
+            "description": "BTC price: $85,838.87"
+          },
+          {
+            "title": "Corporate AI costs are falling, but companies are using the savings to deploy more AI",
+            "description": "Companies in the United States continue to pay less for AI despite increasing usage levels, according to a recent study released by Ramp AI Index. This information indicates that the AI price wars are"
+          },
+          {
+            "title": "Compound votes on treasury delays and veto powers as DeFi governance strains",
+            "description": "Compound’s COMP holders are voting on Proposal 612, which would extend treasury withdrawal delays from two days to ten and give the protocol’s Governor Timelock power to cancel treasury transactions b"
+          },
+          {
+            "title": "Morph Joins Mastercard Crypto Partner Program for Stablecoin Settlement",
+            "description": "Morph joined the Mastercard Crypto Partner Program to develop multi-chain stablecoin payment and settlement solutions for Web3 businesses and creators."
+          },
+          {
+            "title": "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names",
+            "description": "The Bitcoin rally's optimism at TOKEN2049 Singapore could signal renewed investor confidence, potentially revitalizing the crypto market. The post Bitcoin rally sets the mood as TOKEN2049 Singapore dr"
+          },
+          {
+            "title": "SUI/USDT: Bullish Structure Builds Toward a $1.35 Breakout",
+            "description": "SUI is showing a **clear bullish 4H market structure**. Price has been printing successive **BMSs to the upside**, and the recent CHoCH did not lead to a meaningful bearish reversal. Instead, buyers d"
+          },
+          {
+            "title": "Colorado summit video: Giustra says gold rally is missing retail",
+            "description": "Ordinary investors have largely sat out gold’s rally, leaving room for another leg higher while central banks keep buying on price dips, veteran mining financier Frank Giustra says. Central banks have"
+          },
+          {
+            "title": "Plume Opens Onchain Door to Fidelity’s $28B Bond Giant",
+            "description": "Plume opened nBND on Oct. 5, giving investors blockchain-based exposure to Fidelity’s roughly $28 billion Total Bond ETF. But there’s a small catch. The exchange-traded fund (ETF) itself wasn’t tokeni"
+          },
+          {
+            "title": "₿ BTC Fees: ⚡ 1 | ⏱️ 1 | 🕐 1 sat/vB",
+            "description": "Fastest: 1 sat/vB, 30min: 1 sat/vB, 1hr: 1 sat/vB, Economy: 1 sat/vB"
+          },
+          {
+            "title": "S / SUSDT Long Setup | Breaker Block Reclaim",
+            "description": "MARKET ANALYSIS S COIN is currently reacting from a key technical area highlighted on the chart. As long as the protected support zone remains intact, the bullish market structure remains valid a"
+          },
+          {
+            "title": "OTC Markets Group approves Dateline Resources for OTCQB trading",
+            "description": "OTC Markets Group moved four companies to trading on its OTCQB Venture Market on Oct. 5. Additions included Dateline Resources, Locksley Resources, Moon Inc, and PlasCred Circular Innovations. The mov"
+          },
+          {
+            "title": "😊 Crypto Fear & Greed Index: 73 (Greed)",
+            "description": "The market sentiment is currently \"Greed\" with a score of 73/100"
+          },
+          {
+            "title": "Guidewire CEO Michael George Rosenbaum disposes of $183,024 in common shares",
+            "description": "Guidewire CEO Michael George Rosenbaum sold 1,200 common shares on Oct. 5, 2026 at USD 152.52. Post-transaction holdings totaled 277,266 shares. Sale executed under a Rule 10b5-1 trading plan adopted"
+          },
+          {
+            "title": "Sprouts CEO Jack Sinclair disposes of $1,390,572 in common shares",
+            "description": "Sprouts Farmers Market CEO Jack Sinclair sold 21,576 shares on Oct. 2-5 at weighted average prices of USD 64.7686, USD 64.4755. Sales followed option exercises for 21,576 shares at USD 16.47. Sinclair"
+          },
+          {
+            "title": "Ripple’s Schwartz Slams Fee Metric as 100x XRP Fee Hike Is Floated",
+            "description": "Blockchain fee revenue is a poor performance metric, according to Ripple’s David Schwartz. Responding to an XRP Ledger fee suggestion, he described transaction charges as friction the chain failed to"
+          }
+        ]
+      }
+    }
+  ]
+}

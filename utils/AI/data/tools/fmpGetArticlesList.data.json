@@ -1,0 +1,79 @@
+{
+  "tool": "fmpGetArticlesList",
+  "source": "fmpGetArticlesList.ts#fmpGetArticlesListTool",
+  "kind": "feed",
+  "generatedAt": "2026-10-06T00:55:21.743Z",
+  "domains": null,
+  "skippedDomains": [],
+  "summary": {
+    "runs": 1,
+    "ok": 1,
+    "empty": 0,
+    "totalRecords": 40
+  },
+  "runs": [
+    {
+      "domain": "feed",
+      "ok": true,
+      "elapsedMs": 716,
+      "args": {},
+      "shape": {
+        "kind": "object",
+        "recordCount": 40,
+        "containerKey": "titles",
+        "topLevelKeys": [
+          "count",
+          "titles"
+        ],
+        "recordKeys": [],
+        "charCount": 3526,
+        "empty": false
+      },
+      "response": {
+        "count": 40,
+        "titles": [
+          "Revvity (NYSE: RVTY) Stock Analysis: Strong Performance and Growth Prospects",
+          "Levi Strauss &amp; Co. (NYSE: LEVI) Q3 2026 Earnings Preview",
+          "5 Notable Stock Gainers on October 5, 2026",
+          "5 Notable Stock Losers on October 5, 2026",
+          "Applied Digital (NASDAQ: APLD) Earnings Preview: AI Data Center Growth and Valuation Insights",
+          "Needham Boosts Price Target for Vaxcyte (NASDAQ: PCVX) on Strong VAX-31 Trial Results",
+          "IG Group (OTC: IGGHY) Faces Guidance Cut and Price Target Reductions Amid Revenue Retention Concerns",
+          "GMAB (NASDAQ: GMAB)'s Rina-S Shows Promise in Ovarian Cancer Treatment: A Biotechnology Stock Analysis",
+          "NVIDIA (NASDAQ: NVDA) Price Target Raised Amid Strong AI Chip Demand",
+          "SBA Communications (NASDAQ: SBAC) Price Target Raised: What's Driving Growth in Cell Tower Infrastructure?",
+          "Schneider Electric's Acquisition of PTC Inc.: A Deep Dive into the Industrial Software Deal",
+          "SPX Technologies (NYSE: SPXC) Stock Analysis: Analyst Ratings and Market Reaction",
+          "PBF Energy (NYSE: PBF): U.S. Oil Refiner Gains on Strong Results and Debt Reduction",
+          "J D Wetherspoon (OTC: JDWPY) Navigates Sales Growth and Profit Challenges in Latest Financials",
+          "Oppenheimer Adjusts Enphase Energy (NASDAQ: ENPH) Price Target Amid Solar Industry Trends",
+          "Ball Corp. (NYSE: BALL) Price Target Raised by UBS Amid Steady Packaging Demand",
+          "WisdomTree Japan Hedged Equity Fund (AMEX: DXJ) Announces 1-for-3 Stock Split",
+          "Fractyl Health (NASDAQ:GUTS) Implements Reverse Stock Split Amidst Securities Class Action",
+          "Taylor Devices (NASDAQ: TAYD) Misses Q1 2027 Earnings and Revenue Estimates",
+          "nVent Electric (NYSE: NVT) Stock: BMO Capital Sets $212 Price Target Amid Surging Data Center Demand",
+          "Vertiv (NYSE: VRT) Stock Analysis: BMO Capital Sees Significant Upside in AI Data Center Infrastructure",
+          "Goldman Sachs Initiates Coverage on LVMH (OTCMKTS: LVMUY) Amid Shifting Luxury Market Outlook",
+          "Analyst Lowers Boston Scientific (NYSE:BSX) Stock Price Target to $54",
+          "Integra LifeSciences (NASDAQ:IART) Price Target Cut by Wells Fargo Following Revised Outlook",
+          "HF Sinclair (NYSE: DINO) Stock Analysis: UBS Raises Price Target Amid Strong Refining Outlook",
+          "Joby Aviation (NYSE:JOBY) Director Sells Shares Amidst eVTOL Development and Financial Scrutiny",
+          "Market Downturn: Nexalin, Integra LifeSciences, Western Digital, and Seagate Technology Post Sharp Declines",
+          "Top Stock Gainers: Stablecoin Development, Armada Acquisition, and Other Market Movers on October 2, 2026",
+          "NetApp (NASDAQ: NTAP) Price Target Raised to $260 Following Robust Q1 Results and AI Initiatives",
+          "NextEra Energy (NYSE: NEE) and Partners to Develop $22.3 Billion Project Star Energy Campus",
+          "UBS Raises Price Target for G-III Apparel Group (NASDAQ: GIII) Amidst Apparel Market Dynamics",
+          "Enerflex (NYSE: EFXT) Stock Rises on Major Data Center Power Generation Contract",
+          "UBS Lowers Price Target for McCormick (NYSE:MKC) Amid Q3 Results",
+          "TransUnion (NYSE: TRU) Navigates Mortgage Market with VantageScore Pricing Strategy",
+          "Comcast (NASDAQ: CMCSA) Price Target Lowered Amidst Market Headwinds",
+          "PepsiCo (NASDAQ: PEP) Stock Analysis: UBS Rating, Price Target, and Q3 Earnings Outlook",
+          "Nike (NYSE: NKE) Stock Analysis: UBS Maintains Neutral Rating Amid Revenue Miss and Layoffs",
+          "Acuity Inc. (NYSE: AYI) Fiscal Q4 Earnings: Strong Profit Growth Despite Revenue Miss",
+          "Fair Isaac (NYSE:FICO) Faces Price Target Cuts Amid Mortgage Market Shifts",
+          "Delta Air Lines (NYSE: DAL) Stock Analysis: Analyst Ratings and Market Performance"
+        ]
+      }
+    }
+  ]
+}

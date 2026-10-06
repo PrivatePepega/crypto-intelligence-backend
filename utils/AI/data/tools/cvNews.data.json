@@ -1,0 +1,55 @@
+{
+  "tool": "cvNews",
+  "source": "cvNews.ts#cvNewsTool",
+  "kind": "feed",
+  "generatedAt": "2026-10-06T00:45:37.298Z",
+  "domains": null,
+  "summary": {
+    "runs": 1,
+    "ok": 1,
+    "empty": 0,
+    "totalRecords": 3
+  },
+  "runs": [
+    {
+      "domain": "feed",
+      "ok": true,
+      "elapsedMs": 5246,
+      "args": {
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 755,
+        "empty": false
+      },
+      "response": {
+        "count": 3,
+        "items": [
+          {
+            "title": "⛽ ETH Gas: 🐢 0.100424181 | 🚶 0.10167327 | 🚀 0.111840597 Gwei",
+            "description": "Current Ethereum gas prices. Fast: 0.111840597 Gwei, Standard: 0.10167327 Gwei, Safe: 0.100424181 Gwei"
+          },
+          {
+            "title": "Trump Allows Cheaper, Dyed Diesel to Be Used in Nonfarm Vehicles",
+            "description": "In Nebraska, President Trump announced an executive order to waive an off-road requirement for the fuel, which is exempt from the federal highway tax."
+          },
+          {
+            "title": "Peter Brandt Hints at Bullish XRP Pattern With a Coffee Cup Chart",
+            "description": "XRP’s recent price recovery may be forming a bullish chart pattern, judging from a coffee cup image Peter Brandt placed beneath the cryptocurrency’s trading history. His latest post hints at a possibl"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "tool": "marketauxNewsSearch",
+  "source": "marketauxNewsSearch.ts#marketauxSearchTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:50:40.594Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 0,
+    "totalRecords": 24
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 825,
+      "args": {
+        "search": "geopolitics",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 1047,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Transcript: Geopolitics? What geopolitics?",
+            "description": "Katie Martin talks to Aiden Reiter",
+            "snippet": "Print this page\n\nThis is an audio transcript of the Unhedged podcast episode: ‘Geopolitics? What geopolitics?’\n\nAiden Reiter\n\nHey, listeners, for the holida..."
+          },
+          {
+            "title": "The Geopolitics of Infrastructure",
+            "description": "Bertrand Badré & Saurabh Mishra see the financing, construction, and control of strategic assets as a growing source of global power.",
+            "snippet": "The Geopolitics of Infrastructure\n\nBertrand Badré & Saurabh Mishra see the financing, construction, and control of strategic assets as a growing source of glob..."
+          },
+          {
+            "title": "Geopolitics in investing – valuable edge or useless voodoo?",
+            "description": "Can investors generate alpha by analysing geopolitics? Or should geopolitical commentary simply be ignored?",
+            "snippet": "Source: UBS, \"A changing world order: Perspectives and opportunities\", August 2026 ( email me for a copy, click on image to enlarge).\n\nDuring the 1990s and 2000..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 1305,
+      "args": {
+        "search": "financial markets",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 1299,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Financial Markets",
+            "description": "Financial markets refer broadly to any marketplace where the trading of securities occurs, including the stock market and bond markets, among others.",
+            "snippet": "What Are Financial Markets?\n\nFinancial markets refer broadly to any marketplace where the trading of securities occurs, including the stock market, bond market,..."
+          },
+          {
+            "title": "Main Functions of Financial Markets",
+            "description": "Learn more about the primary functions of financial markets, such as the various stock exchanges and other capital markets.",
+            "snippet": "Financial Literacy The Main Functions of Financial Markets\n\nThere are a wide range of different financial markets. Each plays a role in the transfer of wealth a..."
+          },
+          {
+            "title": "OTC Markets Group Welcomes Ledyard Financial Group, Inc. to OTCQX - Ledyard Financial Group (OTC:LFGP), OTC Markets Gr (OTC:OTCM)",
+            "description": "NEW YORK, June 22, 2023 (GLOBE NEWSWIRE) -- OTC Markets Group Inc. (OTCQX:OTCM), operator of regulated markets for trading 12,000 U.S. and international securities, today announced Ledyard Financial Group, Inc.",
+            "snippet": "NEW YORK, June 22, 2023 (GLOBE NEWSWIRE) -- OTC Markets Group Inc. OTCM, operator of regulated markets for trading 12,000 U.S. and international securities, tod..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 451,
+      "args": {
+        "search": "macro",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 930,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Graticule Asia Macro Advisors",
+            "description": "GuruFocus Article or News written by insider and the topic is about:",
+            "snippet": "New York, NY, based Investment company Graticule Asia Macro Advisors LLC Current Portfolio ) buys Lyft Inc, Match Group Inc, Ambarella Inc, PowerShares QQQ Trus..."
+          },
+          {
+            "title": "MACRO Consulting Group Buys iS",
+            "description": "GuruFocus Article or News written by insider and the topic is about:",
+            "snippet": "New Purchases: STIP, MMM, HON, STZ, ADBE, T,\n\nSTIP, MMM, HON, STZ, ADBE, T, Added Positions: IEF, IAU, MO, PSX, AAPL, VTEB, AMZN, QLTA, AAP, FSV, BKNG, DIS, AEP..."
+          },
+          {
+            "title": "Banco Macro (NYSE:BMA) Trading Down 4.9%",
+            "description": "Read Banco Macro (NYSE:BMA) Trading Down 4.9% at ETF Daily News",
+            "snippet": "Banco Macro S.A. (NYSE:BMA – Get Rating) shares were down 4.9% on Thursday . The company traded as low as $13.66 and last traded at $13.66. Approximately 484 ..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 369,
+      "args": {
+        "search": "commodities energy",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 1191,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "A Look at Energy & Commodities",
+            "description": "Energy is currently the number one ranked US sector on a risk-adjusted basis.  This comes from a steep, parabolic rise that has occurred over the last month.",
+            "snippet": "Energy is currently the number one ranked US sector on a risk-adjusted basis. This comes from a steep, parabolic rise that has occurred over the last month. We ..."
+          },
+          {
+            "title": "Energy Commodities Shine During Inflation",
+            "description": "What commodity works best during an inflationary period? It's not gold or an agricultural commodity, but research shows that energy",
+            "snippet": "What commodity works best during an inflationary period? It’s not gold or an agricultural commodity, but research shows that energy can actually thrive amid i..."
+          },
+          {
+            "title": "Top Commodities For The Energy Transition",
+            "description": "The supply and demand disruptions from COVID amplified commodity price signals, first down, then up. Click here to read our analysis of the commodities market.",
+            "snippet": "Artur Nichiporenko/iStock via Getty Images\n\nThe supply and demand disruptions resulting from COVID amplified commodity price signals, first down, then up. This ..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 443,
+      "args": {
+        "search": "crypto",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 1560,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Crypto 101: Crypto Wallets",
+            "description": "Crypto wallets are digitally connected storage devices or programs to keep your blockchain assets safe. When you create a crypto wallet, the wallet provider generates private keys — the passwords…",
+            "snippet": "Crypto 101: Crypto Wallets 5 Things You Can Do with a Crypto Wallet Right Now Photo by Morthy Jameson What is a crypto wallet? Crypto wallets are digitally conn..."
+          },
+          {
+            "title": "first dog named crypto CRYPTO Token Airdrop Strategies for Crypto Veterans",
+            "description": "Ever wondered how some folks seem to magically get free cryptocurrencies? Like, they’re just sitting there, scrolling through Twitter, and boom, free first dog named crypto CRYPTO? Well, magic’s got nothing to do with it — it’s all about first dog named crypto CRYPTO Token Airdrops. Whether you’re a seasoned crypto enthusiast or new to the block(chain), this guide’s got you covered on snagging those airdrops like a pro.",
+            "snippet": "first dog named crypto CRYPTO Token Airdrop Strategies for Crypto Veterans Liam Martin · Follow 4 min read · Just now Just now -- Listen Share\n\nfirst dog name..."
+          },
+          {
+            "title": "Crypto for Advisors: Crypto Investment Misconceptions",
+            "description": "Despite having been around for over a decade, cryptocurrencies still remain largely misunderstood. In this article, we dispel a few of the biggest crypto myths.",
+            "snippet": "In today’s issue, Christopher Jensen from Franklin Templeton cuts through some of the noise and misconceptions about crypto investing in today’s myth-bustin..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 691,
+      "args": {
+        "search": "ai technology",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 1725,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Meta Ai Technology: Meta says there’s been no downside to sharing AI technology, ET BrandEquity",
+            "description": "Meta Ai Technology: Over the past few months, Meta has been releasing open-source versions of its large language models — the technology behind AI chatbots like ChatGPT.",
+            "snippet": "Advt\n\nAdvt\n\nHow Meta, Google and other AI companies may benefit from OpenAI reshuffle In a post on X, Salesforce CEO Marc Benioff invited OpenAI researchers who..."
+          },
+          {
+            "title": "New Rackspace Technology Report Finds AI",
+            "description": "Skills, Data Quality and Lack of Organizational Buy-In Cited as Barriers; AI/ML Top IT Priority for Businesses, Alongside Cybersecurity...",
+            "snippet": "SAN ANTONIO, Feb. 01, 2022 (GLOBE NEWSWIRE) -- Rackspace Technology® (NASDAQ: RXT), a leading end-to-end, multicloud technology solutions company, today announ..."
+          },
+          {
+            "title": "Google AI Technology: Google's corporate parent still prospering amid shift injecting more AI technology in search, ET BrandEquity",
+            "description": "Google AI Technology: Google's corporate parent Alphabet Inc. delivered another quarter of steady growth amid an AI-driven shift in the ubiquitous search engine that is the foundation of its internet empire. The second-quarter report released Tuesday indicated Google is still reeling in advertisers on the heels of the May introduction of an artificial intelligence feature that produces conversational responses to people's search queries while downplaying its traditional display of related links to other websites.",
+            "snippet": "During daytime and primetime coverage of the Olympics, NBCUniversal's anchors will use Google Search's AI overviews to answer questions about some sports, such ..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 414,
+      "args": {
+        "search": "bitcoin",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 1044,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Bitcoin in Retirement: Bitcoin IRAs",
+            "description": "What exactly are the options for investors looking for Bitcoin exposure in their retirement portfolios?",
+            "snippet": "40% of millennial investors (aged 25 to 40) want the option to add cryptocurrencies to their retirement plans, according to a Spring 2021 survey by global marke..."
+          },
+          {
+            "title": "Bitcoin vs Bitcoin Cash- What’s the Difference?",
+            "description": "Bitcoin Cash (BCH), a cryptocurrency that aims to be an alternative to Bitcoin (BTC), the oldest and most traded cryptocurrency in the world.",
+            "snippet": "Bitcoin vs Bitcoin Cash- What’s the Difference?\n\nByline: Hannah Parker\n\nWhat is Bitcoin Cash?\n\nBitcoin Cash (BCH), a cryptocurrency that aims to be an alterna..."
+          },
+          {
+            "title": "How A Spot Bitcoin ETF Could Affect Bitcoin Spark And Bitcoin Cash",
+            "description": "What are ETFs?",
+            "snippet": "What are ETFs?\n\nIn the world of investing, Exchange-Traded Funds (ETFs) have established themselves as a popular and cost-effective way for individuals to diver..."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 287,
+      "args": {
+        "search": "ethereum",
+        "language": "en",
+        "group_similar": true,
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "articles",
+        "topLevelKeys": [
+          "articles"
+        ],
+        "recordKeys": [
+          "title",
+          "description",
+          "snippet"
+        ],
+        "charCount": 1288,
+        "empty": false
+      },
+      "response": {
+        "articles": [
+          {
+            "title": "Is Ethereum the Ethereum Killer?",
+            "description": "Solana is said to be an Ethereum killer, but what if the culprit is not a trendy smart contract platform; what if Ethereum is doing the damage itself?",
+            "snippet": "“It was Ethereum, in Metamask, with the gas fees.”\n\nThere is often talk of Solana being an Ethereum killer, but what if the culprit is not the latest trendy..."
+          },
+          {
+            "title": "Ethereum Definition",
+            "description": "Ethereum is a blockchain-based software platform with the native coin ether. Ethereum smart contracts support a variety of distributed apps across the crypto ecosystem.",
+            "snippet": "What Is Ethereum?\n\nAt its core, Ethereum is a decentralized global software platform powered by blockchain technology. It is most commonly known for its native ..."
+          },
+          {
+            "title": "Ethereum Classic (ETC/USD) – Ethereum Classic Soars As Ethereum Approaches Merge: What's Happening?",
+            "description": "Ethereum Classic (CRYPTO: ETC) was showing strength in comparison to many other cryptos Wednesday, surging up about 7% at one point, compared to Bitcoin (CRYPTO: BTC) and Ethereum (CRYPTO:",
+            "snippet": "Ethereum Classic ETC/USD was showing strength in comparison to many other cryptos Wednesday, surging up about 7% at one point, compared to Bitcoin BTC/USD and E..."
+          }
+        ]
+      }
+    }
+  ]
+}

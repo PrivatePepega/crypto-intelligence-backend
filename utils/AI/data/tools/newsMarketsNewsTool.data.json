@@ -1,0 +1,624 @@
+{
+  "tool": "newsMarketsNewsTool",
+  "source": "newsMarketsNewsTool.ts#newsMarketsNewsTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:51:47.357Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 0,
+    "totalRecords": 80
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 582,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 85,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 79,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 77,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 81,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 77,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 78,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 79,
+      "args": {
+        "category": "business",
+        "limit": 10
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 10,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "section",
+          "total",
+          "count",
+          "generatedAt",
+          "items"
+        ],
+        "recordKeys": [
+          "headline",
+          "summary"
+        ],
+        "charCount": 2576,
+        "empty": false
+      },
+      "response": {
+        "section": "business",
+        "total": 57,
+        "count": 10,
+        "generatedAt": "2026-10-06T00:50:26.758095+00:00",
+        "items": [
+          {
+            "headline": "OpenAI in Talks With UAE Funds, BlackRock for $30 Billion Round",
+            "summary": "The ChatGPT maker is negotiating with Abu Dhabi-based MGX and BlackRock to anchor a financing round valued at $30 billion."
+          },
+          {
+            "headline": "Fed Hike Bets Fade on Soft Jobs Data as RBI Faces Inflation Pressure",
+            "summary": "Traders reduce bets on further Federal Reserve rate hikes following weaker US employment figures, while the RBI manages excess liquidity amid rising inflation."
+          },
+          {
+            "headline": "Oil Prices Drop as Saudi Cuts Benchmark Grade and Hormuz Flows Increase",
+            "summary": "Saudi Arabia cuts its benchmark oil price to Asia while increased flows through the Strait of Hormuz help push global crude prices lower despite ongoing regional conflict."
+          },
+          {
+            "headline": "Skydance Announces Leadership Team as Paramount-Warner Bros Merger Nears Close",
+            "summary": "David Ellison and Ynon Kreiz lead the new Skydance entity, while Casey Bloys and Mark Thompson retain key roles overseeing content and CNN respectively."
+          },
+          {
+            "headline": "S&P 500 Nears Record High as Tech Rally Offsets Europe Fears",
+            "summary": "A technology-driven rally pushed the S&P 500 close to a record high, while Roundhill launched a leveraged ETF targeting the index's rise to 10,000 by 2030."
+          },
+          {
+            "headline": "Investors Scrutinize AI Spending Returns as Earnings Season Begins",
+            "summary": "As earnings season starts, investors focus on whether companies can monetize AI investments while financing costs rise for AI infrastructure."
+          },
+          {
+            "headline": "Global Bond Selloff Pushes US Yields to Multi-Decade Highs",
+            "summary": "Rising Treasury yields force borrowers to delay refinancing while analysts predict the 30-year rate will reach 6% amid concerns over global market stability."
+          },
+          {
+            "headline": "Hong Kong Expands Yuan Bond Market and Unveils Five-Year Growth Plan",
+            "summary": "Hong Kong plans to expand the Dim Sum bond market while Chief Executive John Lee unveils a five-year plan to boost innovation spending."
+          },
+          {
+            "headline": "Amazon Prime Big Deal Days 2026 Starts October 6 With Early Discounts",
+            "summary": "The retailer launches its second annual sale event on October 6, offering early discounts on electronics and home goods before the official start date."
+          },
+          {
+            "headline": "Nvidia Hits Record Share Price as It Boosts Buyback by $150 Billion",
+            "summary": "The chipmaker's stock reached a new high while it authorized the largest repurchase program in history and Amazon explores shifting Nvidia chip costs off its balance sheet."
+          }
+        ]
+      }
+    }
+  ]
+}

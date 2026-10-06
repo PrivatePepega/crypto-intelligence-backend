@@ -1,0 +1,596 @@
+{
+  "tool": "cvSearch",
+  "source": "cvSearch.ts#cvSearchTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:46:30.390Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 2,
+    "totalRecords": 87
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 5206,
+      "args": {
+        "q": "geopolitics",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 5,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 1450,
+        "empty": false
+      },
+      "response": {
+        "count": 5,
+        "items": [
+          {
+            "title": "Bosnia elections: Polls overshadowed by exhaustion, exodus and geopolitics as ethnic politics eclipse real problems",
+            "description": "Bosnia goes to the polls on October 4 to elect several parliaments and presidents. While voters worry about the economy and emigration, the campaign is focused on ethnicity, exposing the country's pol"
+          },
+          {
+            "title": "AI, Supply Chains, and the Future of Economic Power",
+            "description": "Erik Torenberg sits down with Jacob Helberg to discuss AI, manufacturing, supply chains, and the new geopolitics of technology. Drawing on themes from Helberg’s book The Wires of War, they explore why"
+          },
+          {
+            "title": "This Week in Onchain AI Ep. 1 Recap",
+            "description": "Recap of This Week in Onchain AI Ep. 1: AI agents, open vs closed-source models, geopolitics, and 0G's role in decentralized AI."
+          },
+          {
+            "title": "The Critical Technology in Finding Critical Materials",
+            "description": "Critical materials like copper, lithium, and gallium have been mined for decades, but their role in core technologies, geopolitics, and the energy transition have come to a height in recent years.In t"
+          },
+          {
+            "title": "Design choices of Central Bank Digital Currencies will transform digital payments and geopolitics",
+            "description": "In this analysis, the Atlantic Council GeoTech Center examines the geopolitical implications of Central Bank Digital Currencies (CBDCs) and calls for the United States to lead on setting standards for"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 5945,
+      "args": {
+        "q": "financial markets",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 3,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 867,
+        "empty": false
+      },
+      "response": {
+        "count": 3,
+        "items": [
+          {
+            "title": "Brazil Stocks Hit Record as Dollar Crashes After Election Shock",
+            "description": "Brazil’s election delivered a dramatic impact on its financial markets today. The Ibovespa crossed 200,000 points for the first time in history on Monday after right-wing leader Flávio Bolsonaro unexp"
+          },
+          {
+            "title": "ECB Launches Pontes to Drive Tokenization",
+            "description": "The European Central Bank (ECB) has announced that the Eurosystem will launch Pontes today (Monday), marking a major milestone in Europe’s transition toward tokenised financial markets.The initiative"
+          },
+          {
+            "title": "Can China’s digital yuan really challenge the dollar?",
+            "description": "The DCEP will certainly bolster the Renminbi’s international position, but the weaknesses in China’s financial markets will prevent the Chinese currency from dethroning the US dollar anytime soon. The"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 5215,
+      "args": {
+        "q": "macro",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 20,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 4517,
+        "empty": false
+      },
+      "response": {
+        "count": 20,
+        "items": [
+          {
+            "title": "EDU/USDT: +250% Macro Expansion Setup",
+            "description": "Open Campus ( NYSE:EDU ) is displaying macro accumulation characteristics as price action compresses inside a massive rounding base above the **$0.48 – $0.52** major demand block. Following prolonged"
+          },
+          {
+            "title": "MANA/USDT: +200% Macro Expansion Setup",
+            "description": "Decentraland ( OTC:MANA ) is displaying macro accumulation characteristics as price action compresses inside a massive rounding base above the **$0.28 – $0.31** major demand block. Following prolonged"
+          },
+          {
+            "title": "Merz, Macron seek tougher EU measures against unfair trade",
+            "description": "Emmanuel Macron and Friedrich Merz have written to Ursula von der Leyen, calling for tougher EU mechanisms against unfair trade practices by other states. They name no names but seem to have China or"
+          },
+          {
+            "title": "Bitmine Buys $41M More Ethereum, Reaching 99% of Its 'Alchemy of 5%' Target",
+            "description": "The purchase lifts Bitmine's stash past 6 million ETH—4.9% of supply and 99% of the way to its \"Alchemy of 5%\" goal—as chairman Tom Lee says Ethereum is \"dwarfing\" other macro assets."
+          },
+          {
+            "title": "Tom Lee says ether ‘dwarfing other macro assets’ as Bitmine adds 15,112 ETH",
+            "description": "Bitmine added 15,112 ETH as Chairman Tom Lee said Ethereum outperformed the S&P 500 by 6,832 basis points in Q3."
+          },
+          {
+            "title": "Bitcoin trades near $86,000 as weaker US jobs data dims October Fed rate hike bets",
+            "description": "Bitcoin traded near $86,000 on Monday after weaker US jobs data sharply reduced expectations of an October Fed rate hike. Analysts said the softer macro backdrop, improving institutional demand and ET"
+          },
+          {
+            "title": "Bitcoin Heads Higher on Macro Moves: Where Does BTC Go Next?",
+            "description": "A jobs report miss just erased the odds of an October rate hike, and BTC is now knocking on the door of its yearly ceiling."
+          },
+          {
+            "title": "Financial conditions: what’s priced in? − speech by Catherine L. Mann",
+            "description": "Given at the Nomura London Macro Forum"
+          },
+          {
+            "title": "October 2026 Macro Catalyst Outlook",
+            "description": "The Month In One Paragraph October reverses the order in which a Federal Open Market Committee (FOMC) decision is normally made. The committee meets on 27 and 28 October with… The post October 2026 Ma"
+          },
+          {
+            "title": "Crypto Derivatives: Analytics Report – Week 40",
+            "description": "Weekly recap of the crypto derivatives markets by BlockScholes. Key Insights: Risk assets including crypto are trading against a deteriorating macro backdrop of higher oil prices, a continued US-Ira"
+          },
+          {
+            "title": "WuBlockchain Weekly Outlook | U.S. Payrolls Drive Rate Pricing as China, Japan and Europe Update the Global Macro Picture",
+            "description": "Editor | Wu Blockchain"
+          },
+          {
+            "title": "Quantitative tightening: the next chapter − speech by Dave Ramsden",
+            "description": "Given at the Bank of England, co-hosted by the Money, Macro and Finance Society"
+          },
+          {
+            "title": "The outlook for inflation − speech by Clare Lombardelli",
+            "description": "Given at the Sixth Biennial Conference on Macroeconomic Policy, Warsaw"
+          },
+          {
+            "title": "Bitcoin Approaches Key Higher High: Can It Break the Bear Market?",
+            "description": "The Bitcoin price is only a matter of $1,000 or so from surpassing a key macro high that would be a huge step towards changing the macro trend from bearish to bullish. Could the price explode to the u"
+          },
+          {
+            "title": "Bitcoin’s Shifting Macro Identity",
+            "description": "A closer look at Bitcoin’s evolving correlations, rate sensitivity, and response to macro data"
+          },
+          {
+            "title": "September 2026 Macro Catalyst Outlook",
+            "description": "The Month in Brief September turns the rate debate into a decision. Futures pricing puts a quarter-point increase at the 15–16 September meeting at 66.1 percent, against 33.9 percent for… The post Sep"
+          },
+          {
+            "title": "The State of AI: Macro, Apps, and Consumer",
+            "description": "Anish Acharya joins Jen Kha to break down the next frontier of AI, from the evolving model landscape and open-source AI to why the application layer, and consumer AI in particular, may be entering a n"
+          },
+          {
+            "title": "The Borrowed Bid",
+            "description": "The softest US inflation print since 2020 drove bitcoin to a $65,086 close on Tuesday, up 4.4 percent and its highest level since 22 June. A repricing of macroeconomic expectations… The post The Borro"
+          },
+          {
+            "title": "Volatility Hits 90-Day Lows as Institutional Hedging Surges",
+            "description": "<img src=\"https://blog.amberdata.io/hubf"
+          },
+          {
+            "title": "Crypto Volatility Is Compressed While Macro Risk Builds",
+            "description": "<img src="
+          }
+        ]
+      }
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 5225,
+      "args": {
+        "q": "commodities energy",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 0,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [],
+        "charCount": 22,
+        "empty": true
+      },
+      "response": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 5230,
+      "args": {
+        "q": "crypto",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 20,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 5462,
+        "empty": false
+      },
+      "response": {
+        "count": 20,
+        "items": [
+          {
+            "title": "Peter Brandt Hints at Bullish XRP Pattern With a Coffee Cup Chart",
+            "description": "XRP’s recent price recovery may be forming a bullish chart pattern, judging from a coffee cup image Peter Brandt placed beneath the cryptocurrency’s trading history. His latest post hints at a possibl"
+          },
+          {
+            "title": "😊 Crypto Fear & Greed Index: 73 (Greed)",
+            "description": "The market sentiment is currently \"Greed\" with a score of 73/100"
+          },
+          {
+            "title": "Morph Joins Mastercard Crypto Partner Program for Stablecoin Settlement",
+            "description": "Morph joined the Mastercard Crypto Partner Program to develop multi-chain stablecoin payment and settlement solutions for Web3 businesses and creators."
+          },
+          {
+            "title": "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names",
+            "description": "The Bitcoin rally's optimism at TOKEN2049 Singapore could signal renewed investor confidence, potentially revitalizing the crypto market. The post Bitcoin rally sets the mood as TOKEN2049 Singapore dr"
+          },
+          {
+            "title": "China P2P stablecoin wallets grow 43x as East Asia's $1.2T market defies rules",
+            "description": "East Asia’s five largest markets now hold a crypto economy worth roughly $1.2 trillion. In several East Asian markets, the rules on paper describe a very different market than the one people are actua"
+          },
+          {
+            "title": "CFTC makes its biggest move yet to bring offshore crypto trading back to the US",
+            "description": "The Commodity Futures Trading Commission (CFTC) is offering US crypto exchanges a federal route to retail leverage as Congress remains stalled on market-structure legislation. On Oct. 5, the financial"
+          },
+          {
+            "title": "Fairshake PAC backs 32 House incumbents who voted for the CLARITY Act",
+            "description": "Fairshake PAC's support for incumbents may solidify House backing but doesn't address Senate hurdles, impacting crypto policy progress. The post Fairshake PAC backs 32 House incumbents who voted for t"
+          },
+          {
+            "title": "Crypto PAC announces support for 32 House candidates in US midterms",
+            "description": "Fairshake said it would financially back 32 House candidates who all voted in favor of the CLARITY market structure bill in 2025, as the legislation remains in limbo in the Senate."
+          },
+          {
+            "title": "Binance enables 1:1 conversion between stocks and bStocks",
+            "description": "Binance's 1:1 stock-to-bStock conversion could revolutionize trading flexibility, but it hinges on custodian reliability and crypto security. The post Binance enables 1:1 conversion between stocks and"
+          },
+          {
+            "title": "ZachXBT infiltrates $1B crypto syndicate to expose Lazarus Group",
+            "description": "His October 5 disclosure describes 2025 trades and private chats that he says helped trace Bybit funds and secure a 442,000 USDT freeze. The post ZachXBT infiltrates $1B crypto syndicate to expose Laz"
+          },
+          {
+            "title": "FinCEN withdraws proposed crypto mixing rule over ‘legitimate activity’ concerns",
+            "description": "The bureau under the US Treasury said it was withdrawing two proposed rules on unhosted wallets and crypto mixers ”as part of the Trump Administration’s deregulatory agenda.”"
+          },
+          {
+            "title": "Why a 4chan Bitcoin Prophecy Says Today Is the End of Crypto Winter",
+            "description": "An anonymous 4chan user called Bitcoin's October 2025 peak to the day way back in 2023. Could they be right again?"
+          },
+          {
+            "title": "Treasury Kills Crypto 'Unhosted Wallet' and Mixer Surveillance Rules",
+            "description": "FinCEN withdrew a 2020 proposal to track transactions with self-custodial crypto wallets and a 2023 plan to designate crypto mixing as a primary money laundering concern."
+          },
+          {
+            "title": "#BTCUSDT | Daily",
+            "description": "Bitcoin holding above $85K support. Breakout could target $97.9K → $107K next. Trend: Strong uptrend Momentum: Bullish 🚀 Watch for retest before continuation. #BTC #Crypto #Bitcoin #TradingView"
+          },
+          {
+            "title": "CFTC no-action letter lets exchanges turn crypto futures into true perpetuals",
+            "description": "The CFTC's decision could enhance market efficiency and competitiveness, but the short relief window may challenge exchanges to adapt swiftly. The post CFTC no-action letter lets exchanges turn crypto"
+          },
+          {
+            "title": "The CFTC Builds Its First Crypto Market Structure — And Deliberately Leaves the Spot Market Outside",
+            "description": "Washington has finally achieved the regulatory equivalent of a synchronized swimming routine, though the water remains suspiciously shallow. On October 5, 2026, the Commodity Futures Trading Commissio"
+          },
+          {
+            "title": "CFTC Sets Out New Federal Framework for Crypto Exchanges",
+            "description": "CFTC Chairman Michael Selig outlines new rules for leveraged crypto markets, self-custody and federal exchange registration."
+          },
+          {
+            "title": "Wall Street Never Sleeps: ICE and OKX Plot 24/7 Tokenized Stock Trading",
+            "description": "This weekend, the crypto exchange OKX and the New York Stock Exchange (NYSE) owner Intercontinental Exchange (ICE) submitted a filing with the U.S. Securities and Exchange Commission (SEC) and said th"
+          },
+          {
+            "title": "Here’s what happened in crypto today",
+            "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation."
+          },
+          {
+            "title": "BTC/USDT: Bullish Expansion — Lower-Timeframe Support Base Sets",
+            "description": "Bitcoin ( CRYPTOCAP:BTC ) is forming a tight bullish consolidation base following a successful retest of the **$84,000 – $84,500** key support zone. With spot absorption steadying and dynamic lower-ti"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 5179,
+      "args": {
+        "q": "ai technology",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 0,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [],
+        "charCount": 22,
+        "empty": true
+      },
+      "response": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 5218,
+      "args": {
+        "q": "bitcoin",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 19,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 5074,
+        "empty": false
+      },
+      "response": {
+        "count": 19,
+        "items": [
+          {
+            "title": "₿ Bitcoin Network: 0.0 EH/s hashrate, 899,449 txs today",
+            "description": "BTC price: $85,838.87"
+          },
+          {
+            "title": "Bitcoin rally sets the mood as TOKEN2049 Singapore draws crypto’s biggest names",
+            "description": "The Bitcoin rally's optimism at TOKEN2049 Singapore could signal renewed investor confidence, potentially revitalizing the crypto market. The post Bitcoin rally sets the mood as TOKEN2049 Singapore dr"
+          },
+          {
+            "title": "Strive Adds $169M Bitcoin in Its Biggest Buy in Four Months",
+            "description": "The Nasdaq-listed bitcoin treasury company, co-founded by Vivek Ramaswamy, paid roughly $169 million for 2,000 coins last week and now holds 29,462 BTC."
+          },
+          {
+            "title": "THORChain cofounder argues protocol is more decentralized than Bitcoin and Ethereum",
+            "description": "THORChain's governance model highlights the need for DeFi investors to scrutinize decentralization claims and assess actual control mechanisms. The post THORChain cofounder argues protocol is more dec"
+          },
+          {
+            "title": "Why a 4chan Bitcoin Prophecy Says Today Is the End of Crypto Winter",
+            "description": "An anonymous 4chan user called Bitcoin's October 2025 peak to the day way back in 2023. Could they be right again?"
+          },
+          {
+            "title": "CELR Weekly Update: Continued and Inconclusive cooldown",
+            "description": "In this week’s update, the principal observation is that Celer Network’s (CELR) price action has remained remarkably quiet and range-bound for two consecutive weeks, even as Bitcoin and other altcoins"
+          },
+          {
+            "title": "‘Uptober’ Hype Is Shaky as Bitcoin’s Most Predictable Months Keep Failing",
+            "description": "As some analysts continue pushing the “Uptober” narrative, calling for a strong rally in October based on its historic performance, the same historic data now warns to be more cautious. The two most p"
+          },
+          {
+            "title": "#BTCUSDT | Daily",
+            "description": "Bitcoin holding above $85K support. Breakout could target $97.9K → $107K next. Trend: Strong uptrend Momentum: Bullish 🚀 Watch for retest before continuation. #BTC #Crypto #Bitcoin #TradingView"
+          },
+          {
+            "title": "Bitcoin holding steady while altcoins steal the show.",
+            "description": "Bitcoin remains constructive on the 6H, holding the rising trendline and staying above the major moving averages. The $83K area has acted as an important higher low, keeping the short-term bullish str"
+          },
+          {
+            "title": "US credit spreads eased on October 2 after widening beyond the weakest borrowers",
+            "description": "Credit premiums rose across rating segments, but their uneven widening does not establish Bitcoin selling or systemic stress. The post US credit spreads eased on October 2 after widening beyond the we"
+          },
+          {
+            "title": "BTCUSDT | Demand Zone Reaction, Bulls Target Higher Liquidity",
+            "description": "Bitcoin has returned to a significant demand area around 85,700 - 85,800, where buyers previously showed strong interest. Price is now attempting to reclaim short-term bullish momentum after a correct"
+          },
+          {
+            "title": "Here’s what happened in crypto today",
+            "description": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, Web3 and crypto regulation."
+          },
+          {
+            "title": "BTC/USDT: Bullish Expansion — Lower-Timeframe Support Base Sets",
+            "description": "Bitcoin ( CRYPTOCAP:BTC ) is forming a tight bullish consolidation base following a successful retest of the **$84,000 – $84,500** key support zone. With spot absorption steadying and dynamic lower-ti"
+          },
+          {
+            "title": "China is Shutting Hundreds of Banks. Should Bitcoin Investors Be Worried?",
+            "description": "China is shutting banks at a record pace as bad loans rise. See what Fitch says about contagion and how Bitcoin could feel it. The post China is Shutting Hundreds of Banks. Should Bitcoin Investors Be"
+          },
+          {
+            "title": "Update #Bitcoin Analysis (Wave Degree: Detailed)",
+            "description": "Update #Bitcoin Analysis Time Frame: Daily Wave Degree: Detailed It appears we have completed a 5-wave bullish impulse sequence, which triggered a change of Behaviour (CoB) by breaking above the key"
+          },
+          {
+            "title": "Bitcoin Behemoths Strategy and IBIT Amass 1.65 Million BTC Worth $140B",
+            "description": "Strategy and Blackrock’s IBIT now control a combined 1.653 million bitcoin worth roughly $140.82 billion, nearly 8% of the network’s absolute 21 million supply ceiling. The two piles are almost the sa"
+          },
+          {
+            "title": "Bitcoin: The 357-Day Cycle Window",
+            "description": "Bitcoin continues to show a remarkably similar late-cycle structure across multiple major cycles. In each case, price topped, sold off, consolidated, and then experienced a final capitulation leg near"
+          },
+          {
+            "title": "SEC Clears 3x Leveraged Bitcoin and Ethereum Funds for Trading",
+            "description": "The agency approved a Cboe rule letting six Volatility Shares funds that triple the daily moves of Bitcoin, Ethereum, gold, silver, oil, and natural gas list on a U.S. exchange."
+          },
+          {
+            "title": "Bitcoin price prediction 2026-2032: Will BTC hit $150k soon?",
+            "description": "Can Bitcoin hit $150,000 in post-halving rally? Our Bitcoin price prediction aims to answer with in-depth analysis of market sentiment."
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 6200,
+      "args": {
+        "q": "ethereum",
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 20,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 5136,
+        "empty": false
+      },
+      "response": {
+        "count": 20,
+        "items": [
+          {
+            "title": "⛽ ETH Gas: 🐢 0.118948498 | 🚶 0.126656054 | 🚀 0.171871888 Gwei",
+            "description": "Current Ethereum gas prices. Fast: 0.171871888 Gwei, Standard: 0.126656054 Gwei, Safe: 0.118948498 Gwei"
+          },
+          {
+            "title": "Ethereum's entry queue holds new stakers for 25 days as MetaMask exits drain",
+            "description": "New Ethereum stakers face a 25-day entry wait as the exit queue falls to 767,349 ETH from an 850,736 ETH peak driven by MetaMask's validator exits."
+          },
+          {
+            "title": "THORChain cofounder argues protocol is more decentralized than Bitcoin and Ethereum",
+            "description": "THORChain's governance model highlights the need for DeFi investors to scrutinize decentralization claims and assess actual control mechanisms. The post THORChain cofounder argues protocol is more dec"
+          },
+          {
+            "title": "Ethereum's fix for Bybit-style heists is still a year away, and it won't stop most of 2026's hacks",
+            "description": "The Ethereum Foundation has identified protocol-level defense that could have caught the $1.5 billion Bybit heist and the $50 million Aave swap disaster.  However, the Foundation says that the solutio"
+          },
+          {
+            "title": "Ethereum exit queue eases to 767,349 ETH after MetaMask exits",
+            "description": "The reduced exit queue highlights Ethereum's resilience and ongoing staking demand, despite security concerns impacting major operators. The post Ethereum exit queue eases to 767,349 ETH after MetaMas"
+          },
+          {
+            "title": "ETHUSD | Bullish Reclaim From Dmand Zone",
+            "description": "Ethereum has reacted strongly from the marked support region and is now attempting to reclaim short-term structure above the entry zone. The current idea is based on: ✅ Demand zone holding after liq"
+          },
+          {
+            "title": "SEC Clears 3x Leveraged Bitcoin and Ethereum Funds for Trading",
+            "description": "The agency approved a Cboe rule letting six Volatility Shares funds that triple the daily moves of Bitcoin, Ethereum, gold, silver, oil, and natural gas list on a U.S. exchange."
+          },
+          {
+            "title": "Bitmine Buys $41M More Ethereum, Reaching 99% of Its 'Alchemy of 5%' Target",
+            "description": "The purchase lifts Bitmine's stash past 6 million ETH—4.9% of supply and 99% of the way to its \"Alchemy of 5%\" goal—as chairman Tom Lee says Ethereum is \"dwarfing\" other macro assets."
+          },
+          {
+            "title": "Tom Lee’s Bitmine Slows Ether Buying for a Second Straight Week, Adding 15,112 ETH",
+            "description": "The Ethereum treasury company now holds 6,016,414 ETH, about 89,000 short of owning 5% of ether's supply, as Lee pointed to a 21 million share buyback this year. The post Tom Lee’s Bitmine Slows Ether"
+          },
+          {
+            "title": "Tom Lee says ether ‘dwarfing other macro assets’ as Bitmine adds 15,112 ETH",
+            "description": "Bitmine added 15,112 ETH as Chairman Tom Lee said Ethereum outperformed the S&P 500 by 6,832 basis points in Q3."
+          },
+          {
+            "title": "Blast Will Shut Down Its Layer 2, Giving Users Until October 26 to Withdraw Assets",
+            "description": "Blast will wind down its Ethereum Layer 2 after operating costs exceeded revenue, with normal-interface withdrawals available until October 26."
+          },
+          {
+            "title": "Bitcoin's Liquidity Fractures Along Geographic Lines as Leverage Builds",
+            "description": "Bitcoin’s October rally masks a more fragile market, with US demand fading, whales leaning short and liquidity concentrating in BTC at Ethereum’s expense."
+          },
+          {
+            "title": "以太坊解押队列飙升 392%：MetaMask 事故或引 52.3 万枚 ETH 排队退出",
+            "description": "原文标题：Ethereum unstaking queue surges 392% since October start 原文作者：Estefano Gomez 原文编译：深潮 TechFlow 导读：十月初以太坊验证者退出队列暴涨约 392%，峰值排队近 85 万枚 ETH、等候约 14.77 天；其中约 52.3 万枚来自 MetaMask Staking 在基础设施遭入侵后的预防性退出，并"
+          },
+          {
+            "title": "Weekly Project Updates: Ethereum Launches zkAPI, Base Rolls Out Cobalt Upgrade, Balancer and Blast to Shut Down, etc",
+            "description": "1."
+          },
+          {
+            "title": "SEC Approves 3x Bitcoin and Ether ETFs in Major Expansion of Crypto Market Access",
+            "description": "The U.S. Securities and Exchange Commission (SEC) has approved the first-ever 3x leveraged Bitcoin and Ethereum ETFs for listing and trading in the United States, a decision that marks one of the most"
+          },
+          {
+            "title": "Ethereum Now Lets You Pay for AI Without Revealing Who You Are",
+            "description": "Ethereum's zkAPI lets users prepay in USDC and query AI models through cryptographic proofs, so no single party sees both who they are and what they ask."
+          },
+          {
+            "title": "Once a $2.3 Billion Network, Ethereum Layer-2 Blast Is Shutting Down",
+            "description": "Blast said operating costs now exceed the revenue its Ethereum layer-2 generates and asked users to withdraw their assets to mainnet before Oct. 26."
+          },
+          {
+            "title": "Paradigm-backed Layer 2 Blast to wind down network as costs exceed revenue",
+            "description": "Ethereum L2 Blast is winding down after costs outpaced revenue. Users have until Oct. 26 to withdraw via the app."
+          },
+          {
+            "title": "WuBlockchain Weekly: Ethereum Evolves into Crypto's World Computer, El Salvador Launches National Blockchain Super App, etc",
+            "description": "1."
+          },
+          {
+            "title": "Ethereum Foundation launches zkAPI to let users pay for AI models without revealing identity",
+            "description": "Users deposit funds into an Ethereum vault and authorize spending with zero-knowledge proofs, so the API provider can't link requests to a payer."
+          }
+        ]
+      }
+    }
+  ]
+}

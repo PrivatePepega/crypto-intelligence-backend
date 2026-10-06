@@ -1,0 +1,79 @@
+{
+  "tool": "cvBitcoinNews",
+  "source": "cvBitcoinNews.ts#cvBitcoinNewsTool",
+  "kind": "feed",
+  "generatedAt": "2026-10-06T00:45:07.438Z",
+  "domains": null,
+  "summary": {
+    "runs": 1,
+    "ok": 1,
+    "empty": 0,
+    "totalRecords": 9
+  },
+  "runs": [
+    {
+      "domain": "feed",
+      "ok": true,
+      "elapsedMs": 5560,
+      "args": {
+        "limit": 20
+      },
+      "shape": {
+        "kind": "object",
+        "recordCount": 9,
+        "containerKey": "items",
+        "topLevelKeys": [
+          "count",
+          "items"
+        ],
+        "recordKeys": [
+          "title",
+          "description"
+        ],
+        "charCount": 2684,
+        "empty": false
+      },
+      "response": {
+        "count": 9,
+        "items": [
+          {
+            "title": "Peter Brandt Hints at Bullish XRP Pattern With a Coffee Cup Chart",
+            "description": "XRP’s recent price recovery may be forming a bullish chart pattern, judging from a coffee cup image Peter Brandt placed beneath the cryptocurrency’s trading history. His latest post hints at a possibl"
+          },
+          {
+            "title": "Ripple’s Schwartz Slams Fee Metric as 100x XRP Fee Hike Is Floated",
+            "description": "Blockchain fee revenue is a poor performance metric, according to Ripple’s David Schwartz. Responding to an XRP Ledger fee suggestion, he described transaction charges as friction the chain failed to"
+          },
+          {
+            "title": "Plume Opens Onchain Door to Fidelity’s $28B Bond Giant",
+            "description": "Plume opened nBND on Oct. 5, giving investors blockchain-based exposure to Fidelity’s roughly $28 billion Total Bond ETF. But there’s a small catch. The exchange-traded fund (ETF) itself wasn’t tokeni"
+          },
+          {
+            "title": "Brazil Calls Its Own Betting Laws Unconstitutional as Shutdown Begins",
+            "description": "Brazil’s government has asked the Supreme Court to strike down the core of the laws that created its licensed betting market, two years after defending them. The filing landed days before licensed sit"
+          },
+          {
+            "title": "Novig Says Trading Jumped 94% After Sydney Sweeney’s Viral Ad",
+            "description": "Sports-centric prediction market platform Novig says its trading volume nearly doubled around the launch of its Sydney Sweeney campaign, with first-time depositors more than tripling. The company-repo"
+          },
+          {
+            "title": "Brazilian Markets Spike After Bolsonaro’s First-Round Election Win",
+            "description": "Brazilian markets, including Ibovespa futures and the iShares MSCI Brazil ETF (EWZ), rose up to 12% overnight after Senator Flávio Bolsonaro, seen as a more market-friendly option, defeated President"
+          },
+          {
+            "title": "‘Uptober’ Hype Is Shaky as Bitcoin’s Most Predictable Months Keep Failing",
+            "description": "As some analysts continue pushing the “Uptober” narrative, calling for a strong rally in October based on its historic performance, the same historic data now warns to be more cautious. The two most p"
+          },
+          {
+            "title": "Wall Street Never Sleeps: ICE and OKX Plot 24/7 Tokenized Stock Trading",
+            "description": "This weekend, the crypto exchange OKX and the New York Stock Exchange (NYSE) owner Intercontinental Exchange (ICE) submitted a filing with the U.S. Securities and Exchange Commission (SEC) and said th"
+          },
+          {
+            "title": "Bitcoin Behemoths Strategy and IBIT Amass 1.65 Million BTC Worth $140B",
+            "description": "Strategy and Blackrock’s IBIT now control a combined 1.653 million bitcoin worth roughly $140.82 billion, nearly 8% of the network’s absolute 21 million supply ceiling. The two piles are almost the sa"
+          }
+        ]
+      }
+    }
+  ]
+}

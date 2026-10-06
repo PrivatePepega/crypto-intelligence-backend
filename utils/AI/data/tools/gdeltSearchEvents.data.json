@@ -1,0 +1,2032 @@
+{
+  "tool": "gdeltSearchEvents",
+  "source": "gdeltSearchEvents.ts#gdeltSearchEventsTool",
+  "kind": "search",
+  "generatedAt": "2026-10-06T00:47:49.698Z",
+  "domains": [
+    "geopolitics",
+    "financial markets",
+    "macro",
+    "commodities energy",
+    "crypto",
+    "ai technology",
+    "bitcoin",
+    "ethereum"
+  ],
+  "summary": {
+    "runs": 8,
+    "ok": 8,
+    "empty": 0,
+    "totalRecords": 160
+  },
+  "runs": [
+    {
+      "domain": "geopolitics",
+      "ok": true,
+      "elapsedMs": 8692,
+      "args": {
+        "topic": "geopolitics",
+        "query": "geopolitics",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 14056,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_4a8f7e7d3db2567d",
+          "family": "cameoplus",
+          "title": "Mecca Defense Alliance discusses support for Saudi Arabia in Istanbul",
+          "summary": "On 2026-10-05, the Mecca Defense Alliance discussed military support for Saudi Arabia and diplomatic efforts to reduce regional tensions during talks in Istanbul, according to Turkish Foreign Minister Hakan Fidan. The article also reports that the bloc appointed Pakistan’s Nauman Mahmood as its first secretary-general.",
+          "eventDateEvidence": "The article reports that the alliance discussed support and diplomatic efforts during talks in Istanbul; no separate occurrence date is stated.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3959
+        },
+        {
+          "id": "cameoplus_e2f0415fd457b5c7",
+          "family": "cameoplus",
+          "title": "Dmitry Medvedev outlines Russia's conditions for ending Ukraine war",
+          "summary": "On 2026-10-05, Dmitry Medvedev, deputy chairman of Russia's Security Council, outlined three conditions Russia set for ending the war in Ukraine. The provided article excerpt does not state what those conditions are or identify a specific demanded concession.",
+          "eventDateEvidence": "The article reports that Dmitry Medvedev outlined Russia's conditions; it gives no separate occurrence date, so the current-news report is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3533
+        },
+        {
+          "id": "cameoplus_bb3e25ba98b18122",
+          "family": "cameoplus",
+          "title": "Khalifa Haftar and Duma discuss Libya’s political developments",
+          "summary": "On 2026-10-05, Khalifa Haftar and Duma discussed political developments in Libya and the unification of institutions, according to the article title. The title does not specify the venue, the participants' formal roles, or any outcome.",
+          "eventDateEvidence": "The title presents Haftar and Duma's discussion as current news; no occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3161
+        },
+        {
+          "id": "cameoplus_fdf3468f66ad960f",
+          "family": "cameoplus",
+          "title": "Marco Rubio plans talks with Iceland, Greece and Portugal",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio set out on a planned tour of Iceland, Greece and Portugal, running through October 8. He planned to discuss defense, energy and technology cooperation with the NATO allies amid concerns about Russian military activity and instability in the Middle East.",
+          "eventDateEvidence": "The article says Rubio is setting out on a tour from October 5 to 8 and plans to discuss defense, energy, and technology cooperation.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3034
+        },
+        {
+          "id": "cameoplus_3e9b272e20bfba46",
+          "family": "cameoplus",
+          "title": "Alamein summit co-chairs affirm free navigation in Bab el-Mandeb",
+          "summary": "On 2026-10-05, the Alamein summit co-chairs affirmed respect for state sovereignty and emphasized coordination on shared regional challenges. They also affirmed the importance of free navigation in Bab el-Mandeb; the article reports no operational measure or formal agreement.",
+          "eventDateEvidence": "The current article reports that summit co-chairs affirmed respect for sovereignty and emphasized coordination; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3009
+        },
+        {
+          "id": "cameoplus_e200a50b5fd8d623",
+          "family": "cameoplus",
+          "title": "Egypt condemns Israeli construction in Syria’s Quneitra",
+          "summary": "On 2026-10-05, Egypt’s Ministry of Foreign Affairs condemned Israeli excavation and military construction along the so-called Line 53 in Syria’s Quneitra governorate. Egypt said the works and continuing incursions violate Syria’s sovereignty and international agreements, and called for respect for Syrian sovereignty and withdrawal from occupied territory.",
+          "eventDateEvidence": "The article is dated “El Cairo, 5 oct” and reports that Egypt condemned the Israeli works.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.2922
+        },
+        {
+          "id": "cameoplus_8cb27f9ca417abc4",
+          "family": "cameoplus",
+          "title": "ICC President Tomoko Akane condemns US sanctions in Dublin",
+          "summary": "On 2026-10-05, International Criminal Court President Tomoko Akane criticized US sanctions on ICC officials during the opening of the legal year at Dublin’s Four Courts. She described the sanctions as part of a broader assault on the rule of law and said courts should remain independent from political pressure.",
+          "eventDateEvidence": "The article reports ICC President Tomoko Akane’s remarks at the opening of the new legal year but gives no separate occurrence date; the publication window is 2026-10-04/2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2782
+        },
+        {
+          "id": "cameoplus_30ad44df9e65631f",
+          "family": "cameoplus",
+          "title": "Guterres condemns Houthis’ cross-border attacks on Saudi Arabia",
+          "summary": "On 2026-10-05, United Nations Secretary-General António Guterres, through spokesperson Stéphane Dujarric, expressed deep concern over escalating fighting in Yemen and condemned continuing Houthi cross-border attacks against Saudi Arabia. The spokesperson also urged all sides to exercise restraint.",
+          "eventDateEvidence": "The second article is dated 23:11 on 5/10/2026 and reports Guterres’s concern and condemnation through his spokesperson.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2695
+        },
+        {
+          "id": "cameoplus_515af72cbcfcd444",
+          "family": "cameoplus",
+          "title": "Yves Leterme and former European officials urge EU action",
+          "summary": "On 2026-10-05, around 500 former European diplomats, ministers and officials urged the European Union and its member states to act against Israeli settlement expansion in the occupied West Bank. Their open letter called for proposals to sanction financial institutions and service providers involved in the E1 project and for measures to prevent trade with settlements.",
+          "eventDateEvidence": "The article says around 500 former officials “called Monday” on the EU and its member states to take action.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2684
+        },
+        {
+          "id": "cameoplus_ed8d8cffddebebd7",
+          "family": "cameoplus",
+          "title": "Erdogan condemns US deployment of weapons in space",
+          "summary": "On 2026-10-05, Turkish President Recep Tayyip Erdogan condemned the United States' deployment of weapons in space while speaking at the International Astronautical Conference in Antalya, Turkey. He called for space to remain peaceful and said an arms race in orbit would be wrong.",
+          "eventDateEvidence": "Erdogan told the International Astronautical Conference in Antalya on Monday that sending weapons to space would be wrong.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.265
+        },
+        {
+          "id": "cameoplus_41806caa0f191eda",
+          "family": "cameoplus",
+          "title": "Guterres urges Western Sahara parties to pursue negotiations",
+          "summary": "On 2026-10-05, United Nations Secretary-General Antonio Guterres urged Morocco, Algeria, Polisario, Mauritania, and other parties to engage in coordinated negotiations over Western Sahara. In his annual report, he said negotiations should explore genuine autonomy for the people of Western Sahara, citing the Moroccan autonomy plan as a possible basis for a political solution.",
+          "eventDateEvidence": "The articles describe Guterres’s current annual report and renewed call for the parties to negotiate; no occurrence date is stated, so the publication-window date is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.2649
+        },
+        {
+          "id": "cameoplus_14459f66f696b84e",
+          "family": "cameoplus",
+          "title": "Finland backs India’s push for Ukraine war negotiations",
+          "summary": "On 2026-10-05, Finland, through Ambassador Mikko Kivikoski in New Delhi, praised the Indian government’s diplomatic efforts to promote negotiations to end the Russia-Ukraine war. Kivikoski said the international community should incentivize Russia to negotiate.",
+          "eventDateEvidence": "The article, dated October 5, reports Finnish Ambassador Mikko Kivikoski saying Finland highly appreciates India’s latest initiatives to end the war.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.2627
+        },
+        {
+          "id": "cameoplus_f1d8b99f0383f76f",
+          "family": "cameoplus",
+          "title": "UN Human Rights Council condemns attacks on civilians in Sudan",
+          "summary": "On 2026-10-05, the UN Human Rights Council condemned indiscriminate drone strikes, aerial bombardments, and attacks on civilians in Sudan at a meeting in Geneva. It also denounced violations of international humanitarian law and human-rights abuses by all sides, and criticized outside forces fueling the conflict with weapons and mercenaries.",
+          "eventDateEvidence": "The article says the UN Human Rights Council acted “on Monday”; resolved against the 2026-10-04/2026-10-05 publication window.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2589
+        },
+        {
+          "id": "cameoplus_922bf9a3047f9093",
+          "family": "cameoplus",
+          "title": "Donald Trump says the United States has good relations with Serbia",
+          "summary": "On 2026-10-05, U.S. President Donald Trump said the United States has “very good relations” with Serbia while answering a Newsmax Balkans reporter outside the White House in Washington, D.C. The article mentions a prior strategic dialogue and energy-infrastructure memorandum as context, not as new actions in this event.",
+          "eventDateEvidence": "The article was published on 2026-10-05 and reports President Trump’s current response to a reporter outside the White House; no separate earlier date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2556
+        },
+        {
+          "id": "cameoplus_831506ab4038e07b",
+          "family": "cameoplus",
+          "title": "Belarusian foreign minister criticizes United Nations in interview",
+          "summary": "On 2026-10-05, the Belarusian foreign minister criticized the United Nations in an interview with RIA Novosti. The minister said the organization engaged in too much discussion and too little action. The article gives no more specific interview location, so Minsk is used as the capital-level location anchor.",
+          "eventDateEvidence": "The article reports the Belarusian foreign minister's comments in an interview but gives no occurrence date; the publication day is inferred from the source publication window.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.2528
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_f56f3d8c46cf4a94",
+          "family": "cameoplus",
+          "title": "Rahm Emanuel criticizes Democrats’ Israel policy in Austin",
+          "summary": "On 2026-10-05, Rahm Emanuel criticized Democrats he described as anti-Israel during an interview at the Texas Tribune Festival in Austin. He argued that cutting weapons funding was not a broader Middle East policy and said he wanted to emphasize the benefits of a security and peace agreement for the United States, Israel, and their alliance.",
+          "eventDateEvidence": "Emanuel gave an interview to Fox News Digital during the Texas Tribune Festival; no occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2428
+        },
+        {
+          "id": "cameoplus_2ff9222cba6a8e8c",
+          "family": "cameoplus",
+          "title": "Lebanese prime minister seeks international force after UNIFIL",
+          "summary": "On 2026-10-05, the Lebanese prime minister appealed for an international force to follow UNIFIL in Lebanon. The headline also says Lebanon wants a new chapter with Iran, but the available article text does not provide enough detail to code that separately.",
+          "eventDateEvidence": "The article headline reports the Lebanese prime minister saying Lebanon needs an international force after UNIFIL; no separate occurrence date is visible, so the current report is dated to publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.241
+        },
+        {
+          "id": "cameoplus_af20bc30a38c23e8",
+          "family": "cameoplus",
+          "title": "Antonio Guterres begins Pakistan visit to discuss mediation",
+          "summary": "On 2026-10-05, United Nations Secretary-General Antonio Guterres began a four-day visit to Pakistan. He is scheduled to meet senior Pakistani officials and discuss Pakistan's mediation role in the US-Iran conflict and its support for negotiations.",
+          "eventDateEvidence": "The article, published October 5, says Antonio Guterres “began a four-day visit to Pakistan.”",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.2409
+        },
+        {
+          "id": "cameoplus_f447d4dc0b2b8c04",
+          "family": "cameoplus",
+          "title": "Yemen government seeks international backing against Houthis",
+          "summary": "On 2026-10-05, Yemen's government foreign minister Afrah al-Zouba called on the international community and other supporters to back Yemen's people, state, and national institutions against the Houthis. She said stability in Yemen served the world's interests and referred to prior opportunities for de-escalation and peace having been exhausted.",
+          "eventDateEvidence": "The article presents the foreign minister’s call as current news but gives no specific occurrence date; the publication window’s latest day is 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.2356
+        }
+      ]
+    },
+    {
+      "domain": "financial markets",
+      "ok": true,
+      "elapsedMs": 7829,
+      "args": {
+        "topic": "geopolitics",
+        "query": "financial markets",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 14373,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_ce60e7f6483c2a1e",
+          "family": "cameoplus",
+          "title": "Japan imposes its 27th sanctions package against Russia",
+          "summary": "On 2026-10-05, the Government of Japan imposed its 27th sanctions package against Russia, according to Russian Foreign Ministry spokesperson Maria Zakharova. The measures reportedly affect 33 legal entities, nine individuals, and several foreign companies; the article says shipping was targeted for the first time.",
+          "eventDateEvidence": "The article reports that Japan’s government announced the introduction of its 27th sanctions package; no occurrence date is stated, so the current-news action is inferred to have occurred on the latest publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "East Asia",
+          "significance": 0.5311
+        },
+        {
+          "id": "cameoplus_299e15cb3638568b",
+          "family": "cameoplus",
+          "title": "United States moves to cut off Hamas financing network",
+          "summary": "On 2026-10-05, the United States announced action to cut off Hamas’s financing network. The State Department said the effort involved coordination with the Department of the Treasury and FBI and aims to disrupt international fundraising and transfers. The release did not specify the instrument or identify particular targets.",
+          "eventDateEvidence": "The State Department release is current-news coverage from the 2026-10-04/2026-10-05 publication window and gives no separate occurrence date; it describes a current U.S. action to cut off Hamas’s financing network.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.4104
+        },
+        {
+          "id": "cameoplus_4a8f7e7d3db2567d",
+          "family": "cameoplus",
+          "title": "Mecca Defense Alliance discusses support for Saudi Arabia in Istanbul",
+          "summary": "On 2026-10-05, the Mecca Defense Alliance discussed military support for Saudi Arabia and diplomatic efforts to reduce regional tensions during talks in Istanbul, according to Turkish Foreign Minister Hakan Fidan. The article also reports that the bloc appointed Pakistan’s Nauman Mahmood as its first secretary-general.",
+          "eventDateEvidence": "The article reports that the alliance discussed support and diplomatic efforts during talks in Istanbul; no separate occurrence date is stated.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3959
+        },
+        {
+          "id": "cameoplus_404cee5a6ae4b9d2",
+          "family": "cameoplus",
+          "title": "Marco Rubio opens Greece-US strategic dialogue in Athens",
+          "summary": "On 2026-10-05, Marco Rubio opened the Greece–US Strategic Dialogue in Athens, according to the headline. The dialogue focused on three agreements, but the headline does not state that any were signed.",
+          "eventDateEvidence": "The headline says Marco Rubio opens the Greece–US Strategic Dialogue in Athens; no specific occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3689
+        },
+        {
+          "id": "cameoplus_e12fa525407e5b0d",
+          "family": "cameoplus",
+          "title": "U.S. and Russia expand Ukraine talks to include oil deal",
+          "summary": "On 2026-10-05, the United States and Russia were reported to have expanded talks about ending the war in Ukraine to include a multibillion-dollar oil deal. The article says Vladimir Putin raised a sale of Russian energy assets with U.S. envoys Jared Kushner and Steve Witkoff; it does not report that a deal was signed.",
+          "eventDateEvidence": "The article reports that U.S.-Russia talks have expanded to include an oil deal; no separate occurrence date is stated, so the current-news update is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3688
+        },
+        {
+          "id": "cameoplus_b8c22d8e337ec45e",
+          "family": "cameoplus",
+          "title": "Somalia and Saudi Arabia discuss trade and Red Sea security",
+          "summary": "On 2026-10-05, Somalia's State Minister for Foreign Affairs and International Cooperation, Ali Mohamed Omar, held talks with Saudi Ambassador Ahmed Mohamed Saleh Al-Muwallad in Mogadishu. They discussed bilateral ties, trade, investment, and Red Sea security. The article reports discussion and interest in cooperation, but no signed agreement or concrete measure.",
+          "eventDateEvidence": "The article reports the officials “held talks” and gives no separate occurrence date; the current-news meeting is inferred to have occurred on the publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Africa",
+          "significance": 0.3489
+        },
+        {
+          "id": "cameoplus_4f81082de573278d",
+          "family": "cameoplus",
+          "title": "Syrian Central Bank discusses account access with Federal Reserve",
+          "summary": "On 2026-10-05, the Syrian Central Bank delegation met with the Federal Reserve in New York City. The parties discussed technical, operational, and legal aspects of using Syria’s account at the Federal Reserve and possible steps to develop bilateral banking cooperation.",
+          "eventDateEvidence": "The article reports the meeting as current news and says the Syrian Central Bank made its statement “today”; no separate date for the meeting is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.345
+        },
+        {
+          "id": "cameoplus_33603ea9a1ffc111",
+          "family": "cameoplus",
+          "title": "Iraq’s Coordination Framework discusses economic issues with officials",
+          "summary": "On 2026-10-05, Iraq’s Coordination Framework met with the finance minister, with the prime minister present, to discuss the country’s economic and financial issues and the ministry’s plan. The titles do not specify the venue beyond the Iraqi context; Baghdad is used as the country-level political anchor.",
+          "eventDateEvidence": "The titles describe a current meeting but provide no occurrence date; publication-day inference is used.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3266
+        },
+        {
+          "id": "cameoplus_a54e08bdd55bcca5",
+          "family": "cameoplus",
+          "title": "Rubio discusses security and economic issues with Icelandic officials",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio discussed security and economic issues with Icelandic officials in meetings in Reykjavik. The title-only report does not specify the officials, discussion outcomes, or further details.",
+          "eventDateEvidence": "The title says Rubio discussed the issues with Icelandic officials “today.”",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3117
+        },
+        {
+          "id": "cameoplus_fdf3468f66ad960f",
+          "family": "cameoplus",
+          "title": "Marco Rubio plans talks with Iceland, Greece and Portugal",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio set out on a planned tour of Iceland, Greece and Portugal, running through October 8. He planned to discuss defense, energy and technology cooperation with the NATO allies amid concerns about Russian military activity and instability in the Middle East.",
+          "eventDateEvidence": "The article says Rubio is setting out on a tour from October 5 to 8 and plans to discuss defense, energy, and technology cooperation.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3034
+        },
+        {
+          "id": "cameoplus_3e9b272e20bfba46",
+          "family": "cameoplus",
+          "title": "Alamein summit co-chairs affirm free navigation in Bab el-Mandeb",
+          "summary": "On 2026-10-05, the Alamein summit co-chairs affirmed respect for state sovereignty and emphasized coordination on shared regional challenges. They also affirmed the importance of free navigation in Bab el-Mandeb; the article reports no operational measure or formal agreement.",
+          "eventDateEvidence": "The current article reports that summit co-chairs affirmed respect for sovereignty and emphasized coordination; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3009
+        },
+        {
+          "id": "cameoplus_8cb27f9ca417abc4",
+          "family": "cameoplus",
+          "title": "ICC President Tomoko Akane condemns US sanctions in Dublin",
+          "summary": "On 2026-10-05, International Criminal Court President Tomoko Akane criticized US sanctions on ICC officials during the opening of the legal year at Dublin’s Four Courts. She described the sanctions as part of a broader assault on the rule of law and said courts should remain independent from political pressure.",
+          "eventDateEvidence": "The article reports ICC President Tomoko Akane’s remarks at the opening of the new legal year but gives no separate occurrence date; the publication window is 2026-10-04/2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2782
+        },
+        {
+          "id": "cameoplus_77976bcdc10a599d",
+          "family": "cameoplus",
+          "title": "Antonio Costa endorses EU enlargement as a strategic investment",
+          "summary": "On 2026-10-05, European Council President Antonio Costa endorsed EU enlargement in a speech at the academic-year opening ceremony of the College of Europe in Warsaw. He described enlargement as Europe's best geostrategic investment, linking it to economic progress, democracy and the rule of law.",
+          "eventDateEvidence": "The article reports Costa's speech at the opening ceremony of the academic year but gives no separate occurrence date; the publication-day inference is used.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.27
+        },
+        {
+          "id": "cameoplus_515af72cbcfcd444",
+          "family": "cameoplus",
+          "title": "Yves Leterme and former European officials urge EU action",
+          "summary": "On 2026-10-05, around 500 former European diplomats, ministers and officials urged the European Union and its member states to act against Israeli settlement expansion in the occupied West Bank. Their open letter called for proposals to sanction financial institutions and service providers involved in the E1 project and for measures to prevent trade with settlements.",
+          "eventDateEvidence": "The article says around 500 former officials “called Monday” on the EU and its member states to take action.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2684
+        },
+        {
+          "id": "cameoplus_41806caa0f191eda",
+          "family": "cameoplus",
+          "title": "Guterres urges Western Sahara parties to pursue negotiations",
+          "summary": "On 2026-10-05, United Nations Secretary-General Antonio Guterres urged Morocco, Algeria, Polisario, Mauritania, and other parties to engage in coordinated negotiations over Western Sahara. In his annual report, he said negotiations should explore genuine autonomy for the people of Western Sahara, citing the Moroccan autonomy plan as a possible basis for a political solution.",
+          "eventDateEvidence": "The articles describe Guterres’s current annual report and renewed call for the parties to negotiate; no occurrence date is stated, so the publication-window date is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.2649
+        },
+        {
+          "id": "cameoplus_14459f66f696b84e",
+          "family": "cameoplus",
+          "title": "Finland backs India’s push for Ukraine war negotiations",
+          "summary": "On 2026-10-05, Finland, through Ambassador Mikko Kivikoski in New Delhi, praised the Indian government’s diplomatic efforts to promote negotiations to end the Russia-Ukraine war. Kivikoski said the international community should incentivize Russia to negotiate.",
+          "eventDateEvidence": "The article, dated October 5, reports Finnish Ambassador Mikko Kivikoski saying Finland highly appreciates India’s latest initiatives to end the war.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.2627
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_f9d7cabc089f9224",
+          "family": "cameoplus",
+          "title": "Iranian deputy minister proposes regional economic space in Ashgabat",
+          "summary": "On 2026-10-05, Iranian Deputy Minister of Economy and Finance Mehdi Heydari proposed forming a unified economic space linking Iran, Turkmenistan, and Central Asia while speaking at the Turkmenistan Investment Forum in Ashgabat. He described transport corridors and logistics links as foundations for integration and said Iran was ready to provide regional countries access to Persian Gulf ports and Middle Eastern markets.",
+          "eventDateEvidence": "The article dated October 5 reports that Iranian Deputy Minister Mehdi Heydari voiced the proposal at the Turkmenistan Investment Forum; it gives no separate date for his speech.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Central Asia",
+          "significance": 0.2417
+        },
+        {
+          "id": "cameoplus_2ff9222cba6a8e8c",
+          "family": "cameoplus",
+          "title": "Lebanese prime minister seeks international force after UNIFIL",
+          "summary": "On 2026-10-05, the Lebanese prime minister appealed for an international force to follow UNIFIL in Lebanon. The headline also says Lebanon wants a new chapter with Iran, but the available article text does not provide enough detail to code that separately.",
+          "eventDateEvidence": "The article headline reports the Lebanese prime minister saying Lebanon needs an international force after UNIFIL; no separate occurrence date is visible, so the current report is dated to publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.241
+        },
+        {
+          "id": "cameoplus_f447d4dc0b2b8c04",
+          "family": "cameoplus",
+          "title": "Yemen government seeks international backing against Houthis",
+          "summary": "On 2026-10-05, Yemen's government foreign minister Afrah al-Zouba called on the international community and other supporters to back Yemen's people, state, and national institutions against the Houthis. She said stability in Yemen served the world's interests and referred to prior opportunities for de-escalation and peace having been exhausted.",
+          "eventDateEvidence": "The article presents the foreign minister’s call as current news but gives no specific occurrence date; the publication window’s latest day is 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.2356
+        }
+      ]
+    },
+    {
+      "domain": "macro",
+      "ok": true,
+      "elapsedMs": 7105,
+      "args": {
+        "topic": "geopolitics",
+        "query": "macro",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 13993,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_4a8f7e7d3db2567d",
+          "family": "cameoplus",
+          "title": "Mecca Defense Alliance discusses support for Saudi Arabia in Istanbul",
+          "summary": "On 2026-10-05, the Mecca Defense Alliance discussed military support for Saudi Arabia and diplomatic efforts to reduce regional tensions during talks in Istanbul, according to Turkish Foreign Minister Hakan Fidan. The article also reports that the bloc appointed Pakistan’s Nauman Mahmood as its first secretary-general.",
+          "eventDateEvidence": "The article reports that the alliance discussed support and diplomatic efforts during talks in Istanbul; no separate occurrence date is stated.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3959
+        },
+        {
+          "id": "cameoplus_404cee5a6ae4b9d2",
+          "family": "cameoplus",
+          "title": "Marco Rubio opens Greece-US strategic dialogue in Athens",
+          "summary": "On 2026-10-05, Marco Rubio opened the Greece–US Strategic Dialogue in Athens, according to the headline. The dialogue focused on three agreements, but the headline does not state that any were signed.",
+          "eventDateEvidence": "The headline says Marco Rubio opens the Greece–US Strategic Dialogue in Athens; no specific occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3689
+        },
+        {
+          "id": "cameoplus_51919aa1ace87991",
+          "family": "cameoplus",
+          "title": "Saudi Crown Prince discusses regional issues with Chris Murphy",
+          "summary": "On 2026-10-05, Saudi Crown Prince Mohammed bin Salman discussed regional and international developments with U.S. Senator Chris Murphy. The title does not provide further detail about the discussion or specify a venue; Riyadh is used as the location anchor for the Saudi-led diplomatic interaction.",
+          "eventDateEvidence": "The title reports a current discussion between the Saudi Crown Prince and Senator Chris Murphy, without specifying another date; publication-day inference is used.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3306
+        },
+        {
+          "id": "cameoplus_a54e08bdd55bcca5",
+          "family": "cameoplus",
+          "title": "Rubio discusses security and economic issues with Icelandic officials",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio discussed security and economic issues with Icelandic officials in meetings in Reykjavik. The title-only report does not specify the officials, discussion outcomes, or further details.",
+          "eventDateEvidence": "The title says Rubio discussed the issues with Icelandic officials “today.”",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3117
+        },
+        {
+          "id": "cameoplus_fdf3468f66ad960f",
+          "family": "cameoplus",
+          "title": "Marco Rubio plans talks with Iceland, Greece and Portugal",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio set out on a planned tour of Iceland, Greece and Portugal, running through October 8. He planned to discuss defense, energy and technology cooperation with the NATO allies amid concerns about Russian military activity and instability in the Middle East.",
+          "eventDateEvidence": "The article says Rubio is setting out on a tour from October 5 to 8 and plans to discuss defense, energy, and technology cooperation.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3034
+        },
+        {
+          "id": "cameoplus_3e9b272e20bfba46",
+          "family": "cameoplus",
+          "title": "Alamein summit co-chairs affirm free navigation in Bab el-Mandeb",
+          "summary": "On 2026-10-05, the Alamein summit co-chairs affirmed respect for state sovereignty and emphasized coordination on shared regional challenges. They also affirmed the importance of free navigation in Bab el-Mandeb; the article reports no operational measure or formal agreement.",
+          "eventDateEvidence": "The current article reports that summit co-chairs affirmed respect for sovereignty and emphasized coordination; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3009
+        },
+        {
+          "id": "cameoplus_8cb27f9ca417abc4",
+          "family": "cameoplus",
+          "title": "ICC President Tomoko Akane condemns US sanctions in Dublin",
+          "summary": "On 2026-10-05, International Criminal Court President Tomoko Akane criticized US sanctions on ICC officials during the opening of the legal year at Dublin’s Four Courts. She described the sanctions as part of a broader assault on the rule of law and said courts should remain independent from political pressure.",
+          "eventDateEvidence": "The article reports ICC President Tomoko Akane’s remarks at the opening of the new legal year but gives no separate occurrence date; the publication window is 2026-10-04/2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2782
+        },
+        {
+          "id": "cameoplus_f9037d140bb756e4",
+          "family": "cameoplus",
+          "title": "Macron condemns Russia over intensified attacks on Ukrainian infrastructure",
+          "summary": "On 2026-10-05, French President Emmanuel Macron condemned Russia’s intensified attacks on Ukrainian civilian infrastructure in a statement on X. He had spoken with Ukrainian President Volodymyr Zelenskyy that Monday and accused Moscow of refusing calls for a ceasefire.",
+          "eventDateEvidence": "The article says Macron spoke with Zelenskyy “esta segunda-feira” (this Monday) and then condemned the intensified Russian attacks; the article was published on 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.275
+        },
+        {
+          "id": "cameoplus_515af72cbcfcd444",
+          "family": "cameoplus",
+          "title": "Yves Leterme and former European officials urge EU action",
+          "summary": "On 2026-10-05, around 500 former European diplomats, ministers and officials urged the European Union and its member states to act against Israeli settlement expansion in the occupied West Bank. Their open letter called for proposals to sanction financial institutions and service providers involved in the E1 project and for measures to prevent trade with settlements.",
+          "eventDateEvidence": "The article says around 500 former officials “called Monday” on the EU and its member states to take action.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2684
+        },
+        {
+          "id": "cameoplus_41806caa0f191eda",
+          "family": "cameoplus",
+          "title": "Guterres urges Western Sahara parties to pursue negotiations",
+          "summary": "On 2026-10-05, United Nations Secretary-General Antonio Guterres urged Morocco, Algeria, Polisario, Mauritania, and other parties to engage in coordinated negotiations over Western Sahara. In his annual report, he said negotiations should explore genuine autonomy for the people of Western Sahara, citing the Moroccan autonomy plan as a possible basis for a political solution.",
+          "eventDateEvidence": "The articles describe Guterres’s current annual report and renewed call for the parties to negotiate; no occurrence date is stated, so the publication-window date is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.2649
+        },
+        {
+          "id": "cameoplus_14459f66f696b84e",
+          "family": "cameoplus",
+          "title": "Finland backs India’s push for Ukraine war negotiations",
+          "summary": "On 2026-10-05, Finland, through Ambassador Mikko Kivikoski in New Delhi, praised the Indian government’s diplomatic efforts to promote negotiations to end the Russia-Ukraine war. Kivikoski said the international community should incentivize Russia to negotiate.",
+          "eventDateEvidence": "The article, dated October 5, reports Finnish Ambassador Mikko Kivikoski saying Finland highly appreciates India’s latest initiatives to end the war.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.2627
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_f56f3d8c46cf4a94",
+          "family": "cameoplus",
+          "title": "Rahm Emanuel criticizes Democrats’ Israel policy in Austin",
+          "summary": "On 2026-10-05, Rahm Emanuel criticized Democrats he described as anti-Israel during an interview at the Texas Tribune Festival in Austin. He argued that cutting weapons funding was not a broader Middle East policy and said he wanted to emphasize the benefits of a security and peace agreement for the United States, Israel, and their alliance.",
+          "eventDateEvidence": "Emanuel gave an interview to Fox News Digital during the Texas Tribune Festival; no occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2428
+        },
+        {
+          "id": "cameoplus_2ff9222cba6a8e8c",
+          "family": "cameoplus",
+          "title": "Lebanese prime minister seeks international force after UNIFIL",
+          "summary": "On 2026-10-05, the Lebanese prime minister appealed for an international force to follow UNIFIL in Lebanon. The headline also says Lebanon wants a new chapter with Iran, but the available article text does not provide enough detail to code that separately.",
+          "eventDateEvidence": "The article headline reports the Lebanese prime minister saying Lebanon needs an international force after UNIFIL; no separate occurrence date is visible, so the current report is dated to publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.241
+        },
+        {
+          "id": "cameoplus_f447d4dc0b2b8c04",
+          "family": "cameoplus",
+          "title": "Yemen government seeks international backing against Houthis",
+          "summary": "On 2026-10-05, Yemen's government foreign minister Afrah al-Zouba called on the international community and other supporters to back Yemen's people, state, and national institutions against the Houthis. She said stability in Yemen served the world's interests and referred to prior opportunities for de-escalation and peace having been exhausted.",
+          "eventDateEvidence": "The article presents the foreign minister’s call as current news but gives no specific occurrence date; the publication window’s latest day is 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.2356
+        },
+        {
+          "id": "cameoplus_4274bea07bb52da0",
+          "family": "cameoplus",
+          "title": "New Zealand Alliance Party releases foreign policy platform",
+          "summary": "On 2026-10-05, the New Zealand Alliance Party released its foreign affairs, defence, and international relations policy in Wellington. The policy emphasizes internationalism, non-alignment, disarmament, and decolonisation, and calls for support for the United Nations and the South Pacific Nuclear Free Zone.",
+          "eventDateEvidence": "The articles report that the Alliance Party has released its foreign affairs, defence, and international relations policy; no occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Oceania",
+          "significance": 0.1766
+        },
+        {
+          "id": "cameoplus_b80ddaeb33fc233b",
+          "family": "cameoplus",
+          "title": "Valdis Dombrovskis says Transnistria will not block Moldova's EU bid",
+          "summary": "On 2026-10-05, European Commission Executive Vice-President Valdis Dombrovskis said unresolved economic and territorial issues, including the Transnistrian conflict, would not block Moldova's EU accession. The report places the discussion in the context of meetings in Brussels on enlargement and security.",
+          "eventDateEvidence": "The current-news headline reports Dombrovskis's statement but gives no separate occurrence date; the publication-window date is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.1716
+        },
+        {
+          "id": "cameoplus_24f249c08fb5aa80",
+          "family": "cameoplus",
+          "title": "Marco Rubio says U.S. will keep its Kyiv embassy operating",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio said the United States saw no need to change the format of its diplomatic mission in Kyiv and that the embassy would continue operating. He was commenting on Russia's calls for foreign diplomats to leave Kyiv; the article gives no specific venue for his remarks.",
+          "eventDateEvidence": "Current-news report says Secretary of State Marco Rubio told journalists that the U.S. saw no need to change its diplomatic mission's format in Kyiv; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.1695
+        },
+        {
+          "id": "cameoplus_d7274cc1f41e65a9",
+          "family": "cameoplus",
+          "title": "U.S. Ambassador Eric Wendt meets Albania’s SPAK chief",
+          "summary": "On 2026-10-05, U.S. Ambassador Eric Wendt met SPAK chief Klodian Braho in Tirana. The title identifies international crime and drug trafficking as priorities discussed, but provides no further details about the meeting.",
+          "eventDateEvidence": "The title reports that U.S. Ambassador Eric Wendt meets SPAK chief Klodian Braho; no occurrence date is given, so the current-news event is inferred to have occurred on the latest publication day in the source window.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.1662
+        },
+        {
+          "id": "cameoplus_fa1a10552d75be85",
+          "family": "cameoplus",
+          "title": "RSF commander attends The Hague peace conference under fake name",
+          "summary": "On 2026-10-05, a sanctioned RSF commander reportedly attended a peace conference in The Hague under a fake name. The title-only source provides no details about the conference's proceedings or the commander's identity.",
+          "eventDateEvidence": "The title reports that a sanctioned RSF commander “attended The Hague peace conference”; no occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.1595
+        }
+      ]
+    },
+    {
+      "domain": "commodities energy",
+      "ok": true,
+      "elapsedMs": 7101,
+      "args": {
+        "topic": "geopolitics",
+        "query": "commodities energy",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 14419,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_ce60e7f6483c2a1e",
+          "family": "cameoplus",
+          "title": "Japan imposes its 27th sanctions package against Russia",
+          "summary": "On 2026-10-05, the Government of Japan imposed its 27th sanctions package against Russia, according to Russian Foreign Ministry spokesperson Maria Zakharova. The measures reportedly affect 33 legal entities, nine individuals, and several foreign companies; the article says shipping was targeted for the first time.",
+          "eventDateEvidence": "The article reports that Japan’s government announced the introduction of its 27th sanctions package; no occurrence date is stated, so the current-news action is inferred to have occurred on the latest publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "East Asia",
+          "significance": 0.5311
+        },
+        {
+          "id": "cameoplus_858a77f112ec67f1",
+          "family": "cameoplus",
+          "title": "Ukraine and Germany sign energy agreements worth over €155 million",
+          "summary": "On 2026-10-05, Ukraine and Germany concluded energy-sector agreements following a Ukrainian-German business forum. Ukraine’s energy ministry and Siemens Energy will cooperate on restoring, modernizing, and improving the resilience of Ukraine’s energy system; possible use of 12 gas turbine units is under consideration. The reported agreement portfolio is worth more than €155 million.",
+          "eventDateEvidence": "The article reports the agreements as a current-news development but gives no occurrence date; the source publication window is 2026-10-04 / 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.4441
+        },
+        {
+          "id": "cameoplus_4a8f7e7d3db2567d",
+          "family": "cameoplus",
+          "title": "Mecca Defense Alliance discusses support for Saudi Arabia in Istanbul",
+          "summary": "On 2026-10-05, the Mecca Defense Alliance discussed military support for Saudi Arabia and diplomatic efforts to reduce regional tensions during talks in Istanbul, according to Turkish Foreign Minister Hakan Fidan. The article also reports that the bloc appointed Pakistan’s Nauman Mahmood as its first secretary-general.",
+          "eventDateEvidence": "The article reports that the alliance discussed support and diplomatic efforts during talks in Istanbul; no separate occurrence date is stated.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3959
+        },
+        {
+          "id": "cameoplus_2dedd39115e00439",
+          "family": "cameoplus",
+          "title": "Kazakhstan Energy Ministry signs deal over Dunga field dispute",
+          "summary": "On 2026-10-05, Kazakhstan's Energy Ministry signed an agreement to settle the dispute over the Dunga field. The headline does not identify the other parties, the signing venue, or the agreement's terms.",
+          "eventDateEvidence": "The current-news headline says the Energy Ministry signed an agreement; no separate occurrence date is available, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Central Asia",
+          "significance": 0.3716
+        },
+        {
+          "id": "cameoplus_e12fa525407e5b0d",
+          "family": "cameoplus",
+          "title": "U.S. and Russia expand Ukraine talks to include oil deal",
+          "summary": "On 2026-10-05, the United States and Russia were reported to have expanded talks about ending the war in Ukraine to include a multibillion-dollar oil deal. The article says Vladimir Putin raised a sale of Russian energy assets with U.S. envoys Jared Kushner and Steve Witkoff; it does not report that a deal was signed.",
+          "eventDateEvidence": "The article reports that U.S.-Russia talks have expanded to include an oil deal; no separate occurrence date is stated, so the current-news update is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3688
+        },
+        {
+          "id": "cameoplus_b8c22d8e337ec45e",
+          "family": "cameoplus",
+          "title": "Somalia and Saudi Arabia discuss trade and Red Sea security",
+          "summary": "On 2026-10-05, Somalia's State Minister for Foreign Affairs and International Cooperation, Ali Mohamed Omar, held talks with Saudi Ambassador Ahmed Mohamed Saleh Al-Muwallad in Mogadishu. They discussed bilateral ties, trade, investment, and Red Sea security. The article reports discussion and interest in cooperation, but no signed agreement or concrete measure.",
+          "eventDateEvidence": "The article reports the officials “held talks” and gives no separate occurrence date; the current-news meeting is inferred to have occurred on the publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Africa",
+          "significance": 0.3489
+        },
+        {
+          "id": "cameoplus_05753229e2ba90c1",
+          "family": "cameoplus",
+          "title": "Badr Abdelatty meets Chadian and Libyan counterparts in Rome",
+          "summary": "On 2026-10-05, Egyptian Foreign Minister Badr Abdelatty met Chad’s Ahmed Kougouri and Libya’s Taher Al-Baour in Rome. They discussed coordination on shared concerns, including security, counterterrorism and cross-border organized crime, and the revival of CEN-SAD. The ministers also agreed on the prospect of a further ministerial meeting ahead of a heads-of-state and government summit.",
+          "eventDateEvidence": "The article reports that Egypt’s foreign minister met his Chadian and Libyan counterparts, with no separate occurrence date stated; the current-news publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3483
+        },
+        {
+          "id": "cameoplus_9ff94e94ea81c37c",
+          "family": "cameoplus",
+          "title": "United States and Iran exchange proposals without breakthrough",
+          "summary": "On 2026-10-05, the United States and Iran exchanged proposals, according to the headline. The proposals produced no decisive breakthrough; the headline provides no further details on the venue or terms.",
+          "eventDateEvidence": "The current-news headline reports Washington and Tehran exchanging proposals; no occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3183
+        },
+        {
+          "id": "cameoplus_bb3e25ba98b18122",
+          "family": "cameoplus",
+          "title": "Khalifa Haftar and Duma discuss Libya’s political developments",
+          "summary": "On 2026-10-05, Khalifa Haftar and Duma discussed political developments in Libya and the unification of institutions, according to the article title. The title does not specify the venue, the participants' formal roles, or any outcome.",
+          "eventDateEvidence": "The title presents Haftar and Duma's discussion as current news; no occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3161
+        },
+        {
+          "id": "cameoplus_fdf3468f66ad960f",
+          "family": "cameoplus",
+          "title": "Marco Rubio plans talks with Iceland, Greece and Portugal",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio set out on a planned tour of Iceland, Greece and Portugal, running through October 8. He planned to discuss defense, energy and technology cooperation with the NATO allies amid concerns about Russian military activity and instability in the Middle East.",
+          "eventDateEvidence": "The article says Rubio is setting out on a tour from October 5 to 8 and plans to discuss defense, energy, and technology cooperation.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3034
+        },
+        {
+          "id": "cameoplus_3e9b272e20bfba46",
+          "family": "cameoplus",
+          "title": "Alamein summit co-chairs affirm free navigation in Bab el-Mandeb",
+          "summary": "On 2026-10-05, the Alamein summit co-chairs affirmed respect for state sovereignty and emphasized coordination on shared regional challenges. They also affirmed the importance of free navigation in Bab el-Mandeb; the article reports no operational measure or formal agreement.",
+          "eventDateEvidence": "The current article reports that summit co-chairs affirmed respect for sovereignty and emphasized coordination; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3009
+        },
+        {
+          "id": "cameoplus_15c16289de303289",
+          "family": "cameoplus",
+          "title": "Donald Trump blames Ukrainian refinery strikes for rising fuel prices",
+          "summary": "On 2026-10-05, Donald Trump publicly attributed rising gasoline prices in the United States and globally partly to Ukrainian strikes on Russian refineries. He also cited refinery-capacity shortages and closures in the United States, while arguing that crude-oil supply and Middle East logistics were not the main cause.",
+          "eventDateEvidence": "The article reports that Donald Trump published a statement about fuel prices; no earlier date is given, so the current-news statement is inferred to have occurred on the publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2759
+        },
+        {
+          "id": "cameoplus_30ad44df9e65631f",
+          "family": "cameoplus",
+          "title": "Guterres condemns Houthis’ cross-border attacks on Saudi Arabia",
+          "summary": "On 2026-10-05, United Nations Secretary-General António Guterres, through spokesperson Stéphane Dujarric, expressed deep concern over escalating fighting in Yemen and condemned continuing Houthi cross-border attacks against Saudi Arabia. The spokesperson also urged all sides to exercise restraint.",
+          "eventDateEvidence": "The second article is dated 23:11 on 5/10/2026 and reports Guterres’s concern and condemnation through his spokesperson.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2695
+        },
+        {
+          "id": "cameoplus_515af72cbcfcd444",
+          "family": "cameoplus",
+          "title": "Yves Leterme and former European officials urge EU action",
+          "summary": "On 2026-10-05, around 500 former European diplomats, ministers and officials urged the European Union and its member states to act against Israeli settlement expansion in the occupied West Bank. Their open letter called for proposals to sanction financial institutions and service providers involved in the E1 project and for measures to prevent trade with settlements.",
+          "eventDateEvidence": "The article says around 500 former officials “called Monday” on the EU and its member states to take action.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2684
+        },
+        {
+          "id": "cameoplus_ed8d8cffddebebd7",
+          "family": "cameoplus",
+          "title": "Erdogan condemns US deployment of weapons in space",
+          "summary": "On 2026-10-05, Turkish President Recep Tayyip Erdogan condemned the United States' deployment of weapons in space while speaking at the International Astronautical Conference in Antalya, Turkey. He called for space to remain peaceful and said an arms race in orbit would be wrong.",
+          "eventDateEvidence": "Erdogan told the International Astronautical Conference in Antalya on Monday that sending weapons to space would be wrong.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.265
+        },
+        {
+          "id": "cameoplus_41806caa0f191eda",
+          "family": "cameoplus",
+          "title": "Guterres urges Western Sahara parties to pursue negotiations",
+          "summary": "On 2026-10-05, United Nations Secretary-General Antonio Guterres urged Morocco, Algeria, Polisario, Mauritania, and other parties to engage in coordinated negotiations over Western Sahara. In his annual report, he said negotiations should explore genuine autonomy for the people of Western Sahara, citing the Moroccan autonomy plan as a possible basis for a political solution.",
+          "eventDateEvidence": "The articles describe Guterres’s current annual report and renewed call for the parties to negotiate; no occurrence date is stated, so the publication-window date is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.2649
+        },
+        {
+          "id": "cameoplus_96f3c7a2e9a15e92",
+          "family": "cameoplus",
+          "title": "The Philippines urges stronger ASEAN energy cooperation",
+          "summary": "On 2026-10-05, the Philippines called for stronger energy cooperation among Southeast Asian countries in Manila. It urged regional preparedness for petroleum supply disruptions, improved electricity connectivity, energy-source diversification, and greater efficiency amid Hormuz-related supply and price pressure.",
+          "eventDateEvidence": "The article says the Philippines is calling for stronger energy cooperation and that Manila is hosting the ministers’ meeting from Oct. 5-9; the publication-window date is Oct. 5.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Southeast Asia",
+          "significance": 0.2606
+        },
+        {
+          "id": "cameoplus_922bf9a3047f9093",
+          "family": "cameoplus",
+          "title": "Donald Trump says the United States has good relations with Serbia",
+          "summary": "On 2026-10-05, U.S. President Donald Trump said the United States has “very good relations” with Serbia while answering a Newsmax Balkans reporter outside the White House in Washington, D.C. The article mentions a prior strategic dialogue and energy-infrastructure memorandum as context, not as new actions in this event.",
+          "eventDateEvidence": "The article was published on 2026-10-05 and reports President Trump’s current response to a reporter outside the White House; no separate earlier date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2556
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_78a51ea0699c9df0",
+          "family": "cameoplus",
+          "title": "Donald Trump blames Ukraine for rising U.S. gasoline prices",
+          "summary": "On 2026-10-05, U.S. President Donald Trump blamed Ukraine’s attacks on Russian energy infrastructure and refinery closures in Democratic-controlled states for higher gasoline prices. He made the claim in a post on Truth Social; the article also notes California as an example of a Democratic-led state.",
+          "eventDateEvidence": "The article says Donald Trump blamed Ukraine’s attacks on Russian energy infrastructure and refinery closures in Democratic-controlled states “on Monday”; the article appeared in the October 4–5 publication window.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.25
+        }
+      ]
+    },
+    {
+      "domain": "crypto",
+      "ok": true,
+      "elapsedMs": 7920,
+      "args": {
+        "topic": "geopolitics",
+        "query": "crypto",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 13778,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_60bc28d317132ac3",
+          "family": "cameoplus",
+          "title": "Merz warns Russia of a forceful response to hybrid attacks",
+          "summary": "On 2026-10-05, German Chancellor Friedrich Merz warned Russia that Germany would respond clearly and forcefully if necessary to counter hybrid attacks. He said the attacks aimed to obstruct support for Ukraine and unsettle NATO, and described coordination with allies and efforts to strengthen cyber defenses, armed forces, and the defense industry.",
+          "eventDateEvidence": "The article reports Merz’s current statement but gives no separate date; the event date is inferred from the 2026-10-04 / 2026-10-05 publication window.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.4288
+        },
+        {
+          "id": "cameoplus_4a8f7e7d3db2567d",
+          "family": "cameoplus",
+          "title": "Mecca Defense Alliance discusses support for Saudi Arabia in Istanbul",
+          "summary": "On 2026-10-05, the Mecca Defense Alliance discussed military support for Saudi Arabia and diplomatic efforts to reduce regional tensions during talks in Istanbul, according to Turkish Foreign Minister Hakan Fidan. The article also reports that the bloc appointed Pakistan’s Nauman Mahmood as its first secretary-general.",
+          "eventDateEvidence": "The article reports that the alliance discussed support and diplomatic efforts during talks in Istanbul; no separate occurrence date is stated.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3959
+        },
+        {
+          "id": "cameoplus_404cee5a6ae4b9d2",
+          "family": "cameoplus",
+          "title": "Marco Rubio opens Greece-US strategic dialogue in Athens",
+          "summary": "On 2026-10-05, Marco Rubio opened the Greece–US Strategic Dialogue in Athens, according to the headline. The dialogue focused on three agreements, but the headline does not state that any were signed.",
+          "eventDateEvidence": "The headline says Marco Rubio opens the Greece–US Strategic Dialogue in Athens; no specific occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3689
+        },
+        {
+          "id": "cameoplus_e12fa525407e5b0d",
+          "family": "cameoplus",
+          "title": "U.S. and Russia expand Ukraine talks to include oil deal",
+          "summary": "On 2026-10-05, the United States and Russia were reported to have expanded talks about ending the war in Ukraine to include a multibillion-dollar oil deal. The article says Vladimir Putin raised a sale of Russian energy assets with U.S. envoys Jared Kushner and Steve Witkoff; it does not report that a deal was signed.",
+          "eventDateEvidence": "The article reports that U.S.-Russia talks have expanded to include an oil deal; no separate occurrence date is stated, so the current-news update is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3688
+        },
+        {
+          "id": "cameoplus_e2f0415fd457b5c7",
+          "family": "cameoplus",
+          "title": "Dmitry Medvedev outlines Russia's conditions for ending Ukraine war",
+          "summary": "On 2026-10-05, Dmitry Medvedev, deputy chairman of Russia's Security Council, outlined three conditions Russia set for ending the war in Ukraine. The provided article excerpt does not state what those conditions are or identify a specific demanded concession.",
+          "eventDateEvidence": "The article reports that Dmitry Medvedev outlined Russia's conditions; it gives no separate occurrence date, so the current-news report is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3533
+        },
+        {
+          "id": "cameoplus_020f5acce8fbf014",
+          "family": "cameoplus",
+          "title": "Civil Union for Combating Corruption discusses oversight cooperation in Aden",
+          "summary": "On 2026-10-05, the Civil Union for Combating Corruption discussed institutional and oversight cooperation with Yemen's Central Organization for Control and Auditing in Aden. The headline does not provide further details about the discussion or any resulting agreement.",
+          "eventDateEvidence": "The current-news headline reports that the union leadership discussed cooperation with the Central Organization for Control and Auditing; no occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3299
+        },
+        {
+          "id": "cameoplus_40df9b90b3ec4a90",
+          "family": "cameoplus",
+          "title": "European Union and China hold Beijing talks to avert trade war",
+          "summary": "On 2026-10-05, the European Union and China held talks in Beijing. The title says the talks aimed to avert a trade war; further details were unavailable because the article could not be fetched.",
+          "eventDateEvidence": "The title reports that the EU and China are holding talks; with no occurrence date supplied, the event is inferred to be current on the latest publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "East Asia",
+          "significance": 0.3228
+        },
+        {
+          "id": "cameoplus_9ff94e94ea81c37c",
+          "family": "cameoplus",
+          "title": "United States and Iran exchange proposals without breakthrough",
+          "summary": "On 2026-10-05, the United States and Iran exchanged proposals, according to the headline. The proposals produced no decisive breakthrough; the headline provides no further details on the venue or terms.",
+          "eventDateEvidence": "The current-news headline reports Washington and Tehran exchanging proposals; no occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3183
+        },
+        {
+          "id": "cameoplus_a54e08bdd55bcca5",
+          "family": "cameoplus",
+          "title": "Rubio discusses security and economic issues with Icelandic officials",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio discussed security and economic issues with Icelandic officials in meetings in Reykjavik. The title-only report does not specify the officials, discussion outcomes, or further details.",
+          "eventDateEvidence": "The title says Rubio discussed the issues with Icelandic officials “today.”",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3117
+        },
+        {
+          "id": "cameoplus_26e1906072759970",
+          "family": "cameoplus",
+          "title": "Polymarket challenges Dutch gambling ban in court",
+          "summary": "On 2026-10-05, Polymarket filed a court challenge in The Hague seeking to overturn the Dutch ban on its services. The case contests the Ksa’s position that the platform’s event contracts constitute unlicensed gambling rather than financial products. The article does not give the filing’s exact date.",
+          "eventDateEvidence": "The article reports as current news that Polymarket “has gone to court in The Hague”; no filing date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3077
+        },
+        {
+          "id": "cameoplus_fdf3468f66ad960f",
+          "family": "cameoplus",
+          "title": "Marco Rubio plans talks with Iceland, Greece and Portugal",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio set out on a planned tour of Iceland, Greece and Portugal, running through October 8. He planned to discuss defense, energy and technology cooperation with the NATO allies amid concerns about Russian military activity and instability in the Middle East.",
+          "eventDateEvidence": "The article says Rubio is setting out on a tour from October 5 to 8 and plans to discuss defense, energy, and technology cooperation.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3034
+        },
+        {
+          "id": "cameoplus_3e9b272e20bfba46",
+          "family": "cameoplus",
+          "title": "Alamein summit co-chairs affirm free navigation in Bab el-Mandeb",
+          "summary": "On 2026-10-05, the Alamein summit co-chairs affirmed respect for state sovereignty and emphasized coordination on shared regional challenges. They also affirmed the importance of free navigation in Bab el-Mandeb; the article reports no operational measure or formal agreement.",
+          "eventDateEvidence": "The current article reports that summit co-chairs affirmed respect for sovereignty and emphasized coordination; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3009
+        },
+        {
+          "id": "cameoplus_8cb27f9ca417abc4",
+          "family": "cameoplus",
+          "title": "ICC President Tomoko Akane condemns US sanctions in Dublin",
+          "summary": "On 2026-10-05, International Criminal Court President Tomoko Akane criticized US sanctions on ICC officials during the opening of the legal year at Dublin’s Four Courts. She described the sanctions as part of a broader assault on the rule of law and said courts should remain independent from political pressure.",
+          "eventDateEvidence": "The article reports ICC President Tomoko Akane’s remarks at the opening of the new legal year but gives no separate occurrence date; the publication window is 2026-10-04/2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2782
+        },
+        {
+          "id": "cameoplus_b8038789a2125049",
+          "family": "cameoplus",
+          "title": "Kaja Kallas condemns Russia’s hybrid attacks in Europe",
+          "summary": "On 2026-10-05, European Union foreign policy chief Kaja Kallas criticized Russia during a press conference with Moldovan Prime Minister Vasile Tarlev, saying Russian hybrid attacks endanger lives across Europe. She also called recent airspace violations involving Moldova unacceptable. The article gives no exact press-conference location or date.",
+          "eventDateEvidence": "The articles report Kaja Kallas’s remarks as current news but give no date for the press conference; inferred from the latest publication day in the source window.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.274
+        },
+        {
+          "id": "cameoplus_ed8d8cffddebebd7",
+          "family": "cameoplus",
+          "title": "Erdogan condemns US deployment of weapons in space",
+          "summary": "On 2026-10-05, Turkish President Recep Tayyip Erdogan condemned the United States' deployment of weapons in space while speaking at the International Astronautical Conference in Antalya, Turkey. He called for space to remain peaceful and said an arms race in orbit would be wrong.",
+          "eventDateEvidence": "Erdogan told the International Astronautical Conference in Antalya on Monday that sending weapons to space would be wrong.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.265
+        },
+        {
+          "id": "cameoplus_14459f66f696b84e",
+          "family": "cameoplus",
+          "title": "Finland backs India’s push for Ukraine war negotiations",
+          "summary": "On 2026-10-05, Finland, through Ambassador Mikko Kivikoski in New Delhi, praised the Indian government’s diplomatic efforts to promote negotiations to end the Russia-Ukraine war. Kivikoski said the international community should incentivize Russia to negotiate.",
+          "eventDateEvidence": "The article, dated October 5, reports Finnish Ambassador Mikko Kivikoski saying Finland highly appreciates India’s latest initiatives to end the war.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.2627
+        },
+        {
+          "id": "cameoplus_c8c993855eba0cfd",
+          "family": "cameoplus",
+          "title": "Virgil Popescu urges military protection for Neptun Deep",
+          "summary": "On 2026-10-05, Romanian MEP and former energy minister Virgil Popescu called for Neptun Deep and offshore infrastructure to be protected from drones, mines, and other hostile actions. He said the project’s security should be treated as a matter of Romanian national security, following a reported drone attack on a Turkish grain ship in the Black Sea.",
+          "eventDateEvidence": "The article describes the statement as made “today” and refers to the drone incident as occurring Monday; the publication window’s latest date is 2026-10-05, a Monday.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.2582
+        },
+        {
+          "id": "cameoplus_922bf9a3047f9093",
+          "family": "cameoplus",
+          "title": "Donald Trump says the United States has good relations with Serbia",
+          "summary": "On 2026-10-05, U.S. President Donald Trump said the United States has “very good relations” with Serbia while answering a Newsmax Balkans reporter outside the White House in Washington, D.C. The article mentions a prior strategic dialogue and energy-infrastructure memorandum as context, not as new actions in this event.",
+          "eventDateEvidence": "The article was published on 2026-10-05 and reports President Trump’s current response to a reporter outside the White House; no separate earlier date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2556
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_341190e16d83f749",
+          "family": "cameoplus",
+          "title": "Mikhail Ulyanov criticizes US efforts to exclude South Africa from G20",
+          "summary": "On 2026-10-05, Russian envoy Mikhail Ulyanov criticized US efforts to exclude South Africa from the G20, likening them to jungle law. The report identifies no further action or formal decision concerning South Africa’s participation.",
+          "eventDateEvidence": "The headline reports Mikhail Ulyanov’s current criticism; no separate occurrence date is stated. The event date is inferred from the source publication window ending 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.2483
+        }
+      ]
+    },
+    {
+      "domain": "ai technology",
+      "ok": true,
+      "elapsedMs": 7955,
+      "args": {
+        "topic": "geopolitics",
+        "query": "ai technology",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 14402,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_b2422ede04e2b44e",
+          "family": "cameoplus",
+          "title": "Reuven Azar warns Iran of military consequences over US terms",
+          "summary": "On 2026-10-05, Israeli Ambassador to India Reuven Azar warned Iran in New Delhi that it must come to terms with the United States or face military consequences. He also accused Tehran of negotiating in bad faith and cited tensions over maritime traffic and Iranian-backed groups.",
+          "eventDateEvidence": "The article says Ambassador Azar made the statement \"on Monday\" and was published October 5, 2026.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.4545
+        },
+        {
+          "id": "cameoplus_2378383c55f2791c",
+          "family": "cameoplus",
+          "title": "Ukraine’s Defense Ministry signs IRIS-T procurement documents with Diehl Defence",
+          "summary": "On 2026-10-05, Ukraine’s Ministry of Defense signed a memorandum and related procurement documents with Diehl Defence for IRIS-T missiles, launchers, and additional ammunition. The article also reports other defense and energy cooperation documents, but does not specify where the signing occurred.",
+          "eventDateEvidence": "The article reports as current news that Ukraine's Ministry of Defense and Diehl Defence signed a memorandum and related procurement documents; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.4469
+        },
+        {
+          "id": "cameoplus_4a8f7e7d3db2567d",
+          "family": "cameoplus",
+          "title": "Mecca Defense Alliance discusses support for Saudi Arabia in Istanbul",
+          "summary": "On 2026-10-05, the Mecca Defense Alliance discussed military support for Saudi Arabia and diplomatic efforts to reduce regional tensions during talks in Istanbul, according to Turkish Foreign Minister Hakan Fidan. The article also reports that the bloc appointed Pakistan’s Nauman Mahmood as its first secretary-general.",
+          "eventDateEvidence": "The article reports that the alliance discussed support and diplomatic efforts during talks in Istanbul; no separate occurrence date is stated.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3959
+        },
+        {
+          "id": "cameoplus_1ac473bab2da1fd2",
+          "family": "cameoplus",
+          "title": "Italy hosts ADRION defense ministers for talks in Venice",
+          "summary": "On 2026-10-05, Italy hosted the ADRION ministerial meeting aboard the Amerigo Vespucci in Venice. Defense ministers from Italy, Albania, Croatia, Greece, Montenegro, and Slovenia discussed security, cooperation, and shared responsibility, including maritime cooperation and information sharing.",
+          "eventDateEvidence": "The article says the ADRION Ministerial Meeting “took place today in Venice”; the source falls in the 2026-10-05 publication window.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.381
+        },
+        {
+          "id": "cameoplus_291436d319a9753b",
+          "family": "cameoplus",
+          "title": "Mirzoyan and Araghchi discuss regional connectivity projects",
+          "summary": "On 2026-10-05, Armenian Foreign Minister Ararat Mirzoyan and Iranian Foreign Minister Seyed Abbas Araghchi discussed bilateral relations and regional connectivity. They addressed Iran's support for Armenia's Crossroads of Peace project, work toward implementing TRIPP, and cooperation on energy, transport, and infrastructure. The article does not specify where the discussion took place.",
+          "eventDateEvidence": "The article reports the ministers' discussion as current news, with no separate occurrence date stated; publication-day inference.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Central Asia",
+          "significance": 0.3709
+        },
+        {
+          "id": "cameoplus_54623133bfa70a6b",
+          "family": "cameoplus",
+          "title": "ICI Bucharest hosts RO AI Factory project partners",
+          "summary": "On 2026-10-05, ICI Bucharest hosted the RO AI Factory kick-off meeting at its headquarters in Bucharest. Consortium partners and representatives of Romanian and European institutions discussed project development, coordination, user services, and integration into the European AI Factories network. The planned infrastructure is intended to help researchers, universities, start-ups, SMEs, and public institutions develop and test AI solutions.",
+          "eventDateEvidence": "The RO AI Factory kick-off meeting was held on Monday, 5 October 2026, at ICI Bucharest.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3577
+        },
+        {
+          "id": "cameoplus_836ed8a0a03d2a70",
+          "family": "cameoplus",
+          "title": "Bahrain parliamentary delegation and IPU sign AI funding agreement",
+          "summary": "On 2026-10-05, Bahrain’s parliamentary division delegation and the Inter-Parliamentary Union signed a funding agreement in Manama. The agreement will contribute to IPU work on legislation and oversight related to artificial intelligence; the article gives no funding amount.",
+          "eventDateEvidence": "The article reports that the delegation and IPU “signed a funding agreement”; no occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.3572
+        },
+        {
+          "id": "cameoplus_5451e1ee5d6db8fe",
+          "family": "cameoplus",
+          "title": "Jeyhun Bayramov discusses digital cooperation with DCO chief",
+          "summary": "On 2026-10-05, Azerbaijani Foreign Minister Jeyhun Bayramov met Digital Cooperation Organization Secretary-General Deemah AlYahya and her delegation in Baku. They discussed cooperation prospects in digital transformation, innovation, artificial intelligence, the digital economy, and related areas following Azerbaijan’s accession to the organization.",
+          "eventDateEvidence": "The article says Jeyhun Bayramov met the DCO delegation “on October 5.”",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Central Asia",
+          "significance": 0.3527
+        },
+        {
+          "id": "cameoplus_6c0d0d24f254af84",
+          "family": "cameoplus",
+          "title": "Western Cape Department signs five-year AI cooperation memorandum",
+          "summary": "On 2026-10-05, the Western Cape Department of Infrastructure signed a five-year memorandum with the AI for Developing Countries Forum. It commits the province to responsible AI use in infrastructure planning and delivery, including a focus on decolonisation of AI. The article does not specify where the signing took place; the province is due to host the next AIFOD Summit in Cape Town in April 2027.",
+          "eventDateEvidence": "The article reports as current news that the Western Cape Department of Infrastructure “has signed a five-year memorandum”; no signing date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Southern Africa",
+          "significance": 0.3522
+        },
+        {
+          "id": "cameoplus_f0bccb6ea90dd1a6",
+          "family": "cameoplus",
+          "title": "Bulgaria and the Netherlands discuss artificial intelligence cooperation",
+          "summary": "On 2026-10-05, Bulgaria's Velislava Petrova discussed artificial intelligence cooperation with her Dutch counterpart. The title-only report does not identify the meeting location or further details.",
+          "eventDateEvidence": "The title reports a current discussion but gives no occurrence date; the publication-day inference is October 5, 2026.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3195
+        },
+        {
+          "id": "cameoplus_3e9b272e20bfba46",
+          "family": "cameoplus",
+          "title": "Alamein summit co-chairs affirm free navigation in Bab el-Mandeb",
+          "summary": "On 2026-10-05, the Alamein summit co-chairs affirmed respect for state sovereignty and emphasized coordination on shared regional challenges. They also affirmed the importance of free navigation in Bab el-Mandeb; the article reports no operational measure or formal agreement.",
+          "eventDateEvidence": "The current article reports that summit co-chairs affirmed respect for sovereignty and emphasized coordination; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3009
+        },
+        {
+          "id": "cameoplus_8cb27f9ca417abc4",
+          "family": "cameoplus",
+          "title": "ICC President Tomoko Akane condemns US sanctions in Dublin",
+          "summary": "On 2026-10-05, International Criminal Court President Tomoko Akane criticized US sanctions on ICC officials during the opening of the legal year at Dublin’s Four Courts. She described the sanctions as part of a broader assault on the rule of law and said courts should remain independent from political pressure.",
+          "eventDateEvidence": "The article reports ICC President Tomoko Akane’s remarks at the opening of the new legal year but gives no separate occurrence date; the publication window is 2026-10-04/2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2782
+        },
+        {
+          "id": "cameoplus_515af72cbcfcd444",
+          "family": "cameoplus",
+          "title": "Yves Leterme and former European officials urge EU action",
+          "summary": "On 2026-10-05, around 500 former European diplomats, ministers and officials urged the European Union and its member states to act against Israeli settlement expansion in the occupied West Bank. Their open letter called for proposals to sanction financial institutions and service providers involved in the E1 project and for measures to prevent trade with settlements.",
+          "eventDateEvidence": "The article says around 500 former officials “called Monday” on the EU and its member states to take action.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2684
+        },
+        {
+          "id": "cameoplus_a16f7dde4236f87e",
+          "family": "cameoplus",
+          "title": "New York City Council questions AI companies at public hearing",
+          "summary": "On 2026-10-05, the New York City Council held a hearing in New York City to examine artificial intelligence risks and potential safeguards. Representatives of Anthropic, OpenAI, Google and Meta were scheduled to testify, alongside industry critics; the coverage does not establish specific legislative action resulting from the hearing.",
+          "eventDateEvidence": "The articles say the New York City Council hearing and testimony were scheduled for Monday; the articles were published on October 5, 2026.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2677
+        },
+        {
+          "id": "cameoplus_ed8d8cffddebebd7",
+          "family": "cameoplus",
+          "title": "Erdogan condemns US deployment of weapons in space",
+          "summary": "On 2026-10-05, Turkish President Recep Tayyip Erdogan condemned the United States' deployment of weapons in space while speaking at the International Astronautical Conference in Antalya, Turkey. He called for space to remain peaceful and said an arms race in orbit would be wrong.",
+          "eventDateEvidence": "Erdogan told the International Astronautical Conference in Antalya on Monday that sending weapons to space would be wrong.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.265
+        },
+        {
+          "id": "cameoplus_c8565a395dd33769",
+          "family": "cameoplus",
+          "title": "India and United States plan Indian Ocean infrastructure cooperation",
+          "summary": "On 2026-10-05, India and the United States were reported to be planning strategic cooperation on infrastructure in the Indian Ocean, including ports and telecommunications networks. The potential projects would involve Sri Lanka, Maldives, and Mauritius; a senior State Department official also cited maritime security and digital infrastructure as priorities.",
+          "eventDateEvidence": "The article reports in current-news terms that India and the United States “are planning a greater strategic cooperation” and quotes a senior State Department official describing what “we’re looking at.” No occurrence date is stated, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.26
+        },
+        {
+          "id": "cameoplus_40813a9e9782baa6",
+          "family": "cameoplus",
+          "title": "Dubai Future Foundation launches AI government services accelerator",
+          "summary": "On 2026-10-05, Dubai Future Foundation announced the Agentic AI for Government Services Accelerator in Dubai. The programme is intended to help Dubai Government entities prototype and deploy services powered by agentic AI, in line with the UAE's stated ambition for advanced government services.",
+          "eventDateEvidence": "WAM dated 5 October 2026 reports that Dubai Future Foundation “today announced the launch” of the accelerator.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.2578
+        },
+        {
+          "id": "cameoplus_6d6bf0133b0f7133",
+          "family": "cameoplus",
+          "title": "United States and Ukraine establish defense innovation platform",
+          "summary": "On 2026-10-05, the article reported that the United States and Ukraine had legally established a defense innovation platform. It is intended to connect military personnel and weapons producers from both countries to address emerging technological threats, and is expected to begin operating by the end of 2026. The article also says the United States studies Ukrainian wartime experience and uses some Ukrainian developments, including in drones.",
+          "eventDateEvidence": "The article, published on October 5, reports that the U.S.-Ukraine defense innovation platform has already been legally established; it gives no separate establishment date.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2572
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_fc4c4ce7c0ef1a17",
+          "family": "cameoplus",
+          "title": "KNDS urges EU action to protect Europe’s defense industry",
+          "summary": "On 2026-10-05, KNDS urged policy changes to strengthen protection of European defense-industry sites against hybrid threats. It called for an EU working group and support for site protection, and said the sector should be treated as critical infrastructure. The article reports no adopted measure.",
+          "eventDateEvidence": "The article reports KNDS’s current calls for urgent action and an EU working group, without giving a separate occurrence date.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2378
+        }
+      ]
+    },
+    {
+      "domain": "bitcoin",
+      "ok": true,
+      "elapsedMs": 6853,
+      "args": {
+        "topic": "geopolitics",
+        "query": "bitcoin",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 13868,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_ce60e7f6483c2a1e",
+          "family": "cameoplus",
+          "title": "Japan imposes its 27th sanctions package against Russia",
+          "summary": "On 2026-10-05, the Government of Japan imposed its 27th sanctions package against Russia, according to Russian Foreign Ministry spokesperson Maria Zakharova. The measures reportedly affect 33 legal entities, nine individuals, and several foreign companies; the article says shipping was targeted for the first time.",
+          "eventDateEvidence": "The article reports that Japan’s government announced the introduction of its 27th sanctions package; no occurrence date is stated, so the current-news action is inferred to have occurred on the latest publication day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "East Asia",
+          "significance": 0.5311
+        },
+        {
+          "id": "cameoplus_5215af0f1696252f",
+          "family": "cameoplus",
+          "title": "Dmitry Peskov warns Ukraine it will pay for its actions",
+          "summary": "On 2026-10-05, Russian presidential press secretary Dmitry Peskov said in Moscow that Ukraine must and will pay a price for its actions. He was responding to remarks about Ukrainian attacks on Russian civilian economic infrastructure; he did not specify the consequences threatened.",
+          "eventDateEvidence": "The articles report Peskov's remarks on October 5; one says he made them while speaking to journalists in Moscow.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.4613
+        },
+        {
+          "id": "cameoplus_b2422ede04e2b44e",
+          "family": "cameoplus",
+          "title": "Reuven Azar warns Iran of military consequences over US terms",
+          "summary": "On 2026-10-05, Israeli Ambassador to India Reuven Azar warned Iran in New Delhi that it must come to terms with the United States or face military consequences. He also accused Tehran of negotiating in bad faith and cited tensions over maritime traffic and Iranian-backed groups.",
+          "eventDateEvidence": "The article says Ambassador Azar made the statement \"on Monday\" and was published October 5, 2026.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.4545
+        },
+        {
+          "id": "cameoplus_299e15cb3638568b",
+          "family": "cameoplus",
+          "title": "United States moves to cut off Hamas financing network",
+          "summary": "On 2026-10-05, the United States announced action to cut off Hamas’s financing network. The State Department said the effort involved coordination with the Department of the Treasury and FBI and aims to disrupt international fundraising and transfers. The release did not specify the instrument or identify particular targets.",
+          "eventDateEvidence": "The State Department release is current-news coverage from the 2026-10-04/2026-10-05 publication window and gives no separate occurrence date; it describes a current U.S. action to cut off Hamas’s financing network.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.4104
+        },
+        {
+          "id": "cameoplus_404cee5a6ae4b9d2",
+          "family": "cameoplus",
+          "title": "Marco Rubio opens Greece-US strategic dialogue in Athens",
+          "summary": "On 2026-10-05, Marco Rubio opened the Greece–US Strategic Dialogue in Athens, according to the headline. The dialogue focused on three agreements, but the headline does not state that any were signed.",
+          "eventDateEvidence": "The headline says Marco Rubio opens the Greece–US Strategic Dialogue in Athens; no specific occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3689
+        },
+        {
+          "id": "cameoplus_e12fa525407e5b0d",
+          "family": "cameoplus",
+          "title": "U.S. and Russia expand Ukraine talks to include oil deal",
+          "summary": "On 2026-10-05, the United States and Russia were reported to have expanded talks about ending the war in Ukraine to include a multibillion-dollar oil deal. The article says Vladimir Putin raised a sale of Russian energy assets with U.S. envoys Jared Kushner and Steve Witkoff; it does not report that a deal was signed.",
+          "eventDateEvidence": "The article reports that U.S.-Russia talks have expanded to include an oil deal; no separate occurrence date is stated, so the current-news update is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3688
+        },
+        {
+          "id": "cameoplus_e2f0415fd457b5c7",
+          "family": "cameoplus",
+          "title": "Dmitry Medvedev outlines Russia's conditions for ending Ukraine war",
+          "summary": "On 2026-10-05, Dmitry Medvedev, deputy chairman of Russia's Security Council, outlined three conditions Russia set for ending the war in Ukraine. The provided article excerpt does not state what those conditions are or identify a specific demanded concession.",
+          "eventDateEvidence": "The article reports that Dmitry Medvedev outlined Russia's conditions; it gives no separate occurrence date, so the current-news report is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3533
+        },
+        {
+          "id": "cameoplus_9ff94e94ea81c37c",
+          "family": "cameoplus",
+          "title": "United States and Iran exchange proposals without breakthrough",
+          "summary": "On 2026-10-05, the United States and Iran exchanged proposals, according to the headline. The proposals produced no decisive breakthrough; the headline provides no further details on the venue or terms.",
+          "eventDateEvidence": "The current-news headline reports Washington and Tehran exchanging proposals; no occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3183
+        },
+        {
+          "id": "cameoplus_a54e08bdd55bcca5",
+          "family": "cameoplus",
+          "title": "Rubio discusses security and economic issues with Icelandic officials",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio discussed security and economic issues with Icelandic officials in meetings in Reykjavik. The title-only report does not specify the officials, discussion outcomes, or further details.",
+          "eventDateEvidence": "The title says Rubio discussed the issues with Icelandic officials “today.”",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3117
+        },
+        {
+          "id": "cameoplus_fdf3468f66ad960f",
+          "family": "cameoplus",
+          "title": "Marco Rubio plans talks with Iceland, Greece and Portugal",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio set out on a planned tour of Iceland, Greece and Portugal, running through October 8. He planned to discuss defense, energy and technology cooperation with the NATO allies amid concerns about Russian military activity and instability in the Middle East.",
+          "eventDateEvidence": "The article says Rubio is setting out on a tour from October 5 to 8 and plans to discuss defense, energy, and technology cooperation.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3034
+        },
+        {
+          "id": "cameoplus_8cb27f9ca417abc4",
+          "family": "cameoplus",
+          "title": "ICC President Tomoko Akane condemns US sanctions in Dublin",
+          "summary": "On 2026-10-05, International Criminal Court President Tomoko Akane criticized US sanctions on ICC officials during the opening of the legal year at Dublin’s Four Courts. She described the sanctions as part of a broader assault on the rule of law and said courts should remain independent from political pressure.",
+          "eventDateEvidence": "The article reports ICC President Tomoko Akane’s remarks at the opening of the new legal year but gives no separate occurrence date; the publication window is 2026-10-04/2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2782
+        },
+        {
+          "id": "cameoplus_515af72cbcfcd444",
+          "family": "cameoplus",
+          "title": "Yves Leterme and former European officials urge EU action",
+          "summary": "On 2026-10-05, around 500 former European diplomats, ministers and officials urged the European Union and its member states to act against Israeli settlement expansion in the occupied West Bank. Their open letter called for proposals to sanction financial institutions and service providers involved in the E1 project and for measures to prevent trade with settlements.",
+          "eventDateEvidence": "The article says around 500 former officials “called Monday” on the EU and its member states to take action.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2684
+        },
+        {
+          "id": "cameoplus_14459f66f696b84e",
+          "family": "cameoplus",
+          "title": "Finland backs India’s push for Ukraine war negotiations",
+          "summary": "On 2026-10-05, Finland, through Ambassador Mikko Kivikoski in New Delhi, praised the Indian government’s diplomatic efforts to promote negotiations to end the Russia-Ukraine war. Kivikoski said the international community should incentivize Russia to negotiate.",
+          "eventDateEvidence": "The article, dated October 5, reports Finnish Ambassador Mikko Kivikoski saying Finland highly appreciates India’s latest initiatives to end the war.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.2627
+        },
+        {
+          "id": "cameoplus_d1e3f7aae673393a",
+          "family": "cameoplus",
+          "title": "Scott Bessent backs Javier Milei and signals possible future aid",
+          "summary": "On 2026-10-05, U.S. Treasury Secretary Scott Bessent publicly praised Javier Milei and Argentina’s economic reforms in comments reported from an interview with Axios. Bessent said the United States could repeat its earlier financial intervention, but the articles report no new assistance being provided.",
+          "eventDateEvidence": "The articles report Bessent’s comments as current news but give no separate occurrence date; the source URL timestamp and publication window indicate October 5, 2026.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2567
+        },
+        {
+          "id": "cameoplus_922bf9a3047f9093",
+          "family": "cameoplus",
+          "title": "Donald Trump says the United States has good relations with Serbia",
+          "summary": "On 2026-10-05, U.S. President Donald Trump said the United States has “very good relations” with Serbia while answering a Newsmax Balkans reporter outside the White House in Washington, D.C. The article mentions a prior strategic dialogue and energy-infrastructure memorandum as context, not as new actions in this event.",
+          "eventDateEvidence": "The article was published on 2026-10-05 and reports President Trump’s current response to a reporter outside the White House; no separate earlier date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2556
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_1366ffeb85e60343",
+          "family": "cameoplus",
+          "title": "Trump signals US openness to direct talks with Iran",
+          "summary": "On 2026-10-05, the United States, through President Donald Trump, signaled openness to direct negotiations with Iran. The available article text provides no further details about a proposed meeting or the terms of talks.",
+          "eventDateEvidence": "The article’s headline, published 05/10/2026, says the US is open to direct negotiations with Iran; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2439
+        },
+        {
+          "id": "cameoplus_f9d7cabc089f9224",
+          "family": "cameoplus",
+          "title": "Iranian deputy minister proposes regional economic space in Ashgabat",
+          "summary": "On 2026-10-05, Iranian Deputy Minister of Economy and Finance Mehdi Heydari proposed forming a unified economic space linking Iran, Turkmenistan, and Central Asia while speaking at the Turkmenistan Investment Forum in Ashgabat. He described transport corridors and logistics links as foundations for integration and said Iran was ready to provide regional countries access to Persian Gulf ports and Middle Eastern markets.",
+          "eventDateEvidence": "The article dated October 5 reports that Iranian Deputy Minister Mehdi Heydari voiced the proposal at the Turkmenistan Investment Forum; it gives no separate date for his speech.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Central Asia",
+          "significance": 0.2417
+        },
+        {
+          "id": "cameoplus_bf9f05ff868b4777",
+          "family": "cameoplus",
+          "title": "Iran cyberspace chief claims Starlink terminals were disabled",
+          "summary": "On 2026-10-05, Mohammad Amin Aghamiri, head of Iran’s National Cyberspace Center, said Iran had disabled Starlink terminals during the January protests. He made the claim on Iranian national television, according to the reports. Aghamiri did not specify what technology was used.",
+          "eventDateEvidence": "The article says Mohammad Amin Aghamiri made the claim “Monday”; the article was published on 05 Oct 2026.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.2149
+        },
+        {
+          "id": "cameoplus_49539ff51524fc7d",
+          "family": "cameoplus",
+          "title": "BIS chief Pablo Hernández de Cos warns on rising public debt",
+          "summary": "On 2026-10-05, BIS director Pablo Hernández de Cos spoke in Vienna about central banks’ role in managing future financial crises. He said rising public debt and public financing needs could make central-bank interventions more difficult and politically controversial. The article also noted rising global bond yields and wider French-German yield spreads.",
+          "eventDateEvidence": "The article says BIS director Pablo Hernández de Cos made the remarks “luni” (Monday), in a story published on 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.1822
+        }
+      ]
+    },
+    {
+      "domain": "ethereum",
+      "ok": true,
+      "elapsedMs": 6322,
+      "args": {
+        "topic": "geopolitics",
+        "query": "ethereum",
+        "days": 1
+      },
+      "shape": {
+        "kind": "array",
+        "recordCount": 20,
+        "containerKey": null,
+        "topLevelKeys": null,
+        "recordKeys": [
+          "id",
+          "family",
+          "title",
+          "summary",
+          "eventDateEvidence",
+          "category",
+          "domain",
+          "region",
+          "significance"
+        ],
+        "charCount": 13412,
+        "empty": false
+      },
+      "response": [
+        {
+          "id": "cameoplus_b2422ede04e2b44e",
+          "family": "cameoplus",
+          "title": "Reuven Azar warns Iran of military consequences over US terms",
+          "summary": "On 2026-10-05, Israeli Ambassador to India Reuven Azar warned Iran in New Delhi that it must come to terms with the United States or face military consequences. He also accused Tehran of negotiating in bad faith and cited tensions over maritime traffic and Iranian-backed groups.",
+          "eventDateEvidence": "The article says Ambassador Azar made the statement \"on Monday\" and was published October 5, 2026.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "South Asia",
+          "significance": 0.4545
+        },
+        {
+          "id": "cameoplus_858a77f112ec67f1",
+          "family": "cameoplus",
+          "title": "Ukraine and Germany sign energy agreements worth over €155 million",
+          "summary": "On 2026-10-05, Ukraine and Germany concluded energy-sector agreements following a Ukrainian-German business forum. Ukraine’s energy ministry and Siemens Energy will cooperate on restoring, modernizing, and improving the resilience of Ukraine’s energy system; possible use of 12 gas turbine units is under consideration. The reported agreement portfolio is worth more than €155 million.",
+          "eventDateEvidence": "The article reports the agreements as a current-news development but gives no occurrence date; the source publication window is 2026-10-04 / 2026-10-05.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.4441
+        },
+        {
+          "id": "cameoplus_724e5aab9ada9c33",
+          "family": "cameoplus",
+          "title": "European Solidarity ends joint political activity with Honcharenko",
+          "summary": "On 2026-10-05, European Solidarity announced in Kyiv that it would end joint political activity with Oleksiy Honcharenko. The party cited differences between his public positions on ending the war and Ukraine's future security architecture and the party's own position.",
+          "eventDateEvidence": "The article says that on the evening of October 5, European Solidarity announced its decision to end joint political activity with Oleksiy Honcharenko.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3721
+        },
+        {
+          "id": "cameoplus_404cee5a6ae4b9d2",
+          "family": "cameoplus",
+          "title": "Marco Rubio opens Greece-US strategic dialogue in Athens",
+          "summary": "On 2026-10-05, Marco Rubio opened the Greece–US Strategic Dialogue in Athens, according to the headline. The dialogue focused on three agreements, but the headline does not state that any were signed.",
+          "eventDateEvidence": "The headline says Marco Rubio opens the Greece–US Strategic Dialogue in Athens; no specific occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3689
+        },
+        {
+          "id": "cameoplus_e12fa525407e5b0d",
+          "family": "cameoplus",
+          "title": "U.S. and Russia expand Ukraine talks to include oil deal",
+          "summary": "On 2026-10-05, the United States and Russia were reported to have expanded talks about ending the war in Ukraine to include a multibillion-dollar oil deal. The article says Vladimir Putin raised a sale of Russian energy assets with U.S. envoys Jared Kushner and Steve Witkoff; it does not report that a deal was signed.",
+          "eventDateEvidence": "The article reports that U.S.-Russia talks have expanded to include an oil deal; no separate occurrence date is stated, so the current-news update is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3688
+        },
+        {
+          "id": "cameoplus_e2f0415fd457b5c7",
+          "family": "cameoplus",
+          "title": "Dmitry Medvedev outlines Russia's conditions for ending Ukraine war",
+          "summary": "On 2026-10-05, Dmitry Medvedev, deputy chairman of Russia's Security Council, outlined three conditions Russia set for ending the war in Ukraine. The provided article excerpt does not state what those conditions are or identify a specific demanded concession.",
+          "eventDateEvidence": "The article reports that Dmitry Medvedev outlined Russia's conditions; it gives no separate occurrence date, so the current-news report is dated to the publication window's latest day.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.3533
+        },
+        {
+          "id": "cameoplus_e44dd0df5594d287",
+          "family": "cameoplus",
+          "title": "Edi Rama negotiates with Albanian police over protest square access",
+          "summary": "On 2026-10-05, Edi Rama and Ismaili reportedly negotiated with Albanian State Police in Tirana. The title says Skanderbeg Square was opened to protesters, but provides no further details about the negotiations or the participants.",
+          "eventDateEvidence": "The title reports a current negotiation; no separate occurrence date is available, so the publication-window date is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3424
+        },
+        {
+          "id": "cameoplus_a5fd4819689ec9a1",
+          "family": "cameoplus",
+          "title": "European People's Party rejects proposed Gaza funding",
+          "summary": "On 2026-10-05, the European People's Party reportedly refused to allocate €15 billion for Gaza, according to the article citing Politico. The brief report does not identify the proposal's precise aid type, its formal status, or any further details of the decision.",
+          "eventDateEvidence": "The article, published on October 5, reports that the European People's Party refused to allocate €15 billion for Gaza; no earlier occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3211
+        },
+        {
+          "id": "cameoplus_9ff94e94ea81c37c",
+          "family": "cameoplus",
+          "title": "United States and Iran exchange proposals without breakthrough",
+          "summary": "On 2026-10-05, the United States and Iran exchanged proposals, according to the headline. The proposals produced no decisive breakthrough; the headline provides no further details on the venue or terms.",
+          "eventDateEvidence": "The current-news headline reports Washington and Tehran exchanging proposals; no occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3183
+        },
+        {
+          "id": "cameoplus_a54e08bdd55bcca5",
+          "family": "cameoplus",
+          "title": "Rubio discusses security and economic issues with Icelandic officials",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio discussed security and economic issues with Icelandic officials in meetings in Reykjavik. The title-only report does not specify the officials, discussion outcomes, or further details.",
+          "eventDateEvidence": "The title says Rubio discussed the issues with Icelandic officials “today.”",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.3117
+        },
+        {
+          "id": "cameoplus_fdf3468f66ad960f",
+          "family": "cameoplus",
+          "title": "Marco Rubio plans talks with Iceland, Greece and Portugal",
+          "summary": "On 2026-10-05, U.S. Secretary of State Marco Rubio set out on a planned tour of Iceland, Greece and Portugal, running through October 8. He planned to discuss defense, energy and technology cooperation with the NATO allies amid concerns about Russian military activity and instability in the Middle East.",
+          "eventDateEvidence": "The article says Rubio is setting out on a tour from October 5 to 8 and plans to discuss defense, energy, and technology cooperation.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.3034
+        },
+        {
+          "id": "cameoplus_3e9b272e20bfba46",
+          "family": "cameoplus",
+          "title": "Alamein summit co-chairs affirm free navigation in Bab el-Mandeb",
+          "summary": "On 2026-10-05, the Alamein summit co-chairs affirmed respect for state sovereignty and emphasized coordination on shared regional challenges. They also affirmed the importance of free navigation in Bab el-Mandeb; the article reports no operational measure or formal agreement.",
+          "eventDateEvidence": "The current article reports that summit co-chairs affirmed respect for sovereignty and emphasized coordination; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.3009
+        },
+        {
+          "id": "cameoplus_e200a50b5fd8d623",
+          "family": "cameoplus",
+          "title": "Egypt condemns Israeli construction in Syria’s Quneitra",
+          "summary": "On 2026-10-05, Egypt’s Ministry of Foreign Affairs condemned Israeli excavation and military construction along the so-called Line 53 in Syria’s Quneitra governorate. Egypt said the works and continuing incursions violate Syria’s sovereignty and international agreements, and called for respect for Syrian sovereignty and withdrawal from occupied territory.",
+          "eventDateEvidence": "The article is dated “El Cairo, 5 oct” and reports that Egypt condemned the Israeli works.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Northern Africa",
+          "significance": 0.2922
+        },
+        {
+          "id": "cameoplus_515af72cbcfcd444",
+          "family": "cameoplus",
+          "title": "Yves Leterme and former European officials urge EU action",
+          "summary": "On 2026-10-05, around 500 former European diplomats, ministers and officials urged the European Union and its member states to act against Israeli settlement expansion in the occupied West Bank. Their open letter called for proposals to sanction financial institutions and service providers involved in the E1 project and for measures to prevent trade with settlements.",
+          "eventDateEvidence": "The article says around 500 former officials “called Monday” on the EU and its member states to take action.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2684
+        },
+        {
+          "id": "cameoplus_ed8d8cffddebebd7",
+          "family": "cameoplus",
+          "title": "Erdogan condemns US deployment of weapons in space",
+          "summary": "On 2026-10-05, Turkish President Recep Tayyip Erdogan condemned the United States' deployment of weapons in space while speaking at the International Astronautical Conference in Antalya, Turkey. He called for space to remain peaceful and said an arms race in orbit would be wrong.",
+          "eventDateEvidence": "Erdogan told the International Astronautical Conference in Antalya on Monday that sending weapons to space would be wrong.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Middle East",
+          "significance": 0.265
+        },
+        {
+          "id": "cameoplus_77deeae30392adab",
+          "family": "cameoplus",
+          "title": "Habtamu Itefa defends Ethiopia's Magech River dam project",
+          "summary": "On 2026-10-05, Ethiopian Water and Energy Minister Habtamu Itefa criticized Egyptian politicians who said Ethiopia should obtain consent to build dams. He defended Ethiopia's Magech River dam project for irrigation and water supply, arguing it would cause no significant harm to Egypt.",
+          "eventDateEvidence": "The article reports Water and Energy Minister Habtamu Itefa's remarks in current-news coverage published on October 5, 2026; no separate occurrence date is stated.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Africa",
+          "significance": 0.2639
+        },
+        {
+          "id": "cameoplus_c8c993855eba0cfd",
+          "family": "cameoplus",
+          "title": "Virgil Popescu urges military protection for Neptun Deep",
+          "summary": "On 2026-10-05, Romanian MEP and former energy minister Virgil Popescu called for Neptun Deep and offshore infrastructure to be protected from drones, mines, and other hostile actions. He said the project’s security should be treated as a matter of Romanian national security, following a reported drone attack on a Turkish grain ship in the Black Sea.",
+          "eventDateEvidence": "The article describes the statement as made “today” and refers to the drone incident as occurring Monday; the publication window’s latest date is 2026-10-05, a Monday.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Eastern Europe",
+          "significance": 0.2582
+        },
+        {
+          "id": "cameoplus_9d48db4098f1a898",
+          "family": "cameoplus",
+          "title": "United States approves $320 million in military aid to Egypt",
+          "summary": "On 2026-10-05, the United States approved $320 million in military aid for Egypt, according to the headline. The headline links the approval to tensions involving Iran but provides no further details on delivery or timing.",
+          "eventDateEvidence": "The headline reports that the US approved military aid; no occurrence date is provided, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.255
+        },
+        {
+          "id": "cameoplus_6297e710d9dc49a8",
+          "family": "cameoplus",
+          "title": "Charles Michel calls Europe's absence from Iran war talks a failure",
+          "summary": "On 2026-10-05, former European Council President Charles Michel criticized Europe's absence from negotiations on the Iran war during Euronews' Europe Today show. He called the absence a failure and urged EU leaders to strengthen Europe's influence and defend its interests.",
+          "eventDateEvidence": "The article reports Michel's remarks on Euronews' live morning show; no separate occurrence date is given, so the publication day is inferred.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "Europe",
+          "significance": 0.2517
+        },
+        {
+          "id": "cameoplus_1366ffeb85e60343",
+          "family": "cameoplus",
+          "title": "Trump signals US openness to direct talks with Iran",
+          "summary": "On 2026-10-05, the United States, through President Donald Trump, signaled openness to direct negotiations with Iran. The available article text provides no further details about a proposed meeting or the terms of talks.",
+          "eventDateEvidence": "The article’s headline, published 05/10/2026, says the US is open to direct negotiations with Iran; no separate occurrence date is given.",
+          "category": "POLITICAL",
+          "domain": "POLITICAL",
+          "region": "North America",
+          "significance": 0.2439
+        }
+      ]
+    }
+  ]
+}

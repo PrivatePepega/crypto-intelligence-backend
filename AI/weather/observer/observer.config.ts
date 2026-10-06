@@ -17,21 +17,61 @@ export const observerConfigs = {
     ],
 
     foundationalData: [
-      "gold",
-      "silver",
-      "wti",
-      "brent",
-      "naturalGas",
-      "vix",
-      "sp500",
-      "nasdaqComposite",
-      "dowJones",
-      "broadUsdIndex",
-      "tenYearTreasuryYield",
-      "two_year_treasury_yield",
-      "realTenYearTreasuryYield",
-      "cnnSafeHavenDemand",
-      "cnnMarketVolatilityVix50",
+      // Global risk / equities
+      "SP500",
+      "NASDAQCOM",
+      "DJIA",
+      "^RUT",
+      "VIXCLS",
+
+      // Dollar / FX
+      "DTWEXBGS",
+      "DTWEXAFEGS",
+      "DTWEXEMEGS",
+      "EURUSD",
+      "GBPUSD",
+      "USDJPY",
+      "USDCAD",
+      "AUDUSD",
+      "NZDUSD",
+
+      // Interest rates
+      "DFF",
+      "DGS2",
+      "DGS5",
+      "DGS10",
+      "DFII10",
+
+      // Credit / financial stress
+      "BAMLH0A0HYM2",
+      "BAMLC0A0CM",
+
+      // Market sentiment / risk appetite
+      "cnn_fear_greed",
+      "cnn_market_volatility_vix_50",
+      "cnn_safe_haven_demand",
+      "cnn_put_call_options",
+      "cnn_stock_price_breadth",
+      "aaii_sentiment",
+
+      // Commodity-related positioning
+      "ig_wti_crude_oil",
+      "ig_brent_crude_oil",
+      "ig_gold",
+      "ig_silver",
+
+      // FX / rates futures positioning
+      "cftc_usd_index",
+      "cftc_euro_fx",
+      "cftc_japanese_yen",
+      "cftc_ust_10y",
+      "cftc_ust_2y",
+
+      // Economic activity
+      "INDPRO",
+      "RSAFS",
+      "GDPC1",
+      "A191RL1Q225SBEA",
     ],
 
     limits: {
@@ -57,24 +97,62 @@ export const observerConfigs = {
     ],
 
     foundationalData: [
-      "sp500",
-      "nasdaqComposite",
-      "dowJones",
-      "russell2000",
-      "vix",
-      "cnnFearGreed",
-      "cnnMarketMomentumSp125",
-      "cnnMarketVolatilityVix50",
-      "cnnPutCallOptions",
-      "cnnStockPriceBreadth",
-      "cnnSafeHavenDemand",
-      "aaiiSentiment",
-      "two_year_treasury_yield",
-      "tenYearTreasuryYield",
-      "highYieldCreditSpread",
-      "investmentGradeCreditSpread",
-      "broadUsdIndex",
-      "gold",
+      // Equities
+      "SP500",
+      "NASDAQCOM",
+      "DJIA",
+      "^RUT",
+
+      // Volatility / breadth / sentiment
+      "VIXCLS",
+      "cnn_fear_greed",
+      "cnn_market_momentum_sp125",
+      "cnn_market_volatility_vix_50",
+      "cnn_put_call_options",
+      "cnn_stock_price_breadth",
+      "cnn_safe_haven_demand",
+      "aaii_sentiment",
+
+      // Treasury curve
+      "DTB3",
+      "DGS2",
+      "DGS5",
+      "DGS10",
+      "DFII10",
+
+      // Credit
+      "BAMLH0A0HYM2",
+      "BAMLC0A0CM",
+
+      // Dollar
+      "DTWEXBGS",
+      "DTWEXAFEGS",
+      "DTWEXEMEGS",
+
+      // Major FX
+      "EURUSD",
+      "GBPUSD",
+      "USDJPY",
+      "USDCAD",
+      "AUDUSD",
+      "NZDUSD",
+
+      // Futures positioning
+      "cftc_sp500",
+      "cftc_nasdaq",
+      "cftc_usd_index",
+      "cftc_ust_10y",
+      "cftc_ust_2y",
+      "cftc_euro_fx",
+      "cftc_japanese_yen",
+
+      // Retail positioning
+      "ig_sp500",
+      "ig_nasdaq",
+      "ig_dow_jones",
+      "ig_euro_usd",
+      "ig_gbp_usd",
+      "ig_usd_jpy",
     ],
 
     limits: {
@@ -101,36 +179,67 @@ export const observerConfigs = {
     ],
 
     foundationalData: [
-      "federalFundsRate",
-      "fedTotalAssets",
-      "reserveBalances",
-      "reverseRepoUsage",
+      // Monetary policy / liquidity
+      "DFF",
+      "WALCL",
+      "WRESBAL",
+      "RRPONTSYD",
+      "M2SL",
 
-      "consumerPriceIndex",
-      "coreConsumerPriceIndex",
-      "personalConsumptionExpenditures",
-      "corePersonalConsumptionExpenditures",
-      "fiveYearInflationExpectations",
-      "tenYearBreakevenInflation",
+      // Inflation
+      "CPIAUCSL",
+      "CPILFESL",
+      "PCE",
+      "PCEPILFE",
+      "T5YIE",
+      "T10YIE",
+      "PPIACO",
 
-      "nonfarmPayrolls",
-      "unemploymentRate",
-      "initialJoblessClaims",
-      "jobOpenings",
-      "laborForceParticipation",
-      "averageHourlyEarnings",
+      // Employment
+      "PAYEMS",
+      "UNRATE",
+      "ICSA",
+      "JTSJOL",
+      "CIVPART",
+      "CES0500000003",
 
-      "realGdpGrowth",
-      "industrialProduction",
-      "retailSales",
-      "personalIncome",
-      "consumerSentiment",
+      // Growth / economic activity
+      "GDPC1",
+      "A191RL1Q225SBEA",
+      "INDPRO",
+      "RSAFS",
+      "PI",
+      "UMCSENT",
 
-      "threeMonthTreasury",
-      "two_year_treasury_yield",
-      "fiveYearTreasury",
-      "tenYearTreasuryYield",
-      "realTenYearTreasuryYield",
+      // Housing
+      "PERMIT",
+      "HOUST",
+      "EXHOSLUSM495S",
+      "CSUSHPINSA",
+      "MORTGAGE30US",
+
+      // Treasury curve
+      "DTB3",
+      "DGS2",
+      "DGS5",
+      "DGS10",
+      "DFII10",
+
+      // Dollar / financial conditions
+      "DTWEXBGS",
+      "DTWEXAFEGS",
+      "DTWEXEMEGS",
+      "BAMLH0A0HYM2",
+      "BAMLC0A0CM",
+
+      // Market response
+      "SP500",
+      "NASDAQCOM",
+      "VIXCLS",
+
+      // Investor expectations
+      "aaii_sentiment",
+      "cnn_fear_greed",
     ],
 
     limits: {
@@ -156,17 +265,55 @@ export const observerConfigs = {
     ],
 
     foundationalData: [
-      "wti",
-      "brent",
-      "naturalGas",
-      "gold",
-      "silver",
-      "copper",
-      "aluminum",
-      "broadUsdIndex",
-      "usdCad",
-      "audUsd",
-      "nzdUsd",
+      // Commodity retail positioning
+      "ig_wti_crude_oil",
+      "ig_brent_crude_oil",
+      "ig_gold",
+      "ig_silver",
+
+      // Commodity-sensitive FX
+      "AUDUSD",
+      "NZDUSD",
+      "USDCAD",
+
+      // Dollar
+      "DTWEXBGS",
+      "DTWEXAFEGS",
+      "DTWEXEMEGS",
+
+      // Macro demand
+      "GDPC1",
+      "A191RL1Q225SBEA",
+      "INDPRO",
+      "RSAFS",
+      "PI",
+
+      // Inflation
+      "CPIAUCSL",
+      "CPILFESL",
+      "PCE",
+      "PCEPILFE",
+      "PPIACO",
+
+      // Rates / financial conditions
+      "DFF",
+      "DGS2",
+      "DGS10",
+      "DFII10",
+      "VIXCLS",
+
+      // Broader market risk
+      "SP500",
+      "NASDAQCOM",
+
+      // Relevant positioning
+      "cftc_usd_index",
+      "cftc_ust_10y",
+      "cftc_ust_2y",
+
+      // Related FX positioning
+      "ig_aud_usd",
+      "ig_usd_cad",
     ],
 
     limits: {
@@ -195,27 +342,68 @@ export const observerConfigs = {
     ],
 
     foundationalData: [
-      "coinmarketcapGeneralCryptoMetric",
-      "coinmarketcapAltSeasonFearGreed",
-      "alternativeFearGreed",
+      // Overall crypto market
+      "coinmarketcap_crypto_market_metrics",
+      "alternative_crypto_fear_greed",
+      "coinmarketcap_altcoin_season",
 
-      "binanceBtcusdt",
-      "binanceEthusdt",
-      "binanceSolusdt",
+      // Major crypto positioning
+      "binance_btcusdt",
+      "binance_ethusdt",
+      "binance_solusdt",
 
-      "btcSpotEtf",
-      "ethSpotEtf",
-      "solSpotEtf",
+      // Additional major asset positioning
+      "binance_bnbusdt",
+      "binance_xrpusdt",
+      "binance_dogeusdt",
+      "binance_linkusdt",
+      "binance_aaveusdt",
 
-      "cftcBitcoin",
-      "cftcEthereum",
+      // Institutional flows
+      "spot_etf_btc",
+      "spot_etf_eth",
+      "spot_etf_sol",
+      "spot_etf_xrp",
+      "spot_etf_doge",
+      "spot_etf_link",
 
-      "sp500",
-      "nasdaqComposite",
-      "vix",
-      "tenYearTreasuryYield",
-      "broadUsdIndex",
-      "gold",
+      // Futures positioning
+      "cftc_bitcoin",
+      "cftc_ethereum",
+      "cftc_micro_ethereum",
+
+      // Traditional risk environment
+      "SP500",
+      "NASDAQCOM",
+      "^RUT",
+      "VIXCLS",
+
+      // Rates / liquidity
+      "DFF",
+      "DGS2",
+      "DGS10",
+      "DFII10",
+      "M2SL",
+      "RRPONTSYD",
+
+      // Dollar
+      "DTWEXBGS",
+      "DTWEXAFEGS",
+
+      // Macro environment
+      "CPIAUCSL",
+      "PCE",
+      "PAYEMS",
+      "UNRATE",
+
+      // Cross-asset sentiment
+      "cnn_fear_greed",
+      "cnn_market_volatility_vix_50",
+      "cnn_safe_haven_demand",
+      "aaii_sentiment",
+
+      // Precious-metal / defensive context
+      "ig_gold",
     ],
 
     limits: {
@@ -243,15 +431,70 @@ export const observerConfigs = {
     ],
 
     foundationalData: [
-      "nasdaqComposite",
-      "sp500",
-      "russell2000",
-      "vix",
-      "two_year_treasury_yield",
-      "tenYearTreasuryYield",
-      "broadUsdIndex",
-      "industrialProduction",
-      "retailSales",
+      // Technology / equity market
+      "NASDAQCOM",
+      "SP500",
+      "^RUT",
+
+      // Market risk
+      "VIXCLS",
+      "cnn_market_momentum_sp125",
+      "cnn_market_volatility_vix_50",
+      "cnn_stock_price_breadth",
+      "cnn_put_call_options",
+
+      // Interest-rate environment
+      "DFF",
+      "DTB3",
+      "DGS2",
+      "DGS5",
+      "DGS10",
+      "DFII10",
+
+      // Credit / capital conditions
+      "BAMLH0A0HYM2",
+      "BAMLC0A0CM",
+
+      // Dollar
+      "DTWEXBGS",
+      "DTWEXAFEGS",
+      "DTWEXEMEGS",
+
+      // Industrial activity
+      "INDPRO",
+      "RSAFS",
+      "PI",
+
+      // Economic growth
+      "GDPC1",
+      "A191RL1Q225SBEA",
+
+      // Consumer environment
+      "UMCSENT",
+      "CPIAUCSL",
+      "PCE",
+
+      // Labor market
+      "PAYEMS",
+      "UNRATE",
+      "JTSJOL",
+      "CES0500000003",
+
+      // Investor sentiment / positioning
+      "aaii_sentiment",
+      "cnn_fear_greed",
+
+      // Technology-heavy market positioning
+      "cftc_nasdaq",
+      "cftc_sp500",
+      "cftc_ust_10y",
+      "cftc_ust_2y",
+      "ig_nasdaq",
+      "ig_sp500",
+
+      // Global technology / commodity sensitivity
+      "AUDUSD",
+      "USDJPY",
     ],
 
     limits: {
