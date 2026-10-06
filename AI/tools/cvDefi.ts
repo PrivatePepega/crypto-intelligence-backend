@@ -5,7 +5,7 @@ import { getDefiNews } from "../../mcp/cryptocurrency.cv/fetchers/defi.js";
 
 const DEFAULT_LIMIT = 3;
 
-export const cvDefiNewsTool = tool({
+export const cvDefiTool = tool({
   description:
     "Fetches recent DeFi and prediction-market news from cryptocurrency.cv.\n\n" +
     "Does: investigate DeFi protocols, DEXs, lending, stablecoins, governance, and prediction markets.\n" +
@@ -17,9 +17,6 @@ export const cvDefiNewsTool = tool({
     ),
   }),
   execute: async (input, options) => {
-    return await getDefiNews({
-      limit: input.limit,
-      signal: options.abortSignal,
-    });
+    return await getDefiNews({ limit: input.limit, signal: options.abortSignal });
   },
 });
