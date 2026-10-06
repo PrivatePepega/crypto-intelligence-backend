@@ -74,6 +74,11 @@ export const observerConfigs = {
       "A191RL1Q225SBEA",
     ],
 
+    tools:[
+// adds tool list here and in other indexes
+    ],
+
+
     limits: {
       maxToolCalls: 12,
       maxSameToolCalls: 2,
