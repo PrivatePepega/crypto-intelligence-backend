@@ -12,7 +12,7 @@ export const cvNewsTool = tool({
     "Prefer breaking, trending, or targeted crypto tools when applicable.",
   inputSchema: z.object({
     limit: z.number().int().min(1).max(3).default(DEFAULT_LIMIT).describe(
-      "Maximum articles. Free access is capped at 3.",
+      "Maximum articles.",
     ),
   }),
   execute: async (input, options) => {

@@ -1,80 +1,33 @@
-import { encodingForModel, type Tiktoken } from "js-tiktoken";
-import { isStepCount, streamText } from "ai";
+import {
+  isStepCount,
+  streamText,
+} from "ai";
 
 import { models } from "../../../AI/providers/model.js";
-import { getCurrentIndicatorTool } from "../../../AI/tools/getCurrentIndicatorData.js";
-import { marketauxSearchTool } from "../../../AI/tools/marketauxNewsSearch.js";
-import { webSearchTool } from "../../../AI/tools/webSearchTool.js";
-import {observerConfigs, type ObserverConfig,} from "./observer.config.js";import { currentsSearchTool } from "../../tools/currentsNewsSearch.js";
-import { newsflashGetEventsTool } from "../../tools/newsflashGetEvents.js";
-import { newsflashSearchArticlesTool } from "../../tools/newsflashSearchArticles.js";
-import { gdeltSearchEventsTool } from "../../tools/gdeltSearchEvents.js";
-import { gdeltSearchStoriesTool } from "../../tools/gdeltSearchStories.js";
-import { fmpGetArticlesListTool } from "../../tools/fmpGetArticlesList.js";
-import { newsDataCryptoNewsTool } from "../../tools/newsDataCryptoNews.js";
-import { newsDataLatestNewsTool } from "../../tools/newsDataLatestNews.js";
-import { newsDataMarketNewsTool } from "../../tools/newsDataMarketNews.js";
-import { cvArticlesTagsTool } from "../../tools/cvArticlesTags.js";
-import { cvBitcoinNewsTool } from "../../tools/cvBitcoinNews.js";
-import { cvBreakingTool } from "../../tools/cvBreaking.js";
-import { cvDefiTool } from "../../tools/cvDefi.js";
-import { cvNewsTool } from "../../tools/cvNews.js";
-import { cvSearchTool } from "../../tools/cvSearch.js";
-import { cvTrendingTool } from "../../tools/cvTrending.js";
-import { finnhubCryptoNewsTool } from "../../tools/finnhubCryptoNews.js";
-import { newsMarketsNewsTool } from "../../tools/newsMarketsNewsTool.js";
-import { wabbleImportantHeadlineSearchTool } from "../../tools/wabbleImportantHeadlineSearch.js";
 
+import {
+  type ObserverConfig,
+} from "./observer.config.js";
 
-// --------------------------------------------------
-// Observer tools
-// --------------------------------------------------
+import {
+  getObserverContext,
+  getObserverTools,
+} from "../../utils/general.tools.js";
 
-const observerTools = {
-  ...getCurrentIndicatorTool,
+import {
+  logObserverStart,
+  logObserverPrompt,
+  logResearchEvidence,
+  logSynthesisStart,
+  logObserverUsage,
+  logObserverToolUsage,
+  logObserverOutput,
+  logObservableReasoning,
+} from "./observer.logger.js";
 
-  marketaux_news_search: marketauxSearchTool,
-
-  web_search: webSearchTool,
-
-  currentsSearchTool,
-
-  newsflashGetEventsTool,
-
-  newsflashSearchArticlesTool,
-
-  gdeltSearchEventsTool,
-
-  gdeltSearchStoriesTool,
-
-  fmpGetArticlesListTool,
-
-  newsDataCryptoNewsTool,
-
-  newsDataLatestNewsTool,
-
-  newsDataMarketNewsTool,
-
-  cvArticlesTagsTool,
-
-  cvBitcoinNewsTool,
-
-  cvBreakingTool,
-
-  cvDefiTool, //sucks max3
-
-  cvNewsTool, //sucks max3
-
-  cvSearchTool, //sucks max3
-
-  cvTrendingTool,
-
-  finnhubCryptoNewsTool,
-
-  newsMarketsNewsTool,
-
-  wabbleImportantHeadlineSearchTool,
-};
+import {
+  runObserverResearch,
+} from "./observer.research.js";
 
 // --------------------------------------------------
 // Observer limits
@@ -83,44 +36,19 @@ const observerTools = {
 const MAX_AGENT_STEPS = 5;
 
 // --------------------------------------------------
-// Token estimation
-// --------------------------------------------------
-//
-// Used to measure serialized tool-result context.
-//
-// Provider-reported `step.usage` remains the
-// authoritative model token usage.
-//
-// These estimates are diagnostic only.
-//
-
-const encoder: Tiktoken = encodingForModel("gpt-4o");
-
-const estimateTokens = (value: unknown): number => {
-  const serialized =
-    typeof value === "string"
-      ? value
-      : JSON.stringify(value);
-
-  return encoder.encode(serialized ?? "").length;
-};
-
-const countCharacters = (value: unknown): number => {
-  const serialized =
-    typeof value === "string"
-      ? value
-      : JSON.stringify(value);
-
-  return serialized?.length ?? 0;
-};
-
-// --------------------------------------------------
 // Observer
 // --------------------------------------------------
 
 export const runObserver = async (
-  config : ObserverConfig,
+  config: ObserverConfig,
 ) => {
+  const observerContext =
+    await getObserverContext(config);
+
+  logObserverStart(
+    observerContext,
+  );
+
   const observerPrompt = `
 You are the Observer agent for a market intelligence platform.
 
@@ -231,6 +159,10 @@ Return concise observations when you have enough information.
 The goal is not to produce a fixed number of observations.
 
 The goal is to discover the meaningful things that happened.
+
+OBSERVER Foundational Context:
+
+${observerContext}
 `;
 
   const finalObserverPrompt = `
@@ -277,213 +209,55 @@ ${config.objective}
 
 Areas of observation:
 ${config.categories
-    .map((category) => `- ${category}`)
+    .map(
+      (category) =>
+        `- ${category}`,
+    )
     .join("\n")}
 
 Identify meaningful developments and produce observations.
 `;
 
-  console.log("");
-  console.log("==============================================");
-  console.log("Observer Starting");
-  console.log("==============================================");
+  // --------------------------------------------------
+  // Prompt diagnostics
+  // --------------------------------------------------
+
+  logObserverPrompt(
+    prompt,
+  );
 
   // --------------------------------------------------
   // Research
   // --------------------------------------------------
 
-  const researchResult = streamText({
-    model: models.groq,
-
-    instructions: observerPrompt,
-
-    prompt,
-
-    tools: observerTools,
-
-    stopWhen: isStepCount(MAX_AGENT_STEPS),
-
-    onStepEnd: async (step) => {
-      const displayStep = step.stepNumber + 1;
-
-      // --------------------------------------------------
-      // Provider-reported model usage
-      // --------------------------------------------------
-
-      const inputTokens = step.usage.inputTokens ?? 0;
-      const outputTokens = step.usage.outputTokens ?? 0;
-
-      // --------------------------------------------------
-      // Tool-result diagnostic
-      // --------------------------------------------------
-
-      const toolResultTokens =
-        step.toolResults.reduce(
-          (total, toolResult) =>
-            total + estimateTokens(toolResult.output),
-          0,
-        );
-
-      // --------------------------------------------------
-      // Step header
-      // --------------------------------------------------
-
-      console.log("");
-      console.log("----------------------------------------------");
-      console.log(
-        `Observer Research Step ${displayStep}`,
-      );
-      console.log("----------------------------------------------");
-
-      // --------------------------------------------------
-      // Tool calls
-      // --------------------------------------------------
-
-      if (step.toolCalls.length > 0) {
-        for (const toolCall of step.toolCalls) {
-          console.log("");
-          console.log("Tool call:");
-          console.log(`Tool: ${toolCall.toolName}`);
-
-          const argumentCharacters = countCharacters(
-            toolCall.input,
-          );
-
-          const argumentTokens = estimateTokens(
-            toolCall.input,
-          );
-
-          console.log(
-            `Arguments: ${JSON.stringify(toolCall.input)}`,
-          );
-
-        }
-      }
-
-      // --------------------------------------------------
-      // Tool results
-      // --------------------------------------------------
-
-      if (step.toolResults.length > 0) {
-        for (const toolResult of step.toolResults) {
-          const resultCharacters = countCharacters(
-            toolResult.output,
-          );
-
-          const resultTokens = estimateTokens(
-            toolResult.output,
-          );
-
-          console.log("");
-          console.log("Tool result:");
-          console.log(`Tool: ${toolResult.toolName}`);
-
-          console.log(
-            `Result: ${JSON.stringify(toolResult.output)}`,
-          );
-
-          console.log(
-            `Result estimated tokens: ${resultTokens}`,
-          );
-        }
-      }
-
-      // --------------------------------------------------
-      // Step text
-      // --------------------------------------------------
-
-      if (step.text) {
-        console.log("");
-        console.log("Step text:");
-        console.log(step.text);
-      }
-
-      // --------------------------------------------------
-      // Input / output accounting
-      // --------------------------------------------------
-
-      console.log("");
-      console.log(
-        `Input tokens: ${inputTokens}`,
-      );
-
-      console.log(
-        `Tool result context tokens: ${toolResultTokens}`,
-      );
-
-      console.log(
-        `Output tokens: ${outputTokens}`,
-      );
-
-      console.log("");
-      console.log(
-        `Observer Research Step ${displayStep} complete.`,
-      );
-    },
-  });
-
-  const researchText = await researchResult.text;
-  const researchSteps = await researchResult.steps;
-  const researchUsage = await researchResult.usage;
+  const {
+    researchText,
+    researchSteps,
+    researchUsage,
+    researchEvidence,
+    lastReasoningText,
+  } =
+    await runObserverResearch({
+      config,
+      observerPrompt,
+      prompt,
+    });
 
   // --------------------------------------------------
-  // Preserve raw research evidence
+  // Final observable reasoning
   // --------------------------------------------------
 
-  const researchEvidence = researchSteps
-    .filter(
-      (step) =>
-        step.toolCalls.length > 0 ||
-        step.toolResults.length > 0 ||
-        Boolean(step.text),
-    )
-    .map((step) => ({
-      step: step.stepNumber + 1,
-
-      text: step.text || null,
-
-      toolCalls: step.toolCalls.map((toolCall) => ({
-        tool: toolCall.toolName,
-        arguments: toolCall.input,
-      })),
-
-      toolResults: step.toolResults.map((toolResult) => ({
-        tool: toolResult.toolName,
-        result: toolResult.output,
-      })),
-    }));
-
-  // --------------------------------------------------
-  // Research evidence context
-  // --------------------------------------------------
-
-  const researchEvidenceCharacters =
-    countCharacters(researchEvidence);
-
-  const researchEvidenceTokens =
-    estimateTokens(researchEvidence);
-
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log("Research Evidence Context");
-  console.log("----------------------------------------------");
-
-  console.log(
-    `Characters: ${researchEvidenceCharacters}`,
+  logObservableReasoning(
+    lastReasoningText,
   );
 
-  console.log(
-    `Estimated tokens: ${researchEvidenceTokens}`,
-  );
+  // --------------------------------------------------
+  // Research evidence diagnostics
+  // --------------------------------------------------
 
-  console.log(
-    "Note: estimated tokens use GPT-4o tokenizer.",
+  logResearchEvidence(
+    researchEvidence,
   );
-
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log("Observer Final Synthesis");
-  console.log("----------------------------------------------");
 
   // --------------------------------------------------
   // Synthesis prompt
@@ -513,7 +287,11 @@ ${researchText || "No research notes were produced."}
 The following is the raw evidence returned by the tools during the research phase.
 
 <research_evidence>
-${JSON.stringify(researchEvidence, null, 2)}
+${JSON.stringify(
+    researchEvidence,
+    null,
+    2,
+  )}
 </research_evidence>
 
 Use the raw tool evidence as the factual basis for the final observations.
@@ -526,120 +304,67 @@ Important:
 - Do not invent causal relationships.
 - Do not perform additional research.
 - Report meaningful developments supported by the evidence.
-- Do not report ordinary conditions.
 - Preserve uncertainty where appropriate.
 - Return concise observations only.
 `;
 
   // --------------------------------------------------
-  // Synthesis context diagnostics
+  // Synthesis diagnostics
   // --------------------------------------------------
 
-  const synthesisPromptTokens =
-    estimateTokens(synthesisPrompt);
-
-  console.log("");
-
+  logSynthesisStart(
+    synthesisPrompt,
+  );
 
   // --------------------------------------------------
   // Final synthesis
   // --------------------------------------------------
 
-  const synthesisResult = streamText({
-    model: models.groq,
+  const synthesisResult =
+    streamText({
+      model: models.openrouter,
 
-    instructions: finalObserverPrompt,
+      instructions:
+        finalObserverPrompt,
 
-    prompt: synthesisPrompt,
-  });
+      prompt:
+        synthesisPrompt,
+    });
 
   let finalText = "";
 
-  for await (const textDelta of synthesisResult.textStream) {
+  for await (
+    const textDelta of
+      synthesisResult.textStream
+  ) {
     finalText += textDelta;
-    process.stdout.write(textDelta);
-  }
 
-  const synthesisUsage = await synthesisResult.usage;
-
-  // --------------------------------------------------
-  // Final usage
-  // --------------------------------------------------
-
-  console.log("");
-  console.log("");
-  console.log("==============================================");
-  console.log("Observer Usage");
-  console.log("==============================================");
-
-  console.log(
-    `Research input tokens: ${
-      researchUsage.inputTokens ?? 0
-    }`,
-  );
-
-  console.log(
-    `Research output tokens: ${
-      researchUsage.outputTokens ?? 0
-    }`,
-  );
-
-  console.log(
-    `Synthesis input tokens: ${
-      synthesisUsage.inputTokens ?? 0
-    }`,
-  );
-
-  console.log(
-    `Synthesis output tokens: ${
-      synthesisUsage.outputTokens ?? 0
-    }`,
-  );
-
-  console.log(`Research steps: ${researchSteps.length}`);
-  console.log("Final synthesis: 1");
-
-  console.log("==============================================");
-
-  // --------------------------------------------------
-  // Tool usage summary
-  // --------------------------------------------------
-
-  const toolCalls = researchSteps.flatMap(
-    (step) => step.toolCalls ?? [],
-  );
-
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log("Observer Tool Usage");
-  console.log("----------------------------------------------");
-
-  console.log(`Tool calls: ${toolCalls.length}`);
-
-  for (const toolCall of toolCalls) {
-    console.log("");
-    console.log(`Tool: ${toolCall.toolName}`);
-
-    console.log(
-      `Arguments: ${JSON.stringify(toolCall.input)}`,
+    process.stdout.write(
+      textDelta,
     );
   }
 
+  const synthesisUsage =
+    await synthesisResult.usage;
+
   // --------------------------------------------------
-  // Final Observer output
+  // Final diagnostics
   // --------------------------------------------------
 
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log("Observer Final Output");
-  console.log("----------------------------------------------");
+  logObserverUsage({
+    researchUsage,
+    synthesisUsage,
+    researchSteps:
+      researchSteps.length,
+  });
 
-  console.log(finalText || "(no text output)");
+  logObserverToolUsage(
+    researchSteps,
+  );
 
-  console.log("");
-  console.log("==============================================");
-  console.log("Observer Complete");
-  console.log("==============================================");
+  logObserverOutput(
+    finalText,
+  );
 
   return finalText;
 };

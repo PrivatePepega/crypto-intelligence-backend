@@ -15,7 +15,7 @@ export const cvSearchTool = tool({
       'Focused Boolean query, such as "bitcoin AND (etf OR approval)".',
     ),
     limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
-      "Maximum results. Free access is capped at 3.",
+      "Maximum results.",
     ),
   }),
   execute: async (input, options) => {

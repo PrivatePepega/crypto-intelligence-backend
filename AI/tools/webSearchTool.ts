@@ -31,7 +31,7 @@ export const webSearchTool = tool({
   execute: async ({ query }) => webSearch(query),
 });
 
-export const webSearch = async (query) => {
+export const webSearch = async (query: string) => {
   const provider = searchProviders.exa;
   const response = await provider.search(query, provider.searchCounter);
   return provider.normalize(response);

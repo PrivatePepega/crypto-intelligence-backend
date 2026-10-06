@@ -16,7 +16,7 @@ export const cvArticlesTagsTool = tool({
       'Crypto tag slug, such as "bitcoin", "ethereum", "etf", "defi", "stablecoin", "regulation", "hack", "institutional", or "rwa".',
     ),
     limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
-      "Maximum articles. Free access is capped at 3.",
+      "Maximum articles.",
     ),
   }),
   execute: async (input, options) => {

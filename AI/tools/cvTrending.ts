@@ -12,7 +12,7 @@ export const cvTrendingTool = tool({
     "Use early in the Crypto Observer when topic discovery matters.",
   inputSchema: z.object({
     limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
-      "Maximum trending topics. Free access is capped at 3.",
+      "Maximum trending topics.",
     ),
   }),
   execute: async (input, options) => {

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-06T00:21:41.252Z",
+  "generatedAt": "2026-10-06T19:06:30.943Z",
   "source": "current",
   "tableCount": 105,
-  "populatedTableCount": 98,
-  "emptyTableCount": 7,
+  "populatedTableCount": 105,
+  "emptyTableCount": 0,
   "tokenization": {
     "model": "gpt-4o",
     "encoding": "o200k_base",
@@ -18,17 +18,9 @@
       "significance"
     ],
     "includesData": true,
-    "totalTokens": 58056
+    "totalTokens": 60940
   },
-  "emptyTables": [
-    "aluminum",
-    "brent",
-    "copper",
-    "gold",
-    "natural_gas",
-    "silver",
-    "wti"
-  ],
+  "emptyTables": [],
   "unmatchedTables": [],
   "sharedSeriesIds": [],
   "currentData": {
@@ -283,6 +275,42 @@
       ],
       "tokenCount": 487
     },
+    "aluminum": {
+      "table": "aluminum",
+      "indicatorId": "aluminum",
+      "seriesId": "ALUMINUM",
+      "indicator": {
+        "name": "Aluminum",
+        "description": "The monthly global price of aluminum quoted in U.S. dollars per metric ton, representing the market value of aluminum across international commodity markets.",
+        "nativeTimeUnit": "month",
+        "nativeFrequency": "Monthly",
+        "unit": "Dollars per Metric Ton",
+        "use": "Monitor global aluminum prices and assess changes in manufacturing, construction, transportation, packaging, electricity demand, global industrial activity, and aluminum supply conditions.",
+        "purpose": "Provide a market-based measure of global aluminum prices for analyzing industrial commodity markets, manufacturing and construction activity, infrastructure and transportation demand, energy conditions, and changes in the global balance between aluminum supply and demand.",
+        "significance": "Aluminum is a widely used industrial metal valued for its low weight, durability, and conductivity. Its price is influenced by global manufacturing and construction activity, transportation and packaging demand, production capacity, inventories, and energy costs because primary aluminum production is highly electricity intensive. Aluminum prices therefore provide signals about the global industrial cycle, commodity supply conditions, and energy-related production pressures."
+      },
+      "data": [
+        {
+          "indicator": "aluminum",
+          "series_id": "ALUMINUM",
+          "current_value": "3158.265",
+          "previous_day_value": "3438.847272727273",
+          "net_change": "-280.582272727273",
+          "percent_change": "-8.159195523235594",
+          "moving_average_30d": "3438.847272727273",
+          "current_vs_30d_ma": "-280.582272727273",
+          "moving_average_6month": "3377.261957792208",
+          "current_vs_6month_ma": "-218.99695779220792",
+          "moving_average_12month": "3050.9336337756445",
+          "current_vs_12month_ma": "107.3313662243554",
+          "commodity": "aluminum",
+          "interval": "monthly",
+          "observed_at": "2026-07-01T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:35.670Z"
+        }
+      ],
+      "tokenCount": 401
+    },
     "aud_usd": {
       "table": "aud_usd",
       "indicatorId": "aud_usd",
@@ -319,7 +347,7 @@
           "interval": "daily",
           "timing": "end_of_day",
           "observed_at": "2026-10-05T04:00:00.000Z",
-          "updated_at": "2026-10-05T23:08:29.187Z"
+          "updated_at": "2026-10-06T17:24:24.326Z"
         }
       ],
       "tokenCount": 464
@@ -533,6 +561,42 @@
         }
       ],
       "tokenCount": 1833
+    },
+    "brent": {
+      "table": "brent",
+      "indicatorId": "brent",
+      "seriesId": "BRENT",
+      "indicator": {
+        "name": "Brent Crude Oil",
+        "description": "The daily price of Brent crude oil quoted in U.S. dollars per barrel. Brent is a major international crude oil benchmark used to represent global oil-market pricing.",
+        "nativeTimeUnit": "day",
+        "nativeFrequency": "Daily",
+        "unit": "Dollars per Barrel",
+        "use": "Monitor global crude oil prices and assess changes in international oil supply and demand, producer activity, geopolitical disruptions, energy-market conditions, inflation pressures, and global economic activity.",
+        "purpose": "Provide a market-based measure of internationally relevant crude oil prices for analyzing global energy-market conditions, oil supply and demand, geopolitical disruptions, inflationary pressures, and changes in the global economic environment.",
+        "significance": "Brent is a major global crude oil benchmark and provides a broad signal of international energy-market conditions. Its price can respond to changes in global oil supply and demand, production disruptions, geopolitical events, trade and transportation conditions, and expectations for economic activity. Brent therefore connects energy markets with inflation, geopolitics, trade, and the broader global economy."
+      },
+      "data": [
+        {
+          "indicator": "brent",
+          "series_id": "BRENT",
+          "current_value": "113.96",
+          "previous_day_value": "119.97",
+          "net_change": "-6.010000000000005",
+          "percent_change": "-5.009585729765779",
+          "moving_average_30d": "114.0815",
+          "current_vs_30d_ma": "-0.12150000000001171",
+          "moving_average_6month": "99.51071428571429",
+          "current_vs_6month_ma": "14.449285714285708",
+          "moving_average_12month": "85.32221343873518",
+          "current_vs_12month_ma": "28.637786561264818",
+          "commodity": "brent",
+          "interval": "daily",
+          "observed_at": "2026-09-29T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:34.667Z"
+        }
+      ],
+      "tokenCount": 400
     },
     "brent_ig_sentiment": {
       "table": "brent_ig_sentiment",
@@ -1907,6 +1971,42 @@
       ],
       "tokenCount": 367
     },
+    "copper": {
+      "table": "copper",
+      "indicatorId": "copper",
+      "seriesId": "COPPER",
+      "indicator": {
+        "name": "Copper",
+        "description": "The monthly global price of copper quoted in U.S. dollars per metric ton, representing the market value of copper across international commodity markets.",
+        "nativeTimeUnit": "month",
+        "nativeFrequency": "Monthly",
+        "unit": "Dollars per Metric Ton",
+        "use": "Monitor global copper prices and assess changes in industrial demand, manufacturing activity, construction, infrastructure investment, electrification, global economic growth, and copper supply conditions.",
+        "purpose": "Provide a market-based measure of global copper prices for analyzing industrial commodity markets, manufacturing and construction activity, infrastructure investment, global economic conditions, and changes in the balance between copper supply and demand.",
+        "significance": "Copper is a widely used industrial metal whose demand is closely connected to manufacturing, construction, electrical infrastructure, power systems, and economic activity. Changes in copper prices can reflect shifts in global industrial demand, infrastructure investment, mine and refinery supply, inventories, and expectations for economic growth. Copper therefore provides a useful cross-market signal for the global industrial cycle and the expansion of electrification and energy infrastructure."
+      },
+      "data": [
+        {
+          "indicator": "copper",
+          "series_id": "COPPER",
+          "current_value": "13542.82086956522",
+          "previous_day_value": "13552.04090909091",
+          "net_change": "-9.22003952569139",
+          "percent_change": "-0.06803432477470202",
+          "moving_average_30d": "13552.04090909091",
+          "current_vs_30d_ma": "-9.22003952569139",
+          "moving_average_6month": "13070.2576984127",
+          "current_vs_6month_ma": "472.5631711525184",
+          "moving_average_12month": "11766.807156095114",
+          "current_vs_12month_ma": "1776.0137134701054",
+          "commodity": "copper",
+          "interval": "monthly",
+          "observed_at": "2026-07-01T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:35.360Z"
+        }
+      ],
+      "tokenCount": 410
+    },
     "core_consumer_price_index": {
       "table": "core_consumer_price_index",
       "indicatorId": "core_cpi",
@@ -2485,7 +2585,7 @@
           "interval": "daily",
           "timing": "end_of_day",
           "observed_at": "2026-10-05T04:00:00.000Z",
-          "updated_at": "2026-10-05T23:08:28.187Z"
+          "updated_at": "2026-10-06T17:24:23.402Z"
         }
       ],
       "tokenCount": 493
@@ -2735,7 +2835,7 @@
           "interval": "daily",
           "timing": "end_of_day",
           "observed_at": "2026-10-05T04:00:00.000Z",
-          "updated_at": "2026-10-05T23:08:28.452Z"
+          "updated_at": "2026-10-06T17:24:23.639Z"
         }
       ],
       "tokenCount": 443
@@ -2783,6 +2883,42 @@
         }
       ],
       "tokenCount": 497
+    },
+    "gold": {
+      "table": "gold",
+      "indicatorId": "gold",
+      "seriesId": "GOLD",
+      "indicator": {
+        "name": "Gold",
+        "description": "The daily market price of gold quoted in U.S. dollars per troy ounce, representing the prevailing value of gold in global commodity and financial markets.",
+        "nativeTimeUnit": "day",
+        "nativeFrequency": "Daily",
+        "unit": "Dollars per Troy Ounce",
+        "use": "Monitor gold prices and assess changes in inflation expectations, real interest rates, U.S. dollar conditions, geopolitical risk, market uncertainty, investment demand, and central-bank demand for gold.",
+        "purpose": "Provide a market-based measure of gold prices for analyzing precious-metals markets, monetary and financial conditions, inflation and interest-rate expectations, global risk sentiment, and demand for gold as a reserve and store-of-value asset.",
+        "significance": "Gold is a globally traded precious metal with a distinctive role as both a commodity and financial asset. Its price can respond to changes in real interest rates, the U.S. dollar, inflation, geopolitical and economic uncertainty, investor positioning, and central-bank demand. Gold therefore provides the intelligence system with a cross-market signal connecting commodities, monetary policy, financial conditions, and global risk."
+      },
+      "data": [
+        {
+          "indicator": "gold",
+          "series_id": "GOLD",
+          "current_value": "4149.406863036",
+          "previous_day_value": "4141.2497463485",
+          "net_change": "8.157116687500093",
+          "percent_change": "0.19697234378806874",
+          "moving_average_30d": "4305.717641552244",
+          "current_vs_30d_ma": "-156.31077851624377",
+          "moving_average_6month": "4381.300229647612",
+          "current_vs_6month_ma": "-231.89336661161178",
+          "moving_average_12month": "4450.60304940494",
+          "current_vs_12month_ma": "-301.1961863689403",
+          "commodity": "gold",
+          "interval": "daily",
+          "observed_at": "2026-10-05T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:34.130Z"
+        }
+      ],
+      "tokenCount": 417
     },
     "gold_ig_sentiment": {
       "table": "gold_ig_sentiment",
@@ -3410,6 +3546,42 @@
       ],
       "tokenCount": 493
     },
+    "natural_gas": {
+      "table": "natural_gas",
+      "indicatorId": "natural_gas",
+      "seriesId": "NATURAL_GAS",
+      "indicator": {
+        "name": "Natural Gas",
+        "description": "The daily Henry Hub spot price of natural gas in U.S. dollars per million British thermal units (MMBtu), representing the benchmark price for natural gas delivered at Henry Hub in Louisiana.",
+        "nativeTimeUnit": "day",
+        "nativeFrequency": "Daily",
+        "unit": "Dollars per Million BTU",
+        "use": "Monitor U.S. natural gas prices and assess changes in energy supply and demand, weather-driven consumption, electricity generation, storage conditions, industrial activity, and energy-related inflation.",
+        "purpose": "Provide a market-based measure of U.S. natural gas prices for analyzing domestic energy-market conditions, seasonal demand, electricity-generation costs, industrial energy demand, and changes in broader economic and inflationary conditions.",
+        "significance": "Natural gas is an important U.S. energy commodity used for electricity generation, residential and commercial heating, and industrial processes. Henry Hub prices respond to changes in production, storage, weather, pipeline and infrastructure conditions, and demand from power generation and industry. Natural gas prices therefore provide signals about U.S. energy-market tightness, seasonal conditions, electricity costs, and energy-related inflation."
+      },
+      "data": [
+        {
+          "indicator": "natural_gas",
+          "series_id": "NATURAL_GAS",
+          "current_value": "3.18",
+          "previous_day_value": "3.13",
+          "net_change": "0.050000000000000266",
+          "percent_change": "1.5974440894568775",
+          "moving_average_30d": "2.9325",
+          "current_vs_30d_ma": "0.24750000000000005",
+          "moving_average_6month": "2.908333333333333",
+          "current_vs_6month_ma": "0.27166666666666694",
+          "moving_average_12month": "3.548502024291498",
+          "current_vs_12month_ma": "-0.36850202429149803",
+          "commodity": "natural_gas",
+          "interval": "daily",
+          "observed_at": "2026-09-29T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:35.027Z"
+        }
+      ],
+      "tokenCount": 421
+    },
     "nonfarm_payrolls": {
       "table": "nonfarm_payrolls",
       "indicatorId": "nonfarm_payrolls",
@@ -3461,28 +3633,28 @@
         {
           "indicator": "nzd_usd",
           "series_id": "NZDUSD",
-          "current_open": "0.5611",
-          "current_high": "0.5634",
-          "current_low": "0.5584",
-          "current_close": "0.5619",
-          "previous_close": "0.5603",
-          "net_change": "0.0015999999999999348",
-          "percent_change": "0.28556130644296535",
-          "daily_range": "0.0050000000000000044",
-          "moving_average_30d": "0.5747545454545454",
-          "current_vs_30d_ma": "-0.012854545454545452",
-          "moving_average_6month": "0.582424427480916",
-          "current_vs_6month_ma": "-0.020524427480916096",
-          "moving_average_12month": "0.5819528735632183",
-          "current_vs_12month_ma": "-0.020052873563218387",
+          "current_open": "0.5602",
+          "current_high": "0.562",
+          "current_low": "0.5578",
+          "current_close": "0.5597",
+          "previous_close": "0.5619",
+          "net_change": "-0.0021999999999999797",
+          "percent_change": "-0.3915287417689945",
+          "daily_range": "0.0042000000000000925",
+          "moving_average_30d": "0.57228",
+          "current_vs_30d_ma": "-0.012580000000000036",
+          "moving_average_6month": "0.5824538461538461",
+          "current_vs_6month_ma": "-0.022753846153846125",
+          "moving_average_12month": "0.5818723076923077",
+          "current_vs_12month_ma": "-0.022172307692307713",
           "pair": "NZD/USD",
           "interval": "daily",
           "timing": "end_of_day",
-          "observed_at": "2026-10-02T04:00:00.000Z",
-          "updated_at": "2026-10-05T23:08:29.670Z"
+          "observed_at": "2026-10-05T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:24.777Z"
         }
       ],
-      "tokenCount": 489
+      "tokenCount": 487
     },
     "personal_consumption_expenditures": {
       "table": "personal_consumption_expenditures",
@@ -3847,6 +4019,42 @@
         }
       ],
       "tokenCount": 480
+    },
+    "silver": {
+      "table": "silver",
+      "indicatorId": "silver",
+      "seriesId": "SILVER",
+      "indicator": {
+        "name": "Silver",
+        "description": "The daily market price of silver quoted in U.S. dollars per troy ounce, representing the prevailing value of silver in global commodity and financial markets.",
+        "nativeTimeUnit": "day",
+        "nativeFrequency": "Daily",
+        "unit": "Dollars per Troy Ounce",
+        "use": "Monitor silver prices and assess changes in industrial demand, economic activity, investment demand, monetary conditions, precious-metals sentiment, and demand from technology and clean-energy applications.",
+        "purpose": "Provide a market-based measure of silver prices for analyzing precious-metals markets, industrial activity, investment demand, economic conditions, and changes in the balance between financial and industrial drivers of commodity demand.",
+        "significance": "Silver has a dual role as both a precious metal and an industrial input, making its price sensitive to financial-market conditions as well as the global economic cycle. Demand from electronics, photovoltaics, automotive applications, power infrastructure, and other technologies connects silver prices to industrial activity, while investment demand and monetary conditions connect the metal to broader financial markets."
+      },
+      "data": [
+        {
+          "indicator": "silver",
+          "series_id": "SILVER",
+          "current_value": "60.8473746561",
+          "previous_day_value": "60.387376688",
+          "net_change": "0.45999796809999793",
+          "percent_change": "0.76174524102387",
+          "moving_average_30d": "64.25237930929333",
+          "current_vs_30d_ma": "-3.4050046531933305",
+          "moving_average_6month": "67.77631442760874",
+          "current_vs_6month_ma": "-6.9289397715087375",
+          "moving_average_12month": "68.76691538429588",
+          "current_vs_12month_ma": "-7.919540728195884",
+          "commodity": "silver",
+          "interval": "daily",
+          "observed_at": "2026-10-05T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:34.366Z"
+        }
+      ],
+      "tokenCount": 403
     },
     "silver_ig_sentiment": {
       "table": "silver_ig_sentiment",
@@ -4349,7 +4557,7 @@
           "interval": "daily",
           "timing": "end_of_day",
           "observed_at": "2026-10-05T04:00:00.000Z",
-          "updated_at": "2026-10-05T23:08:29.428Z"
+          "updated_at": "2026-10-06T17:24:24.569Z"
         }
       ],
       "tokenCount": 464
@@ -4434,7 +4642,7 @@
           "interval": "daily",
           "timing": "end_of_day",
           "observed_at": "2026-10-05T04:00:00.000Z",
-          "updated_at": "2026-10-05T23:08:28.948Z"
+          "updated_at": "2026-10-06T17:24:24.103Z"
         }
       ],
       "tokenCount": 452
@@ -4475,7 +4683,7 @@
           "interval": "daily",
           "timing": "end_of_day",
           "observed_at": "2026-10-05T04:00:00.000Z",
-          "updated_at": "2026-10-05T23:08:28.705Z"
+          "updated_at": "2026-10-06T17:24:23.880Z"
         }
       ],
       "tokenCount": 431
@@ -4556,6 +4764,42 @@
         }
       ],
       "tokenCount": 325
+    },
+    "wti": {
+      "table": "wti",
+      "indicatorId": "wti",
+      "seriesId": "WTI",
+      "indicator": {
+        "name": "WTI Crude Oil",
+        "description": "The daily price of West Texas Intermediate crude oil in U.S. dollars per barrel. WTI is a light, sweet crude oil benchmark associated with physical crude traded and delivered at Cushing, Oklahoma.",
+        "nativeTimeUnit": "day",
+        "nativeFrequency": "Daily",
+        "unit": "Dollars per Barrel",
+        "use": "Monitor U.S. crude oil prices and assess changes in global and domestic oil supply and demand, U.S. production, inventories, energy-market conditions, inflation pressures, economic activity, and geopolitical risks affecting oil markets.",
+        "purpose": "Provide a market-based measure of U.S. crude oil prices for analyzing energy-market conditions, petroleum supply and demand, U.S. production and inventories, inflationary pressures, and the relationship between oil markets and broader economic conditions.",
+        "significance": "WTI is a major crude oil benchmark and an important reference price for U.S. petroleum markets. Its price reflects changing expectations around crude oil supply and demand, U.S. production and inventories, refinery activity, transportation constraints, and global energy conditions. Because oil is a major input into transportation, manufacturing, and other economic activity, WTI movements can also provide signals about inflation and broader economic conditions."
+      },
+      "data": [
+        {
+          "indicator": "wti",
+          "series_id": "WTI",
+          "current_value": "96.16",
+          "previous_day_value": "99.37",
+          "net_change": "-3.210000000000008",
+          "percent_change": "-3.230351212639637",
+          "moving_average_30d": "96.858",
+          "current_vs_30d_ma": "-0.6980000000000075",
+          "moving_average_6month": "91.42738095238096",
+          "current_vs_6month_ma": "4.732619047619039",
+          "moving_average_12month": "78.60550200803213",
+          "current_vs_12month_ma": "17.554497991967864",
+          "commodity": "wti",
+          "interval": "daily",
+          "observed_at": "2026-09-29T04:00:00.000Z",
+          "updated_at": "2026-10-06T17:24:34.602Z"
+        }
+      ],
+      "tokenCount": 434
     },
     "wti_ig_sentiment": {
       "table": "wti_ig_sentiment",

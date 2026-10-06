@@ -13,7 +13,7 @@ export const cvDefiTool = tool({
     "Use for focused DeFi follow-up.",
   inputSchema: z.object({
     limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
-      "Maximum DeFi items. Free access is capped at 3.",
+      "Maximum DeFi items.",
     ),
   }),
   execute: async (input, options) => {

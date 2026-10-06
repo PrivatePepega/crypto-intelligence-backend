@@ -13,7 +13,7 @@ export const cvBitcoinNewsTool = tool({
     "Use when the Observer has a Bitcoin-specific observation to investigate.",
   inputSchema: z.object({
     limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
-      "Maximum Bitcoin articles. Free access is capped at 3.",
+      "Maximum Bitcoin articles.",
     ),
   }),
   execute: async (input, options) => {

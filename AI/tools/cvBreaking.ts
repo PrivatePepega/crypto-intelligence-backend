@@ -13,7 +13,7 @@ export const cvBreakingTool = tool({
     "High-priority first-pass tool for the Crypto Observer.",
   inputSchema: z.object({
     limit: z.number().int().min(1).max(30).default(DEFAULT_LIMIT).describe(
-      "Maximum breaking items. Free access is capped at 3.",
+      "Maximum breaking items.",
     ),
   }),
   execute: async (input, options) => {
