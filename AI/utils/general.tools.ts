@@ -24,6 +24,10 @@ import { webSearchTool } from "../tools/webSearchTool.js";
 import type { ObserverConfig } from "../weather/observer/observer.config.js";
 import { encodingForModel, type Tiktoken } from "js-tiktoken";
 import { exposeCurrentData } from "../../utils/AI/currentDataExpose.js";
+import type { RecordedStep, RecordedToolCall, SdkStep } from "../../types/AI/observer.js";
+import { getReasoningText } from "./agentResearch.js";
+
+
 
 // --------------------------------------------------
 // Agentic tooling
@@ -324,4 +328,127 @@ export const logObservableReasoning = (
       "Observable reasoning: not provided by this model/provider step.",
     );
   }
+};
+
+
+
+/**
+ * Reads a step's reasoning, wherever the provider put it.
+ *
+ * Providers differ: some expose reasoning on the step, others only on the tool
+ * call or tool result. Checking the step alone would record `null` and lose the
+ * reasoning, so each carrier is tried in turn and the first hit wins - still one
+ * copy per step.
+ */
+const stepReasoning = (
+  step: SdkStep,
+): string | null => {
+  const carriers: unknown[] = [
+    step,
+    ...(step.toolCalls ?? []),
+    ...(step.toolResults ?? []),
+  ];
+
+  for (const carrier of carriers) {
+    const found = getReasoningText(
+      carrier as SdkStep,
+    );
+
+    if (found) {
+      return found;
+    }
+  }
+
+  return null;
+};
+
+/**
+ * Collapses a research step to reasoning, query input and tool response.
+ *
+ * The SDK reports a call and its result as two objects that each repeat the
+ * tool name, the input and the provider metadata, so recording them verbatim
+ * stores the same payload four times over. Pairing them by `toolCallId` keeps
+ * each value once and drops the duplicated metadata.
+ *
+ * A result whose call was not reported is kept rather than dropped, so no tool
+ * response is ever lost.
+ */
+export const normalizeStep = (
+  step: SdkStep,
+): RecordedStep => {
+  const toolCalls = step.toolCalls ?? [];
+  const toolResults =
+    step.toolResults ?? [];
+
+  const outputByCallId =
+    new Map<string, unknown>();
+
+  for (const toolResult of toolResults) {
+    outputByCallId.set(
+      toolResult.toolCallId,
+      toolResult.output,
+    );
+  }
+
+  const paired: RecordedToolCall[] =
+    toolCalls.map((toolCall) => ({
+      toolCallId:
+        toolCall.toolCallId,
+
+      tool:
+        toolCall.toolName,
+
+      input:
+        toolCall.input,
+
+      output:
+        outputByCallId.get(
+          toolCall.toolCallId,
+        ) ?? null,
+    }));
+
+  const pairedIds = new Set(
+    paired.map(
+      (call) =>
+        call.toolCallId,
+    ),
+  );
+
+  for (const toolResult of toolResults) {
+    if (
+      pairedIds.has(
+        toolResult.toolCallId,
+      )
+    ) {
+      continue;
+    }
+
+    paired.push({
+      toolCallId:
+        toolResult.toolCallId,
+
+      tool:
+        toolResult.toolName,
+
+      input:
+        null,
+
+      output:
+        toolResult.output,
+    });
+  }
+
+  return {
+    stepNumber:
+      step.stepNumber,
+
+    text:
+      step.text ?? "",
+
+    reasoning:
+      stepReasoning(step),
+
+    toolCalls:
+      paired,
+  };
 };

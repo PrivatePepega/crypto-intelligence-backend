@@ -1,39 +1,17 @@
-import {
-  streamText,
-} from "ai";
+import {streamText,} from "ai";
 
 import { models } from "../../../AI/providers/model.js";
 
-import {
-  type ObserverConfig,
-} from "./observer.config.js";
+import {type ObserverConfig,} from "./observer.config.js";
 
-import {
-  getAgenticContext,
-  getAgenticTooling,
-} from "../../utils/general.tools.js";
+import {getAgenticContext,getAgenticTooling,estimateTokens, normalizeStep,} from "../../utils/general.tools.js";
 
-import {
-  logAgentStart,
-  logAgentPrompt,
-  logAgentResearchEvidence,
-  logAgentSynthesisStart,
-  logAgentUsage,
-  logAgentToolUsage,
-  logAgentOutput,
-  logAgentReasoning,
-  logAgentStep,
-} from "../../utils/logger.js";
+import {logAgentStart,logAgentPrompt,logAgentResearchEvidence,logAgentResearchNotes,logAgentSynthesisStart,
+logAgentUsage,logAgentToolUsage,logAgentOutput,logAgentReasoning,logAgentStep,} from "../../utils/logger.js";
 
-import {
-  getReasoningText,
-  runAgentResearch,
-} from "../../utils/agentResearch.js";
+import {getReasoningText,runAgentResearch,} from "../../utils/agentResearch.js";
 
-import {
-  createAgentRunLog,
-  type AgentRunLog,
-} from "../../utils/agentRunLog.js";
+import {createAgentRunLog,type AgentRunLog,} from "../../utils/agentRunLog.js";
 
 // --------------------------------------------------
 // Observer
@@ -71,141 +49,9 @@ const RESEARCH_EVIDENCE_MARKER =
 const RESEARCH_EVIDENCE_FORMAT =
   "JSON.stringify(researchEvidence, null, 2)";
 
-/** Structural view of the SDK shapes this module reads. */
-type SdkToolCall = {
-  toolCallId: string;
-  toolName: string;
-  input: unknown;
 
-  /** Reasoning is frequently attached here rather than on the step. */
-  providerMetadata?: unknown;
-};
 
-type SdkToolResult = {
-  toolCallId: string;
-  toolName: string;
-  output: unknown;
 
-  /** Reasoning is frequently attached here rather than on the step. */
-  providerMetadata?: unknown;
-};
-
-type SdkStep = {
-  stepNumber: number;
-  text?: string;
-  toolCalls?: SdkToolCall[];
-  toolResults?: SdkToolResult[];
-
-  // Reasoning fields are read dynamically by getReasoningText.
-  [key: string]: unknown;
-};
-
-/** One tool call paired with its response. */
-type RecordedToolCall = {
-  toolCallId: string;
-  tool: string;
-  input: unknown;
-  output: unknown;
-};
-
-/** One research step, holding each value exactly once. */
-type RecordedStep = {
-  stepNumber: number;
-  text: string;
-  reasoning: string | null;
-  toolCalls: RecordedToolCall[];
-};
-
-/**
- * Reads a step's reasoning, wherever the provider put it.
- *
- * Providers differ: some expose reasoning on the step, others only on the tool
- * call or tool result. Checking the step alone would record `null` and lose the
- * reasoning, so each carrier is tried in turn and the first hit wins - still one
- * copy per step.
- */
-const stepReasoning = (
-  step: SdkStep,
-): string | null => {
-  const carriers: unknown[] = [
-    step,
-    ...(step.toolCalls ?? []),
-    ...(step.toolResults ?? []),
-  ];
-
-  for (const carrier of carriers) {
-    const found = getReasoningText(
-      carrier as SdkStep,
-    );
-
-    if (found) {
-      return found;
-    }
-  }
-
-  return null;
-};
-
-/**
- * Collapses a research step to reasoning, query input and tool response.
- *
- * The SDK reports a call and its result as two objects that each repeat the
- * tool name, the input and the provider metadata, so recording them verbatim
- * stores the same payload four times over. Pairing them by `toolCallId` keeps
- * each value once and drops the duplicated metadata.
- *
- * A result whose call was not reported is kept rather than dropped, so no tool
- * response is ever lost.
- */
-export const normalizeStep = (
-  step: SdkStep,
-): RecordedStep => {
-  const toolCalls = step.toolCalls ?? [];
-  const toolResults = step.toolResults ?? [];
-
-  const outputByCallId = new Map<string, unknown>();
-
-  for (const toolResult of toolResults) {
-    outputByCallId.set(
-      toolResult.toolCallId,
-      toolResult.output,
-    );
-  }
-
-  const paired: RecordedToolCall[] =
-    toolCalls.map((toolCall) => ({
-      toolCallId: toolCall.toolCallId,
-      tool: toolCall.toolName,
-      input: toolCall.input,
-      output:
-        outputByCallId.get(toolCall.toolCallId) ??
-        null,
-    }));
-
-  const pairedIds = new Set(
-    paired.map((call) => call.toolCallId),
-  );
-
-  for (const toolResult of toolResults) {
-    if (pairedIds.has(toolResult.toolCallId)) {
-      continue;
-    }
-
-    paired.push({
-      toolCallId: toolResult.toolCallId,
-      tool: toolResult.toolName,
-      input: null,
-      output: toolResult.output,
-    });
-  }
-
-  return {
-    stepNumber: step.stepNumber,
-    text: step.text ?? "",
-    reasoning: stepReasoning(step),
-    toolCalls: paired,
-  };
-};
 
 /**
  * Runs the Observer, recording the run to a numbered log file.
@@ -221,7 +67,10 @@ export const normalizeStep = (
 export const runObserver = async (
   config: ObserverConfig,
 ) => {
-  const runLog = await createAgentRunLog(AGENT_NAME);
+  const runLog =
+    await createAgentRunLog(
+      AGENT_NAME,
+    );
 
   return runObserverLogged(
     config,
@@ -239,9 +88,18 @@ const runObserverLogged = async (
   config: ObserverConfig,
   runLog: AgentRunLog,
 ) => {
-  const observerContext = await getAgenticContext(config);
+  const observerContext =
+    await getAgenticContext(config);
 
-  logAgentStart( AGENT_NAME, observerContext,);
+  const initialContextTokens =
+    estimateTokens(
+      observerContext,
+    );
+
+  logAgentStart(
+    AGENT_NAME,
+    initialContextTokens,
+  );
 
   const observerPrompt = `
 You are the Observer agent for a market intelligence platform.
@@ -366,16 +224,25 @@ The research phase is complete.
 
 You have no tools available during this step.
 
-You have been given both:
+You have been given:
 
-1. The research model's notes.
-2. The raw tool evidence collected during the research phase.
+1. Deterministic foundational market context.
+2. The research model's notes.
+3. The raw tool evidence collected during the research phase.
 
-The raw tool evidence is the primary factual evidence for this synthesis.
+Use all three together.
 
-Using ONLY the collected evidence:
+The deterministic foundational context provides the current market state and context.
+
+The research notes summarize what the research phase discovered.
+
+The raw tool evidence is the primary factual evidence for the final observations.
+
+Using the supplied foundational context, research notes, and raw evidence:
 
 - produce concise observations about meaningful developments
+- use the foundational context to understand current market conditions and relationships
+- do not treat foundational context alone as proof of a news event
 - preserve uncertainty when evidence is incomplete
 - do not invent facts
 - do not invent causes
@@ -386,13 +253,27 @@ Using ONLY the collected evidence:
 
 A meaningful observation may be based directly on a single strong event or may connect multiple pieces of evidence when the relationship is supported.
 
-Do not require the research model to have explicitly repeated a tool result in its notes. The raw tool evidence is available separately and should be used directly.
+Do not require the research model to have explicitly repeated a tool result in its notes.
+
+The raw tool evidence is available separately and should be used directly.
 
 If the collected evidence contains meaningful developments, report them.
+
+After the observations, include:
+
+Research Notes:
+
+Under that heading, reproduce the supplied research notes.
+
+Do not add new facts to the Research Notes section.
 
 If the collected evidence does not support a meaningful observation, return:
 
 No meaningful developments identified.
+
+Research Notes:
+
+Then provide the supplied research notes.
 `;
 
   const prompt = `
@@ -419,19 +300,39 @@ Identify meaningful developments and produce observations.
   await runLog.record(
     "initializer",
     {
-      domain: config.domain,
-      objective: config.objective,
-      categories: config.categories,
-      configuredTools: config.tools,
-      maxSteps: MAX_AGENT_STEPS,
+      domain:
+        config.domain,
+
+      objective:
+        config.objective,
+
+      categories:
+        config.categories,
+
+      configuredTools:
+        config.tools,
+
+      maxSteps:
+        MAX_AGENT_STEPS,
+
+      initialContextTokens,
+
+      initialContextTokenization:
+        "Estimated with the local gpt-4o tokenizer; foundational context only.",
+
       instructionsCharacters:
         observerPrompt.length,
+
       finalInstructionsCharacters:
         finalObserverPrompt.length,
+
       contextCharacters:
         observerContext.length,
+
       context:
-        JSON.parse(observerContext),
+        JSON.parse(
+          observerContext,
+        ),
     },
   );
 
@@ -451,10 +352,10 @@ Identify meaningful developments and produce observations.
   // Research
   // --------------------------------------------------
 
-  const stepEntrySequences: number[] = [];
+  const stepEntrySequences: number[] =
+    [];
 
   const {
-    researchText,
     researchSteps,
     researchUsage,
     researchEvidence,
@@ -520,14 +421,8 @@ Identify meaningful developments and produce observations.
   // nothing.
 
   // --------------------------------------------------
-  // Synthesis prompt
+  // Research Notes
   // --------------------------------------------------
-
-  // Extracted so the prompt and the run log reference the same value, and so
-  // the run log can strip it back out without re-serialising.
-  const researchNotes =
-    researchText ||
-    "No research notes were produced.";
 
   const embeddedEvidence =
     JSON.stringify(
@@ -535,6 +430,71 @@ Identify meaningful developments and produce observations.
       null,
       2,
     );
+
+  const researchNotesPrompt = `
+Create concise research notes from the completed Observer research.
+
+The research phase is complete and you have no tools available.
+
+Use the raw tool evidence below as the factual basis.
+
+Your notes should:
+
+- summarize the meaningful developments discovered
+- connect related evidence when supported
+- distinguish confirmed events from speculation
+- preserve important uncertainty
+- mention important market context from the evidence
+- avoid inventing facts or causes
+- avoid deep research
+- do not write the final daily intelligence narrative
+
+Return concise plain-text research notes for the final Observer synthesis.
+
+<research_evidence>
+${embeddedEvidence}
+</research_evidence>
+`;
+
+  const researchNotesResult =
+    streamText({
+      model:
+        models.openrouter,
+
+      instructions:
+        "You are the Observer research-notes writer. Summarize the collected evidence for a final synthesis model. Do not perform additional research.",
+
+      prompt:
+        researchNotesPrompt,
+    });
+
+  const researchNotes =
+    await researchNotesResult.text;
+
+  const researchNotesUsage =
+    await researchNotesResult.usage;
+
+  const normalizedResearchNotes =
+    researchNotes.trim() ||
+    "No research notes were produced.";
+
+  logAgentResearchNotes(
+    AGENT_NAME,
+    normalizedResearchNotes,
+  );
+
+  const researchNotesEntrySequence =
+    await runLog.record(
+      "research_notes",
+      {
+        notes:
+          normalizedResearchNotes,
+      },
+    );
+
+  // --------------------------------------------------
+  // Synthesis prompt
+  // --------------------------------------------------
 
   const synthesisPrompt = `
 Produce the final Observer observations.
@@ -551,10 +511,16 @@ The areas being observed are:
 
 ${config.categories.join(", ")}
 
+The deterministic foundational market context is:
+
+<foundational_context>
+${observerContext}
+</foundational_context>
+
 The research model's notes are:
 
 <research_notes>
-${researchNotes}
+${normalizedResearchNotes}
 </research_notes>
 
 The following is the raw evidence returned by the tools during the research phase.
@@ -563,18 +529,32 @@ The following is the raw evidence returned by the tools during the research phas
 ${embeddedEvidence}
 </research_evidence>
 
-Use the raw tool evidence as the factual basis for the final observations.
+Use the foundational market context, research notes, and raw tool evidence together.
+
+The foundational context provides the deterministic current market state.
+
+Use it to understand the current market environment, relationships, changes, and context.
+
+Do not treat foundational context alone as proof that an external event occurred.
+
+The research notes summarize what the research phase discovered.
+
+The raw tool evidence is the primary factual evidence for the final observations.
 
 Important:
 
 - A tool result is evidence even if the research model did not repeat it in its notes.
 - Do not ignore tool results simply because the research notes are short or empty.
-- Do not invent facts that are not present in the evidence.
+- Use the foundational context to understand the current market state.
+- Do not invent facts that are not present in the foundational context or research evidence.
 - Do not invent causal relationships.
 - Do not perform additional research.
 - Report meaningful developments supported by the evidence.
 - Preserve uncertainty where appropriate.
-- Return concise observations only.
+- Return concise observations first.
+- After the observations, include "Research Notes:".
+- Under "Research Notes:", reproduce the supplied research notes.
+- Do not add new facts to the Research Notes section.
 `;
 
   // --------------------------------------------------
@@ -586,29 +566,34 @@ Important:
     synthesisPrompt,
   );
 
-  // The prompt actually sent is logged above in full. What is stored here is the
-  // same prompt with the two large embedded values pulled out: the notes, and
-  // the evidence, which is already recorded once across the step entries.
   await runLog.record(
     "synthesis",
     {
       prompt:
         synthesisPrompt
           .replace(
+            observerContext,
+            "{{foundationalContext}}",
+          )
+          .replace(
             embeddedEvidence,
             RESEARCH_EVIDENCE_MARKER,
           )
           .replace(
-            researchNotes,
+            normalizedResearchNotes,
             RESEARCH_NOTES_MARKER,
           ),
 
-      researchNotes,
+      researchNotes:
+        normalizedResearchNotes,
 
       researchEvidenceEntries:
         stepEntrySequences,
 
       embeddedValues: {
+        ["{{foundationalContext}}"]:
+          "observerContext, verbatim",
+
         [RESEARCH_NOTES_MARKER]:
           "researchNotes, verbatim",
 
@@ -658,7 +643,11 @@ Important:
     agentName:
       AGENT_NAME,
 
+    initialContextTokens,
+
     researchUsage,
+
+    researchNotesUsage,
 
     synthesisUsage,
 
@@ -669,10 +658,21 @@ Important:
   await runLog.record(
     "usage",
     {
+      initialContextTokens,
+
       researchUsage,
+
+      researchNotesUsage,
+
       synthesisUsage,
+
       researchSteps:
         researchSteps.length,
+
+      totalRunTokens:
+        (researchUsage.totalTokens ?? 0) +
+        (researchNotesUsage.totalTokens ?? 0) +
+        (synthesisUsage.totalTokens ?? 0),
     },
   );
 
@@ -687,7 +687,9 @@ Important:
   );
 
   const runLogPath =
-    await runLog.finish(finalText);
+    await runLog.finish(
+      finalText,
+    );
 
   runLog.note(
     `Run log written to ${runLogPath}`,
