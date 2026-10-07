@@ -1,25 +1,23 @@
-
-
 import pool from "../../config/database.js";
 import { createQueryEmbedding } from "../../utils/openai/createQueryEmbedding.js";
 import { tool } from "ai";
 import { z } from "zod";
 
-
-
-
 // --------------------------------------------------
 // Get current indicator data
 // --------------------------------------------------
 
-
-
-
+/**
+ * Indicators matched when the agent does not choose a count.
+ *
+ * Kept at 4 so omitting `limit` behaves exactly as before.
+ */
+const DEFAULT_LIMIT = 4;
 
 export const getCurrentIndicatorTool = {
   get_current_indicator: tool({
     description:
-      "Finds up to four deterministic indicators for a natural-language request and returns their current data with an explanation of what each one measures.\n\n" +
+      "Finds deterministic indicators for a natural-language request and returns their current data with an explanation of what each one measures.\n\n" +
       "Best for:\n" +
       "- actual figures - prices, flows, rates, volumes, market structure\n" +
       "- quoting a number instead of inferring one from a headline\n" +
@@ -33,34 +31,39 @@ export const getCurrentIndicatorTool = {
       query: z
         .string()
         .describe(
-          "Describe the current quantitative information needed, in natural language. Name the subject and the figure: 'current Bitcoin price and market cap', 'US federal funds rate', 'Tesla quarterly revenue'. Returns up to four matching indicators with their current data, or found: false if nothing in the catalogue matches - if that happens, rephrase with different terminology rather than assuming no data exists.",
+          "Describe the current quantitative information needed, in natural language. Name the subject and the figure: 'current Bitcoin price and market cap', 'US federal funds rate', 'Tesla quarterly revenue'. Returns the closest matching indicators with their current data, ranked by similarity, or found: false if nothing in the catalogue matches - if that happens, rephrase with different terminology rather than assuming no data exists.",
+        ),
+      limit: z
+        .number()
+        .int()
+        .min(1)
+        .max(10)
+        .default(DEFAULT_LIMIT)
+        .describe(
+          "How many matching indicators to return, ranked by similarity. Use 1-2 when you want one specific figure, and a larger number only when the request genuinely spans several measures.",
         ),
     }),
 
-    execute: async ({ query }) => {
-      const toolResponse = await getCurrentIndicatorData(query);
+    execute: async ({ query, limit }) => {
+      const toolResponse = await getCurrentIndicatorData(query, limit);
 
       return toolResponse.result;
     },
-
   }),
 };
 
+export const getCurrentIndicatorData = async (query: string, limit: number = DEFAULT_LIMIT) => {
+  const { embedding, usage } = await createQueryEmbedding(query);
 
+  const client = await pool.connect();
 
+  try {
+    // ----------------------------------------------
+    // 1. Find the closest matching indicators
+    // ----------------------------------------------
 
-export const getCurrentIndicatorData = async (query: string) => {
-    const { embedding, usage } = await createQueryEmbedding(query);
-  
-    const client = await pool.connect();
-  
-    try {
-      // ----------------------------------------------
-      // 1. Find the 3 most relevant indicators
-      // ----------------------------------------------
-  
-      const indicatorResult = await client.query(
-        `
+    const indicatorResult = await client.query(
+      `
         SELECT
           id,
           name,
@@ -81,101 +84,93 @@ export const getCurrentIndicatorData = async (query: string) => {
         WHERE status = 'active'
           AND embedding IS NOT NULL
         ORDER BY embedding <=> $1::vector
-        LIMIT 4;
+        LIMIT $2::int;
         `,
-        [JSON.stringify(embedding)],
-      );
-  
-      if (indicatorResult.rows.length === 0) {
-        return {
-          result: {
-            found: false,
-            message: "No matching indicators were found.",
-          },
-          usage,
-        };
-      }
-  
-      // ----------------------------------------------
-      // 2. Find all current tables containing series_id
-      // ----------------------------------------------
-  
-      const tableResult = await client.query(
-        `
+      [JSON.stringify(embedding), limit],
+    );
+
+    if (indicatorResult.rows.length === 0) {
+      return {
+        result: {
+          found: false,
+          message: "No matching indicators were found.",
+        },
+        usage,
+      };
+    }
+
+    // ----------------------------------------------
+    // 2. Find all current tables containing series_id
+    // ----------------------------------------------
+
+    const tableResult = await client.query(
+      `
         SELECT table_name
         FROM information_schema.columns
         WHERE table_schema = 'current'
           AND column_name = 'series_id';
         `,
-      );
-  
-      // ----------------------------------------------
-      // 3. Resolve current data for each indicator
-      // ----------------------------------------------
-  
-      const indicators = [];
-  
-      for (const indicator of indicatorResult.rows) {
-        let currentData = null;
-  
-        for (const row of tableResult.rows) {
-          const tableName = row.table_name;
-  
-          const result = await client.query(
-            `
+    );
+
+    // ----------------------------------------------
+    // 3. Resolve current data for each indicator
+    // ----------------------------------------------
+
+    const indicators = [];
+
+    for (const indicator of indicatorResult.rows) {
+      let currentData = null;
+
+      for (const row of tableResult.rows) {
+        const tableName = row.table_name;
+
+        const result = await client.query(
+          `
             SELECT *
             FROM current."${tableName}"
             WHERE series_id = $1
             LIMIT 1;
             `,
-            [indicator.series_id],
-          );
-  
-          if (result.rows.length > 0) {
-            currentData = result.rows[0];
-            break;
-          }
+          [indicator.series_id],
+        );
+
+        if (result.rows.length > 0) {
+          currentData = result.rows[0];
+          break;
         }
-  
-        // --------------------------------------------
-        // 4. Build compact indicator result
-        // --------------------------------------------
-  
-        indicators.push({
-          name: indicator.name,
-          domain: indicator.domain,
-          category: indicator.category,
-          description: indicator.description,
-          source: indicator.source,
-          nativeFrequency: indicator.native_frequency,
-          nativeAggregation: indicator.native_aggregation,
-          unit: indicator.unit,
-          significance: indicator.significance,
-          currentData,
-        });
       }
-  
-      // ----------------------------------------------
-      // 5. Return result + telemetry separately
-      // ----------------------------------------------
-  
-      return {
-        result: {
-          found: true,
-          query,
-          indicators,
-        },
-        usage,
-      };
-    } finally {
-      client.release();
+
+      // --------------------------------------------
+      // 4. Build compact indicator result
+      // --------------------------------------------
+
+      indicators.push({
+        name: indicator.name,
+        domain: indicator.domain,
+        category: indicator.category,
+        description: indicator.description,
+        source: indicator.source,
+        nativeFrequency: indicator.native_frequency,
+        nativeAggregation: indicator.native_aggregation,
+        unit: indicator.unit,
+        significance: indicator.significance,
+        currentData,
+      });
     }
-  };
 
+    // ----------------------------------------------
+    // 5. Return result + telemetry separately
+    // ----------------------------------------------
 
-
-
-
-
-
-
+    return {
+      result: {
+        found: true,
+        query,
+        indicators,
+      },
+      usage,
+    };
+  } finally {
+    client.release();
+  }
+};

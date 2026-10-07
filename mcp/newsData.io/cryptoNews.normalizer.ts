@@ -47,14 +47,20 @@ export type NormalizedCryptoNews = {
  *
  * Articles missing `title` are dropped rather than emitted with an empty
  * string, so `count` always reflects usable records.
+ *
+ * `limit` overrides {@link CRYPTO_NEWS_LIMIT} so a caller - the agent tool - can
+ * ask for fewer or more articles. It defaults to the constant, so existing
+ * callers are unaffected.
  */
-export const normalizeCryptoNews = (raw: unknown): NormalizedCryptoNews => {
+export const normalizeCryptoNews = (
+  raw: unknown,
+  limit: number = CRYPTO_NEWS_LIMIT,
+): NormalizedCryptoNews => {
   const items = readArticleRecords(raw)
-    .slice(0, CRYPTO_NEWS_LIMIT)
+    .slice(0, limit)
     .map((article) => ({
       title: typeof article.title === "string" ? article.title : "",
-      description:
-        typeof article.description === "string" ? article.description : "",
+      description: typeof article.description === "string" ? article.description : "",
     }))
     .filter((item) => item.title !== "");
 

@@ -4,14 +4,28 @@ import { models } from "../../../AI/providers/model.js";
 
 import {type ObserverConfig,} from "./observer.config.js";
 
-import {getAgenticContext,getAgenticTooling,estimateTokens, normalizeStep,} from "../../utils/general.tools.js";
+import {
+  getAgenticContext,
+  getAgenticTooling,
+  estimateTokens,
+} from "../../utils/general.tools.js";
 
-import {logAgentStart,logAgentPrompt,logAgentResearchEvidence,logAgentResearchNotes,logAgentSynthesisStart,
-logAgentUsage,logAgentToolUsage,logAgentOutput,logAgentReasoning,logAgentStep,} from "../../utils/logger.js";
+import {
+  logAgentStart,
+  logAgentPrompt,
+  logAgentResearchEvidence,
+  logAgentResearchNotes,
+  logAgentSynthesisStart,
+  logAgentUsage,
+  logAgentToolUsage,
+  logAgentOutput,
+  logAgentReasoning,
+  logAgentStep,
+  createAgentRunLog,
+  type AgentRunLog,
+} from "../../utils/logger.js";
 
-import {runAgentResearch,} from "../../utils/agentResearch.js";
-
-import {createAgentRunLog,type AgentRunLog,} from "../../utils/agentRunLog.js";
+import { runAgentResearch, normalizeStep } from "../../utils/agent.js";
 
 // --------------------------------------------------
 // Observer
@@ -607,16 +621,10 @@ Important:
   // Final synthesis
   // --------------------------------------------------
 
-  const synthesisResult =
-    streamText({
-      model:
-        models.openrouter,
-
-      instructions:
-        finalObserverPrompt,
-
-      prompt:
-        synthesisPrompt,
+  const synthesisResult = streamText({
+      model:models.openrouter,
+      instructions:finalObserverPrompt,
+      prompt:synthesisPrompt,
     });
 
   let finalText = "";

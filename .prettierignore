@@ -1,0 +1,7 @@
+node_modules
+
+# Generated measurement artifacts and captured tool output.
+# These are data, not source: reformatting them would destroy the recorded runs.
+AI/data
+utils/AI/data
+**/*.response.json

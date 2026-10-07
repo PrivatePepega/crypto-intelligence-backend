@@ -49,14 +49,20 @@ export type NormalizedMarketNews = {
  *
  * Articles missing `title` are dropped rather than emitted with an empty
  * string, so `count` always reflects usable records.
+ *
+ * `limit` overrides {@link MARKET_NEWS_LIMIT} so a caller - the agent tool - can
+ * ask for fewer or more articles. It defaults to the constant, so existing
+ * callers are unaffected.
  */
-export const normalizeMarketNews = (raw: unknown): NormalizedMarketNews => {
+export const normalizeMarketNews = (
+  raw: unknown,
+  limit: number = MARKET_NEWS_LIMIT,
+): NormalizedMarketNews => {
   const items = readArticleRecords(raw)
-    .slice(0, MARKET_NEWS_LIMIT)
+    .slice(0, limit)
     .map((article) => ({
       title: typeof article.title === "string" ? article.title : "",
-      description:
-        typeof article.description === "string" ? article.description : "",
+      description: typeof article.description === "string" ? article.description : "",
     }))
     .filter((item) => item.title !== "");
 

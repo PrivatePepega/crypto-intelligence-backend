@@ -1,61 +1,66 @@
-{
-  "name": "crypto-intelligence-backend",
-  "version": "1.0.0",
-  "description": "Crypto Research Platform",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch . --ext ts --exec tsx index.ts",
-    "start": "node index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PrivatePepega/crypto-intelligence-backend.git"
-  },
-  "keywords": [],
-  "author": "Pepega",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/PrivatePepega/crypto-intelligence-backend/issues"
-  },
-  "homepage": "https://github.com/PrivatePepega/crypto-intelligence-backend#readme",
-  "dependencies": {
-    "@ai-sdk/google": "^4.0.85",
-    "@ai-sdk/groq": "^4.0.52",
-    "@composio/core": "^0.22.0",
-    "@modelcontextprotocol/client": "^2.2.0",
-    "@modelcontextprotocol/node": "^2.1.0",
-    "@modelcontextprotocol/server": "^2.2.0",
-    "@openrouter/ai-sdk-provider": "^3.1.0",
-    "@tavily/core": "^0.7.13",
-    "ai": "^7.0.122",
-    "axios": "^1.20.0",
-    "cookie-parser": "^1.4.7",
-    "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
-    "exa-js": "^2.24.0",
-    "express": "^5.2.1",
-    "js-tiktoken": "^1.0.21",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.10.0",
-    "morgan": "^1.12.0",
-    "openai": "^7.23.0",
-    "pg": "^8.23.0",
-    "workers-ai-provider": "^4.0.0",
-    "xlsx": "^0.18.5",
-    "zod": "^4.6.1"
-  },
-  "devDependencies": {
-    "@types/cookie-parser": "^1.4.10",
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/jsonwebtoken": "^9.0.10",
-    "@types/morgan": "^1.9.10",
-    "@types/node": "^22.20.2",
-    "@types/pg": "^8.23.1",
-    "nodemon": "^3.1.14",
-    "tsx": "^4.23.13",
-    "typescript": "^7.0.2"
-  }
+﻿{
+    "name":  "crypto-intelligence-backend",
+    "version":  "1.0.0",
+    "description":  "Crypto Research Platform",
+    "main":  "index.ts",
+    "scripts":  {
+                    "test":  "echo \"Error: no test specified\" \u0026\u0026 exit 1",
+                    "dev":  "nodemon --watch . --ext ts --exec tsx index.ts",
+                    "start":  "node index.ts",
+                    "format":  "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+                    "format:check":  "prettier --check \"**/*.{ts,tsx,js,json,md}\""
+                },
+    "repository":  {
+                       "type":  "git",
+                       "url":  "git+https://github.com/PrivatePepega/crypto-intelligence-backend.git"
+                   },
+    "keywords":  [
+
+                 ],
+    "author":  "Pepega",
+    "license":  "ISC",
+    "type":  "module",
+    "bugs":  {
+                 "url":  "https://github.com/PrivatePepega/crypto-intelligence-backend/issues"
+             },
+    "homepage":  "https://github.com/PrivatePepega/crypto-intelligence-backend#readme",
+    "dependencies":  {
+                         "@ai-sdk/google":  "^4.0.85",
+                         "@ai-sdk/groq":  "^4.0.52",
+                         "@composio/core":  "^0.22.0",
+                         "@modelcontextprotocol/client":  "^2.2.0",
+                         "@modelcontextprotocol/node":  "^2.1.0",
+                         "@modelcontextprotocol/server":  "^2.2.0",
+                         "@openrouter/ai-sdk-provider":  "^3.1.0",
+                         "@tavily/core":  "^0.7.13",
+                         "ai":  "^7.0.122",
+                         "axios":  "^1.20.0",
+                         "cookie-parser":  "^1.4.7",
+                         "cors":  "^2.8.6",
+                         "dotenv":  "^17.4.2",
+                         "exa-js":  "^2.24.0",
+                         "express":  "^5.2.1",
+                         "js-tiktoken":  "^1.0.21",
+                         "jsonwebtoken":  "^9.0.3",
+                         "mongoose":  "^9.10.0",
+                         "morgan":  "^1.12.0",
+                         "openai":  "^7.23.0",
+                         "pg":  "^8.23.0",
+                         "workers-ai-provider":  "^4.0.0",
+                         "xlsx":  "^0.18.5",
+                         "zod":  "^4.6.1"
+                     },
+    "devDependencies":  {
+                            "@types/cookie-parser":  "^1.4.10",
+                            "@types/cors":  "^2.8.19",
+                            "@types/express":  "^5.0.6",
+                            "@types/jsonwebtoken":  "^9.0.10",
+                            "@types/morgan":  "^1.9.10",
+                            "@types/node":  "^22.20.2",
+                            "@types/pg":  "^8.23.1",
+                            "nodemon":  "^3.1.14",
+                            "prettier":  "^3.9.9",
+                            "tsx":  "^4.23.13",
+                            "typescript":  "^7.0.2"
+                        }
 }

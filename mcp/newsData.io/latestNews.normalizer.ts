@@ -72,9 +72,7 @@ export const truncateDescription = (value: unknown): string => {
   const lastSpace = cut.lastIndexOf(" ");
 
   const body =
-    lastSpace > DESCRIPTION_MAX_CHARS * 0.6
-      ? cut.slice(0, lastSpace).trimEnd()
-      : cut.trimEnd();
+    lastSpace > DESCRIPTION_MAX_CHARS * 0.6 ? cut.slice(0, lastSpace).trimEnd() : cut.trimEnd();
 
   return `${body}…`;
 };
@@ -101,12 +99,19 @@ export type NormalizedLatestNews = {
  * Descriptions pass through {@link truncateDescription}, so no article can
  * contribute an unbounded amount of context.
  *
+ * `limit` overrides {@link LATEST_NEWS_LIMIT} so a caller - the agent tool - can
+ * ask for fewer or more articles. It defaults to the constant, so existing
+ * callers are unaffected.
+ *
  * Articles missing `title` are dropped rather than emitted with an empty
  * string, so `count` always reflects usable records.
  */
-export const normalizeLatestNews = (raw: unknown): NormalizedLatestNews => {
+export const normalizeLatestNews = (
+  raw: unknown,
+  limit: number = LATEST_NEWS_LIMIT,
+): NormalizedLatestNews => {
   const items = readArticleRecords(raw)
-    .slice(0, LATEST_NEWS_LIMIT)
+    .slice(0, limit)
     .map((article) => ({
       title: typeof article.title === "string" ? article.title : "",
       description: truncateDescription(article.description),
