@@ -11,14 +11,12 @@ import {
 import {
   getAgenticContext,
   getAgenticTooling,
-  estimateTokens,
 } from "../../utils/general.tools.js";
 
 import {
   logAgentStart,
   logAgentPrompt,
   logAgentResearchEvidence,
-  logAgentResearchNotes,
   logAgentSynthesisStart,
   logAgentUsage,
   logAgentToolUsage,
@@ -241,16 +239,9 @@ const runObserverLogged = async (
   config: ObserverConfig,
   runLog: AgentRunLog,
 ) => {
-  const observerContext =
-    await getAgenticContext(config);
+  const observerContext = await getAgenticContext(config);
 
-  const initialContextTokens =
-    estimateTokens(observerContext);
-
-  logAgentStart(
-    AGENT_NAME,
-    initialContextTokens,
-  );
+  logAgentStart( AGENT_NAME, observerContext,);
 
   const observerPrompt = `
 You are the Observer agent for a market intelligence platform.
@@ -437,9 +428,8 @@ Identify meaningful developments and produce observations.
         observerPrompt.length,
       finalInstructionsCharacters:
         finalObserverPrompt.length,
-      initialContextTokens,
-      initialContextTokenization:
-        "Estimated with the local gpt-4o tokenizer; foundational context only.",
+      contextCharacters:
+        observerContext.length,
       context:
         JSON.parse(observerContext),
     },
@@ -530,8 +520,14 @@ Identify meaningful developments and produce observations.
   // nothing.
 
   // --------------------------------------------------
-  // Research Notes
+  // Synthesis prompt
   // --------------------------------------------------
+
+  // Extracted so the prompt and the run log reference the same value, and so
+  // the run log can strip it back out without re-serialising.
+  const researchNotes =
+    researchText ||
+    "No research notes were produced.";
 
   const embeddedEvidence =
     JSON.stringify(
@@ -539,70 +535,6 @@ Identify meaningful developments and produce observations.
       null,
       2,
     );
-
-  const researchNotesPrompt = `
-Create concise research notes from the completed Observer research.
-
-The research phase is complete and you have no tools available.
-
-Use the raw tool evidence below as the factual basis.
-
-Your notes should:
-- summarize the meaningful developments discovered
-- connect related evidence when supported
-- distinguish confirmed events from speculation
-- preserve important uncertainty
-- mention important market context from the evidence
-- avoid inventing facts or causes
-- avoid deep research
-- do not write the final daily intelligence narrative
-
-Return concise plain-text research notes for the final Observer synthesis.
-
-<research_evidence>
-${embeddedEvidence}
-</research_evidence>
-`;
-
-  const researchNotesResult =
-    streamText({
-      model:
-        models.openrouter,
-
-      instructions:
-        "You are the Observer research-notes writer. Summarize the collected evidence for a final synthesis model. Do not perform additional research.",
-
-      prompt:
-        researchNotesPrompt,
-    });
-
-  const researchNotes =
-    await researchNotesResult.text;
-
-  const researchNotesUsage =
-    await researchNotesResult.usage;
-
-  const normalizedResearchNotes =
-    researchNotes ||
-    "No research notes were produced.";
-
-  logAgentResearchNotes(
-    AGENT_NAME,
-    normalizedResearchNotes,
-  );
-
-  const researchNotesEntrySequence =
-    await runLog.record(
-      "research_notes",
-      {
-        notes:
-          normalizedResearchNotes,
-      },
-    );
-
-  // --------------------------------------------------
-  // Synthesis prompt
-  // --------------------------------------------------
 
   const synthesisPrompt = `
 Produce the final Observer observations.
@@ -619,16 +551,10 @@ The areas being observed are:
 
 ${config.categories.join(", ")}
 
-The deterministic foundational market context is:
-
-<foundational_context>
-${observerContext}
-</foundational_context>
-
 The research model's notes are:
 
 <research_notes>
-${normalizedResearchNotes}
+${researchNotes}
 </research_notes>
 
 The following is the raw evidence returned by the tools during the research phase.
@@ -637,28 +563,18 @@ The following is the raw evidence returned by the tools during the research phas
 ${embeddedEvidence}
 </research_evidence>
 
-Use the foundational market context, research notes, and raw tool evidence together.
-
-The foundational context provides the deterministic market state.
-
-The research notes summarize what the research phase discovered.
-
-The raw tool evidence is the primary factual evidence for the final observations.
+Use the raw tool evidence as the factual basis for the final observations.
 
 Important:
 
-- A tool result is evidence even if the research notes do not mention it.
-- Use the foundational context to understand current market conditions and relationships.
-- Do not treat foundational context as proof of an event unless the data supports that conclusion.
-- Do not invent facts that are not present in the foundational context or research evidence.
+- A tool result is evidence even if the research model did not repeat it in its notes.
+- Do not ignore tool results simply because the research notes are short or empty.
+- Do not invent facts that are not present in the evidence.
 - Do not invent causal relationships.
 - Do not perform additional research.
-- Report meaningful developments supported by the available evidence.
+- Report meaningful developments supported by the evidence.
 - Preserve uncertainty where appropriate.
-- Return concise observations first.
-- After the observations, include a section titled "Research Notes:".
-- Under "Research Notes:", reproduce the research notes provided above.
-- Do not add new facts to the research notes.
+- Return concise observations only.
 `;
 
   // --------------------------------------------------
@@ -670,37 +586,29 @@ Important:
     synthesisPrompt,
   );
 
+  // The prompt actually sent is logged above in full. What is stored here is the
+  // same prompt with the two large embedded values pulled out: the notes, and
+  // the evidence, which is already recorded once across the step entries.
   await runLog.record(
     "synthesis",
     {
       prompt:
         synthesisPrompt
           .replace(
-            observerContext,
-            "{{foundationalContext}}",
-          )
-          .replace(
-            normalizedResearchNotes,
-            RESEARCH_NOTES_MARKER,
-          )
-          .replace(
             embeddedEvidence,
             RESEARCH_EVIDENCE_MARKER,
+          )
+          .replace(
+            researchNotes,
+            RESEARCH_NOTES_MARKER,
           ),
 
-      researchNotes:
-        normalizedResearchNotes,
-
-      researchNotesEntry:
-        researchNotesEntrySequence,
+      researchNotes,
 
       researchEvidenceEntries:
         stepEntrySequences,
 
       embeddedValues: {
-        ["{{foundationalContext}}"]:
-          "observerContext, verbatim",
-
         [RESEARCH_NOTES_MARKER]:
           "researchNotes, verbatim",
 
@@ -752,25 +660,19 @@ Important:
 
     researchUsage,
 
-    researchNotesUsage,
-
     synthesisUsage,
 
     researchSteps:
       researchSteps.length,
-
-    initialContextTokens,
   });
 
   await runLog.record(
     "usage",
     {
       researchUsage,
-      researchNotesUsage,
       synthesisUsage,
       researchSteps:
         researchSteps.length,
-      initialContextTokens,
     },
   );
 
