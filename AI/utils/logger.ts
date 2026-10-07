@@ -8,285 +8,11 @@ import { fileURLToPath } from "node:url";
 const MODULE_DIR = path.dirname(fileURLToPath(import.meta.url));
 
 // --------------------------------------------------
-// Console logging
-// --------------------------------------------------
-// --------------------------------------------------
-// Agent start
-// --------------------------------------------------
-
-export const logAgentStart = (agentName: string, initialContextTokens: number) => {
-  console.log("");
-  console.log("==============================================");
-  console.log(`${agentName} Starting`);
-  console.log("==============================================");
-
-  console.log(`${agentName} initial context tokens (estimated): ${initialContextTokens}`);
-};
-
-// --------------------------------------------------
-// Agent prompt
-// --------------------------------------------------
-
-export const logAgentPrompt = (agentName: string, prompt: string) => {
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log(`${agentName} Prompt`);
-  console.log("----------------------------------------------");
-
-  console.log(prompt);
-};
-
-// --------------------------------------------------
-// Agent research step
-// --------------------------------------------------
-
-export const logAgentStep = (agentName: string, step: any) => {
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log(`${agentName} Research Step ${step.stepNumber + 1}`);
-  console.log("----------------------------------------------");
-
-  if (step.toolCalls?.length > 0) {
-    console.log("");
-    console.log("Tool call:");
-
-    for (const toolCall of step.toolCalls) {
-      console.log(`Tool: ${toolCall.toolName}`);
-
-      console.log(`Arguments: ${JSON.stringify(toolCall.input, null, 2)}`);
-    }
-  }
-
-  if (step.toolResults?.length > 0) {
-    console.log("");
-
-    for (const toolResult of step.toolResults) {
-      console.log(`Tool result: ${toolResult.toolName}`);
-
-      console.log(`Result: ${JSON.stringify(toolResult.output, null, 2)}`);
-    }
-  }
-
-  console.log("");
-  console.log(`${agentName} Research Step ${step.stepNumber + 1} complete.`);
-};
-
-// --------------------------------------------------
-// Observable reasoning
-// --------------------------------------------------
-
-export const logAgentReasoning = (agentName: string, reasoningText: string | null) => {
-  if (!reasoningText) {
-    return;
-  }
-
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log(`${agentName} Observable Reasoning`);
-  console.log("----------------------------------------------");
-
-  console.log(reasoningText);
-};
-
-// --------------------------------------------------
-// Observable reasoning diagnostics
-// --------------------------------------------------
-//
-// These fields are intentionally read dynamically. Not every provider/model
-// exposes reasoning data, and the exact shape depends on the provider and AI SDK
-// version.
-//
-// This does NOT expose private chain-of-thought. It only logs reasoning
-// metadata/content that the provider actually makes available to the SDK.
-// --------------------------------------------------
-
-export const logObservableReasoning = (step: unknown) => {
-  if (typeof step !== "object" || step === null) return;
-
-  const stepData = step as Record<string, unknown>;
-
-  const reasoningFields = ["reasoning", "reasoningText", "reasoningDetails", "reasoningContent"];
-
-  let foundReasoning = false;
-
-  for (const field of reasoningFields) {
-    const value = stepData[field];
-
-    if (value === undefined || value === null || value === "") continue;
-
-    foundReasoning = true;
-
-    console.log("");
-    console.log(`Observable ${field}:`);
-
-    if (typeof value === "string") {
-      console.log(value);
-    } else {
-      console.log(JSON.stringify(value, null, 2));
-    }
-  }
-
-  if (!foundReasoning) {
-    console.log("");
-    console.log("Observable reasoning: not provided by this model/provider step.");
-  }
-};
-
-// --------------------------------------------------
-// Research evidence
-// --------------------------------------------------
-
-export const logAgentResearchEvidence = (agentName: string, researchEvidence: unknown) => {
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log(`${agentName} Research Evidence`);
-  console.log("----------------------------------------------");
-
-  console.log(JSON.stringify(researchEvidence, null, 2));
-};
-
-// --------------------------------------------------
-// Research notes
-// --------------------------------------------------
-
-export const logAgentResearchNotes = (agentName: string, researchNotes: string) => {
-  console.log("");
-  console.log("----------------------------------------------");
-  console.log(`${agentName} Research Notes`);
-  console.log("----------------------------------------------");
-
-  console.log(researchNotes);
-};
-
-// --------------------------------------------------
-// Formatter start
-// --------------------------------------------------
-
-export const logAgentFormatterStart = (agentName: string, formatterPrompt: string) => {
-  console.log("");
-  console.log("==============================================");
-  console.log(`${agentName} Final Formatter Starting`);
-  console.log("==============================================");
-
-  console.log("");
-  console.log("Formatter Prompt");
-  console.log("----------------------------------------------");
-
-  console.log(formatterPrompt);
-};
-
-// --------------------------------------------------
-// Usage
-// --------------------------------------------------
-
-/**
- * Logs token usage for a three-phase agent run: research, research notes,
- * then formatting.
- *
- * All three phases must be supplied. `researchNotesUsage` is read unguarded
- * (`.totalTokens` off the object), so omitting it throws rather than printing
- * zeroes.
- */
-export const logAgentUsage = ({
-  agentName,
-  initialContextTokens,
-  researchUsage,
-  researchNotesUsage,
-  formatterUsage,
-  researchSteps,
-}: {
-  agentName: string;
-  initialContextTokens: number;
-  researchUsage: LanguageModelUsage;
-  researchNotesUsage: LanguageModelUsage;
-  formatterUsage: LanguageModelUsage;
-  researchSteps: number;
-}) => {
-  const researchTotalTokens = researchUsage.totalTokens ?? 0;
-
-  const researchNotesTotalTokens = researchNotesUsage.totalTokens ?? 0;
-
-  const formatterTotalTokens = formatterUsage.totalTokens ?? 0;
-
-  const totalRunTokens = researchTotalTokens + researchNotesTotalTokens + formatterTotalTokens;
-
-  console.log("");
-  console.log("==============================================");
-  console.log(`${agentName} Usage`);
-  console.log("==============================================");
-
-  console.log("");
-  console.log("Research initial context:");
-  console.log(`Estimated tokens: ${initialContextTokens}`);
-
-  console.log("");
-  console.log("Research cumulative:");
-  console.log(`Input tokens: ${researchUsage.inputTokens ?? 0}`);
-  console.log(`Output tokens: ${researchUsage.outputTokens ?? 0}`);
-  console.log(`Total tokens: ${researchTotalTokens}`);
-
-  console.log("");
-  console.log("Research Notes:");
-  console.log(`Input tokens: ${researchNotesUsage.inputTokens ?? 0}`);
-  console.log(`Output tokens: ${researchNotesUsage.outputTokens ?? 0}`);
-  console.log(`Total tokens: ${researchNotesTotalTokens}`);
-
-  console.log("");
-  console.log("Formatter:");
-  console.log(`Input tokens: ${formatterUsage.inputTokens ?? 0}`);
-  console.log(`Output tokens: ${formatterUsage.outputTokens ?? 0}`);
-  console.log(`Total tokens: ${formatterTotalTokens}`);
-
-  console.log("");
-  console.log(`TOTAL RUN TOKENS: ${totalRunTokens}`);
-
-  console.log("");
-  console.log(`Research steps: ${researchSteps}`);
-
-  console.log("Research Notes: 1");
-
-  console.log("Final formatting: 1");
-
-  console.log("==============================================");
-};
-
-// --------------------------------------------------
-// Tool usage
-// --------------------------------------------------
-
-export const logAgentToolUsage = (agentName: string, researchSteps: any[]) => {
-  console.log("");
-  console.log("==============================================");
-  console.log(`${agentName} Tool Usage`);
-  console.log("==============================================");
-
-  for (const step of researchSteps) {
-    for (const toolCall of step.toolCalls ?? []) {
-      console.log(`Step ${step.stepNumber + 1}: ${toolCall.toolName}`);
-    }
-  }
-};
-
-// --------------------------------------------------
-// Final output
-// --------------------------------------------------
-
-export const logAgentOutput = (agentName: string, finalText: string) => {
-  console.log("");
-  console.log("==============================================");
-  console.log(`${agentName} Output`);
-  console.log("==============================================");
-
-  console.log(finalText);
-};
-
-// --------------------------------------------------
 // Run logging (JSON artifacts)
 // --------------------------------------------------
 //
 // A numbered JSON file per run under AI/data/<agent name>/, holding the
-// structured entries an agent records plus the console transcript when capture
-// is enabled. See createAgentRunLog.
+// structured entries an agent records. See createAgentRunLog.
 // --------------------------------------------------
 
 // --------------------------------------------------
@@ -561,96 +287,6 @@ const normalizeMultiline = (value: unknown, ancestors: object[] = []): unknown =
 };
 
 // --------------------------------------------------
-// Console capture
-// --------------------------------------------------
-
-type ConsoleMethod = "log" | "info" | "warn" | "error" | "debug";
-
-const CONSOLE_METHODS: ConsoleMethod[] = ["log", "info", "warn", "error", "debug"];
-
-/**
- * Renders one console argument as text.
- *
- * Objects are stringified rather than inspected, because the point is to
- * reproduce what a terminal would have shown.
- */
-const formatConsoleArg = (value: unknown): string => {
-  if (typeof value === "string") {
-    return value;
-  }
-
-  if (value instanceof Error) {
-    return value.stack ?? `${value.name}: ${value.message}`;
-  }
-
-  if (typeof value === "bigint") {
-    return `${value}n`;
-  }
-
-  if (typeof value === "object" && value !== null) {
-    return safeJson(value);
-  }
-
-  if (typeof value === "function" || typeof value === "symbol") {
-    return safeJson(value);
-  }
-
-  return String(value);
-};
-
-/**
- * Tees `console.log` and friends into `onLine` until the returned function is
- * called.
- *
- * Console methods are swapped rather than the output stream itself, so
- * everything reaching the terminal is still recorded. The originals are
- * restored on stop, and stop is safe to call more than once.
- *
- * Limitation: capture is process-wide, not per-agent. Concurrent agents would
- * interleave into each other's transcripts. Runs are sequential today.
- *
- * This module never calls `console` itself, so a run log cannot capture its own
- * output.
- */
-export const captureConsole = (onLine: (line: string) => void): (() => void) => {
-  const originals = new Map<ConsoleMethod, typeof console.log>();
-
-  let stopped = false;
-
-  for (const method of CONSOLE_METHODS) {
-    const original = console[method];
-
-    originals.set(method, original);
-
-    console[method] = ((...args: unknown[]): void => {
-      try {
-        onLine(args.map(formatConsoleArg).join(" "));
-      } catch {
-        onLine("[unrenderable console output]");
-      }
-
-      original.apply(console, args);
-    }) as typeof console.log;
-  }
-
-  return () => {
-    if (stopped) {
-      return;
-    }
-
-    stopped = true;
-
-    for (const method of CONSOLE_METHODS) {
-      const original = originals.get(method);
-
-      if (original) {
-        console[method] = original;
-      }
-    }
-  };
-};
-
-// --------------------------------------------------
 // Run log
 // --------------------------------------------------
 
@@ -701,15 +337,6 @@ export type AgentRunDocument = {
   entryCount: number;
   entries: AgentRunEntry[];
   response: AgentRunText | null;
-
-  /**
-   * Console transcript, present only when console capture was enabled.
-   *
-   * Omitted rather than written empty: an agent whose every log line is also
-   * recorded as a structured entry gains nothing from a transcript that only
-   * repeats those entries.
-   */
-  console?: AgentRunText[];
 };
 
 export type AgentRunLog = {
@@ -727,10 +354,6 @@ export type AgentRunLog = {
    * one instead of duplicating its payload. Resolves to `0` if the write failed.
    */
   record: (section: AgentRunSection, data?: unknown) => Promise<number>;
-  /** Appends one line to the console transcript. */
-  note: (line: string) => void;
-  /** Tees the console into the transcript until the returned function runs. */
-  captureConsole: () => () => void;
   /** Writes the final document and returns its path. */
   finish: (response?: string) => Promise<string>;
 };
@@ -751,7 +374,6 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
   await fs.mkdir(directory, { recursive: true });
 
   const entries: AgentRunEntry[] = [];
-  const transcript: string[] = [];
   const startedAt = new Date().toISOString();
 
   let response: string | null = null;
@@ -763,8 +385,7 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
   let relativeFile = "";
 
   const buildDocument = (): AgentRunDocument => {
-    // Applied here rather than at capture time, so the transcript keeps one
-    // entry per console call and only the written form is split into lines.
+    // Applied at write time, so only the stored form is split into lines.
     const document: AgentRunDocument = {
       agentName,
       runNumber,
@@ -777,10 +398,6 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
 
       response: response === null ? null : (normalizeMultiline(response) as AgentRunText),
     };
-
-    if (transcript.length > 0) {
-      document.console = normalizeMultiline(transcript) as AgentRunText[];
-    }
 
     return document;
   };
@@ -819,10 +436,6 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
     await fs.writeFile(filePath, safeJson(buildDocument()), "utf8");
   };
 
-  const note = (line: string): void => {
-    transcript.push(line);
-  };
-
   const record = async (section: AgentRunSection, data?: unknown): Promise<number> => {
     const sequence = entries.length + 1;
 
@@ -847,21 +460,14 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
     record: async (section, data) => {
       try {
         return await record(section, data);
-      } catch (error) {
-        // A logging failure must not abort the agent run it is describing.
-        note(
-          `[run log write failed for "${section}": ${
-            error instanceof Error ? error.message : String(error)
-          }]`,
-        );
-
+      } catch {
+        // A logging failure must not abort the agent run it is describing, so
+        // the error is swallowed rather than surfaced: with console output gone
+        // there is nowhere to report it without adding back the channel we just
+        // removed.
         return 0;
       }
     },
-
-    note,
-
-    captureConsole: () => captureConsole(note),
 
     finish: async (finalResponse) => {
       if (finalResponse !== undefined) {
@@ -872,11 +478,7 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
         await persist();
 
         return filePath;
-      } catch (error) {
-        note(
-          `[run log final write failed: ${error instanceof Error ? error.message : String(error)}]`,
-        );
-
+      } catch {
         return filePath;
       }
     },

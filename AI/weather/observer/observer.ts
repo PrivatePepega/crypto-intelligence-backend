@@ -6,20 +6,7 @@ import { type ObserverConfig } from "./observer.config.js";
 
 import { getAgenticContext, getAgenticTooling, estimateTokens } from "../../utils/general.tools.js";
 
-import {
-  logAgentStart,
-  logAgentPrompt,
-  logAgentResearchEvidence,
-  logAgentResearchNotes,
-  logAgentUsage,
-  logAgentToolUsage,
-  logAgentOutput,
-  logAgentReasoning,
-  logAgentStep,
-  logAgentFormatterStart,
-  createAgentRunLog,
-  type AgentRunLog,
-} from "../../utils/logger.js";
+import { createAgentRunLog, type AgentRunLog } from "../../utils/logger.js";
 
 import { getReasoningText, normalizeStep } from "../../utils/agent.js";
 
@@ -62,10 +49,11 @@ const RESEARCH_NOTES_INSTRUCTIONS =
   "You are the Observer research-notes writer. Summarize the collected evidence for the final Formatter model. Do not perform additional research.";
 
 /**
- * Runs the Observer, recording the run to a numbered log file.
+ * Runs the Observer, recording the run to a numbered JSON log file.
  *
- * The console transcript is deliberately not captured. Every line the logger
- * prints is already recorded as a structured entry.
+ * The run log is the only output. Nothing is printed: every phase is recorded as
+ * a structured entry as it completes, and the run fails loudly if the log cannot
+ * be written rather than degrading to console output.
  */
 export const runObserver = async (config: ObserverConfig) => {
   const runLog = await createAgentRunLog(AGENT_NAME);
@@ -83,8 +71,6 @@ const runObserverLogged = async (config: ObserverConfig, runLog: AgentRunLog) =>
   const observerContext = await getAgenticContext(config);
 
   const initialContextTokens = estimateTokens(observerContext);
-
-  logAgentStart(AGENT_NAME, initialContextTokens);
 
   // --------------------------------------------------
   // Observer prompts
@@ -190,8 +176,6 @@ Identify meaningful developments and produce observations.
     context: JSON.parse(observerContext),
   });
 
-  logAgentPrompt(AGENT_NAME, observerDevPrompt);
-
   await runLog.record("prompt", {
     prompt: observerDevPrompt,
   });
@@ -212,8 +196,6 @@ Identify meaningful developments and produce observations.
     stopWhen: isStepCount(MAX_AGENT_STEPS),
 
     onStepEnd: async (step) => {
-      logAgentStep(AGENT_NAME, step);
-
       await runLog.record("step", normalizeStep(step));
     },
   });
@@ -246,8 +228,6 @@ Identify meaningful developments and produce observations.
     }
   }
 
-  logAgentReasoning(AGENT_NAME, lastReasoningText);
-
   await runLog.record("reasoning", lastReasoningText);
 
   // --------------------------------------------------
@@ -273,8 +253,6 @@ Identify meaningful developments and produce observations.
         result: toolResult.output,
       })),
     }));
-
-  logAgentResearchEvidence(AGENT_NAME, observerEvidence);
 
   // --------------------------------------------------
   // Research Notes
@@ -325,8 +303,6 @@ ${embeddedObserverEvidence}
   // still needs a value to interpolate, and an empty string would produce an
   // empty <research_notes> block that reads as "no evidence found".
   const normalizedResearchNotes = researchNotes.trim() || "No research notes were produced.";
-
-  logAgentResearchNotes(AGENT_NAME, normalizedResearchNotes);
 
   await runLog.record("research_notes", {
     notes: normalizedResearchNotes,
@@ -406,8 +382,6 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   // Formatter diagnostics
   // --------------------------------------------------
 
-  logAgentFormatterStart(AGENT_NAME, formatterDevPrompt);
-
   // No `researchNotes` field here: the notes are already recorded once in their
   // own entry above, so repeating them in the formatter entry duplicated ~3 KB
   // per run. The marker still stays in the prompt, because the rendered prompt
@@ -443,8 +417,6 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
 
   for await (const textDelta of formatterResult.textStream) {
     finalText += textDelta;
-
-    process.stdout.write(textDelta);
   }
 
   const formatterUsage = await formatterResult.usage;
@@ -452,20 +424,6 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   // --------------------------------------------------
   // Final diagnostics
   // --------------------------------------------------
-
-  logAgentUsage({
-    agentName: AGENT_NAME,
-
-    initialContextTokens,
-
-    researchUsage: observerUsage,
-
-    researchNotesUsage,
-
-    formatterUsage,
-
-    researchSteps: observerSteps.length,
-  });
 
   await runLog.record("usage", {
     initialContextTokens,
@@ -484,13 +442,7 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
       (formatterUsage.totalTokens ?? 0),
   });
 
-  logAgentToolUsage(AGENT_NAME, observerSteps);
-
-  logAgentOutput(AGENT_NAME, finalText);
-
   const runLogPath = await runLog.finish(finalText);
-
-  runLog.note(`Run log written to ${runLogPath}`);
 
   return finalText;
 };
