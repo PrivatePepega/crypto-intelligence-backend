@@ -11,10 +11,10 @@ import { searchYou } from "../providers/webSearch/you/client.js";
 import { normalizeYouResults } from "../providers/webSearch/you/normalizer.js";
 
 export const searchProviders = {
-  exa: { searchCounter: 10, search: searchExa, normalize: normalizeExaResults },
-  tavily: { searchCounter: 10, search: searchTavily, normalize: normalizeTavilyResults },
-  brave: { searchCounter: 10, search: searchBrave, normalize: normalizeBraveResults },
-  you: { searchCounter: 10, search: searchYou, normalize: normalizeYouResults },
+  exa: { searchCounter: 30, search: searchExa, normalize: normalizeExaResults },
+  tavily: { searchCounter: 30, search: searchTavily, normalize: normalizeTavilyResults },
+  brave: { searchCounter: 30, search: searchBrave, normalize: normalizeBraveResults },
+  you: { searchCounter: 30, search: searchYou, normalize: normalizeYouResults },
 };
 
 export const webSearchTool = tool({

@@ -9,7 +9,7 @@ import {getAgenticContext,getAgenticTooling,estimateTokens, normalizeStep,} from
 import {logAgentStart,logAgentPrompt,logAgentResearchEvidence,logAgentResearchNotes,logAgentSynthesisStart,
 logAgentUsage,logAgentToolUsage,logAgentOutput,logAgentReasoning,logAgentStep,} from "../../utils/logger.js";
 
-import {getReasoningText,runAgentResearch,} from "../../utils/agentResearch.js";
+import {runAgentResearch,} from "../../utils/agentResearch.js";
 
 import {createAgentRunLog,type AgentRunLog,} from "../../utils/agentRunLog.js";
 
