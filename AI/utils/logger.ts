@@ -179,28 +179,33 @@ export const logAgentSynthesisStart = (agentName: string, synthesisPrompt: strin
 // Usage
 // --------------------------------------------------
 
+/**
+ * Logs token usage for a two-phase agent run: research, then synthesis.
+ *
+ * There is no separate notes phase, so there is no notes field to pass. An
+ * earlier three-phase shape took `researchNotesUsage` and read
+ * `.totalTokens` off it unguarded, so omitting it threw rather than printing
+ * zeroes - which is why a missing phase has to be removed from this signature,
+ * not passed as `undefined`.
+ */
 export const logAgentUsage = ({
   agentName,
   initialContextTokens,
   researchUsage,
-  researchNotesUsage,
   synthesisUsage,
   researchSteps,
 }: {
   agentName: string;
   initialContextTokens: number;
   researchUsage: LanguageModelUsage;
-  researchNotesUsage: LanguageModelUsage;
   synthesisUsage: LanguageModelUsage;
   researchSteps: number;
 }) => {
   const researchTotalTokens = researchUsage.totalTokens ?? 0;
 
-  const researchNotesTotalTokens = researchNotesUsage.totalTokens ?? 0;
-
   const synthesisTotalTokens = synthesisUsage.totalTokens ?? 0;
 
-  const totalRunTokens = researchTotalTokens + researchNotesTotalTokens + synthesisTotalTokens;
+  const totalRunTokens = researchTotalTokens + synthesisTotalTokens;
 
   console.log("");
   console.log("==============================================");
@@ -218,12 +223,6 @@ export const logAgentUsage = ({
   console.log(`Total tokens: ${researchTotalTokens}`);
 
   console.log("");
-  console.log("Research Notes:");
-  console.log(`Input tokens: ${researchNotesUsage.inputTokens ?? 0}`);
-  console.log(`Output tokens: ${researchNotesUsage.outputTokens ?? 0}`);
-  console.log(`Total tokens: ${researchNotesTotalTokens}`);
-
-  console.log("");
   console.log("Synthesis:");
   console.log(`Input tokens: ${synthesisUsage.inputTokens ?? 0}`);
   console.log(`Output tokens: ${synthesisUsage.outputTokens ?? 0}`);
@@ -234,8 +233,6 @@ export const logAgentUsage = ({
 
   console.log("");
   console.log(`Research steps: ${researchSteps}`);
-
-  console.log("Research Notes: 1");
 
   console.log("Final synthesis: 1");
 
