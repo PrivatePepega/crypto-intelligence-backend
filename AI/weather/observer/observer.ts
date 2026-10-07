@@ -1,14 +1,10 @@
-import {streamText,} from "ai";
+import { streamText } from "ai";
 
 import { models } from "../../../AI/providers/model.js";
 
-import {type ObserverConfig,} from "./observer.config.js";
+import { type ObserverConfig } from "./observer.config.js";
 
-import {
-  getAgenticContext,
-  getAgenticTooling,
-  estimateTokens,
-} from "../../utils/general.tools.js";
+import { getAgenticContext, getAgenticTooling, estimateTokens } from "../../utils/general.tools.js";
 
 import {
   logAgentStart,
@@ -53,19 +49,12 @@ const AGENT_NAME = "Weather Observer";
  * these markers plus the sequence number of that entry. Substituting the
  * recorded value back in reproduces the prompt exactly.
  */
-const RESEARCH_NOTES_MARKER =
-  "{{researchNotes}}";
+const RESEARCH_NOTES_MARKER = "{{researchNotes}}";
 
-const RESEARCH_EVIDENCE_MARKER =
-  "{{researchEvidence}}";
+const RESEARCH_EVIDENCE_MARKER = "{{researchEvidence}}";
 
 /** How the evidence is inlined, so the prompt can be rebuilt exactly. */
-const RESEARCH_EVIDENCE_FORMAT =
-  "JSON.stringify(researchEvidence, null, 2)";
-
-
-
-
+const RESEARCH_EVIDENCE_FORMAT = "JSON.stringify(researchEvidence, null, 2)";
 
 /**
  * Runs the Observer, recording the run to a numbered log file.
@@ -78,18 +67,10 @@ const RESEARCH_EVIDENCE_FORMAT =
  * `runLog.captureConsole()` remains available for an agent that has no
  * structured equivalent.
  */
-export const runObserver = async (
-  config: ObserverConfig,
-) => {
-  const runLog =
-    await createAgentRunLog(
-      AGENT_NAME,
-    );
+export const runObserver = async (config: ObserverConfig) => {
+  const runLog = await createAgentRunLog(AGENT_NAME);
 
-  return runObserverLogged(
-    config,
-    runLog,
-  );
+  return runObserverLogged(config, runLog);
 };
 
 /**
@@ -98,22 +79,12 @@ export const runObserver = async (
  * Split out of {@link runObserver} so the run-log handle stays an explicit
  * dependency rather than something reached for from module scope.
  */
-const runObserverLogged = async (
-  config: ObserverConfig,
-  runLog: AgentRunLog,
-) => {
-  const observerContext =
-    await getAgenticContext(config);
+const runObserverLogged = async (config: ObserverConfig, runLog: AgentRunLog) => {
+  const observerContext = await getAgenticContext(config);
 
-  const initialContextTokens =
-    estimateTokens(
-      observerContext,
-    );
+  const initialContextTokens = estimateTokens(observerContext);
 
-  logAgentStart(
-    AGENT_NAME,
-    initialContextTokens,
-  );
+  logAgentStart(AGENT_NAME, initialContextTokens);
 
   const observerPrompt = `
 You are the Observer agent for a market intelligence platform.
@@ -297,12 +268,7 @@ Objective:
 ${config.objective}
 
 Areas of observation:
-${config.categories
-    .map(
-      (category) =>
-        `- ${category}`,
-    )
-    .join("\n")}
+${config.categories.map((category) => `- ${category}`).join("\n")}
 
 Identify meaningful developments and produce observations.
 `;
@@ -311,99 +277,59 @@ Identify meaningful developments and produce observations.
   // Prompt diagnostics
   // --------------------------------------------------
 
-  await runLog.record(
-    "initializer",
-    {
-      domain:
-        config.domain,
+  await runLog.record("initializer", {
+    domain: config.domain,
 
-      objective:
-        config.objective,
+    objective: config.objective,
 
-      categories:
-        config.categories,
+    categories: config.categories,
 
-      configuredTools:
-        config.tools,
+    configuredTools: config.tools,
 
-      maxSteps:
-        MAX_AGENT_STEPS,
+    maxSteps: MAX_AGENT_STEPS,
 
-      initialContextTokens,
+    initialContextTokens,
 
-      initialContextTokenization:
-        "Estimated with the local gpt-4o tokenizer; foundational context only.",
+    initialContextTokenization:
+      "Estimated with the local gpt-4o tokenizer; foundational context only.",
 
-      instructionsCharacters:
-        observerPrompt.length,
+    instructionsCharacters: observerPrompt.length,
 
-      finalInstructionsCharacters:
-        finalObserverPrompt.length,
+    finalInstructionsCharacters: finalObserverPrompt.length,
 
-      contextCharacters:
-        observerContext.length,
+    contextCharacters: observerContext.length,
 
-      context:
-        JSON.parse(
-          observerContext,
-        ),
-    },
-  );
+    context: JSON.parse(observerContext),
+  });
 
-  logAgentPrompt(
-    AGENT_NAME,
+  logAgentPrompt(AGENT_NAME, prompt);
+
+  await runLog.record("prompt", {
     prompt,
-  );
-
-  await runLog.record(
-    "prompt",
-    {
-      prompt,
-    },
-  );
+  });
 
   // --------------------------------------------------
   // Research
   // --------------------------------------------------
 
-  const stepEntrySequences: number[] =
-    [];
+  const stepEntrySequences: number[] = [];
 
-  const {
-    researchSteps,
-    researchUsage,
-    researchEvidence,
-    lastReasoningText,
-  } =
+  const { researchSteps, researchUsage, researchEvidence, lastReasoningText } =
     await runAgentResearch({
-      model:
-        models.openrouter,
+      model: models.openrouter,
 
-      instructions:
-        observerPrompt,
+      instructions: observerPrompt,
 
       prompt,
 
-      tools:
-        getAgenticTooling(config),
+      tools: getAgenticTooling(config),
 
-      maxSteps:
-        MAX_AGENT_STEPS,
+      maxSteps: MAX_AGENT_STEPS,
 
-      onStepEnd: async (
-        step,
-      ) => {
-        logAgentStep(
-          AGENT_NAME,
-          step,
-        );
+      onStepEnd: async (step) => {
+        logAgentStep(AGENT_NAME, step);
 
-        stepEntrySequences.push(
-          await runLog.record(
-            "step",
-            normalizeStep(step),
-          ),
-        );
+        stepEntrySequences.push(await runLog.record("step", normalizeStep(step)));
       },
     });
 
@@ -411,24 +337,15 @@ Identify meaningful developments and produce observations.
   // Final observable reasoning
   // --------------------------------------------------
 
-  logAgentReasoning(
-    AGENT_NAME,
-    lastReasoningText,
-  );
+  logAgentReasoning(AGENT_NAME, lastReasoningText);
 
-  await runLog.record(
-    "reasoning",
-    lastReasoningText,
-  );
+  await runLog.record("reasoning", lastReasoningText);
 
   // --------------------------------------------------
   // Research evidence diagnostics
   // --------------------------------------------------
 
-  logAgentResearchEvidence(
-    AGENT_NAME,
-    researchEvidence,
-  );
+  logAgentResearchEvidence(AGENT_NAME, researchEvidence);
 
   // No `evidence` entry: every value it holds is already recorded once in the
   // `step` entries above. Storing it again doubled the step payloads for
@@ -438,12 +355,7 @@ Identify meaningful developments and produce observations.
   // Research Notes
   // --------------------------------------------------
 
-  const embeddedEvidence =
-    JSON.stringify(
-      researchEvidence,
-      null,
-      2,
-    );
+  const embeddedEvidence = JSON.stringify(researchEvidence, null, 2);
 
   const researchNotesPrompt = `
 Create concise research notes from the completed Observer research.
@@ -470,41 +382,26 @@ ${embeddedEvidence}
 </research_evidence>
 `;
 
-  const researchNotesResult =
-    streamText({
-      model:
-        models.openrouter,
+  const researchNotesResult = streamText({
+    model: models.openrouter,
 
-      instructions:
-        "You are the Observer research-notes writer. Summarize the collected evidence for a final synthesis model. Do not perform additional research.",
+    instructions:
+      "You are the Observer research-notes writer. Summarize the collected evidence for a final synthesis model. Do not perform additional research.",
 
-      prompt:
-        researchNotesPrompt,
-    });
+    prompt: researchNotesPrompt,
+  });
 
-  const researchNotes =
-    await researchNotesResult.text;
+  const researchNotes = await researchNotesResult.text;
 
-  const researchNotesUsage =
-    await researchNotesResult.usage;
+  const researchNotesUsage = await researchNotesResult.usage;
 
-  const normalizedResearchNotes =
-    researchNotes.trim() ||
-    "No research notes were produced.";
+  const normalizedResearchNotes = researchNotes.trim() || "No research notes were produced.";
 
-  logAgentResearchNotes(
-    AGENT_NAME,
-    normalizedResearchNotes,
-  );
+  logAgentResearchNotes(AGENT_NAME, normalizedResearchNotes);
 
-  const researchNotesEntrySequence =
-    await runLog.record(
-      "research_notes",
-      {
-        notes:
-          normalizedResearchNotes,
-      },
-    );
+  const researchNotesEntrySequence = await runLog.record("research_notes", {
+    notes: normalizedResearchNotes,
+  });
 
   // --------------------------------------------------
   // Synthesis prompt
@@ -575,81 +472,55 @@ Important:
   // Synthesis diagnostics
   // --------------------------------------------------
 
-  logAgentSynthesisStart(
-    AGENT_NAME,
-    synthesisPrompt,
-  );
+  logAgentSynthesisStart(AGENT_NAME, synthesisPrompt);
 
-  await runLog.record(
-    "synthesis",
-    {
-      prompt:
-        synthesisPrompt
-          .replace(
-            observerContext,
-            "{{foundationalContext}}",
-          )
-          .replace(
-            embeddedEvidence,
-            RESEARCH_EVIDENCE_MARKER,
-          )
-          .replace(
-            normalizedResearchNotes,
-            RESEARCH_NOTES_MARKER,
-          ),
+  await runLog.record("synthesis", {
+    prompt: synthesisPrompt
+      .replace(observerContext, "{{foundationalContext}}")
+      .replace(embeddedEvidence, RESEARCH_EVIDENCE_MARKER)
+      .replace(normalizedResearchNotes, RESEARCH_NOTES_MARKER),
 
-      researchNotes:
-        normalizedResearchNotes,
+    researchNotes: normalizedResearchNotes,
 
-      researchEvidenceEntries:
-        stepEntrySequences,
+    researchEvidenceEntries: stepEntrySequences,
 
-      embeddedValues: {
-        ["{{foundationalContext}}"]:
-          "observerContext, verbatim",
+    embeddedValues: {
+      ["{{foundationalContext}}"]: "observerContext, verbatim",
 
-        [RESEARCH_NOTES_MARKER]:
-          "researchNotes, verbatim",
+      [RESEARCH_NOTES_MARKER]: "researchNotes, verbatim",
 
-        [RESEARCH_EVIDENCE_MARKER]:
-          `${RESEARCH_EVIDENCE_FORMAT} over the entries named by researchEvidenceEntries, in order`,
-      },
+      [RESEARCH_EVIDENCE_MARKER]: `${RESEARCH_EVIDENCE_FORMAT} over the entries named by researchEvidenceEntries, in order`,
     },
-  );
+  });
 
   // --------------------------------------------------
   // Final synthesis
   // --------------------------------------------------
 
   const synthesisResult = streamText({
-      model:models.openrouter,
-      instructions:finalObserverPrompt,
-      prompt:synthesisPrompt,
-    });
+    model: models.openrouter,
+
+    instructions: finalObserverPrompt,
+
+    prompt: synthesisPrompt,
+  });
 
   let finalText = "";
 
-  for await (
-    const textDelta of
-      synthesisResult.textStream
-  ) {
+  for await (const textDelta of synthesisResult.textStream) {
     finalText += textDelta;
 
-    process.stdout.write(
-      textDelta,
-    );
+    process.stdout.write(textDelta);
   }
 
-  const synthesisUsage =
-    await synthesisResult.usage;
+  const synthesisUsage = await synthesisResult.usage;
 
   // --------------------------------------------------
   // Final diagnostics
   // --------------------------------------------------
 
   logAgentUsage({
-    agentName:
-      AGENT_NAME,
+    agentName: AGENT_NAME,
 
     initialContextTokens,
 
@@ -659,49 +530,33 @@ Important:
 
     synthesisUsage,
 
-    researchSteps:
-      researchSteps.length,
+    researchSteps: researchSteps.length,
   });
 
-  await runLog.record(
-    "usage",
-    {
-      initialContextTokens,
+  await runLog.record("usage", {
+    initialContextTokens,
 
-      researchUsage,
+    researchUsage,
 
-      researchNotesUsage,
+    researchNotesUsage,
 
-      synthesisUsage,
+    synthesisUsage,
 
-      researchSteps:
-        researchSteps.length,
+    researchSteps: researchSteps.length,
 
-      totalRunTokens:
-        (researchUsage.totalTokens ?? 0) +
-        (researchNotesUsage.totalTokens ?? 0) +
-        (synthesisUsage.totalTokens ?? 0),
-    },
-  );
+    totalRunTokens:
+      (researchUsage.totalTokens ?? 0) +
+      (researchNotesUsage.totalTokens ?? 0) +
+      (synthesisUsage.totalTokens ?? 0),
+  });
 
-  logAgentToolUsage(
-    AGENT_NAME,
-    researchSteps,
-  );
+  logAgentToolUsage(AGENT_NAME, researchSteps);
 
-  logAgentOutput(
-    AGENT_NAME,
-    finalText,
-  );
+  logAgentOutput(AGENT_NAME, finalText);
 
-  const runLogPath =
-    await runLog.finish(
-      finalText,
-    );
+  const runLogPath = await runLog.finish(finalText);
 
-  runLog.note(
-    `Run log written to ${runLogPath}`,
-  );
+  runLog.note(`Run log written to ${runLogPath}`);
 
   return finalText;
 };
