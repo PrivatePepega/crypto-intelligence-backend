@@ -10,12 +10,13 @@ import {
   logAgentStart,
   logAgentPrompt,
   logAgentResearchEvidence,
+  logAgentResearchNotes,
   logAgentUsage,
   logAgentToolUsage,
   logAgentOutput,
   logAgentReasoning,
   logAgentStep,
-  logAgentSynthesisStart,
+  logAgentFormatterStart,
   createAgentRunLog,
   type AgentRunLog,
 } from "../../utils/logger.js";
@@ -39,11 +40,26 @@ const AGENT_NAME = "Weather Observer";
 /**
  * Markers left in the stored formatter prompt where a large embedded value was
  * removed.
+ *
+ * The formatter prompt inlines the foundational context, the research notes and
+ * the tool evidence as text. Storing that rendered prompt would put a second
+ * copy of all three inside a string, where they read as JSON-shaped text rather
+ * than JSON, and the evidence alone would be most of the entry. Each value is
+ * recorded separately, so the stored prompt keeps these markers and the prompt
+ * can be rebuilt by substituting the recorded values back in.
  */
+const FOUNDATIONAL_CONTEXT_MARKER = "{{foundationalContext}}";
+
+const RESEARCH_NOTES_MARKER = "{{researchNotes}}";
+
 const OBSERVER_EVIDENCE_MARKER = "{{observerEvidence}}";
 
 /** How the evidence is inlined, so the prompt can be rebuilt exactly. */
 const OBSERVER_EVIDENCE_FORMAT = "JSON.stringify(observerEvidence, null, 2)";
+
+/** Instructions for the middle phase: compress the Observer phase into notes. */
+const RESEARCH_NOTES_INSTRUCTIONS =
+  "You are the Observer research-notes writer. Summarize the collected evidence for the final Formatter model. Do not perform additional research.";
 
 /**
  * Runs the Observer, recording the run to a numbered log file.
@@ -75,119 +91,63 @@ const runObserverLogged = async (config: ObserverConfig, runLog: AgentRunLog) =>
   // --------------------------------------------------
 
   const observerSystemPrompt = `
-You are the Observer agent for a market intelligence platform.
+  You are the Observer for a market intelligence platform.
+  
+  Your role is breadth and discovery.
+  
+  Pipeline:
+  Observer = discovery and breadth
+  Triage = prioritization
+  Brief Analyst = compression and synthesis
+  Lead = daily intelligence narrative
+  
+  Observe the configured market domain and discover meaningful things happening today that are worth passing to the next stage.
+  
+  You are NOT the researcher. Your job is to discover signals, developments, conditions, anomalies, and stories — not investigate, explain, or determine their importance.
+  
+  Start with the foundational deterministic market state below. Treat it as the actual measured state of the market, then use your tools as DISCOVERY TOOLS to broadly scan the configured domain and relevant subcategories.
+  
+  Think broadly. The configured domain is your primary focus, but markets are interconnected. Look outside it when another market, sector, country, macro condition, or geopolitical development is clearly relevant.
+  
+  You are looking for WHAT IS HAPPENING, not WHY.
 
-Your role is breadth.
-
-The intelligence pipeline is:
-
-Observer = breadth
-Triage = prioritization
-Brief Analyst = compression and synthesis
-Lead = daily intelligence narrative
-
-You are the Observer.
-
-Your job is to monitor the configured market domain and identify meaningful developments occurring today.
-
-You are an event and market observer, not a deep researcher.
-
-Start with the deterministic market context available through your tools. Use it to identify meaningful changes, relationships, anomalies, or unusual market activity.
-
-Then identify relevant developments, events, announcements, regulatory actions, security incidents, market narratives, sentiment shifts, geopolitical developments, and other events that may materially affect the configured domain.
-
-The configured domain is your primary subject, but markets do not operate in isolation.
-
-Monitor relevant external markets and events when they may materially affect, explain, or provide important context for the configured domain.
-
-For example, when observing crypto, relevant external context may include equities, interest rates, the US dollar, commodities, macroeconomic developments, global risk sentiment, regulation, and geopolitics.
-
-Do not assume causation.
-
-If crypto declines alongside equities, report the relationship when supported by the available evidence.
-
-Do not claim that equities caused the crypto move unless there is evidence supporting that conclusion.
-
-Your output should contain concise observations about meaningful developments.
-
-Each observation should represent something worth passing to the next stage.
-
-Examples:
-
-Change
-Bitcoin ETF inflows increased significantly.
-
-Change
-Crypto trading volume increased sharply while aggregate market capitalization declined.
-
-Relationship
-Crypto markets declined alongside weakness in major equity indexes.
-
-Anomaly
-A major divergence appeared between crypto market capitalization and trading activity.
-
-Event
-A major cryptocurrency exchange experienced a security incident.
-
-Regulation
-A government introduced new legislation affecting digital assets.
-
-Speculation
-A major token moved sharply following market discussion of a potential protocol change.
-
-Only report meaningful developments.
-
-Do not report ordinary or unchanged market conditions merely because the data is available.
-
-Do not create observations simply to increase the number of observations.
-
-Search broadly enough to identify meaningful developments, but stop when additional searching is unlikely to produce materially different observations.
-
-When a tool returns useful evidence, treat the tool result itself as evidence even if the result is not repeated in your own response text.
-
-If a search returns zero results, weak results, or results that appear unrelated to the observation objective, do not immediately conclude that nothing happened. Change the search query, broaden or adjust the relevant filters, or inspect another available source before concluding that no meaningful development was found.
-
-You should:
-
-- inspect the available deterministic data
-- identify meaningful changes
-- identify relationships between markets when supported by evidence
-- identify anomalies or unusual activity
-- identify relevant external developments
-- monitor relevant external markets
-- distinguish confirmed events from speculation
-- preserve uncertainty when evidence is incomplete
-- remain within the configured observation scope
-- prioritize breadth over depth
-- use actual tool results as evidence for later formatting
-
-You should NOT:
-
-- perform deep research
-- investigate a story exhaustively
-- determine final importance
-- write the daily intelligence narrative
-- invent causes
-- invent facts
-- speculate beyond available evidence
-- turn ordinary market conditions into observations
-- create observations merely to increase output count
-- include URLs or citations in the observation text
-- include source names or references in the observation text
-- use Markdown formatting such as bold text, headings, or numbered lists
-
-Sources and supporting evidence are handled separately by the system.
-
-Return concise observations when you have enough information.
-
-The goal is not to produce a fixed number of observations.
-
-The goal is to discover the meaningful things that happened.
-
-OBSERVER Foundational Context:
-
-${observerContext}
-`;
+  When using tools for broad research make sure to use a bit limit, so to optimize tool usage and not waste. limit 50 has the same cost as limit 10 it spends a ping.
+  
+  A headline or reported development can be a complete observation. If something is interesting, mention it and move on. Do not:
+  - investigate or research the story deeply
+  - search for causes or explanations
+  - determine its final significance
+  - repeatedly investigate the same event
+  - turn an observation into a research task
+  
+  Those responsibilities belong to later stages.
+  
+  If you do not know why something happened, simply report what happened. Preserve uncertainty and never fill gaps with assumptions. Do not infer causation without evidence.
+  
+  Use broad discovery to find meaningful developments, but do not become locked onto individual stories. Stop searching when additional searches are unlikely to produce materially different observations.
+  
+  Each observation must be concise, at most 2 sentences, and represent something worth passing forward.
+  
+  Do not organize, rank, explain, or synthesize observations. Do not write the daily narrative or final conclusions.
+  
+  Do not create observations merely to increase the count, and do not report ordinary market conditions unless they are meaningfully unusual. If nothing significant is happening, it is acceptable to report that conditions are broadly normal.
+  
+  Distinguish between:
+  - directly observed market conditions
+  - reported developments
+  - market narratives or claims
+  - uncertain or unconfirmed information
+  
+  Never turn speculation into fact.
+  
+  Do not include URLs, citations, source names, Markdown, headings, numbered lists, or source references in observations. Supporting evidence is recorded separately.
+  
+  The goal is not a fixed number of observations. The goal is to discover the meaningful things happening today and give the next stage a broad, useful view of the market.
+  
+  Foundational deterministic market state:
+  
+  ${observerContext}
+  `;
 
   const observerDevPrompt = `
 Observe the ${config.domain} domain for today.
@@ -264,6 +224,14 @@ Identify meaningful developments and produce observations.
 
   const observerUsage = await observerResult.usage;
 
+  // The formatter consumes the research notes rather than this raw text, so the
+  // notes are the compression of it. Recorded here because it is the Observer's
+  // own account of what it saw, which is worth reviewing against the notes when
+  // a run looks wrong.
+  await runLog.record("observer_output", {
+    text: observerText,
+  });
+
   // --------------------------------------------------
   // Final observable reasoning
   // --------------------------------------------------
@@ -309,126 +277,151 @@ Identify meaningful developments and produce observations.
   logAgentResearchEvidence(AGENT_NAME, observerEvidence);
 
   // --------------------------------------------------
+  // Research Notes
+  // --------------------------------------------------
+
+  // Extracted so the prompt and the run log reference the same value, and so the
+  // run log can strip it back out without re-serializing.
+  const embeddedObserverEvidence = JSON.stringify(observerEvidence, null, 2);
+
+  const researchNotesPrompt = `
+Create concise research notes from the completed Observer research.
+
+The research phase is complete and you have no tools available.
+
+Use the raw tool evidence below as the factual basis.
+
+Your notes should:
+
+- summarize the meaningful developments discovered
+- connect related evidence when supported
+- distinguish confirmed events from speculation
+- preserve important uncertainty
+- mention important market context from the evidence
+- avoid inventing facts or causes
+- avoid deep research
+- do not write the final daily intelligence narrative
+
+Return concise plain-text research notes for the final Observer formatting.
+
+<observer_evidence>
+${embeddedObserverEvidence}
+</observer_evidence>
+`;
+
+  const researchNotesResult = streamText({
+    model: models.openrouter,
+
+    instructions: RESEARCH_NOTES_INSTRUCTIONS,
+
+    prompt: researchNotesPrompt,
+  });
+
+  const researchNotes = await researchNotesResult.text;
+
+  const researchNotesUsage = await researchNotesResult.usage;
+
+  // A model can legitimately return whitespace rather than notes. The formatter
+  // still needs a value to interpolate, and an empty string would produce an
+  // empty <research_notes> block that reads as "no evidence found".
+  const normalizedResearchNotes = researchNotes.trim() || "No research notes were produced.";
+
+  logAgentResearchNotes(AGENT_NAME, normalizedResearchNotes);
+
+  await runLog.record("research_notes", {
+    notes: normalizedResearchNotes,
+  });
+
+  // --------------------------------------------------
   // Formatter prompts
   // --------------------------------------------------
 
   const formatterSystemPrompt = `
-You are the Formatter for the Weather Observer.
 
-The Observer has already completed its observation phase.
-
-You have no tools available.
-
-Your job is to turn the Observer's output and collected evidence into the final Observer output.
-
-The Observer's factual evidence is authoritative for what was actually observed.
-
-Use the supplied deterministic foundational context, Observer output, and raw tool evidence together.
-
-Do not perform additional research.
-
-Do not invent facts.
-
-Do not invent causes.
-
-Do not introduce information that is not supported by the supplied context or evidence.
-
-Preserve uncertainty when evidence is incomplete.
-
-Only retain meaningful developments.
-
-Do not create observations merely to increase the output count.
-
-Do not write the daily intelligence narrative.
-
-Do not perform deep analysis.
-
-Do not explain your reasoning.
-
-Do not use Markdown formatting.
-
-Do not include URLs or citations in the observation text.
-
-Do not include source names or references in the observation text.
-
-Return only concise observations worth passing to Triage.
-
-If the evidence does not support a meaningful development, return:
-
-No meaningful developments identified.
 `;
 
   const formatterDevPrompt = `
-Produce the final Observer observations.
+Format the Observer's findings into the required JSON structure.
 
-The configured domain is:
-
+Configured domain:
 ${config.domain}
 
-The Observer objective is:
-
+Observer objective:
 ${config.objective}
 
-The areas being observed are:
-
+Areas observed:
 ${config.categories.join(", ")}
 
-The deterministic foundational market context is:
-
+Foundational market context:
 <foundational_context>
 ${observerContext}
 </foundational_context>
 
-The Observer's output is:
+Research notes:
+<research_notes>
+${normalizedResearchNotes}
+</research_notes>
 
-<observer_output>
-${observerText}
-</observer_output>
-
-The raw evidence collected by the Observer is:
-
+Raw Observer evidence:
 <observer_evidence>
-${JSON.stringify(observerEvidence, null, 2)}
+${embeddedObserverEvidence}
 </observer_evidence>
 
-Use all supplied information together.
+Your role is FORMATTING, not research or analysis.
 
-The foundational context provides deterministic current market state and context.
+Convert the supplied Observer findings into a clean, concise, consistent JSON object.
 
-Use it to understand current market conditions, relationships, changes, and anomalies.
+Use the research notes and raw evidence to preserve the Observer's actual findings. The raw evidence is authoritative when notes are incomplete.
 
-Do not treat foundational context alone as proof that an external event occurred.
+Do not:
+- perform additional research
+- investigate or expand observations
+- determine importance
+- add explanations or implications
+- invent facts or causal relationships
+- turn uncertainty into certainty
+- create observations that are not supported by the supplied information
 
-The Observer output summarizes what the observation phase identified.
+The foundational context describes the current deterministic market state and may provide context for observations, but it does not by itself prove that an external event occurred.
 
-The raw Observer evidence is the primary factual evidence behind those observations.
+Preserve the meaning and uncertainty of the original observations. Remove duplication, obvious noise, and unnecessary wording.
 
-Important:
+Each observation must be concise and represent a meaningful finding worth passing to the next stage.
 
-- A tool result is evidence even if the Observer did not repeat it in its output.
-- Do not ignore tool results simply because the Observer output is short.
-- Use the foundational context to understand the current market state.
-- Do not invent facts that are not present in the foundational context, Observer output, or Observer evidence.
-- Do not invent causal relationships.
-- Do not perform additional research.
-- Report meaningful developments supported by the evidence.
-- Preserve uncertainty where appropriate.
-- Return concise observations only.
+Return ONLY valid JSON matching this structure:
+
+{
+  "observations": [
+    {
+      "observation": "string",
+      "type": "market_condition | event | development | anomaly | relationship | narrative | regulation | other"
+    }
+  ]
+}
+
+Do not include Markdown, code fences, commentary, explanations, or additional fields.
 `;
 
   // --------------------------------------------------
   // Formatter diagnostics
   // --------------------------------------------------
 
-  logAgentSynthesisStart(AGENT_NAME, formatterDevPrompt);
+  logAgentFormatterStart(AGENT_NAME, formatterDevPrompt);
 
-  await runLog.record("synthesis", {
+  // No `researchNotes` field here: the notes are already recorded once in their
+  // own entry above, so repeating them in the formatter entry duplicated ~3 KB
+  // per run. The marker still stays in the prompt, because the rendered prompt
+  // inlines the notes as text.
+  await runLog.record("formatter", {
     prompt: formatterDevPrompt
-      .replace(observerContext, "{{foundationalContext}}")
-      .replace(JSON.stringify(observerEvidence, null, 2), OBSERVER_EVIDENCE_MARKER),
+      .replace(observerContext, FOUNDATIONAL_CONTEXT_MARKER)
+      .replace(normalizedResearchNotes, RESEARCH_NOTES_MARKER)
+      .replace(embeddedObserverEvidence, OBSERVER_EVIDENCE_MARKER),
 
     embeddedValues: {
-      ["{{foundationalContext}}"]: "observerContext, verbatim",
+      [FOUNDATIONAL_CONTEXT_MARKER]: "observerContext, verbatim",
+
+      [RESEARCH_NOTES_MARKER]: "the notes recorded in the research_notes entry",
 
       [OBSERVER_EVIDENCE_MARKER]: `${OBSERVER_EVIDENCE_FORMAT} over the Observer tool evidence`,
     },
@@ -467,22 +460,28 @@ Important:
 
     researchUsage: observerUsage,
 
-    synthesisUsage: formatterUsage,
+    researchNotesUsage,
+
+    formatterUsage,
 
     researchSteps: observerSteps.length,
   });
 
-  await runLog.record("usage",
-  {
+  await runLog.record("usage", {
     initialContextTokens,
 
     observerUsage,
+
+    researchNotesUsage,
 
     formatterUsage,
 
     observerSteps: observerSteps.length,
 
-    totalRunTokens: (observerUsage.totalTokens ?? 0) + (formatterUsage.totalTokens ?? 0),
+    totalRunTokens:
+      (observerUsage.totalTokens ?? 0) +
+      (researchNotesUsage.totalTokens ?? 0) +
+      (formatterUsage.totalTokens ?? 0),
   });
 
   logAgentToolUsage(AGENT_NAME, observerSteps);

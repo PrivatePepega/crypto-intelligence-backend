@@ -159,20 +159,20 @@ export const logAgentResearchNotes = (agentName: string, researchNotes: string) 
 };
 
 // --------------------------------------------------
-// Synthesis start
+// Formatter start
 // --------------------------------------------------
 
-export const logAgentSynthesisStart = (agentName: string, synthesisPrompt: string) => {
+export const logAgentFormatterStart = (agentName: string, formatterPrompt: string) => {
   console.log("");
   console.log("==============================================");
-  console.log(`${agentName} Final Synthesis Starting`);
+  console.log(`${agentName} Final Formatter Starting`);
   console.log("==============================================");
 
   console.log("");
-  console.log("Synthesis Prompt");
+  console.log("Formatter Prompt");
   console.log("----------------------------------------------");
 
-  console.log(synthesisPrompt);
+  console.log(formatterPrompt);
 };
 
 // --------------------------------------------------
@@ -180,32 +180,35 @@ export const logAgentSynthesisStart = (agentName: string, synthesisPrompt: strin
 // --------------------------------------------------
 
 /**
- * Logs token usage for a two-phase agent run: research, then synthesis.
+ * Logs token usage for a three-phase agent run: research, research notes,
+ * then formatting.
  *
- * There is no separate notes phase, so there is no notes field to pass. An
- * earlier three-phase shape took `researchNotesUsage` and read
- * `.totalTokens` off it unguarded, so omitting it threw rather than printing
- * zeroes - which is why a missing phase has to be removed from this signature,
- * not passed as `undefined`.
+ * All three phases must be supplied. `researchNotesUsage` is read unguarded
+ * (`.totalTokens` off the object), so omitting it throws rather than printing
+ * zeroes.
  */
 export const logAgentUsage = ({
   agentName,
   initialContextTokens,
   researchUsage,
-  synthesisUsage,
+  researchNotesUsage,
+  formatterUsage,
   researchSteps,
 }: {
   agentName: string;
   initialContextTokens: number;
   researchUsage: LanguageModelUsage;
-  synthesisUsage: LanguageModelUsage;
+  researchNotesUsage: LanguageModelUsage;
+  formatterUsage: LanguageModelUsage;
   researchSteps: number;
 }) => {
   const researchTotalTokens = researchUsage.totalTokens ?? 0;
 
-  const synthesisTotalTokens = synthesisUsage.totalTokens ?? 0;
+  const researchNotesTotalTokens = researchNotesUsage.totalTokens ?? 0;
 
-  const totalRunTokens = researchTotalTokens + synthesisTotalTokens;
+  const formatterTotalTokens = formatterUsage.totalTokens ?? 0;
+
+  const totalRunTokens = researchTotalTokens + researchNotesTotalTokens + formatterTotalTokens;
 
   console.log("");
   console.log("==============================================");
@@ -223,10 +226,16 @@ export const logAgentUsage = ({
   console.log(`Total tokens: ${researchTotalTokens}`);
 
   console.log("");
-  console.log("Synthesis:");
-  console.log(`Input tokens: ${synthesisUsage.inputTokens ?? 0}`);
-  console.log(`Output tokens: ${synthesisUsage.outputTokens ?? 0}`);
-  console.log(`Total tokens: ${synthesisTotalTokens}`);
+  console.log("Research Notes:");
+  console.log(`Input tokens: ${researchNotesUsage.inputTokens ?? 0}`);
+  console.log(`Output tokens: ${researchNotesUsage.outputTokens ?? 0}`);
+  console.log(`Total tokens: ${researchNotesTotalTokens}`);
+
+  console.log("");
+  console.log("Formatter:");
+  console.log(`Input tokens: ${formatterUsage.inputTokens ?? 0}`);
+  console.log(`Output tokens: ${formatterUsage.outputTokens ?? 0}`);
+  console.log(`Total tokens: ${formatterTotalTokens}`);
 
   console.log("");
   console.log(`TOTAL RUN TOKENS: ${totalRunTokens}`);
@@ -234,7 +243,9 @@ export const logAgentUsage = ({
   console.log("");
   console.log(`Research steps: ${researchSteps}`);
 
-  console.log("Final synthesis: 1");
+  console.log("Research Notes: 1");
+
+  console.log("Final formatting: 1");
 
   console.log("==============================================");
 };
@@ -655,7 +666,7 @@ export type AgentRunSection =
   | "step"
   | "reasoning"
   | "evidence"
-  | "synthesis"
+  | "formatter"
   | "usage"
   | "output"
   | (string & {});
