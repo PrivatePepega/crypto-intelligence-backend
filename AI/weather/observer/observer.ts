@@ -1,4 +1,4 @@
-import { isStepCount, streamText } from "ai";
+import { generateText, isStepCount, streamText } from "ai";
 
 import { models } from "../../../AI/providers/model.js";
 
@@ -6,14 +6,28 @@ import { type ObserverConfig } from "./observer.config.js";
 
 import { getAgenticContext, getAgenticTooling, estimateTokens } from "../../utils/general.tools.js";
 
-import { createAgentRunLog, type AgentRunLog } from "../../utils/logger.js";
+import { createAgentRunLog } from "../../utils/logger.js";
 
 import { getReasoningText, normalizeStep } from "../../utils/agent.js";
+import { parseObservations, type Observation } from "../../utils/weather/observations.js";
 
 // --------------------------------------------------
 // Observer
 // --------------------------------------------------
+const modelPick = models.cloudflare;
 
+/**
+ * The model's identifier, for the run log.
+ *
+ * `modelId` is declared on the concrete model type rather than the
+ * `LanguageModel` alias, so it is read through a narrow cast instead of
+ * widening the shared `models` type.
+ */
+const modelIdOf = (model: unknown): string => {
+  const id = (model as { modelId?: unknown }).modelId;
+
+  return typeof id === "string" ? id : "unknown";
+};
 const MAX_AGENT_STEPS = 5;
 
 /**
@@ -49,25 +63,15 @@ const RESEARCH_NOTES_INSTRUCTIONS =
   "You are the Observer research-notes writer. Summarize the collected evidence for the final Formatter model. Do not perform additional research.";
 
 /**
- * Runs the Observer, recording the run to a numbered JSON log file.
+ * Runs the Observer and returns the observations it produced.
  *
- * The run log is the only output. Nothing is printed: every phase is recorded as
- * a structured entry as it completes, and the run fails loudly if the log cannot
- * be written rather than degrading to console output.
+ * Parsing the Formatter's JSON response happens here so callers receive ready to
+ * store rows instead of raw text. The untouched response, and every phase that
+ * produced it, is kept in the run log at AI/data/<agent>/<agent>-NNN.json.
  */
-export const runObserver = async (config: ObserverConfig) => {
+export const runObserver = async (config: ObserverConfig): Promise<Observation[]> => {
   const runLog = await createAgentRunLog(AGENT_NAME);
 
-  return runObserverLogged(config, runLog);
-};
-
-/**
- * The Observer run itself.
- *
- * Split out of {@link runObserver} so the run-log handle stays an explicit
- * dependency rather than something reached for from module scope.
- */
-const runObserverLogged = async (config: ObserverConfig, runLog: AgentRunLog) => {
   const observerContext = await getAgenticContext(config);
 
   const initialContextTokens = estimateTokens(observerContext);
@@ -91,7 +95,7 @@ const runObserverLogged = async (config: ObserverConfig, runLog: AgentRunLog) =>
   
   You are NOT the researcher. Your job is to discover signals, developments, conditions, anomalies, and stories — not investigate, explain, or determine their importance.
   
-  Start with the foundational deterministic market state below. Treat it as the actual measured state of the market, then use your tools as DISCOVERY TOOLS to broadly scan the configured domain and relevant subcategories.
+  Start with the foundational deterministic market state below. Treat it as the actual measured state of the market, then use your tools as DISCOVERY TOOLS to broadly scan the configured domain and relevant subcategories focus on % changes those are more meaninful 1 billion and 0.1% dont carry the same meaning.
   
   Think broadly. The configured domain is your primary focus, but markets are interconnected. Look outside it when another market, sector, country, macro condition, or geopolitical development is clearly relevant.
   
@@ -162,6 +166,11 @@ Identify meaningful developments and produce observations.
 
     maxSteps: MAX_AGENT_STEPS,
 
+    // Which model actually served the run. Provider defaults and routers change
+    // what answers, and without this a run log cannot say. Read defensively:
+    // `modelId` lives on the concrete model type, not the LanguageModel alias.
+    model: modelIdOf(modelPick),
+
     initialContextTokens,
 
     initialContextTokenization:
@@ -185,7 +194,7 @@ Identify meaningful developments and produce observations.
   // --------------------------------------------------
 
   const observerResult = streamText({
-    model: models.openrouter,
+    model: modelPick,
 
     instructions: observerSystemPrompt,
 
@@ -288,7 +297,7 @@ ${embeddedObserverEvidence}
 `;
 
   const researchNotesResult = streamText({
-    model: models.openrouter,
+    model: modelPick,
 
     instructions: RESEARCH_NOTES_INSTRUCTIONS,
 
@@ -405,44 +414,64 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   // Formatter
   // --------------------------------------------------
 
-  const formatterResult = streamText({
-    model: models.openrouter,
-
+  const formatterResult = await generateText({
+    model: modelPick,
+  
     instructions: formatterSystemPrompt,
-
+  
     prompt: formatterDevPrompt,
   });
-
-  let finalText = "";
-
-  for await (const textDelta of formatterResult.textStream) {
-    finalText += textDelta;
-  }
-
-  const formatterUsage = await formatterResult.usage;
-
+  
+  const finalText = formatterResult.text;
+  
+  const formatterUsage = formatterResult.usage;
+  
+  // Why generation stopped. A response cut off mid-JSON looks identical to a
+  // complete one unless this is recorded: 'length' means a token ceiling,
+  // 'content-filter' means the provider blocked it, 'stop' means the model
+  // simply finished.
+  const formatterFinishReason = formatterResult.finishReason;
+  
   // --------------------------------------------------
   // Final diagnostics
   // --------------------------------------------------
-
+  
   await runLog.record("usage", {
     initialContextTokens,
-
+  
     observerUsage,
-
+  
     researchNotesUsage,
-
+  
     formatterUsage,
-
+  
+    formatterFinishReason,
+  
     observerSteps: observerSteps.length,
-
+  
     totalRunTokens:
       (observerUsage.totalTokens ?? 0) +
       (researchNotesUsage.totalTokens ?? 0) +
       (formatterUsage.totalTokens ?? 0),
   });
-
-  const runLogPath = await runLog.finish(finalText);
-
-  return finalText;
-};
+  
+  // finish() first, so the raw response is on disk before anything can throw.
+  await runLog.finish(finalText);
+  
+  try {
+    return parseObservations(finalText);
+  } catch (error) {
+    // The run log is the only place this survives once the process exits, so
+    // record why the response was unusable instead of leaving just an exception.
+    // finishReason is included because the text alone cannot distinguish a
+    // truncated response from a complete one.
+    await runLog.record("formatter_failure", {
+      error: error instanceof Error ? error.message : String(error),
+      characters: finalText.length,
+      finishReason: formatterFinishReason,
+      text: finalText,
+    });
+  
+    throw error;
+  }
+}

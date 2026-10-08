@@ -1,33 +1,37 @@
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
 import pool from "../../config/database.js";
 
 import { observerConfigs } from "./observer/observer.config.js";
 import { runObserver } from "./observer/observer.js";
 
-export async function runWeather() {
-  const { rows } = await pool.query(
-    `
-      INSERT INTO intelligence_sets.daily_sets (set_date)
-      VALUES (CURRENT_DATE)
-      ON CONFLICT (set_date)
-      DO UPDATE SET set_date = EXCLUDED.set_date
-      RETURNING id, set_date;
-    `,
-  );
+import { getDailySet, insertObservations } from "../utils/weather/observations.js";
 
-  const intelligenceSet = rows[0];
 
-  console.log(
-    `Intelligence set created: ${intelligenceSet.id} (${intelligenceSet.set_date})`,
-  );
 
-  await runObserver(observerConfigs.crypto);
+
+export async function runWeather(): Promise<void> {
+  const intelligenceSet = await getDailySet();
+
+
+
+  const cryptoObservations = await runObserver(observerConfigs.crypto);
+  await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
 }
 
-runWeather()
-  .catch((error) => {
-    console.error("Weather run failed:", error);
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    await pool.end();
-  });
+
+
+
+const isDirectRun =
+  process.argv[1] !== undefined &&
+  path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
+
+if (isDirectRun) {
+  runWeather()
+    .catch((error) => {
+      console.error("Weather run failed:", error);
+      process.exitCode = 1;
+    })
+    .finally(() => pool.end());
+}

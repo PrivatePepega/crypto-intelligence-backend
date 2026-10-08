@@ -180,9 +180,3 @@ export const estimateTokens = (value: unknown): number => {
 
   return encoder.encode(serialized ?? "").length;
 };
-
-export const countCharacters = (value: unknown): number => {
-  const serialized = typeof value === "string" ? value : JSON.stringify(value);
-
-  return serialized?.length ?? 0;
-};
