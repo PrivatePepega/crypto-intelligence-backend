@@ -7,21 +7,16 @@ import { observerConfigs } from "./observer/observer.config.js";
 import { runObserver } from "./observer/observer.js";
 
 import { getDailySet, insertObservations } from "../utils/weather/observations.js";
-
-
-
+import { runTriage } from "./triage/triage.js";
 
 export async function runWeather(): Promise<void> {
-  const intelligenceSet = await getDailySet();
+  // const intelligenceSet = await getDailySet();
 
+  // const cryptoObservations = await runObserver(observerConfigs.crypto);
+  // await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
+  // await runTriage(observerConfigs.crypto.domain);
 
-
-  const cryptoObservations = await runObserver(observerConfigs.crypto);
-  await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
 }
-
-
-
 
 const isDirectRun =
   process.argv[1] !== undefined &&

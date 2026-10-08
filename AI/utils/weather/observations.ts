@@ -22,8 +22,11 @@ export type Observation = {
  *
  * Counts braces rather than slicing to the last `}` so a value ending in one -
  * `{"observation": "closed at }"}` - does not truncate the match.
+ *
+ * Exported because every agent in this pipeline parses a model response the same
+ * way, and a second copy of brace counting would be a second thing to get wrong.
  */
-const extractJsonObject = (text: string): string | null => {
+export const extractJsonObject = (text: string): string | null => {
   const start = text.indexOf("{");
 
   if (start === -1) return null;

@@ -13,9 +13,9 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import pool from "../../config/database.js";
+import pool from "../../../config/database.js";
 
-import { AGENT_RUN_LOG_DIR, toReadableJson } from "./logger.js";
+import { AGENT_RUN_LOG_DIR, toReadableJson } from "../logger.js";
 
 // --------------------------------------------------
 // Database input
