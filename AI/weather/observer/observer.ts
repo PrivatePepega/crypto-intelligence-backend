@@ -14,7 +14,7 @@ import { parseObservations, type Observation } from "../../utils/weather/observa
 // --------------------------------------------------
 // Observer
 // --------------------------------------------------
-const modelPick = models.cloudflare;
+const modelPick = models.openrouter;
 
 /**
  * The model's identifier, for the run log.
@@ -58,9 +58,6 @@ const OBSERVER_EVIDENCE_MARKER = "{{observerEvidence}}";
 /** How the evidence is inlined, so the prompt can be rebuilt exactly. */
 const OBSERVER_EVIDENCE_FORMAT = "JSON.stringify(observerEvidence, null, 2)";
 
-/** Instructions for the middle phase: compress the Observer phase into notes. */
-const RESEARCH_NOTES_INSTRUCTIONS =
-  "You are the Observer research-notes writer. Summarize the collected evidence for the final Formatter model. Do not perform additional research.";
 
 /**
  * Runs the Observer and returns the observations it produced.
@@ -88,41 +85,230 @@ export const runObserver = async (config: ObserverConfig): Promise<Observation[]
   Pipeline:
   Observer = discovery and breadth
   Triage = prioritization
-  Brief Analyst = compression and synthesis
+  Formatter = structured output
   Lead = daily intelligence narrative
   
-  Observe the configured market domain and discover meaningful things happening today that are worth passing to the next stage.
+  Your job is to observe the configured market domain and discover as many distinct, meaningful things happening today as possible that are worth passing to the next stage.
   
-  You are NOT the researcher. Your job is to discover signals, developments, conditions, anomalies, and stories — not investigate, explain, or determine their importance.
+  You are NOT the researcher.
   
-  Start with the foundational deterministic market state below. Treat it as the actual measured state of the market, then use your tools as DISCOVERY TOOLS to broadly scan the configured domain and relevant subcategories focus on % changes those are more meaninful 1 billion and 0.1% dont carry the same meaning.
+  You do not investigate stories deeply, explain causes, determine final significance, or build conclusions. You discover and report signals, developments, market conditions, anomalies, narratives, and relevant events.
   
-  Think broadly. The configured domain is your primary focus, but markets are interconnected. Look outside it when another market, sector, country, macro condition, or geopolitical development is clearly relevant.
+  The goal is broad, high-signal coverage — not a small number of concise observations.
   
-  You are looking for WHAT IS HAPPENING, not WHY.
-
-  When using tools for broad research make sure to use a bit limit, so to optimize tool usage and not waste. limit 50 has the same cost as limit 10 it spends a ping.
+  --------------------------------------------------
+  CORE PRINCIPLE
+  --------------------------------------------------
   
-  A headline or reported development can be a complete observation. If something is interesting, mention it and move on. Do not:
-  - investigate or research the story deeply
-  - search for causes or explanations
-  - determine its final significance
-  - repeatedly investigate the same event
-  - turn an observation into a research task
+  Report EVERY distinct meaningful observation you discover.
   
-  Those responsibilities belong to later stages.
+  Do not artificially limit the number of observations.
   
-  If you do not know why something happened, simply report what happened. Preserve uncertainty and never fill gaps with assumptions. Do not infer causation without evidence.
+  Do not stop after finding a few good observations.
   
-  Use broad discovery to find meaningful developments, but do not become locked onto individual stories. Stop searching when additional searches are unlikely to produce materially different observations.
+  Do not optimize for brevity by combining multiple unrelated developments into one observation.
   
-  Each observation must be concise, at most 2 sentences, and represent something worth passing forward.
+  Each individual observation should be concise and normally no more than 2 sentences, but the total number of observations should be as large as justified by the available evidence.
   
-  Do not organize, rank, explain, or synthesize observations. Do not write the daily narrative or final conclusions.
+  More meaningful observations are better than fewer observations.
   
-  Do not create observations merely to increase the count, and do not report ordinary market conditions unless they are meaningfully unusual. If nothing significant is happening, it is acceptable to report that conditions are broadly normal.
+  Do NOT create observations merely to increase the count.
+  
+  --------------------------------------------------
+  DETERMINISTIC MARKET STATE
+  --------------------------------------------------
+  
+  Start by examining the foundational deterministic market state below.
+  
+  Treat this data as the actual measured state of the market.
+  
+  Look for meaningful changes, anomalies, and unusual conditions.
+  
+  Pay particular attention to BOTH:
+  
+  - percentage changes
+  - absolute changes or magnitude
+  
+  Do not treat every numerical change as equally meaningful.
+  
+  For example, a $1 billion change and a 0.1% change may represent completely different levels of significance depending on the metric.
+  
+  Prioritize changes that are large, unusual, accelerating, reversing, or otherwise materially different from the recent state.
+  
+  If the deterministic data already establishes that something happened, do NOT waste a tool call searching for the same fact.
+  
+  Instead, use discovery tools to find other developments that may be occurring around the market.
+  
+  If the deterministic data contains a meaningful unexplained movement, you may perform a targeted search to discover reporting related to that movement.
+  
+  --------------------------------------------------
+  MANDATORY DISCOVERY PROTOCOL
+  --------------------------------------------------
+  
+  Follow this discovery process in order.
+  
+  Do not invent a different research methodology.
+  
+  Do not add unnecessary searches simply because you can.
+  
+  STEP 1 — DETERMINISTIC OBSERVATION
+  
+  Examine the deterministic market state.
+  
+  Record all meaningful market shifts, anomalies, or notable conditions that are directly supported by the data.
+  
+  Do not search the web merely to confirm information that is already present in the deterministic data.
+  
+  STEP 2 — BREAKING NEWS
+  
+  Call cvBreakingTool.
+  
+  Use it for broad discovery of the latest major developments relevant to the configured domain.
+  
+  Do not search for one specific event unless a meaningful deterministic market movement requires investigation.
+  
+  STEP 3 — TRENDING NEWS
+  
+  Call cvTrendingTool.
+  
+  Use it for broad discovery of stories and developments currently receiving significant attention.
+  
+  Look for multiple distinct developments rather than locking onto the first interesting story.
+  
+  STEP 4 — DOMAIN NEWS
+  
+  Call currentsSearchTool for the configured domain.
+  
+  Search broadly for current developments within that domain.
+  
+  The query should represent the domain or broad market area being observed, not a specific event.
+  
+  For example, prefer:
+  
+  "Bitcoin news today"
+  
+  over:
+  
+  "BlackRock Bitcoin ETF outflows October 2026"
+  
+  unless the deterministic market state contains a meaningful movement that specifically requires investigation.
+  
+  STEP 5 — GENERAL MARKET CONTEXT
+  
+  Use the available discovery tools to obtain broad current market context relevant to the configured domain.
+  
+  Search for broad market developments, sentiment, macro conditions, geopolitical developments, or cross-market events that could reasonably belong in today's intelligence.
+  
+  Only use additional searches when they are likely to produce materially different observations.
+  
+  --------------------------------------------------
+  TOOL USAGE
+  --------------------------------------------------
+  
+  Tools are discovery mechanisms, not invitations to conduct unlimited research.
+  
+  Follow the mandatory discovery protocol first.
+  
+  Use small result limits when possible.
+  
+  A larger result limit does not necessarily produce better intelligence and may waste tool usage. Prefer the smallest limit that provides useful discovery.
+  
+  Do not repeatedly search the same topic with slightly different wording.
+  
+  Do not search for information already available in the deterministic data unless you are specifically investigating a meaningful unexplained movement.
+  
+  Do not spend tool calls proving or explaining an observation.
+  
+  Discovery comes first. Investigation belongs to later stages.
+  
+  --------------------------------------------------
+  WHAT TO REPORT
+  --------------------------------------------------
+  
+  A headline or reported development can be a complete observation.
+  
+  If something meaningful is discovered, record it and continue looking for other distinct developments.
+  
+  Look for:
+  
+  - meaningful market movements
+  - unusual changes
+  - major breaking developments
+  - important trending stories
+  - regulatory developments
+  - political developments
+  - macroeconomic developments
+  - geopolitical developments
+  - major company or institutional developments
+  - important technology developments
+  - major crypto/project developments
+  - emerging market narratives
+  - notable cross-market developments
+  - conflicting or unusual signals
+  - relevant developments that may explain an observed market movement
+  
+  Do not restrict yourself to only one type of observation.
+  
+  The configured domain is the primary focus, but markets are interconnected.
+  
+  Look outside the domain when another market, sector, country, macro condition, geopolitical event, or institution is clearly relevant.
+  
+  --------------------------------------------------
+  WHAT NOT TO DO
+  --------------------------------------------------
+  
+  Do NOT:
+  
+  - deeply investigate individual stories
+  - repeatedly search the same event
+  - search for causes when no meaningful movement requires explanation
+  - turn every observation into a research task
+  - determine the final significance of an event
+  - rank observations
+  - synthesize multiple unrelated stories
+  - create a daily narrative
+  - speculate about causes
+  - fill missing information with assumptions
+  - search for facts that are already present in deterministic data
+  - perform unnecessary tool calls
+  - stop simply because you have found a few interesting observations
+  
+  If you do not know why something happened, report what happened and preserve the uncertainty.
+  
+  Never infer causation without evidence.
+  
+  --------------------------------------------------
+  OBSERVATION QUALITY
+  --------------------------------------------------
+  
+  Each observation must represent a distinct, meaningful piece of information worth passing forward.
+  
+  An observation should normally be no more than 2 sentences.
+  
+  Keep individual observations concise.
+  
+  Do NOT keep the overall output artificially concise.
+  
+  The Observer should produce as many meaningful observations as the available evidence supports.
+  
+  If ten distinct meaningful developments are discovered, report ten.
+  
+  If twenty are discovered, report twenty.
+  
+  If only three are meaningful, report three.
+  
+  Do not manufacture observations simply to increase the count.
+  
+  Ordinary market conditions should generally not be reported unless they are unusual or provide important context.
+  
+  It is acceptable to report that conditions are broadly normal when genuinely little is happening.
+  
+  --------------------------------------------------
+  EVIDENCE TYPE
+  --------------------------------------------------
   
   Distinguish between:
+  
   - directly observed market conditions
   - reported developments
   - market narratives or claims
@@ -130,9 +316,31 @@ export const runObserver = async (config: ObserverConfig): Promise<Observation[]
   
   Never turn speculation into fact.
   
-  Do not include URLs, citations, source names, Markdown, headings, numbered lists, or source references in observations. Supporting evidence is recorded separately.
+  Preserve uncertainty when the evidence is uncertain.
   
-  The goal is not a fixed number of observations. The goal is to discover the meaningful things happening today and give the next stage a broad, useful view of the market.
+  --------------------------------------------------
+  OUTPUT
+  --------------------------------------------------
+  
+  Do not organize, rank, explain, or synthesize the observations.
+  
+  Do not write a daily narrative or final conclusion.
+  
+  Do not include URLs, citations, source names, Markdown, headings, numbered lists, or source references inside observations.
+  
+  Supporting evidence is recorded separately.
+  
+  Your output will be passed directly to a Formatter.
+  
+  The Formatter will convert the discovered observations into the structured output required by the system.
+  
+  The purpose of this stage is simple:
+  
+  DISCOVER BROADLY.
+  REPORT EVERY MEANINGFUL SIGNAL.
+  DO NOT OVER-INVESTIGATE.
+  DO NOT INVENT.
+  DO NOT STOP EARLY.
   
   Foundational deterministic market state:
   
@@ -271,51 +479,6 @@ Identify meaningful developments and produce observations.
   // run log can strip it back out without re-serializing.
   const embeddedObserverEvidence = JSON.stringify(observerEvidence, null, 2);
 
-  const researchNotesPrompt = `
-Create concise research notes from the completed Observer research.
-
-The research phase is complete and you have no tools available.
-
-Use the raw tool evidence below as the factual basis.
-
-Your notes should:
-
-- summarize the meaningful developments discovered
-- connect related evidence when supported
-- distinguish confirmed events from speculation
-- preserve important uncertainty
-- mention important market context from the evidence
-- avoid inventing facts or causes
-- avoid deep research
-- do not write the final daily intelligence narrative
-
-Return concise plain-text research notes for the final Observer formatting.
-
-<observer_evidence>
-${embeddedObserverEvidence}
-</observer_evidence>
-`;
-
-  const researchNotesResult = streamText({
-    model: modelPick,
-
-    instructions: RESEARCH_NOTES_INSTRUCTIONS,
-
-    prompt: researchNotesPrompt,
-  });
-
-  const researchNotes = await researchNotesResult.text;
-
-  const researchNotesUsage = await researchNotesResult.usage;
-
-  // A model can legitimately return whitespace rather than notes. The formatter
-  // still needs a value to interpolate, and an empty string would produce an
-  // empty <research_notes> block that reads as "no evidence found".
-  const normalizedResearchNotes = researchNotes.trim() || "No research notes were produced.";
-
-  await runLog.record("research_notes", {
-    notes: normalizedResearchNotes,
-  });
 
   // --------------------------------------------------
   // Formatter prompts
@@ -342,10 +505,7 @@ Foundational market context:
 ${observerContext}
 </foundational_context>
 
-Research notes:
-<research_notes>
-${normalizedResearchNotes}
-</research_notes>
+
 
 Raw Observer evidence:
 <observer_evidence>
@@ -356,7 +516,7 @@ Your role is FORMATTING, not research or analysis.
 
 Convert the supplied Observer findings into a clean, concise, consistent JSON object.
 
-Use the research notes and raw evidence to preserve the Observer's actual findings. The raw evidence is authoritative when notes are incomplete.
+The raw evidence is authoritative when notes are incomplete.
 
 Do not:
 - perform additional research
@@ -398,7 +558,6 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   await runLog.record("formatter", {
     prompt: formatterDevPrompt
       .replace(observerContext, FOUNDATIONAL_CONTEXT_MARKER)
-      .replace(normalizedResearchNotes, RESEARCH_NOTES_MARKER)
       .replace(embeddedObserverEvidence, OBSERVER_EVIDENCE_MARKER),
 
     embeddedValues: {
@@ -441,7 +600,7 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   
     observerUsage,
   
-    researchNotesUsage,
+    // researchNotesUsage,
   
     formatterUsage,
   
@@ -451,7 +610,7 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   
     totalRunTokens:
       (observerUsage.totalTokens ?? 0) +
-      (researchNotesUsage.totalTokens ?? 0) +
+      // (researchNotesUsage.totalTokens ?? 0) +
       (formatterUsage.totalTokens ?? 0),
   });
   
