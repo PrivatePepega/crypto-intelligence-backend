@@ -23,7 +23,14 @@ export type SdkStep = {
   toolCalls?: SdkToolCall[];
   toolResults?: SdkToolResult[];
 
-  // Reasoning fields are read dynamically by getReasoningText.
+  /**
+   * Per-step token usage is read through the index signature below rather than a
+   * declared field: the SDK's `LanguageModelUsage` has all members required,
+   * which a narrower optional shape here would not accept.
+   *
+   * `usage.inputTokens` is the context this step was sent, which grows across a
+   * tool loop as results are appended.
+   */
   [key: string]: unknown;
 };
 
@@ -35,10 +42,23 @@ export type RecordedToolCall = {
   output: unknown;
 };
 
+/**
+ * One research step's token usage.
+ *
+ * `inputTokens` is the size of the context the step was sent, which is what
+ * shows how the prompt grows as tool results are fed back in.
+ */
+export type RecordedStepUsage = {
+  inputTokens: number | null;
+  outputTokens: number | null;
+  totalTokens: number | null;
+};
+
 /** One research step, holding each value exactly once. */
 export type RecordedStep = {
   stepNumber: number;
   text: string;
   reasoning: string | null;
+  usage: RecordedStepUsage;
   toolCalls: RecordedToolCall[];
 };

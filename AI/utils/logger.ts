@@ -287,6 +287,21 @@ const normalizeMultiline = (value: unknown, ancestors: object[] = []): unknown =
 };
 
 // --------------------------------------------------
+// Artifact serialization
+// --------------------------------------------------
+
+/**
+ * Serializes a value into the readable JSON form used by the run logs: two space
+ * indent, long multi-line strings split one element per line, and no failure
+ * mode that loses data silently.
+ *
+ * Exposed so any artifact meant to be read gets the same treatment instead of the
+ * single-line escaped wall that plain `JSON.stringify` turns a paragraph of text
+ * into. Idempotent, so it is safe to apply to a document already normalized.
+ */
+export const toReadableJson = (value: unknown): string => safeJson(normalizeMultiline(value));
+
+// --------------------------------------------------
 // Run log
 // --------------------------------------------------
 

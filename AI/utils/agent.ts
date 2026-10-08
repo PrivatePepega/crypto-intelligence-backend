@@ -1,6 +1,11 @@
 import { isStepCount, streamText } from "ai";
 
-import type { RecordedStep, RecordedToolCall, SdkStep } from "../../types/AI/observer.js";
+import type {
+  RecordedStep,
+  RecordedStepUsage,
+  RecordedToolCall,
+  SdkStep,
+} from "../../types/AI/observer.js";
 
 // --------------------------------------------------
 // Reasoning
@@ -96,6 +101,27 @@ const stepReasoning = (step: SdkStep): string | null => {
 // --------------------------------------------------
 
 /**
+ * Reads a step's token usage, keeping unknown fields out.
+ *
+ * Nulls rather than zeroes when the provider reports nothing, so a missing
+ * count is not mistaken for a free step.
+ */
+const stepUsage = (step: SdkStep): RecordedStepUsage => {
+  // `usage` arrives as `unknown` through SdkStep's index signature, so it is
+  // narrowed here rather than trusted.
+  const usage = step.usage as Record<string, unknown> | undefined;
+
+  const number = (value: unknown): number | null =>
+    typeof value === "number" && Number.isFinite(value) ? value : null;
+
+  return {
+    inputTokens: number(usage?.inputTokens),
+    outputTokens: number(usage?.outputTokens),
+    totalTokens: number(usage?.totalTokens),
+  };
+};
+
+/**
  * Collapses a research step to reasoning, query input and tool response.
  *
  * The SDK reports a call and its result as two objects that each repeat the tool
@@ -140,6 +166,7 @@ export const normalizeStep = (step: SdkStep): RecordedStep => {
     stepNumber: step.stepNumber,
     text: step.text ?? "",
     reasoning: stepReasoning(step),
+    usage: stepUsage(step),
     toolCalls: paired,
   };
 };
