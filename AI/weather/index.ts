@@ -10,13 +10,24 @@ import { getDailySet, insertObservations } from "../utils/weather/observations.j
 import { runTriage } from "./triage/triage.js";
 
 export async function runWeather(): Promise<void> {
-  // const intelligenceSet = await getDailySet();
+  // The one id that chains a day's work together. The Observer files its
+  // observations under it and Triage reads the same set back, so both halves act
+  // on exactly the rows belonging to today rather than on whatever happens to
+  // carry today's date.
+  const intelligenceSet = await getDailySet();
 
   // const cryptoObservations = await runObserver(observerConfigs.crypto);
   // await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
-  // await runTriage(observerConfigs.crypto.domain);
+  await runTriage(intelligenceSet, observerConfigs.crypto.domain);
+
+
+
 
 }
+
+
+
+
 
 const isDirectRun =
   process.argv[1] !== undefined &&

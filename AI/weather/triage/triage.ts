@@ -1,22 +1,30 @@
 /**
- * Triage: reranks a day's observations and promotes the important ones.
+ * Triage: labels a domain's observations important or not, and promotes the
+ * important ones.
  *
- * Reads every observation recorded for a date, has an agent rerank them and judge
- * which are genuine signals, then flips `research_enabled` from false to true on
- * those and on nothing else. It does not rank in the database, edit observation
- * text, or decide anything beyond that one flag.
+ * Reads every observation recorded for a date, has an agent decide which are
+ * important signals, then flips `research_enabled` from false to true on those and
+ * on nothing else. It does not order them, edit observation text, or decide
+ * anything beyond that one label.
+ *
+ * Triage is a filter, not a ranking. There is no order, no position, and no
+ * comparison between observations: each one is judged on its own against the
+ * domain's bar for what deserves research. Nothing downstream consumes an order,
+ * and the database has nowhere to put one.
+ *
+ * This file holds the prompts, the model call and the orchestration. What a
+ * decision means, how one is read out of a model response, and where the dated
+ * record is written all live in AI/utils/weather/triage.ts.
  *
  *   npx tsx AI/weather/triage/triage.ts
  *
  * Two artifacts:
- *   AI/data/database Fetcher/triage/triage-<date>.json  what was triaged, and what changed
- *   AI/data/Weather Triage/Weather Triage-NNN.json      the run log, as for the Observer
+ *   AI/data/database Fetcher/triage/triage-<date>-<domain>.json  what was labeled, and what changed
+ *   AI/data/Weather Triage/Weather Triage-NNN.json               the run log, as for the Observer
  */
 
 import { Output, generateText } from "ai";
-import { z } from "zod";
 
-import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -24,21 +32,24 @@ import pool from "../../../config/database.js";
 
 import { models } from "../../providers/model.js";
 
-import { getReasoningText, normalizeStep } from "../../utils/agent.js";
+import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
 import { estimateTokens } from "../../utils/general.tools.js";
+import { createAgentRunLog } from "../../utils/logger.js";
 import {
-  createAgentRunLog,
-  AGENT_RUN_LOG_DIR,
-  toPathSegment,
-  toReadableJson,
-} from "../../utils/logger.js";
-import { extractJsonObject } from "../../utils/weather/observations.js";
+  parseTriageResult,
+  triageSchema,
+  writeTriageRecord,
+  type TriageDecision,
+  type TriageSchema,
+} from "../../utils/weather/triage.js";
 
 import {
   enableResearchForIds,
-  fetchObservationsForDate,
+  fetchObservationsForSet,
   type ObservationDay,
 } from "../../utils/weather/dbFetcher.triage.js";
+
+import { getDailySet, type DailySet } from "../../utils/weather/observations.js";
 
 // --------------------------------------------------
 // Configuration
@@ -54,14 +65,6 @@ import {
 const modelPick = models.groq;
 
 /**
- * The date to triage, as `YYYY-MM-DD`.
- *
- * `null` means the database's `CURRENT_DATE`, which is what a daily run wants -
- * see fetchObservationsForDate. Set a value to re-triage an earlier day.
- */
-const TRIAGE_DATE: string | null = null;
-
-/**
  * This agent's name.
  *
  * Names the run-log folder and file, so one value identifies the agent
@@ -69,25 +72,23 @@ const TRIAGE_DATE: string | null = null;
  */
 const AGENT_NAME = "Weather Triage";
 
-/** Where the dated triage record is written, relative to AI/data. */
-const TRIAGE_RECORD_DIR = path.join("database Fetcher", "triage");
-
 /**
  * Ceiling on the agent's output tokens.
  *
  * Without one, gpt-oss-120b answers against a 3072-token default and gets cut off
  * mid-thought. Run 001 spent 3070 of those 3072 on reasoning, emitted 2 text
  * tokens, and finished with `finishReason: "length"` and an empty response. A day
- * of rankings plus their reasons needs room well past that.
+ * of labels plus their reasons needs room well past that.
  */
 const MAX_OUTPUT_TOKENS = 8_192;
 
 /**
  * Reasoning effort for the triage call.
  *
- * Triage is classification over a fixed list, not open-ended analysis, so the
- * model's default reasoning budget is disproportionate to the task: it enumerated
- * its ranking into the reasoning stream, one observation at a time, and reached
+ * Triage is a per-observation yes/no label over a fixed list, not open-ended
+ * analysis, so the model's default reasoning budget is disproportionate to the
+ * task: it enumerated its labels into the reasoning stream, one observation at a
+ * time, and reached
  * number 17 of 20 before the ceiling stopped it. `low` keeps enough reasoning for
  * the run log to be worth reading without letting it crowd out the response.
  *
@@ -97,118 +98,13 @@ const MAX_OUTPUT_TOKENS = 8_192;
 const REASONING_EFFORT = "low" as const;
 
 // --------------------------------------------------
-// Model response
-// --------------------------------------------------
-
-export type TriageDecision = {
-  id: string;
-  important: boolean;
-  reason: string;
-};
-
-/**
- * The shape the agent must return.
- *
- * Enforced by the SDK through structured output rather than asked for in prose.
- * Run 002 returned a well-formed array of decisions under the key `signals`
- * instead of `rankings`, and a prompt instruction did not prevent it: the prose
- * that described the job talked about finding signals, and the model named the
- * array after that. A model picking its own key name for data the pipeline then
- * reads by key is a failure waiting to happen, so the schema is the contract and
- * the prompt only carries the judgement.
- *
- * Every field is required because structured output is validated against the
- * schema rather than parsed afterwards, so there is no point tolerating a missing
- * `reason`: an empty string carries the same meaning and one less code path.
- */
-const triageSchema = z.object({
-  rankings: z.array(
-    z.object({
-      id: z.string().min(1),
-      important: z.boolean(),
-      reason: z.string(),
-    }),
-  ),
-});
-
-type TriageSchema = z.infer<typeof triageSchema>;
-
-export type TriageRanking = {
-  /** Ids in the order the agent ranked them, most important first. */
-  rankOrder: string[];
-  decisions: TriageDecision[];
-};
-
-/**
- * Turns the agent's response into a ranking.
- *
- * Throws rather than returning an empty list, so an unusable response fails the
- * run loudly instead of quietly promoting nothing. The raw text is in the run log
- * either way.
- *
- * Entries missing an `id` or `important` are dropped rather than guessed at, and
- * the caller is told how many, so a partially malformed response is visible
- * instead of silently triaging a subset.
- */
-export const parseTriageRanking = (finalText: string): TriageRanking => {
-  const received = (text: string): string => {
-    const preview = text.length > 300 ? `${text.slice(0, 300)}...` : text;
-
-    return `${text.length} characters: ${JSON.stringify(preview)}`;
-  };
-
-  const json = extractJsonObject(finalText);
-
-  if (json === null) {
-    throw new Error(`Triage response contained no JSON object. Received ${received(finalText)}`);
-  }
-
-  let parsed: { rankings?: unknown };
-
-  try {
-    parsed = JSON.parse(json) as { rankings?: unknown };
-  } catch (error) {
-    throw new Error(
-      `Triage response was not valid JSON: ${
-        error instanceof Error ? error.message : String(error)
-      }. Received ${received(finalText)}`,
-    );
-  }
-
-  if (!Array.isArray(parsed.rankings)) {
-    throw new Error(`Triage response had no "rankings" array. Received ${received(finalText)}`);
-  }
-
-  const decisions: TriageDecision[] = [];
-
-  for (const entry of parsed.rankings) {
-    const row = entry as Partial<TriageDecision> | null;
-
-    if (!row || typeof row.id !== "string" || typeof row.important !== "boolean") {
-      continue;
-    }
-
-    decisions.push({
-      id: row.id,
-      important: row.important,
-      reason: typeof row.reason === "string" ? row.reason.trim() : "",
-    });
-  }
-
-  return {
-    // The array order is the ranking, so it is preserved rather than sorted.
-    rankOrder: decisions.map((decision) => decision.id),
-    decisions,
-  };
-};
-
-// --------------------------------------------------
 // Triage
 // --------------------------------------------------
 
 export type TriageOutcome = {
   date: string;
   marketDomain: string;
+  intelligenceSetId: string;
   considered: number;
   promoted: number;
   importantIds: string[];
@@ -220,27 +116,35 @@ export type TriageOutcome = {
 };
 
 /**
- * Triages one domain's observations for a day and promotes the ones the agent
- * flagged.
+ * Triages one domain's observations for one intelligence set, and promotes the
+ * ones the agent flagged.
+ *
+ * `intelligenceSet` is required, and that is the point: triage reads the same set
+ * the Observer wrote to, so a day's observations are labelled and promoted under
+ * the one id that chains them together. Scoping by the set rather than by
+ * `date` also means triage cannot drift onto rows that merely share a calendar
+ * date - see fetchObservationsForSet.
  *
  * `marketDomain` is required rather than optional. Triaging every domain in one
- * pass would be wrong, not merely coarser: importance is judged relative to the
- * set being ranked, and a handful of weather signals sitting in front of a
- * hundred crypto ones would be measured against the wrong baseline. Making the
- * argument mandatory also means a caller cannot silently triage the whole day by
- * forgetting it.
+ * pass would be wrong, not merely coarser: what counts as an important signal is
+ * domain-specific, so a handful of weather observations judged beside a hundred
+ * crypto ones would be held to the wrong bar. Making the argument mandatory also
+ * means a caller cannot silently triage the whole set by forgetting it.
  *
  * The run log is written whatever happens, so a run that fails still leaves the
  * reasoning and steps behind.
  */
-export const runTriage = async (marketDomain: string): Promise<TriageOutcome> => {
+export const runTriage = async (
+  intelligenceSet: DailySet,
+  marketDomain: string,
+): Promise<TriageOutcome> => {
   const runLog = await createAgentRunLog(AGENT_NAME);
 
   // --------------------------------------------------
-  // Read the day
+  // Read the set
   // --------------------------------------------------
 
-  const day: ObservationDay = await fetchObservationsForDate(TRIAGE_DATE, marketDomain);
+  const day: ObservationDay = await fetchObservationsForSet(intelligenceSet, marketDomain);
 
   const { rows, date } = day;
 
@@ -248,6 +152,9 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
     date,
 
     marketDomain,
+
+    // The set under triage, so a run log says which day's work it acted on.
+    intelligenceSetId: intelligenceSet.id,
 
     model: modelIdOf(modelPick),
 
@@ -257,7 +164,10 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
 
     rowCount: rows.length,
 
-    requestedDate: TRIAGE_DATE ?? "CURRENT_DATE",
+    // Scoping is by set, so this should always be 0. Recorded because a non-zero
+    // value would mean a row carries a date other than its set's, which is
+    // exactly the drift that set-scoping exists to prevent.
+    rowsWithMismatchedDate: rows.filter((row) => row.date !== date).length,
 
     // How many rows were already promoted when this run started, so a repeat run
     // is distinguishable from one that did the work.
@@ -265,7 +175,7 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
   });
 
   // Nothing to ask about. Recorded and returned rather than calling the model with
-  // an empty list, which would return a ranking of nothing at full cost.
+  // an empty list, which would cost a request to label nothing.
   if (rows.length === 0) {
     await runLog.record("triage_skipped", {
       reason: `No observations recorded for ${date} in ${marketDomain}.`,
@@ -274,8 +184,9 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
     const recordFile = await writeTriageRecord({
       date,
       marketDomain,
+      intelligenceSetId: intelligenceSet.id,
       rows,
-      ranking: { rankOrder: [], decisions: [] },
+      decisions: [],
       unknownIds: [],
       missingIds: [],
       promoted: 0,
@@ -288,6 +199,7 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
     return {
       date,
       marketDomain,
+      intelligenceSetId: intelligenceSet.id,
       considered: 0,
       promoted: 0,
       importantIds: [],
@@ -431,7 +343,7 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
   
   Label each observation as important or not important based on whether it deserves downstream research and potential inclusion in the daily brief.
   
-  Every observation below belongs to ${marketDomain}. Rank them against each other within this domain, and judge importance by what matters in ${marketDomain} specifically. A signal that would be routine in one domain may be material in this one.
+  Every observation below belongs to ${marketDomain}. Judge each one on its own against what matters in ${marketDomain} specifically. A development that would be routine in one domain may be material in this one. Do not compare or order them.
   
   ${embeddedInput}
   
@@ -456,9 +368,9 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
 
     output: Output.object({
       schema: triageSchema,
-      name: "triage_rankings",
+      name: "triage_signals",
       description:
-        "Every input observation, ranked most important first, each flagged for whether it is worth research.",
+        "One label per input observation: whether it is an important signal worth research, and why.",
     }),
 
     onStepEnd: async (step) => {
@@ -521,7 +433,7 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
   // Parse
   // --------------------------------------------------
 
-  let ranking: TriageRanking;
+  let decisions: TriageDecision[];
 
   try {
     // `output` is the schema-validated result and is preferred whenever the
@@ -534,21 +446,18 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
     if (structured) {
       await runLog.record("parse_source", "output (schema-validated)");
 
-      ranking = {
-        rankOrder: structured.rankings.map((entry) => entry.id),
-        decisions: structured.rankings.map((entry) => ({
-          id: entry.id,
-          important: entry.important,
-          reason: entry.reason,
-        })),
-      };
+      decisions = structured.signals.map((entry) => ({
+        id: entry.id,
+        important: entry.important,
+        reason: entry.reason,
+      }));
     } else {
       await runLog.record(
         "parse_source",
         "text (fallback: provider returned no structured output)",
       );
 
-      ranking = parseTriageRanking(finalText);
+      decisions = parseTriageResult(finalText);
     }
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
@@ -582,42 +491,42 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
   const unknownIds: string[] = [];
   const duplicateIds: string[] = [];
 
-  for (const id of ranking.rankOrder) {
-    if (!knownIds.has(id)) {
-      if (!unknownIds.includes(id)) unknownIds.push(id);
+  for (const decision of decisions) {
+    if (!knownIds.has(decision.id)) {
+      if (!unknownIds.includes(decision.id)) unknownIds.push(decision.id);
 
       continue;
     }
 
-    if (seen.has(id)) {
-      if (!duplicateIds.includes(id)) duplicateIds.push(id);
+    if (seen.has(decision.id)) {
+      if (!duplicateIds.includes(decision.id)) duplicateIds.push(decision.id);
 
       continue;
     }
 
-    seen.add(id);
+    seen.add(decision.id);
   }
 
   const missingIds = rows.map((row) => row.id).filter((id) => !seen.has(id));
 
-  const importantIds = ranking.decisions
+  const importantIds = decisions
     .filter((decision) => decision.important && seen.has(decision.id))
     .map((decision) => decision.id);
 
   await runLog.record("decisions", {
-    ranked: ranking.rankOrder.length,
+    labeled: decisions.length,
 
     important: importantIds.length,
 
     // Reported rather than corrected: a response that lost or invented rows is a
-    // fact about the run worth seeing next to the rankings themselves.
+    // fact about the run worth seeing next to the labels themselves.
     unknownIds,
 
     duplicateIds,
 
     missingIds,
 
-    rankings: ranking.decisions,
+    decisions,
   });
 
   // --------------------------------------------------
@@ -643,8 +552,9 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
   const recordFile = await writeTriageRecord({
     date,
     marketDomain,
+    intelligenceSetId: intelligenceSet.id,
     rows,
-    ranking,
+    decisions,
     unknownIds,
     missingIds,
     promoted,
@@ -654,6 +564,7 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
   return {
     date,
     marketDomain,
+    intelligenceSetId: intelligenceSet.id,
     considered: rows.length,
     promoted,
     importantIds,
@@ -661,97 +572,6 @@ export const runTriage = async (marketDomain: string): Promise<TriageOutcome> =>
     missingIds,
     recordFile,
   };
-};
-
-/**
- * The model's identifier, for the run log.
- *
- * Read through a narrow cast rather than widening the shared `models` type:
- * `modelId` is declared on the concrete model, not the LanguageModel alias.
- */
-const modelIdOf = (model: unknown): string => {
-  const id = (model as { modelId?: unknown }).modelId;
-
-  return typeof id === "string" ? id : "unknown";
-};
-
-// --------------------------------------------------
-// Dated record
-// --------------------------------------------------
-
-type TriageRecordInput = {
-  date: string;
-  marketDomain: string;
-  rows: ObservationDay["rows"];
-  ranking: TriageRanking;
-  unknownIds: string[];
-  missingIds: string[];
-  promoted: number;
-  finishReason: string | null;
-  /** Run-log section describing what happened, echoed into the record. */
-  recordSection?: string;
-};
-
-/**
- * Writes `AI/data/database Fetcher/triage/triage-<date>-<domain>.json`.
- *
- * One file per date and domain, overwritten rather than accumulated. The date is
- * in the name so it says which day it covered, and the domain is in the name
- * because the domains are triaged separately and one verdict says nothing about
- * another. An earlier verdict is recoverable from the run log.
- *
- * The domain goes through `toPathSegment` because `market_domain` is free text in
- * the database, not an identifier, so it is not guaranteed to be a legal file
- * name.
- *
- * Resolves to the path written, relative to the repository root.
- */
-const writeTriageRecord = async (record: TriageRecordInput): Promise<string> => {
-  const directory = path.join(AGENT_RUN_LOG_DIR, TRIAGE_RECORD_DIR);
-
-  await fs.mkdir(directory, { recursive: true });
-
-  const fileName = `triage-${record.date}-${toPathSegment(record.marketDomain)}.json`;
-
-  const filePath = path.join(directory, fileName);
-
-  const relativeFile = path.relative(process.cwd(), filePath).split(path.sep).join("/");
-
-  const importantIds = record.ranking.decisions
-    .filter((decision) => decision.important)
-    .map((decision) => decision.id);
-
-  const document = {
-    date: record.date,
-
-    marketDomain: record.marketDomain,
-
-    writtenAt: new Date().toISOString(),
-
-    recordSection: record.recordSection ?? "triage",
-
-    finishReason: record.finishReason,
-
-    considered: record.rows.length,
-
-    promoted: record.promoted,
-
-    importantIds,
-
-    unknownIds: record.unknownIds,
-
-    missingIds: record.missingIds,
-
-    rankings: record.ranking.decisions,
-
-    // The rows as they were read, so the record shows the input as well as the
-    // verdict. `observation` is the text triage judged.
-    rows: record.rows,
-  };
-
-  await fs.writeFile(filePath, toReadableJson(document), "utf8");
-
-  return relativeFile;
 };
 
 // --------------------------------------------------
@@ -762,7 +582,7 @@ const writeTriageRecord = async (record: TriageRecordInput): Promise<string> => 
  * Domain triaged when this file is run directly.
  *
  * A direct run has to name one: triage is per domain by design, so there is no
- * sensible default and guessing one would silently rank the wrong set. Change
+ * sensible default and guessing one would silently label the wrong set. Change
  * this to triage another domain by hand, or call `runTriage` from the pipeline
  * instead.
  */
@@ -773,11 +593,16 @@ const isDirectRun =
   path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
 
 if (isDirectRun) {
-  runTriage(DIRECT_RUN_DOMAIN)
+  // Resolved the same way the pipeline does, so a direct run labels the same set
+  // a pipeline run would. Get-or-create, so this is today's set whether or not
+  // one already exists.
+  getDailySet()
+    .then((intelligenceSet) => runTriage(intelligenceSet, DIRECT_RUN_DOMAIN))
     .then((outcome) => {
       console.log(
-        `${outcome.date} ${outcome.marketDomain}: considered ${outcome.considered}, ` +
-          `promoted ${outcome.promoted}. Record -> ${outcome.recordFile}`,
+        `${outcome.date} ${outcome.marketDomain} (set ${outcome.intelligenceSetId}): ` +
+          `considered ${outcome.considered}, promoted ${outcome.promoted}. ` +
+          `Record -> ${outcome.recordFile}`,
       );
     })
     .catch((error: unknown) => {

@@ -8,7 +8,7 @@ import { getAgenticContext, getAgenticTooling, estimateTokens } from "../../util
 
 import { createAgentRunLog } from "../../utils/logger.js";
 
-import { getReasoningText, normalizeStep } from "../../utils/agent.js";
+import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
 import { parseObservations, type Observation } from "../../utils/weather/observations.js";
 
 // --------------------------------------------------
@@ -16,18 +16,6 @@ import { parseObservations, type Observation } from "../../utils/weather/observa
 // --------------------------------------------------
 const modelPick = models.openrouter;
 
-/**
- * The model's identifier, for the run log.
- *
- * `modelId` is declared on the concrete model type rather than the
- * `LanguageModel` alias, so it is read through a narrow cast instead of
- * widening the shared `models` type.
- */
-const modelIdOf = (model: unknown): string => {
-  const id = (model as { modelId?: unknown }).modelId;
-
-  return typeof id === "string" ? id : "unknown";
-};
 const MAX_AGENT_STEPS = 5;
 
 /**

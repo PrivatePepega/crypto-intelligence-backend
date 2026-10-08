@@ -1,5 +1,7 @@
 import pool from "../../../config/database.js";
 
+import type { DailySet } from "./observations.js";
+
 // --------------------------------------------------
 // Triage
 // --------------------------------------------------
@@ -25,59 +27,44 @@ export type StoredObservation = {
   created_at: string;
 };
 
-/** A whole day of observations, with the date and domain that were queried. */
+/** A whole set's observations, with the date that set stands for. */
 export type ObservationDay = {
-  /** Resolved date as `YYYY-MM-DD`, whether or not any rows matched. */
+  /** The set's own `set_date`, as `YYYY-MM-DD`. Not read off a row. */
   date: string;
+  /** The set these rows belong to. */
+  intelligenceSetId: string;
   /** Domain that was filtered on, or `null` when every domain was read. */
   marketDomain: string | null;
   rows: StoredObservation[];
 };
 
 /**
- * Every observation recorded for one date, optionally narrowed to one domain.
+ * Every observation filed under one intelligence set, optionally one domain.
  *
- * The date is resolved in the database rather than by the process, and the
- * resolved value is returned. That matters for a daily pipeline: the Observer
- * stamped its rows with `CURRENT_DATE`, so reading the same expression back means
- * both halves agree even across a midnight boundary or a process running in a
- * different timezone. It also means an empty day still reports which day was
- * empty, which a rows-only result could not.
+ * Scoped by `intelligence_set_id` rather than by `date`, because that is the
+ * column the database actually ties a row to a day's work: it is the foreign key
+ * to `intelligence_sets.daily_sets`, and `daily_sets.set_date` is UNIQUE, so the
+ * set is the authoritative grouping. `weather.observations.date` is a plain
+ * NOT NULL column with no constraint tying it to the set's date, so filtering on
+ * it depends on an invariant the schema does not enforce - one that holds today
+ * and would silently select the wrong rows if an observation ever carried a date
+ * other than its set's.
  *
- * Filtering per domain is what keeps a domain's triage reading only its own
- * signals. An observation says which domain it came from, but nothing about
- * *importance* is domain-relative, so triaging the whole day at once would judge
- * a climate signal against a crypto backlog.
+ * The returned date is the set's own `set_date`, so the artifact name and the
+ * rows can never disagree about which day they are.
  *
- * Both arguments are optional so a caller can still read everything: a full day
- * across all domains, or one domain across a chosen date. They compose.
+ * Filtering per domain keeps a domain's triage reading only its own signals. What
+ * counts as an important signal is domain-specific, so triaging every domain in
+ * one pass would hold a thin domain to a thick one's bar.
  *
- * `date::text` for the same reason as `findDailySet` in observations.ts: `pg`
- * turns a DATE into a local-time Date, which reads back a day early west of UTC.
+ * @param marketDomain `null` reads every domain in the set.
  */
-export const fetchObservationsForDate = async (
-  date: string | null = null,
+export const fetchObservationsForSet = async (
+  intelligenceSet: DailySet,
   marketDomain: string | null = null,
 ): Promise<ObservationDay> => {
-  const { rows: dayRows } = await pool.query<{ day: string }>(
-    `
-      SELECT ${date === null ? "CURRENT_DATE" : "$1::date"}::text AS day;
-    `,
-    date === null ? [] : [date],
-  );
-
-  // `SELECT <expr>` always returns exactly one row, so an empty result would mean
-  // the expression failed rather than that the day has no observations.
-  const resolvedDate = dayRows[0]?.day;
-
-  if (resolvedDate === undefined) {
-    throw new Error(
-      `Could not resolve a date to query weather.observations with. Requested ${JSON.stringify(date)}.`,
-    );
-  }
-
-  const values: unknown[] = [resolvedDate];
-  const conditions = ["date = $1::date"];
+  const values: unknown[] = [intelligenceSet.id];
+  const conditions = ["intelligence_set_id = $1::uuid"];
 
   // Bound rather than interpolated, so a domain holding a quote or a semicolon
   // stays a value.
@@ -105,7 +92,12 @@ export const fetchObservationsForDate = async (
     values,
   );
 
-  return { date: resolvedDate, marketDomain, rows: rows as StoredObservation[] };
+  return {
+    date: intelligenceSet.set_date,
+    intelligenceSetId: intelligenceSet.id,
+    marketDomain,
+    rows: rows as StoredObservation[],
+  };
 };
 
 /**

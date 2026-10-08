@@ -8,6 +8,33 @@ import type {
 } from "../../types/AI/observer.js";
 
 // --------------------------------------------------
+// Model identity
+// --------------------------------------------------
+
+/**
+ * The model's identifier, for the run log.
+ *
+ * `modelId` is declared on the concrete model type rather than the
+ * `LanguageModel` alias, so it is read through a narrow cast instead of widening
+ * the shared `models` type.
+ *
+ * Recorded because provider defaults and routers change what actually answers,
+ * and without it a run log cannot say which model produced it.
+ *
+ * Null-safe by way of optional chaining, not just the cast: both agent files
+ * carried this identical function, and both threw on a nullish argument rather
+ * than returning "unknown" as the signature implies. `model` is typed `unknown`,
+ * so a caller can hand it anything and the "unknown" fallback has to be real.
+ *
+ * Lives here rather than in either agent because both need it.
+ */
+export const modelIdOf = (model: unknown): string => {
+  const id = (model as { modelId?: unknown } | null | undefined)?.modelId;
+
+  return typeof id === "string" ? id : "unknown";
+};
+
+// --------------------------------------------------
 // Reasoning
 // --------------------------------------------------
 

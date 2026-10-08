@@ -95,7 +95,14 @@ export const isToolSet = (value: unknown): value is Record<string, unknown> => {
 // Build agentic ToolSet
 // --------------------------------------------------
 
-export const getAgenticTooling = (config: ObserverConfig): ToolSet => {
+/**
+ * Builds the tool set named by `config.tools`.
+ *
+ * Typed as `Pick<ObserverConfig, "tools">` rather than the whole config, because
+ * the Researcher needs the same tool set without an Observer-shaped config of its
+ * own and this is the only field it reads.
+ */
+export const getAgenticTooling = (config: Pick<ObserverConfig, "tools">): ToolSet => {
   const tools = {} as ToolSet;
 
   for (const toolName of config.tools) {
