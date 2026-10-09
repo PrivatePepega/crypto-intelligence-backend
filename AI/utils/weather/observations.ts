@@ -177,6 +177,11 @@ export const insertObservations = async (
   marketDomain: string,
   observations: Observation[],
 ): Promise<number> => {
+  console.log(
+    `[inject] Observations injection initialized for domain: ${marketDomain} - ` +
+      `${observations.length} observation(s) to write`,
+  );
+
   if (observations.length === 0) return 0;
 
   const values: unknown[] = [];
@@ -205,5 +210,12 @@ export const insertObservations = async (
     values,
   );
 
-  return rowCount ?? 0;
+  const written = rowCount ?? 0;
+
+  console.log(
+    `[inject] Observations injection finalized for domain: ${marketDomain} - ` +
+      `${written} row(s) written`,
+  );
+
+  return written;
 };

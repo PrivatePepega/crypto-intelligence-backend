@@ -138,6 +138,11 @@ export const runTriage = async (
   intelligenceSet: DailySet,
   marketDomain: string,
 ): Promise<TriageOutcome> => {
+  console.log(
+    `[triage] Triage run initialized for domain: ${marketDomain} - ` +
+      `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
+  );
+
   const runLog = await createAgentRunLog(AGENT_NAME);
 
   // --------------------------------------------------
@@ -195,6 +200,11 @@ export const runTriage = async (
     });
 
     await runLog.finish();
+
+    console.log(
+      `[triage] Triage run finalized for domain: ${marketDomain} - ` +
+        `considered 0, promoted 0 (skipped, no observations)`,
+    );
 
     return {
       date,
@@ -560,6 +570,11 @@ export const runTriage = async (
     promoted,
     finishReason,
   });
+
+  console.log(
+    `[triage] Triage run finalized for domain: ${marketDomain} - ` +
+      `considered ${rows.length}, promoted ${promoted}`,
+  );
 
   return {
     date,

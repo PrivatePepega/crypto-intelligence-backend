@@ -346,6 +346,11 @@ export const runResearcher = async (
   intelligenceSet: DailySet,
   marketDomain: string | null,
 ): Promise<ResearchOutcome> => {
+  console.log(
+    `[research] Research run initialized for domain: ${marketDomain ?? "all-domains"} - ` +
+      `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
+  );
+
   const runLog = await createAgentRunLog(AGENT_NAME);
 
   const queue = await fetchResearchQueue(intelligenceSet, marketDomain);
@@ -735,13 +740,21 @@ export const runResearcher = async (
     dumpFile,
   });
 
+  const researchedCount = attempts.filter((attempt) => attempt.stored).length;
+
+  console.log(
+    `[research] Research run finalized for domain: ${marketDomain ?? "all-domains"} - ` +
+      `queued ${queue.length}, researched ${researchedCount}, ` +
+      `${failedIds.length} failed, ${stored.length} row(s) in set`,
+  );
+
   return {
     date: intelligenceSet.set_date,
     marketDomain: marketDomain ?? "all-domains",
     intelligenceSetId: intelligenceSet.id,
     queued: queue.length,
     attempted: attempts.length,
-    researched: attempts.filter((attempt) => attempt.stored).length,
+    researched: researchedCount,
     failedIds,
     totalInSet: stored.length,
     dumpFile,

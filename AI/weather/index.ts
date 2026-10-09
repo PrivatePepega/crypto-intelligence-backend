@@ -18,25 +18,14 @@ export async function runWeather(): Promise<void> {
   // carry today's date.
   const intelligenceSet = await getDailySet();
 
+  const cryptoDomain = observerConfigs.crypto;
 
-  
-  const cryptoObservations = await runObserver(observerConfigs.crypto);
-  await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
-  await dumpObservationsForSet(intelligenceSet, observerConfigs.crypto.domain);
-  await runTriage(intelligenceSet, observerConfigs.crypto.domain);
-  await runResearcher(intelligenceSet , observerConfigs.crypto.domain);
-
-
+  const cryptoObservations = await runObserver(cryptoDomain);
+  await insertObservations(intelligenceSet, cryptoDomain.domain, cryptoObservations);
+  await dumpObservationsForSet(intelligenceSet, cryptoDomain.domain);
+  await runTriage(intelligenceSet, cryptoDomain.domain);
+  await runResearcher(intelligenceSet, cryptoDomain.domain);
 }
-
-
-
-
-
-
-
-
-
 
 const isDirectRun =
   process.argv[1] !== undefined &&

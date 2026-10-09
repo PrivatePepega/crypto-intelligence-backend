@@ -312,6 +312,11 @@ export const dumpObservationsForSet = async (
   intelligenceSet: DailySet,
   marketDomain: string,
 ): Promise<string> => {
+  console.log(
+    `[snapshot] Observations snapshot initialized for domain: ${marketDomain} - ` +
+      `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
+  );
+
   const columns = DATABASE_INPUT.columns.map((column, index) =>
     requireSqlName(column, `columns[${index}]`, SELECT_ITEM),
   );
@@ -359,6 +364,11 @@ export const dumpObservationsForSet = async (
   };
 
   await fs.writeFile(filePath, toReadableJson(document), "utf8");
+
+  console.log(
+    `[snapshot] Observations snapshot finalized for domain: ${marketDomain} - ` +
+      `${rows.length} row(s) -> ${relativeFile}`,
+  );
 
   return relativeFile;
 };

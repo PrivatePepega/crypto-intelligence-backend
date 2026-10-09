@@ -54,6 +54,8 @@ const OBSERVER_EVIDENCE_FORMAT = "JSON.stringify(observerEvidence, null, 2)";
  * produced it, is kept in the run log at AI/data/<agent>/<agent>-NNN.json.
  */
 export const runObserver = async (config: ObserverConfig): Promise<Observation[]> => {
+  console.log(`[observe] Observation run initialized for domain: ${config.domain}`);
+
   const runLog = await createAgentRunLog(AGENT_NAME);
 
   const observerContext = await getAgenticContext(config);
@@ -502,7 +504,14 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   await runLog.finish(finalText);
 
   try {
-    return parseObservations(finalText);
+    const observations = parseObservations(finalText);
+
+    console.log(
+      `[observe] Observation run finalized for domain: ${config.domain} - ` +
+        `${observations.length} observation(s)`,
+    );
+
+    return observations;
   } catch (error) {
     // The run log is the only place this survives once the process exits, so
     // record why the response was unusable instead of leaving just an exception.
