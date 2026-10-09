@@ -8,6 +8,7 @@ import openrouter from "./models/openRouter.js";
 type Models = {
     groq: LanguageModel;
     google: LanguageModel;
+    openrouterFree: LanguageModel;
     openrouter: LanguageModel;
     cloudflare: LanguageModel;
   };
@@ -17,7 +18,9 @@ export const models: Models = {
 
   google: google("gemini-3.8-flash"),
   
-  openrouter: openrouter("openrouter/free"),
+  openrouterFree: openrouter("openrouter/free"),
+
+  openrouter: openrouter("nvidia/nemotron-3-ultra-550b-a55b-20260604:free"),
 
   cloudflare: cloudflare("@cf/zai-org/glm-4.7-flash"),
 };

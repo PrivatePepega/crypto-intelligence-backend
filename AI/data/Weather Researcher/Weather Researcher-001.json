@@ -1,0 +1,185 @@
+{
+  "agentName": "Weather Researcher",
+  "runNumber": 1,
+  "file": "AI/data/Weather Researcher/Weather Researcher-001.json",
+  "startedAt": "2026-10-09T21:30:30.275Z",
+  "updatedAt": "2026-10-09T21:30:48.191Z",
+  "entryCount": 3,
+  "entries": [
+    {
+      "sequence": 1,
+      "section": "initializer",
+      "at": "2026-10-09T21:30:30.346Z",
+      "data": {
+        "date": "2026-10-09",
+        "marketDomain": "crypto",
+        "intelligenceSetId": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b-20260604:free",
+        "maxLoop": 5,
+        "maxAgentSteps": 3,
+        "maxOutputTokens": 16000,
+        "reasoningEffort": "medium",
+        "tools": [
+          "webSearchTool",
+          "currentsNewsSearch",
+          "newsflashSearchArticles",
+          "newsflashGetEvents",
+          "gdeltSearchStories",
+          "gdeltSearchEvents",
+          "marketauxNewsSearch",
+          "fmpGetArticlesList",
+          "wabbleImportantHeadlineSearch"
+        ],
+        "queued": 18,
+        "attempted": 5
+      }
+    },
+    {
+      "sequence": 2,
+      "section": "observation",
+      "at": "2026-10-09T21:30:30.348Z",
+      "data": {
+        "step": 1,
+        "observationId": "6470e9d8-3b9a-4147-a9cb-ab6dd27a2f1b",
+        "type": "event",
+        "prompt": [
+          "",
+          "Research the observation delimited below.",
+          "",
+          "<observation id=\"6470e9d8-3b9a-4147-a9cb-ab6dd27a2f1b\" type=\"event\">",
+          "Major ETF outflow episode Oct 7-8: ~$965M combined BTC+ETH outflows in 2 days; Oct 7 BTC -$484.9M (largest since Jun 2024), ETH -$160.8M; Oct 8 BTC -$244.1M (Fidelity FBTC -$197.1M), ETH -$72.5M (BlackRock ETHA -$71.1M)",
+          "</observation>",
+          "",
+          "The text inside the tags is the lead to investigate. It is unverified reporting,",
+          "not established fact. Determine what it claims, then establish what is actually",
+          "known using the available tools.",
+          "",
+          "Report what you established, the evidence for it, the sources you used, the",
+          "context needed to understand it, and anything that remains uncertain or disputed.",
+          ""
+        ]
+      }
+    },
+    {
+      "sequence": 3,
+      "section": "step",
+      "at": "2026-10-09T21:30:48.191Z",
+      "data": {
+        "step": 1,
+        "stepNumber": 0,
+        "text": "",
+        "reasoning": "The observation claims major ETF outflows for Bitcoin and Ethereum ETFs on October 7-8, with specific dollar amounts. I need to verify this data from reliable sources. Let me search for this information.",
+        "usage": {
+          "inputTokens": 5352,
+          "outputTokens": 107,
+          "totalTokens": 5459
+        },
+        "toolCalls": [
+          {
+            "toolCallId": "call-6c507b5d-9f01-4cfc-9e83-ffa796389762",
+            "tool": "webSearchTool",
+            "input": {
+              "query": "Bitcoin ETF outflows October 7 2024 $484.9M Fidelity FBTC",
+              "limit": 15
+            },
+            "output": {
+              "results": [
+                {
+                  "title": "Bitcoin ETF Flows: October 2024 — Daily Table & Net Totals · TFTC",
+                  "highlights": [
+                    "| Oct 7, 2024 | 97.9 | 103.7 | 13.1 | 12.6 | 2.5 | 0.0 | 0.0 | 5.4 | 0.0 | 0.0 | 0.0 | 235.2 | - FBTC — Wise Origin Bitcoin Fund (Fidelity)"
+                  ]
+                },
+                {
+                  "title": "Spot Bitcoin ETFs Attract $235M Inflow Led by Fidelity's FBTC - CoinTab News",
+                  "highlights": [
+                    "Spot Bitcoin ETFs experienced a net inflow of $235 million on Monday, led by Fidelity's FBTC. Lucky Ebosele• October 8, 2024 US spot exchange-traded funds (ETFs) are back with gains, recording a net inflow of $235 million on Monday, October 7, 2024. Fidelity Wise Origin Bitcoin Fund (FBTC) was the primary beneficiary, attracting a single-day net inflow of $103.68 million, bringing the fund’s historical net inflow to $9.95 billion. Meanwhile, the latest development comes after Spot Bitcoin ETFs witnessed selling pressures. Data shows over $300 million exited the fund from October 1 to October 3. However, that was after they ended September with more than $1.1 billion inflow."
+                  ]
+                },
+                {
+                  "title": "Bitcoin ETFs Bleed $484.9 Million As BlackRock Leads A Broad Day Of Outflows - Crinance",
+                  "highlights": [
+                    "TL;DR: US spot Bitcoin ETFs recorded $484.9 million in net outflows on October 7, according to Farside Investors. BlackRock’s IBIT led the withdrawals with $207.7 million leaving the fund, while Fidelity and ARK also posted nine-figure outflows. US spot Bitcoin exchange-traded funds recorded $484.9 million in combined net outflows on October 7, according to updated data from Farside Investors. Fidelity’s FBTC recorded another $105.1 million of net outflows, while ARK’s ARKB lost $101.7 million."
+                  ]
+                },
+                {
+                  "title": "Bitcoin ETF inflows surge to $235.2 mln - Returning investor interest? - AMBCrypto",
+                  "highlights": [
+                    "- Bitcoin ETF inflows see renewed vigor, led by Fidelity’s FBTC and BlackRock’s IBIT. - Ethereum ETFs experience no new inflows, with declining trading volume on the 7th of October. According to Farside Investors, BTC ETFs saw notable inflows on the 7th of October, amounting to $235.2 million, marking two consecutive days of positive capital movement. Leading the surge was Fidelity’s FBTC ETF, which recorded the highest inflows, drawing in $103.7 million. Additionally, BlackRock’s IBIT, the largest spot Bitcoin ETF by assets, recorded a solid $97.9 million in inflows, rebounding from zero activity seen on 4th {\"@context\":\"https://schema.org\",\"@type\":\"NewsArticle\",\"mainEntityOfPage\":\"https://ambcrypto.com/bitcoin-etf-inflows-surge-to-235-2-mln-returning-investor-interest/\",\"inLanguage\":\"en-US\",\"headline\":\"Bitcoin ETF inflows surge to $235.2 mln – Returning investor interest?\",\"url\":\"https://ambcrypto.com/bitcoin-etf-inflows-surge-to-235-2-mln-returning-investor-interest/\",\"datePublished\":\"2024-10-08T23:00:51-04:00\",\"dateModified\":\"2024-10-08T23:00:51-04:00\",\"description\":\"Amid fluctuating prices, Bitcoin ETFs surged with $235.2 million in inflows, while Ethereum ETFs paused unexpectedly.\",\"keywords\":\"Bitcoin ETF, BTC, Bitcoin, ambcrypto, crypto news\",\"articleSection\":\"Bitcoin\",\"wordCount\":392,\"articleBody\":\"Bitcoin ETF inflows see renewed vigor, led by Fidelity’s FBTC and BlackRock’s IBIT. Ethereum ETFs experience no new inflows, with declining trading volume on the 7th of October. Despite a slow start to October for spot Bitcoin [BTC] ETFs, the market is showing signs of improvement. According to Farside Investors, BTC ETFs saw notable inflows on the 7th of October, amounting to $235.2 million, marking two consecutive days of positive capital movement. Fidelity's leads Bitcoin ETF Leading the surge was Fidelity’s FBTC ETF, which recorded the highest inflows, drawing in $103.7 million. Additionally, BlackRock’s IBIT, the largest spot Bitcoin ETF by assets, recorded a solid $97.9 million in inflows, rebounding from zero activity seen on the 4th of October. As expected, Bitwise’s BITB gained $13.1 million, Ark and 21Shares’ ARKB attracted $12.6 million, VanEck’s HODL received $5.4 million, and Invesco’s BTCO captured $2.5 million. However, Grayscale’s GBTC and six other ETFs recorded no new flows on the 7th of October. That being said, the collective trading volume across all 12 ETFs reached $1.22 billion, showing a steady increase from $1.19 billion on the 4th of October and $1.13 billion on the 3rd of October. Balchunas had already anticipated this Remarking on the same, Bloomberg senior ETF analyst Eric Balchunas recently spotlighted IBIT and FBTC as two standout BTC ETFs of the decade. He noted their impressive rise to “stud level” status, each amassing over $10 billion in Assets Under Management (AUM). Balchunas emphasized, Bitcoin's price shows bearish momentum Unexpectedly, as Bitcoin ETFs capture increased investor attention, BTC's price has shown some signs of struggle. Currently trading around $62,497 after a 0.48% drop in the past 24 hours, the cryptocurrency remains shy of its recent $66,000 peak. These developments coincided with a significant legal decision, as the U.S. Supreme Court recently declined to hear an appeal concerning the ownership of 69,370 Bitcoin initially seized from the Silk Road dark web marketplace. Ethereum ETF analyzed Unlike BTC ETFs, U.S. spot Ethereum [ETH] ETFs experienced a pause in activity on the 7th of October, following $7.39 million in inflows last recorded on the 4th October and a $3.2 million in outflows on the 3rd of October. Alongside this quiet period, trading volume across nine ETH ETFs declined, reaching $118.43 million from the 4th of October's $148.01 million. Meanwhile, on the price front, Ethereum was down by 1.35%, trading at $2,436, reflecting the shifting dynamics in the crypto space. \",\"author\":{\"@type\":\"Person\",\"name\":\"Ishika Kumari\",\"url\":\"https://ambcrypto.com/author/ishika-kumari/\"},\"publisher\":{\"@type\":\"NewsMediaOrganization\",\"name\":\"AMBCrypto\",\"url\":\"https://ambcrypto.com/\",\"logo\":{\"@type\":\"ImageObject\",\"@id\":\"https://ambcrypto.com/#/schema/logo/image/\",\"url\":\"https://ambcrypto.com/wp-content/uploads/2026/04/amb-wide.jpg\",\"width\":600,\"height\":60}},\"image\":{\"@type\":\"ImageObject\",\"url\":\"https://ambcrypto.com/wp-content/uploads/2024/10/Bitcoin-ETF-inflows-surge.webp\",\"width\":1600,\"height\":900},\"thumbnailUrl\":\"https://ambcrypto.com/wp-content/uploads/2024/10/Bitcoin-ETF-inflows-surge.webp\"}"
+                  ]
+                },
+                {
+                  "title": "U.S. spot Bitcoin ETFs see $484.9M net outflow after one-day inflow - CoinNess",
+                  "highlights": [
+                    "U.S. spot Bitcoin ETFs see $484.9M net outflow after one-day inflow - CoinNess U.S. spot Bitcoin ETFs posted a net outflow of $484.9 million on Oct. 7, reversing from a net inflow a day earlier, according to Farside Investors. - BlackRock IBIT: -$207.7 million - Fidelity FBTC: -$105.1 million - Bitwise BITB: -$27.6 million - ARK Invest ARKB: -$101.7 million - VanEck HODL: -$3.5 million - Grayscale GBTC: -$39.3 million"
+                  ]
+                },
+                {
+                  "title": "Bitcoin Spot ETFs Record $484.9M Net Outflow in Single Day | Woofun News",
+                  "highlights": [
+                    "Bitcoin Spot ETFs Record $484.9M Net Outflow in Single Day Woofun AI data shows that US spot ETFs registered a total net outflow of $484.9 million on October 7, reversing the previous day's inflow of $118.8 million. led the withdrawals with $207.7 million in outflows, followed by at $105.1 million and at $101.7 million. Asset Management's also posted net redemptions, marking a sharp shift after IBIT saw $122 million in inflows the prior day. The sudden reversal from inflows to significant outflows suggests institutional caution amid macroeconomic uncertainty. With BlackRock and Fidelity leading the exits, this may signal a short-term pause in accumulation rather than a structural trend shift. Monitoring subsequent days is crucial to determine if this reflects temporary risk-off behavior or deeper sentiment changes."
+                  ]
+                },
+                {
+                  "title": "Bitcoin ETFs Record $484.9M Outflows on October 7, BlackRock's IBIT Leads | KuCoin",
+                  "highlights": [
+                    "Bitcoin news: US spot Bitcoin ETFs saw $484.9M in net outflows on October 7, per Farside Investors. BlackRock’s IBIT led with $207.7M in redemptions, followed by Fidelity’s FBTC at $105.1M and ARK’s ARKB at $101.7M. On-chain news shows BITB, GBTC, and HODL also lost funds. This reverses the prior day’s $118.8M inflows. TL;DR: US spot Bitcoin ETFs recorded $484.9 million in net outflows on October 7, according to Farside Investors. BlackRock’s IBIT led the withdrawals with $207.7 million leaving the fund, while Fidelity and ARK also posted nine-figure outflows. US spot Bitcoin exchange-traded funds recorded $484.9 million in combined net outflows on October 7, according to updated data from Farside Investors. Fidelity’s FBTC recorded another $105.1 million of net outflows, while ARK’s ARKB lost $101.7 million."
+                  ]
+                },
+                {
+                  "title": "Crypto ETFs Lose $650.6 Million on October 7 as BlackRock Leads Bitcoin and Ether Outflows",
+                  "highlights": [
+                    "U.S. cryptocurrency exchange-traded funds recorded $650.6 million in combined net outflows on Wednesday, October 7, as investors withdrew capital from Bitcoin, Ethereum and Solana products amid renewed pressure across digital-asset markets. Bitcoin ETFs suffered the largest withdrawals, losing $484.9 million, while Ethereum funds recorded $160.9 million in redemptions. Solana ETFs posted a smaller $4.8 million outflow, according to Farside Investors. The result marked a sharp deterioration from October 6, when Bitcoin ETFs attracted $118.8 million, partially offsetting Ethereum’s $201.9 million withdrawal and Solana’s $3.7 million decline. BlackRock Leads $484.9 Million Bitcoin ETF Selloff Fidelity’s FBTC followed with $105.1 million in redemptions, while ARK 21Shares’ ARKB lost $101.7 million. Grayscale’s GBTC recorded $39.3 million in withdrawals, Bitwise’s BITB lost $27.6 million, and VanEck’s HODL posted a smaller $3.5 million outflow. Unlike several previous sessions, when inflows into one major fund offset withdrawals elsewhere, October 7 showed broad-based selling across six Bitcoin products. The $484.9 million decline also reversed Tuesday’s $118.8 million inflow, which had been driven primarily by BlackRock’s $122 million contribution."
+                  ]
+                },
+                {
+                  "title": "ETF Desk 7 Oct: bitcoin ETFs −$484.9M, ether −$160.9M",
+                  "highlights": [
+                    "ETF Desk 7 Oct: bitcoin ETFs −$484.9M, ether −$160.9M ETF Desk: bitcoin ETF outflows of $484.9M are the most since June US spot bitcoin ETF outflows reached a net $484.9 million on Wednesday, according to Farside data, the largest daily outflow since 25 Jun, when the group lost $691.7 million. BlackRock’s IBIT, which carried Tuesday’s $118.8 million inflow on its own, gave back $207.7 million. Ether funds lost $160.9 million, their seventh straight session of outflows. | Fund | Net flow, 7 Oct ($M) | Week to date ($M) | | --- | --- | --- | | IBIT (BlackRock) | −207.7 | −15.8 | | FBTC (Fidelity) | −105.1 | −179.6 | | ARKB (Ark 21Shares) | −101.7 | −186.9 | | GBTC (Grayscale) | −39.3 | −39.3 | | BITB (Bitwise) | −27.6 | −27.6 | | HODL (VanEck) | −3.5 | −3.5 | | Bitcoin ETFs total | −484.9 | −455.9 | | ETHA (BlackRock) | −116.1 | −349.9 | | ETHE (Grayscale) | −25.8 | −25.8 | | Other ether funds (7 Oct: TETH −6.3, ETHW −5.9, ETHV −2.8, QETH −2.0, ETH −2.0; week to date includes FETH −18.9) | −19.0 | −37.9 | | Ether ETFs total | −160.9 | −413.6 | | Solana ETFs total (BSOL −4.8) | −4.8 | −17.7 | million, ether $17"
+                  ]
+                },
+                {
+                  "title": "US spot bitcoin ETFs experienced $18.6 million in net outflows yesterday, dominated by Fidelity’s FBTC",
+                  "highlights": [
+                    "US spot bitcoin ETFs experienced $18.6 million in net outflows yesterday, dominated by Fidelity’s FBTC - U.S. spot bitcoin ETFs experienced $18.66 million in net outflows on Wednesday. - Fidelity’s FBTC led the outflows with $48.82 million leaving the fund. U.S. spot bitcoin exchange-traded funds recorded $18.66 million in net outflows on Tuesday, ending a two-day streak of positive flows. Fidelity’s FBTC led the outflows with $48.82 million exiting the product, according to SoSoValue data. Grayscale’s GBTC, the second largest spot bitcoin ETF by net assets, also saw $9.41 million in outflows after reporting no flows the day before. {\"@context\":\"https://schema.org\",\"@type\":\"NewsArticle\",\"headline\":\"US spot bitcoin ETFs experienced $18.6 million in net outflows yesterday, dominated by Fidelity’s FBTC\",\"url\":\"https://www.theblock.co/news/markets/2024-10-09-us-spot-bitcoin-etfs-experience-18-6-million-in-net-outflows-dominated-by-fidelitys-fbtc-320183\",\"thumbnailUrl\":\"https://www.tbstat.com/wp/uploads/2024/09/20240904_Bitcoin_News.jpg\",\"articleSection\":\"Funds\",\"keywords\":[\"Funds\",\"Markets\",\"Bitcoin ETF\",\"Ethereum ETF\"],\"publisher\":{\"@id\":\"https://www.theblock.co/#organization\"},\"description\":\"Spot bitcoin ETFs experienced $18.66 million in net outflows on Wednesday, with Fidelity’s FBTC recording $48.82 million in outflows.\",\"articleBody\":\"U.S. spot bitcoin exchange-traded funds recorded $18.66 million in net outflows on Tuesday, ending a two-day streak of positive flows. Fidelity’s FBTC led the outflows with $48.82 million exiting the product, according to SoSoValue data. Grayscale’s GBTC, the second largest spot bitcoin ETF by net assets, also saw $9.41 million in outflows after reporting no flows the day before. BlackRock’s IBIT, the largest spot bitcoin ETF, was the only fund to see inflows, with $39.57 million flowing into the ETF. The nine other ETFs recorded zero flows. The total trading volume for the 12 products reached $1.35 billion on Tuesday, up from $1.22 billion on Monday. Ether ETFs saw outflows Meanwhile, spot Ethereum ETFs in the U.S. recorded $8.19 million in net outflows on Tuesday after reporting zero flows on Monday. Bitwise’s ETHW saw the largest outflows of the day, with $4.54 million leaving the fund, while Fidelity’s FETH logged outflows of $3.65 million. The seven other spot ether ETFs experienced no flows. The nine ETFs’ total trading volume shrank to $102.37 million on Tuesday, compared to $118.43 million the day before. Bitcoin edged down 0.32% over the past 24 hours to trade at $62,372 at the time of writing, while ether gained 0.52% to change hands at $2,445, according to The Block’s price page.\",\"image\":[\"https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2024/09/20240904_Bitcoin_News.jpg\",\"https://www.tbstat.com/cdn-cgi/image/width=1600,height=1200,fit=cover,format=jpeg,quality=80/wp/uploads/2024/09/20240904_Bitcoin_News.jpg\",\"https://www.tbstat.com/cdn-cgi/image/width=1200,height=1200,fit=cover,format=jpeg,quality=80/wp/uploads/2024/09/20240904_Bitcoin_News.jpg\"],\"datePublished\":\"2024-10-09T01:49:52-04:00\",\"dateModified\":\"2024-10-09T01:49:52-04:00\",\"dateCreated\":\"2024-10-09T01:48:50-04:00\",\"author\":[{\"@type\":\"Person\",\"name\":\"Timmy Shen\",\"url\":\"https://www.theblock.co/author/timmy-shen\",\"image\":\"https://www.tbstat.com/wp/uploads/2023/07/Shen_Timmy-300x300.jpg\",\"description\":\"Timmy Shen is an Asia editor for The Block. Previously, he wrote about crypto Web3 for ast.News from Taiwan after spending more than three Beijing covering finance, business and current affairs at Caixin Global and Chinese tech at TechNode. His China-related reporting has also appeared in Guardian. When he's not chasing headlines, you'll pot and shabu shabu . Timmy holds an MS degree from Columbia University Graduate School of Journalism. Send theblock.co or get in touch on X/ As\":[\"https://twitter.com/ .linkedin.com/ EntityOfPage\":\"https:// .theblock. /news/markets/2024-10-09- -bitcoin-etfs-experience-18-6-million-in-net- -fbtc- .co/#website experience-1"
+                  ]
+                },
+                {
+                  "title": "US Bitcoin ETFs See $485 Million Outflow, Largest Since June",
+                  "highlights": [
+                    "US Bitcoin ETFs See $485 Million Outflow, Largest Since June US spot Bitcoin ETFs saw $485M in outflows Wednesday, the most since June, while Ether ETFs extended their outflow streak to seven - US spot Bitcoin ETFs recorded $484.9 million in net outflows on Wednesday, the largest since June 25. - The outflows erased $321.6 million in October inflows, leaving the funds about $163 million in the red for the month. - BlackRock’s iShares Bitcoin Trust led withdrawals with $207.7 million, one day after taking in $122 million. - US spot Ether ETFs posted $160.9 million in outflows, their seventh straight losing session. - Bitcoin traded near $82,700 on Thursday, down about 2% over 24 hours. US spot Bitcoin exchange-traded funds saw $484.9 million in net outflows on Wednesday, according to data from Farside Investors. It was the largest single day of outflows since June 25, when Bitcoin ETFs lost $691.7 million. BlackRock’s iShares Bitcoin Trust led the withdrawals, with $207.7 million leaving the fund. That came one day after the fund took in $122 million in net inflows. Fidelity’s Wise Origin Bitcoin Fund followed with $105.1 million in outflows."
+                  ]
+                },
+                {
+                  "title": "U.S. Bitcoin ETFs Post $484.9 Million Daily Outflow",
+                  "highlights": [
+                    "U.S. Bitcoin ETFs Post $484.9 Million Daily Outflow U.S. Bitcoin ETFs Lose $484.9 Million as October Flows Reverse U.S. spot Bitcoin ETFs recorded their largest daily outflow since June, erasing the net inflows accumulated during October’s first four sessions. - U.S. spot Bitcoin ETFs recorded $484.9 million in net outflows on October 7, the largest daily withdrawal since June 25. - BlackRock’s IBIT led with $207.7 million in outflows, followed by Fidelity’s FBTC at $105.1 million and ARK 21Shares’ ARKB at $101.7 million. - The session erased the $321.6 million accumulated over October’s first four trading days and left the month about $163.3 million in the red. U.S. spot Bitcoin exchange-traded funds recorded $484.9 million in net outflows on October 7, reversing a $118.8 million inflow one session earlier and wiping out the positive start to the month. Farside Investors’ fund-level table shows the withdrawal was the group’s largest daily outflow since June 25. The shift provides a concrete measure of weakening demand through regulated U.S. products, but it does not by itself establish why investors redeemed shares or where Bitcoin’s price goes next. BlackRock’s iShares Bitcoin Trust, or IBIT, posted $207.7 million in net outflows. Fidelity’s FBTC followed with $105.1 million, while ARK 21Shares’ ARKB lost $101.7 million. Bitwise’s BITB recorded $27.6 million of outflows, Grayscale’s GBTC lost $39.3 million and VanEck’s HODL lost $3.5 million. The remaining products in Farside’s table were flat. The breadth matters because the total was not driven by a single legacy fund or one isolated issuer. The funds had accumulated $321.6 million across October’s first four trading sessions, based on Farside’s daily totals: $102.7 million on October 1, $189.9 million on October 2, a $89.8 million outflow on October 5 and a $118.8 million inflow on October 6. Subtracting Wednesday’s $484.9 million withdrawal leaves the month about $163.3 million in net outflows through October 7. Cointelegraph independently reported the same daily total and identified the session as the largest withdrawal since June 25, when outflows reached $691.7 million."
+                  ]
+                },
+                {
+                  "title": "US spot bitcoin ETFs experienced $18.6 million in net outflows yesterday, dominated by Fidelity’s FBTC | The Block",
+                  "highlights": [
+                    "US spot bitcoin ETFs experienced $18.6 million in net outflows yesterday, dominated by Fidelity’s FBTC | The Block US spot bitcoin ETFs experienced $18.6 million in net outflows yesterday, dominated by Fidelity’s FBTC Markets•October 9, 2024, 1:49AM EDT - U.S. spot bitcoin ETFs experienced $18.66 million in net outflows on Wednesday. - Fidelity’s FBTC led the outflows with $48.82 million leaving the fund. U.S. spot bitcoin exchange-traded funds recorded $18.66 million in net outflows on Tuesday, ending a two-day streak of positive flows. Fidelity’s FBTC led the outflows with $48.82 million exiting the product, according to SoSoValue data. Grayscale’s GBTC, the second largest spot bitcoin ETF by net assets, also saw $9.41 million in outflows after reporting no flows the day before."
+                  ]
+                },
+                {
+                  "title": "US spot Bitcoin ETFs post $484.9M outflow, wiping October’s",
+                  "highlights": [
+                    "US spot Bitcoin ETFs post $484.9M outflow, wiping October’s US spot Bitcoin ETFs swung to $484.9 million of net outflows on Wednesday, the biggest one-day withdrawal since June 25. The reversal erased October’s early inflows and landed alongside another heavy outflow day for US spot Ether ETFs. - US spot Bitcoin ETFs logged $484.9 million in net outflows on Wednesday after taking in $118.8 million the prior session. - The withdrawal was the largest daily outflow since June 25’s $691.7 million exit, based on Farside Investors flow data. - A single session erased $321.6 million of net inflows from October’s first four trading days, pushing month-to-date flows to roughly $163 million net outflows. - US spot Ether ETFs extended their losing streak to seven straight sessions with $160.9 million in net outflows, bringing withdrawals since Sept. 29 to about $569 million. Who Drove the Redemptions: IBIT, FBTC and ARKB Lead the Exit The redemptions were concentrated in the largest products, which makes the move harder to dismiss as a one-off in a smaller fund. BlackRock’s iShares Bitcoin Trust (IBIT) led Wednesday’s outflows at $207.7 million. Fidelity’s FBTC followed with $105.1 million, and ARK 21Shares’ ARKB posted $101.7 million in net outflows, according to Farside Investors. The second-order impact showed up immediately in the month-to-date math. US spot Bitcoin ETFs had recorded $321.6 million of net inflows over October’s first four trading sessions. Wednesday’s $484.9 million outflow wiped that out and left the group at approximately $163 million in net outflows for the month."
+                  ]
+                },
+                {
+                  "title": "Spot BTC ETFs: +$118.8m on 6 Oct, IBIT led — Farside",
+                  "highlights": [
+                    "Farside’s Bitcoin ETF Flow table, checked on 8 October 2026, lists a 7 October 2026 day total of −484.9 (US$m) for US spot bitcoin ETFs [2]. That reverses the +118.8 recorded for 6 October, which Farside’s table still shows unchanged [2]. - BlackRock IBIT: −207.7 - Fidelity FBTC: −105.1 - ARK 21Shares ARKB: −101.7 - Grayscale GBTC: −39.3 - Bitwise BITB: −27.6 - VanEck HODL: −3.5 - All other listed products, including MSBT and the Grayscale mini fund (BTC column): 0.0 The texture is different from 6 October as well as the sign. On 6 October, IBIT alone more than accounted for the net inflow while most funds were flat [1]. On 7 October, six products recorded outflows and none recorded inflows, with IBIT the largest single redemption [2]. A second day of outflows, smaller than the first. Farside’s Bitcoin ETF Flow table, checked on the morning of 9 October 2026, lists an 8 October 2026 day total of −244.1 (US$m) for US spot bitcoin ETFs [3]. That follows −484.9 on 7 October [2][3]. - Fidelity FBTC: −197.1 - ARK 21Shares ARKB: −20.3 - Bitwise BITB: −17.7 - Grayscale GBTC: −8.2 - BlackRock IBIT: −5.5 - Franklin EZBC: +4.7 - All other listed products: 0.0, or not yet reported Where the money moved. Unlike 7 October, when IBIT led the redemptions, FBTC was the largest single outflow on 8 October, while IBIT’s was small [2][3]. EZBC was the only fund with an inflow. Farside recorded about +$118.8m net into U.S. spot Bitcoin ETFs on 6 October 2026, led by IBIT (+$122.0m), after about −$89.8m on 5 October. The next session, 7 October, reversed that with about −$484.9m, including IBIT −$207.7m. On 8 October, Farside’s provisional total was about −$244.1m, led by FBTC (−$197.1m). Four sessions, one inflow and three outflows, all of different sizes: treat each figure as a time-stamped third-party flow snapshot—revisable, not investment advice."
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "response": null
+}

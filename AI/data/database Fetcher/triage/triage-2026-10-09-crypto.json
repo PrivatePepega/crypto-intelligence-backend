@@ -1,0 +1,551 @@
+{
+  "date": "2026-10-09",
+  "marketDomain": "crypto",
+  "intelligenceSetId": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-09T21:30:30.273Z",
+  "recordSection": "triage",
+  "finishReason": "stop",
+  "considered": 35,
+  "promoted": 18,
+  "importantIds": [
+    "6470e9d8-3b9a-4147-a9cb-ab6dd27a2f1b",
+    "1349afa5-1eac-4f38-95f5-99d0a056d219",
+    "83bdebb0-c58b-4185-a545-c99a193dc2c8",
+    "72698627-5f51-4019-9276-e05ce388e1f1",
+    "a1e59ab8-4220-4534-b9d0-f0cf130adcb9",
+    "af6ae82d-47e5-4f15-a7ba-c8e7c572f659",
+    "c9497738-a00b-4247-8cb6-0d2693969a44",
+    "f7741f89-dc79-462c-b5c9-ea9d2a27d186",
+    "ad52083a-6b63-4783-9110-a8aed3896b60",
+    "e7c75e0b-d200-4bf2-8f70-edaca2398fc1",
+    "a7340a74-6972-4f9b-b867-80cd5f158b02",
+    "945c6c98-b1f5-4997-bd80-692a1b9e441f",
+    "9f60c675-537e-4736-8e53-d0c377ef3542",
+    "bb7ffedb-13e7-4c46-b462-0894a70acf91",
+    "2b3e769b-4d7f-4689-b3fa-9acdf0c75907",
+    "252cf07a-3275-4046-8c1d-7264b78df752",
+    "950be205-43b2-47e9-9aa1-2e3b2bf73ffc",
+    "0d068fed-3e07-487d-9a79-852521eeb37d"
+  ],
+  "unknownIds": [],
+  "missingIds": [
+    "ec38be70-7d78-42fe-890c-4cf73c8f46c7",
+    "25749eec-9328-4be6-a728-81546c4d7522",
+    "27440ae6-3694-458f-8214-1fdebf500644"
+  ],
+  "decisions": [
+    {
+      "id": "bccd3c0e-6d9d-4fb2-b9dc-a05e51c07ea3",
+      "important": false,
+      "reason": "Modest market cap decline and volume surge are routine daily fluctuations without structural significance."
+    },
+    {
+      "id": "1972dd8e-fc0e-460c-9d7f-15fc5bcb8fa1",
+      "important": false,
+      "reason": "Derivatives volume drop and percentage change shift are noisy metrics without clear signal for research."
+    },
+    {
+      "id": "154ca567-e81d-479a-989e-d1f0ffc439c6",
+      "important": false,
+      "reason": "Altcoin Season Index at yearly high is notable but dominance shifts are minor; insufficient for dedicated research."
+    },
+    {
+      "id": "c576e284-070e-458c-a287-e90bad8d8a6f",
+      "important": false,
+      "reason": "Fear & Greed Index movement is routine sentiment noise, not a research-worthy development."
+    },
+    {
+      "id": "2cf956dc-8772-4f66-b747-1068823fe5fe",
+      "important": false,
+      "reason": "Binance long/short ratio and funding rate flip are typical derivatives positioning noise."
+    },
+    {
+      "id": "67dcffc3-26a7-4b72-a1bf-24442f127529",
+      "important": false,
+      "reason": "Oct 2 ETF flow data is superseded by the more recent and larger outflow episode in observation 6470e9d8."
+    },
+    {
+      "id": "3d1bff02-126b-4fb9-ad4d-9226d0d93f81",
+      "important": false,
+      "reason": "Oct 2 Ethereum ETF outflow streak is outdated context relative to the major Oct 7-8 outflow episode."
+    },
+    {
+      "id": "6470e9d8-3b9a-4147-a9cb-ab6dd27a2f1b",
+      "important": true,
+      "reason": "Major $965M combined BTC/ETH ETF outflows in two days including largest single-day BTC outflow since June 2024."
+    },
+    {
+      "id": "1349afa5-1eac-4f38-95f5-99d0a056d219",
+      "important": true,
+      "reason": "XRP ETFs show 13-week inflow streak and positive Oct 8 flows contrasting sharply with broad BTC/ETH outflows."
+    },
+    {
+      "id": "5291c525-06b5-4b91-ae6c-7ac7cd939447",
+      "important": false,
+      "reason": "Dogecoin ETF shutdown involves negligible AUM ($726K) and volume, not material for daily brief."
+    },
+    {
+      "id": "83bdebb0-c58b-4185-a545-c99a193dc2c8",
+      "important": true,
+      "reason": "CFTC ANPRM creates new regulatory framework for leveraged retail crypto with FCM/DCO requirements, 60-day comment period."
+    },
+    {
+      "id": "72698627-5f51-4019-9276-e05ce388e1f1",
+      "important": true,
+      "reason": "SEC approves first 3x leveraged Bitcoin and Ether ETFs, breaking the 2x leverage ceiling with CME futures structure."
+    },
+    {
+      "id": "a1e59ab8-4220-4534-b9d0-f0cf130adcb9",
+      "important": true,
+      "reason": "Thailand finalizes Bitcoin/Ether ETF rules effective Oct 16 with 11 notifications, marking Asian regulatory milestone."
+    },
+    {
+      "id": "af6ae82d-47e5-4f15-a7ba-c8e7c572f659",
+      "important": true,
+      "reason": "ESMA sets Jan 8, 2027 wind-down deadline for non-compliant stablecoins including $184B USDT, no grandfathering."
+    },
+    {
+      "id": "c9497738-a00b-4247-8cb6-0d2693969a44",
+      "important": true,
+      "reason": "Senate probe into Cantor Fitzgerald/Tether ties with Iran sanctions angle and 13-item request, deadline Oct 23."
+    },
+    {
+      "id": "f7741f89-dc79-462c-b5c9-ea9d2a27d186",
+      "important": true,
+      "reason": "US Treasury targets $1B Iran-linked crypto seizure this week as part of 'absolute isolation campaign' with Hormuz blockade."
+    },
+    {
+      "id": "ad52083a-6b63-4783-9110-a8aed3896b60",
+      "important": true,
+      "reason": "CLARITY Act stalled in Senate with ethics impasse, recess until Nov 9, explaining agency rulemaking vacuum fill."
+    },
+    {
+      "id": "e7c75e0b-d200-4bf2-8f70-edaca2398fc1",
+      "important": true,
+      "reason": "SEC grants 5-year Innovation Exemption for Tokenized Securities Venues to trade tokenized NMS stocks via permissioned AMMs."
+    },
+    {
+      "id": "a7340a74-6972-4f9b-b867-80cd5f158b02",
+      "important": true,
+      "reason": "Solana 200ms block time goes live on mainnet today (Epoch 1053), final step from 400ms with compute reductions."
+    },
+    {
+      "id": "e90d369d-13c8-497d-b107-cb9747cab2d4",
+      "important": false,
+      "reason": "XRP Ledger permission delegation amendment activated but niche ecosystem upgrade without broad market impact."
+    },
+    {
+      "id": "945c6c98-b1f5-4997-bd80-692a1b9e441f",
+      "important": true,
+      "reason": "Securitize launches tokenized Apple, NVIDIA, Microsoft stocks on Solana with 1:1 backing and extended trading hours."
+    },
+    {
+      "id": "a2112451-8bce-41ae-a2f7-c508e4bf50c8",
+      "important": false,
+      "reason": "CME Emerging Crypto Index launched Aug 31 (dated), composition notable but not breaking development."
+    },
+    {
+      "id": "9f60c675-537e-4736-8e53-d0c377ef3542",
+      "important": true,
+      "reason": "Ledger reseller hack with ~$90M suspected theft, USDT frozen, funds traced to Tornado Cash and Binance."
+    },
+    {
+      "id": "24e83977-a673-45ae-8862-69734dc5ceef",
+      "important": false,
+      "reason": "UK SIM-swap ring stealing £200K is small-scale crime, not crypto market structure development."
+    },
+    {
+      "id": "bb7ffedb-13e7-4c46-b462-0894a70acf91",
+      "important": true,
+      "reason": "US government moves $1B+ BTC today from Bitfinex hack wallet, holds ~$25.5B crypto under Strategic Bitcoin Reserve EO."
+    },
+    {
+      "id": "6bf86688-a6cb-4965-8870-b2b402c2ea01",
+      "important": false,
+      "reason": "MARA selling 996 BTC is single miner treasury action, not clear capitulation signal without broader context."
+    },
+    {
+      "id": "e414d7c6-e1fd-465f-99c3-049ba44aad1d",
+      "important": false,
+      "reason": "Vanda Research retail rotation thesis is analyst narrative, not a verifiable development requiring investigation."
+    },
+    {
+      "id": "8af40c7a-09e9-495b-bcc6-3638b44b8474",
+      "important": false,
+      "reason": "Stablecoin market cap projections and regional trends are forward-looking models, not breaking developments."
+    },
+    {
+      "id": "2b3e769b-4d7f-4689-b3fa-9acdf0c75907",
+      "important": true,
+      "reason": "ICE commits $2B to scale Polymarket, CFTC ends probes, PredictIt wins court case — institutional prediction market breakout."
+    },
+    {
+      "id": "252cf07a-3275-4046-8c1d-7264b78df752",
+      "important": true,
+      "reason": "Ethereum L2 consolidation: Base/Arbitrum/Optimism = 90% of transactions, multiple shutdowns, fee war, activity down 61% since June."
+    },
+    {
+      "id": "950be205-43b2-47e9-9aa1-2e3b2bf73ffc",
+      "important": true,
+      "reason": "T. Rowe Price ($1.9T AUM) launches multi-crypto ETF, 120+ US ETP applications pending, sovereign funds allocating to BTC ETFs."
+    },
+    {
+      "id": "0d068fed-3e07-487d-9a79-852521eeb37d",
+      "important": true,
+      "reason": "Aave V4 deposits exceed $1B, Chainlink CCIP 2.0 launches with institutional controls for cross-chain messaging and SWIFT integrations."
+    }
+  ],
+  "rows": [
+    {
+      "id": "bccd3c0e-6d9d-4fb2-b9dc-a05e51c07ea3",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "Total crypto market cap $2.93T, down 0.42% (-$12.2B) day-over-day; 24h spot volume surged 87.6% to $84.4B",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "1972dd8e-fc0e-460c-9d7f-15fc5bcb8fa1",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "Derivatives volume fell 32.1% to $724.8B from $1.07T, while derivatives 24h percentage change rose to 89.2% from 72.2%",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "154ca567-e81d-479a-989e-d1f0ffc439c6",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "BTC dominance increased to 59.02% (+0.43 pp), ETH dominance fell to 11.33% (-0.12 pp); Altcoin Season Index at 64 (yearly high), up 6.7% from 60",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "c576e284-070e-458c-a287-e90bad8d8a6f",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "Fear & Greed Index at 70 (Greed), down 4 points from 74; below 30d/6m/12m moving averages (all 72)",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "2cf956dc-8772-4f66-b747-1068823fe5fe",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "Binance BTCUSDT global long/short ratio fell to 1.015 from 1.219 (-16.7%); funding rate flipped negative to -0.000015 from +0.000038",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "67dcffc3-26a7-4b72-a1bf-24442f127529",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "US Spot Bitcoin ETFs (Oct 2): net inflow +$189.8M, value traded +53.5% to $3.03B; net assets -0.41% to $108.9B; cumulative net flow $57.8B",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "3d1bff02-126b-4fb9-ad4d-9226d0d93f81",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "US Spot Ethereum ETFs (Oct 2): net outflow -$37.4M, 8th consecutive day of outflows; value traded +94.2% to $1.05B; net assets -1.4% to $17.5B",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "6470e9d8-3b9a-4147-a9cb-ab6dd27a2f1b",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "Major ETF outflow episode Oct 7-8: ~$965M combined BTC+ETH outflows in 2 days; Oct 7 BTC -$484.9M (largest since Jun 2024), ETH -$160.8M; Oct 8 BTC -$244.1M (Fidelity FBTC -$197.1M), ETH -$72.5M (BlackRock ETHA -$71.1M)",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "1349afa5-1eac-4f38-95f5-99d0a056d219",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "anomaly",
+      "observation": "XRP ETFs defy trend with +$8.17M inflow Oct 8 (Franklin XRPZ only buyer), 13th straight weekly inflow streak (+$11.31M week Oct 5-8 vs BTC -$702M, ETH -$486M, SOL -$21M)",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "5291c525-06b5-4b91-ae6c-7ac7cd939447",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "Dogecoin ETF (BWOW) shutting down Oct 14: AUM $726K, Sep volume ~$51.5K; Bitwise CEO cites gap between ETF investors and crypto app traders",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "83bdebb0-c58b-4185-a545-c99a193dc2c8",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "regulation",
+      "observation": "CFTC launched ANPRM for Regulation CTX (Crypto Asset Transactions) and Regulation CAM (Crypto Asset Markets) Oct 5; creates new Crypto Asset Market DCM subcategory for leveraged/margined retail crypto; requires FCM intermediation, DCO clearing, actual delivery test; 60-day comment period",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "72698627-5f51-4019-9276-e05ce388e1f1",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "regulation",
+      "observation": "SEC approved first 3x leveraged Bitcoin & Ether ETFs Oct 2 (published Oct 7); Volatility Shares VS 3x Bitcoin ETF (BITH) and VS 3x Ether ETF (ETHK) + 4 commodity products; breaks 2x leverage ceiling; uses CME futures with daily reset; S-1 registration must go effective before trading",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "a1e59ab8-4220-4534-b9d0-f0cf130adcb9",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "regulation",
+      "observation": "Thailand finalized Bitcoin/Ether ETF rules effective Oct 16; 11 notifications, only BTC/ETH initially, 80% single-asset exposure, must trade on Stock Exchange of Thailand, SEC-regulated custodians, no margin loans, bars retail access to foreign crypto ETFs",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "af6ae82d-47e5-4f15-a7ba-c8e7c572f659",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "regulation",
+      "observation": "ESMA MiCA stablecoin crackdown Oct 8: 3-month wind-down deadline Jan 8, 2027 for non-compliant ARTs/EMTs (USDT, PYUSD named); CASPs must not provide services; only narrow exit services permitted; no grandfathering; USDT $184B market cap still unauthorized in EU",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "c9497738-a00b-4247-8cb6-0d2693969a44",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "Senate Democrat Blumenthal probes Cantor Fitzgerald/Tether ties (Oct 8, deadline Oct 23); 13-item request on Tether stake valuation ($600M→~$10B), Lutnick family earnings, custody, AML/sanctions controls, Iran-linked wallet monitoring; builds on subcommittee report: 84% of 846 Iran-linked wallets used USDT exclusively",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "f7741f89-dc79-462c-b5c9-ea9d2a27d186",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "US Treasury targets $1B Iran-linked crypto seizure this week (Bessent Oct 9); 'absolute isolation campaign' including Strait of Hormuz blockade, flight/land route restrictions; previous seizures: ~$1B (May), $130M (Jul), multiple Iranian exchange sanctions",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "ad52083a-6b63-4783-9110-a8aed3896b60",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "regulation",
+      "observation": "CLARITY Act stalled in Senate (Sep 15 cloture failure 49-50); ethics impasse on presidential crypto divestiture; Senate recess until Nov 9; unlikely to pass this Congress; agencies filling vacuum via CFTC rulemaking and SEC innovation exemption",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "e7c75e0b-d200-4bf2-8f70-edaca2398fc1",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "regulation",
+      "observation": "SEC Innovation Exemption granted Sep 17 (effective 5 years to Sep 2031); temporary exemption for Tokenized Securities Venues (TSVs) to trade tokenized NMS stocks using permissioned AMMs/liquidity pools",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "a7340a74-6972-4f9b-b867-80cd5f158b02",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "Solana 200ms block time live Oct 9 (Epoch 1053, ~15:40 BST); final step of staged reduction from 400ms; max compute/block reduced 37.5M→30M units; recent-blockhash window 30 seconds; Alpenglow consensus (150ms finality) on devnet/testnet, not yet mainnet",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "e90d369d-13c8-497d-b107-cb9747cab2d4",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "XRP Ledger PermissionDelegationV1_1 amendment activated Oct 8; allows accounts to delegate limited permissions (up to 10 per helper account); enables offline cold storage for main holdings; PaymentBurn permission caveat until fixCleanup3_4_0 enabled (27/35 votes, needs 29)",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "945c6c98-b1f5-4997-bd80-692a1b9e441f",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "Securitize launching tokenized stocks on Solana (Apple, NVIDIA, Microsoft); each token backed 1:1 by underlying share, retains ownership rights/economic benefits; targets US, EU, eligible investors with extended trading hours",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "a2112451-8bce-41ae-a2f7-c508e4bf50c8",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "CME Emerging Crypto Index launched Aug 31: 10 altcoins excluding BTC/ETH; weights: BNB 32%, XRP 27.6%, SOL 18.5%, HYPE 14.6% = 92.8% of index; Dogecoin explicitly barred as meme coin; ADA, LTC, XMR, NEAR excluded",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "9f60c675-537e-4736-8e53-d0c377ef3542",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "Ledger reseller (CryptoBilis) hack: ~$90M suspected theft; Tether freezing USDT; hacker deposited ~$1.3M (430 ETH) to Tornado Cash and Binance via 4 wallets",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "24e83977-a673-45ae-8862-69734dc5ceef",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "SIM-swap ring stole ~£200K from four BT customers (UK); one defendant jailed 30 months; £44K+ stolen from single victim",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "bb7ffedb-13e7-4c46-b462-0894a70acf91",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "US government Bitcoin movements: ~$1B+ transferred recent days (Arkham); Oct 9: 12,267 BTC ($1.01B) from Bitfinex hack wallet to new address (not exchange); prior: 17,733 BTC ($1.48B) + 750 WBTC ($62M) to Coinbase Prime; Mar 2025 EO directs forfeited BTC to Strategic Bitcoin Reserve, not sold; govt holds ~$25.5B crypto",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "6bf86688-a6cb-4965-8870-b2b402c2ea01",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "event",
+      "observation": "MARA Holdings sold 996 BTC ($81.1M) — potential mining capitulation signal",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "e414d7c6-e1fd-465f-99c3-049ba44aad1d",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "narrative",
+      "observation": "Retail rotation thesis: Vanda Research (Eric Liu) claims retail fleeing crypto for event contracts; DOGE -63%, XRP -50%, SOL -47%, ETH -40%, BTC -30% over past year; beta explanation also fits (DOGE fell ~3x BTC weekly decline)",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "8af40c7a-09e9-495b-bcc6-3638b44b8474",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "narrative",
+      "observation": "Stablecoin market cap target: $1.2T by end-2028 (Coinbase model / Bessent projection $2T by 2028); MiCA driving euro stablecoin growth (9-bank consortium ING/UniCredit, >$510M circulation); Brazil: 90% of $318B crypto inflows involved stablecoins",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "2b3e769b-4d7f-4689-b3fa-9acdf0c75907",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "Prediction markets institutional breakout: ICE commits $2B to scale Polymarket; CFTC ended Polymarket/Kalshi probes; PredictIt won court case; Polymarket $1.4B monthly volume; blockchains processing 3.4K TPS vs Nasdaq 2.4K TPS",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "252cf07a-3275-4046-8c1d-7264b78df752",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "Ethereum L2 consolidation: Base/Arbitrum/Optimism = ~90% L2 transactions (Base >60%); >50 L2s competing; Kinto shut down, Loopring ended wallet, Blast TVL -97%; Dencun fee reduction (-90%) triggered fee war; only Base profitable (~$55M/yr); L2 activity -61% since Jun",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "950be205-43b2-47e9-9aa1-2e3b2bf73ffc",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "Tokenization accelerating: T. Rowe Price ($1.9T AUM) launched multi-crypto ETF including XRP; 21Shares: >120 ETP applications pending in US; UK lifted retail ban; Luxembourg sovereign fund 1% allocation to BTC ETFs; Pakistan, Czech Republic exploring national BTC reserves",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "0d068fed-3e07-487d-9a79-852521eeb37d",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "Aave V4 deposits surpassed $1B (Sep 2026); active loans ~$310M; CCIP 2.0 launched (institutional controls/compliance for cross-chain messaging); Chainlink expanding SWIFT/financial institution integrations",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "ec38be70-7d78-42fe-890c-4cf73c8f46c7",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "development",
+      "observation": "BNB Chain: 2M RWA holders (40% of onchain RWA market)",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "25749eec-9328-4be6-a728-81546c4d7522",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "market_condition",
+      "observation": "Hawkish Fed signal driving risk-off: all 19 officials backed Sep hike; another hike expected by year-end; AI-driven demand cited as inflation risk; 10Y yield at 24-year high (5.318%); Yardeni warns 6% could crack financial system",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    },
+    {
+      "id": "27440ae6-3694-458f-8214-1fdebf500644",
+      "intelligence_set_id": "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1",
+      "date": "2026-10-09",
+      "market_domain": "crypto",
+      "type": "anomaly",
+      "observation": "Bitcoin correlation with rising yields breaking down? BTC >$82K despite 10Y at 5.318%; ETF outflows but spot price resilience suggests non-ETF buying absorbing pressure",
+      "research_enabled": false,
+      "created_at": "2026-10-09T21:27:18.855Z"
+    }
+  ]
+}

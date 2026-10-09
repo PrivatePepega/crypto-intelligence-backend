@@ -3,7 +3,15 @@ import { z } from "zod";
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { AGENT_RUN_LOG_DIR, agentRunFileName, toReadableJson } from "../logger.js";
+import {
+  AGENT_RUN_LOG_DIR,
+  agentRunFileName,
+  createAgentRunLog,
+  createSilentAgentRunLog,
+  toPathSegment,
+  toReadableJson,
+  type AgentRunLog,
+} from "../logger.js";
 
 import { extractJsonObject } from "./observations.js";
 
@@ -117,6 +125,51 @@ export const parseResearchRecord = (finalText: string): ResearchRecord => {
 
 import type { ResearchTarget } from "./dbFetcher.researcher.js";
 import type { SdkStep } from "../../../types/AI/observer.js";
+
+// --------------------------------------------------
+// Artifacts
+// --------------------------------------------------
+//
+// Everything the Researcher writes into AI/data/, in one place.
+//
+// The database write is the product and is not here: research records reach
+// weather.research regardless of this switch. What this controls is the JSON on
+// disk - the run log and the database dump - which exists to be read while
+// building the pipeline and is dead weight in production.
+//
+// One switch. See RESEARCHER_ARTIFACTS.
+// --------------------------------------------------
+
+/** This agent's name. Names the run-log folder and file. */
+export const AGENT_NAME = "Weather Researcher";
+
+/**
+ * Whether the Researcher keeps its JSON artifacts.
+ *
+ * Set this to `false` and the Researcher stops writing to AI/data entirely: no run
+ * log under `Weather Researcher/`, no dump under
+ * `database Fetcher/researcher/`. Its records still reach weather.research and its
+ * console lines still print, because neither is a file artifact.
+ *
+ * Comment the line out to disable it.
+ *
+ * Left `true` because the run log is the only place the evidence gathering is
+ * kept: which tools were called, what they returned, and the reasoning behind each
+ * label. The stored record is a summary; this is the audit trail.
+ */
+export const RESEARCHER_ARTIFACTS = true;
+
+/**
+ * The Researcher's run log, or a no-op stand-in when artifacts are off.
+ *
+ * Returns the same type either way, so no agent code changes shape when the
+ * switch flips.
+ */
+export const createResearcherRunLog = async (): Promise<AgentRunLog> => {
+  return RESEARCHER_ARTIFACTS
+    ? await createAgentRunLog(AGENT_NAME)
+    : createSilentAgentRunLog(AGENT_NAME);
+};
 
 // --------------------------------------------------
 // Prompts

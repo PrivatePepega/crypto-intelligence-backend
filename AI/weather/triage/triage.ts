@@ -27,6 +27,7 @@ import { Output, generateText } from "ai";
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { setTimeout as sleep } from "node:timers/promises";
 
 import pool from "../../../config/database.js";
 
@@ -34,8 +35,8 @@ import { models } from "../../providers/model.js";
 
 import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
 import { estimateTokens } from "../../utils/general.tools.js";
-import { createAgentRunLog } from "../../utils/logger.js";
 import {
+  createTriageRunLog,
   parseTriageResult,
   triageSchema,
   writeTriageRecord,
@@ -62,15 +63,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  * returning unusable text for this pipeline, and triage depends entirely on one
  * response parsing cleanly. Change it here and nothing else.
  */
-const modelPick = models.groq;
-
-/**
- * This agent's name.
- *
- * Names the run-log folder and file, so one value identifies the agent
- * everywhere.
- */
-const AGENT_NAME = "Weather Triage";
+const modelPick = models.openrouter;
 
 /**
  * Ceiling on the agent's output tokens.
@@ -81,6 +74,20 @@ const AGENT_NAME = "Weather Triage";
  * of labels plus their reasons needs room well past that.
  */
 const MAX_OUTPUT_TOKENS = 8_192;
+
+/**
+ * Pause before the model call, in milliseconds.
+ *
+ * Triage is one `generateText` call with no loop and no tools, so there are no
+ * steps to pace. What this does is space Triage's single request from whatever ran
+ * immediately before it in the pipeline - the Observer's formatter call - so
+ * consecutive agents do not fire back to back against the same provider.
+ *
+ * Same value as the Observer's per-step and the Researcher's per-observation
+ * pauses, so the whole pipeline paces itself consistently. Set to 0 to send
+ * immediately.
+ */
+const STEP_DELAY_MS = 4_000;
 
 /**
  * Reasoning effort for the triage call.
@@ -143,7 +150,7 @@ export const runTriage = async (
       `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
   );
 
-  const runLog = await createAgentRunLog(AGENT_NAME);
+  const runLog = await createTriageRunLog();
 
   // --------------------------------------------------
   // Read the set
@@ -367,6 +374,12 @@ export const runTriage = async (
   // `generateText`, not `streamText`: this is one call whose entire output is
   // parsed, and a streamed response can arrive truncated mid-JSON, which is
   // indistinguishable from a complete one.
+  if (STEP_DELAY_MS > 0) {
+    console.log(`[triage] waiting ${STEP_DELAY_MS / 1000}s before the triage call`);
+
+    await sleep(STEP_DELAY_MS);
+  }
+
   const result = await generateText({
     model: modelPick,
     instructions: systemPrompt,

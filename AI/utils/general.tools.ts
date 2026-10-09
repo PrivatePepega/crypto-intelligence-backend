@@ -21,7 +21,7 @@ import { newsflashSearchArticlesTool } from "../tools/newsflashSearchArticles.js
 import { newsMarketsNewsTool } from "../tools/newsMarketsNewsTool.js";
 import { wabbleImportantHeadlineSearchTool } from "../tools/wabbleImportantHeadlineSearch.js";
 import { webSearchTool } from "../tools/webSearchTool.js";
-import type { ObserverConfig } from "../weather/observer/observer.config.js";
+import type { ObserverConfig } from "../weather/weather.config.js";
 import { encodingForModel, type Tiktoken } from "js-tiktoken";
 import { exposeCurrentData } from "../../utils/AI/currentDataExpose.js";
 

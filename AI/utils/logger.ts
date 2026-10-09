@@ -384,6 +384,33 @@ export type AgentRunLog = {
 };
 
 /**
+ * An {@link AgentRunLog} that writes nothing.
+ *
+ * Drop-in for {@link createAgentRunLog}, so an agent can be switched off from
+ * writing to AI/data without touching any of its `record` calls. Every method is
+ * a no-op and resolves successfully: the agent's control flow is identical whether
+ * or not artifacts are being kept, which is the point - the alternative is
+ * guarding every `record` call site and leaving the switch half-applied.
+ *
+ * No run number is reserved, so a silenced run leaves no gap in the sequence.
+ */
+export const createSilentAgentRunLog = (agentName: string): AgentRunLog => ({
+  agentName,
+
+  // Zero rather than a real number: nothing was reserved, and any agent that
+  // reads these back is looking at an artifact that does not exist.
+  runNumber: 0,
+
+  directory: "",
+
+  filePath: "",
+
+  record: async () => 0,
+
+  finish: async () => "",
+});
+
+/**
  * Opens a numbered run log for an agent, creating its folder on demand.
  *
  * Resolves the next number from the files already present, then reserves that

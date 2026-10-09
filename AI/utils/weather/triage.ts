@@ -3,7 +3,15 @@ import { z } from "zod";
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { AGENT_RUN_LOG_DIR, toPathSegment, toReadableJson } from "../logger.js";
+import {
+  AGENT_RUN_LOG_DIR,
+  agentRunFileName,
+  createAgentRunLog,
+  createSilentAgentRunLog,
+  toPathSegment,
+  toReadableJson,
+  type AgentRunLog,
+} from "../logger.js";
 
 import { extractJsonObject } from "./observations.js";
 
@@ -139,6 +147,50 @@ export const parseTriageResult = (finalText: string): TriageDecision[] => {
   // it is whatever order the model happened to emit, and nothing reads its
   // position.
   return decisions;
+};
+
+// --------------------------------------------------
+// Artifacts
+// --------------------------------------------------
+//
+// Everything Triage writes into AI/data/, in one place.
+//
+// The database write is the product and is not here: flipping
+// `research_enabled` to true happens regardless of this switch. What this
+// controls is the JSON on disk - the run log and the dated record - which exists
+// to be read while building the pipeline and is dead weight in production.
+//
+// One switch. See TRIAGE_ARTIFACTS.
+// --------------------------------------------------
+
+/** This agent's name. Names the run-log folder and file. */
+export const AGENT_NAME = "Weather Triage";
+
+/**
+ * Whether Triage keeps its JSON artifacts.
+ *
+ * Set this to `false` and Triage stops writing to AI/data entirely: no run log
+ * under `Weather Triage/`, no record under `database Fetcher/triage/`. It still
+ * promotes observations and still prints its console lines, because neither is a
+ * file artifact.
+ *
+ * Comment the line out to disable it.
+ *
+ * Left `true` because the record is the only place the model's reasoning is kept
+ * after the fact: which observations it called important, and why.
+ */
+export const TRIAGE_ARTIFACTS = true;
+
+/**
+ * Triage's run log, or a no-op stand-in when artifacts are off.
+ *
+ * Returns the same type either way, so no agent code changes shape when the
+ * switch flips.
+ */
+export const createTriageRunLog = async (): Promise<AgentRunLog> => {
+  return TRIAGE_ARTIFACTS
+    ? await createAgentRunLog(AGENT_NAME)
+    : createSilentAgentRunLog(AGENT_NAME);
 };
 
 // --------------------------------------------------

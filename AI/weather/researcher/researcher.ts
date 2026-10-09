@@ -18,6 +18,7 @@ import { Output, generateText, isStepCount } from "ai";
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { setTimeout as sleep } from "node:timers/promises";
 
 import pool from "../../../config/database.js";
 
@@ -25,7 +26,6 @@ import { models } from "../../providers/model.js";
 
 import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
 import { getAgenticTooling, estimateTokens } from "../../utils/general.tools.js";
-import { createAgentRunLog } from "../../utils/logger.js";
 import {
   fetchResearchForSet,
   fetchResearchQueue,
@@ -34,7 +34,9 @@ import {
   type StoredResearch,
 } from "../../utils/weather/dbFetcher.researcher.js";
 import {
+  AGENT_NAME,
   collectResearchEvidence,
+  createResearcherRunLog,
   parseResearchRecord,
   recordPrompt,
   researchPrompt,
@@ -59,7 +61,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  *
  * Change it here and nothing else.
  */
-const modelPick = models.google;
+const modelPick = models.openrouter;
 
 /**
  * Ceiling on observations researched per invocation.
@@ -70,6 +72,18 @@ const modelPick = models.google;
  * re-researching what already has a record.
  */
 const MAX_LOOP = 5;
+
+/**
+ * Pause between observations, in milliseconds.
+ *
+ * Each observation is a full agent run with tools, so a batch is a burst of
+ * back-to-back calls against the same provider and the same news APIs. The pause
+ * keeps the run inside rate limits and leaves room for a provider to cool down,
+ * which matters most on the free tiers where a burst is what trips the limit.
+ *
+ * Skipped after the final observation, so a run is not held open for nothing.
+ */
+const STEP_DELAY_MS = 4_000;
 
 /**
  * Ceiling on tool-calling steps within one observation's run.
@@ -116,14 +130,6 @@ const RESEARCH_TOOLS = [
   "fmpGetArticlesList",
   "wabbleImportantHeadlineSearch",
 ] as const;
-
-/**
- * This agent's name.
- *
- * Names the run-log folder and file, so one value identifies the agent
- * everywhere.
- */
-const AGENT_NAME = "Weather Researcher";
 
 /**
  * Markers left in the stored record prompt where a large embedded value was
@@ -351,7 +357,7 @@ export const runResearcher = async (
       `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
   );
 
-  const runLog = await createAgentRunLog(AGENT_NAME);
+  const runLog = await createResearcherRunLog();
 
   const queue = await fetchResearchQueue(intelligenceSet, marketDomain);
 
@@ -693,6 +699,17 @@ export const runResearcher = async (
     // the folder reflects the database as each record lands. If this run dies on
     // the next observation, what got this far is already there.
     await dumpDatabase(latestObservationId);
+
+    // Between observations, not after the last one. Placed here rather than at the
+    // top of the loop so the pause always follows real work: an iteration that
+    // threw has already left the loop, and there is nothing to wait before.
+    const isLastObservation = index === targets.length - 1;
+
+    if (!isLastObservation && STEP_DELAY_MS > 0) {
+      console.log(`[research] waiting ${STEP_DELAY_MS / 1000}s before the next observation`);
+
+      await sleep(STEP_DELAY_MS);
+    }
   }
 
   // Once more at the end, covering an observation that failed to store, and in a

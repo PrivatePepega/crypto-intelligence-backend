@@ -1,15 +1,22 @@
 import { generateText, isStepCount, streamText } from "ai";
 
+import { setTimeout as sleep } from "node:timers/promises";
+
 import { models } from "../../../AI/providers/model.js";
 
-import { type ObserverConfig } from "./observer.config.js";
+import { type ObserverConfig } from "../weather.config.js";
 
 import { getAgenticContext, getAgenticTooling, estimateTokens } from "../../utils/general.tools.js";
 
-import { createAgentRunLog } from "../../utils/logger.js";
-
 import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
-import { parseObservations, type Observation } from "../../utils/weather/observations.js";
+
+import { createObserverRunLog, persistObservations } from "../../utils/weather/observer.js";
+
+import {
+  parseObservations,
+  type DailySet,
+  type Observation,
+} from "../../utils/weather/observations.js";
 
 // --------------------------------------------------
 // Observer
@@ -19,12 +26,17 @@ const modelPick = models.openrouter;
 const MAX_AGENT_STEPS = 5;
 
 /**
- * This agent's name.
+ * Pause between agent steps, in milliseconds.
  *
- * Used for every console heading, and for the run-log folder and file name, so
- * one value identifies the agent everywhere.
+ * Each step is a model call plus its tool results, so a five-step run is five
+ * back-to-back requests against the same provider and the same news APIs. The
+ * pause keeps the run inside rate limits, which matters most on the free tiers
+ * where a burst is what trips the limit.
+ *
+ * Same value as the Researcher's per-observation pause, so the whole pipeline
+ * paces itself consistently.
  */
-const AGENT_NAME = "Weather Observer";
+const STEP_DELAY_MS = 4_000;
 
 /**
  * Markers left in the stored formatter prompt where a large embedded value was
@@ -53,10 +65,13 @@ const OBSERVER_EVIDENCE_FORMAT = "JSON.stringify(observerEvidence, null, 2)";
  * store rows instead of raw text. The untouched response, and every phase that
  * produced it, is kept in the run log at AI/data/<agent>/<agent>-NNN.json.
  */
-export const runObserver = async (config: ObserverConfig): Promise<Observation[]> => {
+export const runObserver = async (
+  intelligenceSet: DailySet,
+  config: ObserverConfig,
+): Promise<Observation[]> => {
   console.log(`[observe] Observation run initialized for domain: ${config.domain}`);
 
-  const runLog = await createAgentRunLog(AGENT_NAME);
+  const runLog = await createObserverRunLog();
 
   const observerContext = await getAgenticContext(config);
 
@@ -291,6 +306,17 @@ Identify meaningful developments and produce observations.
 
     onStepEnd: async (step) => {
       await runLog.record("step", normalizeStep(step));
+
+      // The SDK calls this per step and waits for it to resolve before starting
+      // the next one, so awaiting here is what actually paces the run.
+      //
+      // Skipped when the step made no tool calls: the agent has stopped searching
+      // and answered, so there is no next request to space out. The SDK also
+      // cannot tell this callback whether the step was the last, which is why the
+      // tool-call count is used instead of a step number.
+      if (STEP_DELAY_MS > 0 && step.toolCalls.length > 0) {
+        await sleep(STEP_DELAY_MS);
+      }
     },
   });
 
@@ -506,10 +532,24 @@ Do not include Markdown, code fences, commentary, explanations, or additional fi
   try {
     const observations = parseObservations(finalText);
 
+    // Filed against the set here rather than by the caller, so one call runs the
+    // Observer end to end and the pipeline cannot forget the write. The snapshot
+    // comes back from the set rather than from `observations`, so what it records
+    // is what actually committed.
+    const { inserted, snapshotFile } = await persistObservations(
+      intelligenceSet,
+      config.domain,
+      observations,
+    );
+
     console.log(
       `[observe] Observation run finalized for domain: ${config.domain} - ` +
-        `${observations.length} observation(s)`,
+        `${observations.length} observation(s), ${inserted} row(s) written`,
     );
+
+    if (snapshotFile) {
+      console.log(`[observe] observations snapshot -> ${snapshotFile}`);
+    }
 
     return observations;
   } catch (error) {
