@@ -61,7 +61,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  *
  * Change it here and nothing else.
  */
-const modelPick = models.openrouter;
+const modelPick = models.openrouterFree;
 
 /**
  * Ceiling on observations researched per invocation.
@@ -91,7 +91,7 @@ const STEP_DELAY_MS = 4_000;
  * The AI SDK's own `stepCount` stops condition. Research is one question, so this
  * bounds how far the agent may wander gathering evidence.
  */
-const MAX_AGENT_STEPS = 3;
+const MAX_AGENT_STEPS = 2;
 
 /**
  * Ceiling on one research run's output tokens.
@@ -100,7 +100,7 @@ const MAX_AGENT_STEPS = 3;
  * sources, context and uncertainty - and a truncated record is a hollow one. A
  * `length` finish is caught and recorded rather than stored.
  */
-const MAX_OUTPUT_TOKENS = 16_000;
+const MAX_OUTPUT_TOKENS = 30_000;
 
 /**
  * Reasoning effort for each research run.
@@ -549,23 +549,55 @@ export const runResearcher = async (
 
     // No tools on this call, so structured output is available and the record's
     // shape is enforced by the schema rather than by the model picking key names.
+
     const recordResult = await generateText({
       model: modelPick,
-
-      instructions:
-        "You convert research into a structured record. You do not research, and you add nothing the research does not contain.",
-
+    
+      instructions: `
+    You are a strict research-record formatter.
+    
+    Your ONLY task is to transform the supplied research evidence into
+    one object matching the provided research_record schema.
+    
+    The schema is the authoritative contract. Follow its field names and
+    types exactly. Do not invent, rename, omit, or add fields.
+    
+    Required fields:
+    - finding: string
+    - evidence: string
+    - sources: array of strings
+    - context: string
+    - uncertainty: string
+    - status: "supported" | "partially_supported" | "disputed" | "unconfirmed"
+    
+    Rules:
+    - Do not output a summary field.
+    - Do not output observation_id or verified_facts.
+    - Do not substitute different field names.
+    - Do not return Markdown or wrap the object in a code fence.
+    - Every required field must be present.
+    - If the research lacks information for a field, state that limitation
+      explicitly rather than inventing facts.
+    - The status must reflect the evidence, not the original observation's wording.
+    - Add no facts that are not supported by the supplied research.
+    `,
+    
       prompt: recordPrompt(target, embeddedEvidence),
-
+    
       maxOutputTokens: MAX_OUTPUT_TOKENS,
-
-      providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
-
+    
+      providerOptions: {
+        groq: { reasoningEffort: REASONING_EFFORT },
+        openrouter: {
+          // Leave provider-specific options out unless supported by this model.
+        },
+      },
+    
       output: Output.object({
         schema: researchSchema,
         name: "research_record",
         description:
-          "What was established about this one observation: its finding, evidence, sources, context, uncertainty, and how well it is supported.",
+          "A strict research record with finding, evidence, sources, context, uncertainty, and status. No additional fields.",
       }),
     });
 
