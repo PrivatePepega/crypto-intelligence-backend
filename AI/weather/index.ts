@@ -7,6 +7,7 @@ import { observerConfigs } from "./observer/observer.config.js";
 import { runObserver } from "./observer/observer.js";
 
 import { getDailySet, insertObservations } from "../utils/weather/observations.js";
+import { dumpObservationsForSet } from "../utils/weather/dbFetcher.observer.js";
 import { runTriage } from "./triage/triage.js";
 import { runResearcher } from "./researcher/researcher.js";
 
@@ -17,14 +18,21 @@ export async function runWeather(): Promise<void> {
   // carry today's date.
   const intelligenceSet = await getDailySet();
 
-  // const cryptoObservations = await runObserver(observerConfigs.crypto);
-  // await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
-  await runTriage(intelligenceSet, observerConfigs.crypto.domain);
 
+  
+  const cryptoObservations = await runObserver(observerConfigs.crypto);
+  await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
+  await dumpObservationsForSet(intelligenceSet, observerConfigs.crypto.domain);
+  await runTriage(intelligenceSet, observerConfigs.crypto.domain);
   await runResearcher(intelligenceSet , observerConfigs.crypto.domain);
 
 
 }
+
+
+
+
+
 
 
 

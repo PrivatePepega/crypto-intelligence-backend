@@ -15,7 +15,22 @@ import { fileURLToPath } from "node:url";
 
 import pool from "../../../config/database.js";
 
-import { AGENT_RUN_LOG_DIR, toReadableJson } from "../logger.js";
+import { AGENT_RUN_LOG_DIR, toPathSegment, toReadableJson } from "../logger.js";
+
+import type { DailySet } from "./observations.js";
+
+// --------------------------------------------------
+// Paths
+// --------------------------------------------------
+
+/**
+ * Where observation snapshots are written, relative to AI/data.
+ *
+ * Declared here rather than beside the dump function because DATABASE_INPUT below
+ * reads it, and `const` is not hoisted - a declaration further down would be in
+ * its temporal dead zone when the config object is built.
+ */
+const INJECTED_SNAPSHOT_DIR = path.join("database Fetcher", "observations");
 
 // --------------------------------------------------
 // Database input
@@ -93,7 +108,10 @@ export const DATABASE_INPUT: ObservationsInput = {
 
   limit: 500,
 
-  outputDirectory: path.join("database Fetcher", "weather", "observations"),
+  // Points at the same folder dumpObservationsForSet writes to, so a hand-run
+  // snapshot and a pipeline snapshot land together instead of creating a second
+  // tree under weather/.
+  outputDirectory: INJECTED_SNAPSHOT_DIR,
 
   filePrefix: "observations",
 };
@@ -267,6 +285,82 @@ const writeSnapshot = async (
   await fs.writeFile(filePath, toReadableJson(document), "utf8");
 
   return { filePath, relativeFile, rowCount: result.rows.length };
+};
+
+// --------------------------------------------------
+// Injected snapshot
+// --------------------------------------------------
+
+/**
+ * Writes `AI/data/database Fetcher/observations/observations-<date>-<domain>.json`.
+ *
+ * Called after an injection so the rows that were just written are readable
+ * without a separate query, and so what the Observer produced is on disk even if
+ * Triage and Research later fail.
+ *
+ * Scoped by `intelligence_set_id`, matching Triage's and Research's reads, so the
+ * snapshot holds the set's rows rather than whatever else carries that date. Read
+ * after the insert rather than built from the observations handed in, so it
+ * records what actually committed: if the insert wrote fewer rows than it was
+ * given, the difference is visible here instead of silently missing.
+ *
+ * Overwritten per date and domain, matching the triage record.
+ *
+ * Resolves to the path written, relative to the repository root.
+ */
+export const dumpObservationsForSet = async (
+  intelligenceSet: DailySet,
+  marketDomain: string,
+): Promise<string> => {
+  const columns = DATABASE_INPUT.columns.map((column, index) =>
+    requireSqlName(column, `columns[${index}]`, SELECT_ITEM),
+  );
+
+  const { rows } = await pool.query(
+    `
+      SELECT
+        ${columns.join(",\n        ")}
+      FROM weather.observations
+      WHERE intelligence_set_id = $1::uuid
+        AND market_domain = $2
+      ORDER BY created_at ASC;
+    `,
+    [intelligenceSet.id, marketDomain],
+  );
+
+  const directory = path.join(AGENT_RUN_LOG_DIR, INJECTED_SNAPSHOT_DIR);
+
+  await fs.mkdir(directory, { recursive: true });
+
+  const fileName = `observations-${intelligenceSet.set_date}-${toPathSegment(marketDomain)}.json`;
+
+  const filePath = path.join(directory, fileName);
+
+  const relativeFile = path.relative(process.cwd(), filePath).split(path.sep).join("/");
+
+  const document = {
+    date: intelligenceSet.set_date,
+
+    marketDomain,
+
+    intelligenceSetId: intelligenceSet.id,
+
+    // Confirms the snapshot matches a set without querying the database. Every row
+    // carries its own `intelligence_set_id`, so a divergence would be visible here.
+    setIdAgreesWithEveryRow: (rows as ObservationRow[]).every(
+      (row) => row.intelligence_set_id === intelligenceSet.id,
+    ),
+
+    writtenAt: new Date().toISOString(),
+
+    rowCount: rows.length,
+
+    rows,
+  };
+
+  await fs.writeFile(filePath, toReadableJson(document), "utf8");
+
+  return relativeFile;
 };
 
 // --------------------------------------------------

@@ -31,6 +31,7 @@ import {
   fetchResearchQueue,
   insertResearch,
   type ResearchTarget,
+  type StoredResearch,
 } from "../../utils/weather/dbFetcher.researcher.js";
 import {
   collectResearchEvidence,
@@ -76,7 +77,7 @@ const MAX_LOOP = 5;
  * The AI SDK's own `stepCount` stops condition. Research is one question, so this
  * bounds how far the agent may wander gathering evidence.
  */
-const MAX_AGENT_STEPS = 4;
+const MAX_AGENT_STEPS = 3;
 
 /**
  * Ceiling on one research run's output tokens.
@@ -276,6 +277,7 @@ Return a structured research record for THIS observation only.
 
 The record contains:
 
+- summary: a standalone, understandable summary of the researched observation in 1–2 sentences. Synthesize the most important information from the finding, context, and uncertainty. Explain what happened or was discovered, why it matters when relevant, and any critical caveat that changes how the finding should be interpreted. Preserve important figures and distinguish confirmed facts from claims or theoretical results. The summary must make sense without reading the other fields. Do not introduce information that is unsupported by the research.
 - finding: what the research establishes
 - evidence: the strongest supporting evidence
 - sources: the relevant sources used
@@ -378,6 +380,43 @@ export const runResearcher = async (
   const attempts: Attempted[] = [];
   const failedIds: string[] = [];
   const truncatedIds: string[] = [];
+
+  // Observation stored most recently, so a dump can say which record prompted it.
+  let latestObservationId: string | null = null;
+
+  // --------------------------------------------------
+  // Dump what the database holds for this set
+  // --------------------------------------------------
+
+  /**
+   * Re-reads the set's research and writes it to the dump file.
+   *
+   * Declared before the loop because the loop calls it after every stored
+   * observation. Reads rather than reusing the loop's own values, so the dump is a
+   * record of what actually committed: a row the insert rejected appears as
+   * missing rather than being reported as researched. That also means the file
+   * carries earlier runs' research for the same set, which is the point - it is the
+   * set's research, not one run's slice.
+   */
+  const dumpDatabase = async (latestObservationId: string | null): Promise<string> => {
+    const stored = await fetchResearchForSet(intelligenceSet);
+
+    return await writeResearchDump({
+      agentName: AGENT_NAME,
+
+      runNumber: runLog.runNumber,
+
+      date: intelligenceSet.set_date,
+
+      marketDomain: marketDomain ?? "all-domains",
+
+      intelligenceSetId: intelligenceSet.id,
+
+      latestObservationId,
+
+      rows: stored,
+    });
+  };
 
   // Two model calls per observation.
   //
@@ -623,6 +662,8 @@ export const runResearcher = async (
 
     attempts.push({ observationId: target.id, stored: true });
 
+    latestObservationId = target.id;
+
     await runLog.record("research", {
       step,
 
@@ -642,28 +683,37 @@ export const runResearcher = async (
 
       record,
     });
+
+    // The dump follows each research rather than waiting for the batch to end, so
+    // the folder reflects the database as each record lands. If this run dies on
+    // the next observation, what got this far is already there.
+    await dumpDatabase(latestObservationId);
   }
 
-  // --------------------------------------------------
-  // Dump what the database holds for this set
-  // --------------------------------------------------
+  // Once more at the end, covering an observation that failed to store, and in a
+  // `finally` so a throw anywhere in the loop still leaves a dump of whatever
+  // committed. A model or provider error used to skip this entirely, which is the
+  // worst moment to be missing it.
+  let dumpFile = "";
 
-  // Re-read rather than reusing what the loop held, so the dump reflects committed
-  // rows. A row the insert rejected cannot appear here, which is the point.
-  const stored = await fetchResearchForSet(intelligenceSet);
+  let stored: StoredResearch[] = [];
 
-  const dumpFile = await writeResearchDump({
-    date: intelligenceSet.set_date,
+  try {
+    dumpFile = await dumpDatabase(latestObservationId);
 
-    marketDomain: marketDomain ?? "all-domains",
+    stored = await fetchResearchForSet(intelligenceSet);
 
-    intelligenceSetId: intelligenceSet.id,
+    // finish() here, so the raw responses are on disk before anything can throw.
+    await runLog.finish();
+  } finally {
+    // Belt and braces: if `dumpDatabase` or `finish` threw, make one more attempt
+    // so a partial run still leaves something to read.
+    if (dumpFile === "") {
+      dumpFile = await dumpDatabase(latestObservationId).catch(() => "");
 
-    rows: stored,
-  });
-
-  // finish() last, so the raw responses are on disk before anything can throw.
-  await runLog.finish();
+      stored = await fetchResearchForSet(intelligenceSet).catch(() => stored);
+    }
+  }
 
   await runLog.record("summary", {
     date: intelligenceSet.set_date,

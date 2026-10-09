@@ -55,22 +55,35 @@ export const fetchResearchQueue = async (
   marketDomain: string | null = null,
 ): Promise<ResearchTarget[]> => {
   const values: unknown[] = [intelligenceSet.id];
-  const conditions = ["intelligence_set_id = $1::uuid", "research_enabled = TRUE"];
 
-  // Bound rather than interpolated, so a domain holding a quote or a semicolon
-  // stays a value.
+  const conditions = [
+    "o.intelligence_set_id = $1::uuid",
+    "o.research_enabled = TRUE",
+    `NOT EXISTS (
+      SELECT 1
+      FROM weather.research AS r
+      WHERE r.intelligence_set_id = o.intelligence_set_id
+        AND r.observation_id = o.id
+    )`,
+  ];
+
   if (marketDomain !== null) {
     values.push(marketDomain);
-
-    conditions.push(`market_domain = $${values.length}`);
+    conditions.push(`o.market_domain = $${values.length}`);
   }
 
   const { rows } = await pool.query(
     `
-      SELECT id, date::text AS date, market_domain, type, observation, research_enabled
-      FROM weather.observations
+      SELECT
+        o.id,
+        o.date::text AS date,
+        o.market_domain,
+        o.type,
+        o.observation,
+        o.research_enabled
+      FROM weather.observations AS o
       WHERE ${conditions.join("\n        AND ")}
-      ORDER BY created_at ASC;
+      ORDER BY o.created_at ASC;
     `,
     values,
   );

@@ -70,9 +70,19 @@ export const toPathSegment = (value: string): string => {
 
 const segmentFor = toPathSegment;
 
-const fileNameFor = (agentName: string, runNumber: number): string => {
+/**
+ * The file name a run number resolves to, e.g. `Weather Triage-007.json`.
+ *
+ * Exported so anything that writes a per-run artifact alongside the run log can
+ * reuse this rather than reimplementing the padding. A second copy of the format
+ * is a second thing to drift: the researcher's database dump is named with this so
+ * it lines up with its run log by construction, not by coincidence.
+ */
+export const agentRunFileName = (agentName: string, runNumber: number): string => {
   return `${segmentFor(agentName)}-${String(runNumber).padStart(RUN_NUMBER_PAD, "0")}.json`;
 };
+
+const fileNameFor = agentRunFileName;
 
 const agentDirectory = (agentName: string): string => {
   return path.join(AGENT_RUN_LOG_DIR, segmentFor(agentName));
