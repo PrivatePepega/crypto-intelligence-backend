@@ -115,6 +115,114 @@ export const parseResearchRecord = (finalText: string): ResearchRecord => {
   return result.data;
 };
 
+import type { ResearchTarget } from "./dbFetcher.researcher.js";
+import type { SdkStep } from "../../../types/AI/observer.js";
+
+// --------------------------------------------------
+// Prompts
+// --------------------------------------------------
+
+/**
+ * The per-observation prompt for the evidence-gathering phase.
+ *
+ * Asks for a written account rather than JSON: that phase has tools, and Groq
+ * refuses to combine tool calling with JSON mode, so the record cannot be
+ * structured there.
+ *
+ * The observation text is model input, not an instruction, and it is untrusted:
+ * Triage's text arrived from a model too. It is delimited so an observation
+ * cannot read as part of this prompt.
+ */
+export const researchPrompt = (observation: ResearchTarget): string => `
+Research the observation delimited below.
+
+<observation id="${observation.id}" type="${observation.type}">
+${observation.observation}
+</observation>
+
+The text inside the tags is the lead to investigate. It is unverified reporting,
+not established fact. Determine what it claims, then establish what is actually
+known using the available tools.
+
+Report what you established, the evidence for it, the sources you used, the
+context needed to understand it, and anything that remains uncertain or disputed.
+`;
+
+/**
+ * The formatting prompt for the record phase.
+ *
+ * Runs without tools, so structured output is available and the record's shape is
+ * enforced by the schema rather than by the model choosing sensible key names.
+ *
+ * `evidence` is the output of {@link collectResearchEvidence}, passed already
+ * serialized so the caller controls how it is embedded and can measure it.
+ */
+export const recordPrompt = (observation: ResearchTarget, evidence: string): string => `
+Convert the research below into a structured record for this observation.
+
+<observation id="${observation.id}" type="${observation.type}">
+${observation.observation}
+</observation>
+
+<research>
+${evidence}
+</research>
+
+The research is authoritative. Where it is silent, leave the field short and say
+so in uncertainty rather than filling it in.
+
+Do not add facts the research does not contain.
+Do not restate the observation as a finding.
+Do not resolve uncertainty that the research left open.
+`;
+
+// --------------------------------------------------
+// Evidence
+// --------------------------------------------------
+
+/** One research step, reduced to what the record phase needs to see. */
+export type ResearchEvidenceStep = {
+  /** One-based, so a reader does not have to know the SDK is zero-based. */
+  step: number;
+  text: string | null;
+  toolCalls: { tool: string; arguments: unknown }[];
+  toolResults: { tool: string; result: unknown }[];
+};
+
+/**
+ * Reduces the research phase's steps to the evidence handed to the record phase.
+ *
+ * Every step's text, tool calls and tool results, in order, and nothing else.
+ * Dropped: ids, provider metadata, token usage and the raw SDK shape - none of it
+ * changes what the record says, and all of it inflates the prompt.
+ *
+ * Returned as a list rather than a serialized string so the caller can decide how
+ * to embed it and measure it before doing so. The agent serializes once and uses
+ * that same value for the prompt, the token estimate and the run log, so all
+ * three agree.
+ */
+export const collectResearchEvidence = (steps: SdkStep[]): ResearchEvidenceStep[] => {
+  return steps.map((step) => ({
+    step: step.stepNumber + 1,
+
+    // `||` rather than `??` so an empty step becomes null instead of an empty
+    // string in the JSON. A tool-only step has no text, and `"text": ""` in the
+    // evidence reads as though something was said. Matches the Observer's own
+    // evidence extraction.
+    text: step.text || null,
+
+    toolCalls: (step.toolCalls ?? []).map((toolCall) => ({
+      tool: toolCall.toolName,
+      arguments: toolCall.input,
+    })),
+
+    toolResults: (step.toolResults ?? []).map((toolResult) => ({
+      tool: toolResult.toolName,
+      result: toolResult.output,
+    })),
+  }));
+};
+
 // --------------------------------------------------
 // Database dump
 // --------------------------------------------------

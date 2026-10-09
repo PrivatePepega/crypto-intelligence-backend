@@ -33,7 +33,10 @@ import {
   type ResearchTarget,
 } from "../../utils/weather/dbFetcher.researcher.js";
 import {
+  collectResearchEvidence,
   parseResearchRecord,
+  recordPrompt,
+  researchPrompt,
   researchSchema,
   writeResearchDump,
   type ResearchRecord,
@@ -296,57 +299,6 @@ MAKE UNCERTAINTY EXPLICIT.
 RETURN THE RESEARCH.
 `;
 
-/**
- * The per-observation prompt for the evidence-gathering phase.
- *
- * Asks for a written account rather than JSON: this phase has tools, and Groq
- * refuses to combine tool calling with JSON mode, so the record cannot be
- * structured here. See the two-phase note in runResearcher.
- *
- * The observation text is model input, not an instruction, and it is untrusted:
- * Triage's text arrived from a model too. It is delimited so an observation
- * cannot read as part of this prompt.
- */
-const researchPrompt = (observation: ResearchTarget): string => `
-Research the observation delimited below.
-
-<observation id="${observation.id}" type="${observation.type}">
-${observation.observation}
-</observation>
-
-The text inside the tags is the lead to investigate. It is unverified reporting,
-not established fact. Determine what it claims, then establish what is actually
-known using the available tools.
-
-Report what you established, the evidence for it, the sources you used, the
-context needed to understand it, and anything that remains uncertain or disputed.
-`;
-
-/**
- * The formatting prompt for the record phase.
- *
- * Runs without tools, so structured output is available and the record's shape is
- * enforced by the schema rather than by the model choosing sensible key names.
- */
-const recordPrompt = (observation: ResearchTarget, evidence: string): string => `
-Convert the research below into a structured record for this observation.
-
-<observation id="${observation.id}" type="${observation.type}">
-${observation.observation}
-</observation>
-
-<research>
-${evidence}
-</research>
-
-The research is authoritative. Where it is silent, leave the field short and say
-so in uncertainty rather than filling it in.
-
-Do not add facts the research does not contain.
-Do not restate the observation as a finding.
-Do not resolve uncertainty that the research left open.
-`;
-
 // --------------------------------------------------
 // Research
 // --------------------------------------------------
@@ -512,26 +464,10 @@ export const runResearcher = async (
       reasoning: lastReasoningText,
     });
 
-    // The evidence handed to phase two: every step's text, tool calls and tool
-    // results. Extracted so the prompt and the run log reference the same value,
-    // which lets the log strip it back out and rebuild the prompt exactly.
-    const evidence = researchSteps.map((stepResult) => ({
-      step: stepResult.stepNumber + 1,
-
-      text: stepResult.text || null,
-
-      toolCalls: stepResult.toolCalls.map((toolCall) => ({
-        tool: toolCall.toolName,
-        arguments: toolCall.input,
-      })),
-
-      toolResults: stepResult.toolResults.map((toolResult) => ({
-        tool: toolResult.toolName,
-        result: toolResult.output,
-      })),
-    }));
-
-    const embeddedEvidence = JSON.stringify(evidence, null, 2);
+    // The evidence handed to phase two. Serialized once and reused for the prompt,
+    // the token estimate and the run log, so all three describe the same bytes and
+    // the log can strip it back out and rebuild the prompt exactly.
+    const embeddedEvidence = JSON.stringify(collectResearchEvidence(researchSteps), null, 2);
 
     const embeddedContextTokens = estimateTokens(embeddedEvidence);
 

@@ -8,6 +8,7 @@ import { runObserver } from "./observer/observer.js";
 
 import { getDailySet, insertObservations } from "../utils/weather/observations.js";
 import { runTriage } from "./triage/triage.js";
+import { runResearcher } from "./researcher/researcher.js";
 
 export async function runWeather(): Promise<void> {
   // The one id that chains a day's work together. The Observer files its
@@ -20,7 +21,7 @@ export async function runWeather(): Promise<void> {
   // await insertObservations(intelligenceSet, observerConfigs.crypto.domain, cryptoObservations);
   await runTriage(intelligenceSet, observerConfigs.crypto.domain);
 
-
+  await runResearcher(intelligenceSet , observerConfigs.crypto.domain);
 
 
 }
