@@ -128,18 +128,54 @@ const briefItem = z.looseObject({
  * "none found" from "not looked at".
  */
 export const briefSchema = z.object({
+  // ---- provenance ----
   domain: z.string(),
   intelligenceSetId: z.string(),
   intelligenceDate: z.string(),
 
+  // ---- the ten analytical sections ----
+
+  /** Overall domain state and conclusions. */
   assessment: z.string(),
 
-  keyDevelopments: z.array(briefItem),
-  significantMetrics: z.array(briefItem),
-  trendsAndTensions: z.array(briefItem),
+  /** Significant readings, changes, and their significance. */
+  indicatorBrief: z.array(briefItem),
+
+  /** Notable observations, including the ones that were never researched. */
+  observationBrief: z.array(briefItem),
+
+  /** One concise summary per research record. */
+  researchBrief: z.array(briefItem),
+
+  /** Short synthesis of the day's key developments. */
+  todaySummary: z.string(),
+
+  /** How the main developments fit together, where the evidence supports it. */
+  todayNarrative: z.string(),
+
+  /** Evidence-supported connections, and conditional future implications. */
+  relationshipsAndImplications: z.array(briefItem),
+
+  /**
+   * Tone, its classification, the reasoning, and the uncertainty about it.
+   *
+   * An object rather than an array because a domain has one directional reading,
+   * and because the prompt requires the rationale and the uncertainty to travel
+   * with the classification rather than beside it somewhere else.
+   */
+  directionalAssessment: z.looseObject({
+    classification: z.string().optional(),
+    rationale: z.string().optional(),
+    uncertainty: z.string().optional(),
+    observedTone: z.string().optional(),
+    forwardImplications: z.string().optional(),
+  }),
+
+  /** Supported future events and possible turning points. */
   upcomingCatalysts: z.array(briefItem),
+
+  /** Conflicts, missing data, and the limits of coverage. */
   uncertaintiesAndDataQuality: z.array(briefItem),
-  coverageNotes: z.array(briefItem),
 });
 
 export type DomainBrief = z.infer<typeof briefSchema>;

@@ -115,8 +115,6 @@ const RESEARCH_TOOLS = [
   "currentsNewsSearch",
   "newsflashSearchArticles",
   "newsflashGetEvents",
-  "gdeltSearchStories",
-  "gdeltSearchEvents",
   "marketauxNewsSearch",
   "fmpGetArticlesList",
   "wabbleImportantHeadlineSearch",

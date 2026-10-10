@@ -125,9 +125,9 @@ Measured 2026-10-03, not inferred from docs:
 
 **`from_date` and `to_date` are accepted and discarded.** Both date filters are
 declared on the `news` tool's schema, and the dispatcher drops them without
-erroring — the call succeeds and returns unfiltered data. This is the same
-behaviour seen in GDELT: a silently dropped parameter looks exactly like "no
-results in that window".
+erroring — the call succeeds and returns unfiltered data. Worth stating plainly
+because a silently dropped parameter looks exactly like "no results in that
+window".
 
 Consequences for the tools:
 

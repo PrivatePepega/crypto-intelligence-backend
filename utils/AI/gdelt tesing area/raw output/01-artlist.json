@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mode": "artlist",
+    "query": "bitcoin",
+    "timespan": "24h"
+  },
+  "response": {},
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=bitcoin&mode=artlist&format=json&timespan=24h&maxrecords=5",
+  "elapsedMs": 26150
+}

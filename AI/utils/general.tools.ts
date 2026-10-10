@@ -9,8 +9,6 @@ import { cvSearchTool } from "../tools/cvSearch.js";
 import { cvTrendingTool } from "../tools/cvTrending.js";
 import { finnhubCryptoNewsTool } from "../tools/finnhubCryptoNews.js";
 import { fmpGetArticlesListTool } from "../tools/fmpGetArticlesList.js";
-import { gdeltSearchEventsTool } from "../tools/gdeltSearchEvents.js";
-import { gdeltSearchStoriesTool } from "../tools/gdeltSearchStories.js";
 import { getCurrentIndicatorTool } from "../tools/getCurrentIndicatorData.js";
 import { marketauxSearchTool } from "../tools/marketauxNewsSearch.js";
 import { newsDataCryptoNewsTool } from "../tools/newsDataCryptoNews.js";
@@ -38,9 +36,6 @@ export const agenticTooling = {
 
   newsflashGetEvents: newsflashGetEventsTool,
   newsflashSearchArticles: newsflashSearchArticlesTool,
-
-  // gdeltSearchEvents: gdeltSearchEventsTool,
-  // gdeltSearchStories: gdeltSearchStoriesTool,
 
   fmpGetArticlesList: fmpGetArticlesListTool,
 
@@ -170,10 +165,19 @@ export const getAgenticContext = async (config: ObserverConfig) => {
     };
   });
 
-  return JSON.stringify({
-    domain: config.domain,
-    foundationalData,
-  });
+  // Indented rather than compacted. A prompt embedding this as one unbroken line
+  // is unreadable to a human reviewing the run log, and the run log's serializer
+  // escapes every inner quote on a line with no newlines to break them up - which
+  // produced a wall of `\"domain\":\"crypto\"...` in the recorded prompt. Indenting
+  // gives the serializer real line breaks to split on.
+  return JSON.stringify(
+    {
+      domain: config.domain,
+      foundationalData,
+    },
+    null,
+    2,
+  );
 };
 
 /**
@@ -199,11 +203,18 @@ export const getFullAgenticContext = async (config: ObserverConfig) => {
     data: entry.data,
   }));
 
-  return JSON.stringify({
-    domain: config.domain,
-    indicatorCount: indicators.length,
-    indicators,
-  });
+  // Indented for the same reason as {@link getAgenticContext}: an unbroken line of
+  // escaped JSON is unreadable in the run log and gives its serializer nothing to
+  // split on.
+  return JSON.stringify(
+    {
+      domain: config.domain,
+      indicatorCount: indicators.length,
+      indicators,
+    },
+    null,
+    2,
+  );
 };
 
 // --------------------------------------------------

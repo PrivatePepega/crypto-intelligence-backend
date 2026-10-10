@@ -1,0 +1,15 @@
+# GDELT DOC 2.0 raw response
+# mode      : timelinesourcecountry
+# query     : bitcoin
+# url       : https://api.gdeltproject.org/api/v2/doc/doc?query=bitcoin&mode=timelinesourcecountry&format=json
+# fetched   : 2026-10-10T19:50:24.797Z
+# status    : 429 Too Many Requests
+# elapsed   : 11801ms
+# content-type: (none)
+# bytes     : 444
+#
+# ---- BEGIN VERBATIM BODY ----
+Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries. All high-traffic users should switch to our ngrams dataset: https://blog.gdeltproject.org/using-the-new-web-ngrams-dataset-to-find-relevant-coverage/. For trend analysis, please see our daily newsletter briefings: https://blog.gdeltproject.org/announcing-our-new-daily-todays-trends-on-capitol-hill-todays-media-trends-newsletter-briefings/.
+
+
+# ---- END VERBATIM BODY ----

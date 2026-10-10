@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mode": "timelinelang",
+    "query": "bitcoin",
+    "timespan": "24h"
+  },
+  "status": 0,
+  "message": "GDELT DOC request failed: fetch failed",
+  "body": ""
+}

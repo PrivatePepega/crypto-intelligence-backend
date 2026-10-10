@@ -8,8 +8,7 @@
  * of largely duplicated text, versus ~3.5k characters for the titles alone.
  *
  * Kept separate from the AI tool so the projection is reusable and testable
- * without instantiating the AI SDK, matching how `newsFlash` and `GDELT` are
- * organised.
+ * without instantiating the AI SDK, matching how `newsFlash` is organised.
  */
 
 /** Agent-facing output: headlines only, no bodies. */

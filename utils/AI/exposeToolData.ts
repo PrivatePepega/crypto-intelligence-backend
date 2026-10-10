@@ -104,19 +104,6 @@ const SEARCH_ARGS: Record<string, ArgsBuilder> = {
     return slug ? { slug } : null;
   },
 
-  gdeltSearchEvents: (domain) => ({
-    // The tool's topic enum is fixed, so the domain goes in the free-text query.
-    topic: "geopolitics",
-    query: domain,
-    days: 1,
-  }),
-
-  gdeltSearchStories: (domain) => ({
-    topic: "geopolitics",
-    query: domain,
-    days: 1,
-  }),
-
   getCurrentIndicatorData: (domain) => ({
     query: `current ${domain} data`,
   }),
