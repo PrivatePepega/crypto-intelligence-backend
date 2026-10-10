@@ -39,8 +39,8 @@ export const agenticTooling = {
   newsflashGetEvents: newsflashGetEventsTool,
   newsflashSearchArticles: newsflashSearchArticlesTool,
 
-  gdeltSearchEvents: gdeltSearchEventsTool,
-  gdeltSearchStories: gdeltSearchStoriesTool,
+  // gdeltSearchEvents: gdeltSearchEventsTool,
+  // gdeltSearchStories: gdeltSearchStoriesTool,
 
   fmpGetArticlesList: fmpGetArticlesListTool,
 
@@ -173,6 +173,36 @@ export const getAgenticContext = async (config: ObserverConfig) => {
   return JSON.stringify({
     domain: config.domain,
     foundationalData,
+  });
+};
+
+/**
+ * Every indicator in the current dataset, not just the domain's.
+ *
+ * Same shape as {@link getAgenticContext} apart from the key, so a consumer can
+ * read either without knowing which scope produced it. Measured at 105 entries and
+ * roughly 78k tokens, against a few thousand for a domain's own set - which is why
+ * this is a separate function rather than a flag on the other: the cost difference
+ * is two orders of magnitude and callers should see that at the call site.
+ *
+ * The brief analyst's prompt asks it to select the indicators relevant to its own
+ * domain and warns that the dataset may cover several. Supplying the whole dataset
+ * is what makes that instruction honest rather than a description of a list that was
+ * already filtered.
+ */
+export const getFullAgenticContext = async (config: ObserverConfig) => {
+  const data = (await exposeCurrentData()) as CurrentDataFile;
+
+  const indicators = Object.values(data.currentData).map((entry) => ({
+    indicatorId: entry.indicatorId,
+    indicator: entry.indicator,
+    data: entry.data,
+  }));
+
+  return JSON.stringify({
+    domain: config.domain,
+    indicatorCount: indicators.length,
+    indicators,
   });
 };
 

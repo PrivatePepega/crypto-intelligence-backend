@@ -48,6 +48,13 @@ export type StoredResearch = {
  * nothing here clears it, so the queue is stable across runs and a research pass
  * does not reshuffle what the next pass will pick up.
  *
+ * `NOT EXISTS` is what makes re-running cheap and safe. weather.research has no
+ * unique constraint on `observation_id`, so without it a second run would research
+ * every observation again and stack a second row on each - spending the tokens a
+ * second time to produce a duplicate. With it a repeat run finds only what the
+ * previous one did not finish, which is also the right way to recover after a
+ * failure partway through.
+ *
  * @param marketDomain `null` queues every enabled domain in the set.
  */
 export const fetchResearchQueue = async (
@@ -91,44 +98,77 @@ export const fetchResearchQueue = async (
   return rows as ResearchTarget[];
 };
 
+/** One finalized research record, paired with the observation it researched. */
+export type ResearchToStore = {
+  observation: ResearchTarget;
+  /** The record already serialized, so the caller controls the stored shape. */
+  research: string;
+};
+
 /**
- * Stores one research record against the observation it researched.
+ * Stores a batch of research records, one row each.
+ *
+ * Every entry becomes its own row, so each record stays individually addressable
+ * against the observation it belongs to rather than being packed into one blob.
+ *
+ * One statement for the whole batch: a day is tens of rows, so the round-trip
+ * saving is worth more than a loop, and a single statement is atomic without an
+ * explicit transaction - either every record lands or none does.
  *
  * `observation` is copied from the observation row rather than from the model's
- * own echo of it: the row is the authoritative text, and a paraphrase written
- * into a second column would let the two drift apart unnoticed.
+ * own echo of it: the row is the authoritative text, and a paraphrase written into
+ * a second column would let the two drift apart unnoticed.
  *
- * No `ON CONFLICT`: weather.research has no unique constraint, so a repeat pass
- * writes a second row for the same observation. Deduplicating which record wins
- * is the caller's decision, not this function's.
+ * No `ON CONFLICT`: weather.research has no unique constraint, so a record that
+ * already exists would gain a second row. The queue excludes those.
  *
- * @returns The id of the row written.
+ * @returns The ids of the rows written, in the order supplied.
  */
-export const insertResearch = async (
+export const insertResearchBatch = async (
   intelligenceSet: DailySet,
-  observation: ResearchTarget,
-  research: string,
-): Promise<string> => {
+  entries: ResearchToStore[],
+): Promise<string[]> => {
+  if (entries.length === 0) return [];
+
+  // Seven bound values per entry: the set, the observation it belongs to, the
+  // four observation columns copied across, and the record itself.
+  const VALUES_PER_ENTRY = 7;
+
+  const values: unknown[] = [];
+
+  const tuples = entries.map((entry, index) => {
+    const first = index * VALUES_PER_ENTRY + 1;
+
+    values.push(
+      intelligenceSet.id,
+      entry.observation.id,
+      entry.observation.date,
+      entry.observation.market_domain,
+      entry.observation.type,
+      entry.observation.observation,
+      entry.research,
+    );
+
+    const placeholders = Array.from(
+      { length: VALUES_PER_ENTRY },
+      (_, offset) => `$${first + offset}`,
+    );
+
+    return `(${placeholders.join(", ")})`;
+  });
+
   const { rows } = await pool.query(
     `
       INSERT INTO weather.research (
         intelligence_set_id, observation_id, date, market_domain, type, observation, research
       )
-      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      VALUES ${tuples.join(",\n        ")}
       RETURNING id;
     `,
-    [
-      intelligenceSet.id,
-      observation.id,
-      observation.date,
-      observation.market_domain,
-      observation.type,
-      observation.observation,
-      research,
-    ],
+    values,
   );
 
-  return rows[0].id;
+  return (rows as { id: string }[]).map((row) => row.id);
 };
 
 /**

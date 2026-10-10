@@ -147,6 +147,54 @@ export const createDailySet = async (): Promise<DailySet> => {
 };
 
 /**
+ * One specific daily set, by id. `null` when no such set exists.
+ *
+ * For reading a set other than today's. Every stage of the pipeline takes a set as
+ * an argument, so pointing one at an earlier set is what lets a single stage be
+ * re-run against a day that is already researched - the alternative is
+ * re-researching the whole day to look at one of its outputs again.
+ *
+ * The id is bound, not interpolated, so it stays a value.
+ *
+ * `set_date::text` for the same reason as {@link findDailySet}.
+ */
+export const findDailySetById = async (setId: string): Promise<DailySet | null> => {
+  const { rows } = await pool.query(
+    `
+      SELECT id, set_date::text AS set_date
+      FROM intelligence_sets.daily_sets
+      WHERE id = $1::uuid;
+    `,
+    [setId],
+  );
+
+  return rows[0] ?? null;
+};
+
+/**
+ * The daily set for one date, `YYYY-MM-DD`. `null` when that day has no set.
+ *
+ * The by-date counterpart to {@link findDailySetById}, and the more durable of the
+ * two for re-running a past day: a hardcoded id stops meaning "yesterday" the
+ * moment the calendar moves, whereas a date is asked for explicitly.
+ *
+ * Returns `null` rather than creating anything. Reading an earlier day should never
+ * invent one, and {@link getDailySet} is the get-or-create for today.
+ */
+export const findDailySetByDate = async (date: string): Promise<DailySet | null> => {
+  const { rows } = await pool.query(
+    `
+      SELECT id, set_date::text AS set_date
+      FROM intelligence_sets.daily_sets
+      WHERE set_date = $1::date;
+    `,
+    [date],
+  );
+
+  return rows[0] ?? null;
+};
+
+/**
  * Today's intelligence set, created only when missing.
  *
  * An existing row is returned untouched, never overwritten, so a repeat run in

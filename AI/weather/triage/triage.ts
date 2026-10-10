@@ -63,7 +63,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  * returning unusable text for this pipeline, and triage depends entirely on one
  * response parsing cleanly. Change it here and nothing else.
  */
-const modelPick = models.openrouter;
+const modelPick = models.groq;
 
 /**
  * Ceiling on the agent's output tokens.

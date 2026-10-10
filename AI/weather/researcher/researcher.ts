@@ -14,7 +14,7 @@
  *   AI/data/database Fetcher/researcher/research-<date>-<domain>.json  what landed in the database
  */
 
-import { Output, generateText, isStepCount } from "ai";
+import { NoObjectGeneratedError, Output, generateText, isStepCount } from "ai";
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -29,8 +29,9 @@ import { getAgenticTooling, estimateTokens } from "../../utils/general.tools.js"
 import {
   fetchResearchForSet,
   fetchResearchQueue,
-  insertResearch,
+  insertResearchBatch,
   type ResearchTarget,
+  type ResearchToStore,
   type StoredResearch,
 } from "../../utils/weather/dbFetcher.researcher.js";
 import {
@@ -62,16 +63,6 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  * Change it here and nothing else.
  */
 const modelPick = models.openrouterFree;
-
-/**
- * Ceiling on observations researched per invocation.
- *
- * One research run is a full agent loop with tools, so a large queue costs real
- * time and tokens. This bounds a single invocation; the queue itself is
- * untouched, so the next run picks up where this one stopped rather than
- * re-researching what already has a record.
- */
-const MAX_LOOP = 5;
 
 /**
  * Pause between observations, in milliseconds.
@@ -315,38 +306,37 @@ export type ResearchOutcome = {
   date: string;
   marketDomain: string;
   intelligenceSetId: string;
-  /** Observations Triage had enabled when this run started. */
+  /** Enabled observations still waiting to be researched when this run started. */
   queued: number;
-  /** Observations this run actually attempted, capped by MAX_LOOP. */
+  /** Observations this run attempted, which is every queued one. */
   attempted: number;
-  /** Research records stored by this run. */
+  /** Research records this run stored. */
   researched: number;
-  /** Observations whose research failed, by observation id. */
+  /** Observations whose research failed or never finalized, by observation id. */
   failedIds: string[];
   /** Research rows now filed under the set, including earlier runs. */
   totalInSet: number;
   dumpFile: string;
 };
 
-/** One observation's outcome, used only to build the return value. */
-type Attempted = {
-  observationId: string;
-  stored: boolean;
-};
-
 /**
- * Researches up to MAX_LOOP of the set's Triage-approved observations.
+ * Researches every enabled observation in the set that does not already have a
+ * research record.
+ *
+ * The whole queue, not a batch: the queue itself already excludes anything an
+ * earlier run finished, so it shrinks on its own and there is no cap to raise.
  *
  * `marketDomain` narrows the queue; `null` takes every enabled domain in the set.
  *
- * The loop continues past a failed observation rather than aborting the batch: a
- * single unresearchable lead should not cost the other fourteen their research.
- * Failures are recorded per observation and reported in the outcome, so a partial
- * pass is visible rather than silent.
+ * Records are collected as they finalize and written in one batch once the loop
+ * ends. A single observation that throws - a rate limit, a timeout, a provider
+ * error - is recorded and skipped rather than aborting the run, because with the
+ * whole queue in play one flaky call would otherwise discard every record after
+ * it. Only fully formed records are collected: anything that did not parse is
+ * never stored, so a partial record cannot reach the database.
  *
  * One run log covers the whole invocation, holding a section per observation. The
- * per-observation research is also stored in weather.research, which is the record
- * that survives the process.
+ * stored research is the record that survives the process.
  */
 export const runResearcher = async (
   intelligenceSet: DailySet,
@@ -361,7 +351,9 @@ export const runResearcher = async (
 
   const queue = await fetchResearchQueue(intelligenceSet, marketDomain);
 
-  const targets = queue.slice(0, MAX_LOOP);
+  // Every one of them. The queue already excludes anything researched before, so
+  // there is no batch cap to apply and nothing to raise later.
+  const targets = queue;
 
   await runLog.record("initializer", {
     date: intelligenceSet.set_date,
@@ -372,8 +364,6 @@ export const runResearcher = async (
 
     model: modelIdOf(modelPick),
 
-    maxLoop: MAX_LOOP,
-
     maxAgentSteps: MAX_AGENT_STEPS,
 
     maxOutputTokens: MAX_OUTPUT_TOKENS,
@@ -382,13 +372,15 @@ export const runResearcher = async (
 
     tools: RESEARCH_TOOLS,
 
-    // Truncation is reported per observation, so a run that did less than the
-    // loop allows says whether that was the cap or a shortage of work.
     queued: queue.length,
+
     attempted: targets.length,
   });
 
-  const attempts: Attempted[] = [];
+  // Records as they finalize, written in one batch once the loop ends. Only fully
+  // formed records are ever pushed, so a partial one cannot reach the database.
+  const collected: ResearchToStore[] = [];
+
   const failedIds: string[] = [];
   const truncatedIds: string[] = [];
 
@@ -440,120 +432,117 @@ export const runResearcher = async (
   // with `json mode cannot be combined with tool/function calling`. The Observer
   // solves the same problem the same way.
   for (const [index, target] of targets.entries()) {
-    // Position in the batch, so every later entry can be attributed to an
+    // Position in the queue, so every later entry can be attributed to an
     // observation when steps from several runs share one log.
     const step = index + 1;
 
-    await runLog.record("observation", {
-      step,
-
-      observationId: target.id,
-
-      type: target.type,
-
-      prompt: researchPrompt(target),
-    });
-
-    // --------------------------------------------------
-    // Phase one: gather evidence
-    // --------------------------------------------------
-
-    // `generateText`, not `streamText`: the Observer streams because it wants
-    // callbacks while it wanders through tools, but nothing here parses this
-    // phase's output, and a streamed response that arrives truncated loses
-    // evidence silently. Per-step callbacks work the same either way.
-    const researchResult = await generateText({
-      model: modelPick,
-
-      instructions: researchSystemPrompt,
-
-      prompt: researchPrompt(target),
-
-      tools: getAgenticTooling({ tools: [...RESEARCH_TOOLS] }),
-
-      stopWhen: isStepCount(MAX_AGENT_STEPS),
-
-      maxOutputTokens: MAX_OUTPUT_TOKENS,
-
-      providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
-
-      onStepEnd: async (stepResult) => {
-        await runLog.record("step", { step, ...normalizeStep(stepResult) });
-      },
-    });
-
-    const researchText = researchResult.text;
-
-    const researchSteps = await researchResult.steps;
-    const researchUsage = await researchResult.totalUsage;
-
-    // Recorded per observation because the failure modes differ: `length` means
-    // the evidence-gathering was cut off, `content-filter` means the provider
-    // blocked it, `stop` means the model finished.
-    const researchFinishReason = researchResult.finishReason;
-
-    await runLog.record("research_output", {
-      step,
-      observationId: target.id,
-      text: researchText,
-    });
-
-    let lastReasoningText: string | null = null;
-
-    for (const stepResult of researchSteps) {
-      const reasoningText = getReasoningText(stepResult);
-
-      if (reasoningText) {
-        lastReasoningText = reasoningText;
-      }
-    }
-
-    await runLog.record("reasoning", {
-      step,
-      observationId: target.id,
-      reasoning: lastReasoningText,
-    });
-
-    // The evidence handed to phase two. Serialized once and reused for the prompt,
-    // the token estimate and the run log, so all three describe the same bytes and
-    // the log can strip it back out and rebuild the prompt exactly.
-    const embeddedEvidence = JSON.stringify(collectResearchEvidence(researchSteps), null, 2);
-
-    const embeddedContextTokens = estimateTokens(embeddedEvidence);
-
-    // Nothing to format. A research phase that stopped on a token ceiling
-    // produced a fragment, and asking a model to turn a fragment into a confident
-    // record would manufacture certainty that was never gathered.
-    if (researchFinishReason === "length") {
-      truncatedIds.push(target.id);
-
-      await runLog.record("research_failure", {
+    try {
+      await runLog.record("observation", {
         step,
+
         observationId: target.id,
-        stage: "research",
-        error: `Evidence gathering was cut off (finishReason: length). ${researchText.length} characters gathered.`,
-        characters: researchText.length,
-        finishReason: researchFinishReason,
-        embeddedContextTokens,
+
+        type: target.type,
+
+        prompt: researchPrompt(target),
       });
 
-      attempts.push({ observationId: target.id, stored: false });
-      failedIds.push(target.id);
+      // --------------------------------------------------
+      // Phase one: gather evidence
+      // --------------------------------------------------
 
-      continue;
-    }
+      // `generateText`, not `streamText`: the Observer streams because it wants
+      // callbacks while it wanders through tools, but nothing here parses this
+      // phase's output, and a streamed response that arrives truncated loses
+      // evidence silently. Per-step callbacks work the same either way.
+      const researchResult = await generateText({
+        model: modelPick,
 
-    // --------------------------------------------------
-    // Phase two: format the record
-    // --------------------------------------------------
+        instructions: researchSystemPrompt,
 
-    // No tools on this call, so structured output is available and the record's
-    // shape is enforced by the schema rather than by the model picking key names.
+        prompt: researchPrompt(target),
 
-    const recordResult = await generateText({
-      model: modelPick,
-    
-      instructions: `
+        tools: getAgenticTooling({ tools: [...RESEARCH_TOOLS] }),
+
+        stopWhen: isStepCount(MAX_AGENT_STEPS),
+
+        maxOutputTokens: MAX_OUTPUT_TOKENS,
+
+        providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+
+        onStepEnd: async (stepResult) => {
+          await runLog.record("step", { step, ...normalizeStep(stepResult) });
+        },
+      });
+
+      const researchText = researchResult.text;
+
+      const researchSteps = await researchResult.steps;
+      const researchUsage = await researchResult.totalUsage;
+
+      // Recorded per observation because the failure modes differ: `length` means
+      // the evidence-gathering was cut off, `content-filter` means the provider
+      // blocked it, `stop` means the model finished.
+      const researchFinishReason = researchResult.finishReason;
+
+      await runLog.record("research_output", {
+        step,
+        observationId: target.id,
+        text: researchText,
+      });
+
+      let lastReasoningText: string | null = null;
+
+      for (const stepResult of researchSteps) {
+        const reasoningText = getReasoningText(stepResult);
+
+        if (reasoningText) {
+          lastReasoningText = reasoningText;
+        }
+      }
+
+      await runLog.record("reasoning", {
+        step,
+        observationId: target.id,
+        reasoning: lastReasoningText,
+      });
+
+      // The evidence handed to phase two. Serialized once and reused for the prompt,
+      // the token estimate and the run log, so all three describe the same bytes and
+      // the log can strip it back out and rebuild the prompt exactly.
+      const embeddedEvidence = JSON.stringify(collectResearchEvidence(researchSteps), null, 2);
+
+      const embeddedContextTokens = estimateTokens(embeddedEvidence);
+
+      // Nothing to format. A research phase that stopped on a token ceiling
+      // produced a fragment, and asking a model to turn a fragment into a confident
+      // record would manufacture certainty that was never gathered.
+      if (researchFinishReason === "length") {
+        truncatedIds.push(target.id);
+
+        await runLog.record("research_failure", {
+          step,
+          observationId: target.id,
+          stage: "research",
+          error: `Evidence gathering was cut off (finishReason: length). ${researchText.length} characters gathered.`,
+          characters: researchText.length,
+          finishReason: researchFinishReason,
+          embeddedContextTokens,
+        });
+
+        failedIds.push(target.id);
+
+        continue;
+      }
+
+      // --------------------------------------------------
+      // Phase two: format the record
+      // --------------------------------------------------
+
+      // No tools on this call, so structured output is available and the record's
+      // shape is enforced by the schema rather than by the model picking key names.
+
+      const recordInstructions = `
     You are a strict research-record formatter.
     
     Your ONLY task is to transform the supplied research evidence into
@@ -580,174 +569,399 @@ export const runResearcher = async (
       explicitly rather than inventing facts.
     - The status must reflect the evidence, not the original observation's wording.
     - Add no facts that are not supported by the supplied research.
-    `,
-    
-      prompt: recordPrompt(target, embeddedEvidence),
-    
-      maxOutputTokens: MAX_OUTPUT_TOKENS,
-    
-      providerOptions: {
-        groq: { reasoningEffort: REASONING_EFFORT },
-        openrouter: {
-          // Leave provider-specific options out unless supported by this model.
-        },
-      },
-    
-      output: Output.object({
-        schema: researchSchema,
-        name: "research_record",
-        description:
-          "A strict research record with finding, evidence, sources, context, uncertainty, and status. No additional fields.",
-      }),
-    });
+    `;
 
-    const recordText = recordResult.text;
+      /**
+       * One record-agent call.
+       *
+       * Extracted so the retry can repeat it with a different prompt. Instructions
+       * and schema are identical either way - only the user prompt changes - because
+       * the point of the retry is to change what the model is being asked, not to
+       * reintroduce a different contract.
+       */
+      const callRecordAgent = async (prompt: string) =>
+        await generateText({
+          model: modelPick,
 
-    const recordFinishReason = recordResult.finishReason;
+          instructions: recordInstructions,
 
-    await runLog.record("record_output", {
-      step,
-      observationId: target.id,
+          prompt,
 
-      // The evidence is recorded once above, so the stored prompt keeps markers
-      // in its place rather than repeating every tool result as text.
-      prompt: recordPrompt(target, embeddedEvidence)
-        .replace(target.observation, OBSERVATION_MARKER)
-        .replace(embeddedEvidence, EVIDENCE_MARKER),
+          maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-      embeddedValues: {
-        [OBSERVATION_MARKER]: "the observation row's text, verbatim",
-        [EVIDENCE_MARKER]: "JSON.stringify(research evidence, null, 2) over phase-one steps",
-      },
+          providerOptions: {
+            groq: { reasoningEffort: REASONING_EFFORT },
+            openrouter: {
+              // Leave provider-specific options out unless supported by this model.
+            },
+          },
 
-      embeddedContextTokens,
-    });
+          output: Output.object({
+            schema: researchSchema,
+            name: "research_record",
+            description:
+              "A strict research record with finding, evidence, sources, context, uncertainty, and status. No additional fields.",
+          }),
+        });
 
-    await runLog.record("usage", {
-      step,
+      /**
+       * Lines of research prose below which the research phase is treated as having
+       * said nothing useful.
+       *
+       * The research agent does its work inside tool calls and often returns little or
+       * no prose of its own: across a real run one observation returned a full 34-line
+       * write-up while two others returned an empty string and three lines. At that
+       * level the research lives entirely in the tool results, so formatting from the
+       * prose alone would be formatting nothing.
+       */
+      const MIN_USEFUL_RESEARCH_LINES = 5;
 
-      observationId: target.id,
+      /**
+       * Whether the research phase wrote enough prose to be worth formatting from.
+       *
+       * Counts lines rather than characters because the question is "did it write an
+       * account or not", and a heading plus three bullets is several lines of structure
+       * over very little content.
+       */
+      const hasSubstantialResearch = (text: string): boolean => {
+        return text.trim().length > 0 && text.split("\n").length >= MIN_USEFUL_RESEARCH_LINES;
+      };
 
-      researchPhase: {
-        // Summed across the phase's steps, so this is a running total rather than
-        // any one step's context.
-        cumulativeInputTokens: researchUsage.inputTokens ?? null,
+      /**
+       * The fallback formatter's prompt, and the input it reads.
+       *
+       * A second agent rather than a repeat of the first. The first attempt already had
+       * the full evidence and still returned something unusable, so resending the same
+       * prompt would only fail the same way - the model has no way to know what it got
+       * wrong. What changes here is both the instructions and the material:
+       *
+       *  - The instructions tell the model that a previous formatter already tried and
+       *    failed on this observation, and spell out the exact JSON required.
+       *  - The input is the research phase's own prose when it wrote a real account,
+       *    which is a fraction of the size of the evidence blob. The blob is only used
+       *    when the prose was too thin to stand alone, because that is the case where
+       *    the prose says nothing and the tool results are all there is.
+       *
+       * Returns the prompt and a label for it, so the run log records which input the
+       * fallback actually used.
+       */
+      const recordFallbackPrompt = (
+        observation: ResearchTarget,
+        researchText: string,
+        embeddedEvidence: string,
+      ): { prompt: string; source: string } => {
+        const usedProse = hasSubstantialResearch(researchText);
 
-        outputTokens: researchUsage.outputTokens ?? null,
+        const material = usedProse
+          ? `Here is the research that was completed for this observation:
 
-        // One request per step; each input is the context that step was sent.
-        stepInputTokens: researchSteps.map((stepResult) => {
-          const usage = stepResult.usage as { inputTokens?: number } | undefined;
+<research>
+${researchText}
+</research>`
+          : `The research for this observation was carried out through tool calls rather
+than written up, so here are those results:
 
-          return usage?.inputTokens ?? null;
-        }),
+<research>
+${embeddedEvidence}
+</research>`;
 
-        steps: researchSteps.length,
+        const prompt = `
+You are formatting a completed piece of research into a structured record.
 
-        finishReason: researchFinishReason,
-      },
+A previous attempt to do this failed and its output was discarded, so this is a
+second attempt. Work only from the research below.
 
-      // A single call, so this input is that one call's context rather than a
-      // total across steps.
-      recordPhaseInputTokens: recordResult.usage.inputTokens ?? null,
+<observation id="${observation.id}" type="${observation.type}">
+${observation.observation}
+</observation>
 
-      recordPhaseOutputTokens: recordResult.usage.outputTokens ?? null,
+${material}
 
-      recordFinishReason,
-    });
+Return ONE raw JSON object matching this structure, and nothing else:
 
-    if (recordFinishReason === "length") {
-      truncatedIds.push(target.id);
-    }
+{
+  "finding": "string",
+  "evidence": "string",
+  "sources": ["string"],
+  "context": "string",
+  "uncertainty": "string",
+  "status": "supported | partially_supported | disputed | unconfirmed"
+}
 
-    // Parse before inserting, so a malformed record never reaches the database.
-    // The SDK's schema-validated output is preferred; the text parse is the
-    // fallback, and which one was used is recorded.
-    let record: ResearchRecord;
-    let parseSource: "output (schema-validated)" | "text (fallback)";
+Rules, all of which matter:
 
-    try {
-      const structured = recordResult.output as ResearchRecord | undefined;
+- No preamble, no explanation, no Markdown, no headings, no code fence.
+- finding, evidence, context and uncertainty must each be ONE line. A literal
+  newline inside a JSON string is the most common cause of a failed parse, so
+  write each as one continuous line with no line breaks.
+- sources must be a JSON array of strings.
+- status must be exactly one of the four values listed above.
+- Do not add, rename or omit any field.
+- Where the research is silent on a field, say so in that field rather than
+  inventing content.
+`;
 
-      if (structured) {
-        record = structured;
-        parseSource = "output (schema-validated)";
-      } else {
-        record = parseResearchRecord(recordText);
-        parseSource = "text (fallback)";
-      }
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
+        return { prompt, source: usedProse ? "research prose" : "tool evidence" };
+      };
+      const resolveRecord = async (): Promise<{
+        record: ResearchRecord;
+        parseSource: string;
+        finishReason: string | undefined;
+        text: string;
+        inputTokens: number | null;
+        outputTokens: number | null;
+      }> => {
+        const call = async (prompt: string) => {
+          const result = await callRecordAgent(prompt);
 
-      await runLog.record("research_failure", {
-        step,
-        observationId: target.id,
-        stage: "parse",
-        error: message,
-        characters: recordText.length,
+          return {
+            structured: result.output as ResearchRecord | undefined,
+            text: result.text,
+            finishReason: result.finishReason,
+            inputTokens: result.usage.inputTokens ?? null,
+            outputTokens: result.usage.outputTokens ?? null,
+          };
+        };
+
+        try {
+          const first = await call(recordPrompt(target, embeddedEvidence));
+
+          if (first.structured) {
+            return {
+              record: first.structured,
+              parseSource: "output (schema-validated)",
+              finishReason: first.finishReason,
+              text: first.text,
+              inputTokens: first.inputTokens,
+              outputTokens: first.outputTokens,
+            };
+          }
+
+          return {
+            record: parseResearchRecord(first.text),
+            parseSource: "text (fallback)",
+            finishReason: first.finishReason,
+            text: first.text,
+            inputTokens: first.inputTokens,
+            outputTokens: first.outputTokens,
+          };
+        } catch (error) {
+          // Anything other than a structured-output failure is a real error - a
+          // provider outage, a timeout - and is left to the caller.
+          if (!NoObjectGeneratedError.isInstance(error)) throw error;
+
+          // The rejected text rides on the error, so the model's own words can be
+          // salvaged or inspected rather than discarded with the call.
+          const rejected = error.text ?? "";
+
+          try {
+            return {
+              record: parseResearchRecord(rejected),
+              parseSource: "error text (fallback)",
+              finishReason: error.finishReason,
+              text: rejected,
+              // No call completed, so there are no counts to report. The error does
+              // carry usage when the provider supplied it.
+              inputTokens: error.usage?.inputTokens ?? null,
+              outputTokens: error.usage?.outputTokens ?? null,
+            };
+          } catch {
+            // Unusable. Fall through to the fallback agent.
+          }
+
+          // A different agent with different instructions, reading the research
+          // prose when there is enough of it to stand alone. Cheaper than resending
+          // the evidence blob, and not the same request the provider just refused.
+          const fallback = recordFallbackPrompt(target, researchText, embeddedEvidence);
+
+          const retried = await call(fallback.prompt);
+
+          if (retried.structured) {
+            return {
+              record: retried.structured,
+              parseSource: `fallback: ${fallback.source} (schema-validated)`,
+              finishReason: retried.finishReason,
+              text: retried.text,
+              inputTokens: retried.inputTokens,
+              outputTokens: retried.outputTokens,
+            };
+          }
+
+          return {
+            record: parseResearchRecord(retried.text),
+            parseSource: `fallback: ${fallback.source} (text)`,
+            finishReason: retried.finishReason,
+            text: retried.text,
+            inputTokens: retried.inputTokens,
+            outputTokens: retried.outputTokens,
+          };
+        }
+      };
+
+      const {
+        record: resolvedRecord,
+        parseSource,
         finishReason: recordFinishReason,
         text: recordText,
+        // Token counts for the call that produced the record. Null on the
+        // salvaged path, where no successful call was made and the rejected text is
+        // what is left.
+        inputTokens: recordInputTokens,
+        outputTokens: recordOutputTokens,
+      } = await resolveRecord();
+
+      await runLog.record("record_output", {
+        step,
+        observationId: target.id,
+
+        // The evidence is recorded once above, so the stored prompt keeps markers
+        // in its place rather than repeating every tool result as text.
+        prompt: recordPrompt(target, embeddedEvidence)
+          .replace(target.observation, OBSERVATION_MARKER)
+          .replace(embeddedEvidence, EVIDENCE_MARKER),
+
+        embeddedValues: {
+          [OBSERVATION_MARKER]: "the observation row's text, verbatim",
+          [EVIDENCE_MARKER]: "JSON.stringify(research evidence, null, 2) over phase-one steps",
+        },
+
+        embeddedContextTokens,
       });
 
-      attempts.push({ observationId: target.id, stored: false });
+      await runLog.record("usage", {
+        step,
+
+        observationId: target.id,
+
+        researchPhase: {
+          // Summed across the phase's steps, so this is a running total rather than
+          // any one step's context.
+          cumulativeInputTokens: researchUsage.inputTokens ?? null,
+
+          outputTokens: researchUsage.outputTokens ?? null,
+
+          // One request per step; each input is the context that step was sent.
+          stepInputTokens: researchSteps.map((stepResult) => {
+            const usage = stepResult.usage as { inputTokens?: number } | undefined;
+
+            return usage?.inputTokens ?? null;
+          }),
+
+          steps: researchSteps.length,
+
+          finishReason: researchFinishReason,
+        },
+
+        // The producing call's own context rather than a total across steps. Null
+        // when the record was salvaged from rejected text, since no call finished.
+        recordPhaseInputTokens: recordInputTokens,
+
+        recordPhaseOutputTokens: recordOutputTokens,
+
+        recordFinishReason,
+      });
+
+      if (recordFinishReason === "length") {
+        truncatedIds.push(target.id);
+      }
+
+      // `resolveRecord` already validated the record, or threw. A retry that also came
+      // back unusable lands here, and is recorded rather than stored: nothing
+      // half-formed is ever collected.
+      let record: ResearchRecord;
+
+      try {
+        record = resolvedRecord;
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+
+        await runLog.record("research_failure", {
+          step,
+          observationId: target.id,
+          stage: "parse",
+          error: message,
+          characters: recordText.length,
+          finishReason: recordFinishReason,
+          text: recordText,
+        });
+
+        failedIds.push(target.id);
+
+        continue;
+      }
+
+      // Collected here and written once the loop ends. Reached only by a record that
+      // parsed cleanly, so nothing half-formed can reach the database. The
+      // observation's own columns are copied from the observation row rather than
+      // echoed by the model, so the two cannot drift.
+      collected.push({
+        observation: target,
+        research: JSON.stringify(record, null, 2),
+      });
+
+      latestObservationId = target.id;
+
+      await runLog.record("research", {
+        step,
+
+        observationId: target.id,
+
+        parseSource,
+
+        researchFinishReason,
+
+        recordFinishReason,
+
+        truncated: recordFinishReason === "length",
+
+        embeddedContextTokens,
+
+        record,
+      });
+
+      // Between observations, not after the last one. Placed here rather than at the
+      // top of the loop so the pause always follows real work: an iteration that
+      // failed has already been caught, and there is nothing to wait before.
+      const isLastObservation = index === targets.length - 1;
+
+      if (!isLastObservation && STEP_DELAY_MS > 0) {
+        console.log(`[research] waiting ${STEP_DELAY_MS / 1000}s before the next observation`);
+
+        await sleep(STEP_DELAY_MS);
+      }
+    } catch (error) {
+      // A provider or network failure while researching or formatting one
+      // observation. Caught here so it costs only that observation: with the whole
+      // queue in play, letting it escape would discard every record after it.
+      const message = error instanceof Error ? error.message : String(error);
+
+      await runLog
+        .record("research_failure", {
+          step,
+          observationId: target.id,
+          stage: "agent",
+          error: message,
+        })
+        .catch(() => 0);
+
       failedIds.push(target.id);
 
-      continue;
-    }
-
-    // Stored as JSON text. The observation's own columns are copied from the
-    // observation row rather than echoed by the model, so the two cannot drift.
-    const storedResearch = await insertResearch(
-      intelligenceSet,
-      target,
-      JSON.stringify(record, null, 2),
-    );
-
-    attempts.push({ observationId: target.id, stored: true });
-
-    latestObservationId = target.id;
-
-    await runLog.record("research", {
-      step,
-
-      observationId: target.id,
-
-      parseSource,
-
-      researchFinishReason,
-
-      recordFinishReason,
-
-      truncated: recordFinishReason === "length",
-
-      embeddedContextTokens,
-
-      storedResearchId: storedResearch,
-
-      record,
-    });
-
-    // The dump follows each research rather than waiting for the batch to end, so
-    // the folder reflects the database as each record lands. If this run dies on
-    // the next observation, what got this far is already there.
-    await dumpDatabase(latestObservationId);
-
-    // Between observations, not after the last one. Placed here rather than at the
-    // top of the loop so the pause always follows real work: an iteration that
-    // threw has already left the loop, and there is nothing to wait before.
-    const isLastObservation = index === targets.length - 1;
-
-    if (!isLastObservation && STEP_DELAY_MS > 0) {
-      console.log(`[research] waiting ${STEP_DELAY_MS / 1000}s before the next observation`);
-
-      await sleep(STEP_DELAY_MS);
+      console.log(`[research] observation ${step} failed - ${message}`);
     }
   }
 
-  // Once more at the end, covering an observation that failed to store, and in a
-  // `finally` so a throw anywhere in the loop still leaves a dump of whatever
-  // committed. A model or provider error used to skip this entirely, which is the
-  // worst moment to be missing it.
+  // --------------------------------------------------
+  // Store everything that finalized
+  // --------------------------------------------------
+
+  // One statement for the whole batch. Only records that parsed cleanly were
+  // collected, so a failed or unparseable observation is simply absent rather than
+  // stored as a partial. A re-run picks those up, because the queue excludes only
+  // what actually reached the database.
+  const storedIds = await insertResearchBatch(intelligenceSet, collected);
+
+  console.log(`[research] stored ${storedIds.length} of ${targets.length} researched record(s)`);
+
   let dumpFile = "";
 
   let stored: StoredResearch[] = [];
@@ -776,9 +990,9 @@ export const runResearcher = async (
 
     queued: queue.length,
 
-    attempted: attempts.length,
+    attempted: targets.length,
 
-    researched: attempts.filter((attempt) => attempt.stored).length,
+    researched: collected.length,
 
     failedIds,
 
@@ -789,11 +1003,9 @@ export const runResearcher = async (
     dumpFile,
   });
 
-  const researchedCount = attempts.filter((attempt) => attempt.stored).length;
-
   console.log(
     `[research] Research run finalized for domain: ${marketDomain ?? "all-domains"} - ` +
-      `queued ${queue.length}, researched ${researchedCount}, ` +
+      `queued ${queue.length}, researched ${collected.length}, ` +
       `${failedIds.length} failed, ${stored.length} row(s) in set`,
   );
 
@@ -802,8 +1014,8 @@ export const runResearcher = async (
     marketDomain: marketDomain ?? "all-domains",
     intelligenceSetId: intelligenceSet.id,
     queued: queue.length,
-    attempted: attempts.length,
-    researched: researchedCount,
+    attempted: targets.length,
+    researched: collected.length,
     failedIds,
     totalInSet: stored.length,
     dumpFile,
