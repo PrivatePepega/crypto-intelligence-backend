@@ -202,6 +202,49 @@ export const parseAnalystBrief = (analystText: string): Record<string, unknown> 
 };
 
 /**
+ * Reports a formatter failure to the terminal, in full.
+ *
+ * The formatter's own error is usually the most informative thing about a failed
+ * brief, and `NoObjectGeneratedError` in particular hides its cause behind a flat
+ * message - the parse error that actually went wrong is on `cause`. Unwrapping it
+ * here is the difference between "could not parse the response" and the provider's
+ * own complaint about which field it choked on.
+ *
+ * `context` is spread first, so a caller can supply the domain, set and stage
+ * alongside the error's own fields. The error fields come last and cannot be
+ * overwritten by it.
+ *
+ * Logs rather than throws, so the caller decides whether the failure is fatal.
+ */
+export const logFormatterError = (error: unknown, context: Record<string, unknown> = {}): void => {
+  // Normalized so a thrown string or a non-Error still yields name/message/stack
+  // rather than three `undefined`s.
+  const err = error instanceof Error ? error : new Error(String(error));
+
+  console.error("[Brief Analyst] Formatter failed", {
+    ...context,
+
+    name: err.name,
+
+    message: err.message,
+
+    stack: err.stack,
+
+    // Unwrapped one level because a provider error's cause is where the useful
+    // detail lives. Left as-is when it is not an Error, since something was still
+    // thrown and discarding it would lose information.
+    cause:
+      err.cause instanceof Error
+        ? {
+            name: err.cause.name,
+            message: err.cause.message,
+            stack: err.cause.stack,
+          }
+        : (err.cause ?? null),
+  });
+};
+
+/**
  * Normalizes the formatter's response into a brief.
  *
  * The schema enforces the ten top-level fields and the collection types; the loose
