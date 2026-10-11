@@ -48,6 +48,7 @@ import {
   getFullAgenticContext,
 } from "../../utils/general.tools.js";
 import { fetchResearchForSet } from "../../utils/weather/dbFetcher.researcher.js";
+import { parseStoredResearch } from "../../utils/weather/researcher.js";
 import { fetchObservationsForSet } from "../../utils/weather/dbFetcher.triage.js";
 import {
   type BriefGenerationResult,
@@ -122,7 +123,7 @@ const HUMAN_MAX__OUTPUT_TOKENS = undefined;
 
 const AI_BRIEF_MODEL = models.openrouterFree;
 const AI_BRIEF_MAX_STEPS = 3;
-const AI_MAX__OUTPUT_TOKENS = undefined;
+const AI_MAX_OUTPUT_TOKENS = undefined;
 
 //   Off, and leave it off. Reasoning effort is provider-specific - the SDK has no
 //   cross-provider option, only `providerOptions` keyed by provider name - so the
@@ -151,7 +152,7 @@ const HUMAN_BRIEF_SLIDERS: BriefSliders = {
 const AI_CONTEXT_BRIEF_SLIDERS: BriefSliders = {
   model: AI_BRIEF_MODEL,
   maxSteps: AI_BRIEF_MAX_STEPS,
-  maxOutputTokens: AI_MAX__OUTPUT_TOKENS,
+  maxOutputTokens: AI_MAX_OUTPUT_TOKENS,
   reasoningEffort: undefined,
 };
 
@@ -326,6 +327,8 @@ These are the available research results associated with selected observations.
 
 Each research record should receive its own concise 1–4 sentence summary, preserving its research and observation identifiers.
 
+Each record carries an "importance" attribute: the researcher's own judgement of why that finding matters for this domain, made while the evidence was in front of it. Weigh records against each other using it, but do not treat it as the last word - it is one analyst's read, and your own assessment of what matters for the day governs. Where "importance" is absent, judge significance from the record itself. Where it is present, say so when you disagree with it.
+
 Use these records to explain, qualify, or challenge the original observations. Do not conduct additional research.
 
 ${researchRecords}
@@ -476,10 +479,28 @@ ${row.observation}
       ? "No research records are available for this domain and period."
       : storedResearch
           .map((row) => {
-            // The stored research is the researcher's JSON. Left as text rather than
-            // reparsed: it is untrusted content, it is already shaped for reading,
-            // and reparsing would invent a contract this stage does not own.
-            return `<research observationId="${row.observation_id}" status="${row.type}">
+            // The stored column is the researcher's JSON as one opaque text blob. It is
+            // parsed here only to lift `importance` and `status` onto the tag, so the
+            // analyst sees them as attributes it can weigh rather than as prose buried
+            // inside the record.
+            //
+            // The parse is best-effort by design: a record written before a field
+            // existed, or by a schema that has since changed, still renders - just
+            // without those two attributes. The full text is emitted either way, so
+            // nothing is lost by a record that will not parse.
+            //
+            // This also corrects a labelling error: the `status` attribute used to be
+            // bound to the row's `type`, which is the observation's category, so every
+            // record claimed to be an event regardless of its verification status.
+            const parsed = parseStoredResearch(row.research);
+
+            const attributes = [
+              `observationId="${row.observation_id}"`,
+              parsed.status === null ? "" : `status="${parsed.status}"`,
+              parsed.importance === null ? "" : `importance="${parsed.importance}"`,
+            ].filter((attribute) => attribute !== "");
+
+            return `<research ${attributes.join(" ")}>
 ${row.research}
 </research>`;
           })

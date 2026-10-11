@@ -87,9 +87,9 @@ const MAX_AGENT_STEPS = 3;
 /**
  * Ceiling on one research run's output tokens.
  *
- * Generous because the response carries the full record - finding, evidence,
- * sources, context and uncertainty - and a truncated record is a hollow one. A
- * `length` finish is caught and recorded rather than stored.
+ * Generous because the response carries the full record - finding, importance,
+ * evidence, sources, context and uncertainty - and a truncated record is a hollow
+ * one. A `length` finish is caught and recorded rather than stored.
  */
 const MAX_OUTPUT_TOKENS = 30_000;
 
@@ -274,6 +274,7 @@ The record contains:
 
 - summary: a standalone, understandable summary of the researched observation in 1–2 sentences. Synthesize the most important information from the finding, context, and uncertainty. Explain what happened or was discovered, why it matters when relevant, and any critical caveat that changes how the finding should be interpreted. Preserve important figures and distinguish confirmed facts from claims or theoretical results. The summary must make sense without reading the other fields. Do not introduce information that is unsupported by the research.
 - finding: what the research establishes
+- importance: why this finding matters for the domain. This is a separate judgement from finding, not a restatement of it: state what turns on the answer, who or what it affects, and how far the significance reaches. If the research leaves that unestablished, say so rather than inflating it. This is your own read while the evidence is in front of it, not a ranking against other observations and not a research-eligibility decision
 - evidence: the strongest supporting evidence
 - sources: the relevant sources used
 - context: important context needed to understand the event
@@ -551,6 +552,7 @@ export const runResearcher = async (
     
     Required fields:
     - finding: string
+    - importance: string
     - evidence: string
     - sources: array of strings
     - context: string
@@ -598,7 +600,7 @@ export const runResearcher = async (
             schema: researchSchema,
             name: "research_record",
             description:
-              "A strict research record with finding, evidence, sources, context, uncertainty, and status. No additional fields.",
+              "A strict research record with finding, importance, evidence, sources, context, uncertainty, and status. No additional fields.",
           }),
         });
 
@@ -679,6 +681,7 @@ Return ONE raw JSON object matching this structure, and nothing else:
 
 {
   "finding": "string",
+  "importance": "string",
   "evidence": "string",
   "sources": ["string"],
   "context": "string",
@@ -689,9 +692,11 @@ Return ONE raw JSON object matching this structure, and nothing else:
 Rules, all of which matter:
 
 - No preamble, no explanation, no Markdown, no headings, no code fence.
-- finding, evidence, context and uncertainty must each be ONE line. A literal
-  newline inside a JSON string is the most common cause of a failed parse, so
-  write each as one continuous line with no line breaks.
+- finding, importance, evidence, context and uncertainty must each be ONE line. A
+  literal newline inside a JSON string is the most common cause of a failed parse,
+  so write each as one continuous line with no line breaks.
+- importance is why this finding matters for the domain, not a restatement of
+  finding. If the research does not establish that anything turns on it, say so.
 - sources must be a JSON array of strings.
 - status must be exactly one of the four values listed above.
 - Do not add, rename or omit any field.

@@ -390,7 +390,7 @@ Identify meaningful developments and produce observations.
 
 `;
 
-  const formatterDevPrompt = `
+const formatterDevPrompt = `
 Format the Observer's findings into the required JSON structure.
 
 Configured domain:
@@ -407,33 +407,73 @@ Foundational market context:
 ${observerContext}
 </foundational_context>
 
-
-
 Raw Observer evidence:
 <observer_evidence>
 ${embeddedObserverEvidence}
 </observer_evidence>
 
-Your role is FORMATTING, not research or analysis.
+YOUR ROLE: STRUCTURAL FORMATTING ONLY
 
-Convert the supplied Observer findings into a clean, concise, consistent JSON object.
+You are a formatter, not a researcher, analyst, summarizer, or triage agent.
 
-The raw evidence is authoritative when notes are incomplete.
+Your responsibility is to normalize the Observer's findings into the required JSON structure while preserving the complete inventory of distinct observations.
 
-Do not:
-- perform additional research
-- investigate or expand observations
-- determine importance
-- add explanations or implications
-- invent facts or causal relationships
-- turn uncertainty into certainty
-- create observations that are not supported by the supplied information
+Triage is responsible for determining which observations deserve further research. You must not perform that job.
 
-The foundational context describes the current deterministic market state and may provide context for observations, but it does not by itself prove that an external event occurred.
+CORE RULES:
 
-Preserve the meaning and uncertainty of the original observations. Remove duplication, obvious noise, and unnecessary wording.
+1. PRESERVE EVERY DISTINCT OBSERVATION
+- Process the complete observation inventory supplied by the Observer.
+- Every distinct observation must be represented in your output.
+- Do not omit observations because they seem unimportant, insignificant, low-priority, uncertain, repetitive in theme, or unlikely to warrant research.
+- Do not select only the most interesting, impactful, or relevant findings.
+- Do not impose an observation count limit or arbitrarily shorten the inventory.
+- The output should contain the same number of distinct observations as the input, except when genuine duplicates are consolidated.
 
-Each observation must be concise and represent a meaningful finding worth passing to the next stage.
+2. DO NOT COMBINE DISTINCT OBSERVATIONS
+- Keep independently meaningful events, developments, market conditions, anomalies, relationships, and narratives as separate observations.
+- Observations concerning the same project, asset, institution, topic, or broader narrative are not necessarily duplicates.
+- Do not combine several events into a thematic summary simply to make the output shorter.
+- Do not turn multiple independent developments into one broad market narrative.
+- Consolidate only genuine duplicates describing the same underlying signal.
+- When consolidating genuine duplicates, preserve all unique factual details from the duplicated entries.
+
+3. PRESERVE INFORMATION
+- Retain meaningful facts, figures, percentages, absolute changes, dates, entities, source details, and relevant qualifiers provided in the findings.
+- Do not remove useful information merely to make an observation shorter.
+- You may correct wording, improve readability, normalize formatting, and remove genuinely redundant language.
+- Do not reduce detailed observations to vague summaries.
+- Do not introduce facts, calculations, causal relationships, or interpretations that are not supported by the supplied information.
+
+4. PRESERVE UNCERTAINTY
+- Maintain the original distinction between confirmed events, reported claims, hypotheses, suspicions, and unresolved questions.
+- Do not turn allegations into established facts.
+- Do not turn possible explanations into confirmed causal relationships.
+- Do not remove caveats, limitations, or uncertainty that materially affect the meaning of an observation.
+
+5. CLASSIFY WITHOUT RANKING
+- Assign each observation the most appropriate type from the permitted types.
+- Classification is a formatting task, not an assessment of importance.
+- Do not assign importance scores, prioritize observations, determine research eligibility, or decide which findings should proceed downstream.
+- Do not reject an observation because its type is ambiguous. Use "other" when no permitted type fits reliably.
+
+6. USE EVIDENCE CORRECTLY
+- The raw Observer findings are the primary inventory to preserve.
+- Supporting evidence may clarify the meaning of an observation or help resolve formatting ambiguity.
+- Foundational context describes deterministic market conditions. It may provide context but does not independently establish that an external event occurred.
+- Do not perform additional research, investigate claims, or expand observations beyond the supplied material.
+- Do not create new observations from foundational context or supporting evidence that were not part of the Observer's findings.
+
+7. VERIFY COMPLETENESS BEFORE RESPONDING
+- Compare the output against the complete Observer inventory.
+- Verify that every distinct input observation is represented.
+- Verify that distinct observations have not been merged into broader summaries.
+- Verify that meaningful details and uncertainty have been preserved.
+- Genuine duplicate consolidation is the only permitted reason for reducing the number of output observations.
+- Never silently return a partial inventory.
+- If you cannot reliably process the complete inventory, do not fabricate or silently discard entries. Return a formatting failure through the mechanism supported by the caller.
+
+OUTPUT CONTRACT:
 
 Return ONLY valid JSON matching this structure:
 
@@ -446,7 +486,11 @@ Return ONLY valid JSON matching this structure:
   ]
 }
 
-Do not include Markdown, code fences, commentary, explanations, or additional fields.
+Each array item must represent one distinct observation.
+
+Do not include Markdown, code fences, commentary, explanations, importance scores, research decisions, or additional fields.
+
+The output is a complete normalized inventory for downstream processing, not a curated selection of findings thats someones elses job.
 `;
 
   // --------------------------------------------------

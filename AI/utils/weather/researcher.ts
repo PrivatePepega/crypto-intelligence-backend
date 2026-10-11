@@ -56,6 +56,16 @@ export type ResearchStatus = (typeof researchStatuses)[number];
 export const researchSchema = z.object({
   /** What the research establishes. */
   finding: z.string(),
+  /**
+   * Why this finding matters for the domain.
+   *
+   * Separate from `finding` on purpose: what was established and how much it moves
+   * the picture are different judgements, and collapsing them loses the second one.
+   * This is the researcher's own read of significance, made while the evidence is in
+   * front of it - not Triage's research-eligibility call, and not the Observer's
+   * classification.
+   */
+  importance: z.string(),
   /** The strongest supporting evidence. */
   evidence: z.string(),
   /** Sources consulted, one per element. */
@@ -68,6 +78,41 @@ export const researchSchema = z.object({
 });
 
 export type ResearchRecord = z.infer<typeof researchSchema>;
+
+/**
+ * Pulls the two fields worth surfacing as attributes out of a stored record.
+ *
+ * A stored record is the researcher's JSON serialized into one text column, so a
+ * consumer that only wants a field or two still has to parse the whole blob. This
+ * does that once and tolerates failure.
+ *
+ * Both fields are `null` rather than thrown on a record that will not parse: records
+ * written before a field existed, or under a schema that has since changed, are still
+ * readable as text. A caller that only wants an attribute should degrade to omitting
+ * it, not lose the record.
+ *
+ * Deliberately not {@link researchSchema}: a stored record is not necessarily valid
+ * against the current schema, and requiring that here would turn a stale row into an
+ * exception in the middle of building a prompt. Two loose string reads cannot fail
+ * on a missing key.
+ *
+ * @returns The field values, or `null` for any that is absent or not a string.
+ */
+export const parseStoredResearch = (
+  stored: string,
+): { status: string | null; importance: string | null } => {
+  const field = (key: string): string | null => {
+    try {
+      const value = (JSON.parse(stored) as Record<string, unknown>)[key];
+
+      return typeof value === "string" && value.length > 0 ? value : null;
+    } catch {
+      return null;
+    }
+  };
+
+  return { status: field("status"), importance: field("importance") };
+};
 
 /**
  * Turns a research response into a record.
