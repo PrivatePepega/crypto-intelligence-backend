@@ -1,4 +1,7 @@
+import { streamText } from "ai";
 import { z } from "zod";
+
+import { models } from "../../providers/model.js";
 
 import {
   AGENT_RUN_LOG_DIR,
@@ -70,6 +73,226 @@ export const createBriefAnalystRunLog = async (): Promise<AgentRunLog> => {
 
 /** Where the run log lives, for the agent's header comment. */
 export const BRIEF_RUN_LOG_DIR = AGENT_RUN_LOG_DIR;
+
+/**
+ * Inserts a comma omitted between two object properties.
+ *
+ * The analyst runs with tools and so cannot be given a schema - it emits JSON as
+ * free text, and has been observed dropping the comma between two properties.
+ * The run 001 output has exactly one such break, at position 29,541:
+ *
+ * ```
+ * ...no single driver explains all."  "relationships_and_market_implications": [
+ * ```
+ *
+ * One comma, and all ten top-level keys parse.
+ *
+ * This matters because a model asked to *edit* valid JSON does the small job,
+ * while one handed broken JSON spends its budget trying to *recover* it first -
+ * which produced 70,000+ character responses that never terminated.
+ *
+ * Only that one defect is repaired, and only where a `"key":` genuinely follows a
+ * complete value. The result is re-parsed before being accepted, so a wrong guess
+ * is discarded rather than passed on. Anything worse returns `null` and the caller
+ * keeps the original.
+ *
+ * @returns The repaired text and where the change was made, or `null`.
+ */
+export const repairMissingSeparator = (
+  text: string,
+): { text: string; at: number; context: string } | null => {
+  try {
+    JSON.parse(text);
+
+    return null;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+
+    const match = /position (\d+)/.exec(message);
+
+    if (match === null) {
+      return null;
+    }
+
+    const at = Number(match[1]);
+
+    if (!/^\s*"[A-Za-z_][A-Za-z0-9_]*"\s*:/.test(text.slice(at))) {
+      return null;
+    }
+
+    const repaired =
+      text.slice(0, at).replace(/\s*$/, "") + ", " + text.slice(at).replace(/^\s*/, "");
+
+    try {
+      JSON.parse(repaired);
+    } catch {
+      return null;
+    }
+
+    return {
+      text: repaired,
+      at,
+      context: text.slice(Math.max(0, at - 50), at + 50),
+    };
+  }
+};
+
+// --------------------------------------------------
+// Brief generation
+// --------------------------------------------------
+//
+// One implementation shared by every brief written from an analyst output.
+//
+// The human brief and the AI context brief are different documents built from the
+// same evidence, and they differ only in their prompts. The model, the streaming,
+// the repair and the parsing are therefore written once here: two copies would be
+// two places for them to drift apart, and a brief that parses in one would not in
+// the other.
+// --------------------------------------------------
+
+/**
+ * The model every brief is generated with.
+ *
+ * Google. The OpenRouter free models were tried for this and are unsuitable:
+ * `nvidia/nemotron-3-ultra` is a reasoning model that returned a `reasoning` block
+ * and no text under structured output, and the Cloudflare GLM route either never
+ * returns or takes minutes at a large token ceiling. Flash produces the brief and
+ * stops on its own.
+ */
+const BRIEF_MODEL = models.google;
+
+/** What one brief generation produced. */
+export type BriefGenerationResult = {
+  /** The parsed brief. `unknown` because each prompt sets its own shape. */
+  brief: unknown;
+
+  /** The model's text, unparsed. Kept so a failure can still be diagnosed. */
+  text: string;
+
+  finishReason: string | null;
+  inputTokens: number | null;
+  outputTokens: number | null;
+  seconds: number;
+
+  /** Where the analyst input needed the comma repair, or `null` when it did not. */
+  repairedAt: number | null;
+};
+
+/**
+ * Generates one brief from an analyst output.
+ *
+ * Writes nothing. Recording the result is the caller's job, because each brief is
+ * recorded under its own sections of the one run log.
+ *
+ * @param analystOutput The analyst's response. Repaired here when it is one dropped
+ *   comma away from valid JSON, so the brief model is handed something it can edit
+ *   rather than spend its budget recovering.
+ * @param domain Reported in the lifecycle lines so the output names the right domain.
+ * @param label Names this brief in the lifecycle lines, e.g. `Human brief`.
+ * @param systemPrompt The brief's editorial or synthesis instructions.
+ * @param userPrompt Built from the same analyst output.
+ * @throws When the response contains no JSON object. The text is in the run log
+ *   either way, so a failed brief is still diagnosable.
+ */
+export const generateBrief = async (
+  analystOutput: string,
+  domain: string,
+  label: string,
+  systemPrompt: string,
+  userPrompt: string,
+): Promise<BriefGenerationResult> => {
+  console.log(
+    `[brief] ${label} initialized for domain: ${domain} - ` +
+      `${analystOutput.length} characters of analyst output`,
+  );
+
+  const repair = repairMissingSeparator(analystOutput);
+
+  if (repair !== null) {
+    console.log(`[brief] ${label} repair: inserted one missing comma at ${repair.at}`);
+
+    analystOutput = repair.text;
+  }
+
+  const stream = streamText({
+    model: BRIEF_MODEL,
+
+    system: systemPrompt,
+
+    prompt: userPrompt,
+
+    // No `maxOutputTokens`, no tools, no `providerOptions`.
+    //
+    // A token ceiling is a target the model writes *toward* rather than headroom it
+    // needs - earlier runs finished at exactly their ceiling - and the provider
+    // enforces its own limit anyway. The `providerOptions` removed here were
+    // `{ groq: { reasoningEffort } }`, addressed to a provider no longer in the
+    // path; with them present that model returned a `reasoning` block and no text.
+  });
+
+  const startedAt = Date.now();
+
+  let received = 0;
+
+  // Fires even while the SDK is retrying, so a retry is never mistaken for a hang.
+  const heartbeat = setInterval(() => {
+    console.log(
+      `     [waiting] ${Math.round((Date.now() - startedAt) / 1000)}s elapsed, ` +
+        `${received} characters received`,
+    );
+  }, 10_000);
+
+  try {
+    for await (const delta of stream.textStream) {
+      received += delta.length;
+    }
+  } finally {
+    clearInterval(heartbeat);
+  }
+
+  const text = await stream.text;
+
+  const finishReason = await stream.finishReason;
+
+  const usage = await stream.usage;
+
+  const seconds = Math.round((Date.now() - startedAt) / 1000);
+
+  console.log(
+    `[brief] ${label} response: finishReason=${finishReason} text=${text.length} chars in ${seconds}s ` +
+      `input=${usage.inputTokens ?? "?"} output=${usage.outputTokens ?? "?"}`,
+  );
+
+  // Returns the JSON *text*, so it is parsed here. The prompts forbid fences and
+  // surrounding prose, and this tolerates both rather than discarding a good brief
+  // over formatting.
+  const jsonText = extractJsonObject(text);
+
+  if (jsonText === null) {
+    console.log(
+      `[brief] ${label} finalized for domain: ${domain} - no brief, no JSON object in the response`,
+    );
+
+    throw new Error(
+      `${label} returned no JSON object (finishReason=${finishReason}, ${text.length} characters).`,
+    );
+  }
+
+  console.log(
+    `[brief] ${label} finalized for domain: ${domain} - ` +
+      `${text.length} characters, ${(usage.outputTokens ?? 0).toLocaleString()} output tokens`,
+  );
+
+  return {
+    brief: JSON.parse(jsonText) as unknown,
+    text,
+    finishReason,
+    inputTokens: usage.inputTokens ?? null,
+    outputTokens: usage.outputTokens ?? null,
+    seconds,
+    repairedAt: repair?.at ?? null,
+  };
+};
 
 // --------------------------------------------------
 // The brief

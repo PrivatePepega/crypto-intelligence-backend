@@ -21,7 +21,7 @@ import { wabbleImportantHeadlineSearchTool } from "../tools/wabbleImportantHeadl
 import { webSearchTool } from "../tools/webSearchTool.js";
 import type { ObserverConfig } from "../weather/weather.config.js";
 import { encodingForModel, type Tiktoken } from "js-tiktoken";
-import { exposeCurrentData } from "../../utils/AI/currentDataExpose.js";
+import { exposeCurrentData } from "../../utils/AI/currentData testing area/currentDataExpose.js";
 
 // --------------------------------------------------
 // Agentic tooling

@@ -1,0 +1,20 @@
+{
+  "note": "maxrecords=250 (documented ceiling)",
+  "requestUrl": "https://api.gdeltproject.org/api/v2/doc/doc?query=bitcoin&mode=artlist&format=json&timespan=24h&maxrecords=250&sort=HybridRel",
+  "sent": {
+    "query": "bitcoin",
+    "mode": "artlist",
+    "format": "json",
+    "timespan": "24h",
+    "startdatetime": null,
+    "enddatetime": null,
+    "maxrecords": 250,
+    "sort": "HybridRel"
+  },
+  "requestedAt": "2026-10-11T01:23:58.187Z",
+  "status": 429,
+  "statusText": "Too Many Requests",
+  "elapsedMs": 7796,
+  "contentType": null,
+  "body": "Please limit requests to one every 5 seconds or contact kalev.leetaru5@gmail.com for larger queries. All high-traffic users should switch to our ngrams dataset: https://blog.gdeltproject.org/using-the-new-web-ngrams-dataset-to-find-relevant-coverage/. For trend analysis, please see our daily newsletter briefings: https://blog.gdeltproject.org/announcing-our-new-daily-todays-trends-on-capitol-hill-todays-media-trends-newsletter-briefings/.\n\n"
+}

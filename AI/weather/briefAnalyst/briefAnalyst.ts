@@ -1,34 +1,44 @@
 /**
  * Brief Analyst: turns a domain's researched observations into a daily brief.
  *
- * Two phases, same split as the Researcher and for the same reason: the analyst
- * needs tools to fill gaps, and the provider refuses tool calling combined with
- * JSON mode, so the call that analyses cannot also be schema-constrained. Phase one
- * analyses and returns JSON as text; phase two has no tools and normalizes it into
- * the brief schema.
+ * The single entry point for three agents, run as one process:
  *
- * Both phases are recorded into one run log at
- * `AI/data/Weather Brief Analyst/Weather Brief Analyst-NNN.json`, so the normalized
- * brief can be read beside the reasoning and tool calls that produced it.
+ * | phase | agent | does |
+ * |---|---|---|
+ * | one | the analyst | reads the day's research and observations, uses tools to fill gaps, returns JSON as text |
+ * | two | the human brief | rewrites that output as a readable publication |
+ * | three | the AI context brief | preserves the same day densely, for another agent to reason over |
+ *
+ * Phases two and three take the analyst's output **in memory**. Nothing is read
+ * back off disk between them: the run log records what the run produced, it is not
+ * an input to it. Reading it back would make a diagnostic artifact a production
+ * dependency and would mean paying for the analyst twice.
+ *
+ * The analyst needs tools, and the provider refuses tool calling combined with JSON
+ * mode, so the call that analyses cannot also be schema-constrained. It returns JSON
+ * as text. Neither brief is schema-constrained either - each prompt sets its own
+ * shape - and they are generated independently, so one failing does not discard the
+ * other.
+ *
+ * All three phases are recorded into one run log at
+ * `AI/data/Weather Brief Analyst/Weather Brief Analyst-NNN.json`, so the briefs can
+ * be read beside the reasoning and tool calls that produced them.
  *
  * Nothing is written to the database yet. The run log is currently the only output,
  * which is deliberate - these runs exist to see what the model produces before a
  * table is built around it.
  *
- *   npx tsx AI/weather/briefAnalyst/briefAnalyst.ts
+ * This module has no entry point of its own. Call `runBriefAnalyst` from the
+ * pipeline, which supplies the intelligence set and the domain.
  */
 
-import { Output, generateText, isStepCount } from "ai";
+import { generateText, isStepCount } from "ai";
 
-import path from "node:path";
 import { setTimeout as sleep } from "node:timers/promises";
-import { fileURLToPath } from "node:url";
-
-import pool from "../../../config/database.js";
 
 import { models } from "../../providers/model.js";
 
-import { observerConfigs, type ObserverConfig } from "../weather.config.js";
+import { type ObserverConfig } from "../weather.config.js";
 
 import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
 import {
@@ -40,21 +50,17 @@ import {
 import { fetchResearchForSet } from "../../utils/weather/dbFetcher.researcher.js";
 import { fetchObservationsForSet } from "../../utils/weather/dbFetcher.triage.js";
 import {
-  AGENT_NAME,
-  briefJsonSchema,
-  briefSchema,
+  type BriefGenerationResult,
   createBriefAnalystRunLog,
   logFormatterError,
   parseAnalystBrief,
-  parseBriefResult,
-  type DomainBrief,
 } from "../../utils/weather/briefAnalyst.js";
-import {
-  findDailySetByDate,
-  findDailySetById,
-  getDailySet,
-  type DailySet,
-} from "../../utils/weather/observations.js";
+import { type DailySet } from "../../utils/weather/observations.js";
+
+// The two briefs, generated from the analyst's output in this same run. Each file
+// holds only its own prompts; the generation they share is `generateBrief`.
+import { runAiContextBriefPhase } from "./aiContextBrief.js";
+import { runHumanBriefPhase } from "./humanBrief.js";
 
 // --------------------------------------------------
 // Sliders
@@ -65,13 +71,20 @@ import {
 // --------------------------------------------------
 
 /**
- * The model that analyses and formats.
+ * The model that analyses.
  *
- * Google by default. The free router was tried here and does not reliably honour
- * structured output, which is what phase two depends on entirely.
+ * Google for both phases. The OpenRouter free models were tried for the formatter
+ * and are unsuitable for it: `nvidia/nemotron-3-ultra` is a reasoning model that
+ * returns a `reasoning` block and no text under structured output, and the
+ * Cloudflare GLM route either never returns or takes minutes at a large token
+ * ceiling. Flash produces the brief and stops on its own.
+ *
+ * The briefs request no token ceiling at all. One is a target the model writes
+ * *toward* rather than headroom it needs - earlier runs finished at exactly their
+ * ceiling - and the provider enforces its own limit anyway.
  */
 const modelPick = models.openrouter;
-const modelPickFormatter = models.google;
+
 /**
  * Ceiling on the analyst's tool-calling steps.
  *
@@ -85,8 +98,9 @@ const MAX_AGENT_STEPS = 5;
 /** Ceiling on the analyst phase's output tokens. */
 const MAX_ANALYST_OUTPUT_TOKENS = 50_000;
 
-/** Ceiling on the formatter phase's output tokens. */
-const MAX_FORMATTER_OUTPUT_TOKENS = 30_000;
+// The briefs request no ceiling. One is a target the model writes *toward* rather
+// than headroom it needs - earlier runs finished at exactly their ceiling - and
+// the provider enforces its own limit anyway.
 
 /**
  * Reasoning effort for both phases.
@@ -151,68 +165,6 @@ const indicatorContextFor = async (
  * Same value as the other agents.
  */
 const STEP_DELAY_MS = 4_000;
-
-/**
- * Domain analysed when this file is run directly.
- *
- * A direct run has to name one: the brief is per domain, so there is no sensible
- * default. Change this, or call `runBriefAnalyst` from the pipeline instead.
- */
-const DIRECT_RUN_DOMAIN = observerConfigs.crypto;
-
-/**
- * Intelligence set analysed when this file is run directly. `null` means today's.
- *
- * Set an id or a date to analyse a day that is already researched. The brief is the
- * most expensive read-only stage in the pipeline, so re-running a stage above it
- * just to see a different brief costs the whole day's research again. Pointing
- * this at an earlier set re-reads what that day already has.
- *
- * Accepts either form - a set id, or a `YYYY-MM-DD` date - because a hardcoded id
- * stops meaning "yesterday" as soon as the calendar moves, while a date says what
- * is meant. An id that matches no set is an error rather than a silent fallback to
- * today, because quietly analysing a different day than the one asked for is worse
- * than failing.
- *
- * Ignored when this module is imported rather than run directly.
- */
-const DIRECT_RUN_SET: string | null = "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1";
-
-const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-
-/**
- * Resolves {@link DIRECT_RUN_SET} to a set, or today's when it is `null`.
- *
- * Used only by the direct-run entry point.
- */
-const resolveDirectRunSet = async (): Promise<DailySet> => {
-  if (DIRECT_RUN_SET === null) {
-    return await getDailySet();
-  }
-
-  const byId = UUID_PATTERN.test(DIRECT_RUN_SET);
-
-  const found = byId
-    ? await findDailySetById(DIRECT_RUN_SET)
-    : await findDailySetByDate(DIRECT_RUN_SET);
-
-  if (!found) {
-    throw new Error(
-      `No intelligence set found for "${DIRECT_RUN_SET}". ` +
-        `It must be a set id or a YYYY-MM-DD date that has a row in intelligence_sets.daily_sets.`,
-    );
-  }
-
-  return found;
-};
-
-/**
- * The domain identifier this agent runs under.
- *
- * Taken from the observer config rather than declared again, so a domain renamed
- * there cannot leave the brief writing a stale label.
- */
-const DOMAINS = Object.keys(observerConfigs) as (keyof typeof observerConfigs)[];
 
 // --------------------------------------------------
 // Prompts
@@ -622,116 +574,6 @@ Produce a structured brief with the following sections:
 - Use null for unavailable scalar values.
 - Return valid JSON only, matching the required output schema exactly.
 `;
-/** The formatter's role: normalize, never re-analyze. */
-const formatterSystemPrompt = `
-# Weather Brief Formatter
-
-## Role
-
-You are a formatting and normalization agent in a multi-stage intelligence pipeline.
-
-Your sole responsibility is to convert the output of a Weather Domain Brief Analyst into the required structured JSON representation.
-
-You do not perform research or create new analysis. The analyst's output is the source of truth for the brief's content.
-
-## Objectives
-
-1. Produce valid JSON conforming to the supplied output schema.
-2. Normalize field names, types, and collection structures.
-3. Preserve the complete analytical meaning of the input.
-4. Preserve important numbers, dates, units, identifiers, evidence references, uncertainties, and confidence assessments.
-5. Ensure the output is consistent and suitable for deterministic application-level validation.
-
-## Faithful preservation
-
-You must not:
-- Introduce new facts, metrics, events, interpretations, or causal claims.
-- Strengthen or weaken the analyst's conclusions.
-- Change importance or confidence assessments.
-- Silently correct questionable dates or numerical values.
-- Remove meaningful contradictions or uncertainty.
-- Invent missing sources, identifiers, values, or evidence.
-- Discard important information merely to shorten the output.
-- Reinterpret the evidence or conduct another round of analysis.
-
-You may normalize formatting, whitespace, field names, and data types where the schema explicitly permits it.
-
-You may remove exact duplicate content only when doing so cannot remove distinct evidence references or meaningful context.
-
-If the input contains a potential factual inconsistency, preserve it in the appropriate field rather than deciding which version is correct.
-
-## Schema compliance
-
-The invocation provides the required schema.
-
-Follow it exactly:
-- Include all required fields.
-- Use the prescribed field names and value types.
-- Represent missing nullable scalar values as \`null\`.
-- Represent empty collection fields as empty arrays.
-- Preserve allowed enum values.
-- Do not add undocumented fields unless the schema explicitly permits additional properties.
-- Preserve supplied identifiers exactly.
-
-Do not confuse a missing value with zero, false, or an empty string.
-
-## Handling malformed or incomplete input
-
-If the analyst's output is valid JSON, normalize it to the schema.
-
-If the input is not valid JSON but its intended content and structure are unambiguous, reconstruct the JSON faithfully.
-
-If a field is missing, use the schema's documented default where applicable. Do not fabricate content to fill a field.
-
-If the input contains conflicting values, preserve the conflict when the schema supports it. Do not arbitrarily choose one value.
-
-If the input is fundamentally unusable, return the application's specified structured error format rather than fabricating a successful brief.
-
-## Final requirements
-
-Return exactly one JSON object conforming to the supplied schema.
-
-Do not include Markdown fences, explanations, status messages, or commentary outside the JSON.
-
-The application will perform final validation. Never claim that validation has succeeded unless the application explicitly provides that result.
-`;
-
-/** The formatter's per-run instructions: the schema, and the analyst's output. */
-const formatterPrompt = (
-  intelligenceSet: DailySet,
-  config: ObserverConfig,
-  analystOutput: string,
-): string => `
-# Normalize Weather Domain Brief
-
-## Intelligence metadata
-
-- Intelligence set ID: \`${intelligenceSet.id}\`
-- Intelligence date: \`${intelligenceSet.set_date}\`
-- Domain ID: \`${config.domain}\`
-
-## Required output schema
-
-The following schema defines the exact JSON structure required by the application.
-
-${briefJsonSchema()}
-
-## Analyst output
-
-The following is the result produced by the Weather Domain Brief Analyst. Preserve its meaning and evidence.
-
-${analystOutput}
-
-## Task
-
-Normalize the analyst output to the supplied schema.
-
-Preserve all material findings, metrics, dates, units, evidence references, uncertainties, and confidence assessments. Ensure field names and types match the schema, use empty arrays for empty collections, and use \`null\` for unavailable nullable scalar values.
-
-Do not conduct research, create new conclusions, reinterpret the evidence, or silently correct inconsistencies.
-
-Return exactly one valid JSON object and nothing else.
-`;
 
 // --------------------------------------------------
 // Run
@@ -745,18 +587,25 @@ export type BriefAnalystOutcome = {
   researchSupplied: number;
   /** Indicator tokens in the analyst's context. */
   contextTokens: number;
-  /** The normalized brief, or `null` when the run failed. */
-  brief: DomainBrief | null;
   /** Whether the analyst phase produced parseable JSON. */
   analystParsed: boolean;
-  /** How the brief was produced, for the run log. */
-  formatterSource: string | null;
+  /**
+   * The finished human brief, or `null` when that brief failed.
+   *
+   * `unknown` rather than a schema type: the editor prompt deliberately leaves the
+   * shape to the model, so there is no contract to type it against yet. Tighten
+   * this once the shape settles across runs.
+   */
+  humanBrief: unknown;
+  /**
+   * The machine-readable intelligence context, or `null` when that brief failed.
+   *
+   * `unknown` for the same reason as {@link BriefAnalystOutcome.humanBrief}, and
+   * independently: the two briefs are produced by separate prompts and may be
+   * shaped differently.
+   */
+  aiContextBrief: unknown;
 };
-
-const isDirectRun =
-  process.argv[1] !== undefined &&
-  process.argv[0] !== undefined &&
-  path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
 
 /**
  * Produces one domain's brief for one intelligence set.
@@ -770,6 +619,10 @@ const isDirectRun =
  * Skips the model entirely when the domain has no researched observations. A brief
  * with no research to synthesize is an empty document, and generating one costs a
  * request.
+ *
+ * Runs all three agents and returns both briefs. Either may be `null` without
+ * failing the run: they answer different questions, so one being lost should not
+ * cost the other.
  *
  * The run log is written whatever happens, so a failed run still leaves the
  * analyst's reasoning and its raw output behind.
@@ -967,9 +820,9 @@ ${row.research}
       intelligenceSetId: intelligenceSet.id,
       researchSupplied: 0,
       contextTokens,
-      brief: null,
       analystParsed: false,
-      formatterSource: null,
+      humanBrief: null,
+      aiContextBrief: null,
     };
   }
 
@@ -1071,144 +924,119 @@ ${row.research}
     await sleep(STEP_DELAY_MS);
   }
 
+  // Phases two and three: the briefs
   // --------------------------------------------------
-  // Phase two: normalize
-  // --------------------------------------------------
 
-  // No tools, so structured output is available and the schema is enforced by the
-  // SDK rather than by the model choosing sensible key names.
-  let brief: DomainBrief | null = null;
-  let formatterSource: string | null = null;
+  // Both briefs are generated from `analystJson` here, in this same process. The
+  // run log is a record of what the run produced, never an input to it - reading
+  // the analyst's output back out of the JSON to feed a brief would make a
+  // diagnostic artifact a production dependency, and would mean paying for the
+  // analyst twice.
+  //
+  // Neither brief is schema-constrained, and neither shape is declared here: each
+  // prompt sets its own. `Output.object` was tried and removed - it made the SDK
+  // throw outright on a schema mismatch, discarding the response instead of falling
+  // back to its text.
+  //
+  // A failure is confined to its own brief. The two answer different questions
+  // about the same day, so losing one must not discard the other, and neither is
+  // worth failing the run over.
+  const produced = new Map<string, BriefGenerationResult>();
 
-  // The formatter's prompt, assembled before the call so the failure log can report
-  // its size and the run log can record it verbatim.
-  const formatterDevPrompt = formatterPrompt(intelligenceSet, config, analystJson);
+  const briefs = [
+    { key: "human_brief", label: "Human brief", run: runHumanBriefPhase },
+    { key: "ai_context_brief", label: "AI context brief", run: runAiContextBriefPhase },
+  ];
 
-  try {
-    const formatterResult = await generateText({
-      model: modelPickFormatter,
+  for (const { key, label, run } of briefs) {
+    try {
+      const result = await run(analystJson, config.domain);
 
-      instructions: formatterSystemPrompt,
+      produced.set(key, result);
 
-      prompt: formatterDevPrompt,
+      // The raw text as well as the parsed brief: the prompts forbid fences and
+      // commentary, so a parse failure means something unexpected is in here.
+      await runLog.record(`${key}_output`, {
+        finishReason: result.finishReason,
+        characters: result.text.length,
+        seconds: result.seconds,
+        inputTokens: result.inputTokens,
+        outputTokens: result.outputTokens,
 
-      maxOutputTokens: MAX_FORMATTER_OUTPUT_TOKENS,
+        // Where the analyst input needed the comma repair, so a brief built on a
+        // repaired input is never mistaken for one built on the original.
+        repairedAnalystJsonAt: result.repairedAt,
 
-      providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+        text: result.text,
+      });
 
-      output: Output.object({
-        schema: briefSchema,
-        name: "weather_domain_brief",
-        description:
-          "A normalized daily intelligence brief for one domain and intelligence period: an assessment, its key developments, significant metrics, trends and tensions, upcoming catalysts, uncertainties and data-quality issues, and coverage notes.",
-      }),
-    });
+      await runLog.record(key, { briefSource: "text (parsed)", brief: result.brief });
 
-    // Preferred when the provider honoured structured output; the text parse is the
-    // fallback. Which one ran is recorded so a fallback brief is never mistaken for
-    // a schema-validated one.
-    const structured = formatterResult.output as DomainBrief | undefined;
+      console.log(
+        `[brief] ${label} recorded for domain: ${config.domain} ` +
+          `(${result.text.length} characters)`,
+      );
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
 
-    if (structured) {
-      brief = structured;
-      formatterSource = "output (schema-validated)";
-    } else {
-      brief = parseBriefResult(formatterResult.text);
-      formatterSource = "text (fallback)";
+      // Full diagnostic to the terminal, including the error's `cause`.
+      logFormatterError(error, {
+        domain: config.domain,
+        intelligenceSetId: intelligenceSet.id,
+        intelligenceDate: intelligenceSet.set_date,
+        stage: key,
+        analystParsed,
+        analystFinishReason,
+        analystCharacters: analystText.length,
+      });
+
+      await runLog.record(`${key}_failure`, {
+        error: message,
+        name: error instanceof Error ? error.name : typeof error,
+        cause:
+          error instanceof Error && error.cause instanceof Error
+            ? { name: error.cause.name, message: error.cause.message }
+            : error instanceof Error
+              ? (error.cause ?? null)
+              : null,
+        analystParsed,
+        analystCharacters: analystText.length,
+        analystFinishReason,
+      });
+
+      // Not rethrown: the analyst's output and the other brief are already in the
+      // log, and these runs exist to see what came back.
+      console.log(
+        `[brief] ${label} failed for domain: ${config.domain} - ${message.slice(0, 120)}`,
+      );
     }
 
-    await runLog.record("formatter_output", {
-      finishReason: formatterResult.finishReason,
-
-      characters: formatterResult.text.length,
-
-      inputTokens: formatterResult.usage.inputTokens ?? null,
-
-      outputTokens: formatterResult.usage.outputTokens ?? null,
-
-      text: formatterResult.text,
-    });
-
-    await runLog.record("brief", { formatterSource, brief });
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-
-    // Full diagnostic to the terminal, including the error's `cause` - which for a
-    // structured-output failure is where the provider's actual complaint lives.
-    logFormatterError(error, {
-      domain: config.domain,
-      intelligenceSetId: intelligenceSet.id,
-      intelligenceDate: intelligenceSet.set_date,
-      stage: "formatter",
-      model: modelIdOf(modelPick),
-      analystParsed,
-      analystFinishReason,
-      formatterPromptCharacters: formatterDevPrompt.length,
-    });
-
-    await runLog.record("formatter_failure", {
-      error: message,
-
-      name: error instanceof Error ? error.name : typeof error,
-
-      cause:
-        error instanceof Error && error.cause instanceof Error
-          ? { name: error.cause.name, message: error.cause.message }
-          : error instanceof Error
-            ? (error.cause ?? null)
-            : null,
-
-      analystParsed,
-
-      analystCharacters: analystText.length,
-
-      analystFinishReason,
-
-      formatterPromptCharacters: formatterDevPrompt.length,
-    });
-
-    // Not rethrown. The analyst's output is already in the log, and these are test
-    // runs whose purpose is to see what came back - throwing would discard the
-    // formatter's response and stop the caller learning anything from the run.
-    await runLog.finish();
-    await runLog.record("summary", {
-      domain: config.domain,
-      briefProduced: false,
-      analystParsed,
-      error: message,
-    });
-
-    console.log(
-      `[brief] Brief analyst finalized for domain: ${config.domain} - ` +
-        `no brief, ${message.slice(0, 120)}`,
-    );
-
-    return {
-      domain: config.domain,
-      date: intelligenceSet.set_date,
-      intelligenceSetId: intelligenceSet.id,
-      researchSupplied: storedResearch.length,
-      contextTokens,
-      brief: null,
-      analystParsed,
-      formatterSource: null,
-    };
+    // Space consecutive requests to the same provider.
+    if (STEP_DELAY_MS > 0) {
+      await sleep(STEP_DELAY_MS);
+    }
   }
+
+  const humanBrief = produced.get("human_brief") ?? null;
+  const aiContextBrief = produced.get("ai_context_brief") ?? null;
 
   await runLog.finish();
 
   await runLog.record("summary", {
     domain: config.domain,
-    briefProduced: true,
     analystParsed,
-    formatterSource,
     researchSupplied: storedResearch.length,
+    briefs: {
+      human_brief: humanBrief !== null,
+      ai_context_brief: aiContextBrief !== null,
+    },
   });
 
   console.log(
     `[brief] Brief analyst finalized for domain: ${config.domain} - ` +
       `${storedResearch.length} research record(s), ${contextTokens} context tokens, ` +
-      `${brief === null ? "no brief" : `brief produced (${formatterSource})`}`,
+      `human brief: ${humanBrief === null ? "failed" : "produced"}, ` +
+      `AI context brief: ${aiContextBrief === null ? "failed" : "produced"}`,
   );
 
   return {
@@ -1217,30 +1045,8 @@ ${row.research}
     intelligenceSetId: intelligenceSet.id,
     researchSupplied: storedResearch.length,
     contextTokens,
-    brief,
     analystParsed,
-    formatterSource,
+    humanBrief: humanBrief?.brief ?? null,
+    aiContextBrief: aiContextBrief?.brief ?? null,
   };
 };
-
-if (isDirectRun) {
-  resolveDirectRunSet()
-    .then((intelligenceSet) => runBriefAnalyst(intelligenceSet, DIRECT_RUN_DOMAIN))
-    .then((outcome) => {
-      const status = outcome.brief ? `brief produced (${outcome.formatterSource})` : "no brief";
-
-      console.log(
-        `[brief] ${outcome.domain} ${outcome.date} (set ${outcome.intelligenceSetId}): ` +
-          `${outcome.researchSupplied} research record(s), ` +
-          `${outcome.contextTokens} context tokens - ${status}`,
-      );
-    })
-    .catch((error: unknown) => {
-      console.error("Brief analyst failed:", error);
-      process.exitCode = 1;
-    })
-    .finally(() => pool.end());
-}
-
-/** Domains this agent can run under, for the pipeline. */
-export const briefAnalystDomains = DOMAINS;

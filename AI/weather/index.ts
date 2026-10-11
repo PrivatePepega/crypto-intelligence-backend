@@ -9,7 +9,10 @@ import { runObserver } from "./observer/observer.js";
 import { findDailySetById, getDailySet, type DailySet } from "../utils/weather/observations.js";
 import { runTriage } from "./triage/triage.js";
 import { runResearcher } from "./researcher/researcher.js";
+
+
 import { runBriefAnalyst } from "./briefAnalyst/briefAnalyst.js";
+
 
 export async function runWeather(): Promise<void> {
   const intelligenceSet = await getDailySet();
@@ -27,8 +30,7 @@ export async function runWeather(): Promise<void> {
       ? intelligenceSet
       : ((await findDailySetById(briefSetId)) ?? intelligenceSet);
 
-
-  await runBriefAnalyst(briefSet, cryptoDomain);
+  await runBriefAnalyst(briefSet, cryptoDomain)
 }
 
 const isDirectRun =

@@ -1,0 +1,9 @@
+{
+  "note": "Exact publisher domain: domainis:reuters.com",
+  "params": {
+    "query": "bitcoin domainis:reuters.com"
+  },
+  "requestedAt": "2026-10-11T01:20:44.558Z",
+  "status": 0,
+  "error": "GDELT request failed: fetch failed"
+}
