@@ -82,7 +82,7 @@ const STEP_DELAY_MS = 4_000;
  * The AI SDK's own `stepCount` stops condition. Research is one question, so this
  * bounds how far the agent may wander gathering evidence.
  */
-const MAX_AGENT_STEPS = 2;
+const MAX_AGENT_STEPS = 3;
 
 /**
  * Ceiling on one research run's output tokens.

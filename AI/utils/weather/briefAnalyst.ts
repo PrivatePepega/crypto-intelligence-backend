@@ -1,7 +1,7 @@
-import { streamText } from "ai";
+import { isStepCount, streamText, type LanguageModel } from "ai";
 import { z } from "zod";
 
-import { models } from "../../providers/model.js";
+import { modelIdOf } from "../agent.js";
 
 import {
   AGENT_RUN_LOG_DIR,
@@ -151,15 +151,45 @@ export const repairMissingSeparator = (
 // --------------------------------------------------
 
 /**
- * The model every brief is generated with.
+ * One brief's knobs.
  *
- * Google. The OpenRouter free models were tried for this and are unsuitable:
- * `nvidia/nemotron-3-ultra` is a reasoning model that returned a `reasoning` block
- * and no text under structured output, and the Cloudflare GLM route either never
- * returns or takes minutes at a large token ceiling. Flash produces the brief and
- * stops on its own.
+ * Declared by the caller, not here, so each agent's slider panel is its own code and
+ * the two briefs can differ. `generateBrief` only carries them out.
  */
-const BRIEF_MODEL = models.google;
+export type BriefSliders = {
+  /** The model that writes this brief. */
+  model: LanguageModel;
+
+  /**
+   * Ceiling on model steps.
+   *
+   * The briefs carry no tools, so a run is a single step and this never bites. It is
+   * still wired up so the knob means the same thing as the analyst's step ceiling, and
+   * so it starts working the moment a tool is added to a brief.
+   */
+  maxSteps: number;
+
+  /**
+   * Ceiling on output tokens, or `undefined` for none.
+   *
+   * `undefined` is the default for both briefs and should stay that way. A ceiling is
+   * a target the model writes *toward* rather than headroom it needs: earlier runs
+   * finished at exactly their ceiling, producing briefs cut off mid-sentence.
+   */
+  maxOutputTokens: number | undefined;
+
+  /**
+   * Reasoning effort, and the provider it is addressed to. `undefined` sends no
+   * reasoning option at all.
+   *
+   * Provider-specific by nature - the SDK has no cross-provider reasoning-effort
+   * option, only `providerOptions` keyed by provider name - so the slider names both.
+   * Setting one for a provider that is not in the path is not a harmless no-op: it
+   * was previously sent as `{ groq: { reasoningEffort } }` to a non-Groq provider and
+   * that model then returned a `reasoning` block and no text at all.
+   */
+  reasoningEffort: { provider: string; effort: "low" | "medium" | "high" } | undefined;
+};
 
 /** What one brief generation produced. */
 export type BriefGenerationResult = {
@@ -174,6 +204,16 @@ export type BriefGenerationResult = {
   outputTokens: number | null;
   seconds: number;
 
+  /**
+   * The sliders this run actually used.
+   *
+   * Recorded so a brief in a run log can be traced to the settings that produced it,
+   * rather than to whatever those settings happen to be today.
+   */
+  model: string;
+  maxOutputTokens: number | null;
+  reasoningEffort: string | null;
+
   /** Where the analyst input needed the comma repair, or `null` when it did not. */
   repairedAt: number | null;
 };
@@ -184,50 +224,78 @@ export type BriefGenerationResult = {
  * Writes nothing. Recording the result is the caller's job, because each brief is
  * recorded under its own sections of the one run log.
  *
- * @param analystOutput The analyst's response. Repaired here when it is one dropped
- *   comma away from valid JSON, so the brief model is handed something it can edit
- *   rather than spend its budget recovering.
- * @param domain Reported in the lifecycle lines so the output names the right domain.
- * @param label Names this brief in the lifecycle lines, e.g. `Human brief`.
- * @param systemPrompt The brief's editorial or synthesis instructions.
- * @param userPrompt Built from the same analyst output.
  * @throws When the response contains no JSON object. The text is in the run log
  *   either way, so a failed brief is still diagnosable.
  */
-export const generateBrief = async (
-  analystOutput: string,
-  domain: string,
-  label: string,
-  systemPrompt: string,
-  userPrompt: string,
-): Promise<BriefGenerationResult> => {
+export const generateBrief = async (options: {
+  /** The analyst's response. Repaired here when it is one dropped comma away from
+   *  valid JSON, so the brief model is handed something it can edit rather than spend
+   *  its budget recovering. */
+  analystOutput: string;
+
+  /** Reported in the lifecycle lines so the output names the right domain. */
+  domain: string;
+
+  /** Names this brief in the lifecycle lines, e.g. `Human brief`. */
+  label: string;
+
+  /** The brief's editorial or synthesis instructions. */
+  systemPrompt: string;
+
+  /** Built from the same analyst output. */
+  userPrompt: string;
+
+  /** The model, step ceiling, token ceiling and reasoning effort to use. */
+  sliders: BriefSliders;
+}): Promise<BriefGenerationResult> => {
+  const { analystOutput, domain, label, systemPrompt, userPrompt, sliders } = options;
+
   console.log(
     `[brief] ${label} initialized for domain: ${domain} - ` +
-      `${analystOutput.length} characters of analyst output`,
+      `${analystOutput.length} characters of analyst output, ` +
+      `model=${modelIdOf(sliders.model)} ` +
+      `maxSteps=${sliders.maxSteps} ` +
+      `maxOutputTokens=${sliders.maxOutputTokens ?? "none"} ` +
+      `reasoningEffort=${
+        sliders.reasoningEffort
+          ? `${sliders.reasoningEffort.provider}/${sliders.reasoningEffort.effort}`
+          : "none"
+      }`,
   );
 
   const repair = repairMissingSeparator(analystOutput);
 
+  let input = analystOutput;
+
   if (repair !== null) {
     console.log(`[brief] ${label} repair: inserted one missing comma at ${repair.at}`);
 
-    analystOutput = repair.text;
+    input = repair.text;
   }
 
   const stream = streamText({
-    model: BRIEF_MODEL,
+    model: sliders.model,
 
     system: systemPrompt,
 
     prompt: userPrompt,
 
-    // No `maxOutputTokens`, no tools, no `providerOptions`.
-    //
-    // A token ceiling is a target the model writes *toward* rather than headroom it
-    // needs - earlier runs finished at exactly their ceiling - and the provider
-    // enforces its own limit anyway. The `providerOptions` removed here were
-    // `{ groq: { reasoningEffort } }`, addressed to a provider no longer in the
-    // path; with them present that model returned a `reasoning` block and no text.
+    // Inert without tools, but wired so the knob is real rather than decorative.
+    stopWhen: isStepCount(sliders.maxSteps),
+
+    // Spread rather than passed as `undefined`: the project compiles with
+    // `exactOptionalPropertyTypes`, which distinguishes "absent" from "explicitly
+    // undefined". Omitting the key is what actually leaves the option off.
+    ...(sliders.maxOutputTokens === undefined ? {} : { maxOutputTokens: sliders.maxOutputTokens }),
+    ...(sliders.reasoningEffort === undefined
+      ? {}
+      : {
+          providerOptions: {
+            [sliders.reasoningEffort.provider]: {
+              reasoningEffort: sliders.reasoningEffort.effort,
+            },
+          },
+        }),
   });
 
   const startedAt = Date.now();
@@ -290,10 +358,14 @@ export const generateBrief = async (
     inputTokens: usage.inputTokens ?? null,
     outputTokens: usage.outputTokens ?? null,
     seconds,
+    model: modelIdOf(sliders.model),
+    maxOutputTokens: sliders.maxOutputTokens ?? null,
+    reasoningEffort: sliders.reasoningEffort
+      ? `${sliders.reasoningEffort.provider}/${sliders.reasoningEffort.effort}`
+      : null,
     repairedAt: repair?.at ?? null,
   };
 };
-
 // --------------------------------------------------
 // The brief
 // --------------------------------------------------

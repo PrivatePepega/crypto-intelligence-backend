@@ -51,6 +51,7 @@ import { fetchResearchForSet } from "../../utils/weather/dbFetcher.researcher.js
 import { fetchObservationsForSet } from "../../utils/weather/dbFetcher.triage.js";
 import {
   type BriefGenerationResult,
+  type BriefSliders,
   createBriefAnalystRunLog,
   logFormatterError,
   parseAnalystBrief,
@@ -62,68 +63,7 @@ import { type DailySet } from "../../utils/weather/observations.js";
 import { runAiContextBriefPhase } from "./aiContextBrief.js";
 import { runHumanBriefPhase } from "./humanBrief.js";
 
-// --------------------------------------------------
-// Sliders
-// --------------------------------------------------
-//
-// Everything worth changing between test runs. Each carries the reason it is set
-// where it is, because a slider without a reason is a slider nobody dares move.
-// --------------------------------------------------
 
-/**
- * The model that analyses.
- *
- * Google for both phases. The OpenRouter free models were tried for the formatter
- * and are unsuitable for it: `nvidia/nemotron-3-ultra` is a reasoning model that
- * returns a `reasoning` block and no text under structured output, and the
- * Cloudflare GLM route either never returns or takes minutes at a large token
- * ceiling. Flash produces the brief and stops on its own.
- *
- * The briefs request no token ceiling at all. One is a target the model writes
- * *toward* rather than headroom it needs - earlier runs finished at exactly their
- * ceiling - and the provider enforces its own limit anyway.
- */
-const modelPick = models.openrouter;
-
-/**
- * Ceiling on the analyst's tool-calling steps.
- *
- * The analyst's inputs are the research records and the indicator data, so tools
- * are for filling a specific gap rather than for discovery - the Researcher
- * already did the searching. Kept low so a brief cannot become a second research
- * pass.
- */
-const MAX_AGENT_STEPS = 5;
-
-/** Ceiling on the analyst phase's output tokens. */
-const MAX_ANALYST_OUTPUT_TOKENS = 50_000;
-
-// The briefs request no ceiling. One is a target the model writes *toward* rather
-// than headroom it needs - earlier runs finished at exactly their ceiling - and
-// the provider enforces its own limit anyway.
-
-/**
- * Reasoning effort for both phases.
- *
- * `medium`: the analyst is judging significance, reconciling evidence and
- * deciding what is contradictory, which is where reasoning earns its cost. The
- * formatter is mechanical but still weighs what to preserve.
- */
-const REASONING_EFFORT = "medium" as const;
-
-/**
- * Tools available to the analyst.
- *
- * Named rather than bundled wholesale. A brief that can search is a brief that
- * quietly becomes research, and the tools it does have are for checking a specific
- * claim the supplied evidence raises a question about.
- */
-const ANALYST_TOOLS = [
-  // "webSearchTool",
-  // "currentsNewsSearch",
-  // "newsflashSearchArticles",
-  // "marketauxNewsSearch",
-] as const;
 
 /**
  * How much indicator data the analyst is given.
@@ -158,13 +98,84 @@ const indicatorContextFor = async (
   scope === "all" ? await getFullAgenticContext(config) : await getAgenticContext(config);
 
 /**
- * Pause between phases, in milliseconds.
+ * Pause between phases, in milliseconds. `0` disables it.
  *
- * The formatter is a separate request to the same provider immediately after the
- * analyst's last one, so the pause keeps the pair from landing back to back.
- * Same value as the other agents.
+ * Shared by all three agents, so it is stated once rather than per brief. Every
+ * phase is a separate request to the same provider, and the pause keeps them from
+ * landing back to back - the analyst's last one before each brief, and between the
+ * two briefs. Same value as the other agents in the pipeline.
  */
 const STEP_DELAY_MS = 4_000;
+
+
+
+const modelPick = models.openrouter;
+const MAX_AGENT_STEPS = 5;
+const MAX_ANALYST_OUTPUT_TOKENS = 50_000;
+const REASONING_EFFORT = "medium" as const;
+
+const ANALYST_TOOLS = [
+  // "webSearchTool",
+  // "currentsNewsSearch",
+  // "newsflashSearchArticles",
+  // "marketauxNewsSearch",
+] as const;
+/**
+ * Ceiling on model steps.
+ *
+ * The briefs carry no tools, so a run is one step and this never bites. Wired
+ * anyway, so the knob means the same thing as the analyst's and starts working the
+ * moment a tool is added to a brief.
+ */
+const HUMAN_BRIEF_MAX_STEPS = 1;
+const HUMAN_MAX__OUTPUT_TOKENS = 30_000;
+
+const AI_BRIEF_MAX_STEPS = 1;
+const AI_MAX__OUTPUT_TOKENS = 40_000;
+
+// const HUMAN_BRIEF_MAX_OUTPUT_TOKENS = 30_000;
+//
+//   Off, and leave it off. A ceiling is a target the model writes *toward* rather
+//   than headroom it needs: earlier runs finished at exactly their ceiling, producing
+//   briefs cut off mid-sentence. Set a number only to test truncation deliberately.
+
+// const HUMAN_BRIEF_REASONING_EFFORT = { provider: "groq", effort: "high" };
+//
+//   Off, and leave it off. Reasoning effort is provider-specific - the SDK has no
+//   cross-provider option, only `providerOptions` keyed by provider name - so the
+//   slider takes both together. Sending Groq's setting to Google is not a harmless
+//   no-op: it was previously sent as `{ groq: { reasoningEffort } }` to a non-Groq
+//   provider and the model then returned a `reasoning` block and zero text.
+
+/** The human brief's knobs, as `generateBrief` takes them. */
+const HUMAN_BRIEF_SLIDERS: BriefSliders = {
+  model: models.google,
+  maxSteps: HUMAN_BRIEF_MAX_STEPS,
+  maxOutputTokens: HUMAN_MAX__OUTPUT_TOKENS,
+  reasoningEffort: undefined,
+};
+
+// ---- AI Context Brief -------------------------------------------------
+//
+// Phase three: preserves the same day densely, for another agent to reason over.
+// Same four knobs as the human brief, and independently set - changing one here
+// leaves the human brief alone.
+
+// const AI_CONTEXT_BRIEF_MODEL = models.google;
+// const AI_CONTEXT_BRIEF_MAX_STEPS = 1;
+// const AI_CONTEXT_BRIEF_MAX_OUTPUT_TOKENS = 30_000;
+// const AI_CONTEXT_BRIEF_REASONING_EFFORT = { provider: "groq", effort: "high" };
+//
+//   Every note above applies unchanged. The only thing that differs between the two
+//   briefs is the prompt; see `aiContextBrief.ts`.
+
+/** The AI context brief's knobs, as `generateBrief` takes them. */
+const AI_CONTEXT_BRIEF_SLIDERS: BriefSliders = {
+  model: models.google,
+  maxSteps: AI_BRIEF_MAX_STEPS,
+  maxOutputTokens: AI_MAX__OUTPUT_TOKENS,
+  reasoningEffort: undefined,
+};
 
 // --------------------------------------------------
 // Prompts
@@ -944,13 +955,23 @@ ${row.research}
   const produced = new Map<string, BriefGenerationResult>();
 
   const briefs = [
-    { key: "human_brief", label: "Human brief", run: runHumanBriefPhase },
-    { key: "ai_context_brief", label: "AI context brief", run: runAiContextBriefPhase },
+    {
+      key: "human_brief",
+      label: "Human brief",
+      run: runHumanBriefPhase,
+      sliders: HUMAN_BRIEF_SLIDERS,
+    },
+    {
+      key: "ai_context_brief",
+      label: "AI context brief",
+      run: runAiContextBriefPhase,
+      sliders: AI_CONTEXT_BRIEF_SLIDERS,
+    },
   ];
 
-  for (const { key, label, run } of briefs) {
+  for (const { key, label, run, sliders } of briefs) {
     try {
-      const result = await run(analystJson, config.domain);
+      const result = await run(analystJson, config.domain, sliders);
 
       produced.set(key, result);
 

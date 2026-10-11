@@ -1,4 +1,8 @@
-import { generateBrief, type BriefGenerationResult } from "../../utils/weather/briefAnalyst.js";
+import {
+  generateBrief,
+  type BriefGenerationResult,
+  type BriefSliders,
+} from "../../utils/weather/briefAnalyst.js";
 
 /**
  * The **human brief** - the agent's phase two, on its own.
@@ -78,15 +82,23 @@ Return the completed brief using the JSON output contract defined in your system
 Brief Analyst output
 ${analystOutput}`;
 
-/** Generates the human brief from an analyst output, without recording anything. */
+/**
+ * Generates the human brief from an analyst output, without recording anything.
+ *
+ * Takes the analyst's output and this agent's sliders rather than reading either from
+ * disk, so the whole run stays in one process and the knobs live with the agent that
+ * owns them.
+ */
 export const runHumanBriefPhase = async (
   analystOutput: string,
   domain: string,
+  sliders: BriefSliders,
 ): Promise<BriefGenerationResult> =>
-  generateBrief(
+  generateBrief({
     analystOutput,
     domain,
-    LABEL,
-    humanBriefSystemPrompt,
-    humanBriefPrompt(analystOutput),
-  );
+    label: LABEL,
+    systemPrompt: humanBriefSystemPrompt,
+    userPrompt: humanBriefPrompt(analystOutput),
+    sliders,
+  });
