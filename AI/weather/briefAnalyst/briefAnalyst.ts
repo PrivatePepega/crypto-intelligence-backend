@@ -112,6 +112,7 @@ const ANALYST_TOOLS = [
   // "newsflashSearchArticles",
   // "marketauxNewsSearch",
 ] as const;
+
 const modelPick = models.openrouter;
 const MAX_AGENT_STEPS = 3;
 const MAX_ANALYST_OUTPUT_TOKENS = 80_000;
