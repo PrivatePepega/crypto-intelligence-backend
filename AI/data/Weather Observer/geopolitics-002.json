@@ -1,0 +1,1554 @@
+{
+  "agentName": "Weather Observer",
+  "domain": "geopolitics",
+  "runNumber": 2,
+  "file": "AI/data/Weather Observer/geopolitics-002.json",
+  "startedAt": "2026-10-13T21:07:43.364Z",
+  "updatedAt": "2026-10-13T21:07:57.452Z",
+  "entryCount": 2,
+  "entries": [
+    {
+      "sequence": 1,
+      "section": "initializer",
+      "at": "2026-10-13T21:07:57.450Z",
+      "data": {
+        "domain": "geopolitics",
+        "objective": "Observe major geopolitical, political, diplomatic, and China-related developments and identify meaningful events or changes happening today.",
+        "categories": [
+          "Geopolitics",
+          "US Politics",
+          "Trump / US Administration",
+          "China",
+          "Wars and Conflicts",
+          "Diplomacy",
+          "Sanctions and Trade",
+          "Energy and Shipping"
+        ],
+        "configuredTools": [
+          "cvBreaking",
+          "newsflashGetEvents",
+          "currentsNewsSearch",
+          "wabbleImportantHeadlineSearch",
+          "marketauxNewsSearch",
+          "newsflashSearchArticles",
+          "newsDataLatestNews",
+          "webSearchTool"
+        ],
+        "maxSteps": 5,
+        "model": "openrouter/free",
+        "initialContextTokens": 22768,
+        "initialContextTokenization": "Estimated with the local gpt-4o tokenizer; foundational context only.",
+        "instructionsCharacters": 100937,
+        "finalInstructionsCharacters": 0,
+        "contextCharacters": 95460,
+        "context": {
+          "domain": "geopolitics",
+          "foundationalData": [
+            {
+              "indicatorId": "SP500",
+              "indicator": {
+                "name": "S&P 500",
+                "description": "A market-capitalization-weighted index of 500 leading publicly traded U.S. companies across major industries, representing a broad measure of the large-cap U.S. equity market. The series is reported as a daily closing index value and is not seasonally adjusted.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, Close",
+                "unit": "Index",
+                "use": "Monitor broad U.S. equity-market performance and assess changes in investor risk appetite, financial conditions, market expectations, and the valuation of large-cap U.S. companies.",
+                "purpose": "Provide a broad benchmark for U.S. large-cap equity markets for analyzing financial-market conditions, risk sentiment, economic expectations, and relationships between equity markets and macroeconomic indicators.",
+                "significance": "The S&P 500 is a widely followed benchmark for the U.S. large-cap equity market. Changes in the index provide information about equity-market performance and investor expectations and can help contextualize broader financial conditions and risk sentiment. The series is a price index and does not include dividends or represent total return."
+              },
+              "data": [
+                {
+                  "indicator": "sp500",
+                  "series_id": "SP500",
+                  "current_value": "7722.72",
+                  "previous_day_value": "7666.45",
+                  "net_change": "56.27000000000044",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "7544.93",
+                  "current_vs_6month_ma": "177.78999999999996",
+                  "moving_average_12month": "7159.357272727273",
+                  "current_vs_12month_ma": "563.3627272727272",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:49.564Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "NASDAQCOM",
+              "indicator": {
+                "name": "NASDAQ Composite",
+                "description": "A market-capitalization-weighted index tracking more than 3,000 common equities listed on the NASDAQ Stock Market, including common stocks, American depositary receipts, real estate investment trusts, and tracking stocks. The series is reported as a daily closing index value and is not seasonally adjusted.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, Close",
+                "unit": "Index Feb 5, 1971=100",
+                "use": "Monitor broad U.S. equity-market performance across companies listed on the NASDAQ and assess changes in market sentiment, risk appetite, and the performance of growth-oriented and technology-heavy segments of the equity market.",
+                "purpose": "Provide a broad benchmark for NASDAQ-listed equities for analyzing equity-market conditions, investor risk appetite, market expectations, and changes across technology and growth-oriented portions of the U.S. stock market.",
+                "significance": "The NASDAQ Composite provides broad exposure to equities listed on the NASDAQ Stock Market and includes companies across multiple industries, with substantial representation from technology and growth-oriented businesses. Changes in the index provide information about equity-market performance and investor expectations and can help contextualize broader financial-market conditions."
+              },
+              "data": [
+                {
+                  "indicator": "nasdaq_composite",
+                  "series_id": "NASDAQCOM",
+                  "current_value": "27190.86",
+                  "previous_day_value": "26871.6",
+                  "net_change": "319.26000000000204",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "26156.932",
+                  "current_vs_6month_ma": "1033.9279999999999",
+                  "moving_average_12month": "24491.485454545455",
+                  "current_vs_12month_ma": "2699.374545454546",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:50.797Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DJIA",
+              "indicator": {
+                "name": "Dow Jones Industrial Average",
+                "description": "A stock-market index tracking 30 large, established U.S. companies across a range of industries. The series is reported as a daily closing index value and is not seasonally adjusted.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, Close",
+                "unit": "Index",
+                "use": "Monitor the performance of a group of large U.S. companies and assess changes in equity-market conditions, investor sentiment, risk appetite, and market expectations.",
+                "purpose": "Provide a widely followed benchmark for large-cap U.S. equities for analyzing financial-market conditions, equity performance, investor risk appetite, and changes in market expectations.",
+                "significance": "The Dow Jones Industrial Average provides a market-based measure of the performance of 30 large U.S. companies across multiple industries. Changes in the index provide information about equity-market performance and can help contextualize broader financial conditions and investor sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "dow_jones",
+                  "series_id": "DJIA",
+                  "current_value": "51267.9",
+                  "previous_day_value": "51176.96",
+                  "net_change": "90.94000000000233",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "51882.934",
+                  "current_vs_6month_ma": "-615.0339999999997",
+                  "moving_average_12month": "49862.70181818182",
+                  "current_vs_12month_ma": "1405.1981818181812",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:51.704Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "^RUT",
+              "indicator": {
+                "name": "Russell 2000 Index",
+                "description": "A daily measure of the Russell 2000 Index, a benchmark for U.S. small-cap equities, reported through Financial Modeling Prep. The indicator provides daily open, close, absolute change, and percentage change for the index.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Index Points",
+                "use": "Track daily movements in the Russell 2000 Index, including opening level, closing level, absolute price change, and percentage change, to monitor U.S. small-cap equity-market conditions.",
+                "purpose": "Provide visibility into the performance and short-term direction of U.S. small-cap equities as a distinct segment of the broader U.S. stock market.",
+                "significance": "The Russell 2000 is a widely used benchmark for U.S. small-cap equities and provides a different market perspective from large-cap indexes such as the S&P 500 and technology-heavy indexes such as the Nasdaq-100. Movements in the index can provide context for investor risk appetite, domestic economic expectations, financial conditions, credit conditions, and the relative performance of smaller U.S. companies. Because smaller companies can be more sensitive to domestic economic activity and financing conditions, Russell 2000 performance can complement broader equity-market indicators when analyzing U.S. market conditions and risk sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "russell_2000",
+                  "series_id": "^RUT",
+                  "current_open": "2834.23",
+                  "current_close": "2847.14",
+                  "current_change": "12.9",
+                  "current_change_percent": "0.4555",
+                  "previous_day_close": "2832.89",
+                  "close_net_change": "14.25",
+                  "close_percent_change": "0.5030198842877768",
+                  "moving_average_30d": "2861.682105263158",
+                  "current_vs_30d_ma": "-14.542105263158192",
+                  "moving_average_6month": "2897.2040476190477",
+                  "current_vs_6month_ma": "-50.06404761904787",
+                  "moving_average_12month": "2718.40092",
+                  "current_vs_12month_ma": "128.73907999999983",
+                  "symbol": "^RUT",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:41.036Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "VIXCLS",
+              "indicator": {
+                "name": "CBOE Volatility Index",
+                "description": "A market-based measure of expected near-term volatility in U.S. stock markets derived from stock index option prices. The series is reported as a daily closing index value and is not seasonally adjusted.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, Close",
+                "unit": "Index",
+                "use": "Monitor changes in market-implied expectations for near-term equity-market volatility and identify shifts in financial-market uncertainty and risk conditions.",
+                "purpose": "Provide a market-based measure of expected near-term stock-market volatility for analyzing investor risk expectations, market stress, financial conditions, and changes in market sentiment.",
+                "significance": "The VIX reflects volatility expectations implied by stock index option prices. Changes in the index provide information about shifts in expected near-term equity-market volatility and can help contextualize changes in broader financial-market risk conditions."
+              },
+              "data": [
+                {
+                  "indicator": "vix",
+                  "series_id": "VIXCLS",
+                  "current_value": "15.31",
+                  "previous_day_value": "16.39",
+                  "net_change": "-1.08",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "16.65",
+                  "current_vs_6month_ma": "-1.339999999999998",
+                  "moving_average_12month": "18.124545454545455",
+                  "current_vs_12month_ma": "-2.8145454545454545",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:42.818Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DTWEXBGS",
+              "indicator": {
+                "name": "Nominal Broad U.S. Dollar Index",
+                "description": "A trade-weighted index measuring the value of the U.S. dollar against a broad group of foreign currencies. The index is reported daily, is not seasonally adjusted, and uses January 2006 = 100 as its reference period.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Index Jan 2006=100",
+                "use": "Monitor changes in the broad nominal value of the U.S. dollar and assess foreign-exchange conditions, international financial conditions, trade competitiveness, and cross-border capital flows.",
+                "purpose": "Provide a broad measure of U.S. dollar strength against major trading-partner currencies for analyzing foreign-exchange conditions, monetary policy transmission, global financial conditions, and relationships between the dollar and other asset markets.",
+                "significance": "The broad U.S. dollar index provides a trade-weighted measure of changes in the dollar's value across a broad set of foreign currencies. Changes in the index can affect import prices, export competitiveness, international capital flows, commodity pricing, and global financial conditions."
+              },
+              "data": [
+                {
+                  "indicator": "broad_usd_index",
+                  "series_id": "DTWEXBGS",
+                  "current_value": "121.38",
+                  "previous_day_value": "121.79",
+                  "net_change": "-0.4100000000000108",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "119.506",
+                  "current_vs_6month_ma": "1.8739999999999952",
+                  "moving_average_12month": "119.56727272727272",
+                  "current_vs_12month_ma": "1.8127272727272725",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:52.729Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DTWEXAFEGS",
+              "indicator": {
+                "name": "Nominal Advanced Foreign Economies U.S. Dollar Index",
+                "description": "A trade-weighted index measuring the nominal value of the U.S. dollar against currencies of advanced foreign economies. The index is reported daily, is not seasonally adjusted, and uses January 2006 = 100 as its reference period.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Index Jan 2006=100",
+                "use": "Monitor changes in the U.S. dollar's nominal value against currencies of advanced foreign economies and assess exchange-rate conditions, international financial conditions, and cross-border economic relationships.",
+                "purpose": "Provide a trade-weighted measure of the U.S. dollar against advanced-economy currencies for analyzing foreign-exchange conditions, relative currency movements, monetary policy transmission, and international financial conditions.",
+                "significance": "The index isolates movements in the U.S. dollar relative to currencies of advanced foreign economies using trade-weighted exchange rates. Changes can provide information about dollar strength, international capital conditions, trade relationships, and differences in monetary and economic conditions across major advanced economies."
+              },
+              "data": [
+                {
+                  "indicator": "advanced_economy_usd_index",
+                  "series_id": "DTWEXAFEGS",
+                  "current_value": "114.88",
+                  "previous_day_value": "115.06",
+                  "net_change": "-0.18000000000000682",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "112.616",
+                  "current_vs_6month_ma": "2.263999999999996",
+                  "moving_average_12month": "112.00727272727272",
+                  "current_vs_12month_ma": "2.872727272727275",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:54.341Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DTWEXEMEGS",
+              "indicator": {
+                "name": "Nominal Emerging Market Economies U.S. Dollar Index",
+                "description": "A trade-weighted index measuring the nominal value of the U.S. dollar against currencies of emerging market economies. The index is reported daily, is not seasonally adjusted, and uses January 2006 = 100 as its reference period.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Index Jan 2006=100",
+                "use": "Monitor changes in the U.S. dollar's nominal value against currencies of emerging market economies and assess foreign-exchange conditions, global financial conditions, capital flows, and international economic relationships.",
+                "purpose": "Provide a trade-weighted measure of the U.S. dollar against emerging-market currencies for analyzing foreign-exchange conditions, international financial conditions, monetary policy transmission, and changes in cross-border capital flows.",
+                "significance": "The index measures movements in the U.S. dollar relative to currencies of emerging market economies using trade-weighted exchange rates. Changes in the index can provide information about dollar strength, emerging-market financial conditions, international capital flows, and differences in monetary and economic conditions across emerging markets."
+              },
+              "data": [
+                {
+                  "indicator": "emerging_market_usd_index",
+                  "series_id": "DTWEXEMEGS",
+                  "current_value": "129.71",
+                  "previous_day_value": "130.36",
+                  "net_change": "-0.6500000000000057",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "128.236",
+                  "current_vs_6month_ma": "1.474000000000018",
+                  "moving_average_12month": "129.04454545454544",
+                  "current_vs_12month_ma": "0.6654545454545655",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:55.080Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "EURUSD",
+              "indicator": {
+                "name": "EUR/USD",
+                "description": "The daily exchange rate between the euro and the U.S. dollar, representing the value of one euro in U.S. dollars. The series provides daily open, high, low, and closing exchange rates.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, End of Day",
+                "unit": "USD per EUR",
+                "use": "Monitor EUR/USD movements and assess changes in euro-area and U.S. monetary policy expectations, interest-rate differentials, relative economic conditions, capital flows, trade conditions, and global market sentiment.",
+                "purpose": "Provide a market-based measure of the exchange rate between the euro and U.S. dollar for analyzing relative currency strength, ECB and Federal Reserve policy expectations, euro-area and U.S. interest-rate differentials, cross-border capital flows, and changes in global financial conditions.",
+                "significance": "EUR/USD is one of the world's most important foreign-exchange pairs, linking the euro area with the United States and their respective monetary systems. Changes in the exchange rate can reflect shifts in ECB and Federal Reserve policy expectations, relative economic growth and inflation, interest rates, international capital flows, trade conditions, and global risk sentiment. EUR/USD movements also influence euro-area import prices, inflation, and financial conditions."
+              },
+              "data": [
+                {
+                  "indicator": "eur_usd",
+                  "series_id": "EURUSD",
+                  "current_open": "1.1247",
+                  "current_high": "1.1261",
+                  "current_low": "1.116",
+                  "current_close": "1.1221",
+                  "previous_close": "1.1253",
+                  "net_change": "-0.0031999999999998696",
+                  "percent_change": "-0.28436861281434905",
+                  "daily_range": "0.010099999999999998",
+                  "moving_average_30d": "1.14593",
+                  "current_vs_30d_ma": "-0.023829999999999796",
+                  "moving_average_6month": "1.1558553846153845",
+                  "current_vs_6month_ma": "-0.03375538461538441",
+                  "moving_average_12month": "1.1613084615384615",
+                  "current_vs_12month_ma": "-0.03920846153846136",
+                  "pair": "EUR/USD",
+                  "interval": "daily",
+                  "timing": "end_of_day",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-06T17:24:23.402Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "GBPUSD",
+              "indicator": {
+                "name": "GBP/USD",
+                "description": "The daily exchange rate between the British pound sterling and the U.S. dollar, representing the value of one British pound in U.S. dollars. The series provides daily open, high, low, and closing exchange rates.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, End of Day",
+                "unit": "USD per GBP",
+                "use": "Monitor GBP/USD movements and assess changes in UK-U.S. monetary policy expectations, currency strength, interest-rate differentials, and broader global financial conditions.",
+                "purpose": "Provide a market-based measure of the exchange rate between the British pound and U.S. dollar for analyzing relative currency strength, UK-U.S. interest-rate differentials, monetary policy expectations, and cross-border financial conditions.",
+                "significance": "GBP/USD is a major foreign-exchange pair linking the United Kingdom and United States. Changes in the exchange rate can reflect shifts in relative economic conditions, monetary policy expectations, interest rates, capital flows, and market risk sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "gbp_usd",
+                  "series_id": "GBPUSD",
+                  "current_open": "1.3234",
+                  "current_high": "1.325",
+                  "current_low": "1.3186",
+                  "current_close": "1.3219",
+                  "previous_close": "1.3241",
+                  "net_change": "-0.0021999999999999797",
+                  "percent_change": "-0.16615059285552297",
+                  "daily_range": "0.006399999999999961",
+                  "moving_average_30d": "1.33666",
+                  "current_vs_30d_ma": "-0.014759999999999884",
+                  "moving_average_6month": "1.3429515384615385",
+                  "current_vs_6month_ma": "-0.0210515384615384",
+                  "moving_average_12month": "1.3406934615384616",
+                  "current_vs_12month_ma": "-0.01879346153846151",
+                  "pair": "GBP/USD",
+                  "interval": "daily",
+                  "timing": "end_of_day",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-06T17:24:23.639Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "USDJPY",
+              "indicator": {
+                "name": "USD/JPY",
+                "description": "The daily exchange rate between the U.S. dollar and Japanese yen, representing the value of one U.S. dollar in Japanese yen. The series provides daily open, high, low, and closing exchange rates.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, End of Day",
+                "unit": "JPY per USD",
+                "use": "Monitor USD/JPY movements and assess changes in U.S.-Japan monetary policy expectations, currency strength, interest-rate differentials, and broader global financial conditions.",
+                "purpose": "Provide a market-based measure of the exchange rate between the U.S. dollar and Japanese yen for analyzing relative currency strength, U.S.-Japan interest-rate differentials, monetary policy expectations, and cross-border financial conditions.",
+                "significance": "USD/JPY is a major foreign-exchange pair linking the United States and Japan. Changes in the exchange rate can reflect shifts in relative economic conditions, Federal Reserve and Bank of Japan policy expectations, interest rates, capital flows, and global risk sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "usd_jpy",
+                  "series_id": "USDJPY",
+                  "current_open": "157.47",
+                  "current_high": "158.29",
+                  "current_low": "157.41",
+                  "current_close": "157.9",
+                  "previous_close": "157.83",
+                  "net_change": "0.06999999999999318",
+                  "percent_change": "0.04435151745548576",
+                  "daily_range": "0.8799999999999955",
+                  "moving_average_30d": "156.268",
+                  "current_vs_30d_ma": "1.632000000000005",
+                  "moving_average_6month": "159.31",
+                  "current_vs_6month_ma": "-1.4099999999999966",
+                  "moving_average_12month": "157.53761538461538",
+                  "current_vs_12month_ma": "0.3623846153846273",
+                  "pair": "USD/JPY",
+                  "interval": "daily",
+                  "timing": "end_of_day",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-06T17:24:23.880Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "USDCAD",
+              "indicator": {
+                "name": "USD/CAD",
+                "description": "The daily exchange rate between the U.S. dollar and Canadian dollar, representing the value of one U.S. dollar in Canadian dollars. The series provides daily open, high, low, and closing exchange rates.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, End of Day",
+                "unit": "CAD per USD",
+                "use": "Monitor USD/CAD movements and assess changes in U.S.-Canadian monetary policy expectations, interest-rate differentials, Canadian dollar strength, commodity prices, energy markets, and North American financial conditions.",
+                "purpose": "Provide a market-based measure of the exchange rate between the U.S. dollar and Canadian dollar for analyzing relative currency strength, U.S.-Canadian interest-rate differentials, commodity-driven economic conditions, and changes in cross-border financial markets.",
+                "significance": "USD/CAD is a major foreign-exchange pair linking the United States and Canada. Changes in the exchange rate can reflect shifts in Federal Reserve and Bank of Canada policy expectations, interest rates, Canadian commodity prices and export conditions, particularly energy, trade flows, and broader North American economic and market conditions."
+              },
+              "data": [
+                {
+                  "indicator": "usd_cad",
+                  "series_id": "USDCAD",
+                  "current_open": "1.4248",
+                  "current_high": "1.4293",
+                  "current_low": "1.4235",
+                  "current_close": "1.4257",
+                  "previous_close": "1.4247",
+                  "net_change": "0.0009999999999998899",
+                  "percent_change": "0.07019021548395381",
+                  "daily_range": "0.005800000000000027",
+                  "moving_average_30d": "1.401955",
+                  "current_vs_30d_ma": "0.023744999999999905",
+                  "moving_average_6month": "1.3925307692307691",
+                  "current_vs_6month_ma": "0.03316923076923084",
+                  "moving_average_12month": "1.387708076923077",
+                  "current_vs_12month_ma": "0.037991923076923007",
+                  "pair": "USD/CAD",
+                  "interval": "daily",
+                  "timing": "end_of_day",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-06T17:24:24.569Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "AUDUSD",
+              "indicator": {
+                "name": "AUD/USD",
+                "description": "The daily exchange rate between the Australian dollar and the U.S. dollar, representing the value of one Australian dollar in U.S. dollars. The series provides daily open, high, low, and closing exchange rates.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, End of Day",
+                "unit": "USD per AUD",
+                "use": "Monitor AUD/USD movements and assess changes in Australian-U.S. monetary policy expectations, interest-rate differentials, commodity prices, terms of trade, China-linked economic conditions, and global risk sentiment.",
+                "purpose": "Provide a market-based measure of the Australian dollar against the U.S. dollar for analyzing Australian currency strength, Australia-U.S. interest-rate differentials, commodity-driven trade conditions, and changes in global market risk appetite.",
+                "significance": "AUD/USD is a major foreign-exchange pair connecting Australia and the United States and is closely associated with Australia's commodity-export economy. Changes in the exchange rate can reflect shifts in relative monetary policy expectations and interest rates, commodity prices and Australia's terms of trade, Chinese economic conditions, capital flows, and global risk sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "aud_usd",
+                  "series_id": "AUDUSD",
+                  "current_open": "0.6937",
+                  "current_high": "0.6973",
+                  "current_low": "0.693",
+                  "current_close": "0.6969",
+                  "previous_close": "0.6953",
+                  "net_change": "0.0015999999999999348",
+                  "percent_change": "0.23011649647633176",
+                  "daily_range": "0.0043000000000000815",
+                  "moving_average_30d": "0.708315",
+                  "current_vs_30d_ma": "-0.011415000000000064",
+                  "moving_average_6month": "0.7078323076923076",
+                  "current_vs_6month_ma": "-0.010932307692307686",
+                  "moving_average_12month": "0.6919938461538462",
+                  "current_vs_12month_ma": "0.004906153846153782",
+                  "pair": "AUD/USD",
+                  "interval": "daily",
+                  "timing": "end_of_day",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-06T17:24:24.326Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "NZDUSD",
+              "indicator": {
+                "name": "NZD/USD",
+                "description": "The daily exchange rate between the New Zealand dollar and the U.S. dollar, representing the value of one New Zealand dollar in U.S. dollars. The series provides daily open, high, low, and closing exchange rates.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, End of Day",
+                "unit": "USD per NZD",
+                "use": "Monitor NZD/USD movements and assess changes in New Zealand-U.S. monetary policy expectations, interest-rate differentials, currency strength, commodity and export conditions, Asia-Pacific economic activity, and global risk sentiment.",
+                "purpose": "Provide a market-based measure of the New Zealand dollar against the U.S. dollar for analyzing New Zealand currency strength, New Zealand-U.S. interest-rate differentials, trade and export conditions, and changes in global market risk appetite.",
+                "significance": "NZD/USD is a major foreign-exchange pair linking New Zealand and the United States. Changes in the exchange rate can reflect shifts in Reserve Bank of New Zealand and Federal Reserve policy expectations, interest rates, New Zealand's terms of trade and export prices, economic conditions in China and the Asia-Pacific region, capital flows, and global risk sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "nzd_usd",
+                  "series_id": "NZDUSD",
+                  "current_open": "0.5602",
+                  "current_high": "0.562",
+                  "current_low": "0.5578",
+                  "current_close": "0.5597",
+                  "previous_close": "0.5619",
+                  "net_change": "-0.0021999999999999797",
+                  "percent_change": "-0.3915287417689945",
+                  "daily_range": "0.0042000000000000925",
+                  "moving_average_30d": "0.57228",
+                  "current_vs_30d_ma": "-0.012580000000000036",
+                  "moving_average_6month": "0.5824538461538461",
+                  "current_vs_6month_ma": "-0.022753846153846125",
+                  "moving_average_12month": "0.5818723076923077",
+                  "current_vs_12month_ma": "-0.022172307692307713",
+                  "pair": "NZD/USD",
+                  "interval": "daily",
+                  "timing": "end_of_day",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-06T17:24:24.777Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DFF",
+              "indicator": {
+                "name": "Federal Funds Rate",
+                "description": "The effective interest rate at which U.S. depository institutions lend federal funds to one another overnight. It is a market-determined rate influenced by the Federal Reserve's monetary policy framework and target range.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, 7-Day",
+                "unit": "Percent",
+                "use": "Monitor the stance and transmission of U.S. monetary policy and assess changes in short-term interest rates, liquidity, financial conditions, and broader economic activity.",
+                "purpose": "Provide a core measure of short-term U.S. interest rates for monetary policy analysis, financial condition analysis, and cross-indicator interpretation within the intelligence system.",
+                "significance": "The federal funds rate is a central short-term interest rate in the U.S. financial system. Changes in the rate influence other short-term rates and indirectly affect borrowing costs, financial conditions, economic activity, and asset markets."
+              },
+              "data": [
+                {
+                  "indicator": "federal_funds_rate",
+                  "series_id": "DFF",
+                  "current_value": "3.88",
+                  "previous_month_value": "3.75",
+                  "net_change": "0.1299999999999999",
+                  "moving_average_3m": "3.67",
+                  "current_vs_3m_ma": "0.20999999999999996",
+                  "moving_average_6m": "3.651666666666667",
+                  "current_vs_6m_ma": "0.22833333333333306",
+                  "moving_average_12m": "3.7099999999999995",
+                  "current_vs_12m_ma": "0.17000000000000037",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:12.136Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DGS2",
+              "indicator": {
+                "name": "2-Year Treasury Yield",
+                "description": "The market yield on U.S. Treasury securities with a constant maturity of two years, quoted on an investment basis. It reflects market expectations and pricing for short-term U.S. government borrowing.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percent",
+                "use": "Monitor short-term U.S. interest rates, Treasury market conditions, monetary policy expectations, and changes in the cost of government borrowing.",
+                "purpose": "Provide a market-based measure of the two-year point on the U.S. Treasury yield curve for analyzing interest-rate expectations, monetary policy, financial conditions, and relationships across the yield curve.",
+                "significance": "The two-year Treasury yield is closely connected to expectations for future monetary policy and short-term interest rates. Changes in the yield can provide information about shifts in interest-rate expectations and broader financial conditions."
+              },
+              "data": [
+                {
+                  "indicator": "two_year_treasury_yield",
+                  "series_id": "DGS2",
+                  "current_value": "4.83",
+                  "previous_week_value": "4.78",
+                  "net_change": "0.04999999999999982",
+                  "moving_average_30d": "4.5925",
+                  "current_vs_30d_ma": "0.23749999999999982",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:12.781Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DGS5",
+              "indicator": {
+                "name": "5-Year Treasury Yield",
+                "description": "The market yield on U.S. Treasury securities with a constant maturity of five years, quoted on an investment basis. The series is reported daily and is not seasonally adjusted.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percent",
+                "use": "Monitor intermediate-term U.S. Treasury interest rates and assess changes in market expectations, monetary policy transmission, inflation expectations, and broader financial conditions.",
+                "purpose": "Provide a market-based measure of the five-year point on the U.S. Treasury yield curve for analyzing intermediate-term interest rates, economic expectations, monetary policy, and changes in financial conditions.",
+                "significance": "The five-year Treasury yield reflects market pricing for intermediate-term U.S. government borrowing and incorporates expectations about future interest rates, inflation, and economic conditions. Changes in the yield can provide information about shifts in the middle portion of the Treasury yield curve and broader financial-market expectations."
+              },
+              "data": [
+                {
+                  "indicator": "5y_treasury",
+                  "series_id": "DGS5",
+                  "current_value": "5.06",
+                  "previous_day_value": "5.01",
+                  "net_change": "0.04999999999999982",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "4.374",
+                  "current_vs_6month_ma": "0.6859999999999999",
+                  "moving_average_12month": "4.044545454545455",
+                  "current_vs_12month_ma": "1.0154545454545447",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:56.859Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DGS10",
+              "indicator": {
+                "name": "10-Year Treasury Yield",
+                "description": "The market yield on U.S. Treasury securities with a constant maturity of ten years, quoted on an investment basis. It reflects market pricing for longer-term U.S. government borrowing and expectations about future economic and financial conditions.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percent",
+                "use": "Monitor long-term U.S. interest rates, Treasury market conditions, financial conditions, inflation and growth expectations, and changes in the cost of government borrowing.",
+                "purpose": "Provide a market-based measure of the ten-year point on the U.S. Treasury yield curve for analyzing long-term interest rates, economic expectations, monetary policy transmission, and financial market conditions.",
+                "significance": "The 10-year Treasury yield is a major benchmark for U.S. long-term interest rates and influences pricing across financial markets. Changes in the yield can reflect shifts in expectations for inflation, economic growth, monetary policy, and demand for government securities."
+              },
+              "data": [
+                {
+                  "indicator": "ten_year_treasury_yield",
+                  "series_id": "DGS10",
+                  "current_value": "5.28",
+                  "previous_day_value": "5.24",
+                  "net_change": "0.040000000000000036",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "4.644",
+                  "current_vs_6month_ma": "0.6360000000000001",
+                  "moving_average_12month": "4.3963636363636365",
+                  "current_vs_12month_ma": "0.8836363636363638",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:13.450Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "DFII10",
+              "indicator": {
+                "name": "Real 10-Year Treasury Yield",
+                "description": "The market yield on 10-year U.S. Treasury securities whose principal and interest payments are adjusted for inflation. It represents a market-based measure of the real interest rate for a 10-year maturity.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percent",
+                "use": "Monitor real long-term interest rates and assess changes in inflation-adjusted borrowing costs, financial conditions, and market expectations.",
+                "purpose": "Provide a market-based measure of the real 10-year U.S. interest rate for analyzing real borrowing costs, inflation-adjusted returns, monetary policy, and financial conditions.",
+                "significance": "The real 10-year Treasury yield provides information about the inflation-adjusted cost of long-term capital and the pricing of inflation-indexed government securities. Changes in the yield can affect financial conditions and the relative attractiveness of real versus nominal assets."
+              },
+              "data": [
+                {
+                  "indicator": "real_ten_year_treasury_yield",
+                  "series_id": "DFII10",
+                  "current_value": "2.92",
+                  "previous_day_value": "2.88",
+                  "net_change": "0.040000000000000036",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "2.322",
+                  "current_vs_6month_ma": "0.5979999999999999",
+                  "moving_average_12month": "2.0836363636363635",
+                  "current_vs_12month_ma": "0.8363636363636364",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:14.760Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "BAMLH0A0HYM2",
+              "indicator": {
+                "name": "High Yield Credit Spread",
+                "description": "The ICE BofA U.S. High Yield Index Option-Adjusted Spread, measuring the spread between below-investment-grade U.S. corporate bonds and a comparable Treasury yield curve after adjusting for embedded options. The series is reported as a daily closing value and is not seasonally adjusted.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, Close",
+                "unit": "Percent",
+                "use": "Monitor credit-market conditions and changes in the compensation investors demand for holding below-investment-grade corporate debt relative to U.S. Treasury securities.",
+                "purpose": "Provide a market-based measure of high-yield corporate credit spreads for analyzing credit risk, financial conditions, investor risk pricing, and changes in stress across corporate bond markets.",
+                "significance": "The high-yield credit spread reflects the additional yield demanded by investors for below-investment-grade corporate debt relative to a Treasury reference curve. Changes in the spread can provide information about shifts in perceived credit risk, risk appetite, and broader financial-market conditions."
+              },
+              "data": [
+                {
+                  "indicator": "high_yield_credit_spread",
+                  "series_id": "BAMLH0A0HYM2",
+                  "current_value": "3.1",
+                  "previous_day_value": "3.24",
+                  "net_change": "-0.14000000000000012",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "2.74",
+                  "current_vs_6month_ma": "0.3599999999999999",
+                  "moving_average_12month": "2.859090909090909",
+                  "current_vs_12month_ma": "0.24090909090909118",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:43.568Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "BAMLC0A0CM",
+              "indicator": {
+                "name": "Investment Grade Credit Spread",
+                "description": "The ICE BofA U.S. Corporate Index Option-Adjusted Spread, measuring the spread between investment-grade U.S. corporate bonds and a comparable Treasury yield curve after adjusting for embedded options. The series is reported as a daily closing value and is not seasonally adjusted.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily, Close",
+                "unit": "Percent",
+                "use": "Monitor credit-market conditions and changes in the compensation investors demand for holding investment-grade corporate debt relative to U.S. Treasury securities.",
+                "purpose": "Provide a market-based measure of investment-grade corporate credit spreads for analyzing credit risk, financial conditions, investor risk pricing, and changes in corporate bond markets.",
+                "significance": "The investment-grade credit spread reflects the additional yield demanded by investors for investment-grade corporate debt relative to a Treasury reference curve. Changes in the spread can provide information about shifts in perceived credit risk, risk appetite, and broader financial-market conditions."
+              },
+              "data": [
+                {
+                  "indicator": "investment_grade_credit_spread",
+                  "series_id": "BAMLC0A0CM",
+                  "current_value": "0.85",
+                  "previous_day_value": "0.86",
+                  "net_change": "-0.010000000000000009",
+                  "moving_average_30d": null,
+                  "current_vs_30d_ma": null,
+                  "moving_average_6month": "0.778",
+                  "current_vs_6month_ma": "0.07199999999999995",
+                  "moving_average_12month": "0.7972727272727272",
+                  "current_vs_12month_ma": "0.052727272727272734",
+                  "observed_at": "2026-10-02T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:10:44.995Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cnn_fear_greed",
+              "indicator": {
+                "name": "CNN Fear & Greed Index",
+                "description": "A daily composite index designed by CNN to measure prevailing fear and greed in the U.S. stock market using multiple market-behavior indicators. The index ranges from 0 to 100, with lower values representing greater fear and higher values representing greater greed.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Score",
+                "use": "Monitor changes in U.S. equity-market sentiment, investor risk appetite, market momentum, volatility, and demand for defensive assets, and identify shifts between risk-seeking and risk-averse market conditions.",
+                "purpose": "Provide a compact market-sentiment signal that summarizes several observable characteristics of U.S. equity markets into a single daily measure for tracking changes in investor risk appetite and market stress.",
+                "significance": "The Fear & Greed Index provides a behavioral measure of the prevailing emotional conditions in U.S. equity markets. Changes in the index can indicate shifts in market momentum, volatility, demand for safe-haven assets, and willingness to take risk. It can therefore provide context for interpreting market moves alongside prices, volatility measures, credit conditions, and broader financial-market indicators."
+              },
+              "data": [
+                {
+                  "indicator": "cnn_fear_greed",
+                  "series_id": "cnn_fear_greed",
+                  "current_value": "43.1428571428571",
+                  "current_rating": "fear",
+                  "previous_day_value": "39.9714285714286",
+                  "previous_day_rating": "fear",
+                  "net_change": "3.1714285714284998",
+                  "percent_change": "7.934238741958357",
+                  "moving_average_30d": "32.84360902255639",
+                  "current_vs_30d_ma": "10.29924812030071",
+                  "moving_average_6month": "47.310544217687074",
+                  "current_vs_6month_ma": "-4.167687074829971",
+                  "moving_average_12month": "41.42725186460127",
+                  "current_vs_12month_ma": "1.7156052782558362",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:25.565Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cnn_market_volatility_vix_50",
+              "indicator": {
+                "name": "CNN Market Volatility (VIX vs 50-Day Moving Average)",
+                "description": "A daily market-volatility indicator based on the CBOE Volatility Index (VIX) relative to its 50-day moving average. The VIX reflects expected S&P 500 volatility over the following 30 days, while its relationship with the 50-day average is used by CNN as a measure of changing market volatility and fear.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Index",
+                "use": "Monitor changes in expected U.S. equity-market volatility and identify shifts in market stress, risk aversion, and investor sentiment through the VIX's relationship with its 50-day trend.",
+                "purpose": "Provide a volatility-based measure of U.S. equity-market conditions that captures whether expected market volatility is increasing or decreasing relative to its recent trend.",
+                "significance": "The VIX provides a forward-looking measure of expected S&P 500 volatility derived from options prices. Comparing it with its 50-day moving average adds a trend dimension that helps identify changes in market stress and risk perception. Rising volatility relative to its trend is interpreted by CNN as a signal of fear, while declining volatility is associated with greed. As one component of the Fear & Greed framework, it complements momentum, breadth, options positioning, and other measures of market behavior."
+              },
+              "data": [
+                {
+                  "indicator": "cnn_market_volatility_vix_50",
+                  "series_id": "cnn_market_volatility_vix_50",
+                  "current_value": "15.7884",
+                  "current_rating": "extreme fear",
+                  "previous_day_value": "15.8496",
+                  "previous_day_rating": "extreme fear",
+                  "net_change": "-0.06120000000000125",
+                  "percent_change": "-0.38612961841309085",
+                  "moving_average_30d": "16.082136842105264",
+                  "current_vs_30d_ma": "-0.29373684210526463",
+                  "moving_average_6month": "18.64066984126984",
+                  "current_vs_6month_ma": "-2.852269841269841",
+                  "moving_average_12month": "18.10738313253012",
+                  "current_vs_12month_ma": "-2.3189831325301213",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:27.046Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cnn_safe_haven_demand",
+              "indicator": {
+                "name": "CNN Safe Haven Demand",
+                "description": "A daily measure of the difference between U.S. Treasury bond and stock returns over the previous 20 trading days. It is used by CNN to assess whether investors are favoring safer Treasury assets over riskier equities.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Ratio",
+                "use": "Monitor shifts between equity risk-taking and demand for safer Treasury assets, and identify changes in investor risk appetite, defensive positioning, and market stress.",
+                "purpose": "Provide a cross-asset measure of investor risk preference by comparing recent stock and Treasury performance over a 20-trading-day period.",
+                "significance": "Safe Haven Demand captures changes in investor preference between riskier equities and safer Treasury assets. When Treasury bonds outperform stocks, it can indicate increased demand for defensive assets and greater risk aversion; when stocks outperform Treasuries, it indicates stronger relative demand for risk assets. As a component of CNN's Fear & Greed framework, it adds a cross-asset risk-preference signal that complements equity momentum, breadth, volatility, and options positioning."
+              },
+              "data": [
+                {
+                  "indicator": "cnn_safe_haven_demand",
+                  "series_id": "cnn_safe_haven_demand",
+                  "current_value": "4.69759740910468",
+                  "current_rating": "extreme fear",
+                  "previous_day_value": "3.34428773686124",
+                  "previous_day_rating": "extreme fear",
+                  "net_change": "1.35330967224344",
+                  "percent_change": "40.46630489736449",
+                  "moving_average_30d": "1.949393543426902",
+                  "current_vs_30d_ma": "2.7482038656777776",
+                  "moving_average_6month": "3.149064458795521",
+                  "current_vs_6month_ma": "1.5485329503091587",
+                  "moving_average_12month": "1.657681285728855",
+                  "current_vs_12month_ma": "3.039916123375825",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:27.411Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cnn_put_call_options",
+              "indicator": {
+                "name": "CNN Put/Call Options",
+                "description": "A daily put-to-call options ratio used by CNN as a measure of U.S. equity-market sentiment. The ratio compares put-option activity with call-option activity and is translated into a Fear & Greed rating.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Ratio",
+                "use": "Monitor changes in equity-options positioning and assess shifts in investor risk appetite, hedging activity, speculative demand, and market sentiment within the CNN Fear & Greed framework.",
+                "purpose": "Provide an options-market sentiment measure that captures changes in the relative demand for put and call options and adds information about investor positioning and perceived market risk to broader market-health analysis.",
+                "significance": "The put/call ratio provides information about how options-market activity is distributed between puts and calls. Relatively greater put activity can reflect increased demand for downside protection or bearish positioning, while relatively greater call activity can reflect greater demand for upside exposure or speculative positioning. As a component of CNN's Fear & Greed Index, the ratio provides a market-positioning signal that complements momentum, breadth, volatility, and other measures of investor behavior."
+              },
+              "data": [
+                {
+                  "indicator": "cnn_put_call_options",
+                  "series_id": "cnn_put_call_options",
+                  "current_value": "0.761326456921163",
+                  "current_rating": "extreme fear",
+                  "previous_day_value": "0.761718560787981",
+                  "previous_day_rating": "extreme fear",
+                  "net_change": "-0.00039210386681798326",
+                  "percent_change": "-0.05147621273825342",
+                  "moving_average_30d": "0.7471972156296409",
+                  "current_vs_30d_ma": "0.014129241291522043",
+                  "moving_average_6month": "0.7337332604591716",
+                  "current_vs_6month_ma": "0.02759319646199132",
+                  "moving_average_12month": "0.7345900916031595",
+                  "current_vs_12month_ma": "0.026736365318003497",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:26.677Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cnn_stock_price_breadth",
+              "indicator": {
+                "name": "CNN Stock Price Breadth",
+                "description": "A daily CNN market-breadth indicator measuring the breadth of stock-price performance across the U.S. equity market and translating the result into a Fear & Greed rating.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Index",
+                "use": "Monitor how broadly stock-price gains or declines are distributed across the U.S. equity market and identify changes in market participation, breadth, and overall equity-market strength.",
+                "purpose": "Provide a market-health measure of equity-market breadth that helps determine whether prevailing stock-market conditions are supported by broad participation across stocks or concentrated in a narrower portion of the market.",
+                "significance": "Stock-price breadth provides information about the participation underlying movements in the U.S. equity market. Strong breadth indicates that price strength is distributed across a larger portion of the market, while weak breadth indicates narrower participation or broader selling pressure. As a component of CNN's Fear & Greed framework, the indicator adds a market-participation dimension that complements price momentum, volatility, options activity, and other measures of investor behavior."
+              },
+              "data": [
+                {
+                  "indicator": "cnn_stock_price_breadth",
+                  "series_id": "cnn_stock_price_breadth",
+                  "current_value": "141.702216701952",
+                  "current_rating": "extreme greed",
+                  "previous_day_value": "144.90903837852",
+                  "previous_day_rating": "extreme greed",
+                  "net_change": "-3.2068216765679836",
+                  "percent_change": "-2.21298941215204",
+                  "moving_average_30d": "539.1612279882551",
+                  "current_vs_30d_ma": "-397.45901128630305",
+                  "moving_average_6month": "945.963697288154",
+                  "current_vs_6month_ma": "-804.261480586202",
+                  "moving_average_12month": "1041.1395922464726",
+                  "current_vs_12month_ma": "-899.4373755445206",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:26.307Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "aaii_sentiment",
+              "indicator": {
+                "name": "AAII Investor Sentiment Survey",
+                "description": "A weekly survey of individual investors measuring the percentage who expect the U.S. stock market to rise, remain essentially unchanged, or fall over the next six months. The dataset includes bullish, neutral, bearish, and bull-bear spread readings.",
+                "nativeTimeUnit": "week",
+                "nativeFrequency": "Weekly",
+                "unit": "Percent",
+                "use": "Monitor changes in individual-investor expectations, optimism, pessimism, uncertainty, and overall sentiment toward the U.S. stock market, including changes in the bull-bear spread.",
+                "purpose": "Provide a direct survey-based measure of individual-investor expectations that complements market-derived sentiment indicators by capturing what retail investors expect the stock market to do over the following six months.",
+                "significance": "The AAII Sentiment Survey provides a direct measure of individual-investor expectations rather than inferring sentiment from market prices or positioning. Changes in bullish, neutral, and bearish responses reveal shifts in optimism, pessimism, and uncertainty, while the bull-bear spread summarizes the balance between optimistic and pessimistic views. Extreme sentiment readings can provide useful context for assessing investor psychology and potential sentiment reversals, but the survey does not establish the future direction of the market."
+              },
+              "data": [
+                {
+                  "indicator": "aaii_sentiment",
+                  "series_id": "aaii_sentiment",
+                  "current_bullish": "34.6491",
+                  "current_neutral": "18.8596",
+                  "current_bearish": "46.4912",
+                  "current_bull_bear_spread": "34.612",
+                  "previous_week_bullish": "32.6923",
+                  "previous_week_neutral": "19.2308",
+                  "previous_week_bearish": "48.0769",
+                  "previous_week_bull_bear_spread": "34.9105",
+                  "bullish_net_change": "1.956799999999994",
+                  "neutral_net_change": "-0.3711999999999982",
+                  "bearish_net_change": "-1.5857000000000028",
+                  "bull_bear_spread_net_change": "-0.2984999999999971",
+                  "bullish_percent_change": "5.985507290707579",
+                  "neutral_percent_change": "-1.9302369116209324",
+                  "bearish_percent_change": "-3.2982575831636454",
+                  "bull_bear_spread_percent_change": "-0.8550436115208809",
+                  "moving_average_30d_bullish": "34.7885",
+                  "current_vs_30d_ma_bullish": "-0.13940000000000197",
+                  "moving_average_30d_neutral": "20.64435",
+                  "current_vs_30d_ma_neutral": "-1.784749999999999",
+                  "moving_average_30d_bearish": "44.56715",
+                  "current_vs_30d_ma_bearish": "1.9240500000000011",
+                  "moving_average_30d_bull_bear_spread": "35.02215",
+                  "current_vs_30d_ma_bull_bear_spread": "-0.41015000000000157",
+                  "observed_at": "2026-10-01T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:28.757Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "ig_wti_crude_oil",
+              "indicator": {
+                "name": "IG WTI Crude Oil Retail Positioning",
+                "description": "A daily measure of long and short positioning among retail traders on the IG trading platform for WTI crude oil. The indicator reports the percentage of IG retail traders holding long and short positions and the resulting net positioning. This data represents IG's own retail trader pool and is not a market-wide measure of all retail traders or investors.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percentage",
+                "use": "Track daily changes in long and short positioning among IG retail traders exposed to WTI crude oil, including the distribution of positions and the resulting net retail positioning.",
+                "purpose": "Provide a daily view of how IG's retail trader population is positioned toward WTI crude oil and how that positioning changes over time.",
+                "significance": "IG WTI crude oil retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to the crude oil market. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. WTI positioning can be analyzed alongside crude oil supply and demand, OPEC policy, oil inventories, global economic growth, inflation, the U.S. dollar, interest rates, and the Brent-WTI relationship to provide additional context for energy-market conditions."
+              },
+              "data": [
+                {
+                  "indicator": "wti_ig_sentiment",
+                  "series_id": "ig_wti_crude_oil",
+                  "current_long": "69",
+                  "current_short": "31",
+                  "current_net": "38",
+                  "previous_day_long": "70",
+                  "previous_day_short": "30",
+                  "previous_day_net": "40",
+                  "long_net_change": "-1",
+                  "short_net_change": "1",
+                  "net_net_change": "-2",
+                  "long_percent_change": "-1.4285714285714286",
+                  "short_percent_change": "3.3333333333333335",
+                  "net_percent_change": "-5",
+                  "moving_average_30d_long": null,
+                  "current_vs_30d_ma_long": null,
+                  "moving_average_30d_short": null,
+                  "current_vs_30d_ma_short": null,
+                  "moving_average_30d_net": null,
+                  "current_vs_30d_ma_net": null,
+                  "asset": "WTI Crude Oil",
+                  "source": "IG",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:46.396Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "ig_brent_crude_oil",
+              "indicator": {
+                "name": "IG Brent Crude Oil Retail Positioning",
+                "description": "A daily measure of long and short positioning among retail traders on the IG trading platform for Brent crude oil. The indicator reports the percentage of IG retail traders holding long and short positions and the resulting net positioning. This data represents IG's own retail trader pool and is not a market-wide measure of all retail traders or investors.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percentage",
+                "use": "Track daily changes in long and short positioning among IG retail traders exposed to Brent crude oil, including the distribution of positions and the resulting net retail positioning.",
+                "purpose": "Provide a daily view of how IG's retail trader population is positioned toward Brent crude oil and how that positioning changes over time.",
+                "significance": "IG Brent crude oil retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to the global crude oil market. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. Brent positioning can be analyzed alongside crude oil supply and demand, OPEC policy, oil inventories, geopolitical developments, global economic growth, the U.S. dollar, and the Brent-WTI relationship to provide additional context for global energy-market conditions."
+              },
+              "data": [
+                {
+                  "indicator": "brent_ig_sentiment",
+                  "series_id": "ig_brent_crude_oil",
+                  "current_long": "66",
+                  "current_short": "34",
+                  "current_net": "32",
+                  "previous_day_long": "67",
+                  "previous_day_short": "33",
+                  "previous_day_net": "34",
+                  "long_net_change": "-1",
+                  "short_net_change": "1",
+                  "net_net_change": "-2",
+                  "long_percent_change": "-1.4925373134328357",
+                  "short_percent_change": "3.0303030303030303",
+                  "net_percent_change": "-5.88235294117647",
+                  "moving_average_30d_long": null,
+                  "current_vs_30d_ma_long": null,
+                  "moving_average_30d_short": null,
+                  "current_vs_30d_ma_short": null,
+                  "moving_average_30d_net": null,
+                  "current_vs_30d_ma_net": null,
+                  "asset": "Brent Crude Oil",
+                  "source": "IG",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:46.760Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "ig_gold",
+              "indicator": {
+                "name": "IG Gold Retail Positioning",
+                "description": "A daily measure of long and short positioning among retail traders on the IG trading platform for gold. The indicator reports the percentage of IG retail traders holding long and short positions and the resulting net positioning. This data represents IG's own retail trader pool and is not a market-wide measure of all retail traders or investors.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percentage",
+                "use": "Track daily changes in long and short positioning among IG retail traders exposed to gold, including the distribution of positions and the resulting net retail positioning.",
+                "purpose": "Provide a daily view of how IG's retail trader population is positioned toward gold and how that positioning changes over time.",
+                "significance": "IG gold retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to gold. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. Gold positioning can be analyzed alongside gold prices, safe-haven demand, inflation expectations, real interest rates, Treasury yields, the U.S. dollar, Federal Reserve policy, and broader financial-market conditions to provide additional context for changes in gold-market positioning."
+              },
+              "data": [
+                {
+                  "indicator": "gold_ig_sentiment",
+                  "series_id": "ig_gold",
+                  "current_long": "77",
+                  "current_short": "23",
+                  "current_net": "54",
+                  "previous_day_long": "77",
+                  "previous_day_short": "23",
+                  "previous_day_net": "54",
+                  "long_net_change": "0",
+                  "short_net_change": "0",
+                  "net_net_change": "0",
+                  "long_percent_change": "0",
+                  "short_percent_change": "0",
+                  "net_percent_change": "0",
+                  "moving_average_30d_long": null,
+                  "current_vs_30d_ma_long": null,
+                  "moving_average_30d_short": null,
+                  "current_vs_30d_ma_short": null,
+                  "moving_average_30d_net": null,
+                  "current_vs_30d_ma_net": null,
+                  "asset": "Gold",
+                  "source": "IG",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:44.948Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "ig_silver",
+              "indicator": {
+                "name": "IG Silver Retail Positioning",
+                "description": "A daily measure of long and short positioning among retail traders on the IG trading platform for silver. The indicator reports the percentage of IG retail traders holding long and short positions and the resulting net positioning. This data represents IG's own retail trader pool and is not a market-wide measure of all retail traders or investors.",
+                "nativeTimeUnit": "day",
+                "nativeFrequency": "Daily",
+                "unit": "Percentage",
+                "use": "Track daily changes in long and short positioning among IG retail traders exposed to silver, including the distribution of positions and the resulting net retail positioning.",
+                "purpose": "Provide a daily view of how IG's retail trader population is positioned toward silver and how that positioning changes over time.",
+                "significance": "IG silver retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to silver. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. Silver positioning can be analyzed alongside silver prices, gold, industrial demand, manufacturing activity, inflation expectations, real interest rates, Treasury yields, the U.S. dollar, Federal Reserve policy, and broader risk sentiment to provide additional context for precious-metals and industrial-demand conditions."
+              },
+              "data": [
+                {
+                  "indicator": "silver_ig_sentiment",
+                  "series_id": "ig_silver",
+                  "current_long": "82",
+                  "current_short": "18",
+                  "current_net": "64",
+                  "previous_day_long": "82",
+                  "previous_day_short": "18",
+                  "previous_day_net": "64",
+                  "long_net_change": "0",
+                  "short_net_change": "0",
+                  "net_net_change": "0",
+                  "long_percent_change": "0",
+                  "short_percent_change": "0",
+                  "net_percent_change": "0",
+                  "moving_average_30d_long": null,
+                  "current_vs_30d_ma_long": null,
+                  "moving_average_30d_short": null,
+                  "current_vs_30d_ma_short": null,
+                  "moving_average_30d_net": null,
+                  "current_vs_30d_ma_net": null,
+                  "asset": "Silver",
+                  "source": "IG",
+                  "observed_at": "2026-10-05T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:46.034Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cftc_usd_index",
+              "indicator": {
+                "name": "CFTC U.S. Dollar Index Futures Positioning",
+                "description": "A weekly measure of U.S. Dollar Index futures open interest and trader positioning reported by the CFTC's Traders in Financial Futures report. The data separates U.S. Dollar Index futures positions into Dealer/Intermediary, Asset Manager/Institutional, Leveraged Funds, Other Reportables, and Nonreportables, with long, short, spreading, and net exposure measures where applicable.",
+                "nativeTimeUnit": "week",
+                "nativeFrequency": "Weekly",
+                "unit": "Contracts",
+                "use": "Track changes in U.S. Dollar Index futures open interest and positioning across dealers, asset managers, leveraged funds, other reportable traders, and nonreportable traders, including changes in long, short, spreading, and net exposure.",
+                "purpose": "Provide asset-specific visibility into how different classes of market participants are positioned in U.S. Dollar Index futures and how their exposure to broad U.S. dollar strength changes over time.",
+                "significance": "CFTC U.S. Dollar Index futures positioning provides a structured view of market-participant exposure to the U.S. dollar relative to a basket of major foreign currencies. Changes in open interest reveal changes in futures-market participation, while changes in long and short positions show how different trader groups are adjusting dollar exposure. Dollar positioning can provide context for broad USD strength, global foreign-exchange conditions, U.S. monetary-policy expectations, interest-rate differentials, commodity prices, international financial conditions, and global risk sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "cftc_usd_index",
+                  "series_id": "cftc_usd_index",
+                  "current_open_interest": "48342",
+                  "current_dealer_net": "-17924",
+                  "current_asset_manager_net": "18007",
+                  "current_leveraged_money_net": "361",
+                  "current_other_reportables_net": "-2437",
+                  "current_non_reportables_net": "1993",
+                  "previous_week_open_interest": "46328",
+                  "previous_week_dealer_net": "-15538",
+                  "previous_week_asset_manager_net": "16772",
+                  "previous_week_leveraged_money_net": "-4495",
+                  "previous_week_other_reportables_net": "1424",
+                  "previous_week_non_reportables_net": "1837",
+                  "open_interest_net_change": "2014",
+                  "dealer_net_change": "-2386",
+                  "asset_manager_net_change": "1235",
+                  "leveraged_money_net_change": "4856",
+                  "other_reportables_net_change": "-3861",
+                  "non_reportables_net_change": "156",
+                  "open_interest_percent_change": "4.347262994301502",
+                  "dealer_net_percent_change": "15.355901660445358",
+                  "asset_manager_net_percent_change": "7.363462914381111",
+                  "leveraged_money_net_percent_change": "-108.03114571746384",
+                  "other_reportables_net_percent_change": "-271.1376404494382",
+                  "non_reportables_net_percent_change": "8.49210669569951",
+                  "moving_average_30d_open_interest": "49487.5",
+                  "current_vs_30d_ma_open_interest": "-1145.5",
+                  "moving_average_30d_dealer_net": "-21150.75",
+                  "current_vs_30d_ma_dealer_net": "3226.75",
+                  "moving_average_30d_asset_manager_net": "16289.75",
+                  "current_vs_30d_ma_asset_manager_net": "1717.25",
+                  "moving_average_30d_leveraged_money_net": "978.75",
+                  "current_vs_30d_ma_leveraged_money_net": "-617.75",
+                  "moving_average_30d_other_reportables_net": "2192",
+                  "current_vs_30d_ma_other_reportables_net": "-4629",
+                  "moving_average_30d_non_reportables_net": "1690.25",
+                  "current_vs_30d_ma_non_reportables_net": "302.75",
+                  "contract": "USD INDEX",
+                  "commodity": "U.S. DOLLAR INDEX",
+                  "subgroup": "OTHER FINANCIAL INSTRUMENTS",
+                  "observed_at": "2026-09-29T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:39.511Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cftc_euro_fx",
+              "indicator": {
+                "name": "CFTC Euro FX Futures Positioning",
+                "description": "A weekly measure of Euro FX futures open interest and trader positioning reported by the CFTC's Traders in Financial Futures report. The data separates Euro FX futures positions into Dealer/Intermediary, Asset Manager/Institutional, Leveraged Funds, Other Reportables, and Nonreportables, with long, short, spreading, and net exposure measures where applicable.",
+                "nativeTimeUnit": "week",
+                "nativeFrequency": "Weekly",
+                "unit": "Contracts",
+                "use": "Track changes in Euro FX futures open interest and positioning across dealers, asset managers, leveraged funds, other reportable traders, and nonreportable traders, including changes in long, short, spreading, and net exposure.",
+                "purpose": "Provide asset-specific visibility into how different classes of market participants are positioned in Euro FX futures and how their exposure to the euro changes over time.",
+                "significance": "CFTC Euro FX futures positioning provides a structured view of market-participant exposure to the euro through regulated currency futures. Changes in open interest reveal changes in futures-market participation, while changes in long and short positions show how different trader groups are adjusting their euro exposure. Euro positioning can provide context for EUR/USD dynamics, relative European and U.S. monetary-policy expectations, interest-rate differentials, European economic conditions, and broader foreign-exchange market sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "cftc_euro_fx",
+                  "series_id": "cftc_euro_fx",
+                  "current_open_interest": "853959",
+                  "current_dealer_net": "-212166",
+                  "current_asset_manager_net": "220603",
+                  "current_leveraged_money_net": "-39265",
+                  "current_other_reportables_net": "8149",
+                  "current_non_reportables_net": "22679",
+                  "previous_week_open_interest": "821689",
+                  "previous_week_dealer_net": "-220952",
+                  "previous_week_asset_manager_net": "216483",
+                  "previous_week_leveraged_money_net": "-26694",
+                  "previous_week_other_reportables_net": "7796",
+                  "previous_week_non_reportables_net": "23367",
+                  "open_interest_net_change": "32270",
+                  "dealer_net_change": "8786",
+                  "asset_manager_net_change": "4120",
+                  "leveraged_money_net_change": "-12571",
+                  "other_reportables_net_change": "353",
+                  "non_reportables_net_change": "-688",
+                  "open_interest_percent_change": "3.927276621690202",
+                  "dealer_net_percent_change": "-3.976429269705638",
+                  "asset_manager_net_percent_change": "1.9031517486361516",
+                  "leveraged_money_net_percent_change": "47.09297969581179",
+                  "other_reportables_net_percent_change": "4.52796305797845",
+                  "non_reportables_net_percent_change": "-2.9443231908246674",
+                  "moving_average_30d_open_interest": "887400",
+                  "current_vs_30d_ma_open_interest": "-33441",
+                  "moving_average_30d_dealer_net": "-252016",
+                  "current_vs_30d_ma_dealer_net": "39850",
+                  "moving_average_30d_asset_manager_net": "245528",
+                  "current_vs_30d_ma_asset_manager_net": "-24925",
+                  "moving_average_30d_leveraged_money_net": "-31577",
+                  "current_vs_30d_ma_leveraged_money_net": "-7688",
+                  "moving_average_30d_other_reportables_net": "8143",
+                  "current_vs_30d_ma_other_reportables_net": "6",
+                  "moving_average_30d_non_reportables_net": "29922",
+                  "current_vs_30d_ma_non_reportables_net": "-7243",
+                  "contract": "EURO FX",
+                  "commodity": "EUROPEAN CURRENCY UNIT",
+                  "subgroup": "CURRENCY",
+                  "observed_at": "2026-09-29T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:38.791Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cftc_japanese_yen",
+              "indicator": {
+                "name": "CFTC Japanese Yen Futures Positioning",
+                "description": "A weekly measure of Japanese Yen futures open interest and trader positioning reported by the CFTC's Traders in Financial Futures report. The data separates Japanese Yen futures positions into Dealer/Intermediary, Asset Manager/Institutional, Leveraged Funds, Other Reportables, and Nonreportables, with long, short, spreading, and net exposure measures where applicable.",
+                "nativeTimeUnit": "week",
+                "nativeFrequency": "Weekly",
+                "unit": "Contracts",
+                "use": "Track changes in Japanese Yen futures open interest and positioning across dealers, asset managers, leveraged funds, other reportable traders, and nonreportable traders, including changes in long, short, spreading, and net exposure.",
+                "purpose": "Provide asset-specific visibility into how different classes of market participants are positioned in Japanese Yen futures and how their exposure to the yen changes over time.",
+                "significance": "CFTC Japanese Yen futures positioning provides a structured view of market-participant exposure to the Japanese yen through regulated currency futures. Changes in open interest reveal changes in futures-market participation, while changes in long and short positions show how different trader groups are adjusting their yen exposure. Yen positioning can provide context for USD/JPY dynamics, Bank of Japan monetary policy, Japanese interest rates, U.S.-Japan interest-rate differentials, Japanese economic conditions, and changes in global risk sentiment."
+              },
+              "data": [
+                {
+                  "indicator": "cftc_japanese_yen",
+                  "series_id": "cftc_japanese_yen",
+                  "current_open_interest": "360720",
+                  "current_dealer_net": "-86702",
+                  "current_asset_manager_net": "51634",
+                  "current_leveraged_money_net": "-14161",
+                  "current_other_reportables_net": "48684",
+                  "current_non_reportables_net": "545",
+                  "previous_week_open_interest": "378701",
+                  "previous_week_dealer_net": "-108284",
+                  "previous_week_asset_manager_net": "41629",
+                  "previous_week_leveraged_money_net": "7423",
+                  "previous_week_other_reportables_net": "54800",
+                  "previous_week_non_reportables_net": "4432",
+                  "open_interest_net_change": "-17981",
+                  "dealer_net_change": "21582",
+                  "asset_manager_net_change": "10005",
+                  "leveraged_money_net_change": "-21584",
+                  "other_reportables_net_change": "-6116",
+                  "non_reportables_net_change": "-3887",
+                  "open_interest_percent_change": "-4.748073018027415",
+                  "dealer_net_percent_change": "-19.930922389272652",
+                  "asset_manager_net_percent_change": "24.033726488745828",
+                  "leveraged_money_net_percent_change": "-290.77192509766945",
+                  "other_reportables_net_percent_change": "-11.16058394160584",
+                  "non_reportables_net_percent_change": "-87.70306859205776",
+                  "moving_average_30d_open_interest": "458255",
+                  "current_vs_30d_ma_open_interest": "-97535",
+                  "moving_average_30d_dealer_net": "-59252.5",
+                  "current_vs_30d_ma_dealer_net": "-27449.5",
+                  "moving_average_30d_asset_manager_net": "17595.75",
+                  "current_vs_30d_ma_asset_manager_net": "34038.25",
+                  "moving_average_30d_leveraged_money_net": "-30173.25",
+                  "current_vs_30d_ma_leveraged_money_net": "16012.25",
+                  "moving_average_30d_other_reportables_net": "70165.5",
+                  "current_vs_30d_ma_other_reportables_net": "-21481.5",
+                  "moving_average_30d_non_reportables_net": "1664.5",
+                  "current_vs_30d_ma_non_reportables_net": "-1119.5",
+                  "contract": "JAPANESE YEN",
+                  "commodity": "JAPANESE YEN",
+                  "subgroup": "CURRENCY",
+                  "observed_at": "2026-09-29T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:39.151Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cftc_ust_10y",
+              "indicator": {
+                "name": "CFTC 10-Year U.S. Treasury Note Futures Positioning",
+                "description": "A weekly measure of 10-Year U.S. Treasury Note futures open interest and trader positioning reported by the CFTC's Traders in Financial Futures report. The data separates Treasury futures positions into Dealer/Intermediary, Asset Manager/Institutional, Leveraged Funds, Other Reportables, and Nonreportables, with long, short, spreading, and net exposure measures where applicable.",
+                "nativeTimeUnit": "week",
+                "nativeFrequency": "Weekly",
+                "unit": "Contracts",
+                "use": "Track changes in 10-Year U.S. Treasury futures open interest and positioning across dealers, asset managers, leveraged funds, other reportable traders, and nonreportable traders, including changes in long, short, spreading, and net exposure.",
+                "purpose": "Provide asset-specific visibility into how different classes of market participants are positioned in 10-Year U.S. Treasury Note futures and how their exposure changes over time.",
+                "significance": "CFTC 10-Year Treasury futures positioning provides a structured view of market-participant exposure to the intermediate-to-longer portion of the U.S. Treasury market. Changes in open interest reveal changes in futures-market participation, while changes in long and short positions show how different trader groups are adjusting exposure to 10-Year Treasury futures. The 10-Year Treasury market is closely connected to expectations for monetary policy, inflation, economic growth, and the broader supply and demand for government debt, making positioning useful context for Treasury yields, duration risk, the yield curve, and broader financial conditions."
+              },
+              "data": [
+                {
+                  "indicator": "cftc_ust_10y",
+                  "series_id": "cftc_ust_10y",
+                  "current_open_interest": "5676556",
+                  "current_dealer_net": "-736585",
+                  "current_asset_manager_net": "2776531",
+                  "current_leveraged_money_net": "-2036432",
+                  "current_other_reportables_net": "-52287",
+                  "current_non_reportables_net": "48773",
+                  "previous_week_open_interest": "5407726",
+                  "previous_week_dealer_net": "-580674",
+                  "previous_week_asset_manager_net": "2531384",
+                  "previous_week_leveraged_money_net": "-1926947",
+                  "previous_week_other_reportables_net": "-9480",
+                  "previous_week_non_reportables_net": "-14283",
+                  "open_interest_net_change": "268830",
+                  "dealer_net_change": "-155911",
+                  "asset_manager_net_change": "245147",
+                  "leveraged_money_net_change": "-109485",
+                  "other_reportables_net_change": "-42807",
+                  "non_reportables_net_change": "63056",
+                  "open_interest_percent_change": "4.971220805196121",
+                  "dealer_net_percent_change": "26.85000533862374",
+                  "asset_manager_net_percent_change": "9.684307082607775",
+                  "leveraged_money_net_percent_change": "5.681785747091124",
+                  "other_reportables_net_percent_change": "451.55063291139237",
+                  "non_reportables_net_percent_change": "-441.4758804172793",
+                  "moving_average_30d_open_interest": "5321858",
+                  "current_vs_30d_ma_open_interest": "354698",
+                  "moving_average_30d_dealer_net": "-630406.25",
+                  "current_vs_30d_ma_dealer_net": "-106178.75",
+                  "moving_average_30d_asset_manager_net": "2583064.5",
+                  "current_vs_30d_ma_asset_manager_net": "193466.5",
+                  "moving_average_30d_leveraged_money_net": "-1949082.25",
+                  "current_vs_30d_ma_leveraged_money_net": "-87349.75",
+                  "moving_average_30d_other_reportables_net": "-4314.75",
+                  "current_vs_30d_ma_other_reportables_net": "-47972.25",
+                  "moving_average_30d_non_reportables_net": "738.75",
+                  "current_vs_30d_ma_non_reportables_net": "48034.25",
+                  "contract": "UST 10Y NOTE",
+                  "commodity": "T-NOTES, 6.5-10 YEAR",
+                  "subgroup": "Interest Rates - U.S. Treasury",
+                  "observed_at": "2026-09-29T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:38.432Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "cftc_ust_2y",
+              "indicator": {
+                "name": "CFTC 2-Year U.S. Treasury Note Futures Positioning",
+                "description": "A weekly measure of 2-Year U.S. Treasury Note futures open interest and trader positioning reported by the CFTC's Traders in Financial Futures report. The data separates Treasury futures positions into Dealer/Intermediary, Asset Manager/Institutional, Leveraged Funds, Other Reportables, and Nonreportables, with long, short, spreading, and net exposure measures where applicable.",
+                "nativeTimeUnit": "week",
+                "nativeFrequency": "Weekly",
+                "unit": "Contracts",
+                "use": "Track changes in 2-Year U.S. Treasury futures open interest and positioning across dealers, asset managers, leveraged funds, other reportable traders, and nonreportable traders, including changes in long, short, spreading, and net exposure.",
+                "purpose": "Provide asset-specific visibility into how different classes of market participants are positioned in 2-Year U.S. Treasury Note futures and how their exposure changes over time.",
+                "significance": "CFTC 2-Year Treasury futures positioning provides a structured view of market-participant exposure to the short end of the U.S. Treasury curve. Changes in open interest reveal changes in futures-market participation, while changes in long and short positions show how different trader groups are adjusting exposure to 2-Year Treasury futures. Because the 2-Year Treasury yield is closely connected to expectations for Federal Reserve policy and the near-term path of interest rates, changes in positioning can provide context for monetary-policy expectations, interest-rate risk, Treasury-market sentiment, and broader financial conditions."
+              },
+              "data": [
+                {
+                  "indicator": "cftc_ust_2y",
+                  "series_id": "cftc_ust_2y",
+                  "current_open_interest": "4530145",
+                  "current_dealer_net": "-591496",
+                  "current_asset_manager_net": "1638478",
+                  "current_leveraged_money_net": "-1165980",
+                  "current_other_reportables_net": "78991",
+                  "current_non_reportables_net": "40007",
+                  "previous_week_open_interest": "4539374",
+                  "previous_week_dealer_net": "-523460",
+                  "previous_week_asset_manager_net": "1770085",
+                  "previous_week_leveraged_money_net": "-1350740",
+                  "previous_week_other_reportables_net": "58937",
+                  "previous_week_non_reportables_net": "45178",
+                  "open_interest_net_change": "-9229",
+                  "dealer_net_change": "-68036",
+                  "asset_manager_net_change": "-131607",
+                  "leveraged_money_net_change": "184760",
+                  "other_reportables_net_change": "20054",
+                  "non_reportables_net_change": "-5171",
+                  "open_interest_percent_change": "-0.20330997181549704",
+                  "dealer_net_percent_change": "12.997363695411302",
+                  "asset_manager_net_percent_change": "-7.435066677588929",
+                  "leveraged_money_net_percent_change": "-13.678428120881886",
+                  "other_reportables_net_percent_change": "34.02616353054957",
+                  "non_reportables_net_percent_change": "-11.44583646907787",
+                  "moving_average_30d_open_interest": "4417065.5",
+                  "current_vs_30d_ma_open_interest": "113079.5",
+                  "moving_average_30d_dealer_net": "-484487.5",
+                  "current_vs_30d_ma_dealer_net": "-107008.5",
+                  "moving_average_30d_asset_manager_net": "1680118.75",
+                  "current_vs_30d_ma_asset_manager_net": "-41640.75",
+                  "moving_average_30d_leveraged_money_net": "-1300957",
+                  "current_vs_30d_ma_leveraged_money_net": "134977",
+                  "moving_average_30d_other_reportables_net": "58193",
+                  "current_vs_30d_ma_other_reportables_net": "20798",
+                  "moving_average_30d_non_reportables_net": "47132.75",
+                  "current_vs_30d_ma_non_reportables_net": "-7125.75",
+                  "contract": "UST 2Y NOTE",
+                  "commodity": "T-NOTES, 1-2 YEAR",
+                  "subgroup": "Interest Rates - U.S. Treasury",
+                  "observed_at": "2026-09-29T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:12:38.072Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "INDPRO",
+              "indicator": {
+                "name": "Industrial Production",
+                "description": "A seasonally adjusted index measuring the real output of the U.S. industrial sector, including manufacturing, mining, and electric and gas utilities. The index uses a reference period of 2017 = 100.",
+                "nativeTimeUnit": "month",
+                "nativeFrequency": "Monthly",
+                "unit": "Index 2017=100",
+                "use": "Monitor changes in U.S. industrial output and assess conditions across manufacturing, mining, and utility production.",
+                "purpose": "Provide a broad measure of industrial-sector activity for analyzing economic momentum, production trends, business conditions, and changes in the business cycle.",
+                "significance": "Industrial production provides information about real output in major industrial sectors of the U.S. economy. Changes in the index can help identify shifts in production activity and economic momentum, particularly within manufacturing and other industrial sectors."
+              },
+              "data": [
+                {
+                  "indicator": "industrial_production",
+                  "series_id": "INDPRO",
+                  "current_value": "103.07",
+                  "previous_month_value": "103.05",
+                  "net_change": "0.01999999999999602",
+                  "moving_average_3m": "102.84333333333332",
+                  "current_vs_3m_ma": "0.22666666666667368",
+                  "moving_average_6m": "102.45833333333331",
+                  "current_vs_6m_ma": "0.6116666666666788",
+                  "moving_average_12m": "101.90166666666664",
+                  "current_vs_12m_ma": "1.1683333333333508",
+                  "observed_at": "2026-08-01T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:22.216Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "RSAFS",
+              "indicator": {
+                "name": "Retail Sales",
+                "description": "Seasonally adjusted monthly sales for U.S. retail trade and food services, reported in millions of dollars. The most recent observation is an advance estimate based on a subsample of firms and is subject to revision.",
+                "nativeTimeUnit": "month",
+                "nativeFrequency": "Monthly",
+                "unit": "Millions of Dollars",
+                "use": "Monitor consumer spending activity through changes in retail trade and food-service sales and identify shifts in consumer demand and economic momentum.",
+                "purpose": "Provide a timely measure of nominal retail and food-service sales for analyzing consumer demand, household spending, economic activity, and changes in consumption trends.",
+                "significance": "Retail sales provide a timely signal of consumer demand and economic activity. Changes in sales can indicate shifts in household spending behavior and economic momentum, although the latest observation is an advance estimate and may be revised as more complete survey data become available."
+              },
+              "data": [
+                {
+                  "indicator": "retail_sales",
+                  "series_id": "RSAFS",
+                  "current_value": "737763",
+                  "previous_month_value": "729538",
+                  "net_change": "8225",
+                  "moving_average_3m": "731283.6666666666",
+                  "current_vs_3m_ma": "6479.333333333372",
+                  "moving_average_6m": "724238.5",
+                  "current_vs_6m_ma": "13524.5",
+                  "moving_average_12m": "713455.75",
+                  "current_vs_12m_ma": "24307.25",
+                  "observed_at": "2026-08-01T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:22.602Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "GDPC1",
+              "indicator": {
+                "name": "Real Gross Domestic Product",
+                "description": "The inflation-adjusted value of goods and services produced by labor and property located in the United States. The series is seasonally adjusted at an annual rate and reported in billions of chained 2017 dollars.",
+                "nativeTimeUnit": "quarter",
+                "nativeFrequency": "Quarterly",
+                "unit": "Billions of Chained 2017 Dollars",
+                "use": "Monitor the inflation-adjusted level of U.S. economic output and assess changes in overall economic activity and growth.",
+                "purpose": "Provide a broad measure of real U.S. economic output for analyzing economic growth, business-cycle conditions, productivity, and changes in aggregate economic activity.",
+                "significance": "Real GDP measures the inflation-adjusted value of goods and services produced in the U.S. economy. Changes in real GDP provide a broad measure of economic expansion or contraction and are central to assessing overall economic conditions and the business cycle."
+              },
+              "data": [
+                {
+                  "indicator": "real_gdp",
+                  "series_id": "GDPC1",
+                  "current_value": "24408.01",
+                  "previous_quarter_value": "24274.38",
+                  "net_change": "133.62999999999738",
+                  "moving_average_3q": "24170.943333333333",
+                  "current_vs_3q_ma": "237.0666666666657",
+                  "moving_average_6q": "23948.22666666667",
+                  "current_vs_6q_ma": "459.7833333333292",
+                  "moving_average_12q": "23505.564166666667",
+                  "current_vs_12q_ma": "902.4458333333314",
+                  "observed_at": "2026-04-01T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:21.378Z"
+                }
+              ]
+            },
+            {
+              "indicatorId": "A191RL1Q225SBEA",
+              "indicator": {
+                "name": "Real GDP Growth",
+                "description": "The quarterly percentage change in inflation-adjusted U.S. gross domestic product from the preceding period, reported at an annual rate. The series is seasonally adjusted and measures changes in real economic output.",
+                "nativeTimeUnit": "quarter",
+                "nativeFrequency": "Quarterly",
+                "unit": "Percent Change at Annual Rate",
+                "use": "Monitor the pace of change in inflation-adjusted U.S. economic output and identify periods of economic expansion, slowing growth, or contraction.",
+                "purpose": "Provide a published measure of quarterly real GDP growth for analyzing economic momentum, business-cycle conditions, and changes in aggregate economic activity.",
+                "significance": "Real GDP growth measures changes in inflation-adjusted economic output and provides a broad indicator of economic momentum. Changes in the growth rate can help identify shifts between stronger and weaker periods of economic activity and changes in the business cycle."
+              },
+              "data": [
+                {
+                  "indicator": "real_gdp_growth",
+                  "series_id": "A191RL1Q225SBEA",
+                  "current_value": "2.2",
+                  "previous_quarter_value": "2.5",
+                  "net_change": "-0.2999999999999998",
+                  "moving_average_3q": "2.1999999999999997",
+                  "current_vs_3q_ma": "0.0000000000000004440892098500626",
+                  "moving_average_6q": "2.183333333333333",
+                  "current_vs_6q_ma": "0.01666666666666705",
+                  "moving_average_12q": "2.6333333333333333",
+                  "current_vs_12q_ma": "-0.4333333333333331",
+                  "observed_at": "2026-04-01T04:00:00.000Z",
+                  "updated_at": "2026-10-05T23:08:21.846Z"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sequence": 2,
+      "section": "prompt",
+      "at": "2026-10-13T21:07:57.452Z",
+      "data": {
+        "prompt": [
+          "",
+          "Observe the geopolitics domain for today.",
+          "",
+          "Objective:",
+          "Observe major geopolitical, political, diplomatic, and China-related developments and identify meaningful events or changes happening today.",
+          "",
+          "Areas of observation:",
+          "- Geopolitics",
+          "- US Politics",
+          "- Trump / US Administration",
+          "- China",
+          "- Wars and Conflicts",
+          "- Diplomacy",
+          "- Sanctions and Trade",
+          "- Energy and Shipping",
+          "",
+          "Identify meaningful developments and produce observations, also mention meaningful",
+          "foundational deterministric data movements thats could also an observation.",
+          ""
+        ]
+      }
+    }
+  ],
+  "response": null
+}

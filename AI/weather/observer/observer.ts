@@ -59,16 +59,25 @@ const STEP_DELAY_MS = 4_000;
  * Markers left in the stored formatter prompt where a large embedded value was
  * removed.
  *
- * The formatter prompt inlines the foundational context, the research notes and
- * the tool evidence as text. Storing that rendered prompt would put a second
- * copy of all three inside a string, where they read as JSON-shaped text rather
- * than JSON, and the evidence alone would be most of the entry. Each value is
- * recorded separately, so the stored prompt keeps these markers and the prompt
- * can be rebuilt by substituting the recorded values back in.
+ * The formatter prompt inlines the tool evidence and the Observer findings as
+ * text. Storing that rendered prompt would put a second copy of both inside a
+ * string, where they read as JSON-shaped text rather than JSON, and the evidence
+ * alone would be most of the entry. Each value is recorded separately, so the
+ * stored prompt keeps these markers and can be rebuilt by substituting the
+ * recorded values back in.
+ *
+ * The foundational context is not among them. The Observer read it and reported
+ * on it; sending it to the formatter as well was the single largest block in that
+ * prompt and bought nothing the findings did not already carry.
  */
-const FOUNDATIONAL_CONTEXT_MARKER = "{{foundationalContext}}";
-
 const RESEARCH_NOTES_MARKER = "{{researchNotes}}";
+
+const OBSERVER_EVIDENCE_MARKER = "{{observerEvidence}}";
+
+/**
+ * How the evidence is inlined, so the prompt can be rebuilt exactly.
+ */
+const OBSERVER_EVIDENCE_FORMAT = "JSON.stringify(observerEvidence, null, 2)";
 
 const OBSERVER_FINDINGS_MARKER = "{{observerFindings}}";
 
@@ -262,7 +271,8 @@ ${config.objective}
 Areas of observation:
 ${config.categories.map((category) => `- ${category}`).join("\n")}
 
-Identify meaningful developments and produce observations.
+Identify meaningful developments and produce observations, also mention meaningful
+foundational deterministric data movements thats could also an observation.
 `;
 
   // --------------------------------------------------
@@ -393,23 +403,48 @@ Identify meaningful developments and produce observations.
   await runLog.record("reasoning", lastReasoningText);
 
   // --------------------------------------------------
+  // Observer evidence
+  // --------------------------------------------------
+  //
+  // Built from the steps rather than collected during the stream, so the evidence and
+  // the findings below describe the same run.
+  const observerEvidence = observerSteps
+    .filter(
+      (step) => step.toolCalls.length > 0 || step.toolResults.length > 0 || Boolean(step.text),
+    )
+    .map((step) => ({
+      step: step.stepNumber + 1,
+
+      text: step.text || null,
+
+      toolCalls: step.toolCalls.map((toolCall) => ({
+        tool: toolCall.toolName,
+        arguments: toolCall.input,
+      })),
+
+      toolResults: step.toolResults.map((toolResult) => ({
+        tool: toolResult.toolName,
+        result: toolResult.output,
+      })),
+    }));
+
+  const embeddedObserverEvidence = JSON.stringify(observerEvidence, null, 2);
+
+  // --------------------------------------------------
   // Observer findings
   // --------------------------------------------------
 
   /**
-   * What the formatter is given instead of the raw tool evidence.
+   * The Observer's reasoning at each step, then its final answer.
    *
-   * The evidence block carried every tool call's arguments and every tool result,
-   * serialized. On a busy domain that is tens of thousands of characters of news
-   * snippets and API payloads, and the formatter degraded under it: one run emitted
-   * the same observation four hundred times with `<unk>` in between. The input was
-   * larger than the model's working context, so it stopped being able to hold it.
+   * Sent alongside the raw evidence rather than instead of it. The Observer merges
+   * duplicates across sources - it is told to - so its final answer is a condensed
+   * view of what it found. The evidence is the only source that still holds what the
+   * merge collapsed, and putting it back is what lets the formatter recover a signal
+   * the Observer judged redundant.
    *
-   * What replaces it is what the Observer itself produced - its reasoning at each
-   * step, and its final answer. That is roughly an order of magnitude smaller, and it
-   * is already organised: the Observer did the reading, and the step where it paused
-   * to consolidate is where the full inventory lives, before its final answer ranked
-   * and collapsed it.
+   * What was given up to make room: the foundational market context. The Observer
+   * already read it, and it is the largest single block in the formatter's input.
    *
    * Built from `observerSteps` rather than collected in `onStepEnd` so it cannot drift
    * from what the run log recorded for those same steps.
@@ -452,10 +487,10 @@ ${config.objective}
 Areas observed:
 ${config.categories.join(", ")}
 
-Foundational market context:
-<foundational_context>
-${observerContext}
-</foundational_context>
+Raw Observer evidence:
+<observer_evidence>
+${embeddedObserverEvidence}
+</observer_evidence>
 
 The Observer's findings, in the order it produced them:
 
@@ -463,10 +498,11 @@ The Observer's findings, in the order it produced them:
 ${observerFindings}
 </observer_findings>
 
-The findings above are the Observer's own reasoning at each step followed by its final
-answer. They are the complete inventory. Raw tool output is deliberately not included:
-it is far larger than this task can reliably process, and the Observer already read
-it.
+The evidence is the raw material the Observer read. The findings are its reading of it:
+reasoning at each step, then its final answer.
+
+The Observer merges duplicates across sources, so its final answer is condensed. The
+evidence has not been merged and still holds what the merge collapsed.
 
 YOUR ROLE: STRUCTURAL FORMATTING ONLY
 
@@ -513,12 +549,12 @@ CORE RULES:
 - Do not assign importance scores, prioritize observations, determine research eligibility, or decide which findings should proceed downstream.
 - Do not reject an observation because its type is ambiguous. Use "other" when no permitted type fits reliably.
 
-6. USE THE FINDINGS AND CONTEXT CORRECTLY
-- The Observer's findings are the inventory to preserve. Nothing outside them is an observation.
-- The Observer's final answer is a condensed view of what it found. Where it condensed, the earlier step reasoning often holds the fuller form - use it to recover detail rather than treating the final answer as the limit of what was found.
-- Foundational context describes deterministic market conditions. It may provide context but does not independently establish that an external event occurred.
-- Do not perform additional research, investigate claims, or expand observations beyond the supplied material.
-- Do not create new observations from foundational context that were not part of the Observer's findings.
+6. USE THE EVIDENCE AND FINDINGS CORRECTLY
+- The Observer's final answer is condensed; it merged duplicates across sources. The evidence was not merged and still contains what the merge collapsed. Read the evidence for signals the findings left out.
+- Where the findings and the evidence disagree, the evidence is what was actually reported.
+- A raw tool result is not automatically an observation. A tool call, a search query, a single headline fragment with no distinct development, or a duplicate of something already reported does not become a new observation.
+- Report one observation per distinct signal, not one per mention. Twenty sources carrying the same development is one observation; twenty distinct developments are twenty observations.
+- Do not perform additional research or investigate claims beyond the supplied material.
 
 7. VERIFY COMPLETENESS BEFORE RESPONDING
 - Compare the output against the complete Observer inventory.
@@ -559,13 +595,13 @@ The output is a complete normalized inventory for downstream processing, not a c
   // inlines the notes as text.
   await runLog.record("formatter", {
     prompt: formatterDevPrompt
-      .replace(observerContext, FOUNDATIONAL_CONTEXT_MARKER)
+      .replace(embeddedObserverEvidence, OBSERVER_EVIDENCE_MARKER)
       .replace(observerFindings, OBSERVER_FINDINGS_MARKER),
 
     embeddedValues: {
-      [FOUNDATIONAL_CONTEXT_MARKER]: "observerContext, verbatim",
-
       [RESEARCH_NOTES_MARKER]: "the notes recorded in the research_notes entry",
+
+      [OBSERVER_EVIDENCE_MARKER]: `${OBSERVER_EVIDENCE_FORMAT} over the Observer tool evidence`,
 
       [OBSERVER_FINDINGS_MARKER]:
         "the Observer reasoning from each step, then its final answer; see the step " +
