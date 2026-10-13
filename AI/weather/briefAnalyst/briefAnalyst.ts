@@ -47,6 +47,7 @@ import {
   getAgenticTooling,
   getFullAgenticContext,
 } from "../../utils/general.tools.js";
+import { upsertBrief } from "../../utils/weather/dbFetcher.brief.js";
 import { fetchResearchForSet } from "../../utils/weather/dbFetcher.researcher.js";
 import { parseStoredResearch } from "../../utils/weather/researcher.js";
 import { fetchObservationsForSet } from "../../utils/weather/dbFetcher.triage.js";
@@ -405,6 +406,16 @@ export type BriefAnalystOutcome = {
    * shaped differently.
    */
   aiContextBrief: unknown;
+
+  /**
+   * The `weather.daily_briefs` row id, or `null` when nothing was written.
+   *
+   * Null covers three different situations the run log tells apart: a brief failed so
+   * the row could not be filled, the database was unreachable, or the table was
+   * missing. The run log's `brief_persisted`, `brief_not_persisted` and
+   * `brief_persistence_failure` sections say which.
+   */
+  storedBriefId: string | null;
 };
 
 /**
@@ -642,6 +653,10 @@ ${row.research}
       analystSeconds: 0,
       humanBrief: null,
       aiContextBrief: null,
+      // No brief was generated, so there is nothing to persist. Written as `null`
+      // rather than left to the caller, because the row cannot exist without all
+      // three payloads and weather.daily_briefs has no column for a partial brief.
+      storedBriefId: null,
     };
   }
 
@@ -886,6 +901,65 @@ ${row.research}
   const humanBrief = produced.get("human_brief") ?? null;
   const aiContextBrief = produced.get("ai_context_brief") ?? null;
 
+  // --------------------------------------------------
+  // Persist
+  // --------------------------------------------------
+  //
+  // The run log records what happened; the row is the product. Both briefs and the
+  // analyst output go into weather.daily_briefs together, so a day's intelligence is
+  // one row rather than three artifacts to keep in step.
+  let storedBriefId: string | null = null;
+
+  try {
+    const stored = await upsertBrief(intelligenceSet, {
+      // Stored parsed rather than as the analyst's raw text, because the column is
+      // JSONB and a model response is not guaranteed to be valid JSON. When the parse
+      // failed the text is kept whole under `rawText` instead, so the evidence
+      // survives rather than being dropped for not fitting the column.
+      rawAnalystOutput: analystParsed
+        ? (JSON.parse(analystJson) as unknown)
+        : { rawText: analystJson },
+
+      aiContextBrief: aiContextBrief?.brief ?? null,
+      humanBrief: humanBrief?.brief ?? null,
+    });
+
+    if (stored === null) {
+      // upsertBrief refuses a partial write rather than filling a NOT NULL column with
+      // an empty object, so this means a brief failed above.
+      await runLog.record("brief_not_persisted", {
+        reason:
+          "weather.daily_briefs requires all three payloads and at least one brief " +
+          "did not produce one. The run log holds everything that was generated.",
+        analystParsed,
+        humanBriefAvailable: humanBrief !== null,
+        aiContextBriefAvailable: aiContextBrief !== null,
+      });
+    } else {
+      storedBriefId = stored.id;
+
+      await runLog.record("brief_persisted", {
+        id: stored.id,
+        briefDate: stored.brief_date,
+        intelligenceSetId: stored.intelligence_set_id,
+      });
+    }
+  } catch (error) {
+    // Not rethrown. The briefs are generated and already in the run log by this
+    // point, so a database problem should cost the row, not the twenty minutes of
+    // analysis that produced it.
+    const message = error instanceof Error ? error.message : String(error);
+
+    await runLog.record("brief_persistence_failure", {
+      error: message,
+      name: error instanceof Error ? error.name : typeof error,
+    });
+
+    console.log(
+      `[brief] Brief persistence failed for domain: ${config.domain} - ${message.slice(0, 160)}`,
+    );
+  }
+
   await runLog.finish();
 
   await runLog.record("summary", {
@@ -897,6 +971,7 @@ ${row.research}
       human_brief: humanBrief !== null,
       ai_context_brief: aiContextBrief !== null,
     },
+    persisted: storedBriefId,
   });
 
   console.log(
@@ -904,7 +979,8 @@ ${row.research}
       `${storedResearch.length} research record(s), ${contextTokens} context tokens, ` +
       `analyst ${analystSeconds}s, ` +
       `human brief ${humanBrief === null ? "failed" : `${humanBrief.seconds}s`}, ` +
-      `AI context brief ${aiContextBrief === null ? "failed" : `${aiContextBrief.seconds}s`}`,
+      `AI context brief ${aiContextBrief === null ? "failed" : `${aiContextBrief.seconds}s`}, ` +
+      `${storedBriefId === null ? "not persisted" : `persisted as ${storedBriefId}`}`,
   );
 
   return {
@@ -917,5 +993,6 @@ ${row.research}
     analystSeconds,
     humanBrief: humanBrief?.brief ?? null,
     aiContextBrief: aiContextBrief?.brief ?? null,
+    storedBriefId,
   };
 };

@@ -15,22 +15,24 @@ import { runBriefAnalyst } from "./briefAnalyst/briefAnalyst.js";
 
 
 export async function runWeather(): Promise<void> {
+  // const briefSetId: string | null = "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1";
+
+  // const briefSet: DailySet =
+  //   briefSetId === null
+  //     ? intelligenceSet
+  //     : ((await findDailySetById(briefSetId)) ?? intelligenceSet);
+
   const intelligenceSet = await getDailySet();
 
+
   const cryptoDomain = observerConfigs.crypto;
+  await runObserver(intelligenceSet, cryptoDomain);
+  await runTriage(intelligenceSet, cryptoDomain.domain);
+  await runResearcher(intelligenceSet, cryptoDomain.domain);
+  await runBriefAnalyst(intelligenceSet, cryptoDomain)
 
-  // await runObserver(intelligenceSet, cryptoDomain);
-  // await runTriage(intelligenceSet, cryptoDomain.domain);
-  // await runResearcher(intelligenceSet, cryptoDomain.domain);
 
-  const briefSetId: string | null = "6fdf01b4-cd30-4ef6-b505-55ac9ba4a9b1";
-
-  const briefSet: DailySet =
-    briefSetId === null
-      ? intelligenceSet
-      : ((await findDailySetById(briefSetId)) ?? intelligenceSet);
-
-  await runBriefAnalyst(briefSet, cryptoDomain)
+  
 }
 
 const isDirectRun =
