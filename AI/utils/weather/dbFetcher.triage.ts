@@ -129,3 +129,27 @@ export const enableResearchForIds = async (ids: string[]): Promise<number> => {
 
   return rowCount ?? 0;
 };
+
+/**
+ * Clears Triage's verdict for one intelligence set.
+ *
+ * Triage has no table of its own - a verdict is `research_enabled` on an observation
+ * row - so deleting triage data means putting that flag back to false. The rows
+ * themselves are left alone: they are the Observer's output, and the Observer has its
+ * own delete.
+ *
+ * @returns How many rows changed from true back to false.
+ */
+export const resetResearchFlagsForSet = async (intelligenceSet: DailySet): Promise<number> => {
+  const { rowCount } = await pool.query(
+    `
+      UPDATE weather.observations
+      SET research_enabled = FALSE
+      WHERE intelligence_set_id = $1::uuid
+        AND research_enabled = TRUE;
+    `,
+    [intelligenceSet.id],
+  );
+
+  return rowCount ?? 0;
+};

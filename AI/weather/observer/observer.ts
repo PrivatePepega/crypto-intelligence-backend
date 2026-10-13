@@ -9,6 +9,7 @@ import { type ObserverConfig } from "../weather.config.js";
 import { getAgenticContext, getAgenticTooling, estimateTokens } from "../../utils/general.tools.js";
 
 import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
+import { withModelRetry } from "../../utils/weather/retry.js";
 
 import { createObserverRunLog, persistObservations } from "../../utils/weather/observer.js";
 
@@ -21,7 +22,7 @@ import {
 // --------------------------------------------------
 // Observer
 // --------------------------------------------------
-const modelPick = models.openrouter;
+const modelPick = models.openrouterFree;
 
 const MAX_AGENT_STEPS = 5;
 
@@ -293,38 +294,64 @@ Identify meaningful developments and produce observations.
   // Observer
   // --------------------------------------------------
 
-  const observerResult = streamText({
-    model: modelPick,
+  // The whole call is retried rather than the individual steps: the step loop belongs
+  // to the SDK, so a stream that has already started emitting cannot be resumed, and
+  // a failure part-way through can only be recovered by making the call again.
+  //
+  // `streamText` is lazy - it returns before the request is made - so the retry has to
+  // wrap the consumption of the stream, not its creation. Wrapping the creation would
+  // return instantly, five times, without ever asking the provider anything.
+  const callObserver = async () => {
+    const stream = streamText({
+      model: modelPick,
 
-    instructions: observerSystemPrompt,
+      instructions: observerSystemPrompt,
 
-    prompt: observerDevPrompt,
+      prompt: observerDevPrompt,
 
-    tools: getAgenticTooling(config),
+      tools: getAgenticTooling(config),
 
-    stopWhen: isStepCount(MAX_AGENT_STEPS),
+      stopWhen: isStepCount(MAX_AGENT_STEPS),
 
-    onStepEnd: async (step) => {
-      await runLog.record("step", normalizeStep(step));
+      onStepEnd: async (step) => {
+        await runLog.record("step", normalizeStep(step));
 
-      // The SDK calls this per step and waits for it to resolve before starting
-      // the next one, so awaiting here is what actually paces the run.
-      //
-      // Skipped when the step made no tool calls: the agent has stopped searching
-      // and answered, so there is no next request to space out. The SDK also
-      // cannot tell this callback whether the step was the last, which is why the
-      // tool-call count is used instead of a step number.
-      if (STEP_DELAY_MS > 0 && step.toolCalls.length > 0) {
-        await sleep(STEP_DELAY_MS);
-      }
-    },
+        // The SDK calls this per step and waits for it to resolve before starting
+        // the next one, so awaiting here is what actually paces the run.
+        //
+        // Skipped when the step made no tool calls: the agent has stopped searching
+        // and answered, so there is no next request to space out. The SDK also
+        // cannot tell this callback whether the step was the last, which is why the
+        // tool-call count is used instead of a step number.
+        if (STEP_DELAY_MS > 0 && step.toolCalls.length > 0) {
+          await sleep(STEP_DELAY_MS);
+        }
+      },
+    });
+
+    return {
+      text: await stream.text,
+      steps: await stream.steps,
+      usage: await stream.usage,
+    };
+  };
+
+  // A blank response is a failure, not an empty day. A provider under load can answer
+  // successfully with nothing, and the run then injects zero rows and reports success -
+  // which is exactly how a 503 became a clean-looking run with no observations.
+  //
+  // Steps recorded by an attempt that then failed stay in the run log. They are left
+  // rather than rolled back because they are evidence of what the provider actually
+  // did, and the retry lines say how many attempts there were.
+  const observerRun = await withModelRetry(callObserver, `observer (${config.domain})`, {
+    isEmptyResult: (result) => result.text.trim().length === 0,
   });
 
-  const observerText = await observerResult.text;
+  const observerText = observerRun.text;
 
-  const observerSteps = await observerResult.steps;
+  const observerSteps = observerRun.steps;
 
-  const observerUsage = await observerResult.usage;
+  const observerUsage = observerRun.usage;
 
   // The formatter consumes the research notes rather than this raw text, so the
   // notes are the compression of it. Recorded here because it is the Observer's
@@ -519,13 +546,21 @@ The output is a complete normalized inventory for downstream processing, not a c
   // Formatter
   // --------------------------------------------------
 
-  const formatterResult = await generateText({
-    model: modelPick,
+  // Retried, and a blank response counts as a failure. Without this the observer
+  // parsed an empty string into zero observations and reported a clean run - the
+  // exact shape the 503 produced.
+  const formatterResult = await withModelRetry(
+    () =>
+      generateText({
+        model: modelPick,
 
-    instructions: formatterSystemPrompt,
+        instructions: formatterSystemPrompt,
 
-    prompt: formatterDevPrompt,
-  });
+        prompt: formatterDevPrompt,
+      }),
+    `observer formatter (${config.domain})`,
+    { isEmptyResult: (run) => run.text.trim().length === 0 },
+  );
 
   const finalText = formatterResult.text;
 

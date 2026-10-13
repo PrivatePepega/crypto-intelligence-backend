@@ -200,3 +200,21 @@ export const fetchResearchForSet = async (intelligenceSet: DailySet): Promise<St
 
   return rows as StoredResearch[];
 };
+
+/**
+ * Deletes every research record filed under one intelligence set.
+ *
+ * Must run before the observations are deleted: `weather.research.observation_id` is
+ * `ON DELETE RESTRICT`, so deleting an observation that still has research fails
+ * rather than cascading.
+ *
+ * @returns How many rows were removed.
+ */
+export const deleteResearchForSet = async (intelligenceSet: DailySet): Promise<number> => {
+  const { rowCount } = await pool.query(
+    `DELETE FROM weather.research WHERE intelligence_set_id = $1::uuid;`,
+    [intelligenceSet.id],
+  );
+
+  return rowCount ?? 0;
+};

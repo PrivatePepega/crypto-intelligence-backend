@@ -1,0 +1,690 @@
+{
+  "date": "2026-10-13",
+  "marketDomain": "macro",
+  "intelligenceSetId": "0eaad436-d550-4726-8331-830c5d3dac34",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-13T14:14:15.810Z",
+  "recordSection": "triage",
+  "finishReason": "stop",
+  "considered": 43,
+  "promoted": 26,
+  "importantIds": [
+    "4c080f7a-d120-4595-a895-0fddeba36b7b",
+    "4a051abf-016f-4a86-b44e-328c0c9e953e",
+    "64f6a227-88cb-41e2-b431-75c2b23a8cd9",
+    "e592884f-98b6-4170-ae1e-28ec3c0cd5ea",
+    "d12cfd18-ea96-4f9f-bd5a-60d62bb5a9ac",
+    "a3f7b7e4-1bb6-4d67-96b6-944d14264c35",
+    "5f53a9ad-f086-446f-b0d7-476e351038c2",
+    "693fbd0f-00ab-468f-9937-3997776bf162",
+    "3b4547c7-7340-4622-a372-3bc21aae87f2",
+    "d3cca9e8-1e9c-4dac-a68f-231089a7d649",
+    "f3995502-d779-4e1b-81a3-90ae1d411fa6",
+    "480cbe43-0357-4a90-87a2-732ede51a878",
+    "ce3c1417-f6ab-4023-b420-b1f58700bf7e",
+    "f511db1f-bb65-434b-af59-0f2eb88abab9",
+    "335cb6d3-8af6-4f07-986d-ca72cf131261",
+    "5cd25fcf-1236-467e-9812-6145bd1966be",
+    "d2e486ff-b77e-4d73-b6ff-4bf28548b3fb",
+    "431834f1-b8f9-4ef7-ab3d-ac79c8880ab2",
+    "e065a851-5d6d-4ce7-a88b-f795ce35ea06",
+    "38a01a77-4178-4c48-b503-43d0ea8fdfac",
+    "a38a2fd0-d0e7-447c-968c-16bde88f7a07",
+    "7df329ec-2268-4916-b220-247f3e3f1cba",
+    "d800051d-3573-4676-8f17-8aff3f1aedf7",
+    "5886b04b-daba-4f3e-a10a-a282c804c332",
+    "85ec368a-c4f1-4d15-9022-e834b261745a",
+    "1d46d5ee-bb5e-479c-b503-beeda595988a"
+  ],
+  "unknownIds": [],
+  "missingIds": [],
+  "decisions": [
+    {
+      "id": "4c080f7a-d120-4595-a895-0fddeba36b7b",
+      "important": true,
+      "reason": "First Fed rate hike in over three years signals a shift in monetary policy stance."
+    },
+    {
+      "id": "4a051abf-016f-4a86-b44e-328c0c9e953e",
+      "important": true,
+      "reason": "Liquidity draining from the reverse repo facility indicates tightening financial conditions."
+    },
+    {
+      "id": "64f6a227-88cb-41e2-b431-75c2b23a8cd9",
+      "important": true,
+      "reason": "Cleveland Fed President's hawkish remarks could influence expectations for further tightening."
+    },
+    {
+      "id": "591b07aa-6c08-4c29-9527-5b14e21395af",
+      "important": false,
+      "reason": "Governor Waller's comments are speculative and do not constitute a concrete policy change."
+    },
+    {
+      "id": "e592884f-98b6-4170-ae1e-28ec3c0cd5ea",
+      "important": true,
+      "reason": "FOMC minutes indicating consensus for additional hikes suggest future policy direction."
+    },
+    {
+      "id": "51aadcf6-ce14-4701-bfd0-ad439639f030",
+      "important": false,
+      "reason": "Market pricing of hike odds is a routine reflection of expectations without new information."
+    },
+    {
+      "id": "cbd169f6-9956-4e85-a7fd-6a2313feda3f",
+      "important": false,
+      "reason": "End of forward guidance is a procedural change, not a material market event."
+    },
+    {
+      "id": "d12cfd18-ea96-4f9f-bd5a-60d62bb5a9ac",
+      "important": true,
+      "reason": "Upcoming CPI release is a key inflation data point that could move markets."
+    },
+    {
+      "id": "a3f7b7e4-1bb6-4d67-96b6-944d14264c35",
+      "important": true,
+      "reason": "Core PCE above target indicates persistent inflation pressure."
+    },
+    {
+      "id": "5f53a9ad-f086-446f-b0d7-476e351038c2",
+      "important": true,
+      "reason": "PPI jump is a significant surprise that may feed into consumer inflation."
+    },
+    {
+      "id": "cf7ee72a-3b64-4b71-8b9b-2e8497115dda",
+      "important": false,
+      "reason": "Breakeven inflation stability adds little new insight."
+    },
+    {
+      "id": "693fbd0f-00ab-468f-9937-3997776bf162",
+      "important": true,
+      "reason": "Consumer sentiment at record low and rising inflation expectations signal weakening demand."
+    },
+    {
+      "id": "3b4547c7-7340-4622-a372-3bc21aae87f2",
+      "important": true,
+      "reason": "Geopolitical tension in the Middle East raises oil risk premium and could affect global inflation."
+    },
+    {
+      "id": "d3cca9e8-1e9c-4dac-a68f-231089a7d649",
+      "important": true,
+      "reason": "Payrolls miss and rising unemployment indicate labor market weakness."
+    },
+    {
+      "id": "f3995502-d779-4e1b-81a3-90ae1d411fa6",
+      "important": true,
+      "reason": "Hourly earnings slowdown and negative real wages point to deteriorating wage‑price dynamics."
+    },
+    {
+      "id": "480cbe43-0357-4a90-87a2-732ede51a878",
+      "important": true,
+      "reason": "Job openings decline suggests weakening labor demand."
+    },
+    {
+      "id": "b8837572-2c06-488b-b865-b229f41eadc7",
+      "important": false,
+      "reason": "Initial claims remain within normal range and do not constitute a notable shift."
+    },
+    {
+      "id": "1a4040d2-c271-46fc-b81e-abc28f851d5d",
+      "important": false,
+      "reason": "Labor force participation change is minor and routine."
+    },
+    {
+      "id": "ce3c1417-f6ab-4023-b420-b1f58700bf7e",
+      "important": true,
+      "reason": "Q2 GDP slowdown and lower GDPNow forecast indicate decelerating growth."
+    },
+    {
+      "id": "96b96eb4-826b-4db3-97a9-ced53fdaf894",
+      "important": false,
+      "reason": "Retail sales growth is modest and driven largely by fuel, offering limited macro insight."
+    },
+    {
+      "id": "8e73d34e-5231-4b72-b359-22266bec550a",
+      "important": false,
+      "reason": "Personal income and PCE numbers are routine monthly reports without a clear shock."
+    },
+    {
+      "id": "13576c00-74c7-49cf-ba8f-6a80b3e8070f",
+      "important": false,
+      "reason": "Industrial production flatness is expected given broader slowdown."
+    },
+    {
+      "id": "f511db1f-bb65-434b-af59-0f2eb88abab9",
+      "important": true,
+      "reason": "Mortgage rate surge and housing market stress could feed into broader economic weakness."
+    },
+    {
+      "id": "335cb6d3-8af6-4f07-986d-ca72cf131261",
+      "important": true,
+      "reason": "Yield curve bear steepening to multi‑decade highs signals tightening financial conditions."
+    },
+    {
+      "id": "5cd25fcf-1236-467e-9812-6145bd1966be",
+      "important": true,
+      "reason": "Treasury doubling buybacks to support long‑end liquidity is a notable policy action."
+    },
+    {
+      "id": "2c04ab3f-41bb-475d-a4c3-d51c58db4859",
+      "important": false,
+      "reason": "Credit spread narrowing is a marginal move given overall rate environment."
+    },
+    {
+      "id": "2b63f622-40a1-4599-a79a-f05945703303",
+      "important": false,
+      "reason": "Equities near highs and market sentiment metrics are routine market data."
+    },
+    {
+      "id": "b3634f3c-8e92-4183-bf74-22f1d649a130",
+      "important": false,
+      "reason": "Asset manager positioning comment does not introduce new macro fundamentals."
+    },
+    {
+      "id": "d2e486ff-b77e-4d73-b6ff-4bf28548b3fb",
+      "important": true,
+      "reason": "Strong dollar levels affect import prices and global capital flows."
+    },
+    {
+      "id": "431834f1-b8f9-4ef7-ab3d-ac79c8880ab2",
+      "important": true,
+      "reason": "Escalation in the Iran‑Hormuz conflict raises geopolitical risk for energy markets."
+    },
+    {
+      "id": "e065a851-5d6d-4ce7-a88b-f795ce35ea06",
+      "important": true,
+      "reason": "Trump‑Putin diesel waiver and EU sanctions expansion create significant geopolitical and energy market uncertainty."
+    },
+    {
+      "id": "38a01a77-4178-4c48-b503-43d0ea8fdfac",
+      "important": true,
+      "reason": "Houthi attacks on Saudi infrastructure add to regional instability and oil supply risk."
+    },
+    {
+      "id": "a38a2fd0-d0e7-447c-968c-16bde88f7a07",
+      "important": true,
+      "reason": "US threat to cut intelligence and weapons aid to Ukraine could alter conflict dynamics."
+    },
+    {
+      "id": "7df329ec-2268-4916-b220-247f3e3f1cba",
+      "important": true,
+      "reason": "Four‑point NATO‑US peace proposal for Ukraine represents a major diplomatic development."
+    },
+    {
+      "id": "d800051d-3573-4676-8f17-8aff3f1aedf7",
+      "important": true,
+      "reason": "NATO commander’s warning of a strong response to Russian aggression raises security risk premiums."
+    },
+    {
+      "id": "5886b04b-daba-4f3e-a10a-a282c804c332",
+      "important": true,
+      "reason": "IMF flagging AI correction, war, and debt risks signals potential macroheadwinds."
+    },
+    {
+      "id": "7a9f1588-4e0f-4b9b-a533-4f84b3a5ca5d",
+      "important": false,
+      "reason": "China memory chip development and OpenAI revenue note are sector‑specific, not macro‑wide."
+    },
+    {
+      "id": "6ab7d06d-51b1-4f12-994f-7ff1a0fb454a",
+      "important": false,
+      "reason": "Relationship summary repeats already captured labour‑inflation tension without new data."
+    },
+    {
+      "id": "d4e0a57e-e3ae-43b6-ada2-0b91509e008d",
+      "important": false,
+      "reason": "Observation of long‑end rates doing policy work is a commentary, not a distinct event."
+    },
+    {
+      "id": "ad36426c-01f4-45b4-8f5d-3b6d58aa9458",
+      "important": false,
+      "reason": "AI‑capex versus inflation relationship is analytical, not a fresh market development."
+    },
+    {
+      "id": "e12acd69-0ca1-4427-88b4-177a64c04837",
+      "important": false,
+      "reason": "Geopolitics‑energy‑inflation chain is already covered by other specific events."
+    },
+    {
+      "id": "85ec368a-c4f1-4d15-9022-e834b261745a",
+      "important": true,
+      "reason": "US deficit at 6% of GDP and rising debt service costs pose fiscal sustainability concerns."
+    },
+    {
+      "id": "1d46d5ee-bb5e-479c-b503-beeda595988a",
+      "important": true,
+      "reason": "Pricing of a 2027 hike above the Fed path indicates market expectations for higher future rates."
+    }
+  ],
+  "rows": [
+    {
+      "id": "4c080f7a-d120-4595-a895-0fddeba36b7b",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Federal Funds Rate at 3.88% (effective, Oct 2), up 13 bps from prior month (3.75%), above 3-mo MA (3.67%) and 12-mo MA (3.71%). First hike cycle in >3 years underway.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "4a051abf-016f-4a86-b44e-328c0c9e953e",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Fed Balance Sheet roughly stable: Total assets $6.743T (Sep 30), -$4.7B m/m; Reserve balances $2.948T, +$17.9B w/w. Reverse repo usage collapsed to $1B (Oct 5) from $1.5B prior day, vs 6-mo avg $2.6B and 12-mo avg $3.5B — liquidity draining from facility.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "64f6a227-88cb-41e2-b431-75c2b23a8cd9",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Cleveland Fed President Beth Hammack (2026 voter) turned explicitly hawkish at NABE (Oct 12): prefers 'smaller adjustments relatively quickly' to anchor inflation expectations; says policy not restrictive enough; neutral rate 'may be higher, but hard to determine'; argues rate hikes unlikely to address main inflation drivers (tariffs, AI infrastructure demand). Stopped short of backing October hike.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "591b07aa-6c08-4c29-9527-5b14e21395af",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Fed Governor Christopher Waller: Surging long-term yields reflect strong growth and AI investment boom, not unanchored inflation expectations. Estimates diminished safe-haven premium adding 50–70 bps to yields (unverified). Expects AI capex cycle to continue 2–3 years. Still sees inflation 'too high'; further hikes possible if data warrant.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "e592884f-98b6-4170-ae1e-28ec3c0cd5ea",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "September FOMC Minutes (released Oct 7): Most participants judged further tightening before year-end 'may be appropriate'; majority saw at least one more hike in 2026. Unanimous 25 bp hike to 3.75–4.00% on Sep 16.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "51aadcf6-ce14-4701-bfd0-ad439639f030",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Market pricing: October hike odds ~19–22% (down from 64% late Sep); December hike fully priced; ~75–80 bps total tightening priced by end-2027. Fed blackout begins Oct 17 ahead of Oct 27–28 meeting.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "cbd169f6-9956-4e85-a7fd-6a2313feda3f",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Fed Chair Kevin Warsh: Ended forward guidance; declined to submit dot-plot projections. IMF fireside chat in Bangkok Oct 16 (00:30 ET) — last scheduled Fed speech before blackout.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "d12cfd18-ea96-4f9f-bd5a-60d62bb5a9ac",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "CPI (Aug, latest): 334.13, +1.32 m/m; Core CPI 337.76, +0.97 m/m. Both above 3-mo and 6-mo MAs. September CPI due Wed Oct 14 — consensus headline +0.5–0.6% m/m (3.6–3.7% y/y), core +0.2% m/m (down from 0.3%).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "a3f7b7e4-1bb6-4d67-96b6-944d14264c35",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Core PCE (Jul): 130.46, +0.33 m/m; 3-mo annualized run rate 2.7–2.8% (tracking above target). MNI: core PCE tracking in high 0.20s m/m.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "5f53a9ad-f086-446f-b0d7-476e351038c2",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "PPI (Aug): 287.93, +2.75 m/m — significant monthly jump, +6.3 vs 6-mo MA, +16.1 vs 12-mo MA. Pipeline pressure elevated.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "cf7ee72a-3b64-4b71-8b9b-2e8497115dda",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Breakeven inflation stable: 5-yr 2.36%, 10-yr 2.36% (Oct 5) — little movement despite oil volatility. 1-yr breakeven ~2.90%, 5-yr ~2.41% (per market sources).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "693fbd0f-00ab-468f-9937-3997776bf162",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "University of Michigan Consumer Sentiment (Aug): 51.7, -3.5 m/m. Current conditions index at record low 44.7; 1-yr inflation expectations 4.7% (highest since May).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "3b4547c7-7340-4622-a372-3bc21aae87f2",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Energy: WTI ~$93, Brent ~$105–106 (Oct 12–13). Iran war, Hormuz disruptions, Houthi attacks on Saudi Arabia keeping risk premium elevated. G7 to release 100M barrels from SPR.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "d3cca9e8-1e9c-4dac-a68f-231089a7d649",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "September Payrolls: +29K (Oct 2 release) vs ~90K consensus — weakest print in months. Unemployment rose to 4.2% from 4.1%. Downward revisions: Jul -10K (was +21K), Aug 133K (was 162K) — combined -60K.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "f3995502-d779-4e1b-81a3-90ae1d411fa6",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Average Hourly Earnings: +0.1% m/m (vs 0.3% exp), +3.0% y/y — slowest since May 2021. Real wages negative vs 3.4% headline inflation.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "480cbe43-0357-4a90-87a2-732ede51a878",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Job Openings (Aug): 7.079M, -256K m/m — notable decline, below 3-mo MA (7.351M). Quits/Layoffs data pending.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "b8837572-2c06-488b-b865-b229f41eadc7",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Initial Jobless Claims (w/e Sep 26): 197K — low, below 30-day MA (203K). ADP private payrolls (4-wk avg) 24.75K.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "1a4040d2-c271-46fc-b81e-abc28f851d5d",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Labor Force Participation: 61.8% (Sep), +0.2 pp m/m. Household survey showed employment +406K, labor force +485K — mixed signal vs payroll weakness.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "ce3c1417-f6ab-4023-b420-b1f58700bf7e",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Real GDP Growth (Q2): 2.2% annualized (down from 2.5% Q1). Atlanta Fed GDPNow Q3 tracking 3.6% (down from 5%+ in July).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "96b96eb4-826b-4db3-97a9-ced53fdaf894",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Retail Sales (Aug): $737.8B, +$8.2B m/m — but prior month's +1.2% largely fuel-driven; real spending may be flatter.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "8e73d34e-5231-4b72-b359-22266bec550a",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Personal Income (Aug): $27.627T, +$66.6B m/m. PCE $22.309T, +$190.8B m/m.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "13576c00-74c7-49cf-ba8f-6a80b3e8070f",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Industrial Production (Aug): 103.07, essentially flat m/m (+0.02).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "f511db1f-bb65-434b-af59-0f2eb88abab9",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Housing: 30-yr mortgage 7.28% (Oct 1), +25 bps w/w, +58 bps vs 30-day MA (6.69%). Freddie Mac 30-yr hit 7.4% Oct 8. Redfin: pending home sales -4% m/m Sep (lowest since 2014), all 50 metros down; active listings highest since Mar 2020; contract cancellation rate 14.5% (record). Building permits -30K, starts -34K, existing sales -80K. Home Price Index still rising (+0.4 m/m Jul).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "335cb6d3-8af6-4f07-986d-ca72cf131261",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Yield Curve Bear Steepening: 2-yr 4.83% (+5 bps w/w), 5-yr 5.06% (+5 bps), 10-yr 5.28% (+4 bps), 30-yr ~5.55%. Real 10-yr 2.92% (+4 bps). Yields at multi-decade highs; long end leading.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "5cd25fcf-1236-467e-9812-6145bd1966be",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "US Treasury doubling debt buyback program to provide liquidity to long-end as 10/20/30-yr yields hit multi-decade highs.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "2c04ab3f-41bb-475d-a4c3-d51c58db4859",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Credit Spreads Narrowing: HY OAS 3.10% (-14 bps), IG OAS 0.85% (-1 bp) — despite higher rates, risk appetite holding.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "2b63f622-40a1-4599-a79a-f05945703303",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Equities Near Highs: S&P 500 7,723 (+0.7% Oct 2), NASDAQ 27,191 (+1.2%). VIX 15.31 (-1.08). CNN Fear & Greed 43 (Fear); AAII Bearish 46.5% > Bullish 34.6%.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "b3634f3c-8e92-4183-bf74-22f1d649a130",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "BlackRock: Cut US equities to neutral (from overweight), upgraded short-dated Treasuries to overweight. Says 160 bps of Fed tightening priced in is 'overdone'; 10-yr yield up 110 bps YTD to ~5.25% creates value at front end.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "d2e486ff-b77e-4d73-b6ff-4bf28548b3fb",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Dollar Strength: DXY ~102.6 (near yearly high), Broad USD Index 121.38. EUR/USD 1.1150 (17-month low). Driven by hawkish Fed rhetoric + oil/geopolitics.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "431834f1-b8f9-4ef7-ab3d-ac79c8880ab2",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Iran War / Strait of Hormuz: Ongoing conflict, shipping/insurance costs >1/3 cargo value on some routes. Iran fortifying nuclear sites (Pickaxe Mountain, Natanz), threatening wider retaliation if US strikes resume after Nov midterms. US 3rd carrier group + Marines deploying to region. US-Iran interim Hormuz reopening talks ongoing; Iran reviewing US response.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "e065a851-5d6d-4ce7-a88b-f795ce35ea06",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Trump-Putin Diesel Deal (Oct 9): US temporarily waived sanctions on Russian diesel (300K tonnes Oct, 500K Nov, 1M Dec). Announced 'energy ceasefire' Russia-Ukraine — neither side confirmed; Ukraine says Russia struck 6+ energy facilities since. EU approved largest Russia sanctions expansion (1,569 entities/individuals) Oct 12, pushing back on diesel deal. UK PM accused Iran of plot vs RAF Fairford.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "38a01a77-4178-4c48-b503-43d0ea8fdfac",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Saudi Arabia under Houthi missile/drone attacks: Riyadh airport closed until Oct 17; air defense investigation underway. At least 18 deaths recent strikes.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "a38a2fd0-d0e7-447c-968c-16bde88f7a07",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "US Threatening Ukraine: Per FT/Reuters, US officials warned allies/Ukraine of cutting intelligence sharing and PURL weapons channel if refinery strikes continue.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "7df329ec-2268-4916-b220-247f3e3f1cba",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "US-Europe Four-Point Ukraine Peace Proposal (per WashPost): 1) Ukraine reconstruction, 2) Mutual security guarantees (Art 5-style), 3) Energy integration (Russia-EU pipeline, Ukraine transit fees), 4) Ceasefire on current front lines (ceding occupied territory to Russia).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "d800051d-3573-4676-8f17-8aff3f1aedf7",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "NATO: Gen. Grynkewich (SACEUR) at Warsaw Forum: 'We will block, blunt, break enemy forces' if Russia attacks allies. Russia nuclear threats re Kaliningrad.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "5886b04b-daba-4f3e-a10a-a282c804c332",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "IMF: Flags risks to global economy from AI market correction, war, debt. BoJ expected to hike gradually; RBA leaves door open to further hikes.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "7a9f1588-4e0f-4b9b-a533-4f84b3a5ca5d",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "China: CXMT developing rival server memory — pressuring SK Hynix/Samsung. OpenAI annualized revenue reportedly ~$50B (below $68–70B circulating).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "6ab7d06d-51b1-4f12-994f-7ff1a0fb454a",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "relationship",
+      "observation": "Policy Dilemma: Fed boxed between cooling labor market (weak payrolls, slowing wages) and persistent inflation (core PCE ~3%, core CPI ~2.5%, services sticky). Hammack/Waller favor continued tightening; Williams/Jefferson urge patience.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "d4e0a57e-e3ae-43b6-ada2-0b91509e008d",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "relationship",
+      "observation": "Long-End Doing Fed's Work: 30-yr mortgage 7.4%, housing freezing, real yields rising — financial conditions tightening without further hikes.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "ad36426c-01f4-45b4-8f5d-3b6d58aa9458",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "relationship",
+      "observation": "AI Capex vs Inflation: Waller argues AI investment driving real rates up; Hammack says AI demand outside rate tool. Both acknowledge AI adding to specific price pressures (chips, energy, data centers).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "e12acd69-0ca1-4427-88b4-177a64c04837",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "relationship",
+      "observation": "Geopolitics → Energy → Inflation → Rates: Iran war, Hormuz, Russia-Ukraine, Trump diesel deal all feeding oil volatility. Oil breakevens not tracking crude — market pricing demand destruction.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "85ec368a-c4f1-4d15-9022-e834b261745a",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Fiscal/Debt: US deficit ~6% GDP; Treasury buybacks expanding; debt service costs rising with yields. Japan/UK/Italy flagged as vulnerable.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    },
+    {
+      "id": "1d46d5ee-bb5e-479c-b503-beeda595988a",
+      "intelligence_set_id": "0eaad436-d550-4726-8331-830c5d3dac34",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "2027 Hike Pricing Most Exposed: ~50 bps above Fed path priced for 2027; soft CPI could unwind fastest.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T14:14:04.495Z"
+    }
+  ]
+}

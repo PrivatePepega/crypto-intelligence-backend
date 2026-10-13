@@ -11,6 +11,7 @@ import {
 } from "../logger.js";
 
 import { extractJsonObject } from "./observations.js";
+import { withModelRetry } from "./retry.js";
 
 // --------------------------------------------------
 // Brief Analyst
@@ -273,56 +274,71 @@ export const generateBrief = async (options: {
     input = repair.text;
   }
 
-  const stream = streamText({
-    model: sliders.model,
-
-    system: systemPrompt,
-
-    prompt: userPrompt,
-
-    // Inert without tools, but wired so the knob is real rather than decorative.
-    stopWhen: isStepCount(sliders.maxSteps),
-
-    // Spread rather than passed as `undefined`: the project compiles with
-    // `exactOptionalPropertyTypes`, which distinguishes "absent" from "explicitly
-    // undefined". Omitting the key is what actually leaves the option off.
-    ...(sliders.maxOutputTokens === undefined ? {} : { maxOutputTokens: sliders.maxOutputTokens }),
-    ...(sliders.reasoningEffort === undefined
-      ? {}
-      : {
-          providerOptions: {
-            [sliders.reasoningEffort.provider]: {
-              reasoningEffort: sliders.reasoningEffort.effort,
-            },
-          },
-        }),
-  });
-
+  // Retried, and a blank response counts as a failure. Covers both briefs at once,
+  // because they share this function and the failure they would suffer is identical.
+  //
+  // The whole call rather than the stream: `streamText` is lazy, so the request is not
+  // made until the text is consumed, and a stream that has started emitting cannot be
+  // resumed. A brief that came back empty would otherwise fail at the JSON parse, with
+  // the real cause - an overloaded provider - nowhere in sight.
+  // Started once for the whole retried run, not per attempt, so the reported elapsed
+  // time includes the backoff between attempts rather than hiding it.
   const startedAt = Date.now();
 
-  let received = 0;
+  const runStream = async () => {
+    const stream = streamText({
+      model: sliders.model,
 
-  // Fires even while the SDK is retrying, so a retry is never mistaken for a hang.
-  const heartbeat = setInterval(() => {
-    console.log(
-      `     [waiting] ${Math.round((Date.now() - startedAt) / 1000)}s elapsed, ` +
-        `${received} characters received`,
-    );
-  }, 10_000);
+      system: systemPrompt,
 
-  try {
-    for await (const delta of stream.textStream) {
-      received += delta.length;
+      prompt: userPrompt,
+
+      // Inert without tools, but wired so the knob is real rather than decorative.
+      stopWhen: isStepCount(sliders.maxSteps),
+
+      // Spread rather than passed as `undefined`: the project compiles with
+      // `exactOptionalPropertyTypes`, which distinguishes "absent" from "explicitly
+      // undefined". Omitting the key is what actually leaves the option off.
+      ...(sliders.maxOutputTokens === undefined
+        ? {}
+        : { maxOutputTokens: sliders.maxOutputTokens }),
+      ...(sliders.reasoningEffort === undefined
+        ? {}
+        : {
+            providerOptions: {
+              [sliders.reasoningEffort.provider]: {
+                reasoningEffort: sliders.reasoningEffort.effort,
+              },
+            },
+          }),
+    });
+
+    let received = 0;
+
+    // Fires even while the SDK is retrying, so a retry is never mistaken for a hang.
+    const heartbeat = setInterval(() => {
+      console.log(
+        `     [waiting] ${Math.round((Date.now() - startedAt) / 1000)}s elapsed, ` +
+          `${received} characters received`,
+      );
+    }, 10_000);
+
+    try {
+      for await (const delta of stream.textStream) {
+        received += delta.length;
+      }
+    } finally {
+      clearInterval(heartbeat);
     }
-  } finally {
-    clearInterval(heartbeat);
-  }
 
-  const text = await stream.text;
+    const usage = await stream.usage;
 
-  const finishReason = await stream.finishReason;
+    return { text: await stream.text, finishReason: await stream.finishReason, usage };
+  };
 
-  const usage = await stream.usage;
+  const { text, finishReason, usage } = await withModelRetry(runStream, `${label} (${domain})`, {
+    isEmptyResult: (run) => run.text.trim().length === 0,
+  });
 
   const seconds = Math.round((Date.now() - startedAt) / 1000);
 

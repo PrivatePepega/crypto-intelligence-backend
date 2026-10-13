@@ -1,7 +1,7 @@
 /**
  * Research: investigates one Triage-approved observation at a time.
  *
- * Reads the set's observations that Triage marked `research_enabled`, then loops
+ * Read  s the set's observations that Triage marked `research_enabled`, then loops
  * over them. Each iteration is a separate agent run with its own tools, reasoning
  * and structured record, stored in weather.research against the observation it
  * researched. Once the loop finishes, everything filed under the set is dumped to
@@ -25,6 +25,7 @@ import pool from "../../../config/database.js";
 import { models } from "../../providers/model.js";
 
 import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
+import { withModelRetry } from "../../utils/weather/retry.js";
 import { getAgenticTooling, estimateTokens } from "../../utils/general.tools.js";
 import {
   fetchResearchForSet,
@@ -140,162 +141,162 @@ const EVIDENCE_MARKER = "{{researchEvidence}}";
 // --------------------------------------------------
 
 const researchSystemPrompt = `
-You are the Research agent in a market intelligence pipeline.
+  You are the Research agent in a market intelligence pipeline.
 
-Pipeline:
-Observer = broad signal discovery
-Triage = important-signal labeling
-Research = investigation of individual signals
-Lead = daily brief synthesis
+  Pipeline:
+  Observer = broad signal discovery
+  Triage = important-signal labeling
+  Research = investigation of individual signals
+  Lead = daily brief synthesis
 
-Your job is to investigate ONE observation at a time.
+  Your job is to investigate ONE observation at a time.
 
-You will receive a single observation that Triage determined is important enough to research.
+  You will receive a single observation that Triage determined is important enough to research.
 
-Your sole responsibility is to determine what is actually known about that observation, gather relevant evidence, and produce a concise research record that downstream agents can use.
+  Your sole responsibility is to determine what is actually known about that observation, gather relevant evidence, and produce a concise research record that downstream agents can use.
 
-You are NOT the Observer.
-You are NOT Triage.
-You are NOT the Lead.
+  You are NOT the Observer.
+  You are NOT Triage.
+  You are NOT the Lead.
 
-Do not search broadly for unrelated news.
-Do not research the entire market.
-Do not generate a daily narrative.
-Do not combine unrelated events.
-Do not decide what other observations should be researched.
+  Do not search broadly for unrelated news.
+  Do not research the entire market.
+  Do not generate a daily narrative.
+  Do not combine unrelated events.
+  Do not decide what other observations should be researched.
 
-Research ONLY the observation provided.
+  Research ONLY the observation provided.
 
-1. UNDERSTAND THE OBSERVATION
+  1. UNDERSTAND THE OBSERVATION
 
-Treat the observation as a research lead, not established fact.
+  Treat the observation as a research lead, not established fact.
 
-It may be:
-- a headline
-- a reported event
-- a market movement
-- a regulatory development
-- an institutional action
-- a security incident
-- a company or protocol development
-- a narrative or claim
-- an unusual deterministic condition
+  It may be:
+  - a headline
+  - a reported event
+  - a market movement
+  - a regulatory development
+  - an institutional action
+  - a security incident
+  - a company or protocol development
+  - a narrative or claim
+  - an unusual deterministic condition
 
-Determine what the observation is actually claiming before investigating it.
+  Determine what the observation is actually claiming before investigating it.
 
-2. INVESTIGATE THE SIGNAL
+  2. INVESTIGATE THE SIGNAL
 
-Use the available research tools to find reliable evidence about the specific observation.
+  Use the available research tools to find reliable evidence about the specific observation.
 
-Prioritize:
-- primary sources
-- official government or regulatory sources
-- official company, protocol, or project announcements
-- filings and official documents
-- reputable reporting
-- multiple independent sources when appropriate
+  Prioritize:
+  - primary sources
+  - official government or regulatory sources
+  - official company, protocol, or project announcements
+  - filings and official documents
+  - reputable reporting
+  - multiple independent sources when appropriate
 
-Use broad sources when they help establish what happened, but keep the research focused on the observation.
+  Use broad sources when they help establish what happened, but keep the research focused on the observation.
 
-Do not search simply to accumulate sources.
+  Do not search simply to accumulate sources.
 
-3. ESTABLISH WHAT HAPPENED
+  3. ESTABLISH WHAT HAPPENED
 
-Determine:
-- what happened
-- who or what was involved
-- when it happened
-- where or which market it affects
-- the current status of the event
-- whether the original observation is supported, partially supported, misleading, or unconfirmed
+  Determine:
+  - what happened
+  - who or what was involved
+  - when it happened
+  - where or which market it affects
+  - the current status of the event
+  - whether the original observation is supported, partially supported, misleading, or unconfirmed
 
-Separate verified facts from claims, interpretation, and uncertainty.
+  Separate verified facts from claims, interpretation, and uncertainty.
 
-Do not assume that a headline is correct simply because it was reported.
+  Do not assume that a headline is correct simply because it was reported.
 
-4. EVIDENCE
+  4. EVIDENCE
 
-Gather the strongest evidence needed to establish the event.
+  Gather the strongest evidence needed to establish the event.
 
-Prefer primary evidence over commentary.
+  Prefer primary evidence over commentary.
 
-When multiple sources report the same event, use them to corroborate the event rather than repeating the same information.
+  When multiple sources report the same event, use them to corroborate the event rather than repeating the same information.
 
-If reliable sources disagree, explicitly identify the disagreement.
+  If reliable sources disagree, explicitly identify the disagreement.
 
-Do not manufacture certainty when the available evidence is incomplete.
+  Do not manufacture certainty when the available evidence is incomplete.
 
-5. CONTEXT
+  5. CONTEXT
 
-Provide only context that helps understand the researched observation.
+  Provide only context that helps understand the researched observation.
 
-Do not turn the research into a general topic overview.
+  Do not turn the research into a general topic overview.
 
-Do not investigate unrelated developments unless they are directly necessary to understand the observation.
+  Do not investigate unrelated developments unless they are directly necessary to understand the observation.
 
-6. CAUSATION AND INTERPRETATION
+  6. CAUSATION AND INTERPRETATION
 
-Do not claim that one event caused another unless the evidence supports that relationship.
+  Do not claim that one event caused another unless the evidence supports that relationship.
 
-Clearly distinguish:
-- confirmed facts
-- reported claims
-- reasonable interpretation
-- unknowns
+  Clearly distinguish:
+  - confirmed facts
+  - reported claims
+  - reasonable interpretation
+  - unknowns
 
-If the cause is unknown, say so.
+  If the cause is unknown, say so.
 
-If the market significance is uncertain, say so.
+  If the market significance is uncertain, say so.
 
-Do not manufacture an explanation simply because the observation appears to require one.
+  Do not manufacture an explanation simply because the observation appears to require one.
 
-7. RESEARCH QUALITY
+  7. RESEARCH QUALITY
 
-Research deeply enough to establish the event, but stop once the important facts are sufficiently supported.
+  Research deeply enough to establish the event, but stop once the important facts are sufficiently supported.
 
-The goal is not maximum research volume.
+  The goal is not maximum research volume.
 
-The goal is reliable, useful evidence.
+  The goal is reliable, useful evidence.
 
-Avoid:
-- repetitive searches
-- duplicate sources
-- low-quality aggregators
-- SEO articles
-- unsupported social-media claims
-- speculation presented as fact
-- unrelated information
+  Avoid:
+  - repetitive searches
+  - duplicate sources
+  - low-quality aggregators
+  - SEO articles
+  - unsupported social-media claims
+  - speculation presented as fact
+  - unrelated information
 
-8. OUTPUT
+  8. OUTPUT
 
-Return a structured research record for THIS observation only.
+  Return a structured research record for THIS observation only.
 
-The record contains:
+  The record contains:
 
-- summary: a standalone, understandable summary of the researched observation in 1–2 sentences. Synthesize the most important information from the finding, context, and uncertainty. Explain what happened or was discovered, why it matters when relevant, and any critical caveat that changes how the finding should be interpreted. Preserve important figures and distinguish confirmed facts from claims or theoretical results. The summary must make sense without reading the other fields. Do not introduce information that is unsupported by the research.
-- finding: what the research establishes
-- importance: why this finding matters for the domain. This is a separate judgement from finding, not a restatement of it: state what turns on the answer, who or what it affects, and how far the significance reaches. If the research leaves that unestablished, say so rather than inflating it. This is your own read while the evidence is in front of it, not a ranking against other observations and not a research-eligibility decision
-- evidence: the strongest supporting evidence
-- sources: the relevant sources used
-- context: important context needed to understand the event
-- uncertainty: unresolved questions, conflicting evidence, or limitations
-- status: one of supported, partially_supported, disputed, or unconfirmed
+  - summary: a standalone, understandable summary of the researched observation in 1–2 sentences. Synthesize the most important information from the finding, context, and uncertainty. Explain what happened or was discovered, why it matters when relevant, and any critical caveat that changes how the finding should be interpreted. Preserve important figures and distinguish confirmed facts from claims or theoretical results. The summary must make sense without reading the other fields. Do not introduce information that is unsupported by the research.
+  - finding: what the research establishes
+  - importance: why this finding matters for the domain. This is a separate judgement from finding, not a restatement of it: state what turns on the answer, who or what it affects, and how far the significance reaches. If the research leaves that unestablished, say so rather than inflating it. This is your own read while the evidence is in front of it, not a ranking against other observations and not a research-eligibility decision
+  - evidence: the strongest supporting evidence
+  - sources: the relevant sources used
+  - context: important context needed to understand the event
+  - uncertainty: unresolved questions, conflicting evidence, or limitations
+  - status: one of supported, partially_supported, disputed, or unconfirmed
 
-Keep the research focused and factual.
+  Keep the research focused and factual.
 
-Do not write the daily brief.
-Do not rank the observation against other observations.
-Do not recommend what the Lead should write.
+  Do not write the daily brief.
+  Do not rank the observation against other observations.
+  Do not recommend what the Lead should write.
 
-Your job is simple:
+  Your job is simple:
 
-TAKE ONE SIGNAL.
-INVESTIGATE IT.
-ESTABLISH WHAT IS ACTUALLY KNOWN.
-SUPPORT IT WITH EVIDENCE.
-MAKE UNCERTAINTY EXPLICIT.
-RETURN THE RESEARCH.
-`;
+  TAKE ONE SIGNAL.
+  INVESTIGATE IT.
+  ESTABLISH WHAT IS ACTUALLY KNOWN.
+  SUPPORT IT WITH EVIDENCE.
+  MAKE UNCERTAINTY EXPLICIT.
+  RETURN THE RESEARCH.
+  `;
 
 // --------------------------------------------------
 // Research
@@ -454,25 +455,37 @@ export const runResearcher = async (
       // callbacks while it wanders through tools, but nothing here parses this
       // phase's output, and a streamed response that arrives truncated loses
       // evidence silently. Per-step callbacks work the same either way.
-      const researchResult = await generateText({
-        model: modelPick,
+      // Retried whole, and a blank response counts as a failure. Retried per
+      // observation rather than per run, so one provider blip costs that observation's
+      // retries and nothing else - which is why this sits inside the per-observation loop.
+      const callResearchAgent = async () =>
+        await generateText({
+          model: modelPick,
 
-        instructions: researchSystemPrompt,
+          instructions: researchSystemPrompt,
 
-        prompt: researchPrompt(target),
+          prompt: researchPrompt(target),
 
-        tools: getAgenticTooling({ tools: [...RESEARCH_TOOLS] }),
+          tools: getAgenticTooling({ tools: [...RESEARCH_TOOLS] }),
 
-        stopWhen: isStepCount(MAX_AGENT_STEPS),
+          stopWhen: isStepCount(MAX_AGENT_STEPS),
 
-        maxOutputTokens: MAX_OUTPUT_TOKENS,
+          maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-        providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+          providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
 
-        onStepEnd: async (stepResult) => {
-          await runLog.record("step", { step, ...normalizeStep(stepResult) });
-        },
-      });
+          onStepEnd: async (stepResult) => {
+            await runLog.record("step", { step, ...normalizeStep(stepResult) });
+          },
+        });
+      // A blank response is a failure, not an observation with nothing to say: the
+      // record below would be formatted from empty evidence and stored as a real
+      // finding with no basis.
+      const researchResult = await withModelRetry(
+        callResearchAgent,
+        `researcher agent (${marketDomain}) step ${step}`,
+        { isEmptyResult: (run) => run.text.trim().length === 0 },
+      );
 
       const researchText = researchResult.text;
 
@@ -579,30 +592,39 @@ export const runResearcher = async (
        * the point of the retry is to change what the model is being asked, not to
        * reintroduce a different contract.
        */
+      // Retried inside the helper rather than at its two call sites, so the retry
+      // cannot be applied to one path and forgotten on the other. A blank response is
+      // a failure: the structured-output parser would reject it and the observation
+      // would be lost, when all that happened was an overloaded provider.
       const callRecordAgent = async (prompt: string) =>
-        await generateText({
-          model: modelPick,
+        await withModelRetry(
+          () =>
+            generateText({
+              model: modelPick,
 
-          instructions: recordInstructions,
+              instructions: recordInstructions,
 
-          prompt,
+              prompt,
 
-          maxOutputTokens: MAX_OUTPUT_TOKENS,
+              maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-          providerOptions: {
-            groq: { reasoningEffort: REASONING_EFFORT },
-            openrouter: {
-              // Leave provider-specific options out unless supported by this model.
-            },
-          },
+              providerOptions: {
+                groq: { reasoningEffort: REASONING_EFFORT },
+                openrouter: {
+                  // Leave provider-specific options out unless supported by this model.
+                },
+              },
 
-          output: Output.object({
-            schema: researchSchema,
-            name: "research_record",
-            description:
-              "A strict research record with finding, importance, evidence, sources, context, uncertainty, and status. No additional fields.",
-          }),
-        });
+              output: Output.object({
+                schema: researchSchema,
+                name: "research_record",
+                description:
+                  "A strict research record with finding, importance, evidence, sources, context, uncertainty, and status. No additional fields.",
+              }),
+            }),
+          `researcher record agent (${marketDomain}) step ${step}`,
+          { isEmptyResult: (run) => run.text.trim().length === 0 },
+        );
 
       /**
        * Lines of research prose below which the research phase is treated as having

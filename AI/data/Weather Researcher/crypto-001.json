@@ -1,0 +1,53 @@
+{
+  "agentName": "Weather Researcher",
+  "domain": "crypto",
+  "runNumber": 1,
+  "file": "AI/data/Weather Researcher/crypto-001.json",
+  "startedAt": "2026-10-13T15:46:18.689Z",
+  "updatedAt": "2026-10-13T15:46:19.057Z",
+  "entryCount": 2,
+  "entries": [
+    {
+      "sequence": 1,
+      "section": "initializer",
+      "at": "2026-10-13T15:46:18.755Z",
+      "data": {
+        "date": "2026-10-13",
+        "marketDomain": "crypto",
+        "intelligenceSetId": "0eaad436-d550-4726-8331-830c5d3dac34",
+        "model": "openrouter/free",
+        "maxAgentSteps": 3,
+        "maxOutputTokens": 30000,
+        "reasoningEffort": "medium",
+        "tools": [
+          "webSearchTool",
+          "currentsNewsSearch",
+          "newsflashSearchArticles",
+          "newsflashGetEvents",
+          "marketauxNewsSearch",
+          "fmpGetArticlesList",
+          "wabbleImportantHeadlineSearch"
+        ],
+        "queued": 0,
+        "attempted": 0
+      }
+    },
+    {
+      "sequence": 2,
+      "section": "summary",
+      "at": "2026-10-13T15:46:19.057Z",
+      "data": {
+        "date": "2026-10-13",
+        "marketDomain": "crypto",
+        "queued": 0,
+        "attempted": 0,
+        "researched": 0,
+        "failedIds": [],
+        "truncatedIds": [],
+        "totalInSet": 26,
+        "dumpFile": "AI/data/database Fetcher/weather/researcher/crypto-001.json"
+      }
+    }
+  ],
+  "response": null
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-13",
+  "marketDomain": "crypto",
+  "intelligenceSetId": "0eaad436-d550-4726-8331-830c5d3dac34",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-13T15:46:18.687Z",
+  "recordSection": "triage_skipped",
+  "finishReason": null,
+  "considered": 0,
+  "promoted": 0,
+  "importantIds": [],
+  "unknownIds": [],
+  "missingIds": [],
+  "decisions": [],
+  "rows": []
+}

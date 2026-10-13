@@ -406,3 +406,20 @@ if (isDirectRun) {
     })
     .finally(() => pool.end());
 }
+
+/**
+ * Deletes every observation filed under one intelligence set.
+ *
+ * Requires that the set's research rows are already gone - see
+ * {@link deleteResearchForSet} for why the foreign key restricts rather than cascades.
+ *
+ * @returns How many rows were removed.
+ */
+export const deleteObservationsForSet = async (intelligenceSet: DailySet): Promise<number> => {
+  const { rowCount } = await pool.query(
+    `DELETE FROM weather.observations WHERE intelligence_set_id = $1::uuid;`,
+    [intelligenceSet.id],
+  );
+
+  return rowCount ?? 0;
+};

@@ -34,6 +34,7 @@ import pool from "../../../config/database.js";
 import { models } from "../../providers/model.js";
 
 import { getReasoningText, modelIdOf, normalizeStep } from "../../utils/agent.js";
+import { withModelRetry } from "../../utils/weather/retry.js";
 import { estimateTokens } from "../../utils/general.tools.js";
 import {
   createTriageRunLog,
@@ -63,7 +64,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  * returning unusable text for this pipeline, and triage depends entirely on one
  * response parsing cleanly. Change it here and nothing else.
  */
-const modelPick = models.groq;
+const modelPick = models.openrouterFree;
 
 /**
  * Ceiling on the agent's output tokens.
@@ -380,25 +381,33 @@ export const runTriage = async (
     await sleep(STEP_DELAY_MS);
   }
 
-  const result = await generateText({
-    model: modelPick,
-    instructions: systemPrompt,
-    prompt: devPrompt,
+  const callTriage = async () =>
+    generateText({
+      model: modelPick,
+      instructions: systemPrompt,
+      prompt: devPrompt,
 
-    maxOutputTokens: MAX_OUTPUT_TOKENS,
+      maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-    providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+      providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
 
-    output: Output.object({
-      schema: triageSchema,
-      name: "triage_signals",
-      description:
-        "One label per input observation: whether it is an important signal worth research, and why.",
-    }),
+      output: Output.object({
+        schema: triageSchema,
+        name: "triage_signals",
+        description:
+          "One label per input observation: whether it is an important signal worth research, and why.",
+      }),
 
-    onStepEnd: async (step) => {
-      await runLog.record("step", normalizeStep(step));
-    },
+      onStepEnd: async (step) => {
+        await runLog.record("step", normalizeStep(step));
+      },
+    });
+
+  // Retried whole, and a blank response counts as a failure. An empty triage verdict
+  // would promote nothing and report a clean run, which is indistinguishable from a
+  // day where nothing was worth researching.
+  const result = await withModelRetry(callTriage, `triage (${marketDomain})`, {
+    isEmptyResult: (run) => run.text.trim().length === 0,
   });
 
   const finalText = result.text;

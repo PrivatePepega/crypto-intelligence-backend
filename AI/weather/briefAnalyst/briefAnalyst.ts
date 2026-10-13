@@ -48,6 +48,7 @@ import {
   getFullAgenticContext,
 } from "../../utils/general.tools.js";
 import { upsertBrief } from "../../utils/weather/dbFetcher.brief.js";
+import { withModelRetry } from "../../utils/weather/retry.js";
 import { fetchResearchForSet } from "../../utils/weather/dbFetcher.researcher.js";
 import { parseStoredResearch } from "../../utils/weather/researcher.js";
 import { fetchObservationsForSet } from "../../utils/weather/dbFetcher.triage.js";
@@ -115,7 +116,7 @@ const ANALYST_TOOLS = [
   // "marketauxNewsSearch",
 ] as const;
 
-const modelPick = models.openrouter;
+const modelPick = models.openrouterFree;
 const MAX_AGENT_STEPS = 3;
 const MAX_ANALYST_OUTPUT_TOKENS = 80_000;
 const REASONING_EFFORT = "medium" as const;
@@ -687,27 +688,36 @@ ${row.research}
   let analystResult;
 
   try {
-    analystResult = await generateText({
-      model: modelPick,
+    // Retried whole: the step loop belongs to the SDK, so a stream that has started
+    // cannot be resumed. A blank response counts as a failure rather than an analyst
+    // that found nothing - the two produce very different briefs and only one of them
+    // is real.
+    analystResult = await withModelRetry(
+      () =>
+        generateText({
+          model: modelPick,
 
-      instructions: analystSystemPrompt,
+          instructions: analystSystemPrompt,
 
-      prompt: analystDevPrompt,
+          prompt: analystDevPrompt,
 
-      tools: getAgenticTooling({ tools: [...ANALYST_TOOLS] }),
+          tools: getAgenticTooling({ tools: [...ANALYST_TOOLS] }),
 
-      stopWhen: isStepCount(MAX_AGENT_STEPS),
+          stopWhen: isStepCount(MAX_AGENT_STEPS),
 
-      maxOutputTokens: MAX_ANALYST_OUTPUT_TOKENS,
+          maxOutputTokens: MAX_ANALYST_OUTPUT_TOKENS,
 
-      providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+          providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
 
-      onStepEnd: async (step) => {
-        analystStepsDone += 1;
+          onStepEnd: async (step) => {
+            analystStepsDone += 1;
 
-        await runLog.record("analyst_step", normalizeStep(step));
-      },
-    });
+            await runLog.record("analyst_step", normalizeStep(step));
+          },
+        }),
+      `brief analyst (${config.domain})`,
+      { isEmptyResult: (run) => run.text.trim().length === 0 },
+    );
   } finally {
     // Cleared even on a throw, so a failed call does not leave the interval running
     // and keep logging for the rest of the process.
@@ -913,6 +923,10 @@ ${row.research}
 
   try {
     const stored = await upsertBrief(intelligenceSet, {
+      // Part of the row's identity, not a label: six domains share one set, and
+      // `(brief_date, domain)` is what the conflict target keys on.
+      marketDomain: config.domain,
+
       // Stored parsed rather than as the analyst's raw text, because the column is
       // JSONB and a model response is not guaranteed to be valid JSON. When the parse
       // failed the text is kept whole under `rawText` instead, so the evidence

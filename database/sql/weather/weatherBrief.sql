@@ -5,12 +5,16 @@ CREATE TABLE IF NOT EXISTS weather.daily_briefs (
         REFERENCES intelligence_sets.daily_sets(id)
         ON DELETE CASCADE,
 
-    brief_date DATE NOT NULL UNIQUE,
+    brief_date DATE NOT NULL,
+    domain TEXT NOT NULL,
 
     raw_analyst_output JSONB NOT NULL,
     ai_context_brief JSONB NOT NULL,
     human_brief JSONB NOT NULL,
 
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+    CONSTRAINT daily_briefs_date_domain_unique
+        UNIQUE (brief_date, domain)
 );
