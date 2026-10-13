@@ -26,6 +26,22 @@ const modelPick = models.openrouterFree;
 
 const MAX_AGENT_STEPS = 5;
 
+// How long this agent keeps retrying one model call before the domain is abandoned.
+//
+// Set to ride out a provider shortage, not to catch a single blip. OpenRouter
+// capacity errors arrive as `503 Service temporarily overloaded` from a provider that
+// is up and has no capacity for the moment, and they arrive in clusters lasting
+// minutes rather than seconds. The earlier five-attempt budget gave up inside a
+// minute and cost the whole domain, which is the failure this exists to prevent.
+//
+// The pair multiplies out: 48 attempts ten seconds apart is about eight minutes of
+// waiting. Long enough for capacity to return inside a working session, short enough
+// that a real outage still gets reported rather than hanging all night.
+//
+// Lower these to fail faster when running interactively. Raise them when a run that
+// must finish is worth waiting out.
+const RETRY_ATTEMPTS = 48;
+const RETRY_DELAY_MS = 10_000;
 /**
  * Pause between agent steps, in milliseconds.
  *
@@ -344,6 +360,8 @@ Identify meaningful developments and produce observations.
   // rather than rolled back because they are evidence of what the provider actually
   // did, and the retry lines say how many attempts there were.
   const observerRun = await withModelRetry(callObserver, `observer (${config.domain})`, {
+    attempts: RETRY_ATTEMPTS,
+    delayMs: RETRY_DELAY_MS,
     isEmptyResult: (result) => result.text.trim().length === 0,
   });
 
@@ -559,7 +577,11 @@ The output is a complete normalized inventory for downstream processing, not a c
         prompt: formatterDevPrompt,
       }),
     `observer formatter (${config.domain})`,
-    { isEmptyResult: (run) => run.text.trim().length === 0 },
+    {
+      attempts: RETRY_ATTEMPTS,
+      delayMs: RETRY_DELAY_MS,
+      isEmptyResult: (run) => run.text.trim().length === 0,
+    },
   );
 
   const finalText = formatterResult.text;

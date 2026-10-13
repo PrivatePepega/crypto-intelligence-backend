@@ -16,13 +16,15 @@ import { withRetry } from "../../../utils/retry.js";
 // A stream that has already started emitting cannot be transparently resumed, so
 // nothing below the SDK can retry it either - the whole call has to be made again.
 //
-// ## Why the delay is long
+// ## Why the budget belongs to each agent
 //
 // "Temporarily overloaded" is a capacity signal, not a rate limit. Five seconds is
-// what a rate limit needs; a provider shedding load usually needs more like a minute
-// before the queue drains. Five attempts at ten seconds is about forty seconds of
-// waiting before a domain is abandoned, which is roughly a minute end to end once
-// the calls themselves are counted.
+// what a rate limit needs; a provider shedding load usually needs minutes before the
+// queue drains, and the failures arrive in clusters rather than one at a time. So the
+// budget is not a constant here: each agent declares `RETRY_ATTEMPTS` and
+// `RETRY_DELAY_MS` beside its other sliders, because how long an outage is worth
+// waiting out is that agent's judgement and it changes as providers behave. The
+// fallbacks below only stop a new call site from failing on the first error.
 //
 // ## Why a silent empty response counts as a failure
 //
@@ -33,31 +35,25 @@ import { withRetry } from "../../../utils/retry.js";
 // --------------------------------------------------
 
 /**
- * Total attempts per model call, including the first.
+ * Fallback policy, used only when a caller does not name its own.
  *
- * Five, matching the shared helper's default rather than restating a different
- * number in four agents.
+ * Every agent in the weather pipeline declares its own at the top of its file, next
+ * to the other sliders - see `RETRY_ATTEMPTS` in `AI/weather/observer/observer.ts`.
+ * These exist so a new call site cannot accidentally inherit nothing and fail on the
+ * first error, not as the policy anyone actually runs on.
  */
-const ATTEMPTS = 5;
+const FALLBACK_ATTEMPTS = 5;
 
-/** Wait between attempts, in milliseconds. */
-const DELAY_MS = 10_000;
-
-/**
- * Whether a successful response is actually unusable.
- *
- * Empty or whitespace-only only. Anything else is a real answer, including a short
- * one - a provider that legitimately returns a two-line response has not failed, and
- * retrying it would burn four more calls to get the same thing.
- */
-const isBlank = (text: string): boolean => text.trim().length === 0;
+/** Fallback wait between attempts, in milliseconds. */
+const FALLBACK_DELAY_MS = 10_000;
 
 /**
  * Runs one model call, retrying provider failures and empty responses.
  *
  * @param operation The call. Receives the attempt number, 1-based, for logging.
  * @param label Names the call in the retry lines, e.g. `observer (crypto)`.
- * @param options The shared policy, overridable per call.
+ * @param options The caller's own policy, chiefly `attempts`, `delayMs` and
+ *   `isEmptyResult`. Anything omitted falls back to the values above.
  */
 export const withModelRetry = async <T>(
   operation: (attempt: number) => Promise<T>,
@@ -65,8 +61,12 @@ export const withModelRetry = async <T>(
   options: Partial<RetryOptions<T>> = {},
 ): Promise<T> =>
   await withRetry(operation, {
-    attempts: ATTEMPTS,
-    delayMs: DELAY_MS,
+    // Defaults that only apply when the caller says nothing. Every agent in the
+    // weather pipeline passes its own, because how long an outage is worth waiting
+    // out is that agent's judgement rather than the shared helper's - and the spread
+    // below already lets a caller's `attempts` and `delayMs` win.
+    attempts: FALLBACK_ATTEMPTS,
+    delayMs: FALLBACK_DELAY_MS,
     label,
     ...options,
   });

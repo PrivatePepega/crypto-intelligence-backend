@@ -190,6 +190,24 @@ export type BriefSliders = {
    * that model then returned a `reasoning` block and no text at all.
    */
   reasoningEffort: { provider: string; effort: "low" | "medium" | "high" } | undefined;
+
+  /**
+   * Total attempts for this brief's model call, including the first.
+   *
+   * Part of the sliders rather than a global because each brief's budget is its own
+   * decision - the human brief and the AI context brief are separate documents and can
+   * be given different patience.
+   */
+  retryAttempts: number;
+
+  /**
+   * Wait between attempts for this brief's model call, in milliseconds.
+   *
+   * `generateBrief` is shared by both briefs, so without a per-brief value the only
+   * way to change this would be to edit the shared function - which would change it
+   * for every caller at once, including any future one.
+   */
+  retryDelayMs: number;
 };
 
 /** What one brief generation produced. */
@@ -337,6 +355,8 @@ export const generateBrief = async (options: {
   };
 
   const { text, finishReason, usage } = await withModelRetry(runStream, `${label} (${domain})`, {
+    attempts: sliders.retryAttempts,
+    delayMs: sliders.retryDelayMs,
     isEmptyResult: (run) => run.text.trim().length === 0,
   });
 

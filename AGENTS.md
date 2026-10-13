@@ -203,6 +203,33 @@ Important principles:
 
 Historical snapshots and change detection are important parts of the platform and should not be casually replaced with only the latest state.
 
+### Destructive Database Operations Require Explicit Permission
+
+**Never issue a `DELETE`, `DROP`, `TRUNCATE`, or `ALTER` against the database without asking the user first and receiving an explicit yes.**
+
+This holds even when:
+
+* The statement sits inside a function the user asked to be written, such as a delete or reset helper.
+* The rows appear to be scratch data, test data, or something the same script just created.
+* The operation is scoped by an id, a date, or an intelligence set and therefore "only" touches one domain.
+* The statement is wrapped in a transaction, a try/catch, or a dry-run flag.
+* The user approved a similar operation earlier in the same conversation.
+
+Permission is per operation. Approval to delete one set of rows is not approval to delete another, and approval earlier in a session does not carry forward.
+
+This applies equally to *writing* a `DELETE` and to *running* one. Writing a helper that deletes is fine and often requested; invoking that helper against real data needs permission every time.
+
+**When verifying code against the live database, prefer operations with no net effect:**
+
+* Read-only checks: `SELECT`, `information_schema`, `pg_indexes`, `pg_constraint`.
+* Writes against a scratch date, a scratch domain, or an obviously synthetic id.
+* Insert, verify, then restore — with the original values captured *before* anything is written.
+* If a write is genuinely necessary, state exactly what will be written or removed and get a yes first.
+
+**Cleanup is not exempt.** Before removing anything written during a task, establish that it is safe to remove: a row that existed before the task began is not the task's to delete. When unsure, leave it and say so rather than tidying.
+
+If something is deleted in error, say so immediately and unprompted, state exactly what was lost and what is still recoverable, and do not assert a connection between records that has not been verified.
+
 ---
 
 ## Global vs User Data
