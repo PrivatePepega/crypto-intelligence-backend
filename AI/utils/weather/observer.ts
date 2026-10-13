@@ -49,10 +49,10 @@ export const OBSERVER_ARTIFACTS = true;
  * Deliberately returns the same type either way, so no agent code changes shape
  * when the switch flips.
  */
-export const createObserverRunLog = async (): Promise<AgentRunLog> => {
+export const createObserverRunLog = async (marketDomain: string): Promise<AgentRunLog> => {
   return OBSERVER_ARTIFACTS
-    ? await createAgentRunLog(AGENT_NAME)
-    : createSilentAgentRunLog(AGENT_NAME);
+    ? await createAgentRunLog(AGENT_NAME, marketDomain)
+    : createSilentAgentRunLog(AGENT_NAME, marketDomain);
 };
 
 /**

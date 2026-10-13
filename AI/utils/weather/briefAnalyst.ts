@@ -65,10 +65,10 @@ export const BRIEF_ARTIFACTS = true;
  * formatter's normalized brief are two views of the same run, and keeping them
  * together means a brief can be read next to the reasoning that produced it.
  */
-export const createBriefAnalystRunLog = async (): Promise<AgentRunLog> => {
+export const createBriefAnalystRunLog = async (marketDomain: string): Promise<AgentRunLog> => {
   return BRIEF_ARTIFACTS
-    ? await createAgentRunLog(AGENT_NAME)
-    : createSilentAgentRunLog(AGENT_NAME);
+    ? await createAgentRunLog(AGENT_NAME, marketDomain)
+    : createSilentAgentRunLog(AGENT_NAME, marketDomain);
 };
 
 /** Where the run log lives, for the agent's header comment. */
@@ -365,6 +365,120 @@ export const generateBrief = async (options: {
       : null,
     repairedAt: repair?.at ?? null,
   };
+};
+import { mkdirSync, writeFileSync } from "node:fs";
+import path from "node:path";
+
+import { agentRunFileName } from "../logger.js";
+
+import { fetchBriefsForSet } from "./dbFetcher.brief.js";
+import type { StoredBrief } from "./dbFetcher.brief.js";
+import type { DailySet } from "./observations.js";
+
+// --------------------------------------------------
+// Brief dump
+// --------------------------------------------------
+//
+// The fourth database artifact, matching the other three.
+//
+// Observer snapshots `weather.observations`, Triage writes its verdicts and
+// Researcher dumps `weather.research`. This one reads back `weather.daily_briefs`,
+// so what a brief pass actually committed can be reviewed beside the dumps of the
+// three stages that fed it.
+//
+// Named with `agentRunFileName`, the same helper its run log uses, so a dump and the
+// log describing the same run share a file name by construction rather than by two
+// copies of the format agreeing.
+// --------------------------------------------------
+
+/** Where the brief dump is written, relative to AI/data. */
+const BRIEF_DUMP_DIR = path.join("database Fetcher", "weather", "briefAnalyst");
+
+export type BriefDump = {
+  /** Agent name, so the file name is generated the same way the run log's is. */
+  agentName: string;
+  /** The run this dump belongs to. Matches the run log with the same number. */
+  runNumber: number;
+  /** The domain the run analysed, which is also the file name's first segment. */
+  marketDomain: string;
+  date: string;
+  intelligenceSetId: string;
+  /** The row this run wrote, or null when nothing was persisted. */
+  storedBriefId: string | null;
+  /** Every brief filed under the set, newest first. */
+  rows: StoredBrief[];
+};
+
+/**
+ * Writes `AI/data/database Fetcher/weather/briefAnalyst/<domain>-NNN.json`.
+ *
+ * Built from a fresh read rather than from the values the run held, so the dump
+ * records what actually committed. A row the upsert rejected appears here as missing
+ * rather than being reported as written, which is the same reason the researcher's
+ * dump re-reads instead of reusing.
+ *
+ * Overwritten rather than accumulated within a run, so the file always holds the
+ * current state of the set. Gaps in the sequence are not reused, so a re-run gets its
+ * own file rather than replacing the last one's evidence.
+ *
+ * Resolves to the path written, relative to the repository root.
+ */
+export const writeBriefDump = async (dump: BriefDump): Promise<string> => {
+  const directory = path.join(AGENT_RUN_LOG_DIR, BRIEF_DUMP_DIR);
+
+  mkdirSync(directory, { recursive: true });
+
+  const fileName = agentRunFileName(dump.agentName, dump.marketDomain, dump.runNumber);
+
+  const filePath = path.join(directory, fileName);
+
+  const relativeFile = path.relative(process.cwd(), filePath).split(path.sep).join("/");
+
+  const document = {
+    date: dump.date,
+    marketDomain: dump.marketDomain,
+    intelligenceSetId: dump.intelligenceSetId,
+    agentName: dump.agentName,
+    runNumber: dump.runNumber,
+    storedBriefId: dump.storedBriefId,
+    writtenAt: new Date().toISOString(),
+    rowCount: dump.rows.length,
+    rows: dump.rows,
+  };
+
+  writeFileSync(filePath, `${JSON.stringify(document, null, 2)}\n`, "utf8");
+
+  return relativeFile;
+};
+
+/**
+ * Reads the set's briefs back and writes the dump.
+ *
+ * The two steps an agent would otherwise have to remember, collapsed so a caller runs
+ * the Brief Analyst with one call. The read is separate from the write so the dump can
+ * be regenerated for an already-finished set without re-running anything.
+ *
+ * @returns The path written, or `null` when the artifacts switch is off.
+ */
+export const dumpBriefsForSet = async (
+  intelligenceSet: DailySet,
+  marketDomain: string,
+  runNumber: number,
+  storedBriefId: string | null,
+): Promise<string | null> => {
+  if (!BRIEF_ARTIFACTS) return null;
+
+  const rows = await fetchBriefsForSet(intelligenceSet);
+
+  return await writeBriefDump({
+    agentName: AGENT_NAME,
+    runNumber,
+    marketDomain,
+    date: intelligenceSet.set_date,
+    intelligenceSetId: intelligenceSet.id,
+    storedBriefId,
+    rows,
+  });
 };
 // --------------------------------------------------
 // The brief

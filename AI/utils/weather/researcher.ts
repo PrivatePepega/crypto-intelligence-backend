@@ -210,10 +210,10 @@ export const RESEARCHER_ARTIFACTS = true;
  * Returns the same type either way, so no agent code changes shape when the
  * switch flips.
  */
-export const createResearcherRunLog = async (): Promise<AgentRunLog> => {
+export const createResearcherRunLog = async (marketDomain: string): Promise<AgentRunLog> => {
   return RESEARCHER_ARTIFACTS
-    ? await createAgentRunLog(AGENT_NAME)
-    : createSilentAgentRunLog(AGENT_NAME);
+    ? await createAgentRunLog(AGENT_NAME, marketDomain)
+    : createSilentAgentRunLog(AGENT_NAME, marketDomain);
 };
 
 // --------------------------------------------------
@@ -326,7 +326,7 @@ export const collectResearchEvidence = (steps: SdkStep[]): ResearchEvidenceStep[
 // --------------------------------------------------
 
 /** Where the research dump is written, relative to AI/data. */
-const RESEARCH_DUMP_DIR = path.join("database Fetcher", "researcher");
+const RESEARCH_DUMP_DIR = path.join("database Fetcher", "weather", "researcher");
 
 export type ResearchDump = {
   /** Agent name, so the file name is generated the same way the run log's is. */
@@ -368,7 +368,7 @@ export const writeResearchDump = async (dump: ResearchDump): Promise<string> => 
 
   await fs.mkdir(directory, { recursive: true });
 
-  const fileName = agentRunFileName(dump.agentName, dump.runNumber);
+  const fileName = agentRunFileName(dump.agentName, dump.marketDomain, dump.runNumber);
 
   const filePath = path.join(directory, fileName);
 

@@ -150,7 +150,7 @@ export const runTriage = async (
       `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
   );
 
-  const runLog = await createTriageRunLog();
+  const runLog = await createTriageRunLog(marketDomain);
 
   // --------------------------------------------------
   // Read the set

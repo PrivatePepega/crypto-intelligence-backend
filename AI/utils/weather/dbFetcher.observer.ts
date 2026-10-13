@@ -30,7 +30,7 @@ import type { DailySet } from "./observations.js";
  * reads it, and `const` is not hoisted - a declaration further down would be in
  * its temporal dead zone when the config object is built.
  */
-const INJECTED_SNAPSHOT_DIR = path.join("database Fetcher", "observations");
+const INJECTED_SNAPSHOT_DIR = path.join("database Fetcher", "weather", "observations");
 
 // --------------------------------------------------
 // Database input

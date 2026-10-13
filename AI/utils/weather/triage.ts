@@ -187,10 +187,10 @@ export const TRIAGE_ARTIFACTS = true;
  * Returns the same type either way, so no agent code changes shape when the
  * switch flips.
  */
-export const createTriageRunLog = async (): Promise<AgentRunLog> => {
+export const createTriageRunLog = async (marketDomain: string): Promise<AgentRunLog> => {
   return TRIAGE_ARTIFACTS
-    ? await createAgentRunLog(AGENT_NAME)
-    : createSilentAgentRunLog(AGENT_NAME);
+    ? await createAgentRunLog(AGENT_NAME, marketDomain)
+    : createSilentAgentRunLog(AGENT_NAME, marketDomain);
 };
 
 // --------------------------------------------------
@@ -198,7 +198,7 @@ export const createTriageRunLog = async (): Promise<AgentRunLog> => {
 // --------------------------------------------------
 
 /** Where the dated triage records are written, relative to AI/data. */
-const TRIAGE_RECORD_DIR = path.join("database Fetcher", "triage");
+const TRIAGE_RECORD_DIR = path.join("database Fetcher", "weather", "triage");
 
 export type TriageRecord = {
   date: string;

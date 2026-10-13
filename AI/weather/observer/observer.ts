@@ -71,7 +71,7 @@ export const runObserver = async (
 ): Promise<Observation[]> => {
   console.log(`[observe] Observation run initialized for domain: ${config.domain}`);
 
-  const runLog = await createObserverRunLog();
+  const runLog = await createObserverRunLog(config.domain);
 
   const observerContext = await getAgenticContext(config);
 
@@ -390,7 +390,7 @@ Identify meaningful developments and produce observations.
 
 `;
 
-const formatterDevPrompt = `
+  const formatterDevPrompt = `
 Format the Observer's findings into the required JSON structure.
 
 Configured domain:

@@ -55,6 +55,7 @@ import {
   type BriefGenerationResult,
   type BriefSliders,
   createBriefAnalystRunLog,
+  dumpBriefsForSet,
   logFormatterError,
   parseAnalystBrief,
 } from "../../utils/weather/briefAnalyst.js";
@@ -447,7 +448,7 @@ export const runBriefAnalyst = async (
       `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
   );
 
-  const runLog = await createBriefAnalystRunLog();
+  const runLog = await createBriefAnalystRunLog(config.domain);
 
   // --------------------------------------------------
   // Gather the domain's inputs
@@ -957,6 +958,25 @@ ${row.research}
 
     console.log(
       `[brief] Brief persistence failed for domain: ${config.domain} - ${message.slice(0, 160)}`,
+    );
+  }
+
+  // The database artifact, read back rather than assembled from the values above, so
+  // it records what actually committed. A failure here must not cost the run that
+  // just finished.
+  let dumpFile = "";
+
+  try {
+    dumpFile =
+      (await dumpBriefsForSet(intelligenceSet, config.domain, runLog.runNumber, storedBriefId)) ??
+      "";
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+
+    await runLog.record("brief_dump_failure", { error: message });
+
+    console.log(
+      `[brief] Brief dump failed for domain: ${config.domain} - ${message.slice(0, 160)}`,
     );
   }
 

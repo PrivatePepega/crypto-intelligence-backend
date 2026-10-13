@@ -71,15 +71,30 @@ export const toPathSegment = (value: string): string => {
 const segmentFor = toPathSegment;
 
 /**
- * The file name a run number resolves to, e.g. `Weather Triage-007.json`.
+ * The file name a run resolves to, e.g. `crypto-007.json` inside `Weather Triage/`.
  *
- * Exported so anything that writes a per-run artifact alongside the run log can
- * reuse this rather than reimplementing the padding. A second copy of the format
- * is a second thing to drift: the researcher's database dump is named with this so
- * it lines up with its run log by construction, not by coincidence.
+ * The agent name is not repeated: it is already the folder, so putting it in the
+ * file name too meant `Weather Triage/Weather Triage-007.json`, and dropping it
+ * meant `007.json` - which says nothing about *which* domain ran, and one folder now
+ * holds six domains' runs. The domain is the part that was actually missing.
+ *
+ * Run numbers are per domain, because each domain's runs are a separate sequence.
+ * With one shared counter, `crypto` occupying 001-004 would leave
+ * `commodities_energy` starting at 005, which implies it ran after crypto when the
+ * two are unrelated. Each domain numbering from 001 also means "the second run of
+ * commodities_energy" is a thing you can say without consulting a timeline.
+ *
+ * Exported so anything writing a per-run artifact alongside the run log reuses this
+ * rather than reimplementing the padding - a second copy of the format is a second
+ * thing to drift, and the researcher's database dump names itself with it so the two
+ * line up by construction rather than by coincidence.
  */
-export const agentRunFileName = (agentName: string, runNumber: number): string => {
-  return `${segmentFor(agentName)}-${String(runNumber).padStart(RUN_NUMBER_PAD, "0")}.json`;
+export const agentRunFileName = (
+  _agentName: string,
+  marketDomain: string,
+  runNumber: number,
+): string => {
+  return `${segmentFor(marketDomain)}-${String(runNumber).padStart(RUN_NUMBER_PAD, "0")}.json`;
 };
 
 const fileNameFor = agentRunFileName;
@@ -93,15 +108,21 @@ const agentDirectory = (agentName: string): string => {
 // --------------------------------------------------
 
 /**
- * Next run number for an agent: one past the highest already on disk.
+ * Next run number for one agent and domain: one past the highest already on disk.
+ *
+ * Scoped to the domain's prefix, so the six domains sharing an agent folder keep six
+ * independent sequences rather than competing for one.
  *
  * Deliberately derived from the files present rather than a stored counter, so
- * deleting the folder resets numbering to 1 and a run never overwrites an
+ * deleting a domain's files resets its numbering to 1 and a run never overwrites an
  * earlier one.
  *
  * Gaps are not reused: with only `1` and `5` on disk the next run is `6`.
  */
-export const resolveNextRunNumber = async (agentName: string): Promise<number> => {
+export const resolveNextRunNumber = async (
+  agentName: string,
+  marketDomain: string,
+): Promise<number> => {
   const directory = agentDirectory(agentName);
 
   let entries: string[];
@@ -116,7 +137,7 @@ export const resolveNextRunNumber = async (agentName: string): Promise<number> =
     throw error;
   }
 
-  const prefix = `${segmentFor(agentName)}-`;
+  const prefix = `${segmentFor(marketDomain)}-`;
   const suffix = ".json";
 
   let highest = 0;
@@ -352,9 +373,16 @@ export type MultilineBlock = string[];
 /** Either an inline string or a {@link MultilineBlock}. */
 export type AgentRunText = string | MultilineBlock;
 
-/** On-disk shape of `<agent>/<agent>-<n>.json`. */
+/** On-disk shape of `<agent>/<domain>-<n>.json`. */
 export type AgentRunDocument = {
   agentName: string;
+  /**
+   * The domain this run analysed.
+   *
+   * In the file name, and repeated here so a file read back without its path - moved,
+   * attached, or read out of a git diff - still says which domain it describes.
+   */
+  domain: string;
   runNumber: number;
   file: string;
   startedAt: string;
@@ -366,6 +394,8 @@ export type AgentRunDocument = {
 
 export type AgentRunLog = {
   readonly agentName: string;
+  /** The domain this run analysed, as it appears in the file name. */
+  readonly domain: string;
   readonly runNumber: number;
   readonly directory: string;
   readonly filePath: string;
@@ -394,8 +424,10 @@ export type AgentRunLog = {
  *
  * No run number is reserved, so a silenced run leaves no gap in the sequence.
  */
-export const createSilentAgentRunLog = (agentName: string): AgentRunLog => ({
+export const createSilentAgentRunLog = (agentName: string, marketDomain: string): AgentRunLog => ({
   agentName,
+
+  domain: marketDomain,
 
   // Zero rather than a real number: nothing was reserved, and any agent that
   // reads these back is looking at an artifact that does not exist.
@@ -420,7 +452,10 @@ export const createSilentAgentRunLog = (agentName: string): AgentRunLog => ({
  * moves on to the next number. A plain "does the file exist" pre-check loses
  * that race and silently overwrites the earlier run.
  */
-export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog> => {
+export const createAgentRunLog = async (
+  agentName: string,
+  marketDomain: string,
+): Promise<AgentRunLog> => {
   const directory = agentDirectory(agentName);
 
   await fs.mkdir(directory, { recursive: true });
@@ -430,7 +465,7 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
 
   let response: string | null = null;
 
-  let runNumber = await resolveNextRunNumber(agentName);
+  let runNumber = await resolveNextRunNumber(agentName, marketDomain);
 
   let filePath = "";
 
@@ -440,6 +475,7 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
     // Applied at write time, so only the stored form is split into lines.
     const document: AgentRunDocument = {
       agentName,
+      domain: marketDomain,
       runNumber,
       file: relativeFile,
       startedAt,
@@ -457,7 +493,7 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
   // Claim the file name before anything is recorded, so ownership is settled up
   // front and every later write can safely overwrite its own file.
   for (let attempt = 0; attempt < MAX_RESERVE_ATTEMPTS; attempt += 1) {
-    const candidate = path.join(directory, fileNameFor(agentName, runNumber));
+    const candidate = path.join(directory, fileNameFor(agentName, marketDomain, runNumber));
 
     try {
       await fs.writeFile(candidate, safeJson(buildDocument()), {
@@ -505,6 +541,7 @@ export const createAgentRunLog = async (agentName: string): Promise<AgentRunLog>
 
   return {
     agentName,
+    domain: marketDomain,
     runNumber,
     directory,
     filePath,

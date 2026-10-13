@@ -346,7 +346,7 @@ export const runResearcher = async (
       `set ${intelligenceSet.id} (${intelligenceSet.set_date})`,
   );
 
-  const runLog = await createResearcherRunLog();
+  const runLog = await createResearcherRunLog(marketDomain ?? "all-domains");
 
   const queue = await fetchResearchQueue(intelligenceSet, marketDomain);
 
