@@ -1,0 +1,506 @@
+{
+  "date": "2026-10-13",
+  "marketDomain": "macro",
+  "intelligenceSetId": "77fa46e2-589b-4e77-825b-b90027a89221",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-13T20:25:00.008Z",
+  "recordSection": "triage",
+  "finishReason": "stop",
+  "considered": 31,
+  "promoted": 22,
+  "importantIds": [
+    "537fd62e-6d25-4ac7-b96c-cc49d6fe508b",
+    "bb4b393e-2e59-41a5-a7d4-1f2707e8a6cb",
+    "ffddefbd-784d-4a99-8f99-799bfd3f156a",
+    "708ca76f-8cca-45f4-b4e1-9c10a4a02af4",
+    "b37faac1-534c-4fc2-b2b2-7dcb3d77808d",
+    "5881cc7c-a67a-46f3-b3a4-28d4cb41191e",
+    "6bbff3af-93a7-475c-a7c5-1c8b700c685e",
+    "0dfc806e-4393-4fe9-94b6-ee048bb85eda",
+    "2f42bd3c-be27-4d1b-a57d-462f6f88c612",
+    "d52e2270-9048-464a-803c-15800e667ac0",
+    "2b64a6ce-f0d8-4b7d-a933-7cac1942ab27",
+    "f81dcf90-c6b1-4705-b996-ca0a08e23787",
+    "8bed326b-d137-41d9-b483-a9e769a82b0c",
+    "cd64778b-f65c-4703-ba22-ecff31191621",
+    "bbd245b4-e306-4250-a02c-12d1024b7340",
+    "fc0cf8bb-cd52-4de5-817b-d9f1f8b6bd4a",
+    "8e457648-d903-4965-b09d-836658323ab9",
+    "088f857e-2df1-4058-9700-2e2c6743c555",
+    "fff564e7-1286-458f-b700-649753555a21",
+    "ee8f49f0-0070-467c-97bc-33599b31e9ac",
+    "49b2ffd5-a387-4165-9ba2-a8f9161f1213",
+    "9dd8235d-ecaf-4aed-8ff9-40c035c377f2"
+  ],
+  "unknownIds": [],
+  "missingIds": [],
+  "decisions": [
+    {
+      "id": "537fd62e-6d25-4ac7-b96c-cc49d6fe508b",
+      "important": true,
+      "reason": "Fed funds rate increase and FOMC minutes hint at a possible rate hike before year‑end, signaling tighter monetary policy."
+    },
+    {
+      "id": "bb4b393e-2e59-41a5-a7d4-1f2707e8a6cb",
+      "important": true,
+      "reason": "Reverse repo usage fell sharply to $1bn from $1.5bn, tightening short‑term liquidity conditions."
+    },
+    {
+      "id": "00dafc73-e227-4ab3-b69a-91889b2a50de",
+      "important": false,
+      "reason": "Fed total assets contracted by only $4.7bn, a negligible shift in the overall balance sheet."
+    },
+    {
+      "id": "ffddefbd-784d-4a99-8f99-799bfd3f156a",
+      "important": true,
+      "reason": "CPI rose about 1% month‑over‑month, indicating upward price pressures."
+    },
+    {
+      "id": "708ca76f-8cca-45f4-b4e1-9c10a4a02af4",
+      "important": true,
+      "reason": "Core CPI increased roughly 0.96% month‑over‑month, highlighting persistent underlying inflation."
+    },
+    {
+      "id": "612149c1-a8d9-490e-8c78-db2d35da03e2",
+      "important": false,
+      "reason": "PCE and core PCE readings are baseline levels without notable change, offering no new macro signal."
+    },
+    {
+      "id": "3fbefdaf-073d-434e-a232-2049d3d6dd34",
+      "important": false,
+      "reason": "Breakeven inflation rates remained steady, providing no new inflation signal."
+    },
+    {
+      "id": "b37faac1-534c-4fc2-b2b2-7dcb3d77808d",
+      "important": true,
+      "reason": "PPI surged, signaling increased upstream cost pressures."
+    },
+    {
+      "id": "5881cc7c-a67a-46f3-b3a4-28d4cb41191e",
+      "important": true,
+      "reason": "Unemployment rate rose by 0.1 percentage points, indicating a slight weakening in the labor market."
+    },
+    {
+      "id": "6bbff3af-93a7-475c-a7c5-1c8b700c685e",
+      "important": true,
+      "reason": "Job openings fell by 256k, reflecting a notable slowdown in labor demand."
+    },
+    {
+      "id": "0dfc806e-4393-4fe9-94b6-ee048bb85eda",
+      "important": true,
+      "reason": "NFIB small‑business optimism slipped with hiring momentum decelerating, signaling softer economic activity."
+    },
+    {
+      "id": "2f42bd3c-be27-4d1b-a57d-462f6f88c612",
+      "important": true,
+      "reason": "UMich consumer sentiment dropped sharply, indicating declining household confidence."
+    },
+    {
+      "id": "d52e2270-9048-464a-803c-15800e667ac0",
+      "important": true,
+      "reason": "Real GDP growth was revised down to 2.2% annualized, signaling weaker quarterly expansion."
+    },
+    {
+      "id": "2b64a6ce-f0d8-4b7d-a933-7cac1942ab27",
+      "important": true,
+      "reason": "Existing home sales fell to a second‑weakest level of 2026, highlighting housing market weakness."
+    },
+    {
+      "id": "f81dcf90-c6b1-4705-b996-ca0a08e23787",
+      "important": true,
+      "reason": "30‑year mortgage rate jumped, raising housing financing costs."
+    },
+    {
+      "id": "8bed326b-d137-41d9-b483-a9e769a82b0c",
+      "important": true,
+      "reason": "10‑year Treasury yield reached a 24‑year high, reflecting significant market pressure."
+    },
+    {
+      "id": "844eda60-16b7-4bcd-8a87-cffa62bcee70",
+      "important": false,
+      "reason": "Real 10‑year Treasury yield edged up slightly, providing no new signal beyond nominal yields."
+    },
+    {
+      "id": "cd64778b-f65c-4703-ba22-ecff31191621",
+      "important": true,
+      "reason": "High‑yield credit spread narrowed, indicating improved risk appetite in distressed debt markets."
+    },
+    {
+      "id": "f9a5fd71-f45a-4577-b296-d1d949571526",
+      "important": false,
+      "reason": "Investment‑grade credit spread tightened only marginally, offering little new insight."
+    },
+    {
+      "id": "bbd245b4-e306-4250-a02c-12d1024b7340",
+      "important": true,
+      "reason": "S&P 500 set a new record high, marking strong equity market performance."
+    },
+    {
+      "id": "fc0cf8bb-cd52-4de5-817b-d9f1f8b6bd4a",
+      "important": true,
+      "reason": "NASDAQ Composite reached a new high, underscoring tech sector strength."
+    },
+    {
+      "id": "774277cb-37d8-4940-9834-31b5195a1161",
+      "important": false,
+      "reason": "CBOE Volatility Index fell modestly, reflecting only minor changes in market anxiety."
+    },
+    {
+      "id": "5877ea6e-bee4-4144-9a1e-9232fc2c21e6",
+      "important": false,
+      "reason": "AAII sentiment data shows mixed positioning but no immediate market‑moving shift."
+    },
+    {
+      "id": "1029f5ba-40a6-444e-92c7-c4084b62b2b5",
+      "important": false,
+      "reason": "CNN Fear & Greed Index moved slightly into 'fear' territory, offering limited new insight."
+    },
+    {
+      "id": "8e457648-d903-4965-b09d-836658323ab9",
+      "important": true,
+      "reason": "IMF upgraded global growth forecast while warning of AI debt and Middle‑East risks, a major macro shift."
+    },
+    {
+      "id": "088f857e-2df1-4058-9700-2e2c6743c555",
+      "important": true,
+      "reason": "China’s September inflation rose, with PPI up to 4.5% driven by oil price spikes, signaling broader price pressures."
+    },
+    {
+      "id": "fff564e7-1286-458f-b700-649753555a21",
+      "important": true,
+      "reason": "Tier‑1 land sales froze, with only minimal listings, indicating a sharp slowdown in high‑end real‑estate activity."
+    },
+    {
+      "id": "4fbae0bd-1474-495b-97d8-d6127d551baf",
+      "important": false,
+      "reason": "NEV export rebate cut is a sector‑specific regulation unlikely to affect overall macro outlook."
+    },
+    {
+      "id": "ee8f49f0-0070-467c-97bc-33599b31e9ac",
+      "important": true,
+      "reason": "Trump announced a large diesel import deal with Russia, a geopolitical energy initiative that could affect fuel markets."
+    },
+    {
+      "id": "49b2ffd5-a387-4165-9ba2-a8f9161f1213",
+      "important": true,
+      "reason": "Escalating Middle‑East tensions and attacks on shipping disrupt oil shipments through the Strait of Hormuz, posing supply risks."
+    },
+    {
+      "id": "9dd8235d-ecaf-4aed-8ff9-40c035c377f2",
+      "important": true,
+      "reason": "ECB continues rate hikes, pushing long‑term yields to multi‑decadal highs and signaling sustained monetary tightening."
+    }
+  ],
+  "rows": [
+    {
+      "id": "537fd62e-6d25-4ac7-b96c-cc49d6fe508b",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Fed funds rate rose to 3.88% from 3.75%, with net change of +0.13 percentage points; September FOMC minutes flagged potential rate hike before year-end",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "bb4b393e-2e59-41a5-a7d4-1f2707e8a6cb",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Reverse repo usage fell sharply to $1 billion from $1.5 billion (previous day), representing a -0.5 billion net change and tightening short-term liquidity",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "00dafc73-e227-4ab3-b69a-91889b2a50de",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Fed total assets contracted modestly by $4.7 billion to $6,743.031 billion (net change -4,673 million)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "ffddefbd-784d-4a99-8f99-799bfd3f156a",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "CPI rose by 1.32 points to 334.13 from 332.81, representing approximately 1.0% month-over-month increase",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "708ca76f-8cca-45f4-b4e1-9c10a4a02af4",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Core CPI increased by 0.97 points to 337.76 from 336.79 (excluding food and energy)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "612149c1-a8d9-490e-8c78-db2d35da03e2",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "PCE price index at 3.4% year-over-year, core PCE at 3.0% year-over-year",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "3fbefdaf-073d-434e-a232-2049d3d6dd34",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "5-year breakeven inflation steady at 2.36%, 10-year breakeven inflation at 2.36%",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "b37faac1-534c-4fc2-b2b2-7dcb3d77808d",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Producer Price Index surged 2.75 points to 287.93 from 285.18, representing increased upstream cost pressure",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "5881cc7c-a67a-46f3-b3a4-28d4cb41191e",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Unemployment rate ticked up to 4.2% from 4.1%, representing a 0.1 percentage point increase",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "6bbff3af-93a7-475c-a7c5-1c8b700c685e",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Job openings fell by 256,000 to 7,079,000 (seasonally adjusted annual rate)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "0dfc806e-4393-4fe9-94b6-ee048bb85eda",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "NFIB small-business optimism slipped in September, with hiring momentum decelerating",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "2f42bd3c-be27-4d1b-a57d-462f6f88c612",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "UMich consumer sentiment index fell to 51.7 from 55.2, indicating declining household confidence",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "d52e2270-9048-464a-803c-15800e667ac0",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Real GDP growth revised down to 2.2% annualized rate in Q2 2026, accelerating 0.7% quarter-over-quarter",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "2b64a6ce-f0d8-4b7d-a933-7cac1942ab27",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Existing home sales dropped 80,000 to 3.98 million annualized units, representing the second-weakest level of 2026",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "f81dcf90-c6b1-4705-b996-ca0a08e23787",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "30-year fixed mortgage rate jumped to 7.28% from 7.03%, increasing housing financing costs",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "8bed326b-d137-41d9-b483-a9e769a82b0c",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "10-year Treasury yield rose to 5.28% from 5.24%, reaching highest level in 24 years",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "844eda60-16b7-4bcd-8a87-cffa62bcee70",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Real 10-year Treasury yield increased to 2.92% from 2.88%",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "cd64778b-f65c-4703-ba22-ecff31191621",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "High yield credit spread narrowed by 0.14 percentage points to 3.1%",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "f9a5fd71-f45a-4577-b296-d1d949571526",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "Investment grade credit spread tightened by 0.01 percentage points to 0.85%",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "bbd245b4-e306-4250-a02c-12d1024b7340",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "S&P 500 set record high at 7,722.72, up 56.27 points from previous day",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "fc0cf8bb-cd52-4de5-817b-d9f1f8b6bd4a",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "NASDAQ Composite reached 27,190.86, up 319.26 points from previous day",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "774277cb-37d8-4940-9834-31b5195a1161",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "CBOE Volatility Index fell to 14.84 from 15.31, indicating reduced near-term volatility expectations",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "5877ea6e-bee4-4144-9a1e-9232fc2c21e6",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "AAII Investor Sentiment: bullish at 34.65%, neutral at 18.86%, bearish at 46.49%, bull-bear spread at 34.61%",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "1029f5ba-40a6-444e-92c7-c4084b62b2b5",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "market_condition",
+      "observation": "CNN Fear & Greed Index at 43.14, rated 'fear', up 3.17 points from previous day",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "8e457648-d903-4965-b09d-836658323ab9",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "development",
+      "observation": "IMF upgraded global growth forecast to 3.1% for 2026, warning of AI investment debt risks and Middle East war impacts",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "088f857e-2df1-4058-9700-2e2c6743c555",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "development",
+      "observation": "China's September PPI increased to 4.5% and CPI to 0.9%, driven by oil price increases above $100/bbl",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "fff564e7-1286-458f-b700-649753555a21",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "development",
+      "observation": "Tier-1 land sales market froze in October 2026, with only Guangzhou listing 5 residential parcels",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "4fbae0bd-1474-495b-97d8-d6127d551baf",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "regulation",
+      "observation": "Ministry of Finance cut NEV export rebate from 13% to 9% effective April 1, 2027, removing e-cigarette export rebates",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "ee8f49f0-0070-467c-97bc-33599b31e9ac",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Trump announced diesel deal with Russia for 4.8 million metric tons (35.76 million barrels) to ease fuel price pressure",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "49b2ffd5-a387-4165-9ba2-a8f9161f1213",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "event",
+      "observation": "Middle East tensions escalated with Iranian tanker strikes and Houthi attacks, disrupting oil shipments through Strait of Hormuz",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    },
+    {
+      "id": "9dd8235d-ecaf-4aed-8ff9-40c035c377f2",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "macro",
+      "type": "development",
+      "observation": "ECB continues raising interest rates, pushing long-term bond yields to 15-20 year highs",
+      "research_enabled": false,
+      "created_at": "2026-10-13T20:23:34.714Z"
+    }
+  ]
+}

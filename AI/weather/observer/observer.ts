@@ -70,10 +70,7 @@ const FOUNDATIONAL_CONTEXT_MARKER = "{{foundationalContext}}";
 
 const RESEARCH_NOTES_MARKER = "{{researchNotes}}";
 
-const OBSERVER_EVIDENCE_MARKER = "{{observerEvidence}}";
-
-/** How the evidence is inlined, so the prompt can be rebuilt exactly. */
-const OBSERVER_EVIDENCE_FORMAT = "JSON.stringify(observerEvidence, null, 2)";
+const OBSERVER_FINDINGS_MARKER = "{{observerFindings}}";
 
 /**
  * Runs the Observer and returns the observations it produced.
@@ -396,36 +393,44 @@ Identify meaningful developments and produce observations.
   await runLog.record("reasoning", lastReasoningText);
 
   // --------------------------------------------------
-  // Observer evidence
+  // Observer findings
   // --------------------------------------------------
 
-  const observerEvidence = observerSteps
-    .filter(
-      (step) => step.toolCalls.length > 0 || step.toolResults.length > 0 || Boolean(step.text),
-    )
-    .map((step) => ({
+  /**
+   * What the formatter is given instead of the raw tool evidence.
+   *
+   * The evidence block carried every tool call's arguments and every tool result,
+   * serialized. On a busy domain that is tens of thousands of characters of news
+   * snippets and API payloads, and the formatter degraded under it: one run emitted
+   * the same observation four hundred times with `<unk>` in between. The input was
+   * larger than the model's working context, so it stopped being able to hold it.
+   *
+   * What replaces it is what the Observer itself produced - its reasoning at each
+   * step, and its final answer. That is roughly an order of magnitude smaller, and it
+   * is already organised: the Observer did the reading, and the step where it paused
+   * to consolidate is where the full inventory lives, before its final answer ranked
+   * and collapsed it.
+   *
+   * Built from `observerSteps` rather than collected in `onStepEnd` so it cannot drift
+   * from what the run log recorded for those same steps.
+   */
+  const observerFindings = [
+    ...observerSteps.map((step) => ({
       step: step.stepNumber + 1,
-
-      text: step.text || null,
-
-      toolCalls: step.toolCalls.map((toolCall) => ({
-        tool: toolCall.toolName,
-        arguments: toolCall.input,
-      })),
-
-      toolResults: step.toolResults.map((toolResult) => ({
-        tool: toolResult.toolName,
-        result: toolResult.output,
-      })),
-    }));
-
-  // --------------------------------------------------
-  // Research Notes
-  // --------------------------------------------------
-
-  // Extracted so the prompt and the run log reference the same value, and so the
-  // run log can strip it back out without re-serializing.
-  const embeddedObserverEvidence = JSON.stringify(observerEvidence, null, 2);
+      reasoning: getReasoningText(step),
+    })),
+    ...(observerText.trim().length > 0
+      ? [{ step: observerSteps.length + 1, reasoning: observerText }]
+      : []),
+  ]
+    .filter((entry) => entry.reasoning)
+    .map(
+      (entry) =>
+        `<observer_step number="${entry.step}">
+${entry.reasoning}
+</observer_step>`,
+    )
+    .join("\n\n");
 
   // --------------------------------------------------
   // Formatter prompts
@@ -452,10 +457,16 @@ Foundational market context:
 ${observerContext}
 </foundational_context>
 
-Raw Observer evidence:
-<observer_evidence>
-${embeddedObserverEvidence}
-</observer_evidence>
+The Observer's findings, in the order it produced them:
+
+<observer_findings>
+${observerFindings}
+</observer_findings>
+
+The findings above are the Observer's own reasoning at each step followed by its final
+answer. They are the complete inventory. Raw tool output is deliberately not included:
+it is far larger than this task can reliably process, and the Observer already read
+it.
 
 YOUR ROLE: STRUCTURAL FORMATTING ONLY
 
@@ -502,12 +513,12 @@ CORE RULES:
 - Do not assign importance scores, prioritize observations, determine research eligibility, or decide which findings should proceed downstream.
 - Do not reject an observation because its type is ambiguous. Use "other" when no permitted type fits reliably.
 
-6. USE EVIDENCE CORRECTLY
-- The raw Observer findings are the primary inventory to preserve.
-- Supporting evidence may clarify the meaning of an observation or help resolve formatting ambiguity.
+6. USE THE FINDINGS AND CONTEXT CORRECTLY
+- The Observer's findings are the inventory to preserve. Nothing outside them is an observation.
+- The Observer's final answer is a condensed view of what it found. Where it condensed, the earlier step reasoning often holds the fuller form - use it to recover detail rather than treating the final answer as the limit of what was found.
 - Foundational context describes deterministic market conditions. It may provide context but does not independently establish that an external event occurred.
 - Do not perform additional research, investigate claims, or expand observations beyond the supplied material.
-- Do not create new observations from foundational context or supporting evidence that were not part of the Observer's findings.
+- Do not create new observations from foundational context that were not part of the Observer's findings.
 
 7. VERIFY COMPLETENESS BEFORE RESPONDING
 - Compare the output against the complete Observer inventory.
@@ -549,14 +560,16 @@ The output is a complete normalized inventory for downstream processing, not a c
   await runLog.record("formatter", {
     prompt: formatterDevPrompt
       .replace(observerContext, FOUNDATIONAL_CONTEXT_MARKER)
-      .replace(embeddedObserverEvidence, OBSERVER_EVIDENCE_MARKER),
+      .replace(observerFindings, OBSERVER_FINDINGS_MARKER),
 
     embeddedValues: {
       [FOUNDATIONAL_CONTEXT_MARKER]: "observerContext, verbatim",
 
       [RESEARCH_NOTES_MARKER]: "the notes recorded in the research_notes entry",
 
-      [OBSERVER_EVIDENCE_MARKER]: `${OBSERVER_EVIDENCE_FORMAT} over the Observer tool evidence`,
+      [OBSERVER_FINDINGS_MARKER]:
+        "the Observer reasoning from each step, then its final answer; see the step " +
+        "and observer_output sections",
     },
   });
 

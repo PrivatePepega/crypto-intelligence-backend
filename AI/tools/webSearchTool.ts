@@ -59,7 +59,7 @@ export const webSearchTool = tool({
 });
 
 export const webSearch = async (query: string, limit: number = DEFAULT_SEARCH_LIMIT) => {
-  const provider = searchProviders.exa;
+  const provider = searchProviders.tavily;
   const response = await provider.search(query, limit);
   return provider.normalize(response);
 };
