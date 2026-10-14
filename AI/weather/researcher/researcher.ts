@@ -65,7 +65,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  *
  * Change it here and nothing else.
  */
-const modelPick = models.google;
+const modelPick = models.openai;
 
 // How long this agent keeps retrying one model call before the domain is abandoned.
 //

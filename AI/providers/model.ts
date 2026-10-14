@@ -8,7 +8,7 @@ import openrouter from "./models/openRouter.js";
 
 type Models = {
     groq: LanguageModel;
-    google: LanguageModel;
+    google3dot8Flash: LanguageModel;
     openai: LanguageModel;
     openrouterFree: LanguageModel;
     openrouter: LanguageModel;
@@ -18,7 +18,7 @@ type Models = {
 export const models: Models = {
   groq: groq("openai/gpt-oss-120b"),
 
-  google: google("gemini-3.8-flash"),
+  google3dot8Flash: google("gemini-3.8-flash"),
 
   openai: openai("gpt-6-luna"),
 

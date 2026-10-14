@@ -747,6 +747,8 @@ ${row.research}
       );
     };
 
+    
+
     /** Runs the analyst once. The prompt is set by the caller. */
     const runAnalystOnce = async () =>
       generateText({
