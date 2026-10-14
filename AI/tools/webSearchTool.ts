@@ -59,7 +59,7 @@ export const webSearchTool = tool({
 });
 
 export const webSearch = async (query: string, limit: number = DEFAULT_SEARCH_LIMIT) => {
-  const provider = searchProviders.tavily;
+  const provider = searchProviders.brave;
   const response = await provider.search(query, limit);
   return provider.normalize(response);
 };

@@ -79,6 +79,83 @@ export const triageSchema = z.object({
 export type TriageSchema = z.infer<typeof triageSchema>;
 
 /**
+ * The share of observations a response must label before it is accepted.
+ *
+ * Triage's job is one label per observation, so a response that labels a handful has
+ * not done the job. It will still be structurally valid - the schema only checks that
+ * each entry has a string id, a boolean and a reason - and without this it is accepted
+ * and promotes almost nothing.
+ *
+ * Not 1. A model may legitimately merge a duplicate pair, or drop one it cannot read,
+ * so demanding every id would reject a usable answer over one or two gaps. This is the
+ * point where a response is clearly broken rather than imperfect.
+ *
+ * Low deliberately. A long inventory of near-duplicate futures-open-interest rows is
+ * easy for a model to judge two at a time and skip most of, and a partial but honest
+ * labelling is more useful than a retry that spends the budget and comes back no
+ * better. The ids themselves are still checked against the rows, so a response cannot
+ * pass this by inventing its way to a count.
+ */
+export const MIN_LABELLED_SHARE = 0.35;
+
+/**
+ * Whether a Triage response actually labelled the day, and why not if it did not.
+ *
+ * Returns `null` for a response worth using and a sentence describing the problem
+ * otherwise, so the retry line says which of the three it was rather than a generic
+ * "empty result".
+ *
+ * The schema cannot catch any of them. `z.string().min(1)` accepts any non-empty
+ * text, which means an id of "]}  {" passes validation as readily as a real UUID.
+ * One recorded run labelled two of forty-eight observations with ids that were
+ * fragments of JSON syntax, promoted nothing, and reported success at every stage
+ * downstream - so this is checked against the rows actually supplied rather than
+ * against the schema.
+ *
+ * Rejects:
+ *
+ * 1. no signals at all
+ * 2. an id that is not one of the observations supplied - the model shortens a UUID
+ *    to eight characters, invents one, or emits a fragment of JSON punctuation
+ * 3. too few observations labelled to be a real attempt at the job
+ *
+ * @param signals The `signals` array from the response, or undefined when the model
+ *   returned nothing usable.
+ * @param knownIds The ids of the observations that were supplied.
+ * @param observationCount How many observations were supplied.
+ */
+export const triageResponseProblem = (
+  signals: { id: string }[] | undefined,
+  knownIds: Set<string>,
+  observationCount: number,
+): string | null => {
+  if (!Array.isArray(signals) || signals.length === 0) {
+    return "no signals returned";
+  }
+
+  const invented = signals.filter((signal) => !knownIds.has(signal.id));
+
+  if (invented.length > 0) {
+    const example = invented[0];
+
+    return (
+      `${invented.length} of ${signals.length} ids are not observations from the input ` +
+      `(e.g. "${example === undefined ? "" : example.id}")`
+    );
+  }
+
+  const labelled = new Set(signals.map((signal) => signal.id)).size;
+
+  const required = Math.ceil(observationCount * MIN_LABELLED_SHARE);
+
+  if (labelled < required) {
+    return `labelled ${labelled} of ${observationCount} observations, needs at least ${required}`;
+  }
+
+  return null;
+};
+
+/**
  * Turns the agent's response into one label per observation.
  *
  * Returns a flat list because that is all triage produces: a decision per

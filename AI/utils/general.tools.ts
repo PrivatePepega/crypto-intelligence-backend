@@ -1,4 +1,6 @@
 import type { ToolSet } from "ai";
+
+import google from "../providers/models/google.js";
 import { currentsSearchTool } from "../tools/currentsNewsSearch.js";
 import { cvArticlesTagsTool } from "../tools/cvArticlesTags.js";
 import { cvBitcoinNewsTool } from "../tools/cvBitcoinNews.js";
@@ -27,7 +29,22 @@ import { exposeCurrentData } from "../../utils/AI/currentData testing area/curre
 // Agentic tooling
 // --------------------------------------------------
 
-export const agenticTooling = {
+/**
+ * Every tool the agents may name, by the name they name it by.
+ *
+ * Typed as a plain record rather than as a `ToolSet`, and that is not a loosening for
+ * convenience. `ai` and `@ai-sdk/google` each pull in their own copy of
+ * `@ai-sdk/provider-utils` (5.0.51 and 5.0.59), so the two `Tool` types are nominally
+ * different to TypeScript and a provider-executed tool is not assignable to a
+ * `ToolSet` even though it is one. Annotating as `ToolSet` fails on `google_search`;
+ * leaving it inferred fails to emit a declaration.
+ *
+ * The shape of each entry is not left unchecked because of this:
+ * {@link getAgenticTooling} runs every value past {@link isTool} or {@link isToolSet}
+ * and throws on anything else, so a tool that does not fit is refused at the call site
+ * with a message naming it.
+ */
+export const agenticTooling: Record<string, unknown> = {
   getCurrentIndicatorData: getCurrentIndicatorTool,
 
   marketauxNewsSearch: marketauxSearchTool,
@@ -56,6 +73,31 @@ export const agenticTooling = {
   newsMarketsNewsTool,
 
   wabbleImportantHeadlineSearch: wabbleImportantHeadlineSearchTool,
+
+  /**
+   * Google's own search, executed by Google rather than by us.
+   *
+   * A provider-executed tool: the SDK sends the tool name in the request, Google runs
+   * the search and returns the results inline. There is no API key of ours to manage,
+   * no HTTP call from this process, and no result shape to parse.
+   *
+   * ## The name is fixed
+   *
+   * `googleSearch` must be registered under the key `google_search` - the provider
+   * rejects any other name, so this is not a naming preference.
+   *
+   * ## It only works on a Google model
+   *
+   * This is the one entry in this registry that is provider-specific. It is a
+   * provider-executed tool with no local implementation, so naming it in an agent
+   * whose model is not Google's will fail the request rather than degrade. Every other
+   * tool here is client-side and model-agnostic, which is why this one carries the
+   * warning and they do not.
+   *
+   * Empty arguments, so it uses Google's defaults: web search, no time filter.
+   * `searchTypes` and `timeRangeFilter` are available if a caller wants either.
+   */
+  google_search: google.tools.googleSearch({}),
 };
 
 // --------------------------------------------------

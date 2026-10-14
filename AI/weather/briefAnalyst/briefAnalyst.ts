@@ -55,6 +55,7 @@ import { fetchObservationsForSet } from "../../utils/weather/dbFetcher.triage.js
 import {
   type BriefGenerationResult,
   type BriefSliders,
+  briefResponseProblem,
   createBriefAnalystRunLog,
   dumpBriefsForSet,
   logFormatterError,
@@ -715,41 +716,122 @@ ${row.research}
 
   let analystResult;
 
+  // The prompt of the attempt that actually ran, and why the last response was
+  // rejected. Both read after the call.
+  let analystAttemptPrompt = analystDevPrompt;
+
+  /** Why the last response was rejected, or null when it was accepted. */
+  let analystShapeProblem: string | null = null;
+
+  // How many of the analyst's shape budget were spent, recorded so a run that had to
+  // re-ask is visible in the log rather than only on the terminal.
+  let analystShapeAttempts = 0;
+
+  /** What each analyst attempt is told, escalating. */
+  const ANALYST_RETRY_INSTRUCTIONS = [
+    "please do it right",
+    "Your previous response was not usable. Return the complete JSON object for the whole day's analysis, and nothing else - no preamble, no explanation, no markdown fence.",
+    "Two previous responses were unusable. Emit the full JSON object now, opening with { and closing with }. Cover every research record supplied. Do not stop early and do not add commentary outside the object.",
+  ] as const;
+
   try {
-    // Retried whole: the step loop belongs to the SDK, so a stream that has started
-    // cannot be resumed. A blank response counts as a failure rather than an analyst
-    // that found nothing - the two produce very different briefs and only one of them
-    // is real.
-    analystResult = await withModelRetry(
-      () =>
-        generateText({
-          model: modelPick,
+    // The analyst's shape budget. Separate from RETRY_ATTEMPTS for the same reason
+    // as everywhere else: that one waits out a provider being unreachable, this one
+    // re-asks a provider that answered with something which is not an analyst output.
+    //
+    // Needed because the analyst is the one stage whose failure is invisible: its
+    // parse failure is caught and logged rather than thrown, so the run carries on and
+    // builds both briefs from an unusable input. Without this, one bad response
+    // produces two briefs that are confidently wrong.
+    const ANALYST_ATTEMPTS = 3;
 
-          instructions: analystSystemPrompt,
+    /** The instruction for the next attempt, advancing the counter. */
+    const nextAnalystInstruction = (): string => {
+      analystShapeAttempts += 1;
 
-          prompt: analystDevPrompt,
+      const index = Math.min(analystShapeAttempts, ANALYST_ATTEMPTS) - 1;
 
-          tools: getAgenticTooling({ tools: [...ANALYST_TOOLS] }),
+      return (
+        ANALYST_RETRY_INSTRUCTIONS[index] ?? ANALYST_RETRY_INSTRUCTIONS[0] ?? "please do it right"
+      );
+    };
 
-          stopWhen: isStepCount(MAX_AGENT_STEPS),
+    /** Runs the analyst once. The prompt is set by the caller. */
+    const runAnalystOnce = async () =>
+      generateText({
+        model: modelPick,
 
-          maxOutputTokens: MAX_ANALYST_OUTPUT_TOKENS,
+        instructions: analystSystemPrompt,
 
-          providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+        prompt: analystAttemptPrompt,
 
-          onStepEnd: async (step) => {
-            analystStepsDone += 1;
+        tools: getAgenticTooling({ tools: [...ANALYST_TOOLS] }),
 
-            await runLog.record("analyst_step", normalizeStep(step));
-          },
-        }),
-      `brief analyst (${config.domain})`,
-      {
-        attempts: RETRY_ATTEMPTS,
-        delayMs: RETRY_DELAY_MS,
-        isEmptyResult: (run) => run.text.trim().length === 0,
-      },
-    );
+        stopWhen: isStepCount(MAX_AGENT_STEPS),
+
+        maxOutputTokens: MAX_ANALYST_OUTPUT_TOKENS,
+
+        providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+
+        onStepEnd: async (step) => {
+          analystStepsDone += 1;
+
+          await runLog.record("analyst_step", normalizeStep(step));
+        },
+      });
+
+    /**
+     * Asks for the analysis, re-asking with different instructions when the answer is
+     * not usable.
+     *
+     * This is the shape budget and nothing else. A provider error is deliberately not
+     * caught here: it leaves straight out to the outage wrapper below rather than
+     * consuming one of three attempts.
+     *
+     * The exhausted case returns the last response rather than throwing, so the wrapper
+     * outside does not spend eight minutes repeating the same three failures.
+     */
+    const askForAnalysis = async () => {
+      let lastRun: Awaited<ReturnType<typeof runAnalystOnce>> | undefined;
+
+      for (let attempt = 1; attempt <= ANALYST_ATTEMPTS; attempt += 1) {
+        analystAttemptPrompt = `${analystDevPrompt}\n\n${nextAnalystInstruction()}`;
+
+        const run = await runAnalystOnce();
+
+        lastRun = run;
+
+        const problem = briefResponseProblem(run.text);
+
+        if (problem === null) {
+          analystShapeProblem = null;
+
+          return run;
+        }
+
+        analystShapeProblem = problem;
+
+        console.warn(
+          `↻ brief analyst (${config.domain}) response ${attempt}/${ANALYST_ATTEMPTS} ` +
+            `rejected: ${problem}`,
+        );
+      }
+
+      if (lastRun === undefined) {
+        throw new Error("brief analyst made no attempts");
+      }
+
+      return lastRun;
+    };
+
+    // The outage budget, and only that. `askForAnalysis` is re-run whole on a
+    // provider failure because a started stream cannot be resumed, and it carries no
+    // shape check of its own so a rejected response is not retried eight more times
+    // here.
+    analystResult = await withModelRetry(askForAnalysis, `brief analyst (${config.domain})`, {
+      attempts: RETRY_ATTEMPTS,
+      delayMs: RETRY_DELAY_MS,
+    });
   } finally {
     // Cleared even on a throw, so a failed call does not leave the interval running
     // and keep logging for the rest of the process.
@@ -800,6 +882,8 @@ ${row.research}
   await runLog.record("usage", {
     phase: "analyst",
 
+    analystShapeAttempts,
+
     cumulativeInputTokens: analystUsage.inputTokens ?? null,
 
     outputTokens: analystUsage.outputTokens ?? null,
@@ -814,6 +898,30 @@ ${row.research}
 
     finishReason: analystFinishReason,
   });
+
+  // Three rejected responses is not an analyst that found nothing - it is a provider
+  // handing back something that is not an analysis. Carrying on would build both
+  // briefs from an unusable input, which is how one bad response becomes two briefs
+  // that are confidently wrong. Raised before either brief is started, so neither is
+  // spent on an input that is already known to be unusable.
+  //
+  // This stage used to be the one failure that was invisible: its parse error was
+  // recorded and the run carried on regardless.
+  if (analystShapeProblem !== null) {
+    await runLog.record("analyst_rejected", {
+      problem: analystShapeProblem,
+      attempts: analystShapeAttempts,
+      finishReason: analystFinishReason,
+      characters: analystText.length,
+      text: analystText,
+    });
+
+    throw new Error(
+      `Brief analyst (${config.domain}) did not return an analysis after ` +
+        `${analystShapeAttempts} attempts: ${analystShapeProblem} ` +
+        `(finishReason=${analystFinishReason}, ${analystText.length} characters).`,
+    );
+  }
 
   // The analyst's JSON is parsed, not validated. Its job here is only to confirm
   // the response is object-shaped; the formatter decides whether the brief is
@@ -891,6 +999,10 @@ ${row.research}
         // repaired input is never mistaken for one built on the original.
         repairedAnalystJsonAt: result.repairedAt,
 
+        // How many of the brief budget were spent, so a brief that had to be re-asked
+        // is visible afterwards rather than only on the terminal.
+        briefAttempts: result.briefAttempts,
+
         text: result.text,
       });
 
@@ -913,7 +1025,6 @@ ${row.research}
         analystFinishReason,
         analystCharacters: analystText.length,
       });
-
       await runLog.record(`${key}_failure`, {
         error: message,
         name: error instanceof Error ? error.name : typeof error,

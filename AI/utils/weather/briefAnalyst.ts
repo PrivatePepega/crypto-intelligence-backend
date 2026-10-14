@@ -210,6 +210,106 @@ export type BriefSliders = {
   retryDelayMs: number;
 };
 
+// --------------------------------------------------
+// Response checks
+// --------------------------------------------------
+//
+// Every brief stage has produced a response the provider considered finished and
+// that contained no brief at all. A blank check catches none of them:
+//
+// - "User Safety: safe" - 17 characters, `finishReason: stop`, no braces
+// - a truncated document that stops mid-value, braces still open
+// - prose instead of JSON
+//
+// All three arrive as a *successful* response, so without a check the stage either
+// writes an empty brief or throws at the parse with the real cause - a provider
+// safety stub or a shed connection - nowhere in sight.
+// --------------------------------------------------
+
+/**
+ * How many attempts a brief stage gets when the response is not a brief.
+ *
+ * Separate from the outage budget in {@link BriefSliders} because the two failures
+ * are unrelated: that one waits out a provider being unreachable, this one re-asks
+ * a provider that answered with something that is not a brief. Waiting eight
+ * minutes for a fourth identical safety stub only delays the same failure.
+ */
+const BRIEF_ATTEMPTS = 3;
+
+/**
+ * What each attempt is told, escalating.
+ *
+ * An identical prompt tends to produce an identical response, and these failures
+ * are not the kind a model escapes on its own. Each attempt gets different
+ * instructions naming what was wrong with the one before.
+ */
+const BRIEF_RETRY_INSTRUCTIONS = [
+  "please do it right",
+  "Your previous response was not a brief. Return the complete JSON object for this brief, and nothing else - no preamble, no explanation, no markdown fence.",
+  "Two previous responses were unusable. Emit the full JSON object now, opening with { and closing with }. Do not stop early, do not summarise, and do not add commentary outside the object.",
+] as const;
+
+/**
+ * Whether a brief stage's response is actually a brief, and why not if it is not.
+ *
+ * Returns `null` for a response worth using, or a sentence naming the problem so the
+ * retry line says which of the checks it was rather than a generic "empty result".
+ *
+ * Two checks, in order of how often each has caught a real run:
+ *
+ * 1. no JSON object at all - a provider safety stub, prose, or a response cut off
+ *    before its braces closed. This is the one that fires: "User Safety: safe" and a
+ *    document truncated mid-value both land here.
+ * 2. a JSON object with nothing in it - `{}` parses cleanly and is not a brief
+ *
+ * And within the first, a genuine `JSON.parse` rather than the brace count alone:
+ * `extractJsonObject` balances braces, so `{"summary": }` comes back looking complete
+ * and only the parse catches it.
+ *
+ * @param text The response, unparsed.
+ */
+export const briefResponseProblem = (text: string): string | null => {
+  const trimmed = text.trim();
+
+  if (trimmed.length === 0) {
+    return "empty response";
+  }
+
+  const jsonText = extractJsonObject(trimmed);
+
+  if (jsonText === null) {
+    const preview = trimmed.length > 120 ? `${trimmed.slice(0, 120)}...` : trimmed;
+
+    return (
+      `no JSON object in ${trimmed.length} characters ` +
+      `(response began: ${JSON.stringify(preview)})`
+    );
+  }
+
+  let parsed: unknown;
+
+  try {
+    parsed = JSON.parse(jsonText);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+
+    return `JSON object did not parse: ${message}`;
+  }
+
+  // `extractJsonObject` only ever returns a balanced `{`...`}` slice, so anything
+  // that got here is an object literal - there is no array, null or bare value case to
+  // guard against, and a top-level array was already rejected above for having no
+  // opening brace.
+  //
+  // An empty object is not a brief, though. Checked here rather than by a schema
+  // because neither brief declares one: each prompt sets its own shape.
+  if (Object.keys(parsed as Record<string, unknown>).length === 0) {
+    return "JSON object is empty";
+  }
+
+  return null;
+};
+
 /** What one brief generation produced. */
 export type BriefGenerationResult = {
   /** The parsed brief. `unknown` because each prompt sets its own shape. */
@@ -235,6 +335,9 @@ export type BriefGenerationResult = {
 
   /** Where the analyst input needed the comma repair, or `null` when it did not. */
   repairedAt: number | null;
+
+  /** How many attempts the brief budget needed, including the one that succeeded. */
+  briefAttempts: number;
 };
 
 /**
@@ -261,7 +364,12 @@ export const generateBrief = async (options: {
   /** The brief's editorial or synthesis instructions. */
   systemPrompt: string;
 
-  /** Built from the same analyst output. */
+  /**
+   * Built from the same analyst output.
+   *
+   * Appended to on a re-ask rather than replaced, so the retry instructions sit after
+   * the editorial instructions and are the last thing the model reads.
+   */
   userPrompt: string;
 
   /** The model, step ceiling, token ceiling and reasoning effort to use. */
@@ -292,8 +400,26 @@ export const generateBrief = async (options: {
     input = repair.text;
   }
 
-  // Retried, and a blank response counts as a failure. Covers both briefs at once,
-  // because they share this function and the failure they would suffer is identical.
+  // How many of the brief budget this run spent, and what the last rejected response
+  // was. Both recorded in the result so a run that needed re-asking is visible
+  // afterwards rather than only in the console.
+  let briefAttempts = 0;
+
+  /** The instruction for the next attempt, advancing the counter. */
+  const nextRetryInstruction = (): string => {
+    briefAttempts += 1;
+
+    const index = Math.min(briefAttempts, BRIEF_RETRY_INSTRUCTIONS.length) - 1;
+
+    return BRIEF_RETRY_INSTRUCTIONS[index] ?? BRIEF_RETRY_INSTRUCTIONS[0];
+  };
+
+  /** Why the last response was rejected, or null when it was accepted. */
+  let shapeProblem: string | null = null;
+
+  // Retried, and a response that is not a brief counts as a failure. Covers both
+  // briefs at once, because they share this function and the failure they would
+  // suffer is identical.
   //
   // The whole call rather than the stream: `streamText` is lazy, so the request is not
   // made until the text is consumed, and a stream that has started emitting cannot be
@@ -303,13 +429,13 @@ export const generateBrief = async (options: {
   // time includes the backoff between attempts rather than hiding it.
   const startedAt = Date.now();
 
-  const runStream = async () => {
+  const runStream = async (prompt: string) => {
     const stream = streamText({
       model: sliders.model,
 
       system: systemPrompt,
 
-      prompt: userPrompt,
+      prompt,
 
       // Inert without tools, but wired so the knob is real rather than decorative.
       stopWhen: isStepCount(sliders.maxSteps),
@@ -354,11 +480,70 @@ export const generateBrief = async (options: {
     return { text: await stream.text, finishReason: await stream.finishReason, usage };
   };
 
-  const { text, finishReason, usage } = await withModelRetry(runStream, `${label} (${domain})`, {
+  /**
+   * Asks for the brief, re-asking with different instructions when the answer is not
+   * one.
+   *
+   * This is the shape budget and nothing else. A provider error is deliberately not
+   * caught here: it leaves straight out to the outage wrapper below rather than
+   * consuming one of three attempts.
+   *
+   * The exhausted case returns the last response rather than throwing, so the wrapper
+   * outside does not spend eight minutes repeating the same three failures.
+   * `shapeProblem` is what turns it into a failure instead.
+   */
+  const askForBrief = async () => {
+    let lastRun: Awaited<ReturnType<typeof runStream>> | undefined;
+
+    for (let attempt = 1; attempt <= BRIEF_ATTEMPTS; attempt += 1) {
+      const instruction = nextRetryInstruction();
+
+      const run = await runStream(`${userPrompt}\n\n${instruction}`);
+
+      lastRun = run;
+
+      const problem = briefResponseProblem(run.text);
+
+      if (problem === null) {
+        shapeProblem = null;
+
+        return run;
+      }
+
+      shapeProblem = problem;
+
+      console.warn(
+        `↻ ${label} (${domain}) response ${attempt}/${BRIEF_ATTEMPTS} rejected: ${problem}`,
+      );
+    }
+
+    if (lastRun === undefined) {
+      throw new Error(`${label} made no attempts`);
+    }
+
+    return lastRun;
+  };
+
+  // The outage budget, and only that. `askForBrief` is re-run whole on a provider
+  // failure because a started stream cannot be resumed, and it carries no shape check
+  // of its own so a rejected response is not retried eight more times here.
+  const { text, finishReason, usage } = await withModelRetry(askForBrief, `${label} (${domain})`, {
     attempts: sliders.retryAttempts,
     delayMs: sliders.retryDelayMs,
-    isEmptyResult: (run) => run.text.trim().length === 0,
   });
+
+  // Three rejected responses in a row is not a quiet day, it is a provider handing
+  // back something that is not a brief. Raised here rather than left to the parse so
+  // the reason is the shape problem rather than "no JSON object", which is what it
+  // always says about a safety stub.
+  if (shapeProblem !== null) {
+    console.log(`[brief] ${label} finalized for domain: ${domain} - no brief, ${shapeProblem}`);
+
+    throw new Error(
+      `${label} did not return a brief after ${BRIEF_ATTEMPTS} attempts: ${shapeProblem} ` +
+        `(finishReason=${finishReason}, ${text.length} characters).`,
+    );
+  }
 
   const seconds = Math.round((Date.now() - startedAt) / 1000);
 
@@ -400,6 +585,8 @@ export const generateBrief = async (options: {
       ? `${sliders.reasoningEffort.provider}/${sliders.reasoningEffort.effort}`
       : null,
     repairedAt: repair?.at ?? null,
+
+    briefAttempts,
   };
 };
 import { mkdirSync, writeFileSync } from "node:fs";

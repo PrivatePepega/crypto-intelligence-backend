@@ -14,6 +14,7 @@ import { withModelRetry } from "../../utils/weather/retry.js";
 import { createObserverRunLog, persistObservations } from "../../utils/weather/observer.js";
 
 import {
+  extractJsonObject,
   parseObservations,
   type DailySet,
   type Observation,
@@ -42,6 +43,21 @@ const MAX_AGENT_STEPS = 5;
 // must finish is worth waiting out.
 const RETRY_ATTEMPTS = 48;
 const RETRY_DELAY_MS = 10_000;
+
+/**
+ * How many times the formatter is asked again when its response has no readable JSON
+ * in it.
+ *
+ * Separate from {@link RETRY_ATTEMPTS} because the two failures are unrelated. That
+ * budget is for a provider being unreachable and is worth waiting out; this one is for
+ * a response the provider did return and got wrong, where waiting longer changes
+ * nothing.
+ *
+ * Small on purpose. Three is enough to absorb a bad draw from the free router, and if
+ * it still has not produced JSON then the cause is in the input or the prompt rather
+ * than in luck.
+ */
+const FORMATTER_ATTEMPTS = 3;
 /**
  * Pause between agent steps, in milliseconds.
  *
@@ -475,8 +491,52 @@ ${entry.reasoning}
 
 `;
 
-  const formatterDevPrompt = `
+  /**
+   * What each formatter attempt is told, weakest first.
+   *
+   * The point is that an identical prompt tends to produce an identical response, so
+   * retrying a truncated one unchanged tends to truncate it the same way. Each attempt
+   * therefore gets different instructions, and they escalate: the first is a general
+   * nudge, the second names the actual failure, the third says exactly what shape the
+   * response must take.
+   *
+   * A bare counter would vary the bytes without varying the meaning, which is a much
+   * weaker lever than it looks - the model has no reason to treat "3" differently from
+   * "2" other than that the input differs.
+   *
+   * Past the last entry it repeats, so an attempt beyond the retry budget cannot be
+   * handed an undefined instruction.
+   */
+  const FORMATTER_RETRY_INSTRUCTIONS = [
+    "please do it right",
+    "Your previous response could not be parsed as a JSON object. Respond with the JSON object only: no Markdown, no code fence, and no text before or after it.",
+    "Two previous responses were incomplete or unparseable. This time the response must open with { and close with }, every string must be on one line, and there must be nothing else in it.",
+  ] as const;
+
+  /**
+   * How many formatter attempts have been made during this run.
+   *
+   * A mutable counter rather than the attempt number, because it is what actually
+   * changes between calls, and because it keeps working if some later caller retries the
+   * formatter on its own terms.
+   */
+  let pleaseCounter = 0;
+
+  /** The instruction for the next attempt, advancing the counter. */
+  const nextRetryInstruction = (): string => {
+    pleaseCounter += 1;
+
+    const index = Math.min(pleaseCounter, FORMATTER_RETRY_INSTRUCTIONS.length) - 1;
+
+    // The clamp above cannot actually land past the end, but the array is `as const`
+    // so the checker cannot see that. The fallback states it rather than asserting.
+    return FORMATTER_RETRY_INSTRUCTIONS[index] ?? FORMATTER_RETRY_INSTRUCTIONS[0];
+  };
+
+  const formatterDevPrompt = (retryInstruction: string): string => `
 Format the Observer's findings into the required JSON structure.
+
+${retryInstruction}
 
 Configured domain:
 ${config.domain}
@@ -594,7 +654,10 @@ The output is a complete normalized inventory for downstream processing, not a c
   // per run. The marker still stays in the prompt, because the rendered prompt
   // inlines the notes as text.
   await runLog.record("formatter", {
-    prompt: formatterDevPrompt
+    // The first attempt's prompt, which is what this is accurate about: the record is
+    // written before the call, so later attempts have not been built yet. How many
+    // attempts it took lands in the usage section instead.
+    prompt: formatterDevPrompt(FORMATTER_RETRY_INSTRUCTIONS[0])
       .replace(embeddedObserverEvidence, OBSERVER_EVIDENCE_MARKER)
       .replace(observerFindings, OBSERVER_FINDINGS_MARKER),
 
@@ -613,23 +676,47 @@ The output is a complete normalized inventory for downstream processing, not a c
   // Formatter
   // --------------------------------------------------
 
-  // Retried, and a blank response counts as a failure. Without this the observer
-  // parsed an empty string into zero observations and reported a clean run - the
-  // exact shape the 503 produced.
+  // Retried on the shape of the response, not on connectivity.
+  //
+  // A formatter call that comes back without a readable JSON object is retried, and
+  // then retried again, before the domain is failed. Three rather than the outage
+  // budget on purpose: these attempts are for a response the model produced and got
+  // wrong, which is a different problem from a provider being unreachable, and waiting
+  // eight minutes for a second wrong answer only delays the same failure.
+  //
+  // The check is `extractJsonObject` rather than a blank test, because that is the
+  // failure being caught. A response of a few thousand characters that never closes its
+  // braces is not blank, so the old check passed it as a usable answer and it went
+  // straight to the parser - which is what abandoned geopolitics.
+  //
+  // Worth knowing: this does not yet distinguish a response that was cut off from one
+  // this parser misreads. Both are retried the same way, and a cause that repeats
+  // identically will simply repeat three times.
+  //
+  // The prompt of the attempt that actually produced the response, kept so the run log
+  // records which attempt's instructions led to it rather than only the first one's.
+  let formatterAttempts = 0;
+
   const formatterResult = await withModelRetry(
-    () =>
-      generateText({
+    () => {
+      formatterAttempts += 1;
+
+      return generateText({
         model: modelPick,
 
         instructions: formatterSystemPrompt,
 
-        prompt: formatterDevPrompt,
-      }),
+        prompt: formatterDevPrompt(nextRetryInstruction()),
+      });
+    },
     `observer formatter (${config.domain})`,
     {
-      attempts: RETRY_ATTEMPTS,
+      attempts: FORMATTER_ATTEMPTS,
       delayMs: RETRY_DELAY_MS,
-      isEmptyResult: (run) => run.text.trim().length === 0,
+
+      // Fenced JSON, prose before it, and a balanced object all pass: the counter
+      // starts at the first `{` wherever that is.
+      isEmptyResult: (run) => extractJsonObject(run.text) === null,
     },
   );
 
@@ -665,6 +752,11 @@ The output is a complete normalized inventory for downstream processing, not a c
     // The formatter is a single call, so its `inputTokens` is that one call's
     // context, not a total. Left under the plain name, matching the step entries.
     formatterUsage,
+
+    // How many attempts it took to get a parseable response. One means it worked first
+    // time; three means two retries, and the run log holds why each earlier response had
+    // no readable JSON in it.
+    formatterAttempts,
 
     formatterFinishReason,
 

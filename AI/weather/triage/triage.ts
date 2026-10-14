@@ -39,6 +39,7 @@ import { estimateTokens } from "../../utils/general.tools.js";
 import {
   createTriageRunLog,
   parseTriageResult,
+  triageResponseProblem,
   triageSchema,
   writeTriageRecord,
   type TriageDecision,
@@ -91,6 +92,41 @@ const MAX_OUTPUT_TOKENS = 8_192;
 // Lower these to fail faster when running interactively. Raise them when a run that
 // must finish is worth waiting out.
 const RETRY_ATTEMPTS = 48;
+
+/**
+ * How many attempts Triage gets when its labels do not cover the day's observations.
+ *
+ * Separate from {@link RETRY_ATTEMPTS} because the two failures are unrelated. That
+ * budget is for a provider being unreachable and is worth waiting out; this one is for
+ * a response the provider did return and got wrong, where waiting longer changes
+ * nothing.
+ */
+const TRIAGE_ATTEMPTS = 3;
+
+/**
+ * What each attempt is told, escalating.
+ *
+ * An identical prompt tends to produce an identical response, and a response stuck in
+ * a degenerate reasoning loop will not escape one on its own. Each attempt gets
+ * different instructions naming what went wrong.
+ */
+const TRIAGE_RETRY_INSTRUCTIONS = [
+  "please do it right",
+  "Your previous response did not label the observations. Answer for every id in the input list, using each id exactly as it was given - copy it character for character, do not shorten it.",
+  "Two previous responses were unusable. Emit one entry per input id, with the id copied exactly and in full from the input. Do not abbreviate, do not renumber, and do not include any observation that was not in the input.",
+] as const;
+
+let triageAttempts = 0;
+
+/** The instruction for the next attempt, advancing the counter. */
+const nextRetryInstruction = (): string => {
+  triageAttempts += 1;
+
+  const index = Math.min(triageAttempts, TRIAGE_RETRY_INSTRUCTIONS.length) - 1;
+
+  return TRIAGE_RETRY_INSTRUCTIONS[index] ?? TRIAGE_RETRY_INSTRUCTIONS[0];
+};
+
 const RETRY_DELAY_MS = 10_000;
 /**
  * Pause before the model call, in milliseconds.
@@ -372,8 +408,10 @@ export const runTriage = async (
   Do not include Markdown, code fences, commentary, or additional fields.
   `;
 
-  const devPrompt = `
+  const devPrompt = (retryInstruction: string): string => `
   Triage the ${date} ${marketDomain} observation inventory.
+  ${retryInstruction}
+
   
   Label each observation as important or not important based on whether it deserves downstream research and potential inclusion in the daily brief.
   
@@ -397,11 +435,26 @@ export const runTriage = async (
     await sleep(STEP_DELAY_MS);
   }
 
-  const callTriage = async () =>
+  // The ids Triage was asked to label. Every id it returns is checked against these,
+  // which is what catches a model that shortens a UUID, invents one, or puts a
+  // fragment of JSON punctuation where an id belongs.
+  const knownIds = new Set(rows.map((row) => row.id));
+
+  // The prompt of the attempt that actually ran, kept so the run log records which
+  // attempt's instructions were used rather than only the first one's.
+  let usedPrompt = "";
+
+  // Why the last response was rejected, or null when it was accepted. Read after
+  // the call to decide whether the domain failed.
+  let shapeProblem: string | null = null;
+
+  const runTriageOnce = async () =>
     generateText({
       model: modelPick,
+
       instructions: systemPrompt,
-      prompt: devPrompt,
+
+      prompt: usedPrompt,
 
       maxOutputTokens: MAX_OUTPUT_TOKENS,
 
@@ -419,13 +472,65 @@ export const runTriage = async (
       },
     });
 
-  // Retried whole, and a blank response counts as a failure. An empty triage verdict
-  // would promote nothing and report a clean run, which is indistinguishable from a
-  // day where nothing was worth researching.
-  const result = await withModelRetry(callTriage, `triage (${marketDomain})`, {
+  /**
+   * Asks for labels, re-asking with different instructions when the answer is wrong.
+   *
+   * This is the shape budget and nothing else. A provider error is deliberately not
+   * caught here: it leaves straight out to the outage wrapper below instead of
+   * consuming one of three attempts, because a provider that is unreachable and a
+   * provider that returned a wrong answer are unrelated problems.
+   *
+   * A blank check would not have caught the failure this exists for. One real run
+   * labelled two of forty-eight observations using ids that were fragments of JSON
+   * syntax, promoted nothing, and reported success at every stage downstream. The
+   * schema passed it, because a string field accepts any text including "]}".
+   *
+   * The exhausted case returns the last response rather than throwing, so the
+   * wrapper outside does not then spend eight minutes repeating these same three
+   * failures. `shapeProblem` is what turns it into a failure instead.
+   */
+  const askForLabels = async () => {
+    let lastRun: Awaited<ReturnType<typeof runTriageOnce>> | undefined;
+
+    for (let attempt = 1; attempt <= TRIAGE_ATTEMPTS; attempt += 1) {
+      usedPrompt = devPrompt(nextRetryInstruction());
+
+      const run = await runTriageOnce();
+
+      lastRun = run;
+
+      const problem = triageResponseProblem(
+        (run.output as { signals?: { id: string }[] } | undefined)?.signals,
+        knownIds,
+        rows.length,
+      );
+
+      if (problem === null) {
+        shapeProblem = null;
+
+        return run;
+      }
+
+      shapeProblem = problem;
+
+      console.warn(
+        `↻ triage (${marketDomain}) response ${attempt}/${TRIAGE_ATTEMPTS} rejected: ${problem}`,
+      );
+    }
+
+    if (lastRun === undefined) {
+      throw new Error("triage made no attempts");
+    }
+
+    return lastRun;
+  };
+
+  // The outage budget, and only that. `askForLabels` is re-run whole on a provider
+  // failure because a started stream cannot be resumed, and it carries no shape
+  // check of its own so a rejected response is not retried eight more times here.
+  const result = await withModelRetry(askForLabels, `triage (${marketDomain})`, {
     attempts: RETRY_ATTEMPTS,
     delayMs: RETRY_DELAY_MS,
-    isEmptyResult: (run) => run.text.trim().length === 0,
   });
 
   const finalText = result.text;
@@ -440,6 +545,17 @@ export const runTriage = async (
 
   await runLog.record("triage_output", { text: finalText });
 
+  // Three rejected responses in a row is not a quiet day, it is a broken label -
+  // and carrying on would promote nothing while every stage downstream reported
+  // success. Raised after the output is recorded so the run log holds the response
+  // that failed rather than only the fact that it did.
+  if (shapeProblem !== null) {
+    throw new Error(
+      `Triage (${marketDomain}) did not label the day after ${TRIAGE_ATTEMPTS} attempts: ` +
+        shapeProblem,
+    );
+  }
+
   let lastReasoningText: string | null = null;
 
   for (const step of steps) {
@@ -453,6 +569,9 @@ export const runTriage = async (
   await runLog.record("reasoning", lastReasoningText);
 
   await runLog.record("usage", {
+    // How many of the shape budget were spent, so a run that needed re-asking is
+    // visible afterwards rather than only in the console.
+    triageAttempts,
     initialContextTokens,
 
     steps: steps.length,
@@ -531,11 +650,6 @@ export const runTriage = async (
   // --------------------------------------------------
   // Validate against the day's rows
   // --------------------------------------------------
-
-  // The model names rows; it does not get to say which rows exist. Anything it
-  // invented is reported rather than applied, and anything it forgot stays
-  // unpromoted.
-  const knownIds = new Set(rows.map((row) => row.id));
 
   const seen = new Set<string>();
   const unknownIds: string[] = [];

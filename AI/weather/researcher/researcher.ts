@@ -63,7 +63,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  *
  * Change it here and nothing else.
  */
-const modelPick = models.openrouterFree;
+const modelPick = models.google;
 
 // How long this agent keeps retrying one model call before the domain is abandoned.
 //
@@ -121,6 +121,25 @@ const MAX_OUTPUT_TOKENS = 30_000;
 const REASONING_EFFORT = "medium" as const;
 
 /**
+ * The same reasoning effort, in the form this agent's model actually takes it.
+ *
+ * Google has no `reasoningEffort`. Its provider option is
+ * `thinkingConfig.thinkingLevel`, which takes the same four words, so the effort is
+ * declared once and translated once here.
+ *
+ * Previously both calls sent `{ groq: { reasoningEffort } }` while running a Google
+ * model. That is not a harmless no-op: the same mistake elsewhere in this pipeline had
+ * a model return a reasoning block and no text at all.
+ */
+const GOOGLE_OPTIONS = {
+  google: {
+    thinkingConfig: {
+      thinkingLevel: REASONING_EFFORT,
+    },
+  },
+} as const;
+
+/**
  * Tools available to a research run.
  *
  * Named from the shared registry rather than bundled wholesale: Research needs
@@ -128,6 +147,14 @@ const REASONING_EFFORT = "medium" as const;
  * tool in the schema is an invitation to wander.
  */
 const RESEARCH_TOOLS = [
+  // Google's own search. Runs inside Gemini rather than through one of the client-side
+  // tools below, so it needs no key, makes no request from this process and returns
+  // results the SDK hands straight back to the model.
+  //
+  // Safe here and only here because this is the one agent on a Google model. It is a
+  // provider-executed tool: naming it anywhere else fails the request outright.
+  "google_search",
+
   "webSearchTool",
   "currentsNewsSearch",
   "newsflashSearchArticles",
@@ -488,7 +515,7 @@ export const runResearcher = async (
 
           maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-          providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
+          providerOptions: GOOGLE_OPTIONS,
 
           onStepEnd: async (stepResult) => {
             await runLog.record("step", { step, ...normalizeStep(stepResult) });
@@ -628,12 +655,7 @@ export const runResearcher = async (
 
               maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-              providerOptions: {
-                groq: { reasoningEffort: REASONING_EFFORT },
-                openrouter: {
-                  // Leave provider-specific options out unless supported by this model.
-                },
-              },
+              providerOptions: GOOGLE_OPTIONS,
 
               output: Output.object({
                 schema: researchSchema,

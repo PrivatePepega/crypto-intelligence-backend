@@ -1,0 +1,560 @@
+{
+  "date": "2026-10-13",
+  "marketDomain": "financial_markets",
+  "intelligenceSetId": "77fa46e2-589b-4e77-825b-b90027a89221",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-13T23:02:15.675Z",
+  "recordSection": "triage",
+  "finishReason": "stop",
+  "considered": 48,
+  "promoted": 0,
+  "importantIds": [],
+  "unknownIds": [
+    "exek",
+    "]}  {"
+  ],
+  "missingIds": [
+    "f8f35fc0-f29f-4810-bea9-e053b501e6d3",
+    "26d1c537-2a6e-47c2-9bd7-62f12fbbd643",
+    "789a3bac-faec-4bbc-a000-30d48df955aa",
+    "b67b398d-fe55-48c6-aba5-bab74f07e0bc",
+    "107120e2-cf01-42cb-9cd9-92daf7851012",
+    "7d006a74-583e-4c48-bd2c-730079f67473",
+    "7a1de757-f74c-40a0-bc7b-5f74dfbdf744",
+    "c9e2dbec-6491-482a-b43a-66e81def57ca",
+    "eeaa2312-a582-445a-978d-89342ae7c29e",
+    "bde7d49f-ded3-4381-89cc-842f7cb962c1",
+    "946d5cb9-5155-4a4d-8530-6dcd18381cb1",
+    "583bf7d1-4ee0-48f3-9041-9a6757f594e5",
+    "a7ecf142-4e64-4496-bf17-acf9415f4905",
+    "9404d7ef-d4ae-4b1d-88c6-0820021b9fd6",
+    "d9618943-10d7-42ce-9311-996416487047",
+    "4f845779-0f64-4059-a622-1dd15c097e0a",
+    "c19b3e08-e4e2-46d2-afb0-95d4f6057dc6",
+    "4f213f27-2598-4a2f-8d2f-bd2519c3f282",
+    "79f2b2b4-6108-4385-898b-3d6c60708500",
+    "abbad0ab-c3d4-4864-8452-f87a69fad973",
+    "b87b2470-1009-4aa2-9e69-4cd923da507a",
+    "98201ca5-a3f6-4205-b9fd-0e2450098d61",
+    "d2f2202f-43b1-4654-b441-25391e6a0a51",
+    "a65ec440-c6f7-4b67-a952-6a18a29a9605",
+    "300af98f-1ebe-4330-a0ee-c27239eac433",
+    "a3e8ac56-f791-46fc-9b66-87d68ad55829",
+    "5375c7e1-dcc1-4762-aa54-720fb2edb9a4",
+    "edc13818-372b-4da7-b2c0-b4015713c540",
+    "62a58d85-d2dd-4869-b4cf-f7094629d53a",
+    "e366461e-f702-4c7b-a57f-3826589cce9f",
+    "2ab0de81-e614-44a4-86ef-aa28f6c730e8",
+    "a0070987-e683-441d-82bd-cce881472977",
+    "6c943864-0292-4381-90d3-b327e4fab0be",
+    "afe4f66f-ead8-49d5-9748-72fe927808a5",
+    "58c1a10d-567e-4324-9838-a6f494741f4c",
+    "d9981ec7-b42e-418f-8d7b-cf36fbbfcf37",
+    "c9061ca4-37f6-46e6-a039-f4c5bcb41c0c",
+    "70f80d15-cc9e-4639-b1d6-4baeefacf70a",
+    "f096819e-c33a-4aa9-be3f-19f91d61087c",
+    "1c8efa1c-a689-4165-875e-1fba5d1a812b",
+    "8e180c2b-18d2-4124-8502-8f1b08e47337",
+    "e233ec5d-103c-4523-ac39-b8686665ef25",
+    "8ffa507b-ac22-44e6-923d-c66df9146754",
+    "e200369b-49e1-4bb9-9f75-9c1c5f7794bd",
+    "f0af1422-ac9b-44a1-8661-bfd15eba6aff",
+    "17b7ebcc-5769-494f-9cc9-18b85ef24079",
+    "0470c564-555b-4f2e-94ad-b6fe1c957cbd",
+    "c9e2d82d-f55c-455e-9fe8-331a3d11e92b"
+  ],
+  "decisions": [
+    {
+      "id": "exek",
+      "important": false,
+      "reason": " observation not important enough: not important"
+    },
+    {
+      "id": "]}  {",
+      "important": false,
+      "reason": "sho"
+    }
+  ],
+  "rows": [
+    {
+      "id": "f8f35fc0-f29f-4810-bea9-e053b501e6d3",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "S&P 500 rose 56.27 points (0.73%) to 7,722.72 (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "26d1c537-2a6e-47c2-9bd7-62f12fbbd643",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "NASDAQ Composite rose 319.26 points (1.19%) to 27,190.86 (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "789a3bac-faec-4bbc-a000-30d48df955aa",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "DJIA rose 90.94 points (0.18%) to 51,267.9 (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "b67b398d-fe55-48c6-aba5-bab74f07e0bc",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Russell 2000 rose 14.25 points (0.50%) to 2,847.14, modestly outperforming large-caps (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "107120e2-cf01-42cb-9cd9-92daf7851012",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "VIX fell 1.08 points (6.59%) to 15.31, a sharp decline amid equity rally (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "7d006a74-583e-4c48-bd2c-730079f67473",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "anomaly",
+      "observation": "CNN Market Volatility indicator (VIX vs 50-day MA) at 15.7884 rated 'extreme fear' — anomaly: VIX below its 50-day MA per CNN methodology should indicate greed, yet rating is 'extreme fear' (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "7a1de757-f74c-40a0-bc7b-5f74dfbdf744",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Fear & Greed Index at 43.14 rated 'fear', up from 39.97 (+7.93%), moving toward neutral but still in fear territory (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "c9e2dbec-6491-482a-b43a-66e81def57ca",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "anomaly",
+      "observation": "CNN Market Momentum (S&P 500 vs 125-day MA) at 7,481.28 rated 'extreme greed' — divergence: overall Fear & Greed shows 'fear' while momentum component shows 'extreme greed' (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "eeaa2312-a582-445a-978d-89342ae7c29e",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Put/Call Options at 0.7613 rated 'extreme fear', essentially unchanged from previous day (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "bde7d49f-ded3-4381-89cc-842f7cb962c1",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "anomaly",
+      "observation": "CNN Stock Price Breadth at 141.7 rated 'extreme greed', down from 144.9 but far below 30-day MA (539.2) and 6-month MA (945.9) — disconnect between price levels and breadth participation (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "946d5cb9-5155-4a4d-8530-6dcd18381cb1",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Safe Haven Demand at 4.70 rated 'extreme fear', up sharply from 3.34 (+40.5%) — significant one-day move indicating increased Treasury outperformance vs stocks over 20-day window (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "583bf7d1-4ee0-48f3-9041-9a6757f594e5",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "AAII Investor Sentiment: Bullish 34.6%, neutral 18.9%, bearish 46.5% — notable bearish majority; bull-bear spread figure appears inconsistent with individual percentages (observed 2026-10-01)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "a7ecf142-4e64-4496-bf17-acf9415f4905",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "3-Month Treasury yield at 4.01%, up 0.01 percentage point from previous day 4.00% (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "9404d7ef-d4ae-4b1d-88c6-0820021b9fd6",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "2-Year Treasury yield at 4.83%, up 0.05 percentage point from previous week 4.78% (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "d9618943-10d7-42ce-9311-996416487047",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "5-Year Treasury yield at 5.06%, up 0.05 percentage point from previous day 5.01% (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "4f845779-0f64-4059-a622-1dd15c097e0a",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "10-Year Treasury yield at 5.28%, up 0.04 percentage point from previous day 5.24% — broad-based rise across the yield curve (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "c19b3e08-e4e2-46d2-afb0-95d4f6057dc6",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Real 10-Year Treasury yield at 2.92%, up 0.04 percentage point from 2.88% (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "4f213f27-2598-4a2f-8d2f-bd2519c3f282",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "High Yield Credit Spread at 3.10%, down 14 basis points from 3.24% — notable tightening reflecting improved risk appetite (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "79f2b2b4-6108-4385-898b-3d6c60708500",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Investment Grade Credit Spread at 0.85%, down 1 basis point from 0.86% — slight tightening (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "abbad0ab-c3d4-4864-8452-f87a69fad973",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Broad U.S. Dollar Index at 121.38, down 0.41 points (0.34%) from 121.79 — broad USD weakness (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "b87b2470-1009-4aa2-9e69-4cd923da507a",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Advanced Economies USD Index at 114.88, down 0.18 points (0.16%) from 115.06 (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "98201ca5-a3f6-4205-b9fd-0e2450098d61",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Emerging Market USD Index at 129.71, down 0.65 points (0.50%) from 130.36 — EM currencies outperforming vs dollar (observed 2026-10-02)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "d2f2202f-43b1-4654-b441-25391e6a0a51",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "EUR/USD at 1.1221, down 0.28% from 1.1253 — EUR weakening vs dollar (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "a65ec440-c6f7-4b67-a952-6a18a29a9605",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "GBP/USD at 1.3219, down 0.17% from 1.3241 — GBP weakening vs dollar (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "300af98f-1ebe-4330-a0ee-c27239eac433",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "USD/JPY at 157.90, up 0.04% from 157.83 — USD strengthening vs yen (or yen weakening) (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "a3e8ac56-f791-46fc-9b66-87d68ad55829",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "USD/CAD at 1.4257, up 0.07% from 1.4247 — USD strengthening vs Canadian dollar (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "5375c7e1-dcc1-4762-aa54-720fb2edb9a4",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "AUD/USD at 0.6969, up 0.23% from 0.6953 — AUD strengthening vs dollar (commodity currency benefit) (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "edc13818-372b-4da7-b2c0-b4015713c540",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "NZD/USD at 0.5597, down 0.39% from 0.5619 — NZD weakening vs dollar (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "62a58d85-d2dd-4869-b4cf-f7094629d53a",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "S&P 500 futures open interest up 0.33% to 1.91M; dealer net short improved from -635k to -608k; asset manager net long reduced from 937k to 906k (observed 2026-09-29)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "e366461e-f702-4c7b-a57f-3826589cce9f",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Nasdaq-100 futures open interest down 4.82% to 284k; asset manager net long reduced from 733k to 708k (observed 2026-09-29)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "2ab0de81-e614-44a4-86ef-aa28f6c730e8",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "U.S. Dollar Index futures open interest up 4.35% to 48.3k; leveraged money net position flipped from short (-4,495) to long (+361) — major shift in leveraged USD positioning (observed 2026-09-29)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "a0070987-e683-441d-82bd-cce881472977",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "10-Year Treasury Note futures open interest up 4.97% to 5.68M; asset manager net long increased from 2.53M to 2.78M (+245k) — significant asset manager buying (observed 2026-09-29)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "6c943864-0292-4381-90d3-b327e4fab0be",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "2-Year Treasury Note futures open interest down 0.20% to 4.53M; dealer net short increased from -523k to -591k; asset manager net long reduced from 1.77M to 1.64M (observed 2026-09-29)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "afe4f66f-ead8-49d5-9748-72fe927808a5",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Euro FX futures open interest up 3.93% to 854k; asset manager net long increased from 216k to 221k (observed 2026-09-29)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "58c1a10d-567e-4324-9838-a6f494741f4c",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Japanese Yen futures open interest down 4.75% to 361k; asset manager net long increased from 42k to 52k (+10k) — notable increase in asset manager JPY long positioning (observed 2026-09-29)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "d9981ec7-b42e-418f-8d7b-cf36fbbfcf37",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "S&P 500 retail: 69% long, 31% short, net +38 (unchanged) (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "c9061ca4-37f6-46e6-a039-f4c5bcb41c0c",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Nasdaq-100 retail: 67% long, 33% short, net +34 (unchanged) (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "70f80d15-cc9e-4639-b1d6-4baeefacf70a",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Dow Jones retail: 67% long, 33% short, net +34 (unchanged) (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "f096819e-c33a-4aa9-be3f-19f91d61087c",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "EUR/USD retail: 59% long, 41% short, net +18 (unchanged) (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "1c8efa1c-a689-4165-875e-1fba5d1a812b",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "GBP/USD retail: 62% long, 38% short, net +24 (unchanged) (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "8e180c2b-18d2-4124-8502-8f1b08e47337",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "USD/JPY retail: 61% long, 39% short, net +22, up from +20 — improved net long positioning (observed 2026-10-05)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "e233ec5d-103c-4523-ac39-b8686665ef25",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "Harley Bassman warns a 6% 20-year Treasury yield could unleash $110B in selling, relevant given yields are rising toward that level (breaking news)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "8ffa507b-ac22-44e6-923d-c66df9146754",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "Market faces pullback after S&P 500, Nasdaq records — suggests today's equity rally may face resistance or correction (web search)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "e200369b-49e1-4bb9-9f75-9c1c5f7794bd",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "30-year Treasury yields rising to highest since 2002 (5.71%) ahead of Fed minutes release (Reuters via web search)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "f0af1422-ac9b-44a1-8661-bfd15eba6aff",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "AI selloff deepening, investors questioning trade sustainability (business section news)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "17b7ebcc-5769-494f-9cc9-18b85ef24079",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "US bond yields surging as investors brace for prolonged selloff and systemic risks (business section news)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "0470c564-555b-4f2e-94ad-b6fe1c957cbd",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "event",
+      "observation": "Bank of America fined $1.2B over money-laundering violations (MarketWatch via web search)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    },
+    {
+      "id": "c9e2d82d-f55c-455e-9fe8-331a3d11e92b",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "financial_markets",
+      "type": "development",
+      "observation": "SpaceX seeking $40B for Nvidia chips, indicating continued AI infrastructure investment (business section news)",
+      "research_enabled": false,
+      "created_at": "2026-10-13T22:51:07.636Z"
+    }
+  ]
+}

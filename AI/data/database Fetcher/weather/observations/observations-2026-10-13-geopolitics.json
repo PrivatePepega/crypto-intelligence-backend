@@ -3,328 +3,188 @@
   "marketDomain": "geopolitics",
   "intelligenceSetId": "77fa46e2-589b-4e77-825b-b90027a89221",
   "setIdAgreesWithEveryRow": true,
-  "writtenAt": "2026-10-13T21:00:38.353Z",
-  "rowCount": 32,
+  "writtenAt": "2026-10-13T21:50:29.412Z",
+  "rowCount": 18,
   "rows": [
     {
-      "id": "f09d3a3e-6281-4f87-9536-cc3471e6387e",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "event",
-      "observation": "Trump announces Iran war will end soon - President states war with Iran will conclude 'very soon' while Iran in 'all-out war' positioning",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "9bb8f468-9ac5-4ad4-9eb5-fac0ebc45f30",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "event",
-      "observation": "US seeking strike options before midterms - According to reports, US planning military action against Iran prior to November elections",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "cec15481-d153-4106-ac31-003b8c13df16",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "event",
-      "observation": "Iran suspends uranium enrichment - Agrees to temporarily halt enrichment in exchange for US sanctions relief",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "306341b8-9ee6-4921-88a9-739ce1b0737f",
+      "id": "74fa8f92-53de-476a-ac5b-a39acdf334c1",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "Strait of Hormuz crisis - Iran fortifying nuclear sites, threatening to close strategic chokepoint, targeting commercial vessels",
+      "observation": "Prime Minister Netanyahu reportedly discussed a renewed war on Iran with President Trump; Iran's president declared the country is in an 'all-out war' and will 'resist' the enemy.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "435d76b6-dabf-4df0-89d2-2c709f9f94f9",
+      "id": "488967ac-7dea-4ee3-92fc-3293eb685a00",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "US military build-up - Thousands of troops positioned in Middle East as Trump weighs new strikes on Iran",
+      "observation": "Iran agreed to suspend uranium enrichment in exchange for US sanctions relief.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "73597da9-ebd6-4f4e-b31a-bd84cb5c9f33",
+      "id": "15a19f24-29e1-40e5-acab-9a363dc4261f",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump repeatedly stated the war with Iran will 'end soon' or 'conclude very soon'.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T21:50:29.311Z"
+    },
+    {
+      "id": "c0a0a63e-ad87-4beb-af55-1c78971ca665",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "The Iran-Israel conflict is expanding, with Saudi Arabia and Iranian-backed Houthi rebels exchanging strikes, and Iran threatening wider retaliation if the US joins the fight.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T21:50:29.311Z"
+    },
+    {
+      "id": "ed42bbfc-6db1-42dc-84cd-55bb8691d233",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "event",
-      "observation": "Iran threat to US infrastructure - Iranian military says will launch preemptive attacks if necessary",
+      "observation": "Yemen's Houthi forces launched missile attacks on Saudi Aramco headquarters, prompting Trump to condemn their actions as 'very badly' and warning of painful responses if the US joins Saudi offensives.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "29fbe6e4-39e9-422d-9b60-18def3f874b3",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "event",
-      "observation": "Trump announces energy ceasefire - US President declares immediate 'energy ceasefire' between Russia and Ukraine",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "49178e0e-bc2b-4418-b5d7-0f0b84d9d156",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "event",
-      "observation": "Conflicting reports on ceasefire implementation - Ukraine reports Russian strikes continue on energy infrastructure while Kremlin rejects ceasefire terms",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "a424a46c-eeea-44d5-a094-78679aab7123",
+      "id": "cc63124c-6e82-49cc-aa97-f599516edbb5",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "Kremlin maintains offensive - Russian Security Council states only military victory possible, strikes killed over 150 civilians in past week",
+      "observation": "Iran threatened to shut down the Strait of Hormuz and Bab el-Mandeb Strait, and warned of potential ground invasion of Gulf states if the US resumes war after midterm elections.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "90364792-601a-4e5e-a46a-f23d10b4281b",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "regulation",
-      "observation": "European sanctions expansion - EU approves largest sanctions package since 2022 invasion, adding 1,569 people and businesses to blacklist",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "c2713438-4126-4d92-9e33-b3f4122e5d94",
+      "id": "2e3611dd-4f86-4f7c-90a5-82ed6fa3a7e5",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "US-Russia negotiations - 'Diesel deal' offered to coax Russia into negotiations, involving frozen assets and Lukoil deal",
+      "observation": "Russia has not accepted any ceasefire proposal in the Ukraine conflict, while Ukrainian forces continue advancing in some areas as Russia captures villages elsewhere.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "b0527c62-d37d-437e-8449-0f1724479297",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "event",
-      "observation": "Houthi threats to US - Yemen's Houthi forces threaten 'swift and painful' attacks if US participates in Saudi-led strikes",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "c02da65f-d962-4852-9c39-62f4bf0f1335",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "event",
-      "observation": "Saudi attacks targeted - US warns Saudi Arabia vulnerable to drone attacks from Houthis, oil refinery attacked",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "601567be-e88b-4018-aad4-843cb21b7004",
+      "id": "cfac0f84-b41e-47e6-862f-4c7df78a371b",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "Regional proxy warfare - Iran proxies activate in Yemen and Iraq, expanding conflict dimensions",
+      "observation": "Trump's agreement with Putin to import Russian diesel is facing bipartisan criticism in Congress, with lawmakers warning it violates sanctions laws and provides financial lifeline to Russia's war effort.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "92371ef6-fc1d-42fb-9e77-f04039ce0a5a",
+      "id": "212bae74-455c-4c4d-b11d-b68c54e68e03",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "Trump's negotiation strategy - President exploring multiple diplomatic tracks: energy ceasefire with Ukraine, potential deal with Iran, diesel trade with Russia",
+      "observation": "The Trump administration is privately pressuring foreign CEOs and business leaders to align with White House demands, described as 'rudely aggressive' by Canada's former deputy prime minister.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "50f5e033-0d99-43be-af1e-e7d737ef83e7",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "relationship",
-      "observation": "US-China friction - Trump states China and Russia not helping Iran 'at all' during current conflict",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "622cc783-f492-4af9-866a-256edfe7f3a0",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "development",
-      "observation": "UK-Russia tensions - Government urges households to prepare for potential war with Russia",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "012359af-ce13-4d0c-ada4-70558e1ba5a6",
+      "id": "e960f6ae-a2f7-41db-94c6-b44cb32537b3",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "market_condition",
-      "observation": "Oil market volatility - Strait of Hormuz disruptions affecting 87% of targeted ships, 15+ commercial vessels hit in October",
+      "observation": "Despite decreasing VIX (down to 15.31), extreme fear readings persist in safe haven demand (+40%), put/call ratio (0.76), and AAII survey (more bearish than bullish), while stock price breadth shows extreme greed.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "bb8ec7f2-0aa8-4154-ab0f-275f97a3284c",
+      "id": "9929b498-750a-450b-88c6-0f1e9eb4c887",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "market_condition",
-      "observation": "European market reactions - Geopolitical developments impacting European stock markets, investors monitoring Iran situation",
+      "observation": "OPEC cut oil demand projections for 2026 due to persistent shipping risks from Iran and its proxy groups.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "217c1a44-e4d4-433b-8a0d-0b28cf4663af",
+      "id": "5c1b8370-d18e-425b-8f8a-d1649d18c45e",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "Energy infrastructure as targets - Both Ukrainian and Russian forces continuing strikes on energy facilities despite ceasefire announcements",
+      "observation": "The UK government urged households to prepare for potential war with Russia, reflecting growing NATO concerns about escalation risks.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "09f26ccf-1709-484b-8b26-931287f72b1d",
+      "id": "a988d34a-94ba-4431-803e-00bf58b4bb25",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "Limited direct engagement by China - China's role primarily discussed in context of Iran conflict support",
+      "observation": "Russia and North Korea are deepening their partnership, with Russian officials stating it contributes to global stability, while Russia and Vietnam held strategic defense talks.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "373dd112-495b-4805-8e58-e384876b9c92",
+      "id": "52cf3076-0c68-4905-9dc0-123a0d3b6e40",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Special counsel Jack Smith's team obtained approval from anti-Trump judges for phone monitoring without disclosing that lawyers were the targets.",
+      "research_enabled": false,
+      "created_at": "2026-10-13T21:50:29.311Z"
+    },
+    {
+      "id": "f5a403bf-4a1f-4dfc-af5f-af11884ce54e",
+      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
+      "date": "2026-10-13",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Retail traders show extreme long positioning in precious metals (gold 77%, silver 82%) and crude oil (WTI 69%, Brent 66%).",
+      "research_enabled": false,
+      "created_at": "2026-10-13T21:50:29.311Z"
+    },
+    {
+      "id": "91f86420-125d-44fa-99a4-f8df4d2ee65d",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "Regional influence - Chinese diplomatic activities mentioned primarily through US-China discussions",
+      "observation": "Geopolitical developments are increasingly tied to US midterm elections, with Trump stating Iran actions may come before elections and Iran threatening Gulf invasions only after the November 3rd vote.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "74098a25-87ac-4780-86b0-c54a587326ab",
+      "id": "5610a78d-8452-423c-a8a8-ef1e3cbb299d",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
       "type": "development",
-      "observation": "NATO readiness - European allies maintaining military readiness while pursuing diplomatic solutions",
+      "observation": "China continues economic expansion (factory activity returning to expansion), navigates US-China tensions in AI and trade, and repairs ties with India, though G20 trade talks showed little progress.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     },
     {
-      "id": "e5673e3c-6c98-4be6-ab07-d579310efe21",
+      "id": "aaed78b2-1622-4cc7-8d42-1460d252e9ac",
       "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
       "date": "2026-10-13",
       "market_domain": "geopolitics",
-      "type": "development",
-      "observation": "US strategic positioning - Military deployments across multiple regions signaling preparedness for multiple conflict scenarios",
+      "type": "event",
+      "observation": "Pope Leo XIV underwent lung surgery to remove a cancerous growth and remains hospitalized.",
       "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "eeab7a4f-d67e-4718-99c4-3002c853d3a1",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "relationship",
-      "observation": "Alliances shifting - Traditional alliances being tested by complex diplomatic negotiations",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "ea66bebe-4ae0-4693-aed9-b5db29a6f690",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "development",
-      "observation": "US midterm election influence - Iran conflict and energy prices becoming campaign issues",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "e34aea0d-f905-40ae-b6dd-f78a67d18c16",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "development",
-      "observation": "European political pressure - Sanctions and Russia-Ukraine war affecting domestic politics across EU",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "c1d97eff-9da1-4a75-b9fd-5148b07d3869",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "narrative",
-      "observation": "Escalating Iran-US confrontation - Most urgent security concern with potential global economic impacts",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "e3ada5a4-b056-46c2-8ec4-2ac848aa4c2d",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "narrative",
-      "observation": "Complex diplomatic negotiations - Multiple conflict zones requiring delicate diplomatic balancing",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "f579d239-506b-44ce-863c-35ab60805a52",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "narrative",
-      "observation": "Energy as strategic weapon - Oil infrastructure and shipping routes becoming central to geopolitical strategy",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "64b31527-9c81-4932-a1a0-7f8b9beafcbf",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "narrative",
-      "observation": "Trump administration's aggressive diplomacy - Unpredictable negotiation style creating market uncertainty",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
-    },
-    {
-      "id": "fd40f950-3830-46d9-84c5-3e35e0ce49e4",
-      "intelligence_set_id": "77fa46e2-589b-4e77-825b-b90027a89221",
-      "date": "2026-10-13",
-      "market_domain": "geopolitics",
-      "type": "narrative",
-      "observation": "Fragmented international response - European allies pursuing different approaches than US on Russia policy",
-      "research_enabled": false,
-      "created_at": "2026-10-13T21:00:39.567Z"
+      "created_at": "2026-10-13T21:50:29.311Z"
     }
   ]
 }

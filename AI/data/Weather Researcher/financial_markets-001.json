@@ -1,0 +1,53 @@
+{
+  "agentName": "Weather Researcher",
+  "domain": "financial_markets",
+  "runNumber": 1,
+  "file": "AI/data/Weather Researcher/financial_markets-001.json",
+  "startedAt": "2026-10-13T23:02:15.676Z",
+  "updatedAt": "2026-10-13T23:02:16.335Z",
+  "entryCount": 2,
+  "entries": [
+    {
+      "sequence": 1,
+      "section": "initializer",
+      "at": "2026-10-13T23:02:16.111Z",
+      "data": {
+        "date": "2026-10-13",
+        "marketDomain": "financial_markets",
+        "intelligenceSetId": "77fa46e2-589b-4e77-825b-b90027a89221",
+        "model": "openrouter/free",
+        "maxAgentSteps": 3,
+        "maxOutputTokens": 30000,
+        "reasoningEffort": "medium",
+        "tools": [
+          "webSearchTool",
+          "currentsNewsSearch",
+          "newsflashSearchArticles",
+          "newsflashGetEvents",
+          "marketauxNewsSearch",
+          "fmpGetArticlesList",
+          "wabbleImportantHeadlineSearch"
+        ],
+        "queued": 0,
+        "attempted": 0
+      }
+    },
+    {
+      "sequence": 2,
+      "section": "summary",
+      "at": "2026-10-13T23:02:16.335Z",
+      "data": {
+        "date": "2026-10-13",
+        "marketDomain": "financial_markets",
+        "queued": 0,
+        "attempted": 0,
+        "researched": 0,
+        "failedIds": [],
+        "truncatedIds": [],
+        "totalInSet": 10,
+        "dumpFile": "AI/data/database Fetcher/weather/researcher/financial_markets-001.json"
+      }
+    }
+  ],
+  "response": null
+}
