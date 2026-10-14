@@ -1,4 +1,4 @@
-import { isStepCount, streamText, type LanguageModel } from "ai";
+import { isStepCount, streamText, type LanguageModel, type LanguageModelUsage } from "ai";
 import { z } from "zod";
 
 import { modelIdOf } from "../agent.js";
@@ -180,18 +180,6 @@ export type BriefSliders = {
   maxOutputTokens: number | undefined;
 
   /**
-   * Reasoning effort, and the provider it is addressed to. `undefined` sends no
-   * reasoning option at all.
-   *
-   * Provider-specific by nature - the SDK has no cross-provider reasoning-effort
-   * option, only `providerOptions` keyed by provider name - so the slider names both.
-   * Setting one for a provider that is not in the path is not a harmless no-op: it
-   * was previously sent as `{ groq: { reasoningEffort } }` to a non-Groq provider and
-   * that model then returned a `reasoning` block and no text at all.
-   */
-  reasoningEffort: { provider: string; effort: "low" | "medium" | "high" } | undefined;
-
-  /**
    * Total attempts for this brief's model call, including the first.
    *
    * Part of the sliders rather than a global because each brief's budget is its own
@@ -333,10 +321,19 @@ export type BriefGenerationResult = {
    */
   model: string;
   maxOutputTokens: number | null;
-  reasoningEffort: string | null;
 
   /** Where the analyst input needed the comma repair, or `null` when it did not. */
   repairedAt: number | null;
+
+  /**
+   * The call's usage, carried out so the caller can charge it to its run.
+   *
+   * `generateBrief` is shared by every brief and holds no run log of its own, so the
+   * usage has to travel with the result for the agent to record. The counts are also
+   * flattened onto the result for the existing usage sections; this is the object
+   * itself, so nothing had to be re-derived from it.
+   */
+  usage: LanguageModelUsage;
 
   /** How many attempts the brief budget needed, including the one that succeeded. */
   briefAttempts: number;
@@ -384,12 +381,7 @@ export const generateBrief = async (options: {
       `${analystOutput.length} characters of analyst output, ` +
       `model=${modelIdOf(sliders.model)} ` +
       `maxSteps=${sliders.maxSteps} ` +
-      `maxOutputTokens=${sliders.maxOutputTokens ?? "none"} ` +
-      `reasoningEffort=${
-        sliders.reasoningEffort
-          ? `${sliders.reasoningEffort.provider}/${sliders.reasoningEffort.effort}`
-          : "none"
-      }`,
+      `maxOutputTokens=${sliders.maxOutputTokens ?? "none"}`,
   );
 
   const repair = repairMissingSeparator(analystOutput);
@@ -448,15 +440,6 @@ export const generateBrief = async (options: {
       ...(sliders.maxOutputTokens === undefined
         ? {}
         : { maxOutputTokens: sliders.maxOutputTokens }),
-      ...(sliders.reasoningEffort === undefined
-        ? {}
-        : {
-            providerOptions: {
-              [sliders.reasoningEffort.provider]: {
-                reasoningEffort: sliders.reasoningEffort.effort,
-              },
-            },
-          }),
     });
 
     let received = 0;
@@ -583,10 +566,9 @@ export const generateBrief = async (options: {
     seconds,
     model: modelIdOf(sliders.model),
     maxOutputTokens: sliders.maxOutputTokens ?? null,
-    reasoningEffort: sliders.reasoningEffort
-      ? `${sliders.reasoningEffort.provider}/${sliders.reasoningEffort.effort}`
-      : null,
     repairedAt: repair?.at ?? null,
+
+    usage,
 
     briefAttempts,
   };

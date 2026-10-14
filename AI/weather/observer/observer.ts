@@ -23,7 +23,7 @@ import {
 // --------------------------------------------------
 // Observer
 // --------------------------------------------------
-const modelPick = models.openrouterFree;
+const modelPick = models.openai;
 
 const MAX_AGENT_STEPS = 5;
 
@@ -394,6 +394,10 @@ foundational deterministric data movements thats could also an observation.
 
   const observerUsage = observerRun.usage;
 
+  // Fed straight into the run log's running total, so the artifact carries what the run
+  // spent without a second pass over the usage sections at the end.
+  await runLog.addCost({ modelId: modelIdOf(modelPick), usage: observerUsage });
+
   // The formatter consumes the research notes rather than this raw text, so the
   // notes are the compression of it. Recorded here because it is the Observer's
   // own account of what it saw, which is worth reviewing against the notes when
@@ -725,6 +729,10 @@ The output is a complete normalized inventory for downstream processing, not a c
   const finalText = formatterResult.text;
 
   const formatterUsage = formatterResult.usage;
+
+  // The formatter is a separate call to the same model, so it is its own entry: a run
+  // whose observer is fine and whose formatter is not should show two calls.
+  await runLog.addCost({ modelId: modelIdOf(modelPick), usage: formatterUsage });
 
   // Why generation stopped. A response cut off mid-JSON looks identical to a
   // complete one unless this is recorded: 'length' means a token ceiling,

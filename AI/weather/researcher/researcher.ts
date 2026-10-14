@@ -139,35 +139,6 @@ const MAX_AGENT_STEPS = 3;
 const MAX_OUTPUT_TOKENS = 30_000;
 
 /**
- * Reasoning effort for each research run.
- *
- * Higher than Triage's. Triage judges a fixed list against a bar; Research has
- * to weigh conflicting evidence and decide what is actually established, which is
- * the kind of task where reasoning earns its cost. See triage.ts for why this was
- * not the default.
- */
-const REASONING_EFFORT = "medium" as const;
-
-/**
- * The same reasoning effort, in the form this agent's model actually takes it.
- *
- * Google has no `reasoningEffort`. Its provider option is
- * `thinkingConfig.thinkingLevel`, which takes the same four words, so the effort is
- * declared once and translated once here.
- *
- * Previously both calls sent `{ groq: { reasoningEffort } }` while running a Google
- * model. That is not a harmless no-op: the same mistake elsewhere in this pipeline had
- * a model return a reasoning block and no text at all.
- */
-const GOOGLE_OPTIONS = {
-  google: {
-    thinkingConfig: {
-      thinkingLevel: REASONING_EFFORT,
-    },
-  },
-} as const;
-
-/**
  * Tools available to a research run.
  *
  * Named from the shared registry rather than bundled wholesale: Research needs
@@ -439,8 +410,6 @@ export const runResearcher = async (
 
     maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-    reasoningEffort: REASONING_EFFORT,
-
     tools: RESEARCH_TOOLS,
 
     queued: queue.length,
@@ -563,8 +532,6 @@ export const runResearcher = async (
 
           maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-          providerOptions: GOOGLE_OPTIONS,
-
           onStepEnd: async (stepResult) => {
             await runLog.record("step", { step, ...normalizeStep(stepResult) });
           },
@@ -648,6 +615,10 @@ export const runResearcher = async (
 
       const researchSteps = await researchResult.steps;
       const researchUsage = await researchResult.totalUsage;
+
+      // Per observation rather than per run, because this loop is per observation: nine
+      // researches in one run are nine entries in the cost breakdown.
+      await runLog.addCost({ modelId: modelIdOf(modelPick), usage: researchUsage });
 
       // Recorded per observation because the failure modes differ: `length` means
       // the evidence-gathering was cut off, `content-filter` means the provider
@@ -803,8 +774,6 @@ export const runResearcher = async (
 
               maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-              providerOptions: GOOGLE_OPTIONS,
-
               output: Output.object({
                 schema: researchSchema,
                 name: "research_record",
@@ -935,6 +904,11 @@ Rules, all of which matter:
       const resolveRecord = async (): Promise<ResolvedRecord> => {
         const call = async (prompt: string) => {
           const result = await callRecordAgent(prompt);
+
+          // Counted here rather than at the caller because `call` is used by every path
+          // - structured, text fallback and the second agent - and a path that forgot to
+          // report would silently under-count the run.
+          await runLog.addCost({ modelId: modelIdOf(modelPick), usage: result.usage });
 
           return {
             structured: result.output as ResearchRecord | undefined,

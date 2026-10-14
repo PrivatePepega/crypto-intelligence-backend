@@ -1,5 +1,7 @@
 import type { LanguageModelUsage } from "ai";
 import fs from "node:fs/promises";
+
+import { createRunCost, type RunCost, type UsageRecord } from "./weather/cost.js";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -389,6 +391,16 @@ export type AgentRunDocument = {
   updatedAt: string;
   entryCount: number;
   entries: AgentRunEntry[];
+
+  /**
+   * What the run spent, in US dollars.
+   *
+   * Present from the first write, not added at the end, so a run that dies mid-flight
+   * still leaves everything it had spent so far. `totalUsd` is null when any call in
+   * the run could not be priced - see {@link RunCost}.
+   */
+  cost: RunCost;
+
   response: AgentRunText | null;
 };
 
@@ -409,6 +421,19 @@ export type AgentRunLog = {
    * one instead of duplicating its payload. Resolves to `0` if the write failed.
    */
   record: (section: AgentRunSection, data?: unknown) => Promise<number>;
+
+  /**
+   * Adds one model call's usage to the run's cost, and rewrites the file.
+   *
+   * Persisting here for the same reason `record` does: a run that dies before its
+   * last call should still show what it spent getting there.
+   *
+   * Silently ignored on a write failure, because a failed cost write is not worth
+   * failing a research run over - the tokens are already recorded in the usage section
+   * and can be re-costed from them.
+   */
+  addCost: (usage: UsageRecord) => Promise<void>;
+
   /** Writes the final document and returns its path. */
   finish: (response?: string) => Promise<string>;
 };
@@ -439,6 +464,8 @@ export const createSilentAgentRunLog = (agentName: string, marketDomain: string)
 
   record: async () => 0,
 
+  addCost: async () => {},
+
   finish: async () => "",
 });
 
@@ -465,6 +492,10 @@ export const createAgentRunLog = async (
 
   let response: string | null = null;
 
+  // The run's running cost. A closure rather than a class because it is created here,
+  // fed one call at a time by the agent, and read back only when the document is built.
+  const cost = createRunCost();
+
   let runNumber = await resolveNextRunNumber(agentName, marketDomain);
 
   let filePath = "";
@@ -481,6 +512,10 @@ export const createAgentRunLog = async (
       startedAt,
       updatedAt: new Date().toISOString(),
       entryCount: entries.length,
+
+      // Read at build time, so the figure in the file is always current with the
+      // entries above it rather than a snapshot taken when the run started.
+      cost: cost.total(),
 
       entries: normalizeMultiline(entries) as AgentRunEntry[],
 
@@ -555,6 +590,18 @@ export const createAgentRunLog = async (
         // there is nowhere to report it without adding back the channel we just
         // removed.
         return 0;
+      }
+    },
+
+    addCost: async (usage) => {
+      try {
+        cost.add(usage);
+
+        await persist();
+      } catch {
+        // Swallowed for the same reason `record` swallows: a cost that could not be
+        // written must not abort the run. The token counts behind it are already in the
+        // run log's usage sections, so the figure can be recovered from those.
       }
     },
 

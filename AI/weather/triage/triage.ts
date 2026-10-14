@@ -65,7 +65,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  * returning unusable text for this pipeline, and triage depends entirely on one
  * response parsing cleanly. Change it here and nothing else.
  */
-const modelPick = models.openrouterFree;
+const modelPick = models.openai;
 
 /**
  * Ceiling on the agent's output tokens.
@@ -144,21 +144,6 @@ const RETRY_DELAY_MS = 10_000;
  */
 const STEP_DELAY_MS = 4_000;
 
-/**
- * Reasoning effort for the triage call.
- *
- * Triage is a per-observation yes/no label over a fixed list, not open-ended
- * analysis, so the model's default reasoning budget is disproportionate to the
- * task: it enumerated its labels into the reasoning stream, one observation at a
- * time, and reached
- * number 17 of 20 before the ceiling stopped it. `low` keeps enough reasoning for
- * the run log to be worth reading without letting it crowd out the response.
- *
- * Honoured by @ai-sdk/groq and ignored by providers that do not expose it, which
- * is why {@link MAX_OUTPUT_TOKENS} is the backstop rather than the fix.
- */
-const REASONING_EFFORT = "low" as const;
-
 // --------------------------------------------------
 // Triage
 // --------------------------------------------------
@@ -226,8 +211,6 @@ export const runTriage = async (
     model: modelIdOf(modelPick),
 
     maxOutputTokens: MAX_OUTPUT_TOKENS,
-
-    reasoningEffort: REASONING_EFFORT,
 
     rowCount: rows.length,
 
@@ -460,8 +443,6 @@ export const runTriage = async (
 
       maxOutputTokens: MAX_OUTPUT_TOKENS,
 
-      providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
-
       output: Output.object({
         schema: triageSchema,
         name: "triage_signals",
@@ -544,6 +525,10 @@ export const runTriage = async (
 
   const steps = await result.steps;
   const totalUsage = await result.totalUsage;
+
+  // `totalUsage` rather than `usage`: a call that took several steps is billed for all
+  // of them, and the run's cost should be the whole call.
+  await runLog.addCost({ modelId: modelIdOf(modelPick), usage: totalUsage });
 
   await runLog.record("triage_output", { text: finalText });
 

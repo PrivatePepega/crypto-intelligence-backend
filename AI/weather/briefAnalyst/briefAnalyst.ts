@@ -133,31 +133,23 @@ const ANALYST_TOOLS = [
   // "marketauxNewsSearch",
 ] as const;
 
-const modelPick = models.openrouterFree;
+const modelPick = models.openai;
 const MAX_AGENT_STEPS = 3;
 const MAX_ANALYST_OUTPUT_TOKENS = 80_000;
-const REASONING_EFFORT = "medium" as const;
 
-const HUMAN_BRIEF_MODEL = models.openrouterFree;
+const HUMAN_BRIEF_MODEL = models.openai;
 const HUMAN_BRIEF_MAX_STEPS = 3;
 const HUMAN_MAX__OUTPUT_TOKENS = undefined;
 
-const AI_BRIEF_MODEL = models.openrouterFree;
+const AI_BRIEF_MODEL = models.openai;
 const AI_BRIEF_MAX_STEPS = 3;
 const AI_MAX_OUTPUT_TOKENS = undefined;
-
-//   Off, and leave it off. Reasoning effort is provider-specific - the SDK has no
-//   cross-provider option, only `providerOptions` keyed by provider name - so the
-//   slider takes both together. Sending Groq's setting to Google is not a harmless
-//   no-op: it was previously sent as `{ groq: { reasoningEffort } }` to a non-Groq
-//   provider and the model then returned a `reasoning` block and zero text.
 
 /** The human brief's knobs, as `generateBrief` takes them. */
 const HUMAN_BRIEF_SLIDERS: BriefSliders = {
   model: HUMAN_BRIEF_MODEL,
   maxSteps: HUMAN_BRIEF_MAX_STEPS,
   maxOutputTokens: HUMAN_MAX__OUTPUT_TOKENS,
-  reasoningEffort: undefined,
 
   // Both briefs share this agent's budget rather than each having their own slider:
   // the two are generated minutes apart in one run, so a shortage that killed one
@@ -180,7 +172,6 @@ const AI_CONTEXT_BRIEF_SLIDERS: BriefSliders = {
   model: AI_BRIEF_MODEL,
   maxSteps: AI_BRIEF_MAX_STEPS,
   maxOutputTokens: AI_MAX_OUTPUT_TOKENS,
-  reasoningEffort: undefined,
 
   // Both briefs share this agent's budget rather than each having their own slider:
   // the two are generated minutes apart in one run, so a shortage that killed one
@@ -606,8 +597,6 @@ ${row.research}
 
     maxAgentSteps: MAX_AGENT_STEPS,
 
-    reasoningEffort: REASONING_EFFORT,
-
     tools: ANALYST_TOOLS,
 
     // Which indicator scope the prompt was built from, so a run log says whether a
@@ -773,8 +762,6 @@ ${row.research}
 
         maxOutputTokens: MAX_ANALYST_OUTPUT_TOKENS,
 
-        providerOptions: { groq: { reasoningEffort: REASONING_EFFORT } },
-
         onStepEnd: async (step) => {
           analystStepsDone += 1;
 
@@ -846,6 +833,8 @@ ${row.research}
 
   const analystSteps = await analystResult.steps;
   const analystUsage = await analystResult.totalUsage;
+
+  await runLog.addCost({ modelId: modelIdOf(modelPick), usage: analystUsage });
 
   // Recorded because a response cut off mid-JSON looks identical to a complete
   // one: 'length' is a token ceiling, 'other' is the provider giving up, 'stop' is
@@ -985,6 +974,11 @@ ${row.research}
   for (const { key, label, run, sliders } of briefs) {
     try {
       const result = await run(analystJson, config.domain, sliders);
+
+      // `generateBrief` does the call and has the usage; it is charged here because the
+      // run log lives with the agent, not with the shared brief function. Two briefs in
+      // one run are two entries.
+      await runLog.addCost({ modelId: result.model, usage: result.usage });
 
       produced.set(key, result);
 
