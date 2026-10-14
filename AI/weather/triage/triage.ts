@@ -101,7 +101,7 @@ const RETRY_ATTEMPTS = 48;
  * a response the provider did return and got wrong, where waiting longer changes
  * nothing.
  */
-const TRIAGE_ATTEMPTS = 3;
+const TRIAGE_ATTEMPTS = 5;
 
 /**
  * What each attempt is told, escalating.
@@ -114,6 +114,8 @@ const TRIAGE_RETRY_INSTRUCTIONS = [
   "please do it right",
   "Your previous response did not label the observations. Answer for every id in the input list, using each id exactly as it was given - copy it character for character, do not shorten it.",
   "Two previous responses were unusable. Emit one entry per input id, with the id copied exactly and in full from the input. Do not abbreviate, do not renumber, and do not include any observation that was not in the input.",
+  "Three previous responses were unusable. Answer for every id in the input list now, ids copied in full, and close the array. A partial answer will be discarded and this run retried again.",
+  "Every previous response has failed. Return the complete signals array in this reply: open with {, one entry per input id exactly as given, close with }. Do not summarise and do not shorten the ids.",
 ] as const;
 
 let triageAttempts = 0;

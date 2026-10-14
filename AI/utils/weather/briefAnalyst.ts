@@ -234,7 +234,7 @@ export type BriefSliders = {
  * a provider that answered with something that is not a brief. Waiting eight
  * minutes for a fourth identical safety stub only delays the same failure.
  */
-const BRIEF_ATTEMPTS = 3;
+const BRIEF_ATTEMPTS = 5;
 
 /**
  * What each attempt is told, escalating.
@@ -247,6 +247,8 @@ const BRIEF_RETRY_INSTRUCTIONS = [
   "please do it right",
   "Your previous response was not a brief. Return the complete JSON object for this brief, and nothing else - no preamble, no explanation, no markdown fence.",
   "Two previous responses were unusable. Emit the full JSON object now, opening with { and closing with }. Do not stop early, do not summarise, and do not add commentary outside the object.",
+  "Three previous responses were unusable. Write the complete brief now. Every section the instructions ask for must be present and carry real content, and the object must close with }.",
+  "Every previous response has failed. Return the entire brief as one JSON object in this reply, with nothing outside it. A partial brief or a summary of one will be discarded.",
 ] as const;
 
 /**

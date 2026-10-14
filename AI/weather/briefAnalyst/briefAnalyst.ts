@@ -732,6 +732,8 @@ ${row.research}
     "please do it right",
     "Your previous response was not usable. Return the complete JSON object for the whole day's analysis, and nothing else - no preamble, no explanation, no markdown fence.",
     "Two previous responses were unusable. Emit the full JSON object now, opening with { and closing with }. Cover every research record supplied. Do not stop early and do not add commentary outside the object.",
+    "Three previous responses were unusable. Analyse every research record supplied and return the whole analysis as one object. Each section must carry real content drawn from the research.",
+    "Every previous response has failed. Return the complete analysis now, covering all supplied research records, as a single JSON object with nothing outside it. A partial analysis will be discarded.",
   ] as const;
 
   try {
@@ -743,7 +745,7 @@ ${row.research}
     // parse failure is caught and logged rather than thrown, so the run carries on and
     // builds both briefs from an unusable input. Without this, one bad response
     // produces two briefs that are confidently wrong.
-    const ANALYST_ATTEMPTS = 3;
+    const ANALYST_ATTEMPTS = 5;
 
     /** The instruction for the next attempt, advancing the counter. */
     const nextAnalystInstruction = (): string => {

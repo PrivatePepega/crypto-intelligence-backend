@@ -57,7 +57,7 @@ const RETRY_DELAY_MS = 10_000;
  * it still has not produced JSON then the cause is in the input or the prompt rather
  * than in luck.
  */
-const FORMATTER_ATTEMPTS = 3;
+const FORMATTER_ATTEMPTS = 5;
 /**
  * Pause between agent steps, in milliseconds.
  *
@@ -511,6 +511,8 @@ ${entry.reasoning}
     "please do it right",
     "Your previous response could not be parsed as a JSON object. Respond with the JSON object only: no Markdown, no code fence, and no text before or after it.",
     "Two previous responses were incomplete or unparseable. This time the response must open with { and close with }, every string must be on one line, and there must be nothing else in it.",
+    "Three previous responses could not be parsed. Return the array now and make sure it is complete: open with [, one entry per observation, close with ] and include nothing outside the array.",
+    "Every previous response has failed. Emit the whole observations array in this reply, opening with [ and closing with ], with one entry per observation and no text before or after it. A partial array is discarded.",
   ] as const;
 
   /**

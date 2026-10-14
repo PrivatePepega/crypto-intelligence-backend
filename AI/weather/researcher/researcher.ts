@@ -41,7 +41,9 @@ import {
   createResearcherRunLog,
   parseResearchRecord,
   recordPrompt,
+  researchEvidenceProblem,
   researchPrompt,
+  researchRecordProblem,
   researchSchema,
   writeResearchDump,
   type ResearchRecord,
@@ -92,6 +94,32 @@ const RETRY_DELAY_MS = 10_000;
  * Skipped after the final observation, so a run is not held open for nothing.
  */
 const STEP_DELAY_MS = 4_000;
+
+/**
+ * How many attempts a research phase gets when it comes back with no evidence.
+ *
+ * Separate from {@link RETRY_ATTEMPTS} because the two failures are unrelated. That
+ * budget waits out a provider being unreachable; this one re-asks a provider that
+ * answered without doing the work. Waiting eight minutes for a sixth empty response
+ * only delays the same failure.
+ */
+const RESEARCH_ATTEMPTS = 5;
+
+/**
+ * What each attempt is told, escalating.
+ *
+ * Research is the one stage where a formatting instruction cannot fix the problem by
+ * itself - the model is not mis-formatting anything, it is not searching. What changes
+ * between attempts is what it is told went wrong, which is the only thing that can
+ * redirect a model that decided the observation needed no research.
+ */
+const RESEARCH_RETRY_INSTRUCTIONS = [
+  "please do it right",
+  "Your previous response returned nothing to work with - no findings and no search results. Use the available search tools now and gather actual evidence about this specific observation.",
+  "Two previous responses came back with no evidence at all. Call the search tools. Report what they return. Do not answer from memory and do not reply with an empty result.",
+  "Three previous responses produced no evidence. You must call at least one search tool and report what it returned. An answer with no search behind it is not usable here.",
+  "Every previous response has failed. Stop answering and start searching: call the available tools, then write what you found. Returning another empty result will fail this observation.",
+] as const;
 
 /**
  * Ceiling on tool-calling steps within one observation's run.
@@ -498,16 +526,36 @@ export const runResearcher = async (
       // callbacks while it wanders through tools, but nothing here parses this
       // phase's output, and a streamed response that arrives truncated loses
       // evidence silently. Per-step callbacks work the same either way.
-      // Retried whole, and a blank response counts as a failure. Retried per
-      // observation rather than per run, so one provider blip costs that observation's
-      // retries and nothing else - which is why this sits inside the per-observation loop.
-      const callResearchAgent = async () =>
+      // Retried whole, and a response carrying no evidence counts as a failure. Retried
+      // per observation rather than per run, so one provider blip costs that
+      // observation's retries and nothing else - which is why this sits inside the
+      // per-observation loop.
+      //
+      // The prompt of the attempt that actually ran, kept so the run log records which
+      // attempt's instructions were used rather than only the first one's.
+      let researchAttemptPrompt = researchPrompt(target);
+
+      let researchAttempts = 0;
+
+      /** Why the last response was rejected, or null when it was accepted. */
+      let evidenceProblem: string | null = null;
+
+      /** The instruction for the next attempt, advancing the counter. */
+      const nextResearchInstruction = (): string => {
+        researchAttempts += 1;
+
+        const index = Math.min(researchAttempts, RESEARCH_RETRY_INSTRUCTIONS.length) - 1;
+
+        return RESEARCH_RETRY_INSTRUCTIONS[index] ?? RESEARCH_RETRY_INSTRUCTIONS[0];
+      };
+
+      const runResearchAgentOnce = async () =>
         await generateText({
           model: modelPick,
 
           instructions: researchSystemPrompt,
 
-          prompt: researchPrompt(target),
+          prompt: researchAttemptPrompt,
 
           tools: getAgenticTooling({ tools: [...RESEARCH_TOOLS] }),
 
@@ -521,18 +569,80 @@ export const runResearcher = async (
             await runLog.record("step", { step, ...normalizeStep(stepResult) });
           },
         });
-      // A blank response is a failure, not an observation with nothing to say: the
-      // record below would be formatted from empty evidence and stored as a real
-      // finding with no basis.
+
+      /**
+       * Asks for evidence, re-asking with different instructions when none came back.
+       *
+       * This is the shape budget and nothing else. A provider error is deliberately not
+       * caught here: it leaves straight out to the outage wrapper below rather than
+       * consuming one of five attempts.
+       *
+       * The exhausted case returns the last response rather than throwing, so the wrapper
+       * outside does not spend eight minutes repeating the same five failures.
+       * `evidenceProblem` is what turns it into a failure instead.
+       */
+      const askForEvidence = async () => {
+        let lastRun: Awaited<ReturnType<typeof runResearchAgentOnce>> | undefined;
+
+        for (let attempt = 1; attempt <= RESEARCH_ATTEMPTS; attempt += 1) {
+          researchAttemptPrompt = `${researchPrompt(target)}\n\n${nextResearchInstruction()}`;
+
+          const run = await runResearchAgentOnce();
+
+          lastRun = run;
+
+          const steps = await run.steps;
+
+          const problem = researchEvidenceProblem(steps);
+
+          if (problem === null) {
+            evidenceProblem = null;
+
+            return run;
+          }
+
+          evidenceProblem = problem;
+
+          console.warn(
+            `↻ researcher agent (${marketDomain}) step ${step} response ` +
+              `${attempt}/${RESEARCH_ATTEMPTS} rejected: ${problem}`,
+          );
+        }
+
+        if (lastRun === undefined) {
+          throw new Error(`researcher step ${step} made no attempts`);
+        }
+
+        return lastRun;
+      };
+      // The outage budget, and only that. `askForEvidence` is re-run whole on a
+      // provider failure because a started stream cannot be resumed, and it carries no
+      // evidence check of its own so a rejected response is not retried eight more
+      // times here.
       const researchResult = await withModelRetry(
-        callResearchAgent,
+        askForEvidence,
         `researcher agent (${marketDomain}) step ${step}`,
         {
           attempts: RETRY_ATTEMPTS,
           delayMs: RETRY_DELAY_MS,
-          isEmptyResult: (run) => run.text.trim().length === 0,
         },
       );
+
+      // Five attempts that gathered nothing is not an observation with nothing to say:
+      // the record below would be formatted from empty evidence and stored as a real
+      // finding with no basis. Raised before phase two is spent on it.
+      if (evidenceProblem !== null) {
+        await runLog.record("evidence_rejected", {
+          step,
+          observationId: target.id,
+          problem: evidenceProblem,
+          attempts: researchAttempts,
+        });
+
+        failedIds.push(target.id);
+
+        continue;
+      }
 
       const researchText = researchResult.text;
 
@@ -632,6 +742,40 @@ export const runResearcher = async (
     `;
 
       /**
+       * How many attempts the record stage gets when the record carries no finding.
+       *
+       * Separate from the outage budget for the same reason as everywhere else. This one
+       * re-asks a formatter that returned an empty record; the other waits out a
+       * provider being unreachable.
+       */
+      const RECORD_ATTEMPTS = 5;
+
+      /** What each attempt is told, escalating. */
+      const RECORD_RETRY_INSTRUCTIONS = [
+        "please do it right",
+        "Your previous response was not a usable record. Return the complete object with every field filled from the research supplied - finding, importance, evidence, sources, context, uncertainty, status.",
+        "Two previous responses were unusable. State in the finding field what the research actually established. Every field is required and none may be left empty or replaced with a placeholder.",
+        "Three previous responses were unusable. If the research is thin, say so in the finding and mark the status accordingly - an honest limited finding is accepted, an empty finding is not.",
+        "Every previous response has failed. Write the record now from the research below, with a real finding drawn from it. An empty finding will fail this observation.",
+      ] as const;
+
+      /** Why the last record was rejected, or null when it was accepted. */
+      let recordProblem: string | null = null;
+
+      /** The instruction for the next record attempt, advancing the counter. */
+      const nextRecordInstruction = (): string => {
+        recordAttempts += 1;
+
+        const index = Math.min(recordAttempts, RECORD_RETRY_INSTRUCTIONS.length) - 1;
+
+        return RECORD_RETRY_INSTRUCTIONS[index] ?? RECORD_RETRY_INSTRUCTIONS[0];
+      };
+
+      // How many of the record budget were spent, recorded so a run that had to re-ask is
+      // visible in the log rather than only on the terminal.
+      let recordAttempts = 0;
+
+      /**
        * One record-agent call.
        *
        * Extracted so the retry can repeat it with a different prompt. Instructions
@@ -643,6 +787,9 @@ export const runResearcher = async (
       // cannot be applied to one path and forgotten on the other. A blank response is
       // a failure: the structured-output parser would reject it and the observation
       // would be lost, when all that happened was an overloaded provider.
+      // The outage budget, and only that. The record shape check is `researchRecordProblem`
+      // applied by the caller below rather than an `isEmptyResult` here, so a record that
+      // parses but says nothing is re-asked rather than retried eight more times.
       const callRecordAgent = async (prompt: string) =>
         await withModelRetry(
           () =>
@@ -651,7 +798,8 @@ export const runResearcher = async (
 
               instructions: recordInstructions,
 
-              prompt,
+              // Appended on a re-ask, so the retry instruction is the last thing read.
+              prompt: `${prompt}\n\n${nextRecordInstruction()}`,
 
               maxOutputTokens: MAX_OUTPUT_TOKENS,
 
@@ -774,14 +922,17 @@ Rules, all of which matter:
 
         return { prompt, source: usedProse ? "research prose" : "tool evidence" };
       };
-      const resolveRecord = async (): Promise<{
+      /** One resolved record, whichever of the paths below produced it. */
+      type ResolvedRecord = {
         record: ResearchRecord;
         parseSource: string;
         finishReason: string | undefined;
         text: string;
         inputTokens: number | null;
         outputTokens: number | null;
-      }> => {
+      };
+
+      const resolveRecord = async (): Promise<ResolvedRecord> => {
         const call = async (prompt: string) => {
           const result = await callRecordAgent(prompt);
 
@@ -794,79 +945,125 @@ Rules, all of which matter:
           };
         };
 
-        try {
-          const first = await call(recordPrompt(target, embeddedEvidence));
+        /**
+         * Turns whatever the calls produced into a record, or reports why not.
+         *
+         * Returns `null` rather than throwing so the loop can re-ask, and so a rejection
+         * is not confused with the structured-output failure the `catch` handles.
+         */
+        const accept = (produced: ResolvedRecord | null): ResolvedRecord | null => {
+          if (produced === null) return null;
 
-          if (first.structured) {
-            return {
-              record: first.structured,
-              parseSource: "output (schema-validated)",
-              finishReason: first.finishReason,
-              text: first.text,
-              inputTokens: first.inputTokens,
-              outputTokens: first.outputTokens,
-            };
+          const problem = researchRecordProblem(produced.record);
+
+          if (problem === null) {
+            recordProblem = null;
+
+            return produced;
           }
 
-          return {
-            record: parseResearchRecord(first.text),
-            parseSource: "text (fallback)",
-            finishReason: first.finishReason,
-            text: first.text,
-            inputTokens: first.inputTokens,
-            outputTokens: first.outputTokens,
-          };
-        } catch (error) {
-          // Anything other than a structured-output failure is a real error - a
-          // provider outage, a timeout - and is left to the caller.
-          if (!NoObjectGeneratedError.isInstance(error)) throw error;
+          recordProblem = problem;
 
-          // The rejected text rides on the error, so the model's own words can be
-          // salvaged or inspected rather than discarded with the call.
-          const rejected = error.text ?? "";
+          return null;
+        };
+
+        // Re-asked when the record carries no finding, each attempt with a different
+        // instruction. This is the record stage's shape budget; the outage budget is
+        // inside `callRecordAgent` and is separate.
+        for (let attempt = 1; attempt <= RECORD_ATTEMPTS; attempt += 1) {
+          let produced: ResolvedRecord | null = null;
 
           try {
-            return {
-              record: parseResearchRecord(rejected),
-              parseSource: "error text (fallback)",
-              finishReason: error.finishReason,
-              text: rejected,
-              // No call completed, so there are no counts to report. The error does
-              // carry usage when the provider supplied it.
-              inputTokens: error.usage?.inputTokens ?? null,
-              outputTokens: error.usage?.outputTokens ?? null,
-            };
-          } catch {
-            // Unusable. Fall through to the fallback agent.
+            const first = await call(recordPrompt(target, embeddedEvidence));
+
+            produced = accept(
+              first.structured
+                ? {
+                    record: first.structured,
+                    parseSource: "output (schema-validated)",
+                    finishReason: first.finishReason,
+                    text: first.text,
+                    inputTokens: first.inputTokens,
+                    outputTokens: first.outputTokens,
+                  }
+                : {
+                    record: parseResearchRecord(first.text),
+                    parseSource: "text (fallback)",
+                    finishReason: first.finishReason,
+                    text: first.text,
+                    inputTokens: first.inputTokens,
+                    outputTokens: first.outputTokens,
+                  },
+            );
+          } catch (error) {
+            // Anything other than a structured-output failure is a real error - a
+            // provider outage, a timeout - and is left to the caller.
+            if (!NoObjectGeneratedError.isInstance(error)) throw error;
+
+            // The rejected text rides on the error, so the model's own words can be
+            // salvaged or inspected rather than discarded with the call.
+            const rejected = error.text ?? "";
+
+            try {
+              produced = accept({
+                record: parseResearchRecord(rejected),
+                parseSource: "error text (fallback)",
+                finishReason: error.finishReason,
+                text: rejected,
+                // No call completed, so there are no counts to report. The error does
+                // carry usage when the provider supplied it.
+                inputTokens: error.usage?.inputTokens ?? null,
+                outputTokens: error.usage?.outputTokens ?? null,
+              });
+            } catch {
+              // Unusable. Fall through to the fallback agent.
+            }
+
+            if (produced === null) {
+              // A different agent with different instructions, reading the research
+              // prose when there is enough of it to stand alone. Cheaper than resending
+              // the evidence blob, and not the same request the provider just refused.
+              const fallback = recordFallbackPrompt(target, researchText, embeddedEvidence);
+
+              const retried = await call(fallback.prompt);
+
+              produced = accept(
+                retried.structured
+                  ? {
+                      record: retried.structured,
+                      parseSource: `fallback: ${fallback.source} (schema-validated)`,
+                      finishReason: retried.finishReason,
+                      text: retried.text,
+                      inputTokens: retried.inputTokens,
+                      outputTokens: retried.outputTokens,
+                    }
+                  : {
+                      record: parseResearchRecord(retried.text),
+                      parseSource: `fallback: ${fallback.source} (text)`,
+                      finishReason: retried.finishReason,
+                      text: retried.text,
+                      inputTokens: retried.inputTokens,
+                      outputTokens: retried.outputTokens,
+                    },
+              );
+            }
           }
 
-          // A different agent with different instructions, reading the research
-          // prose when there is enough of it to stand alone. Cheaper than resending
-          // the evidence blob, and not the same request the provider just refused.
-          const fallback = recordFallbackPrompt(target, researchText, embeddedEvidence);
+          if (produced !== null) return produced;
 
-          const retried = await call(fallback.prompt);
-
-          if (retried.structured) {
-            return {
-              record: retried.structured,
-              parseSource: `fallback: ${fallback.source} (schema-validated)`,
-              finishReason: retried.finishReason,
-              text: retried.text,
-              inputTokens: retried.inputTokens,
-              outputTokens: retried.outputTokens,
-            };
-          }
-
-          return {
-            record: parseResearchRecord(retried.text),
-            parseSource: `fallback: ${fallback.source} (text)`,
-            finishReason: retried.finishReason,
-            text: retried.text,
-            inputTokens: retried.inputTokens,
-            outputTokens: retried.outputTokens,
-          };
+          console.warn(
+            `↻ researcher record agent (${marketDomain}) step ${step} response ` +
+              `${attempt}/${RECORD_ATTEMPTS} rejected: ${recordProblem}`,
+          );
         }
+
+        // Five records that said nothing is not a thin research finding, it is no
+        // finding. Raised so the observation is marked failed rather than stored as a
+        // record with an empty finding.
+        throw new Error(
+          `Researcher record agent (${marketDomain}) step ${step} returned no finding ` +
+            `after ${RECORD_ATTEMPTS} attempts: ${recordProblem}`,
+        );
       };
 
       const {

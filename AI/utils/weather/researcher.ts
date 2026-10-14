@@ -80,6 +80,87 @@ export const researchSchema = z.object({
 export type ResearchRecord = z.infer<typeof researchSchema>;
 
 /**
+ * Whether a research phase actually gathered evidence, and why not if it did not.
+ *
+ * Returns `null` for a response worth using and a sentence naming the problem
+ * otherwise.
+ *
+ * ## Why the text is not the thing to check
+ *
+ * The obvious check is "did the model write any prose", and it is wrong for this stage.
+ * Research does its work inside tool calls and frequently returns little or no prose of
+ * its own - across one real run a single observation returned a 34-line write-up while
+ * two others returned an empty string and three lines. Those two did their work in tool
+ * calls, and the evidence in `steps` is what phase two is handed.
+ *
+ * So a blank-text check throws away the runs that succeeded and passes a run that
+ * called nothing and said nothing. What phase one exists to produce is evidence, so
+ * what is checked here is whether any evidence came back.
+ *
+ * Two checks:
+ *
+ * 1. no steps at all - the agent did nothing
+ * 2. steps, but none of them carry text, a tool call or a tool result - the agent ran
+ *    and returned empty ones
+ *
+ * @param steps The run's steps, before they are flattened into evidence.
+ */
+export const researchEvidenceProblem = (steps: SdkStep[]): string | null => {
+  if (!Array.isArray(steps) || steps.length === 0) {
+    return "no steps returned";
+  }
+
+  const withText = steps.filter((step) => (step.text ?? "").trim().length > 0).length;
+
+  const withCalls = steps.filter((step) => (step.toolCalls ?? []).length > 0).length;
+
+  const withResults = steps.filter((step) => (step.toolResults ?? []).length > 0).length;
+
+  if (withText + withCalls + withResults === 0) {
+    return (
+      `${steps.length} step(s) returned, none with text or tool activity - ` +
+      "the run produced no evidence to research from"
+    );
+  }
+
+  return null;
+};
+
+/**
+ * Whether a formatted record carries a finding, and why not if it does not.
+ *
+ * The record is schema-validated by the SDK, so its shape is already enforced: this is
+ * not about missing fields. It is about a record whose fields are all present and all
+ * empty, which validates cleanly and stores as a research finding that says nothing.
+ *
+ * `finding` is the one field checked, because it is the one the record exists to
+ * carry. `uncertainty` and `context` are allowed to be empty - "no unresolved
+ * questions" and "no additional context" are real answers - so requiring them would
+ * reject honest records.
+ *
+ * Returns `null` for a record worth storing.
+ */
+export const researchRecordProblem = (record: unknown): string | null => {
+  if (record === null || typeof record !== "object" || Array.isArray(record)) {
+    return `expected a research record object, got ${Array.isArray(record) ? "an array" : typeof record}`;
+  }
+
+  const fields = record as Record<string, unknown>;
+
+  if (Object.keys(fields).length === 0) {
+    return "record is empty";
+  }
+
+  const finding = fields.finding;
+
+  if (typeof finding !== "string" || finding.trim().length === 0) {
+    return "record has no finding";
+  }
+
+  return null;
+};
+
+/**
  * Pulls the two fields worth surfacing as attributes out of a stored record.
  *
  * A stored record is the researcher's JSON serialized into one text column, so a
