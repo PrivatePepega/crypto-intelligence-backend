@@ -152,7 +152,7 @@ const RESEARCH_TOOLS = [
   //
   // Safe here and only here because this is the one agent on a Google model. It is a
   // provider-executed tool: naming it anywhere else fails the request outright.
-  "google_search",
+  // "google_search",
 
   "webSearchTool",
   "currentsNewsSearch",

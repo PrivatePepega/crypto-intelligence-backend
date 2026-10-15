@@ -1,0 +1,720 @@
+{
+  "date": "2026-10-15",
+  "marketDomain": "geopolitics",
+  "intelligenceSetId": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-15T01:33:46.267Z",
+  "rowCount": 71,
+  "rows": [
+    {
+      "id": "2741db91-76d0-40fc-9de7-40d6a7db32b8",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "S&P 500 increased 56.27 points (0.73%) to 7722.72, rising above its 6-month and 12-month moving averages",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "49d4e8bf-4c37-40c3-9808-e8adc5105f1f",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "NASDAQ Composite increased 319.26 points (1.19%) to 27190.86, well above its 6-month and 12-month averages",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "465bae55-3e25-4726-a3eb-0314aadbb251",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Dow Jones Industrial Average increased 90.94 points (0.18%) to 51267.9, below its 6-month MA but above 12-month MA",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "a4c8c949-128c-45c8-8393-dc5d47f9f057",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Russell 2000 increased 14.25 points (0.50%) to 2847.14, remaining under its 30-day and 6-month moving averages",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "216046b8-4590-4a3c-bde2-7cb91438c824",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "CBOE VIX decreased 1.08 points (6.6%) to 15.31, dropping below its 6-month and 12-month averages",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c5fcd6c6-0881-4d65-9ebb-f0609359ce37",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Broad USD index decreased 0.41 to 121.38, remaining above its 6-month and 12-month averages",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "b4a272af-1cf9-4c79-b964-557482ed8020",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "EUR/USD decreased 0.0032 to 1.1221",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "24806806-c502-491e-81d3-1f3d719035e5",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "GBP/USD decreased 0.0022 to 1.3219",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "7eb40aa3-65c2-41d9-9a9d-b112605c45ff",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "USD/JPY increased 0.07 to 157.90",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "1986aa0d-0859-45b4-a7eb-9c5d4d10f216",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "USD/CAD increased 0.0010 to 1.4257",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c3e0d9bd-603c-4dc4-a81d-10bf2030eb80",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "AUD/USD increased 0.0016 to 0.6969",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "90e43fcb-feeb-469e-92b3-36cfd915e170",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "NZD/USD decreased 0.0022 to 0.5597",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "58db8c8f-3a7a-45c8-bf10-02ac56849401",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Federal Funds Rate increased 0.13 percentage points to 3.88%",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c4b42d70-65f3-49a3-95a1-a2928043536f",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "2-Year Treasury yield increased 0.05 percentage points to 4.83%",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "9aa1e0b6-527b-456b-bd68-ce5e369914f1",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "5-Year Treasury yield increased 0.05 percentage points to 5.06%",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "1c4e035f-cf42-47be-ae20-15ff19b4ccf9",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "10-Year Treasury yield increased 0.04 percentage points to 5.28%",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "e93e158d-9808-40e0-bfb5-294be763a9ea",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Real 10-Year yield increased 0.04 percentage points to 2.92%",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "a7fcbd81-8bdf-4865-87e2-d2f393bb8801",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "High-yield credit spread decreased 0.14 percentage points to 3.10%",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "bdd8dae8-452d-462d-a3ca-927b8d3875e2",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Investment-grade spread decreased 0.01 percentage points to 0.85%",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "5971e3d9-d754-4d27-ad42-c6657684faa1",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "CNN Fear & Greed Index increased 3.17 points to 43.14, remaining in 'fear' territory",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "22d38b3f-e162-4cee-b92d-8d9eab287d0f",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "CNN Safe Haven Demand increased 1.35 to 4.70, indicating 'extreme fear'",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "fdb20900-07f2-4b03-a394-3efda8b3f89d",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Retail sales (advance) increased $8.2 billion to $737.8 billion, well above 3-month and 6-month averages",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "6fd3f145-7f3f-4796-9b16-965d8d104cff",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Real GDP growth (annualized) slowed to 2.2% from 2.5% prior quarter",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "e94c2f73-6df2-4d07-bf13-6b57727476c8",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Prime Minister Benjamin Netanyahu reportedly discussed a renewed war on Iran with President Trump last week",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "39a61bf7-b2b4-43dd-8972-1c75a938fa0b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Russia has not accepted any ceasefire proposal in the conflict with Ukraine",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "7de02fc1-48a0-4c6a-b63e-7b0a82732ea5",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "The Federal Reserve says most participants saw another 2026 rate hike as likely appropriate",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "f004e924-295d-4925-a2ff-a0dd1710466a",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Iran's president says the country is in an 'all-out war' and will 'resist' the enemy, according to Fars news agency",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "5be3f043-55f4-4fcd-85ad-9148a76ce316",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Iran agrees to suspend uranium enrichment in exchange for US sanctions relief",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "d2a65c5d-8b5b-432d-a464-c0774c799504",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "U.S. Treasury Secretary Bessent says interest rates should decrease following the conflict",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "2d1203af-10d1-47ec-9b93-84f3b8899757",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says the war with Iran will end soon",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "54563724-de85-48b3-911d-93bb8f78463e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "UK government urges households to prepare for potential war with Russia, according to BBC reports",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c7460054-3f6f-4da6-b452-1a8f3bc89bf0",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says the war with Iran will conclude very soon",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "95748fe9-2640-491d-bacf-0a1d6d2e05a3",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Iranian Parliament Speaker Mohammad Baqer Ghalibaf says a U.S. deal cannot prevent another attack on Iran",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "6f6acad7-4528-4b33-bff8-b2ce3c2b4630",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says Yemen's Houthi forces are acting 'very badly'",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "7ac0da3c-f899-4c72-a44e-6fef528d8dd7",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Iran reportedly strengthens defenses at nuclear sites ahead of potential U.S. strikes following the midterm elections",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "9d1a4a10-51a9-41c6-bf9d-02bc9eeb7a1a",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Interactive Brokers launches cryptocurrency staking service",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "50808d4b-ec7b-4a0d-a374-6653e3835888",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "The U.S. warns that Saudi Arabia poses a risk of drone targeting against American interests",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "4c60b433-66a0-403f-a9a9-52f602cc02d6",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says the U.S. will consider potential action on Iran over the UK incident",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "249232f4-a722-4f27-a7e3-bdaa0a2512d1",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says Russian President Putin wants to negotiate a deal and Ukrainian President Zelenskyy should prioritize making a deal over discussions",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "e5989472-8edc-4f75-b198-40a9d00e1fdf",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Kremlin says it is ready to halt strikes in Ukraine ahead of election day",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "905d825a-05e3-4af7-a5e9-25c23418c36b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says the U.S. may participate in Saudi-led military strikes against the Houthis",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "69028a7f-1180-4b2b-91ef-25498e042c60",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says he will review the situation regarding Iran and potential attacks",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "a6b71226-3fb6-4217-adef-d7dca33d3be9",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "President Trump says action on Iran may come before the midterm elections",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "1eb1932f-78a3-4fa8-95e1-d2f787b31c39",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Global Geopolitics Brief identifies widening threat to Black Sea commercial shipping from the Russia-Ukraine war",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "b5b1f92f-46bd-4932-a774-677938db4800",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Sharp escalation of fighting in Ethiopia's Tigray region reported",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c181381d-adc2-4cce-bf70-5068b98da1bb",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Saudi-backed counteroffensive against the Houthis around the strategically vital Bab el-Mandeb Strait",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "2c4bfe21-8589-4067-895b-ce9d0a93f4cb",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Brent crude trading at approximately $100 per barrel",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "6125c50c-af85-48f8-8d24-8fae2f3f6a6c",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "market_condition",
+      "observation": "Tanker rates between the Middle East and Asia have risen dramatically compared to the beginning of the year",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "718f5d7f-3e4f-4497-899b-0b7423dc150e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Institute for Science and International Security reports Iran may be trying to rebuild nuclear weapons development capabilities at the Minzadayi compound in northeastern Tehran Province",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "385c2cca-5279-4093-8e67-7e01dde28198",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Satellite imagery from September and October indicates renewed vehicle and earth-moving activity at the Minzadayi compound",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "3f46f07f-8e1f-4006-8721-4fe210d7c78e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Israel Defense Forces struck the Minzadayi compound in March 2026, stating Iran used it to covertly develop a key component for nuclear weapons",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "a7ca6923-41a5-4713-8469-54395185f495",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Global News Brief reports wars in Ukraine and Yemen with growing pressure around Iran",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "1e1f929c-0f72-4907-8d1b-e381830ed9d1",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Major Ukrainian drone attack on the Moscow region reported",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "482b21e5-a7f4-430f-86fc-1ee8d716021e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Political unrest in Europe with French student protests continuing",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "5b888112-41ba-4667-8bc9-e6e10e17bd0a",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Police in Kosovo used tear gas and water cannon against demonstrators in Pristina protesting developments surrounding the war crimes court",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "d524e54c-8807-4452-add2-2e59029a413a",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Kosovo electoral process underway with Kuvendi beginning presidential election procedure on October 6",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c02c5a2a-40b0-4c29-b20e-84e101b5b109",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Justina Pula declared next president of Kosovo after voting process completed minutes after constitutional deadline on midnight October 7",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "d36c1181-f96e-4f96-b149-0f41f89dc997",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Laos announced major leadership reshuffle including replacement of prime minister",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "a72474c1-a7e8-4cd7-a3d1-54beabbb8258",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Malaysian Prime Minister Anwar Ibrahim said 10,000 Myanmar nationals have been sent back to their country since January 2026",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "f652afff-3c13-48f7-b32e-2bf43b80bb07",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Myanmar rebel Arakan Army and Ponnagyun Youth Association reported military airstrikes on internally displaced person camps in Rakhine State killed eight people over two days",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "59281906-61eb-42f9-8922-9a456af115d3",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Houthis launched missiles against the airports of Najran and Jizan in Saudi Arabia, causing material damage and wounding three people",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c1063a8c-31a5-4b01-9a8b-fb49c5bce5a3",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Israeli defense minister states the military has killed 4,000 militants who participated in the Hamas-led attacks on Israel",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "b9f89aaa-2e95-4560-b45e-95849e0be66f",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "European economy regained some momentum in the second quarter of 2026 with GDP increasing 0.6% quarter-on-quarter",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "281c6586-e410-4014-8f53-0d2a49b5943b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Food and Agriculture Organization projects global cereal stocks at end of 2026-27 season will be equivalent to nearly one-third of annual consumption",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "05eae606-6e7a-498a-afcf-c1682769afb9",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Taiwanese finance ministry reports exports reached record US$87.2 billion in September 2026, imports rose to record $63.6 billion, achieving record trade surplus of $23.6 billion",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "660b4d92-0f5f-43f4-9805-1b3deef77f63",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "European Commission stops payments with immediate effect to Sierra Leone, which would have been €18 million for 2026, after the nation refused to cooperate with extradition of drugs trafficker Jos Leijdekkers",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "c962e436-dad3-491d-9109-f8f1dfab2813",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Families and comrades of six U.S. soldiers killed in a drone strike on March 1, 2026 in Port Shuaiba, Kuwait reported commanders had been warned of vulnerability to drone strikes",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "be3bbd21-459e-47ad-ba5a-6ad8e2b327a2",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Lawyers for CNN, MS NOW, and POLITICO stated White House offered no new evidence to support repeated claims that news outlets' reporting endangered national security",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "af784150-29a5-4809-98d1-85f58be6d17b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "event",
+      "observation": "Nicaraguan exile Jeffrey Jarquin reportedly imprisoned in maximum-security prison El Modelo immediately following deportation from United States",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "7da541f1-efcb-458d-a20e-deb00d5c24a4",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "development",
+      "observation": "Persistent danger to commercial shipping from Russia-Ukraine war could affect Ukrainian grain exports, insurance costs and confidence in Black Sea trade routes",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    },
+    {
+      "id": "b4d2cc5d-3632-496f-883e-31df17e048e6",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "geopolitics",
+      "type": "relationship",
+      "observation": "Black Sea remains a major route for Ukrainian agricultural exports and other international trade with threat from Russia alleging targeting of vessels transporting military equipment for Ukraine",
+      "research_enabled": false,
+      "created_at": "2026-10-15T01:33:46.107Z"
+    }
+  ]
+}

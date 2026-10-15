@@ -1,0 +1,607 @@
+{
+  "date": "2026-10-15",
+  "marketDomain": "commodities_energy",
+  "intelligenceSetId": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-15T02:57:06.915Z",
+  "recordSection": "triage",
+  "finishReason": "stop",
+  "considered": 40,
+  "promoted": 19,
+  "importantIds": [
+    "72384f03-feed-4df4-87c6-954a70da613a",
+    "67c15c36-336b-447b-ac11-0d3dbdacaf82",
+    "13305ad0-dc76-47ff-849f-a20881c5f1d1",
+    "70bca8e6-502b-4d1e-979b-e30e925bb700",
+    "434b2803-b862-4b0f-8cfb-0a4d57abb8e3",
+    "f154a892-a031-4a5d-8e62-97afe160d396",
+    "7267d9ea-6395-429a-8b63-7fffd8f39152",
+    "f2522f2a-48ee-4124-99c4-5cdde3a0310e",
+    "d1679ce2-5a46-4d8c-a64a-49f50c8a28df",
+    "9ea045c9-c16c-415b-a351-8a00e76cd327",
+    "ad59ec16-bfd8-412d-b3b0-6e5bf66bf6fc",
+    "c72e3a3d-acfb-40bb-acbf-11282ca1c4c8",
+    "f06906f9-4cba-4bb1-bd54-d9c5737c4d5b",
+    "f0642d93-b439-4c43-b281-7a22074f9ba0",
+    "40ba0b77-17d4-445f-a750-6dc01183b659",
+    "c754a044-86b6-43b5-b2fc-e6973c53dc2d",
+    "1858038e-ffaa-474d-a005-f36f4aeac192",
+    "421fc23c-159d-48ea-9a97-82a0a90b55fe",
+    "fe2d2c91-14bc-4992-982a-52077acf0468"
+  ],
+  "unknownIds": [],
+  "missingIds": [
+    "336a0bc5-6f65-4d11-9f7a-cf9b5c2fc22c",
+    "b6ffe451-870c-4c53-ad4b-83d2d8828581",
+    "e3af36a6-88c5-4da6-a025-cc650e8b7da5",
+    "335faf62-34ff-4c4e-92f9-e5f8a5499c33",
+    "4f0c9898-45c7-4fee-af6e-96acd44abe70",
+    "aeaa35d1-01ad-48b2-88b5-71e9714983c3",
+    "d7e75c67-f0d1-41f6-821f-ec2c64281b09",
+    "cb0e4b3c-675d-45ca-9ada-08fb815f333d"
+  ],
+  "decisions": [
+    {
+      "id": "72384f03-feed-4df4-87c6-954a70da613a",
+      "important": true,
+      "reason": "Brent crude dropped sharply from $138 to $107 with J.P. Morgan forecasting further decline to $78 by year-end."
+    },
+    {
+      "id": "67c15c36-336b-447b-ac11-0d3dbdacaf82",
+      "important": true,
+      "reason": "EIA raised its Q4 Brent forecast by $14 to $105/bbl in the October STEO."
+    },
+    {
+      "id": "e248ea50-0b08-4d41-b584-e41573efafb6",
+      "important": false,
+      "reason": "Institutional consensus converging on $90-100/bbl is a summary view, not a new development."
+    },
+    {
+      "id": "13305ad0-dc76-47ff-849f-a20881c5f1d1",
+      "important": true,
+      "reason": "China is strategically stockpiling 140 million barrels at discounted prices below $80/bbl."
+    },
+    {
+      "id": "70bca8e6-502b-4d1e-979b-e30e925bb700",
+      "important": true,
+      "reason": "Middle East hostilities and Red Sea attacks threaten recent Gulf oil production gains."
+    },
+    {
+      "id": "434b2803-b862-4b0f-8cfb-0a4d57abb8e3",
+      "important": true,
+      "reason": "Strait of Hormuz tensions persist through late 2026, creating ongoing chokepoint risk."
+    },
+    {
+      "id": "f154a892-a031-4a5d-8e62-97afe160d396",
+      "important": true,
+      "reason": "U.S.-Israel military operations against Iran beginning February 2026 are driving much of 2026 volatility."
+    },
+    {
+      "id": "7267d9ea-6395-429a-8b63-7fffd8f39152",
+      "important": true,
+      "reason": "40 million barrels were added to the U.S. Strategic Petroleum Reserve in September 2026."
+    },
+    {
+      "id": "f2522f2a-48ee-4124-99c4-5cdde3a0310e",
+      "important": true,
+      "reason": "Record tanker rates of $23/bbl freight costs are eroding refinery margins."
+    },
+    {
+      "id": "d1679ce2-5a46-4d8c-a64a-49f50c8a28df",
+      "important": true,
+      "reason": "IEA forecasts supply will exceed demand by 3.85 million b/d in 2026, a 4% surplus."
+    },
+    {
+      "id": "9ea045c9-c16c-415b-a351-8a00e76cd327",
+      "important": true,
+      "reason": "OPEC+ paused production increases for Q1 2026, a notable producer policy decision."
+    },
+    {
+      "id": "ad59ec16-bfd8-412d-b3b0-6e5bf66bf6fc",
+      "important": true,
+      "reason": "EIA forecasts U.S. production at 13.87 million bpd in 2026, a record level."
+    },
+    {
+      "id": "c72e3a3d-acfb-40bb-acbf-11282ca1c4c8",
+      "important": true,
+      "reason": "China is filling strategic reserves at a 1.0 million b/d pace, a massive buying rate."
+    },
+    {
+      "id": "f06906f9-4cba-4bb1-bd54-d9c5737c4d5b",
+      "important": true,
+      "reason": "IEA warns global diesel shortage will persist until mid-2027."
+    },
+    {
+      "id": "b70b70e7-0830-47ec-b48c-17b0d7aa3643",
+      "important": false,
+      "reason": "Henry Hub spot price fell modestly from $3.67 to $3.44/MMBtu, a routine gas price move."
+    },
+    {
+      "id": "f0642d93-b439-4c43-b281-7a22074f9ba0",
+      "important": true,
+      "reason": "LNG-linked gas prices in Europe and Asia remain elevated ~130% above pre-conflict levels."
+    },
+    {
+      "id": "40ba0b77-17d4-445f-a750-6dc01183b659",
+      "important": true,
+      "reason": "Underground gas storage could reach 4 Tcf by October end, the second-highest on record."
+    },
+    {
+      "id": "a728357d-0fae-4abf-bee4-ca650ceceedb",
+      "important": false,
+      "reason": "Permian and Haynesville driving gas production growth is an ongoing trend, not a new development."
+    },
+    {
+      "id": "c754a044-86b6-43b5-b2fc-e6973c53dc2d",
+      "important": true,
+      "reason": "World Bank forecasts overall commodity prices to rise 16% in 2026, the first annual increase since 2022."
+    },
+    {
+      "id": "1858038e-ffaa-474d-a005-f36f4aeac192",
+      "important": true,
+      "reason": "Energy price index surged 25.7% in September with crude up 21.2% and natural gas up 15.3%."
+    },
+    {
+      "id": "ad2485b5-928c-498e-80ed-9b4edffc0974",
+      "important": false,
+      "reason": "Copper demand growth from energy transition is a known structural trend, not a new signal."
+    },
+    {
+      "id": "c99fee9a-cb8d-4e13-bbaa-53419cb1e580",
+      "important": false,
+      "reason": "Base metals finding a floor is a vague market condition without specific significance."
+    },
+    {
+      "id": "421fc23c-159d-48ea-9a97-82a0a90b55fe",
+      "important": true,
+      "reason": "Supply constraints are particularly binding for copper and aluminum, a specific supply-side issue."
+    },
+    {
+      "id": "3376634f-a1fd-4789-88ec-cbc7b2168146",
+      "important": false,
+      "reason": "Narrative about Iran conflict creating risk premium duplicates observation f154a892."
+    },
+    {
+      "id": "29bb867e-1e45-4c29-824b-819463abdcff",
+      "important": false,
+      "reason": "Red Sea shipping disruptions duplicate observation 70bca8e6."
+    },
+    {
+      "id": "fe2d2c91-14bc-4992-982a-52077acf0468",
+      "important": true,
+      "reason": "Major oil companies are shifting capital from crude expansion to LNG projects, a structural industry shift."
+    },
+    {
+      "id": "12efe963-5eb7-4f75-85be-c16ba7d27d28",
+      "important": false,
+      "reason": "Natural gas as bridge fuel narrative is generic commentary, not a new development."
+    },
+    {
+      "id": "123c4b20-c099-43c5-ad76-8bdc6d614217",
+      "important": false,
+      "reason": "China aggressive reserve building duplicates observations 13305ad0 and c72e3a3d."
+    },
+    {
+      "id": "a6d047a3-02db-452a-aaee-76461d962a70",
+      "important": false,
+      "reason": "Real GDP slowing to 2.2% is a macroeconomic indicator, not energy-specific."
+    },
+    {
+      "id": "b1672384-a9a8-414b-84f5-d5d0967faf14",
+      "important": false,
+      "reason": "Industrial production expanded marginally by 0.02%, a trivial macro data point."
+    },
+    {
+      "id": "36dc4f88-21a5-4641-b69e-10a534b2d6ad",
+      "important": false,
+      "reason": "Personal income rose $66.6 billion, a routine macro data point."
+    },
+    {
+      "id": "ae96a1bc-d9fd-47e6-acba-cae85de1ed92",
+      "important": false,
+      "reason": "CPI inflation acceleration is a macro indicator, not energy-specific."
+    }
+  ],
+  "rows": [
+    {
+      "id": "72384f03-feed-4df4-87c6-954a70da613a",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Brent crude trading at $107/bbl (June 2026), down from April peak of $138/bbl; J.P. Morgan forecast: $86/bbl Q3 2026, $80/bbl Q4 2026, $78/bbl year-end 2026",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "67c15c36-336b-447b-ac11-0d3dbdacaf82",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "EIA October 2026 STEO raised Brent crude price forecast to $105/bbl in Q4 (+$14/bbl from previous forecast)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "e248ea50-0b08-4d41-b584-e41573efafb6",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "development",
+      "observation": "Multiple institutional forecasts converging on $90-100/bbl range for full-year 2026 Brent crude",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "13305ad0-dc76-47ff-849f-a20881c5f1d1",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "China strategically stockpiling 140 million barrels at discounted prices (below $80/bbl)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "70bca8e6-502b-4d1e-979b-e30e925bb700",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "Middle East hostilities (Houthi rebels, Red Sea attacks) threatening recent Gulf oil production gains",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "434b2803-b862-4b0f-8cfb-0a4d57abb8e3",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "Strait of Hormuz tensions persisting through at least late 2026",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "f154a892-a031-4a5d-8e62-97afe160d396",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "U.S.-Israel military operations against Iran beginning February 2026, driving much of 2026 volatility",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "7267d9ea-6395-429a-8b63-7fffd8f39152",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "40 million barrels added to U.S. Strategic Petroleum Reserve in September 2026",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "f2522f2a-48ee-4124-99c4-5cdde3a0310e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "anomaly",
+      "observation": "Record tanker rates ($23/bbl freight costs) eroding refinery margins",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "d1679ce2-5a46-4d8c-a64a-49f50c8a28df",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "IEA forecasts supply to exceed demand by 3.85 million b/d in 2026 (4% of global demand)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "9ea045c9-c16c-415b-a351-8a00e76cd327",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "regulation",
+      "observation": "OPEC+ paused production increases for Q1 2026",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "ad59ec16-bfd8-412d-b3b0-6e5bf66bf6fc",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "development",
+      "observation": "U.S. production forecast: 13.87 million bpd in 2026 (EIA forecast)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "c72e3a3d-acfb-40bb-acbf-11282ca1c4c8",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "development",
+      "observation": "China filling strategic reserves at 1.0 million b/d pace",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "f06906f9-4cba-4bb1-bd54-d9c5737c4d5b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "Global diesel shortage expected to persist until mid-2027 (IEA warning)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "b70b70e7-0830-47ec-b48c-17b0d7aa3643",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Henry Hub spot price fell from $3.67 to $3.44/MMBtu (EIA August 2026 STEO)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "f0642d93-b439-4c43-b281-7a22074f9ba0",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "LNG-linked gas prices in Europe and Asia elevated ~130% above pre-conflict levels",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "40ba0b77-17d4-445f-a750-6dc01183b659",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "development",
+      "observation": "Underground storage inventories could reach 4 Tcf by October end (second-highest on record)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "a728357d-0fae-4abf-bee4-ca650ceceedb",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "development",
+      "observation": "Permian and Haynesville regions driving natural gas production growth",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "c754a044-86b6-43b5-b2fc-e6973c53dc2d",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "development",
+      "observation": "Overall commodity prices forecast to rise 16% in 2026 (World Bank; first annual increase since 2022)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "1858038e-ffaa-474d-a005-f36f4aeac192",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Energy price index surged 25.7% in September (crude +21.2%, natural gas +15.3%)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "ad2485b5-928c-498e-80ed-9b4edffc0974",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "development",
+      "observation": "Copper demand growing due to energy transition (EVs, data centers)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "c99fee9a-cb8d-4e13-bbaa-53419cb1e580",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Base metals finding a floor despite macroeconomic headwinds",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "421fc23c-159d-48ea-9a97-82a0a90b55fe",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "anomaly",
+      "observation": "Supply constraints particularly binding for copper and aluminum",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "3376634f-a1fd-4789-88ec-cbc7b2168146",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "narrative",
+      "observation": "Ongoing Iran conflict creating persistent supply risk premium in energy markets",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "29bb867e-1e45-4c29-824b-819463abdcff",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "Red Sea shipping disruptions affecting global energy trade routes",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "fe2d2c91-14bc-4992-982a-52077acf0468",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "relationship",
+      "observation": "Major oil companies shifting capital from traditional crude expansion to LNG projects",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "12efe963-5eb7-4f75-85be-c16ba7d27d28",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "narrative",
+      "observation": "Natural gas positioned as critical bridge fuel during energy transition",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "123c4b20-c099-43c5-ad76-8bdc6d614217",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "event",
+      "observation": "China aggressive strategic reserve building (140 million barrels target)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "a6d047a3-02db-452a-aaee-76461d962a70",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "anomaly",
+      "observation": "Real GDP growth slowed to 2.2% (Q1 2026) from 2.5% previous quarter",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "b1672384-a9a8-414b-84f5-d5d0967faf14",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Industrial production expanded modestly (103.07, +0.02% monthly)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "36dc4f88-21a5-4641-b69e-10a534b2d6ad",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Personal income rose $66.6 billion (small incremental growth)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "ae96a1bc-d9fd-47e6-acba-cae85de1ed92",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "anomaly",
+      "observation": "CPI inflation acceleration: 1.32% monthly, Core CPI: 0.97% monthly",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "336a0bc5-6f65-4d11-9f7a-cf9b5c2fc22c",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "regulation",
+      "observation": "Federal Funds Rate increased to 3.88% (+0.13% monthly)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "b6ffe451-870c-4c53-ad4b-83d2d8828581",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "10-Year Treasury yield: 5.28% (+0.04% daily)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "e3af36a6-88c5-4da6-a025-cc650e8b7da5",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "VIX volatility index declined to 15.31 (reduced near-term uncertainty)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "335faf62-34ff-4c4e-92f9-e5f8a5499c33",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "S&P 500: +56.27 points (positive momentum)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "4f0c9898-45c7-4fee-af6e-96acd44abe70",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "NASDAQ: +319.26 points (strong tech sector performance)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "aeaa35d1-01ad-48b2-88b5-71e9714983c3",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Broad USD Index at 121.38 (moderate dollar strength)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "d7e75c67-f0d1-41f6-821f-ec2c64281b09",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Gold retail positioning extremely bullish (77% long, 54% net)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    },
+    {
+      "id": "cb0e4b3c-675d-45ca-9ada-08fb815f333d",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "commodities_energy",
+      "type": "market_condition",
+      "observation": "Silver retail positioning very strong (82% long, 64% net)",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:55:10.322Z"
+    }
+  ]
+}

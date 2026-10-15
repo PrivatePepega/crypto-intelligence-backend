@@ -1,0 +1,701 @@
+{
+  "date": "2026-10-15",
+  "marketDomain": "financial_markets",
+  "intelligenceSetId": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+  "setIdAgreesWithEveryRow": true,
+  "writtenAt": "2026-10-15T02:16:16.453Z",
+  "recordSection": "triage",
+  "finishReason": "stop",
+  "considered": 50,
+  "promoted": 3,
+  "importantIds": [
+    "d0c1f738-4a4b-467b-8cf3-333d0a20e53b",
+    "d391e45f-556e-45e2-8984-0966b358d655",
+    "ac14345c-57bc-4ee1-98e9-48e8ad183ec3"
+  ],
+  "unknownIds": [],
+  "missingIds": [
+    "42903716-5993-4098-ad50-722812bc0144",
+    "821c9fea-e8a3-4843-926b-cf90e4c57a04",
+    "d02acfae-72fd-4d1c-b6d1-b4bf67fae65b",
+    "d056ef7c-ebce-42f6-a756-a8a60e90505f",
+    "6af49fc0-409e-4f70-9903-346574604d3e",
+    "a2765db4-43e9-4881-9339-8c8b00a41974",
+    "9b929848-2fd9-48e4-9053-35086a1593c6",
+    "a858a9bb-7ec9-4293-bb36-b37e23883cff",
+    "02c9e551-3ee8-49a8-af49-d954df43603e",
+    "f53d6d8a-7810-4ebd-8e63-1b2fd8d32450",
+    "cb000342-3e76-4187-bdba-f1b3745f2d58",
+    "90f438f1-8c44-4602-8dd4-e75a11c24812",
+    "87b08297-c781-4333-b485-533a1d9ada90",
+    "fd644e37-522d-44fc-9b3d-0f49291b0ac4",
+    "1d14ad29-8326-4b3e-bc70-c893457e7090",
+    "331153e3-ae82-4f8b-9b46-1ae67d247fbe",
+    "dfb2c4f9-d6ba-4148-8182-a419b6bc9fb4",
+    "ed763f23-14d8-4f06-a35d-43bd5079a36b"
+  ],
+  "decisions": [
+    {
+      "id": "f83c2798-798d-4de3-906f-7679a23b1112",
+      "important": false,
+      "reason": "Routine S&P 500 level and daily move without extreme or structural significance."
+    },
+    {
+      "id": "79b21c56-05f6-4afa-a325-47a0e8f70766",
+      "important": false,
+      "reason": "Routine NASDAQ level and daily move without extreme or structural significance."
+    },
+    {
+      "id": "a7ecf9f7-d4f8-4067-9425-e353bd669a44",
+      "important": false,
+      "reason": "Routine Dow Jones level and daily move without extreme or structural significance."
+    },
+    {
+      "id": "37a81c18-7c4c-49cf-bafc-20a503bcebb1",
+      "important": false,
+      "reason": "Small-cap underperformance relative to moving averages is a routine divergence, not an extreme signal."
+    },
+    {
+      "id": "c0a6de76-43c1-4e5f-99cd-9c8eb3859277",
+      "important": false,
+      "reason": "Unchanged retail positioning data reflects routine sentiment, not a material shift."
+    },
+    {
+      "id": "70f55d62-d478-4b5e-a1c8-2cae3878ee4b",
+      "important": false,
+      "reason": "Unchanged retail positioning data reflects routine sentiment, not a material shift."
+    },
+    {
+      "id": "d835797e-e972-46dd-8475-148ac2c87968",
+      "important": false,
+      "reason": "Unchanged retail positioning data reflects routine sentiment, not a material shift."
+    },
+    {
+      "id": "7b699634-01a3-451f-818e-328c882cff38",
+      "important": false,
+      "reason": "Minimal 1bp move in 3-month Treasury is routine short-term rate fluctuation."
+    },
+    {
+      "id": "0e7d5a8b-ba17-4e17-80b1-71403e5dae17",
+      "important": false,
+      "reason": "Modest 5bp weekly rise in 2-year Treasury is within normal range."
+    },
+    {
+      "id": "709f66eb-2f45-4099-bb72-589decc8bbe1",
+      "important": false,
+      "reason": "Modest 5bp rise in 5-year Treasury is within normal range."
+    },
+    {
+      "id": "26a5f926-f18f-4591-a04d-a17f3263f26f",
+      "important": false,
+      "reason": "10-year Treasury at 5.28% is elevated but the 4bp daily move is routine; historic level captured separately."
+    },
+    {
+      "id": "ee630ec7-a8da-4694-b434-5db286d28a1e",
+      "important": false,
+      "reason": "Real 10-year yield rise of 4bp is a routine continuation of trend."
+    },
+    {
+      "id": "d0c1f738-4a4b-467b-8cf3-333d0a20e53b",
+      "important": true,
+      "reason": "Yield curve steepening with both ends rising signals a structural shift in rate expectations."
+    },
+    {
+      "id": "d391e45f-556e-45e2-8984-0966b358d655",
+      "important": true,
+      "reason": "10-year Treasury at highest level since 2002 marks a historic milestone for long-term rates."
+    },
+    {
+      "id": "d85b2b2e-a173-44ba-996f-7dec7d7b3ddc",
+      "important": false,
+      "reason": "Goldman Sachs commentary on yield drivers is analysis, not a new market development."
+    },
+    {
+      "id": "ce93fcc0-0491-49f4-a8ed-91c38ed32d81",
+      "important": false,
+      "reason": "BlackRock portfolio preference commentary is opinion, not a market event."
+    },
+    {
+      "id": "781ffef0-b5db-4c68-a7b9-353b49eefd54",
+      "important": false,
+      "reason": "JPMorgan outlook statement is forward-looking opinion, not a current development."
+    },
+    {
+      "id": "d7cbb2e3-866e-4a81-94ef-ec8d89d503ef",
+      "important": false,
+      "reason": "High-yield spread tightening of 14bp is notable but routine credit market behavior."
+    },
+    {
+      "id": "316a637b-411b-4680-9ac7-a8fb0316b2ca",
+      "important": false,
+      "reason": "Investment-grade spread change of 1bp is negligible and routine."
+    },
+    {
+      "id": "ac14345c-57bc-4ee1-98e9-48e8ad183ec3",
+      "important": true,
+      "reason": "High-yield spreads tightening while Treasury yields rise is a meaningful divergence worth investigating."
+    },
+    {
+      "id": "db9e3428-9dc1-4219-a534-8a9f45fda3d4",
+      "important": false,
+      "reason": "Weekly commentary contradicts observed spread data and is narrative, not verified development."
+    },
+    {
+      "id": "db019e38-97b6-4ce3-8f05-6840ca43e0ca",
+      "important": false,
+      "reason": "Dollar Index daily move of -0.41 is routine within established range."
+    },
+    {
+      "id": "8b7c1295-ea2a-4b6b-af6c-ca5656c2ac7d",
+      "important": false,
+      "reason": "EUR/USD below moving averages reflects persistent trend, not a new breakout."
+    },
+    {
+      "id": "43b96449-a6e7-431b-a46d-3a9892a89a13",
+      "important": false,
+      "reason": "GBP/USD below moving averages reflects persistent trend, not a new breakout."
+    },
+    {
+      "id": "fa5dbf61-b3bf-4a91-a5f0-ed567e002d41",
+      "important": false,
+      "reason": "USD/JPY near 158 with mixed signals is routine range-bound trading."
+    },
+    {
+      "id": "3af077f3-53e0-4094-8f57-40992939c895",
+      "important": false,
+      "reason": "AUD/USD move of 0.23% with mixed MA signals is routine."
+    },
+    {
+      "id": "1113a84c-fc64-4d69-bacf-5bd30a391ad8",
+      "important": false,
+      "reason": "NZD/USD move of -0.39% below MAs is routine trend continuation."
+    },
+    {
+      "id": "fbe5ef8f-3299-412e-8526-937a66e7b5f4",
+      "important": false,
+      "reason": "Euro FX positioning change is modest and routine for weekly CFTC data."
+    },
+    {
+      "id": "5d5cd6aa-2a8b-4a51-aef2-b270b1a4164d",
+      "important": false,
+      "reason": "Yen positioning change is modest and routine for weekly CFTC data."
+    },
+    {
+      "id": "9923d2a2-1cf1-4b92-ab15-2d264fb9bc5c",
+      "important": false,
+      "reason": "VIX decline to 15.31 with equities rising is routine low-volatility behavior."
+    },
+    {
+      "id": "ba31a405-7b35-4a15-b379-d452ea265cd3",
+      "important": false,
+      "reason": "Fear & Greed Index move from 40 to 43 is routine sentiment fluctuation."
+    },
+    {
+      "id": "dbd5079d-ba0b-4e6d-acb8-0f7a28d4aceb",
+      "important": false,
+      "reason": "Market Momentum at extreme greed is a routine reading in uptrending markets."
+    }
+  ],
+  "rows": [
+    {
+      "id": "f83c2798-798d-4de3-906f-7679a23b1112",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "S&P 500 at 7722.72, up 56.27 points (+0.73%), currently above its 6-month moving average (7544.93) and well above its 12-month moving average (7159.36).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "79b21c56-05f6-4afa-a325-47a0e8f70766",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "NASDAQ Composite at 27190.86, up 319.26 points (+1.19%), above its 6-month moving average (26156.93) and 12-month moving average (24491.49).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "a7ecf9f7-d4f8-4067-9425-e353bd669a44",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Dow Jones Industrial Average at 51267.90, up 90.94 points (+0.18%), trading below its 6-month moving average (51882.93) but above its 12-month moving average (49862.70).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "37a81c18-7c4c-49cf-bafc-20a503bcebb1",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Russell 2000 at 2847.14, up 14.25 points (+0.50%), below its 30-day moving average (2861.68) and 6-month moving average (2897.20), but above its 12-month moving average (2718.40) — small-cap index lagging large caps.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "c0a6de76-43c1-4e5f-99cd-9c8eb3859277",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "IG S&P 500 retail positioning: 69% long / 31% short, net +38, unchanged from previous day.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "70f55d62-d478-4b5e-a1c8-2cae3878ee4b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "IG Nasdaq-100 retail positioning: 67% long / 33% short, net +34, unchanged from previous day.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "d835797e-e972-46dd-8475-148ac2c87968",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "IG Dow Jones retail positioning: 67% long / 33% short, net +34, unchanged from previous day.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "7b699634-01a3-451f-818e-328c882cff38",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "3-Month Treasury at 4.01%, up 1bp, above its 6-month moving average (3.73%) and 12-month moving average (3.674%).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "0e7d5a8b-ba17-4e17-80b1-71403e5dae17",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "2-Year Treasury at 4.83%, up 5bp over the week, above its 30-day moving average (4.5925%).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "709f66eb-2f45-4099-bb72-589decc8bbe1",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "5-Year Treasury at 5.06%, up 5bp, above its 6-month moving average (4.374%) and 12-month moving average (4.0445%).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "26a5f926-f18f-4591-a04d-a17f3263f26f",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "10-Year Treasury at 5.28%, up 4bp, above its 6-month moving average (4.644%) and 12-month moving average (4.3964%).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "ee630ec7-a8da-4694-b434-5db286d28a1e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Real 10-Year Treasury at 2.92%, up 4bp, above its 6-month moving average (2.322%) and 12-month moving average (2.0836%).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "d0c1f738-4a4b-467b-8cf3-333d0a20e53b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "US Treasury yield curve steepening: both short and long ends rising, with the 10-year minus 2-year spread not explicitly shown but the curve generally steepening.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "d391e45f-556e-45e2-8984-0966b358d655",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "US 10-Year Treasury yield at its highest level since 2002, per multiple news sources.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "d85b2b2e-a173-44ba-996f-7dec7d7b3ddc",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "Goldman Sachs (Oct 5 pulse): 'Global bond yields have risen sharply, driven by stronger nominal growth, lingering inflation, fiscal concerns, and increased competition for capital from AI.'",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "ce93fcc0-0491-49f4-a8ed-91c38ed32d81",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "BlackRock weekly commentary: 'Higher yields offer an opportunity to add Treasuries, funded partly by taking profits on U.S. equities.'",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "781ffef0-b5db-4c68-a7b9-353b49eefd54",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "JPMorgan (mid-year outlook): 'Constructive risk-asset outlook' but 'slow, uneven pace, with the Fed staying behind the curve.'",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "d7cbb2e3-866e-4a81-94ef-ec8d89d503ef",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "High-Yield Credit Spread at 3.10%, down 14bp, above its 6-month moving average (2.74%) and 12-month moving average (2.8591%).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "316a637b-411b-4680-9ac7-a8fb0316b2ca",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Investment-Grade Credit Spread at 0.85%, down 1bp, above its 6-month moving average (0.778%) and 12-month moving average (0.7973%).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "ac14345c-57bc-4ee1-98e9-48e8ad183ec3",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "ICE BofA US High Yield Index OAS declining from 3.24% to 3.10% — credit markets tightening despite rising yields.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "db9e3428-9dc1-4219-a534-8a9f45fda3d4",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "development",
+      "observation": "Weekly market commentary note: 'Corporate bonds finally seemed to crack as spreads gapped higher' after months of resilience, indicating a potential shift in credit market conditions.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "db019e38-97b6-4ce3-8f05-6840ca43e0ca",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "Broad U.S. Dollar Index at 121.38, down 0.41, above its 6-month moving average (119.51) and 12-month moving average (119.57).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "8b7c1295-ea2a-4b6b-af6c-ca5656c2ac7d",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "EUR/USD at 1.1221, down 0.28%, below its 30-day, 6-month, and 12-month moving averages — persistent euro underperformance against the dollar.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "43b96449-a6e7-431b-a46d-3a9892a89a13",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "GBP/USD at 1.3219, down 0.17%, below its 30-day, 6-month, and 12-month moving averages — persistent pound underperformance against the dollar.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "fa5dbf61-b3bf-4a91-a5f0-ed567e002d41",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "USD/JPY at 157.90, up 0.04%, above its 30-day moving average but below its 6-month moving average and near its 12-month moving average.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "3af077f3-53e0-4094-8f57-40992939c895",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "AUD/USD at 0.6969, up 0.23%, below its 30-day and 6-month moving averages but above its 12-month moving average.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "1113a84c-fc64-4d69-bacf-5bd30a391ad8",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "NZD/USD at 0.5597, down 0.39%, below its 30-day, 6-month, and 12-month moving averages.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "fbe5ef8f-3299-412e-8526-937a66e7b5f4",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CFTC Euro FX positioning: net short -212,166 contracts (vs -220,952 prior), open interest up 3.93%.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "5d5cd6aa-2a8b-4a51-aef2-b270b1a4164d",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CFTC Japanese Yen positioning: net short -86,702 contracts (vs -108,284 prior), open interest down 4.75%.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "9923d2a2-1cf1-4b92-ab15-2d264fb9bc5c",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "VIX at 15.31, down 1.08, below its 6-month moving average (16.65) and 12-month moving average (18.12) — volatility declining despite equity gains.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "ba31a405-7b35-4a15-b379-d452ea265cd3",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Fear & Greed Index at 43.14 (fear), up 3.17 from 39.97, above its 30-day moving average (+10.30) but below its 6-month moving average (-4.17).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "dbd5079d-ba0b-4e6d-acb8-0f7a28d4aceb",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Market Momentum (S&P 500 vs 125-day MA) at 7481.28 (extreme greed), up 9.26 from 7472.03, well above its 30-day, 6-month, and 12-month moving averages.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "42903716-5993-4098-ad50-722812bc0144",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Market Volatility (VIX vs 50-day MA) at 15.7884 (extreme fear), down 0.06 from 15.8496, below its 30-day, 6-month, and 12-month moving averages.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "821c9fea-e8a3-4843-926b-cf90e4c57a04",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Put/Call Options at 0.7613 (extreme fear), down 0.00039 from 0.7617, near its 30-day moving average.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "d02acfae-72fd-4d1c-b6d1-b4bf67fae65b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CNN Stock Price Breadth at 141.70 (extreme greed), down 3.21 from 144.91, above its 12-month moving average but well below its 30-day and 6-month moving averages — breadth narrowing.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "d056ef7c-ebce-42f6-a756-a8a60e90505f",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "anomaly",
+      "observation": "CNN Safe Haven Demand at 4.70 (extreme fear), up 1.35 (+40.47% from 3.34) — the largest percentage move among all CNN metrics, indicating a sharp shift toward defensive positioning.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "6af49fc0-409e-4f70-9903-346574604d3e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "AAII Investor Sentiment (week ending Oct 1): Bullish 34.65% (up 1.96%), Neutral 18.86% (down 0.37%), Bearish 46.49% (down 1.59%), bull-bear spread -11.85 (down 0.30) — retail bearishness remains elevated.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "a2765db4-43e9-4881-9339-8c8b00a41974",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CFTC S&P 500 futures: dealer net short -608,032 (vs -635,484 prior), asset manager net long 906,259 (vs 936,671 prior), leveraged money net short -374,007 (vs -375,616 prior).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "9b929848-2fd9-48e4-9053-35086a1593c6",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CFTC Nasdaq-100 futures: open interest down 4.81% to 283,950; asset manager net long shrank from 73,292 to 70,801; other reportables flipped from net long to net short (2,799 vs 7,192 prior).",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "a858a9bb-7ec9-4293-bb36-b37e23883cff",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CFTC U.S. Dollar Index futures: open interest up 4.35% to 48,342; leveraged money shifted from net short -4,495 to net long +361.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "02c9e551-3ee8-49a8-af49-d954df43603e",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CFTC 10-Year Treasury Note futures: open interest up 4.97% to 5.68M; dealer net short widened from -580,674 to -736,585; asset manager net long grew from 2.53M to 2.78M.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "f53d6d8a-7810-4ebd-8e63-1b2fd8d32450",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "CFTC 2-Year Treasury Note futures: open interest essentially flat at 4.53M; dealer net short deepened from -523,460 to -591,496; leveraged money net short narrowed from -1.35M to -1.17M.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "cb000342-3e76-4187-bdba-f1b3745f2d58",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "S&P 500 seasonal window described as 'strongest seasonal window' with 80% historical odds of year-end gains.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "90f438f1-8c44-4602-8dd4-e75a11c24812",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "development",
+      "observation": "U.S. CPI data described as 'hotter-than-expected,' driving Treasury yields higher and boosting Fed rate-hike expectations, with headline inflation accelerating to 3.7%.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "87b08297-c781-4333-b485-533a1d9ada90",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "narrative",
+      "observation": "Multiple sources (Goldman Sachs, BlackRock, JPMorgan) identify AI-driven capital expenditure and stronger nominal growth as key drivers of rising bond yields.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "fd644e37-522d-44fc-9b3d-0f49291b0ac4",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "anomaly",
+      "observation": "Russell 2000 underperforming relative to its shorter-term moving averages (30-day and 6-month) despite overall equity market gains — small-cap relative weakness.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "1d14ad29-8326-4b3e-bc70-c893457e7090",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "EUR/USD below all major moving averages (30-day, 6-month, and 12-month) — sustained dollar strength against the euro.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "331153e3-ae82-4f8b-9b46-1ae67d247fbe",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "anomaly",
+      "observation": "Safe-haven demand metric showing the largest percentage change (approximately 40%) among all CNN indicators — investors reallocating to Treasuries.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "dfb2c4f9-d6ba-4148-8182-a419b6bc9fb4",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "VIX at 15.31 while S&P 500 and Nasdaq are at or near highs — low-volatility bull market condition.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    },
+    {
+      "id": "ed763f23-14d8-4f06-a35d-43bd5079a36b",
+      "intelligence_set_id": "3d75914f-661c-4f49-b7cb-f9d8956cada8",
+      "date": "2026-10-15",
+      "market_domain": "financial_markets",
+      "type": "market_condition",
+      "observation": "10-Year Treasury yield at 5.28%, above its 12-month moving average of 4.396% — structurally higher long-term rates persisting.",
+      "research_enabled": false,
+      "created_at": "2026-10-15T02:08:06.965Z"
+    }
+  ]
+}
