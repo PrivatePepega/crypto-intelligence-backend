@@ -65,7 +65,7 @@ import { getDailySet, type DailySet } from "../../utils/weather/observations.js"
  * returning unusable text for this pipeline, and triage depends entirely on one
  * response parsing cleanly. Change it here and nothing else.
  */
-const modelPick = models.openai;
+const modelPick = models.openrouterFree;
 
 /**
  * Ceiling on the agent's output tokens.
@@ -85,7 +85,7 @@ const MAX_OUTPUT_TOKENS = 8_192;
 // minutes rather than seconds. The earlier five-attempt budget gave up inside a
 // minute and cost the whole domain, which is the failure this exists to prevent.
 //
-// The pair multiplies out: 48 attempts ten seconds apart is about eight minutes of
+// The pair multiplies out: 48 attempts twenty seconds apart is about sixteen minutes of
 // waiting. Long enough for capacity to return inside a working session, short enough
 // that a real outage still gets reported rather than hanging all night.
 //
@@ -129,7 +129,7 @@ const nextRetryInstruction = (): string => {
   return TRIAGE_RETRY_INSTRUCTIONS[index] ?? TRIAGE_RETRY_INSTRUCTIONS[0];
 };
 
-const RETRY_DELAY_MS = 10_000;
+const RETRY_DELAY_MS = 20_000;
 /**
  * Pause before the model call, in milliseconds.
  *
@@ -469,7 +469,7 @@ export const runTriage = async (
    * schema passed it, because a string field accepts any text including "]}".
    *
    * The exhausted case returns the last response rather than throwing, so the
-   * wrapper outside does not then spend eight minutes repeating these same three
+   * wrapper outside does not then spend sixteen minutes repeating these same three
    * failures. `shapeProblem` is what turns it into a failure instead.
    */
   const askForLabels = async () => {

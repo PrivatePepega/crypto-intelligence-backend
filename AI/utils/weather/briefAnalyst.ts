@@ -474,7 +474,7 @@ export const generateBrief = async (options: {
    * consuming one of three attempts.
    *
    * The exhausted case returns the last response rather than throwing, so the wrapper
-   * outside does not spend eight minutes repeating the same three failures.
+   * outside does not spend sixteen minutes repeating the same three failures.
    * `shapeProblem` is what turns it into a failure instead.
    */
   const askForBrief = async () => {

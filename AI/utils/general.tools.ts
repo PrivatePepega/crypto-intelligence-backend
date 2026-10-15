@@ -11,6 +11,7 @@ import { cvSearchTool } from "../tools/cvSearch.js";
 import { cvTrendingTool } from "../tools/cvTrending.js";
 import { finnhubCryptoNewsTool } from "../tools/finnhubCryptoNews.js";
 import { fmpGetArticlesListTool } from "../tools/fmpGetArticlesList.js";
+import { geminiSearchTool } from "../tools/geminiSearch.js";
 import { getCurrentIndicatorTool } from "../tools/getCurrentIndicatorData.js";
 import { marketauxSearchTool } from "../tools/marketauxNewsSearch.js";
 import { newsDataCryptoNewsTool } from "../tools/newsDataCryptoNews.js";
@@ -46,6 +47,16 @@ import { exposeCurrentData } from "../../utils/AI/currentData testing area/curre
  */
 export const agenticTooling: Record<string, unknown> = {
   getCurrentIndicatorData: getCurrentIndicatorTool,
+
+  /**
+   * Gemini grounded in Google search, standing in for a third-party search API.
+   *
+   * Client-side like every other tool here - it makes a model call from inside
+   * `execute` - so unlike `google_search` it works whatever model the calling agent
+   * runs on. That is the reason to prefer it when the question is answerable: it costs
+   * one Gemini request instead of one request against a metered search provider.
+   */
+  geminiSearch: geminiSearchTool,
 
   marketauxNewsSearch: marketauxSearchTool,
   webSearchTool,

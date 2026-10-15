@@ -45,7 +45,7 @@ import { withRetry } from "../../../utils/retry.js";
 const FALLBACK_ATTEMPTS = 5;
 
 /** Fallback wait between attempts, in milliseconds. */
-const FALLBACK_DELAY_MS = 10_000;
+const FALLBACK_DELAY_MS = 20_000;
 
 /**
  * Runs one model call, retrying provider failures and empty responses.

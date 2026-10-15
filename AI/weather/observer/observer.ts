@@ -23,7 +23,7 @@ import {
 // --------------------------------------------------
 // Observer
 // --------------------------------------------------
-const modelPick = models.openai;
+const modelPick = models.openrouterFree;
 
 const MAX_AGENT_STEPS = 5;
 
@@ -35,14 +35,14 @@ const MAX_AGENT_STEPS = 5;
 // minutes rather than seconds. The earlier five-attempt budget gave up inside a
 // minute and cost the whole domain, which is the failure this exists to prevent.
 //
-// The pair multiplies out: 48 attempts ten seconds apart is about eight minutes of
+// The pair multiplies out: 48 attempts twenty seconds apart is about sixteen minutes of
 // waiting. Long enough for capacity to return inside a working session, short enough
 // that a real outage still gets reported rather than hanging all night.
 //
 // Lower these to fail faster when running interactively. Raise them when a run that
 // must finish is worth waiting out.
 const RETRY_ATTEMPTS = 48;
-const RETRY_DELAY_MS = 10_000;
+const RETRY_DELAY_MS = 20_000;
 
 /**
  * How many times the formatter is asked again when its response has no readable JSON
@@ -688,7 +688,7 @@ The output is a complete normalized inventory for downstream processing, not a c
   // then retried again, before the domain is failed. Three rather than the outage
   // budget on purpose: these attempts are for a response the model produced and got
   // wrong, which is a different problem from a provider being unreachable, and waiting
-  // eight minutes for a second wrong answer only delays the same failure.
+  // sixteen minutes for a second wrong answer only delays the same failure.
   //
   // The check is `extractJsonObject` rather than a blank test, because that is the
   // failure being caught. A response of a few thousand characters that never closes its
