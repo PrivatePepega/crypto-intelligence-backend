@@ -695,6 +695,7 @@ export const runResearcher = async (
     - finding: string
     - importance: string
     - evidence: string
+    - primarySource: string
     - sources: array of strings
     - context: string
     - uncertainty: string
@@ -709,6 +710,13 @@ export const runResearcher = async (
     - If the research lacks information for a field, state that limitation
       explicitly rather than inventing facts.
     - The status must reflect the evidence, not the original observation's wording.
+    - primarySource is the single source this finding rests on: the original report,
+      filing, statement or announcement, not the outlet that repeated it. Give the URL
+      when the research surfaced one. If nothing stood out above the rest, say so
+      plainly rather than naming whichever source happened to come first.
+    - sources stays broad. List every source the research actually used, including the
+      ones that add breadth rather than authority. Narrowing that list to the most
+      credible few would throw away what the others caught.
     - Add no facts that are not supported by the supplied research.
     `;
 
@@ -778,7 +786,7 @@ export const runResearcher = async (
                 schema: researchSchema,
                 name: "research_record",
                 description:
-                  "A strict research record with finding, importance, evidence, sources, context, uncertainty, and status. No additional fields.",
+                  "A strict research record with finding, importance, evidence, primarySource, sources, context, uncertainty, and status. No additional fields.",
               }),
             }),
           `researcher record agent (${marketDomain}) step ${step}`,

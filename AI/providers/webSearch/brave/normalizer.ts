@@ -1,5 +1,14 @@
 type BraveSearchResult = {
   title?: string;
+
+  /**
+   * The page's address.
+   *
+   * Brave has always returned this; it was simply never copied out. Every result the
+   * pipeline used to hand an agent had no address at all, which left nothing to cite.
+   */
+  url?: string;
+
   description?: string;
   extra_snippets?: string[];
 };
@@ -38,32 +47,22 @@ const cleanText = (text: string) => {
 // Brave normalizer
 // --------------------------------------------------
 
-export const normalizeBraveResults = (
-  response: BraveSearchResponse,
-) => {
+export const normalizeBraveResults = (response: BraveSearchResponse) => {
   return {
-    results: (response.web?.results ?? []).map(
-      (result) => ({
-        title: cleanText(result.title ?? ""),
-        description: cleanText(
-          result.description ?? "",
-        ),
-        extraSnippets: (
-          result.extra_snippets ?? []
-        ).map(cleanText),
-      }),
-    ),
+    results: (response.web?.results ?? []).map((result) => ({
+      title: cleanText(result.title ?? ""),
+      description: cleanText(result.description ?? ""),
+      extraSnippets: (result.extra_snippets ?? []).map(cleanText),
 
-    faq: (response.faq?.results ?? []).map(
-      (result) => ({
-        question: cleanText(
-          result.question ?? "",
-        ),
-        answer: cleanText(
-          result.answer ?? "",
-        ),
-        title: cleanText(result.title ?? ""),
-      }),
-    ),
+      // Left as the provider returned it rather than run through `cleanText`: a URL
+      // that has been whitespace-normalised is no longer reliably the address it was.
+      url: result.url ?? null,
+    })),
+
+    faq: (response.faq?.results ?? []).map((result) => ({
+      question: cleanText(result.question ?? ""),
+      answer: cleanText(result.answer ?? ""),
+      title: cleanText(result.title ?? ""),
+    })),
   };
 };

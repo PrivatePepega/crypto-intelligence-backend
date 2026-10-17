@@ -68,7 +68,33 @@ export const researchSchema = z.object({
   importance: z.string(),
   /** The strongest supporting evidence. */
   evidence: z.string(),
-  /** Sources consulted, one per element. */
+
+  /**
+   * The single source this finding rests on.
+   *
+   * Separate from {@link ResearchRecord.sources}, which stays a broad list on purpose:
+   * several outlets reporting the same thing is useful signal, and narrowing the list to
+   * the two most credible publishers would lose whatever the others caught. This field
+   * is the opposite trade - one source, named, so a reader can check the finding against
+   * the thing it actually came from.
+   *
+   * Expected to be a URL, because a publication name cannot be checked and cannot be
+   * weighed by domain afterwards. The prompt allows a bare publication name when the
+   * research surfaced no address, so an honest gap is recorded rather than a URL guessed
+   * or omitted.
+   *
+   * Empty string rather than optional: the record is read by things that will not handle
+   * a missing key, and "no single source stood out" is a real answer worth storing.
+   */
+  primarySource: z.string(),
+
+  /**
+   * Sources consulted, one per element.
+   *
+   * Deliberately broad rather than filtered to the most credible publishers. Coverage is
+   * worth more here than a short list, and `primarySource` is where the single
+   * authoritative one is recorded.
+   */
   sources: z.array(z.string()),
   /** Context needed to understand the event. */
   context: z.string(),

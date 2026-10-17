@@ -11,6 +11,7 @@ import { cvSearchTool } from "../tools/cvSearch.js";
 import { cvTrendingTool } from "../tools/cvTrending.js";
 import { finnhubCryptoNewsTool } from "../tools/finnhubCryptoNews.js";
 import { fmpGetArticlesListTool } from "../tools/fmpGetArticlesList.js";
+import { freeseaSearchTool } from "../tools/freeseaSearch.js";
 import { geminiSearchTool } from "../tools/geminiSearch.js";
 import { getCurrentIndicatorTool } from "../tools/getCurrentIndicatorData.js";
 import { marketauxSearchTool } from "../tools/marketauxNewsSearch.js";
@@ -57,6 +58,16 @@ export const agenticTooling: Record<string, unknown> = {
    * one Gemini request instead of one request against a metered search provider.
    */
   geminiSearch: geminiSearchTool,
+
+  /**
+   * freesea, as its own tool rather than a fifth webSearch backend.
+   *
+   * It returns a longer extract of each page's content rather than titles and snippets,
+   * so it answers a different question - what a few sources actually say, rather than
+   * which pages are worth opening. Client-side like every other tool here, so it works
+   * whatever model the calling agent runs on.
+   */
+  freeseaSearch: freeseaSearchTool,
 
   marketauxNewsSearch: marketauxSearchTool,
   webSearchTool,

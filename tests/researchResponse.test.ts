@@ -89,6 +89,9 @@ const pass = (name: string, ok: boolean, extra = "") => {
     finding: "",
     importance: "matters",
     evidence: "some evidence",
+    // Carried because the schema requires it. A record can name its source perfectly and
+    // still say nothing, which is exactly why the content check exists.
+    primarySource: "https://example.com/some-announcement",
     sources: ["a"],
     context: "ctx",
     uncertainty: "",

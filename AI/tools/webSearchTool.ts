@@ -105,10 +105,15 @@ export const searchProviders = {
  * The order providers are tried in.
  *
  * Brave first because it is the fastest of the working ones, then You, which is also
- * sub-second. Exa is slower but answers different things, so it is worth having before
+ * sub-second. Exa is slower but answers different things, so it earns a place before
  * Tavily rather than after. Tavily is last because its allowance is presently spent and
- * will simply be marked exhausted on the first call - which is deliberate: it means an
- * upgrade to that plan starts working again with no code change.
+ * will simply be marked exhausted on the first call - deliberate, so an upgrade to that
+ * plan starts working again with no code change.
+ *
+ * freesea is not in this list. It returns a longer extract of each page's content
+ * rather than titles and snippets, which is a different question to put to an agent, so
+ * it is its own tool - see {@link freeseaSearchTool}. Putting it here would mean it was
+ * only ever reached when the faster providers happened to be out.
  */
 export const SEARCH_PROVIDER_ORDER = ["brave", "you", "exa", "tavily"] as const;
 
