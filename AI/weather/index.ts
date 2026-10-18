@@ -96,6 +96,7 @@ const runDomain = async (intelligenceSet: DailySet, config: ObserverConfig): Pro
   }
 };
 
+
 /**
  * Runs the whole weather pipeline.
  *
