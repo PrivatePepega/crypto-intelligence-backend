@@ -576,9 +576,6 @@ export const injectClimateBriefAiContextBrief = async (
   return injectClimateBriefColumn(intelligenceSet, column, value);
 };
 
-
-
-
 const sectionColumnPrefixes: Record<string, string> = {
   "Macro & Market Regime": "macro_market_regime",
   "Sector Conditions": "sector_conditions",
@@ -609,26 +606,56 @@ export async function injectRelevanceRouterOutput(
     throw new Error(`Unsupported Climate section: ${section}`);
   }
 
-  if (!allowedDomains.has(domain)) {
-    throw new Error(`Unsupported Climate domain: ${domain}`);
+  const isMacroRegime = section === "Macro & Market Regime";
+
+  const column = isMacroRegime
+    ? `${prefix}_relevance_router`
+    : `${prefix}_${domain}_relevance_router`;
+
+  // For Macro & Market Regime, all 6 domains' results go into the same cell.
+  // Read the existing value and merge the new result's relevantObservations
+  // array into it rather than overwriting. Each domain's job adds to the
+  // running total instead of replacing it.
+  if (isMacroRegime) {
+    const existingResult = await pool.query(
+      `SELECT ${column} FROM climate.climate_briefs WHERE intelligence_sets_id = $1::uuid`,
+      [intelligenceSetId],
+    );
+
+    if (existingResult.rows.length === 0) {
+      throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
+    }
+
+    const existing = existingResult.rows[0][column] as {
+      relevantObservations?: unknown[];
+    } | null;
+
+    const merged = {
+      ...((result as Record<string, unknown>) ?? {}),
+      relevantObservations: [
+        ...((existing?.relevantObservations ?? []) as unknown[]),
+        ...(((result as Record<string, unknown>)?.relevantObservations as unknown[]) ?? []),
+      ],
+    };
+
+    const response = await pool.query(
+      `UPDATE climate.climate_briefs SET ${column} = $1::jsonb WHERE intelligence_sets_id = $2::uuid`,
+      [JSON.stringify(merged), intelligenceSetId],
+    );
+
+    if (response.rowCount === 0) {
+      throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
+    }
+
+    return;
   }
 
-  const column = `${prefix}_${domain}_relevance_router`;
-
-  const query = `
-    UPDATE climate.climate_briefs
-    SET ${column} = $1::jsonb
-    WHERE intelligence_sets_id = $2
-  `;
-
-  const response = await pool.query(query, [
-    JSON.stringify(result),
-    intelligenceSetId,
-  ]);
+  const response = await pool.query(
+    `UPDATE climate.climate_briefs SET ${column} = $1::jsonb WHERE intelligence_sets_id = $2::uuid`,
+    [JSON.stringify(result), intelligenceSetId],
+  );
 
   if (response.rowCount === 0) {
-    throw new Error(
-      `No climate brief found for intelligence set ${intelligenceSetId}`,
-    );
+    throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
   }
 }

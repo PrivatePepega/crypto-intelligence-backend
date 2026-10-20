@@ -1,4 +1,10 @@
-import { generateText, Output, NoOutputGeneratedError, wrapLanguageModel, extractJsonMiddleware } from "ai";
+import {
+  generateText,
+  Output,
+  NoOutputGeneratedError,
+  wrapLanguageModel,
+  extractJsonMiddleware,
+} from "ai";
 
 import { models } from "../../providers/model.js";
 
@@ -40,7 +46,7 @@ const modelPick = wrapLanguageModel({
 });
 
 const AGENT_NAME = "Climate Relevance Router";
-const MAX_AGENT_ATTEMPTS = 3;
+const MAX_AGENT_ATTEMPTS = 5;
 
 const RETRY_PROMPT_ADDITIONS: Record<number, string> = {
   2: `
@@ -54,7 +60,7 @@ Preserve original IDs and observation/research text exactly.
 Return only output matching the required schema.
 `,
   3: `
-FINAL RETRY — APPLY STRICT RELEVANCE FILTERING:
+RETRY — APPLY STRICT RELEVANCE FILTERING:
 Re-evaluate every candidate independently against the target
 section's instructions and the specified domain.
 Reject weak, indirect, speculative, or generic connections.
@@ -64,14 +70,35 @@ the original observation or research text.
 If nothing qualifies, return an empty relevantObservations array.
 Return only valid structured output matching the required schema.
 `,
+  4: `
+RETRY — FINAL CLASSIFICATION ATTEMPT:
+This is the third retry. Be extremely strict: an observation
+qualifies only if its connection to the section is direct and
+documented in the section's own criteria. Reject anything that
+requires inference to connect. Preserve original IDs and text
+exactly. Return only valid structured output matching the
+required schema.
+`,
+  5: `
+FINAL RETRY — LAST CHANCE:
+This is the final attempt. Return only observations whose
+relevance is undeniable and directly supported by the section
+instructions. If nothing qualifies, return an empty
+relevantObservations array. Do not invent information, IDs, or
+research. Return only valid structured output matching the
+required schema.
+`,
 };
 
-export async function runRelevanceRouterAgent(
-  input: RelevanceRouterInput,
-) {
+export async function runRelevanceRouterAgent(input: RelevanceRouterInput) {
   const validatedInput = relevanceRouterInputSchema.parse(input);
 
-  const runLog = await createAgentRunLog(AGENT_NAME, validatedInput.domain);
+  // The file name includes both the observation domain and the climate section, so each
+  // section/domain combination gets its own numbered sequence rather than overwriting.
+  const runLog = await createAgentRunLog(
+    AGENT_NAME,
+    `${validatedInput.section}-${validatedInput.domain}`,
+  );
 
   const originalUserPrompt = JSON.stringify(validatedInput);
 
@@ -84,7 +111,7 @@ export async function runRelevanceRouterAgent(
     observationCount: validatedInput.observations.length,
     researchedCount: validatedInput.researchedObservations.length,
     model: modelIdOf(modelPick),
-    maxOutputTokens: 60_000,
+    maxOutputTokens: 100_000,
   });
 
   for (let attempt = 1; attempt <= MAX_AGENT_ATTEMPTS; attempt++) {
@@ -94,9 +121,7 @@ export async function runRelevanceRouterAgent(
         : `${originalUserPrompt}\n\n${RETRY_PROMPT_ADDITIONS[attempt]}`;
 
     try {
-      console.log(
-        `[Relevance Router Agent] ATTEMPT ${attempt}/${MAX_AGENT_ATTEMPTS}`,
-      );
+      console.log(`[Relevance Router Agent] ATTEMPT ${attempt}/${MAX_AGENT_ATTEMPTS}`);
 
       await runLog.record("prompt", {
         attempt,
@@ -109,7 +134,7 @@ export async function runRelevanceRouterAgent(
         prompt: userPrompt,
         // Reasoning is mandatory for this endpoint, so it cannot be disabled. The
         // model needs enough room to both reason and emit the full JSON response.
-        maxOutputTokens: 60_000,
+        maxOutputTokens: 100_000,
 
         output: Output.object({
           schema: relevanceRouterOutputSchema,
@@ -160,23 +185,25 @@ export async function runRelevanceRouterAgent(
         usage: totalUsage,
       });
 
-      console.log(
-        `[Relevance Router Agent] SUCCESS | Attempt: ${attempt}`,
-      );
+      console.log(`[Relevance Router Agent] SUCCESS | Attempt: ${attempt}`);
 
       await runLog.finish(JSON.stringify(output));
 
       return output;
     } catch (error) {
       if (NoOutputGeneratedError.isInstance(error)) {
+        const cause = error.cause instanceof Error ? error.cause : null;
+        const name = cause?.name ?? "Error";
+        const message = cause?.message ?? "No structured output generated.";
+        // Only the error name and message — not the full stack or the raw response text.
         console.error(
-          "[Relevance Router Agent] No structured output generated.",
-          error.cause,
+          `[Relevance Router Agent] No structured output generated: ${name}: ${message}`,
         );
       } else {
+        const name = error instanceof Error ? error.name : "Error";
+        const message = error instanceof Error ? error.message : String(error);
         console.error(
-          `[Relevance Router Agent] FAILED | Attempt: ${attempt}`,
-          error,
+          `[Relevance Router Agent] FAILED | Attempt: ${attempt} — ${name}: ${message}`,
         );
       }
 
@@ -187,18 +214,14 @@ export async function runRelevanceRouterAgent(
       });
 
       if (attempt === MAX_AGENT_ATTEMPTS) {
-        console.error(
-          "[Relevance Router Agent] All attempts exhausted.",
-        );
+        console.error("[Relevance Router Agent] All attempts exhausted.");
 
         await runLog.finish();
 
         throw error;
       }
 
-      console.log(
-        "[Relevance Router Agent] Retrying with additional prompt instructions...",
-      );
+      console.log("[Relevance Router Agent] Retrying with additional prompt instructions...");
     }
   }
 

@@ -4,11 +4,13 @@ const graph = createRelevanceRouterGraph();
 
 async function main() {
   const intelligenceSetId = "3d75914f-661c-4f49-b7cb-f9d8956cada8";
-  const climateIntelligenceSetId = "894d2ccd-84e7-40af-a106-cd8b8d3b3908";
+  const climateIntelligenceSetId = "2010feb6-4973-483a-ab86-cccc0955b9ba";
+
+
 
   const result = await graph.invoke(
     { intelligenceSetId, climateIntelligenceSetId },
-    { maxConcurrency: 1 },
+    { maxConcurrency: 2 },
   );
 
   console.log(JSON.stringify(result.results, null, 2));
