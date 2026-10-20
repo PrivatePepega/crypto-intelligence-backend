@@ -29,11 +29,11 @@ CREATE TABLE climate.climate_briefs (
     global_overview_researcher JSONB,
     global_overview_analysis JSONB,
 
-    -- 02. Macro & Market Regime: geopolitics
-    macro_market_regime_geopolitics_data JSONB,
-    macro_market_regime_geopolitics_relevance_router JSONB,
-    macro_market_regime_geopolitics_researcher JSONB,
-    macro_market_regime_geopolitics_analysis JSONB,
+    -- 02. Macro & Market Regime
+    macro_market_regime_data JSONB,
+    macro_market_regime_relevance_router JSONB,
+    macro_market_regime_researcher JSONB,
+    macro_market_regime_analysis JSONB,
 
     -- 03. Sector Conditions: geopolitics
     sector_conditions_geopolitics_data JSONB,

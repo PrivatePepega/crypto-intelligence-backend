@@ -1,4 +1,5 @@
 import pool from "../../../config/database.js";
+import type { RelevanceRouterInput } from "../../climate/schemas/relevanceRouter.schema.js";
 
 import type { DailySet } from "../weather/observations.js";
 import type { ClimateDomain, ClimateSection, ClimateStage } from "./databaseFetchers.js";
@@ -574,3 +575,60 @@ export const injectClimateBriefAiContextBrief = async (
 
   return injectClimateBriefColumn(intelligenceSet, column, value);
 };
+
+
+
+
+const sectionColumnPrefixes: Record<string, string> = {
+  "Macro & Market Regime": "macro_market_regime",
+  "Sector Conditions": "sector_conditions",
+  "Important Stories & Narratives": "important_stories_narratives",
+  "Trends & Capital Direction": "trends_capital_direction",
+  "Outlook, Risks & Uncertainties": "outlook_risks_uncertainties",
+};
+
+const allowedDomains = new Set([
+  "geopolitics",
+  "financial_markets",
+  "macro",
+  "commodities_energy",
+  "crypto",
+  "ai_technology_industry",
+]);
+
+export async function injectRelevanceRouterOutput(
+  intelligenceSetId: string,
+  job: RelevanceRouterInput,
+  result: unknown,
+) {
+  const { section, domain } = job;
+
+  const prefix = sectionColumnPrefixes[section];
+
+  if (!prefix) {
+    throw new Error(`Unsupported Climate section: ${section}`);
+  }
+
+  if (!allowedDomains.has(domain)) {
+    throw new Error(`Unsupported Climate domain: ${domain}`);
+  }
+
+  const column = `${prefix}_${domain}_relevance_router`;
+
+  const query = `
+    UPDATE climate.climate_briefs
+    SET ${column} = $1::jsonb
+    WHERE intelligence_sets_id = $2
+  `;
+
+  const response = await pool.query(query, [
+    JSON.stringify(result),
+    intelligenceSetId,
+  ]);
+
+  if (response.rowCount === 0) {
+    throw new Error(
+      `No climate brief found for intelligence set ${intelligenceSetId}`,
+    );
+  }
+}

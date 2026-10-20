@@ -78,6 +78,7 @@ import type {
   - The reason must be concise, specific, and grounded in the supplied information.
   - Return valid structured output conforming to the provided schema.
   - Do not return additional fields, commentary, Markdown, or explanations outside the structured output.
+  - If there are no relevant observations say "There's no relevant observations."
   `;
   
   export function buildRelevanceRouterUserPrompt(
@@ -87,14 +88,14 @@ import type {
   ## Target Section
   
   ${input.section}
+
+  ## Target Domain
+  
+  ${input.domain}
   
   ## Section Instructions
   
   ${input.sectionInstructions}
-  
-  ## Target Domain
-  
-  ${input.domain}
   
   
   ## Observations

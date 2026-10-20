@@ -40,34 +40,28 @@ export const relevantObservationSchema = z.object({
 
 // Complete response from the relevance router.
 export const relevanceRouterOutputSchema = z.object({
-  relevantObservations: z.array(
-    relevantObservationSchema,
-  ),
+  relevantObservations: z.array(relevantObservationSchema),
 });
 
 export type RelevanceRouterDispatchState = {
+  intelligenceSetId: string;
+  climateIntelligenceSetId: string;
   jobs: RelevanceRouterInput[];
 };
 
 export type RelevanceRouterNodeInput = {
+  intelligenceSetId: string;
+  climateIntelligenceSetId: string;
   job: RelevanceRouterInput;
 };
 
 // TypeScript types inferred from the schemas.
 export type Observation = z.infer<typeof observationSchema>;
 
-export type ResearchedObservation = z.infer<
-  typeof researchedObservationSchema
->;
+export type ResearchedObservation = z.infer<typeof researchedObservationSchema>;
 
-export type RelevanceRouterInput = z.infer<
-  typeof relevanceRouterInputSchema
->;
+export type RelevanceRouterInput = z.infer<typeof relevanceRouterInputSchema>;
 
-export type RelevantObservation = z.infer<
-  typeof relevantObservationSchema
->;
+export type RelevantObservation = z.infer<typeof relevantObservationSchema>;
 
-export type RelevanceRouterOutput = z.infer<
-  typeof relevanceRouterOutputSchema
->;
+export type RelevanceRouterOutput = z.infer<typeof relevanceRouterOutputSchema>;
