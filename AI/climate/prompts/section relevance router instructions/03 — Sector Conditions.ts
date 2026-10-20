@@ -1,4 +1,4 @@
-const sectorConditionsRouterBrief = `
+export const sectorConditionsRouterBrief = `
 # Section 03 — Sector Conditions
 
 ## Relevance Router Brief

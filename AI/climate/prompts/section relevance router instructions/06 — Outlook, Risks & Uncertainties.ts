@@ -1,4 +1,4 @@
-const outlookRisksUncertaintiesRouterBrief = `
+export const outlookRisksUncertaintiesRouterBrief = `
 # Section 06 — Outlook, Risks & Uncertainties
 
 ## Relevance Router Brief

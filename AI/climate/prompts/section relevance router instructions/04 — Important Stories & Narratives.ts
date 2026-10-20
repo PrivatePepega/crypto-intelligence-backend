@@ -1,4 +1,4 @@
-const importantStoriesNarrativesRouterBrief = `
+export const importantStoriesNarrativesRouterBrief = `
 # Section 04 — Important Stories & Narratives
 
 ## Relevance Router Brief

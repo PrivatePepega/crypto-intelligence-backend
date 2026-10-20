@@ -1,4 +1,4 @@
-const trendsCapitalDirectionRouterBrief = `
+export const trendsCapitalDirectionRouterBrief = `
 # SECTION 05 — TRENDS & CAPITAL DIRECTION
 
 ## Relevance Router — Section Purpose and Routing Criteria

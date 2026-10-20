@@ -22,15 +22,9 @@ export const researchedObservationSchema = z.object({
 export const relevanceRouterInputSchema = z.object({
   section: z.string(),
   sectionInstructions: z.string(),
-
   domain: z.string(),
-  domainInstructions: z.string(),
-
   observations: z.array(observationSchema),
-
-  researchedObservations: z.array(
-    researchedObservationSchema,
-  ),
+  researchedObservations: z.array(researchedObservationSchema),
 });
 
 // One observation identified as relevant to the target section/domain.
@@ -50,6 +44,14 @@ export const relevanceRouterOutputSchema = z.object({
     relevantObservationSchema,
   ),
 });
+
+export type RelevanceRouterDispatchState = {
+  jobs: RelevanceRouterInput[];
+};
+
+export type RelevanceRouterNodeInput = {
+  job: RelevanceRouterInput;
+};
 
 // TypeScript types inferred from the schemas.
 export type Observation = z.infer<typeof observationSchema>;
