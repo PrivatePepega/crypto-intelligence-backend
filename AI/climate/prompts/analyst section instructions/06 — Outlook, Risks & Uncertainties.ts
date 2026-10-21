@@ -1,4 +1,4 @@
-const outlookRisksAndUncertaintiesAgentInstructionManual = `
+export const outlookRisksAndUncertaintiesAgentInstructionManual = `
 # CLIMATE INTELLIGENCE BRIEF
 ## SECTION 06 — OUTLOOK, RISKS & UNCERTAINTIES
 ### AGENT INSTRUCTION MANUAL — ALL DOMAINS

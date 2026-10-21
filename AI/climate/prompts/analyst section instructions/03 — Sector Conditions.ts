@@ -1,4 +1,4 @@
-const sectorConditionsWorkingInstructions = `
+export const sectorConditionsWorkingInstructions = `
 # Section 03 — Sector Conditions
 
 ## Purpose

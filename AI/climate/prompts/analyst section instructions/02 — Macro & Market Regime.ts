@@ -1,4 +1,4 @@
-const macroMarketRegimeAgentBrief = `
+export const macroMarketRegimeAgentBrief = `
 # Section 02 — Macro & Market Regime
 
 ## Purpose

@@ -1,4 +1,4 @@
-const trendsAndCapitalDirectionAgentInstructionBrief = `
+export const trendsAndCapitalDirectionAgentInstructionBrief = `
 # CLIMATE INTELLIGENCE BRIEF
 ## SECTION 05 — TRENDS & CAPITAL DIRECTION
 ### AGENT INSTRUCTION BRIEF — ALL DOMAINS

@@ -5,7 +5,12 @@ import { END, Send } from "@langchain/langgraph";
 import type {
   ResearcherDispatchState,
   ResearcherInput,
+  ResearcherNodeInput,
+  ResearcherOutput,
 } from "../schemas/researcher.schema.js";
+
+import { runResearcherAgent } from "../agents/researcher.agent.js";
+import { injectResearcherOutput } from "../../utils/climate/databaseInjectors.js";
 
 // --------------------------------------------------
 // Researcher loader
@@ -258,6 +263,79 @@ export async function researcherLoadJobsNode(state: ResearcherLoadJobsState) {
   }
 
   return { jobs };
+}
+
+/**
+ * Runs the researcher agent for one section/domain job and writes the findings
+ * into that section/domain's `_researcher` cell.
+ *
+ * A failure is logged and returned as an empty findings array rather than thrown,
+ * so one failing section does not abort the rest of the graph. The full error is
+ * preserved in the agent's run log.
+ */
+export async function researcherNode(state: ResearcherNodeInput) {
+  const { sectionName, domainName, column } = state.job;
+
+  console.log(
+    `[Researcher] INITIALIZED | Section: ${sectionName} | Domain: ${domainName} | Column: ${column}`,
+  );
+
+  try {
+    const result = await runResearcherAgent(state.job);
+
+    await injectResearcherOutput(state.climateIntelligenceSetId, state.job, result);
+
+    const counts = countFindingsByStatus(result);
+
+    console.log(
+      `[Researcher] FINALIZED | Section: ${sectionName} | Domain: ${domainName} | ` +
+        `Findings: ${result.findings.length} ` +
+        `(updated: ${counts.updated}, new: ${counts.new}, unchanged: ${counts.unchanged}, ` +
+        `unverified: ${counts.unverified})`,
+    );
+
+    return {
+      results: [
+        {
+          sectionName,
+          domainName,
+          column,
+          result,
+        },
+      ],
+    };
+  } catch (error) {
+    console.error(`[Researcher] FAILED | Section: ${sectionName} | Domain: ${domainName}`);
+
+    if (error instanceof Error) {
+      console.error(`  ${error.name}: ${error.message.slice(0, 200)}`);
+    }
+
+    // Non-fatal: keep the graph running and report the failure in the results.
+    const result: ResearcherOutput = { findings: [] };
+
+    return {
+      results: [
+        {
+          sectionName,
+          domainName,
+          column,
+          result,
+        },
+      ],
+    };
+  }
+}
+
+/** Counts findings by status for the node's completion log. */
+function countFindingsByStatus(result: ResearcherOutput) {
+  const counts = { updated: 0, new: 0, unchanged: 0, unverified: 0 };
+
+  for (const finding of result.findings) {
+    counts[finding.status] += 1;
+  }
+
+  return counts;
 }
 
 /**

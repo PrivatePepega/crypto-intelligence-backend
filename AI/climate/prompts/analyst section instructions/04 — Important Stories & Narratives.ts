@@ -1,4 +1,4 @@
-const importantStoriesNarrativesAgentInstructionManual = `
+export const importantStoriesNarrativesAgentInstructionManual = `
 # Section 04 — Important Stories & Narratives
 ## Agent Instruction Manual
 

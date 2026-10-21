@@ -659,3 +659,160 @@ export async function injectRelevanceRouterOutput(
     throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
   }
 }
+
+// --------------------------------------------------
+// Researcher
+// --------------------------------------------------
+
+/**
+ * The researcher reads a section/domain `_data` cell and writes its findings to
+ * the matching `_researcher` cell:
+ *
+ *   macro_market_regime_data       -> macro_market_regime_researcher
+ *   sector_conditions_crypto_data  -> sector_conditions_crypto_researcher
+ *
+ * Each section/domain has exactly one researcher job, so the cell is overwritten
+ * rather than merged. Re-running a job replaces its previous findings.
+ */
+const SECTION_DATA_COLUMN_PATTERN = /^[a-z0-9_]+_data$/;
+
+const DATA_SUFFIX = "_data";
+
+/**
+ * Injects a researcher agent result into the matching `_researcher` column.
+ *
+ * @param intelligenceSetId The climate intelligence set to write into.
+ * @param job The job whose `column` identifies the source `_data` cell.
+ * @param result The researcher agent output.
+ */
+export async function injectResearcherOutput(
+  intelligenceSetId: string,
+  job: { column: string },
+  result: unknown,
+): Promise<void> {
+  const { column } = job;
+
+  // The column is interpolated into SQL, so only accept the exact `<section>_data`
+  // shape produced by the loader's trusted target list.
+  if (!SECTION_DATA_COLUMN_PATTERN.test(column)) {
+    throw new Error(`Unsupported researcher source column: ${column}`);
+  }
+
+  const researcherColumn = `${column.slice(0, -DATA_SUFFIX.length)}_researcher`;
+
+  const response = await pool.query(
+    `UPDATE climate.climate_briefs SET ${researcherColumn} = $1::jsonb WHERE intelligence_sets_id = $2::uuid`,
+    [JSON.stringify(result), intelligenceSetId],
+  );
+
+  if (response.rowCount === 0) {
+    throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
+  }
+}
+
+// --------------------------------------------------
+// Analyst
+// --------------------------------------------------
+
+/**
+ * The analyst works from the `<section>_<domain>_data` column and writes into the
+ * matching `_analysis` cell:
+ *
+ *   macro_market_regime_data       -> macro_market_regime_analysis
+ *   sector_conditions_crypto_data  -> sector_conditions_crypto_analysis
+ *
+ * Two analyst jobs run per section/domain (one for today's relevance router
+ * output, one for today's researcher findings), so the cell accumulates an array
+ * of runs rather than holding a single object. The append is done in a single
+ * statement so concurrent jobs cannot overwrite each other's results.
+ *
+ * Stored shape:
+ *   [
+ *     { "incomingDataType": "weather_observation", "decisions": [...], "summary": "..." },
+ *     { "incomingDataType": "climate_research", "decisions": [...], "summary": "..." }
+ *   ]
+ */
+export async function injectAnalystOutput(
+  intelligenceSetId: string,
+  job: { column: string; incomingDataType: string },
+  result: unknown,
+): Promise<void> {
+  const { column, incomingDataType } = job;
+
+  // The column is interpolated into SQL, so only accept the exact `<section>_data`
+  // shape produced by the loader's trusted target list.
+  if (!SECTION_DATA_COLUMN_PATTERN.test(column)) {
+    throw new Error(`Unsupported analyst source column: ${column}`);
+  }
+
+  const analysisColumn = `${column.slice(0, -DATA_SUFFIX.length)}_analysis`;
+
+  // Tag the run with its input type so the two runs in one cell stay
+  // distinguishable without relying on their order.
+  const run =
+    typeof result === "object" && result !== null
+      ? { incomingDataType, ...(result as Record<string, unknown>) }
+      : { incomingDataType, result };
+
+  const response = await pool.query(
+    `
+      UPDATE climate.climate_briefs
+      SET ${analysisColumn} = COALESCE(${analysisColumn}, '[]'::jsonb) || jsonb_build_array($1::jsonb)
+      WHERE intelligence_sets_id = $2::uuid
+    `,
+    [JSON.stringify(run), intelligenceSetId],
+  );
+
+  if (response.rowCount === 0) {
+    throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
+  }
+}
+
+// --------------------------------------------------
+// Writer
+// --------------------------------------------------
+
+/**
+ * The writer produces today's complete brief for a section/domain and writes it
+ * back into that section/domain's own `_data` cell:
+ *
+ *   sector_conditions_crypto_data -> sector_conditions_crypto_data
+ *
+ * There is exactly one writer job per cell, so the cell is overwritten rather
+ * than merged. Re-running a job replaces today's draft with the new version.
+ *
+ * `_data` cells are jsonb string scalars holding Markdown (that is how the
+ * initializer and yesterday's brief store them), so the brief is stored as a
+ * JSON string rather than a bare SQL text value.
+ */
+export async function injectWriterOutput(
+  intelligenceSetId: string,
+  job: { column: string },
+  result: unknown,
+): Promise<void> {
+  const { column } = job;
+
+  // The column is interpolated into SQL, so only accept the exact `<section>_data`
+  // shape produced by the loader's trusted target list.
+  if (!SECTION_DATA_COLUMN_PATTERN.test(column)) {
+    throw new Error(`Unsupported writer target column: ${column}`);
+  }
+
+  const brief =
+    typeof result === "object" && result !== null && "brief" in result
+      ? (result as { brief?: unknown }).brief
+      : null;
+
+  if (typeof brief !== "string" || brief.trim().length === 0) {
+    throw new Error(`Writer produced no brief for column ${column}`);
+  }
+
+  const response = await pool.query(
+    `UPDATE climate.climate_briefs SET ${column} = $1::jsonb WHERE intelligence_sets_id = $2::uuid`,
+    [JSON.stringify(brief), intelligenceSetId],
+  );
+
+  if (response.rowCount === 0) {
+    throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
+  }
+}

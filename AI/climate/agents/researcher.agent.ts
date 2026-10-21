@@ -50,7 +50,7 @@ const modelPick = wrapLanguageModel({
 });
 
 const AGENT_NAME = "Climate Researcher";
-const MAX_AGENT_ATTEMPTS = 5;
+const MAX_AGENT_ATTEMPTS = 7;
 
 const RETRY_PROMPT_ADDITIONS: Record<number, string> = {
   2: `
