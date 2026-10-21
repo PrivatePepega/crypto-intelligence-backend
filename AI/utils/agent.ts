@@ -35,6 +35,19 @@ export const modelIdOf = (model: unknown): string => {
 };
 
 // --------------------------------------------------
+// Retry pacing
+// --------------------------------------------------
+
+/**
+ * Resolves after `ms` milliseconds.
+ *
+ * Used between agent attempts so a failing provider is not hammered immediately
+ * by the next request.
+ */
+export const sleep = (ms: number): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, ms));
+
+// --------------------------------------------------
 // Reasoning
 // --------------------------------------------------
 

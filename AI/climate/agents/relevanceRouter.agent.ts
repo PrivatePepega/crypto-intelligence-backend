@@ -17,7 +17,7 @@ import {
 import { relevanceRouterSystemPrompt } from "../prompts/relevance router/relevanceRouter.prompt.js";
 
 import { createAgentRunLog } from "../../utils/logger.js";
-import { modelIdOf, getReasoningText, normalizeStep } from "../../utils/agent.js";
+import { modelIdOf, getReasoningText, normalizeStep, sleep } from "../../utils/agent.js";
 import { createRunCost } from "../../utils/weather/cost.js";
 
 // --------------------------------------------------
@@ -57,7 +57,8 @@ const modelPick = wrapLanguageModel({
 });
 
 const AGENT_NAME = "Climate Relevance Router";
-const MAX_AGENT_ATTEMPTS = 5;
+const MAX_AGENT_ATTEMPTS = 8;
+const RETRY_DELAY_MS = 4_000;
 
 const RETRY_PROMPT_ADDITIONS: Record<number, string> = {
   2: `
@@ -82,17 +83,40 @@ If nothing qualifies, return an empty relevantObservations array.
 Return only valid structured output matching the required schema.
 `,
   4: `
-RETRY — FINAL CLASSIFICATION ATTEMPT:
-This is the fourth attempt (3rd retry). Be extremely strict: an observation
-qualifies only if its connection to the section is direct and
-documented in the section's own criteria. Reject anything that
-requires inference to connect. Preserve original IDs and text
-exactly. Return only valid structured output matching the
-required schema. Output MUST be a single valid JSON object.
+RETRY — TIGHTEN THE CONNECTION:
+This is your fourth attempt. Keep an observation only when the connection to the
+target section and domain is direct and supported by the section's own criteria.
+Reject anything that requires inference to connect. Preserve original IDs and
+observation/research text exactly. If nothing qualifies, return an empty
+relevantObservations array. Return only valid structured output matching the
+required schema.
 `,
   5: `
+RETRY — SELF-CHECK EVERY INCLUSION:
+Walk through the included observations one by one and identify the specific section
+instruction each one satisfies. Remove any observation you cannot justify that way.
+Do not include observations merely because they are important in general.
+Preserve original IDs and text. Return only valid structured output matching the
+required schema.
+`,
+  6: `
+RETRY — RETURN VALID STRUCTURED OUTPUT:
+Your previous response could not be parsed. Return exactly one JSON object matching
+the required schema: a single "relevantObservations" array. No markdown fences, no
+commentary, no wrapper object, no trailing text. Every item must include the
+required fields, with IDs and text copied unchanged from the input.
+`,
+  7: `
+RETRY — AN EMPTY RESULT IS ACCEPTABLE:
+Do not force observations into the result to avoid returning nothing. If no
+observation meets the section's criteria, return an empty relevantObservations
+array. A precise empty result is better than a padded one. Keep every inclusion
+directly grounded in the section instructions and the specified domain.
+Return only valid structured output matching the required schema.
+`,
+  8: `
 FINAL RETRY — LAST CHANCE:
-This is the final attempt (5th total). Return only observations whose
+This is the final attempt (8th total). Return only observations whose
 relevance is undeniable and directly supported by the section
 instructions. If nothing qualifies, return an empty
 relevantObservations array. Do not invent information, IDs, or
@@ -239,7 +263,8 @@ export async function runRelevanceRouterAgent(input: RelevanceRouterInput) {
         throw error;
       }
 
-      console.log("[Relevance Router Agent] Retrying with additional prompt instructions...");
+      console.log("[Relevance Router Agent] Waiting 4 seconds before retry...");
+      await sleep(RETRY_DELAY_MS);
     }
   }
 

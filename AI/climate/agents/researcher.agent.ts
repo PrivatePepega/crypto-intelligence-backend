@@ -17,7 +17,7 @@ import {
 import { RESEARCHER_SYSTEM_PROMPT } from "../prompts/researcher/researcher.prompt.js";
 
 import { createAgentRunLog } from "../../utils/logger.js";
-import { modelIdOf, getReasoningText, normalizeStep } from "../../utils/agent.js";
+import { modelIdOf, getReasoningText, normalizeStep, sleep } from "../../utils/agent.js";
 import { createRunCost } from "../../utils/weather/cost.js";
 
 // --------------------------------------------------
@@ -50,7 +50,8 @@ const modelPick = wrapLanguageModel({
 });
 
 const AGENT_NAME = "Climate Researcher";
-const MAX_AGENT_ATTEMPTS = 7;
+const MAX_AGENT_ATTEMPTS = 8;
+const RETRY_DELAY_MS = 4_000;
 
 const RETRY_PROMPT_ADDITIONS: Record<number, string> = {
   2: `
@@ -73,8 +74,25 @@ Only include updates that affect the specific section and domain. Ignore unrelat
 If evidence is weak or missing, say UNVERIFIED with details. Return ONLY valid JSON matching the required schema.
 `,
   5: `
+RETRY — CHECK COVERAGE:
+Make sure every topic in the current brief received an explicit finding: updated, unchanged, unverified, or new.
+Do not silently drop topics. Do not pad the findings with entries that say nothing.
+Keep every finding inside the assigned section and domain. Return ONLY valid JSON matching the required schema.
+`,
+  6: `
+RETRY — REPORT UNCHANGED HONESTLY:
+If a topic has not meaningfully changed, say so with a short reason instead of inventing an update.
+If you could not verify something, mark it unverified and state the evidence gap.
+Only report developments you can support with evidence. Return ONLY valid JSON matching the required schema.
+`,
+  7: `
+RETRY — RETURN VALID STRUCTURED OUTPUT:
+Your previous response could not be parsed. Return exactly one JSON object matching the required schema: a single "findings" array.
+No markdown fences, no commentary, and no text before or after the object. Every finding must include the required fields.
+`,
+  8: `
 FINAL RETRY — LAST CHANCE:
-This is your final attempt. Be brutally honest. If there are NO meaningful updates after thorough research, return findings showing no change with explanations. Do NOT fabricate updates.
+This is your final attempt (8th total). Be brutally honest. If there are NO meaningful updates after thorough research, return findings showing no change with explanations. Do NOT fabricate updates.
 Only report what you actually found. Be precise and factual. Return ONLY a single valid JSON object matching the required schema.
 `,
 };
@@ -206,7 +224,8 @@ export async function runResearcherAgent(input: ResearcherInput) {
         throw error;
       }
 
-      console.log("[Climate Researcher Agent] Retrying with additional prompt instructions...");
+      console.log("[Climate Researcher Agent] Waiting 4 seconds before retry...");
+      await sleep(RETRY_DELAY_MS);
     }
   }
 

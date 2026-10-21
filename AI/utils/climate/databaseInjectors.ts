@@ -816,3 +816,97 @@ export async function injectWriterOutput(
     throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
   }
 }
+
+// --------------------------------------------------
+// Human Brief
+// --------------------------------------------------
+
+/**
+ * The human brief is a single synthesized document per section, written into the
+ * matching `human_brief_*` TEXT column:
+ *
+ *   Sector Conditions -> human_brief_sector_conditions
+ *
+ * There is exactly one human brief job per section, so the column is overwritten
+ * rather than merged. Re-running a job replaces the previous brief.
+ */
+const HUMAN_BRIEF_COLUMN_PATTERN = /^human_brief_[a-z0-9_]+$/;
+
+/**
+ * Injects a human brief agent result into its `human_brief_*` column.
+ *
+ * @param intelligenceSetId The climate intelligence set to write into.
+ * @param column The `human_brief_*` TEXT column for the section.
+ * @param brief The complete synthesized brief.
+ */
+export async function injectHumanBriefOutput(
+  intelligenceSetId: string,
+  column: string,
+  brief: string,
+): Promise<void> {
+  // The column is interpolated into SQL, so only accept the exact `human_brief_*`
+  // shape produced by the loader's trusted section list.
+  if (!HUMAN_BRIEF_COLUMN_PATTERN.test(column)) {
+    throw new Error(`Unsupported human brief column: ${column}`);
+  }
+
+  if (brief.trim().length === 0) {
+    throw new Error(`Human Brief agent produced no brief for column ${column}`);
+  }
+
+  const response = await pool.query(
+    `UPDATE climate.climate_briefs SET ${column} = $1 WHERE intelligence_sets_id = $2::uuid`,
+    [brief, intelligenceSetId],
+  );
+
+  if (response.rowCount === 0) {
+    throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
+  }
+}
+
+// --------------------------------------------------
+// AI Context Brief
+// --------------------------------------------------
+
+/**
+ * The AI context brief is a single structured document per section, written into
+ * the matching `ai_context_brief_*` JSONB column:
+ *
+ *   Sector Conditions -> ai_context_brief_sector_conditions
+ *
+ * There is exactly one AI context brief job per section, so the column is
+ * overwritten rather than merged. Re-running a job replaces the previous brief.
+ */
+const AI_CONTEXT_BRIEF_COLUMN_PATTERN = /^ai_context_brief_[a-z0-9_]+$/;
+
+/**
+ * Injects an AI context brief agent result into its `ai_context_brief_*` column.
+ *
+ * @param intelligenceSetId The climate intelligence set to write into.
+ * @param column The `ai_context_brief_*` JSONB column for the section.
+ * @param result The agent output (`sectionName`, `overview`, `domains`).
+ */
+export async function injectAIContextBriefOutput(
+  intelligenceSetId: string,
+  column: string,
+  result: unknown,
+): Promise<void> {
+  // The column is interpolated into SQL, so only accept the exact
+  // `ai_context_brief_*` shape produced by the loader's trusted section list.
+  if (!AI_CONTEXT_BRIEF_COLUMN_PATTERN.test(column)) {
+    throw new Error(`Unsupported AI context brief column: ${column}`);
+  }
+
+  if (typeof result !== "object" || result === null) {
+    throw new Error(`AI Context Brief agent produced no brief for column ${column}`);
+  }
+
+  const response = await pool.query(
+    `UPDATE climate.climate_briefs SET ${column} = $1::jsonb WHERE intelligence_sets_id = $2::uuid`,
+    [JSON.stringify(result), intelligenceSetId],
+  );
+
+  if (response.rowCount === 0) {
+    throw new Error(`No climate brief found for intelligence set ${intelligenceSetId}`);
+  }
+}

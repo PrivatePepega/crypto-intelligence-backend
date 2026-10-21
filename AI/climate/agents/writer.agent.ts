@@ -18,7 +18,7 @@ import {
 import { WRITER_SYSTEM_PROMPT, buildWriterPrompt } from "../prompts/writer/writer.prompt.js";
 
 import { createAgentRunLog } from "../../utils/logger.js";
-import { modelIdOf, getReasoningText, normalizeStep } from "../../utils/agent.js";
+import { modelIdOf, getReasoningText, normalizeStep, sleep } from "../../utils/agent.js";
 
 // --------------------------------------------------
 // Model wrapping
@@ -50,7 +50,8 @@ const modelPick = wrapLanguageModel({
 });
 
 const AGENT_NAME = "Climate Writer";
-const MAX_AGENT_ATTEMPTS = 7;
+const MAX_AGENT_ATTEMPTS = 8;
+const RETRY_DELAY_MS = 4_000;
 
 const RETRY_PROMPT_ADDITIONS: Record<number, string> = {
   2: `
@@ -93,8 +94,14 @@ Do not return a change log, an explanation of your edits, or a summary of the no
 Return ONLY valid JSON matching the required schema, with the complete brief in the "brief" field.
 `,
   7: `
+RETRY — COMPLETE, WELL-FORMED JSON:
+Your previous response was incomplete or could not be parsed. Return exactly one JSON object matching the required schema, with the complete updated brief in the "brief" field.
+No markdown fences, no commentary, and no text before or after the object.
+The "brief" field must contain the whole document, not only the paragraphs that changed.
+`,
+  8: `
 FINAL RETRY — LAST CHANCE:
-This is your final attempt. Return the complete Climate Domain Brief for the assigned section and domain, and nothing else.
+This is your final attempt (8th total). Return the complete Climate Domain Brief for the assigned section and domain, and nothing else.
 Start from the previous brief and preserve what remains valid. Incorporate only the Analyst Notes that materially improve it.
 If no meaningful changes are warranted, return the previous brief substantially unchanged rather than inventing updates.
 Do not wrap the JSON in code fences or include introductory remarks, acknowledgments, or commentary outside the JSON object.
@@ -227,7 +234,8 @@ export async function runWriterAgent(input: WriterInput): Promise<WriterOutput> 
         throw error;
       }
 
-      console.log("[Climate Writer Agent] Retrying with additional prompt instructions...");
+      console.log("[Climate Writer Agent] Waiting 4 seconds before retry...");
+      await sleep(RETRY_DELAY_MS);
     }
   }
 

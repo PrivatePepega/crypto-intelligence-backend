@@ -20,7 +20,7 @@ import {
 } from "../prompts/prompt analyst/analyst.prompt.js";
 
 import { createAgentRunLog } from "../../utils/logger.js";
-import { modelIdOf, getReasoningText, normalizeStep } from "../../utils/agent.js";
+import { modelIdOf, getReasoningText, normalizeStep, sleep } from "../../utils/agent.js";
 
 // --------------------------------------------------
 // Model wrapping
@@ -52,7 +52,8 @@ const modelPick = wrapLanguageModel({
 });
 
 const AGENT_NAME = "Climate Analyst";
-const MAX_AGENT_ATTEMPTS = 7;
+const MAX_AGENT_ATTEMPTS = 8;
+const RETRY_DELAY_MS = 4_000;
 
 const RETRY_PROMPT_ADDITIONS: Record<number, string> = {
   2: `
@@ -95,8 +96,14 @@ Every recommendation must be grounded in the supplied brief, Section Instruction
 Return ONLY valid JSON matching the required schema.
 `,
   7: `
+RETRY — COMPLETE, WELL-FORMED DECISIONS:
+Your previous response was incomplete or could not be parsed. Return exactly one JSON object matching the required schema.
+Every decision must include its required fields, including a concrete writerInstruction.
+No markdown fences, no commentary, and no text outside the JSON object.
+`,
+  8: `
 FINAL RETRY — LAST CHANCE:
-This is your final attempt. If the incoming data provides no meaningful value, return an exclusion or no-change decision.
+This is your final attempt (8th total). If the incoming data provides no meaningful value, return an exclusion or no-change decision.
 Do NOT fabricate analysis or updates to produce a nonempty result.
 If the evidence is uncertain or insufficient, represent that limitation explicitly.
 Be precise, conservative, and evidence-grounded. Return ONLY a single valid JSON object matching the required schema.
@@ -231,7 +238,8 @@ export async function runAnalystAgent(input: AnalystInput) {
         throw error;
       }
 
-      console.log("[Climate Analyst Agent] Retrying with additional prompt instructions...");
+      console.log("[Climate Analyst Agent] Waiting 4 seconds before retry...");
+      await sleep(RETRY_DELAY_MS);
     }
   }
 
