@@ -50,9 +50,25 @@ export async function relevanceRouterNode(state: RelevanceRouterNodeInput) {
       ],
     };
   } catch (error) {
-    console.error(`[Relevance Router] FAILED | Section: ${section} | Domain: ${domain}`, error);
+    console.error(`[Relevance Router] FAILED | Section: ${section} | Domain: ${domain}`);
+    if (error instanceof Error) {
+      console.error(`  ${error.name}: ${error.message.slice(0, 200)}`);
+    }
 
-    throw error;
+    // Non-fatal: record the failure so other jobs continue and logs are preserved.
+    return {
+      results: [
+        {
+          section,
+          domain,
+          result: {
+            relevantObservations: [],
+          } as unknown as Awaited<
+            ReturnType<typeof import("../agents/relevanceRouter.agent.js").runRelevanceRouterAgent>
+          >,
+        },
+      ],
+    };
   }
 }
 

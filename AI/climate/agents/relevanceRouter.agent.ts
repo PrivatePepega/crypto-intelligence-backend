@@ -36,11 +36,22 @@ const modelPick = wrapLanguageModel({
   model: models.openrouterFree as unknown as Parameters<typeof wrapLanguageModel>[0]["model"],
   middleware: extractJsonMiddleware({
     transform: (text: string): string => {
-      // Find the first `{` followed by a quote (a JSON property name) or a
-      // bracket (an array value). Everything before that is noise.
-      const match = text.match(/\{\s*["\[]/);
-      if (match === null) return text;
-      return text.slice(match.index ?? 0);
+      let t = text;
+
+      // Strip markdown code fences if present
+      t = t.replace(/^```(?:json)?\s*/i, "");
+      t = t.replace(/\s*```$/i, "");
+      t = t.replace(/```(?:json)?/gi, "");
+
+      // Find the first `{` followed by a quote (a JSON property name). Skip arrays at root.
+      const match = t.match(/\{\s*"/);
+      if (match === null) {
+        // Fallback: just find first {
+        const firstBrace = t.indexOf("{");
+        if (firstBrace >= 0) return t.slice(firstBrace);
+        return t;
+      }
+      return t.slice(match.index ?? 0);
     },
   }),
 });
@@ -72,21 +83,20 @@ Return only valid structured output matching the required schema.
 `,
   4: `
 RETRY — FINAL CLASSIFICATION ATTEMPT:
-This is the third retry. Be extremely strict: an observation
+This is the fourth attempt (3rd retry). Be extremely strict: an observation
 qualifies only if its connection to the section is direct and
 documented in the section's own criteria. Reject anything that
 requires inference to connect. Preserve original IDs and text
 exactly. Return only valid structured output matching the
-required schema.
+required schema. Output MUST be a single valid JSON object.
 `,
   5: `
 FINAL RETRY — LAST CHANCE:
-This is the final attempt. Return only observations whose
+This is the final attempt (5th total). Return only observations whose
 relevance is undeniable and directly supported by the section
 instructions. If nothing qualifies, return an empty
 relevantObservations array. Do not invent information, IDs, or
-research. Return only valid structured output matching the
-required schema.
+research. Return only a single valid JSON object matching the required schema.
 `,
 };
 
@@ -135,6 +145,12 @@ export async function runRelevanceRouterAgent(input: RelevanceRouterInput) {
         // Reasoning is mandatory for this endpoint, so it cannot be disabled. The
         // model needs enough room to both reason and emit the full JSON response.
         maxOutputTokens: 100_000,
+        temperature: 0,
+
+        // Prevent the model/provider from calling tools (avoids OpenRouter/free
+        // routing to providers that try to invoke non-existent functions).
+        tools: {},
+        toolChoice: "none",
 
         output: Output.object({
           schema: relevanceRouterOutputSchema,
@@ -202,8 +218,10 @@ export async function runRelevanceRouterAgent(input: RelevanceRouterInput) {
       } else {
         const name = error instanceof Error ? error.name : "Error";
         const message = error instanceof Error ? error.message : String(error);
+        // Truncate very long messages
+        const truncated = message.length > 200 ? message.slice(0, 200) + "..." : message;
         console.error(
-          `[Relevance Router Agent] FAILED | Attempt: ${attempt} — ${name}: ${message}`,
+          `[Relevance Router Agent] FAILED | Attempt: ${attempt} — ${name}: ${truncated}`,
         );
       }
 
