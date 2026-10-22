@@ -9,6 +9,9 @@ import { cvDefiTool } from "../tools/cvDefi.js";
 import { cvNewsTool } from "../tools/cvNews.js";
 import { cvSearchTool } from "../tools/cvSearch.js";
 import { cvTrendingTool } from "../tools/cvTrending.js";
+import { fetchClimateBriefTool } from "../tools/fetchClimateBrief.js";
+import { fetchIndicatorDataTool } from "../tools/fetchIndicatorData.js";
+import { fetchWeatherBriefTool } from "../tools/fetchWeatherBrief.js";
 import { finnhubCryptoNewsTool } from "../tools/finnhubCryptoNews.js";
 import { fmpGetArticlesListTool } from "../tools/fmpGetArticlesList.js";
 import { freeseaSearchTool } from "../tools/freeseaSearch.js";
@@ -48,6 +51,24 @@ import { exposeCurrentData } from "../../utils/AI/currentData testing area/curre
  */
 export const agenticTooling: Record<string, unknown> = {
   getCurrentIndicatorData: getCurrentIndicatorTool,
+
+  /**
+   * Reads one historical indicator series and returns its current value plus
+   * moving averages from 1 to 60 months. Read-only.
+   */
+  fetchIndicatorData: fetchIndicatorDataTool,
+
+  /**
+   * Reads one section's `_data` cell from climate.climate_briefs for a date and,
+   * where the section is domain-split, a domain. Read-only.
+   */
+  fetchClimateBrief: fetchClimateBriefTool,
+
+  /**
+   * Reads the stored weather pipeline output for a date: observations, research and
+   * daily briefs, optionally narrowed to one domain. Read-only.
+   */
+  fetchWeatherBrief: fetchWeatherBriefTool,
 
   /**
    * Gemini grounded in Google search, standing in for a third-party search API.
