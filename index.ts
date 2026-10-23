@@ -3,7 +3,7 @@ import express, { request } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import morgan from "morgan";
-import type { Request, Response, NextFunction, Errback } from 'express'
+import type { Request, Response, NextFunction } from 'express'
 import routes from "./routes/index.js"
 import cookieParser from "cookie-parser";
 import "./config/database.js";
@@ -46,12 +46,28 @@ mountMcpServer(app);
 
 
 
-app.use((err: Errback, req:Request, res:Response, next:NextFunction) => {
-    res.status(404).json({message: "Not Found"})
-})
-app.use((err: Errback, req:Request, res:Response, next:NextFunction) => {
-  res.status(500).json({message: "Internal Error"})
-})
+app.use((_req: Request, res: Response) => {
+  res.status(404).json({ message: "Not Found" });
+});
+
+app.use(
+  (
+    err: Error & { status?: number; statusCode?: number },
+    _req: Request,
+    res: Response,
+    _next: NextFunction,
+  ) => {
+    const status = err.status ?? err.statusCode ?? 500;
+
+    if (status >= 500) {
+      console.error(err);
+    }
+
+    res.status(status).json({
+      message: status >= 500 ? "Internal Error" : err.message,
+    });
+  },
+);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
