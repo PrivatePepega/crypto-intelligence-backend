@@ -16,9 +16,9 @@ export const reserveBalances: Indicator = {
   nativeFrequency: "Weekly, Ending Wednesday",
   nativeAggregation: "average",
   unit: "Millions of U.S. Dollars",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor the level of reserve balances held by depository institutions at Federal Reserve Banks and assess changes in banking-system liquidity and monetary conditions.",
+  use: "Monitor the level of reserve balances held by depository institutions at Federal Reserve Banks and assess changes in banking-system liquidity and monetary conditions.",
 
   purpose:
     "Provide a measure of reserve balances within the U.S. banking system for analyzing Federal Reserve balance-sheet operations, liquidity conditions, and the implementation of monetary policy.",

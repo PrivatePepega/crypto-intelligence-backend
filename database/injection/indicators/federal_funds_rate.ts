@@ -16,9 +16,9 @@ export const federalFundsRate: Indicator = {
   nativeFrequency: "Daily, 7-Day",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor the stance and transmission of U.S. monetary policy and assess changes in short-term interest rates, liquidity, financial conditions, and broader economic activity.",
+  use: "Monitor the stance and transmission of U.S. monetary policy and assess changes in short-term interest rates, liquidity, financial conditions, and broader economic activity.",
 
   purpose:
     "Provide a core measure of short-term U.S. interest rates for monetary policy analysis, financial condition analysis, and cross-indicator interpretation within the intelligence system.",

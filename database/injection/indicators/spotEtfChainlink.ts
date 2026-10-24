@@ -15,9 +15,9 @@ export const spotEtfChainlink: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "USD",
+  historicalTimeUnit: "d",
 
-  use:
-    "Track daily capital flows, trading activity, assets under management, and cumulative capital flows in the U.S. spot Chainlink ETF market.",
+  use: "Track daily capital flows, trading activity, assets under management, and cumulative capital flows in the U.S. spot Chainlink ETF market.",
 
   purpose:
     "Provide a daily view of traditional-finance and institutional market participation in Chainlink through regulated spot ETF vehicles and identify changes in capital allocation toward LINK.",
@@ -26,21 +26,21 @@ export const spotEtfChainlink: Indicator = {
     "Chainlink spot ETF market data provides a view of capital flows and asset levels within regulated investment vehicles that give traditional investors access to LINK. Net flow measures the daily net movement of capital into or out of the ETF market, while value traded measures ETF trading activity. Net assets indicate the aggregate size of assets held through the ETF vehicles, and cumulative net flow tracks the longer-term accumulation of capital flows. Chainlink ETF activity can provide context for traditional-finance participation in LINK and can be analyzed alongside Chainlink price, oracle infrastructure activity, decentralized finance, tokenization, real-world asset infrastructure, cross-chain interoperability, blockchain infrastructure adoption, derivatives positioning, macroeconomic conditions, liquidity conditions, and broader crypto-market sentiment. ETF flows should be interpreted as activity within the spot Chainlink ETF market and should not be treated as a complete measure of all institutional LINK ownership or total LINK demand.",
 
   relationTags: [
-  "spot_etf_chainlink",
-  "chainlink_spot_etf",
-  "chainlink_etf",
-  "spot_etf",
-  "etf_flows",
-  "chainlink",
-  "link",
-  "link_market",
-  "chainlink_market",
-  "chainlink_institutional_adoption",
-  "net_flow",
-  "etf_net_flow",
-  "cumulative_net_flow",
-  "net_assets",
-  "etf_assets",
+    "spot_etf_chainlink",
+    "chainlink_spot_etf",
+    "chainlink_etf",
+    "spot_etf",
+    "etf_flows",
+    "chainlink",
+    "link",
+    "link_market",
+    "chainlink_market",
+    "chainlink_institutional_adoption",
+    "net_flow",
+    "etf_net_flow",
+    "cumulative_net_flow",
+    "net_assets",
+    "etf_assets",
   ],
 
   status: "active",

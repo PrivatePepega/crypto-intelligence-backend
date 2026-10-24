@@ -16,9 +16,9 @@ export const realGdp: Indicator = {
   nativeFrequency: "Quarterly",
   nativeAggregation: "average",
   unit: "Billions of Chained 2017 Dollars",
+  historicalTimeUnit: "q",
 
-  use:
-    "Monitor the inflation-adjusted level of U.S. economic output and assess changes in overall economic activity and growth.",
+  use: "Monitor the inflation-adjusted level of U.S. economic output and assess changes in overall economic activity and growth.",
 
   purpose:
     "Provide a broad measure of real U.S. economic output for analyzing economic growth, business-cycle conditions, productivity, and changes in aggregate economic activity.",

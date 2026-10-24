@@ -15,9 +15,9 @@ export const igNasdaq: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Percentage",
+  historicalTimeUnit: "o",
 
-  use:
-    "Track daily changes in long and short positioning among IG retail traders exposed to the Nasdaq-100, including the distribution of positions and the resulting net retail positioning.",
+  use: "Track daily changes in long and short positioning among IG retail traders exposed to the Nasdaq-100, including the distribution of positions and the resulting net retail positioning.",
 
   purpose:
     "Provide a daily view of how IG's retail trader population is positioned toward the Nasdaq-100 and how that positioning changes over time.",
@@ -26,21 +26,21 @@ export const igNasdaq: Indicator = {
     "IG Nasdaq-100 retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to large-cap technology and growth-oriented equities. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. Nasdaq-100 positioning can be analyzed alongside technology-sector performance, Federal Reserve policy, interest rates, Treasury yields, volatility, market breadth, economic growth, and broader equity-market conditions to provide additional context for U.S. technology and growth-equity markets.",
 
   relationTags: [
-  "ig_nasdaq",
-  "ig_retail_traders",
-  "retail_positioning",
-  "retail_sentiment",
-  "broker_specific_positioning",
-  "nasdaq",
-  "nasdaq_100",
-  "nasdaq_100_index",
-  "ndx",
-  "us_equities",
-  "equity_index",
-  "large_cap_equities",
-  "technology_stocks",
-  "technology_sector",
-  "growth_stocks",
+    "ig_nasdaq",
+    "ig_retail_traders",
+    "retail_positioning",
+    "retail_sentiment",
+    "broker_specific_positioning",
+    "nasdaq",
+    "nasdaq_100",
+    "nasdaq_100_index",
+    "ndx",
+    "us_equities",
+    "equity_index",
+    "large_cap_equities",
+    "technology_stocks",
+    "technology_sector",
+    "growth_stocks",
   ],
 
   status: "active",

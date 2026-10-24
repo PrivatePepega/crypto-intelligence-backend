@@ -16,9 +16,9 @@ export const naturalGas: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Dollars per Million BTU",
+  historicalTimeUnit: "d",
 
-  use:
-    "Monitor U.S. natural gas prices and assess changes in energy supply and demand, weather-driven consumption, electricity generation, storage conditions, industrial activity, and energy-related inflation.",
+  use: "Monitor U.S. natural gas prices and assess changes in energy supply and demand, weather-driven consumption, electricity generation, storage conditions, industrial activity, and energy-related inflation.",
 
   purpose:
     "Provide a market-based measure of U.S. natural gas prices for analyzing domestic energy-market conditions, seasonal demand, electricity-generation costs, industrial energy demand, and changes in broader economic and inflationary conditions.",
@@ -27,21 +27,21 @@ export const naturalGas: Indicator = {
     "Natural gas is an important U.S. energy commodity used for electricity generation, residential and commercial heating, and industrial processes. Henry Hub prices respond to changes in production, storage, weather, pipeline and infrastructure conditions, and demand from power generation and industry. Natural gas prices therefore provide signals about U.S. energy-market tightness, seasonal conditions, electricity costs, and energy-related inflation.",
 
   relationTags: [
-  "natural_gas",
-  "henry_hub",
-  "energy",
-  "energy_markets",
-  "natural_gas_price",
-  "us_dollar",
-  "united_states",
-  "louisiana",
-  "us_energy",
-  "electricity_generation",
-  "power_generation",
-  "heating",
-  "industrial_demand",
-  "energy_demand",
-  "energy_supply",
+    "natural_gas",
+    "henry_hub",
+    "energy",
+    "energy_markets",
+    "natural_gas_price",
+    "us_dollar",
+    "united_states",
+    "louisiana",
+    "us_energy",
+    "electricity_generation",
+    "power_generation",
+    "heating",
+    "industrial_demand",
+    "energy_demand",
+    "energy_supply",
   ],
 
   status: "active",

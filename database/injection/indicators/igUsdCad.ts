@@ -15,9 +15,9 @@ export const igUsdCad: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Percentage",
+  historicalTimeUnit: "o",
 
-  use:
-    "Track daily changes in long and short positioning among IG retail traders exposed to USD/CAD, including the distribution of positions and the resulting net retail positioning.",
+  use: "Track daily changes in long and short positioning among IG retail traders exposed to USD/CAD, including the distribution of positions and the resulting net retail positioning.",
 
   purpose:
     "Provide a daily view of how IG's retail trader population is positioned toward the USD/CAD exchange rate and how that positioning changes over time.",
@@ -26,21 +26,21 @@ export const igUsdCad: Indicator = {
     "IG USD/CAD retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to the U.S. dollar relative to the Canadian dollar. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. USD/CAD positioning can be analyzed alongside Bank of Canada and Federal Reserve policy, interest-rate differentials, crude oil prices, Canadian and U.S. economic conditions, and broader foreign-exchange and risk-sentiment indicators.",
 
   relationTags: [
-  "ig_usd_cad",
-  "ig_retail_traders",
-  "retail_positioning",
-  "retail_sentiment",
-  "broker_specific_positioning",
-  "usd_cad",
-  "usdcad",
-  "foreign_exchange",
-  "currency_market",
-  "us_dollar",
-  "canadian_dollar",
-  "long_positions",
-  "short_positions",
-  "net_position",
-  "directional_exposure",
+    "ig_usd_cad",
+    "ig_retail_traders",
+    "retail_positioning",
+    "retail_sentiment",
+    "broker_specific_positioning",
+    "usd_cad",
+    "usdcad",
+    "foreign_exchange",
+    "currency_market",
+    "us_dollar",
+    "canadian_dollar",
+    "long_positions",
+    "short_positions",
+    "net_position",
+    "directional_exposure",
   ],
 
   status: "active",

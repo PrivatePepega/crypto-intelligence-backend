@@ -16,9 +16,9 @@ export const averageHourlyEarnings: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Dollars per Hour",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in average hourly earnings and assess wage pressures, household income conditions, labor-market trends, and potential inflationary pressures.",
+  use: "Monitor changes in average hourly earnings and assess wage pressures, household income conditions, labor-market trends, and potential inflationary pressures.",
 
   purpose:
     "Provide a broad measure of average hourly earnings in the private sector for analyzing labor-market conditions, wage growth, household income, inflation pressures, and economic activity.",

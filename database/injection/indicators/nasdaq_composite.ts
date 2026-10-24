@@ -16,9 +16,9 @@ export const nasdaqComposite: Indicator = {
   nativeFrequency: "Daily, Close",
   nativeAggregation: "none",
   unit: "Index Feb 5, 1971=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor broad U.S. equity-market performance across companies listed on the NASDAQ and assess changes in market sentiment, risk appetite, and the performance of growth-oriented and technology-heavy segments of the equity market.",
+  use: "Monitor broad U.S. equity-market performance across companies listed on the NASDAQ and assess changes in market sentiment, risk appetite, and the performance of growth-oriented and technology-heavy segments of the equity market.",
 
   purpose:
     "Provide a broad benchmark for NASDAQ-listed equities for analyzing equity-market conditions, investor risk appetite, market expectations, and changes across technology and growth-oriented portions of the U.S. stock market.",

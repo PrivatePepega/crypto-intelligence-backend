@@ -16,9 +16,9 @@ export const tenTwoYearYieldSpread: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percentage Points",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor the slope of the U.S. Treasury yield curve and identify changes in the relationship between longer-term and shorter-term interest rates.",
+  use: "Monitor the slope of the U.S. Treasury yield curve and identify changes in the relationship between longer-term and shorter-term interest rates.",
 
   purpose:
     "Provide a standardized measure of the 10-year versus 2-year Treasury yield differential for analyzing monetary policy expectations, economic conditions, and changes in the shape of the yield curve.",

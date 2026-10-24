@@ -16,9 +16,9 @@ export const existingHomeSales: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Number of Units",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor activity in the existing residential housing market and assess changes in home-buying demand, housing-market turnover, and broader economic conditions.",
+  use: "Monitor activity in the existing residential housing market and assess changes in home-buying demand, housing-market turnover, and broader economic conditions.",
 
   purpose:
     "Provide a measure of existing-home transaction volume for analyzing housing-market activity, household demand, market turnover, and the relationship between housing conditions and the broader economy.",

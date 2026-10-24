@@ -16,9 +16,9 @@ export const pce: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Billions of Dollars",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor household consumption and changes in consumer spending, a major component of U.S. economic activity.",
+  use: "Monitor household consumption and changes in consumer spending, a major component of U.S. economic activity.",
 
   purpose:
     "Provide a broad measure of personal consumption expenditures for analyzing consumer demand, economic growth, household spending behavior, and broader economic conditions.",

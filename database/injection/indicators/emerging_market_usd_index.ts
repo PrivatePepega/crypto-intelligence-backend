@@ -16,9 +16,9 @@ export const emergingMarketUsdIndex: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Index Jan 2006=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in the U.S. dollar's nominal value against currencies of emerging market economies and assess foreign-exchange conditions, global financial conditions, capital flows, and international economic relationships.",
+  use: "Monitor changes in the U.S. dollar's nominal value against currencies of emerging market economies and assess foreign-exchange conditions, global financial conditions, capital flows, and international economic relationships.",
 
   purpose:
     "Provide a trade-weighted measure of the U.S. dollar against emerging-market currencies for analyzing foreign-exchange conditions, international financial conditions, monetary policy transmission, and changes in cross-border capital flows.",

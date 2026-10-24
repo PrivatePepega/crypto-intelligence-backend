@@ -16,9 +16,9 @@ export const consumerSentiment: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Index 1966:Q1=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in consumer attitudes and expectations about economic conditions and assess shifts in household confidence and sentiment.",
+  use: "Monitor changes in consumer attitudes and expectations about economic conditions and assess shifts in household confidence and sentiment.",
 
   purpose:
     "Provide a survey-based measure of consumer sentiment for analyzing household expectations, consumer behavior, economic conditions, and potential changes in consumer spending.",

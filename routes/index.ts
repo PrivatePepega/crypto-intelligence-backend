@@ -8,6 +8,8 @@ import {
   fetchIndicatorDataSchema,
   listIndicators,
 } from "../controller/indicatorController.js";
+import { getWeatherBrief } from "../controller/weatherController.js";
+import { getClimateBrief } from "../controller/climateController.js";
 import authMiddleware from "../middleware/auth-middleware.js";
 import { validateRequest } from "../middleware/validateRequest.js";
 
@@ -27,5 +29,9 @@ router.get("/indicators", listIndicators);
 // Generic read endpoint: accepts a list of indicator names (or series ids) and
 // returns metadata, current rows, and historical rows for each one.
 router.post("/fetchData", validateRequest(fetchIndicatorDataSchema), fetchIndicatorData);
+
+// Public brief endpoints: weather and climate human briefs. No auth required.
+router.get("/weather/brief", getWeatherBrief);
+router.get("/climate/brief", getClimateBrief);
 
 export default router;

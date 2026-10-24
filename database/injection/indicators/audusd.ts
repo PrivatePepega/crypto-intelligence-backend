@@ -16,9 +16,9 @@ export const audUsd: Indicator = {
   nativeFrequency: "Daily, End of Day",
   nativeAggregation: "OHLC",
   unit: "USD per AUD",
+  historicalTimeUnit: "d",
 
-  use:
-    "Monitor AUD/USD movements and assess changes in Australian-U.S. monetary policy expectations, interest-rate differentials, commodity prices, terms of trade, China-linked economic conditions, and global risk sentiment.",
+  use: "Monitor AUD/USD movements and assess changes in Australian-U.S. monetary policy expectations, interest-rate differentials, commodity prices, terms of trade, China-linked economic conditions, and global risk sentiment.",
 
   purpose:
     "Provide a market-based measure of the Australian dollar against the U.S. dollar for analyzing Australian currency strength, Australia-U.S. interest-rate differentials, commodity-driven trade conditions, and changes in global market risk appetite.",
@@ -27,21 +27,21 @@ export const audUsd: Indicator = {
     "AUD/USD is a major foreign-exchange pair connecting Australia and the United States and is closely associated with Australia's commodity-export economy. Changes in the exchange rate can reflect shifts in relative monetary policy expectations and interest rates, commodity prices and Australia's terms of trade, Chinese economic conditions, capital flows, and global risk sentiment.",
 
   relationTags: [
-  "aud",
-  "usd",
-  "australian_dollar",
-  "us_dollar",
-  "australia",
-  "united_states",
-  "aud_usd",
-  "foreign_exchange",
-  "currency_strength",
-  "exchange_rate",
-  "reserve_bank_of_australia",
-  "federal_reserve",
-  "interest_rates",
-  "monetary_policy",
-  "interest_rate_differential",
+    "aud",
+    "usd",
+    "australian_dollar",
+    "us_dollar",
+    "australia",
+    "united_states",
+    "aud_usd",
+    "foreign_exchange",
+    "currency_strength",
+    "exchange_rate",
+    "reserve_bank_of_australia",
+    "federal_reserve",
+    "interest_rates",
+    "monetary_policy",
+    "interest_rate_differential",
   ],
 
   status: "active",

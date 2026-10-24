@@ -16,9 +16,9 @@ export const dowJones: Indicator = {
   nativeFrequency: "Daily, Close",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor the performance of a group of large U.S. companies and assess changes in equity-market conditions, investor sentiment, risk appetite, and market expectations.",
+  use: "Monitor the performance of a group of large U.S. companies and assess changes in equity-market conditions, investor sentiment, risk appetite, and market expectations.",
 
   purpose:
     "Provide a widely followed benchmark for large-cap U.S. equities for analyzing financial-market conditions, equity performance, investor risk appetite, and changes in market expectations.",

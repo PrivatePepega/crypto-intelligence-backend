@@ -16,9 +16,9 @@ export const sp500: Indicator = {
   nativeFrequency: "Daily, Close",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor broad U.S. equity-market performance and assess changes in investor risk appetite, financial conditions, market expectations, and the valuation of large-cap U.S. companies.",
+  use: "Monitor broad U.S. equity-market performance and assess changes in investor risk appetite, financial conditions, market expectations, and the valuation of large-cap U.S. companies.",
 
   purpose:
     "Provide a broad benchmark for U.S. large-cap equity markets for analyzing financial-market conditions, risk sentiment, economic expectations, and relationships between equity markets and macroeconomic indicators.",

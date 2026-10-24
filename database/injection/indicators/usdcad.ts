@@ -16,9 +16,9 @@ export const usdCad: Indicator = {
   nativeFrequency: "Daily, End of Day",
   nativeAggregation: "OHLC",
   unit: "CAD per USD",
+  historicalTimeUnit: "d",
 
-  use:
-    "Monitor USD/CAD movements and assess changes in U.S.-Canadian monetary policy expectations, interest-rate differentials, Canadian dollar strength, commodity prices, energy markets, and North American financial conditions.",
+  use: "Monitor USD/CAD movements and assess changes in U.S.-Canadian monetary policy expectations, interest-rate differentials, Canadian dollar strength, commodity prices, energy markets, and North American financial conditions.",
 
   purpose:
     "Provide a market-based measure of the exchange rate between the U.S. dollar and Canadian dollar for analyzing relative currency strength, U.S.-Canadian interest-rate differentials, commodity-driven economic conditions, and changes in cross-border financial markets.",
@@ -27,21 +27,21 @@ export const usdCad: Indicator = {
     "USD/CAD is a major foreign-exchange pair linking the United States and Canada. Changes in the exchange rate can reflect shifts in Federal Reserve and Bank of Canada policy expectations, interest rates, Canadian commodity prices and export conditions, particularly energy, trade flows, and broader North American economic and market conditions.",
 
   relationTags: [
-  "usd",
-  "cad",
-  "us_dollar",
-  "canadian_dollar",
-  "united_states",
-  "canada",
-  "usd_cad",
-  "foreign_exchange",
-  "currency_strength",
-  "exchange_rate",
-  "federal_reserve",
-  "bank_of_canada",
-  "interest_rates",
-  "monetary_policy",
-  "interest_rate_differential",
+    "usd",
+    "cad",
+    "us_dollar",
+    "canadian_dollar",
+    "united_states",
+    "canada",
+    "usd_cad",
+    "foreign_exchange",
+    "currency_strength",
+    "exchange_rate",
+    "federal_reserve",
+    "bank_of_canada",
+    "interest_rates",
+    "monetary_policy",
+    "interest_rate_differential",
   ],
 
   status: "active",

@@ -16,9 +16,9 @@ export const buildingPermits: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Thousands of Units",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor authorized residential construction activity and assess changes in housing demand, construction intentions, and conditions in the housing market.",
+  use: "Monitor authorized residential construction activity and assess changes in housing demand, construction intentions, and conditions in the housing market.",
 
   purpose:
     "Provide a timely measure of new residential building permits for analyzing prospective construction activity, housing-market conditions, construction investment, and the effects of interest rates and financial conditions on housing demand.",

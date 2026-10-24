@@ -16,9 +16,9 @@ export const mortgageRate: Indicator = {
   nativeFrequency: "Weekly, Ending Thursday",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor mortgage financing costs and assess how changes in interest rates affect housing affordability, home-buying demand, refinancing activity, and residential construction.",
+  use: "Monitor mortgage financing costs and assess how changes in interest rates affect housing affordability, home-buying demand, refinancing activity, and residential construction.",
 
   purpose:
     "Provide a high-frequency measure of U.S. 30-year fixed mortgage rates for analyzing housing-market conditions, household financing costs, interest-rate transmission, and the relationship between monetary and financial conditions and residential activity.",

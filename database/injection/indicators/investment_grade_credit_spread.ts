@@ -16,9 +16,9 @@ export const investmentGradeCreditSpread: Indicator = {
   nativeFrequency: "Daily, Close",
   nativeAggregation: "none",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor credit-market conditions and changes in the compensation investors demand for holding investment-grade corporate debt relative to U.S. Treasury securities.",
+  use: "Monitor credit-market conditions and changes in the compensation investors demand for holding investment-grade corporate debt relative to U.S. Treasury securities.",
 
   purpose:
     "Provide a market-based measure of investment-grade corporate credit spreads for analyzing credit risk, financial conditions, investor risk pricing, and changes in corporate bond markets.",

@@ -16,9 +16,9 @@ export const vix: Indicator = {
   nativeFrequency: "Daily, Close",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in market-implied expectations for near-term equity-market volatility and identify shifts in financial-market uncertainty and risk conditions.",
+  use: "Monitor changes in market-implied expectations for near-term equity-market volatility and identify shifts in financial-market uncertainty and risk conditions.",
 
   purpose:
     "Provide a market-based measure of expected near-term stock-market volatility for analyzing investor risk expectations, market stress, financial conditions, and changes in market sentiment.",

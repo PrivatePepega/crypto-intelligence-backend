@@ -15,9 +15,9 @@ export const igSilver: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Percentage",
+  historicalTimeUnit: "o",
 
-  use:
-    "Track daily changes in long and short positioning among IG retail traders exposed to silver, including the distribution of positions and the resulting net retail positioning.",
+  use: "Track daily changes in long and short positioning among IG retail traders exposed to silver, including the distribution of positions and the resulting net retail positioning.",
 
   purpose:
     "Provide a daily view of how IG's retail trader population is positioned toward silver and how that positioning changes over time.",
@@ -26,21 +26,21 @@ export const igSilver: Indicator = {
     "IG silver retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to silver. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. Silver positioning can be analyzed alongside silver prices, gold, industrial demand, manufacturing activity, inflation expectations, real interest rates, Treasury yields, the U.S. dollar, Federal Reserve policy, and broader risk sentiment to provide additional context for precious-metals and industrial-demand conditions.",
 
   relationTags: [
-  "ig_silver",
-  "ig_retail_traders",
-  "retail_positioning",
-  "retail_sentiment",
-  "broker_specific_positioning",
-  "silver",
-  "silver_price",
-  "silver_market",
-  "precious_metals",
-  "commodity_market",
-  "long_positions",
-  "short_positions",
-  "net_position",
-  "directional_exposure",
-  "positioning_changes",
+    "ig_silver",
+    "ig_retail_traders",
+    "retail_positioning",
+    "retail_sentiment",
+    "broker_specific_positioning",
+    "silver",
+    "silver_price",
+    "silver_market",
+    "precious_metals",
+    "commodity_market",
+    "long_positions",
+    "short_positions",
+    "net_position",
+    "directional_exposure",
+    "positioning_changes",
   ],
 
   status: "active",

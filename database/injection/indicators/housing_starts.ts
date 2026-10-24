@@ -16,9 +16,9 @@ export const housingStarts: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Thousands of Units",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor new residential construction activity and assess changes in housing-sector conditions, construction demand, economic activity, and sensitivity to financing conditions.",
+  use: "Monitor new residential construction activity and assess changes in housing-sector conditions, construction demand, economic activity, and sensitivity to financing conditions.",
 
   purpose:
     "Provide a timely measure of residential construction starts for analyzing housing-market activity, construction investment, economic growth, and the effects of interest rates and financial conditions on housing demand.",

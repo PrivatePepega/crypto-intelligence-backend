@@ -16,9 +16,9 @@ export const realTenYearTreasuryYield: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor real long-term interest rates and assess changes in inflation-adjusted borrowing costs, financial conditions, and market expectations.",
+  use: "Monitor real long-term interest rates and assess changes in inflation-adjusted borrowing costs, financial conditions, and market expectations.",
 
   purpose:
     "Provide a market-based measure of the real 10-year U.S. interest rate for analyzing real borrowing costs, inflation-adjusted returns, monetary policy, and financial conditions.",

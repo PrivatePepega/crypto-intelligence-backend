@@ -16,9 +16,9 @@ export const broadUsdIndex: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Index Jan 2006=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in the broad nominal value of the U.S. dollar and assess foreign-exchange conditions, international financial conditions, trade competitiveness, and cross-border capital flows.",
+  use: "Monitor changes in the broad nominal value of the U.S. dollar and assess foreign-exchange conditions, international financial conditions, trade competitiveness, and cross-border capital flows.",
 
   purpose:
     "Provide a broad measure of U.S. dollar strength against major trading-partner currencies for analyzing foreign-exchange conditions, monetary policy transmission, global financial conditions, and relationships between the dollar and other asset markets.",

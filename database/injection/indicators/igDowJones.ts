@@ -15,9 +15,9 @@ export const igDowJones: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Percentage",
+  historicalTimeUnit: "o",
 
-  use:
-    "Track daily changes in long and short positioning among IG retail traders exposed to the Dow Jones Industrial Average, including the distribution of positions and the resulting net retail positioning.",
+  use: "Track daily changes in long and short positioning among IG retail traders exposed to the Dow Jones Industrial Average, including the distribution of positions and the resulting net retail positioning.",
 
   purpose:
     "Provide a daily view of how IG's retail trader population is positioned toward the Dow Jones Industrial Average and how that positioning changes over time.",
@@ -26,21 +26,21 @@ export const igDowJones: Indicator = {
     "IG Dow Jones retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to U.S. large-cap and blue-chip equities. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. Dow Jones positioning can be analyzed alongside Federal Reserve policy, interest rates, Treasury yields, economic conditions, market breadth, volatility, and broader U.S. equity indexes to provide additional context for U.S. equity-market conditions.",
 
   relationTags: [
-  "ig_dow_jones",
-  "ig_retail_traders",
-  "retail_positioning",
-  "retail_sentiment",
-  "broker_specific_positioning",
-  "dow_jones",
-  "dow_jones_industrial_average",
-  "djia",
-  "us_equities",
-  "equity_index",
-  "large_cap_equities",
-  "blue_chip_stocks",
-  "long_positions",
-  "short_positions",
-  "net_position",
+    "ig_dow_jones",
+    "ig_retail_traders",
+    "retail_positioning",
+    "retail_sentiment",
+    "broker_specific_positioning",
+    "dow_jones",
+    "dow_jones_industrial_average",
+    "djia",
+    "us_equities",
+    "equity_index",
+    "large_cap_equities",
+    "blue_chip_stocks",
+    "long_positions",
+    "short_positions",
+    "net_position",
   ],
 
   status: "active",

@@ -16,9 +16,9 @@ export const realBroadUsdIndex: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Index Jan 2006=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in the inflation-adjusted value of the U.S. dollar and assess international price competitiveness, trade conditions, and global financial conditions.",
+  use: "Monitor changes in the inflation-adjusted value of the U.S. dollar and assess international price competitiveness, trade conditions, and global financial conditions.",
 
   purpose:
     "Provide a broad measure of the real, trade-weighted value of the U.S. dollar for analyzing exchange-rate competitiveness, international trade conditions, inflation-adjusted currency valuation, and relationships between the dollar and global economic conditions.",

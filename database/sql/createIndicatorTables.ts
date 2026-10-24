@@ -16,6 +16,8 @@ const createIndicatorTable = async () => {
       native_frequency TEXT NOT NULL,
       native_aggregation TEXT NOT NULL,
       unit TEXT NOT NULL,
+      historical_time_unit TEXT NOT NULL
+        CHECK (historical_time_unit IN ('d', 'm', 'o', 'q')),
 
       use TEXT NOT NULL,
       purpose TEXT NOT NULL,
@@ -46,4 +48,3 @@ createIndicatorTable()
   .finally(async () => {
     await pool.end();
   });
-

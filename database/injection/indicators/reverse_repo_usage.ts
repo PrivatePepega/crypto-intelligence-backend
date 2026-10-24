@@ -16,9 +16,9 @@ export const reverseRepoUsage: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Billions of U.S. Dollars",
+  historicalTimeUnit: "o",
 
-  use:
-    "Monitor usage of the Federal Reserve's overnight reverse repurchase facility and assess changes in short-term liquidity and money-market conditions.",
+  use: "Monitor usage of the Federal Reserve's overnight reverse repurchase facility and assess changes in short-term liquidity and money-market conditions.",
 
   purpose:
     "Provide a measure of overnight reverse repo activity for analyzing Federal Reserve open-market operations, money-market liquidity, reserve conditions, and changes in short-term financial conditions.",

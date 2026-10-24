@@ -4,17 +4,12 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import pool from "../../../config/database.js";
 
-import {
-  indicatorSchema,
-} from "../../../types/database/indicator/indicatorMetaData.types.js";
+import { indicatorSchema } from "../../../types/database/indicator/indicatorMetaData.types.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const indicatorDirectory = path.resolve(
-  __dirname,
-  "../injection/indicators",
-);
+const indicatorDirectory = path.resolve(__dirname, "../injection/indicators");
 
 const populateIndicatorMetadata = async () => {
   const files = fs
@@ -49,6 +44,7 @@ const populateIndicatorMetadata = async () => {
           native_frequency,
           native_aggregation,
           unit,
+          historical_time_unit,
 
           use,
           purpose,
@@ -75,7 +71,8 @@ const populateIndicatorMetadata = async () => {
           $14,
           $15,
           $16,
-          $17
+          $17,
+          $18
         )
         ON CONFLICT (id)
         DO UPDATE SET
@@ -89,6 +86,7 @@ const populateIndicatorMetadata = async () => {
           native_frequency = EXCLUDED.native_frequency,
           native_aggregation = EXCLUDED.native_aggregation,
           unit = EXCLUDED.unit,
+          historical_time_unit = EXCLUDED.historical_time_unit,
           use = EXCLUDED.use,
           purpose = EXCLUDED.purpose,
           significance = EXCLUDED.significance,
@@ -109,6 +107,7 @@ const populateIndicatorMetadata = async () => {
         indicator.nativeFrequency,
         indicator.nativeAggregation,
         indicator.unit,
+        indicator.historicalTimeUnit,
 
         indicator.use,
         indicator.purpose,

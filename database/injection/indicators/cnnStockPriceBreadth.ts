@@ -16,9 +16,9 @@ export const cnnStockPriceBreadth: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "d",
 
-  use:
-    "Monitor how broadly stock-price gains or declines are distributed across the U.S. equity market and identify changes in market participation, breadth, and overall equity-market strength.",
+  use: "Monitor how broadly stock-price gains or declines are distributed across the U.S. equity market and identify changes in market participation, breadth, and overall equity-market strength.",
 
   purpose:
     "Provide a market-health measure of equity-market breadth that helps determine whether prevailing stock-market conditions are supported by broad participation across stocks or concentrated in a narrower portion of the market.",
@@ -27,21 +27,21 @@ export const cnnStockPriceBreadth: Indicator = {
     "Stock-price breadth provides information about the participation underlying movements in the U.S. equity market. Strong breadth indicates that price strength is distributed across a larger portion of the market, while weak breadth indicates narrower participation or broader selling pressure. As a component of CNN's Fear & Greed framework, the indicator adds a market-participation dimension that complements price momentum, volatility, options activity, and other measures of investor behavior.",
 
   relationTags: [
-  "cnn_stock_price_breadth",
-  "stock_price_breadth",
-  "market_breadth",
-  "breadth",
-  "market_health",
-  "equity_market",
-  "us_equities",
-  "stock_market",
-  "market_participation",
-  "investor_participation",
-  "price_strength",
-  "price_weakness",
-  "market_momentum",
-  "market_trend",
-  "market_sentiment",
+    "cnn_stock_price_breadth",
+    "stock_price_breadth",
+    "market_breadth",
+    "breadth",
+    "market_health",
+    "equity_market",
+    "us_equities",
+    "stock_market",
+    "market_participation",
+    "investor_participation",
+    "price_strength",
+    "price_weakness",
+    "market_momentum",
+    "market_trend",
+    "market_sentiment",
   ],
 
   status: "active",

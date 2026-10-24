@@ -16,9 +16,9 @@ export const coreCpi: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor underlying consumer price trends while reducing the influence of the relatively volatile food and energy components.",
+  use: "Monitor underlying consumer price trends while reducing the influence of the relatively volatile food and energy components.",
 
   purpose:
     "Provide a measure of underlying consumer price movements for analyzing persistent inflation trends, monetary policy, and broader economic conditions.",

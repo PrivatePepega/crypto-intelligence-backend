@@ -16,9 +16,9 @@ export const threeMonthTreasury: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor short-term U.S. Treasury interest rates and assess changes in money-market conditions, monetary policy expectations, and short-term government borrowing costs.",
+  use: "Monitor short-term U.S. Treasury interest rates and assess changes in money-market conditions, monetary policy expectations, and short-term government borrowing costs.",
 
   purpose:
     "Provide a high-frequency measure of the three-month Treasury bill rate for analyzing short-term interest rates, monetary policy transmission, liquidity conditions, and the front end of the U.S. yield curve.",

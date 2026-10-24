@@ -16,9 +16,9 @@ export const tenYearTreasuryYield: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor long-term U.S. interest rates, Treasury market conditions, financial conditions, inflation and growth expectations, and changes in the cost of government borrowing.",
+  use: "Monitor long-term U.S. interest rates, Treasury market conditions, financial conditions, inflation and growth expectations, and changes in the cost of government borrowing.",
 
   purpose:
     "Provide a market-based measure of the ten-year point on the U.S. Treasury yield curve for analyzing long-term interest rates, economic expectations, monetary policy transmission, and financial market conditions.",

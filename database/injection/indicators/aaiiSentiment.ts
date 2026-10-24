@@ -16,9 +16,9 @@ export const aaiiSentiment: Indicator = {
   nativeFrequency: "Weekly",
   nativeAggregation: "none",
   unit: "Percent",
+  historicalTimeUnit: "o",
 
-  use:
-    "Monitor changes in individual-investor expectations, optimism, pessimism, uncertainty, and overall sentiment toward the U.S. stock market, including changes in the bull-bear spread.",
+  use: "Monitor changes in individual-investor expectations, optimism, pessimism, uncertainty, and overall sentiment toward the U.S. stock market, including changes in the bull-bear spread.",
 
   purpose:
     "Provide a direct survey-based measure of individual-investor expectations that complements market-derived sentiment indicators by capturing what retail investors expect the stock market to do over the following six months.",
@@ -27,21 +27,21 @@ export const aaiiSentiment: Indicator = {
     "The AAII Sentiment Survey provides a direct measure of individual-investor expectations rather than inferring sentiment from market prices or positioning. Changes in bullish, neutral, and bearish responses reveal shifts in optimism, pessimism, and uncertainty, while the bull-bear spread summarizes the balance between optimistic and pessimistic views. Extreme sentiment readings can provide useful context for assessing investor psychology and potential sentiment reversals, but the survey does not establish the future direction of the market.",
 
   relationTags: [
-  "aaii_sentiment",
-  "aaii_investor_sentiment",
-  "investor_sentiment",
-  "retail_investor_sentiment",
-  "individual_investors",
-  "retail_investors",
-  "market_sentiment",
-  "investor_expectations",
-  "market_expectations",
-  "bullish_sentiment",
-  "bearish_sentiment",
-  "neutral_sentiment",
-  "bull_bear_spread",
-  "bull_bear_difference",
-  "optimism",
+    "aaii_sentiment",
+    "aaii_investor_sentiment",
+    "investor_sentiment",
+    "retail_investor_sentiment",
+    "individual_investors",
+    "retail_investors",
+    "market_sentiment",
+    "investor_expectations",
+    "market_expectations",
+    "bullish_sentiment",
+    "bearish_sentiment",
+    "neutral_sentiment",
+    "bull_bear_spread",
+    "bull_bear_difference",
+    "optimism",
   ],
 
   status: "active",

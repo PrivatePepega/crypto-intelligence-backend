@@ -16,9 +16,9 @@ export const twoYearTreasuryYield: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "o",
 
-  use:
-    "Monitor short-term U.S. interest rates, Treasury market conditions, monetary policy expectations, and changes in the cost of government borrowing.",
+  use: "Monitor short-term U.S. interest rates, Treasury market conditions, monetary policy expectations, and changes in the cost of government borrowing.",
 
   purpose:
     "Provide a market-based measure of the two-year point on the U.S. Treasury yield curve for analyzing interest-rate expectations, monetary policy, financial conditions, and relationships across the yield curve.",

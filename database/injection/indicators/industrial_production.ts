@@ -16,9 +16,9 @@ export const industrialProduction: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Index 2017=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in U.S. industrial output and assess conditions across manufacturing, mining, and utility production.",
+  use: "Monitor changes in U.S. industrial output and assess conditions across manufacturing, mining, and utility production.",
 
   purpose:
     "Provide a broad measure of industrial-sector activity for analyzing economic momentum, production trends, business conditions, and changes in the business cycle.",

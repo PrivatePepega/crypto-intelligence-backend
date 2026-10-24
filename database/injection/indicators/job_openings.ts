@@ -16,9 +16,9 @@ export const jobOpenings: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Thousands of Job Openings",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor unmet demand for labor and changes in the availability of job opportunities across the nonfarm economy.",
+  use: "Monitor unmet demand for labor and changes in the availability of job opportunities across the nonfarm economy.",
 
   purpose:
     "Provide a measure of labor demand and job-market tightness for analyzing employment conditions, labor shortages, hiring demand, and changes in economic activity.",

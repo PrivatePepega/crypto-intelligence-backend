@@ -16,9 +16,9 @@ export const fiveYearInflationExpectations: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor market-based inflation expectations over a five-year horizon and identify changes in the outlook for future inflation.",
+  use: "Monitor market-based inflation expectations over a five-year horizon and identify changes in the outlook for future inflation.",
 
   purpose:
     "Provide a market-derived measure of expected average inflation over the next five years for analyzing inflation expectations, monetary policy, Treasury markets, and financial conditions.",

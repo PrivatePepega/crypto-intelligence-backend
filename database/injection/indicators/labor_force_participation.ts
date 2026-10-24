@@ -16,9 +16,9 @@ export const laborForceParticipation: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in labor-force participation and assess shifts in the share of the population engaged in the labor market.",
+  use: "Monitor changes in labor-force participation and assess shifts in the share of the population engaged in the labor market.",
 
   purpose:
     "Provide a core measure of labor-force engagement for analyzing labor-market conditions, economic activity, workforce availability, and longer-term demographic and economic trends.",

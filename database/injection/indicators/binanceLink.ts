@@ -15,9 +15,9 @@ export const binanceLink: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Ratio and Percentage",
+  historicalTimeUnit: "d",
 
-  use:
-    "Track daily changes in long and short positioning among traders in Binance's LINKUSDT market, including global account positioning and the positioning of Binance's top accounts.",
+  use: "Track daily changes in long and short positioning among traders in Binance's LINKUSDT market, including global account positioning and the positioning of Binance's top accounts.",
 
   purpose:
     "Provide a daily view of directional positioning among traders in Binance's Chainlink market and identify changes in long and short exposure within Binance's trading ecosystem.",
@@ -26,21 +26,21 @@ export const binanceLink: Indicator = {
     "Binance Chainlink retail positioning provides a daily view of directional exposure among traders in Binance's LINKUSDT market. Global account positioning can provide context for the distribution of long and short accounts, while top-account and top-position metrics provide additional information about positioning among Binance's largest or most active accounts. Because the dataset represents Binance's own trader pool rather than the entire Chainlink derivatives market, it should be interpreted as an exchange-specific positioning signal rather than a comprehensive measure of market-wide positioning. Binance positioning can be analyzed alongside Chainlink price, open interest, funding rates, derivatives activity, oracle adoption, blockchain activity, and broader crypto-market conditions to provide additional context for changes in Chainlink market positioning.",
 
   relationTags: [
-  "binance_link",
-  "binance",
-  "exchange_positioning",
-  "retail_positioning",
-  "retail_sentiment",
-  "chainlink",
-  "link",
-  "linkusdt",
-  "chainlink_market",
-  "chainlink_derivatives",
-  "long_positions",
-  "short_positions",
-  "long_short_ratio",
-  "long_accounts",
-  "short_accounts",
+    "binance_link",
+    "binance",
+    "exchange_positioning",
+    "retail_positioning",
+    "retail_sentiment",
+    "chainlink",
+    "link",
+    "linkusdt",
+    "chainlink_market",
+    "chainlink_derivatives",
+    "long_positions",
+    "short_positions",
+    "long_short_ratio",
+    "long_accounts",
+    "short_accounts",
   ],
 
   status: "active",

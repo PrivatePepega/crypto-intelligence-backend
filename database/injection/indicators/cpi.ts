@@ -16,9 +16,9 @@ export const cpi: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in consumer prices and assess inflation and deflation across the broad basket of goods and services purchased by urban consumers.",
+  use: "Monitor changes in consumer prices and assess inflation and deflation across the broad basket of goods and services purchased by urban consumers.",
 
   purpose:
     "Provide a broad measure of changes in consumer prices for analyzing inflation trends, purchasing power, monetary policy, and economic conditions.",

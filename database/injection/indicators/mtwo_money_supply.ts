@@ -16,9 +16,9 @@ export const m2MoneySupply: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Billions of Dollars",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in the quantity of money circulating through the U.S. financial system and assess changes in liquidity and monetary conditions.",
+  use: "Monitor changes in the quantity of money circulating through the U.S. financial system and assess changes in liquidity and monetary conditions.",
 
   purpose:
     "Provide a broad measure of the U.S. money supply for analyzing monetary conditions, liquidity, financial activity, and relationships between money growth and broader economic conditions.",

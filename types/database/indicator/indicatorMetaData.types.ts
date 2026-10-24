@@ -15,6 +15,8 @@ export const indicatorSchema = z.object({
   nativeAggregation: z.string().min(1),
   unit: z.string().min(1),
 
+  historicalTimeUnit: z.enum(["d", "m", "o", "q"]),
+
   use: z.string().min(1),
   purpose: z.string().min(1),
   significance: z.string().min(1),

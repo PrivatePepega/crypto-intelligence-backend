@@ -16,9 +16,9 @@ export const initialJoblessClaims: Indicator = {
   nativeFrequency: "Weekly, Ending Saturday",
   nativeAggregation: "average",
   unit: "Number",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor new unemployment insurance claims and identify changes in labor-market conditions, layoffs, and emerging weakness or strength in employment.",
+  use: "Monitor new unemployment insurance claims and identify changes in labor-market conditions, layoffs, and emerging weakness or strength in employment.",
 
   purpose:
     "Provide a high-frequency measure of new unemployment insurance claims for analyzing labor-market conditions and detecting changes in employment trends before slower monthly indicators are released.",

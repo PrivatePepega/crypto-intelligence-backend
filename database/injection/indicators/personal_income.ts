@@ -16,9 +16,9 @@ export const personalIncome: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Billions of Dollars",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in aggregate income received by households and assess household financial conditions, consumer spending capacity, and economic activity.",
+  use: "Monitor changes in aggregate income received by households and assess household financial conditions, consumer spending capacity, and economic activity.",
 
   purpose:
     "Provide a broad measure of personal income for analyzing household income conditions, consumer demand, savings, and changes in overall economic activity.",

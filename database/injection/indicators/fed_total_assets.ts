@@ -16,9 +16,9 @@ export const fedTotalAssets: Indicator = {
   nativeFrequency: "Weekly, As of Wednesday",
   nativeAggregation: "none",
   unit: "Millions of U.S. Dollars",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in the size of the Federal Reserve's balance sheet and assess shifts in monetary liquidity and central-bank asset holdings.",
+  use: "Monitor changes in the size of the Federal Reserve's balance sheet and assess shifts in monetary liquidity and central-bank asset holdings.",
 
   purpose:
     "Provide a broad measure of Federal Reserve total assets for analyzing balance-sheet policy, liquidity conditions, quantitative easing or tightening, and changes in the U.S. monetary environment.",

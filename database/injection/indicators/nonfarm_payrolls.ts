@@ -16,9 +16,9 @@ export const nonfarmPayrolls: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Thousands of Persons",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in total nonfarm employment and assess labor-market conditions, job creation, and changes in overall economic activity.",
+  use: "Monitor changes in total nonfarm employment and assess labor-market conditions, job creation, and changes in overall economic activity.",
 
   purpose:
     "Provide a broad measure of U.S. employment for analyzing labor-market strength, economic growth, household income, business activity, and changes in the business cycle.",

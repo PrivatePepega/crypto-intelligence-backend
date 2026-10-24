@@ -15,9 +15,9 @@ export const igWtiCrudeOil: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Percentage",
+  historicalTimeUnit: "o",
 
-  use:
-    "Track daily changes in long and short positioning among IG retail traders exposed to WTI crude oil, including the distribution of positions and the resulting net retail positioning.",
+  use: "Track daily changes in long and short positioning among IG retail traders exposed to WTI crude oil, including the distribution of positions and the resulting net retail positioning.",
 
   purpose:
     "Provide a daily view of how IG's retail trader population is positioned toward WTI crude oil and how that positioning changes over time.",
@@ -26,21 +26,21 @@ export const igWtiCrudeOil: Indicator = {
     "IG WTI crude oil retail positioning provides a daily view of directional exposure among retail traders using the IG trading platform. The indicator can provide context for retail sentiment, speculative positioning, and changes in exposure to the crude oil market. Because the dataset represents only IG's retail trader pool rather than the entire retail-investor population, it should be interpreted as a broker-specific positioning signal rather than a comprehensive measure of overall retail sentiment. WTI positioning can be analyzed alongside crude oil supply and demand, OPEC policy, oil inventories, global economic growth, inflation, the U.S. dollar, interest rates, and the Brent-WTI relationship to provide additional context for energy-market conditions.",
 
   relationTags: [
-  "ig_wti_crude_oil",
-  "ig_retail_traders",
-  "retail_positioning",
-  "retail_sentiment",
-  "broker_specific_positioning",
-  "wti",
-  "wti_crude_oil",
-  "west_texas_intermediate",
-  "crude_oil",
-  "oil_market",
-  "energy_market",
-  "long_positions",
-  "short_positions",
-  "net_position",
-  "directional_exposure",
+    "ig_wti_crude_oil",
+    "ig_retail_traders",
+    "retail_positioning",
+    "retail_sentiment",
+    "broker_specific_positioning",
+    "wti",
+    "wti_crude_oil",
+    "west_texas_intermediate",
+    "crude_oil",
+    "oil_market",
+    "energy_market",
+    "long_positions",
+    "short_positions",
+    "net_position",
+    "directional_exposure",
   ],
 
   status: "active",

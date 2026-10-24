@@ -16,9 +16,9 @@ export const cnnFearGreed: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Score",
+  historicalTimeUnit: "d",
 
-  use:
-    "Monitor changes in U.S. equity-market sentiment, investor risk appetite, market momentum, volatility, and demand for defensive assets, and identify shifts between risk-seeking and risk-averse market conditions.",
+  use: "Monitor changes in U.S. equity-market sentiment, investor risk appetite, market momentum, volatility, and demand for defensive assets, and identify shifts between risk-seeking and risk-averse market conditions.",
 
   purpose:
     "Provide a compact market-sentiment signal that summarizes several observable characteristics of U.S. equity markets into a single daily measure for tracking changes in investor risk appetite and market stress.",
@@ -27,21 +27,21 @@ export const cnnFearGreed: Indicator = {
     "The Fear & Greed Index provides a behavioral measure of the prevailing emotional conditions in U.S. equity markets. Changes in the index can indicate shifts in market momentum, volatility, demand for safe-haven assets, and willingness to take risk. It can therefore provide context for interpreting market moves alongside prices, volatility measures, credit conditions, and broader financial-market indicators.",
 
   relationTags: [
-  "cnn_fear_greed",
-  "fear_and_greed",
-  "market_sentiment",
-  "investor_sentiment",
-  "investor_behavior",
-  "risk_appetite",
-  "risk_aversion",
-  "market_psychology",
-  "market_momentum",
-  "market_volatility",
-  "stock_market",
-  "us_equities",
-  "equity_market",
-  "market_stress",
-  "safe_haven_demand",
+    "cnn_fear_greed",
+    "fear_and_greed",
+    "market_sentiment",
+    "investor_sentiment",
+    "investor_behavior",
+    "risk_appetite",
+    "risk_aversion",
+    "market_psychology",
+    "market_momentum",
+    "market_volatility",
+    "stock_market",
+    "us_equities",
+    "equity_market",
+    "market_stress",
+    "safe_haven_demand",
   ],
 
   status: "active",

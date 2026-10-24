@@ -16,9 +16,9 @@ export const cnnMarketVolatilityVix50: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "d",
 
-  use:
-    "Monitor changes in expected U.S. equity-market volatility and identify shifts in market stress, risk aversion, and investor sentiment through the VIX's relationship with its 50-day trend.",
+  use: "Monitor changes in expected U.S. equity-market volatility and identify shifts in market stress, risk aversion, and investor sentiment through the VIX's relationship with its 50-day trend.",
 
   purpose:
     "Provide a volatility-based measure of U.S. equity-market conditions that captures whether expected market volatility is increasing or decreasing relative to its recent trend.",
@@ -27,21 +27,21 @@ export const cnnMarketVolatilityVix50: Indicator = {
     "The VIX provides a forward-looking measure of expected S&P 500 volatility derived from options prices. Comparing it with its 50-day moving average adds a trend dimension that helps identify changes in market stress and risk perception. Rising volatility relative to its trend is interpreted by CNN as a signal of fear, while declining volatility is associated with greed. As one component of the Fear & Greed framework, it complements momentum, breadth, options positioning, and other measures of market behavior.",
 
   relationTags: [
-  "cnn_market_volatility",
-  "market_volatility",
-  "vix",
-  "vix_index",
-  "vix_50_day_moving_average",
-  "50_day_moving_average",
-  "implied_volatility",
-  "expected_volatility",
-  "options_market",
-  "s_and_p_500",
-  "sp500",
-  "us_equities",
-  "equity_market",
-  "stock_market",
-  "market_stress",
+    "cnn_market_volatility",
+    "market_volatility",
+    "vix",
+    "vix_index",
+    "vix_50_day_moving_average",
+    "50_day_moving_average",
+    "implied_volatility",
+    "expected_volatility",
+    "options_market",
+    "s_and_p_500",
+    "sp500",
+    "us_equities",
+    "equity_market",
+    "stock_market",
+    "market_stress",
   ],
 
   status: "active",

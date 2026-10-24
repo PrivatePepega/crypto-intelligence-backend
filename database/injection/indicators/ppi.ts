@@ -16,9 +16,9 @@ export const ppi: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Index",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in prices received by producers across the broad commodity economy and assess producer-level price pressures.",
+  use: "Monitor changes in prices received by producers across the broad commodity economy and assess producer-level price pressures.",
 
   purpose:
     "Provide a broad measure of producer price movements for analyzing upstream inflation pressures, commodity pricing, production costs, and potential changes in consumer prices.",

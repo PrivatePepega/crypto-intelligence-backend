@@ -16,9 +16,9 @@ export const usdJpy: Indicator = {
   nativeFrequency: "Daily, End of Day",
   nativeAggregation: "OHLC",
   unit: "JPY per USD",
+  historicalTimeUnit: "d",
 
-  use:
-    "Monitor USD/JPY movements and assess changes in U.S.-Japan monetary policy expectations, currency strength, interest-rate differentials, and broader global financial conditions.",
+  use: "Monitor USD/JPY movements and assess changes in U.S.-Japan monetary policy expectations, currency strength, interest-rate differentials, and broader global financial conditions.",
 
   purpose:
     "Provide a market-based measure of the exchange rate between the U.S. dollar and Japanese yen for analyzing relative currency strength, U.S.-Japan interest-rate differentials, monetary policy expectations, and cross-border financial conditions.",
@@ -27,21 +27,21 @@ export const usdJpy: Indicator = {
     "USD/JPY is a major foreign-exchange pair linking the United States and Japan. Changes in the exchange rate can reflect shifts in relative economic conditions, Federal Reserve and Bank of Japan policy expectations, interest rates, capital flows, and global risk sentiment.",
 
   relationTags: [
-  "usd",
-  "jpy",
-  "us_dollar",
-  "japanese_yen",
-  "united_states",
-  "japan",
-  "usd_jpy",
-  "foreign_exchange",
-  "currency_strength",
-  "exchange_rate",
-  "federal_reserve",
-  "bank_of_japan",
-  "interest_rates",
-  "monetary_policy",
-  "interest_rate_differential",
+    "usd",
+    "jpy",
+    "us_dollar",
+    "japanese_yen",
+    "united_states",
+    "japan",
+    "usd_jpy",
+    "foreign_exchange",
+    "currency_strength",
+    "exchange_rate",
+    "federal_reserve",
+    "bank_of_japan",
+    "interest_rates",
+    "monetary_policy",
+    "interest_rate_differential",
   ],
 
   status: "active",

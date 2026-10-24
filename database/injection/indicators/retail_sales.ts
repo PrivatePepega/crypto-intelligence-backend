@@ -16,9 +16,9 @@ export const retailSales: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Millions of Dollars",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor consumer spending activity through changes in retail trade and food-service sales and identify shifts in consumer demand and economic momentum.",
+  use: "Monitor consumer spending activity through changes in retail trade and food-service sales and identify shifts in consumer demand and economic momentum.",
 
   purpose:
     "Provide a timely measure of nominal retail and food-service sales for analyzing consumer demand, household spending, economic activity, and changes in consumption trends.",

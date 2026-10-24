@@ -16,9 +16,9 @@ export const fiveYearTreasury: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor intermediate-term U.S. Treasury interest rates and assess changes in market expectations, monetary policy transmission, inflation expectations, and broader financial conditions.",
+  use: "Monitor intermediate-term U.S. Treasury interest rates and assess changes in market expectations, monetary policy transmission, inflation expectations, and broader financial conditions.",
 
   purpose:
     "Provide a market-based measure of the five-year point on the U.S. Treasury yield curve for analyzing intermediate-term interest rates, economic expectations, monetary policy, and changes in financial conditions.",

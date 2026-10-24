@@ -16,9 +16,9 @@ export const tenYearBreakevenInflation: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor market-based inflation expectations and changes in the outlook for long-term inflation.",
+  use: "Monitor market-based inflation expectations and changes in the outlook for long-term inflation.",
 
   purpose:
     "Provide a market-derived measure of expected average inflation over a ten-year horizon for analyzing inflation expectations, Treasury markets, monetary policy, and financial conditions.",

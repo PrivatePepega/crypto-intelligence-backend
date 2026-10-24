@@ -16,9 +16,9 @@ export const advancedEconomyUsdIndex: Indicator = {
   nativeFrequency: "Daily",
   nativeAggregation: "average",
   unit: "Index Jan 2006=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in the U.S. dollar's nominal value against currencies of advanced foreign economies and assess exchange-rate conditions, international financial conditions, and cross-border economic relationships.",
+  use: "Monitor changes in the U.S. dollar's nominal value against currencies of advanced foreign economies and assess exchange-rate conditions, international financial conditions, and cross-border economic relationships.",
 
   purpose:
     "Provide a trade-weighted measure of the U.S. dollar against advanced-economy currencies for analyzing foreign-exchange conditions, relative currency movements, monetary policy transmission, and international financial conditions.",

@@ -16,9 +16,9 @@ export const homePriceIndex: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "none",
   unit: "Index Jan 2000=100",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor changes in U.S. residential property values and assess trends in home prices, housing-market conditions, household wealth, and housing affordability.",
+  use: "Monitor changes in U.S. residential property values and assess trends in home prices, housing-market conditions, household wealth, and housing affordability.",
 
   purpose:
     "Provide a broad measure of national U.S. home-price levels for analyzing housing-market trends, changes in property values, household wealth, and relationships between housing prices, financing costs, income, and economic conditions.",

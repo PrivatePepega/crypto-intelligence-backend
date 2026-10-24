@@ -16,9 +16,9 @@ export const unemploymentRate: Indicator = {
   nativeFrequency: "Monthly",
   nativeAggregation: "average",
   unit: "Percent",
+  historicalTimeUnit: "m",
 
-  use:
-    "Monitor labor market conditions and changes in the share of the labor force that is unemployed.",
+  use: "Monitor labor market conditions and changes in the share of the labor force that is unemployed.",
 
   purpose:
     "Provide a core measure of U.S. labor market conditions for analyzing employment, economic activity, monetary policy, household conditions, and changes in the business cycle.",

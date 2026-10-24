@@ -16,9 +16,9 @@ export const realGdpGrowth: Indicator = {
   nativeFrequency: "Quarterly",
   nativeAggregation: "none",
   unit: "Percent Change at Annual Rate",
+  historicalTimeUnit: "q",
 
-  use:
-    "Monitor the pace of change in inflation-adjusted U.S. economic output and identify periods of economic expansion, slowing growth, or contraction.",
+  use: "Monitor the pace of change in inflation-adjusted U.S. economic output and identify periods of economic expansion, slowing growth, or contraction.",
 
   purpose:
     "Provide a published measure of quarterly real GDP growth for analyzing economic momentum, business-cycle conditions, and changes in aggregate economic activity.",
