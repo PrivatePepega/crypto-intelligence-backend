@@ -1,0 +1,282 @@
+[
+  {
+    "symbol": "AAPL.NE",
+    "name": "Apple Inc.",
+    "currency": "CAD",
+    "exchangeFullName": "CBOE CA",
+    "exchange": "NEO"
+  },
+  {
+    "symbol": "AAPL.MX",
+    "name": "Apple Inc.",
+    "currency": "MXN",
+    "exchangeFullName": "Mexican Stock Exchange",
+    "exchange": "MEX"
+  },
+  {
+    "symbol": "APC.DE",
+    "name": "Apple Inc.",
+    "currency": "EUR",
+    "exchangeFullName": "Deutsche Börse",
+    "exchange": "XETRA"
+  },
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "currency": "USD",
+    "exchangeFullName": "NASDAQ Global Select",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AAPL.DE",
+    "name": "Apple Inc.",
+    "currency": "EUR",
+    "exchangeFullName": "Deutsche Börse",
+    "exchange": "XETRA"
+  },
+  {
+    "symbol": "APC.F",
+    "name": "Apple Inc.",
+    "currency": "EUR",
+    "exchangeFullName": "Frankfurt Stock Exchange",
+    "exchange": "FSX"
+  },
+  {
+    "symbol": "AAPL.TO",
+    "name": "Apple Inc.",
+    "currency": "CAD",
+    "exchangeFullName": "Toronto Stock Exchange",
+    "exchange": "TSX"
+  },
+  {
+    "symbol": "APPLX",
+    "name": "Appleseed Fund",
+    "currency": "USD",
+    "exchangeFullName": "NASDAQ",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "APUSD",
+    "name": "AppleSwap AI USD",
+    "currency": "USD",
+    "exchangeFullName": "CCC",
+    "exchange": "CRYPTO"
+  },
+  {
+    "symbol": "164A.T",
+    "name": "Applepark.CO. Ltd.",
+    "currency": "JPY",
+    "exchangeFullName": "Tokyo Stock Exchange",
+    "exchange": "JPX"
+  },
+  {
+    "symbol": "AAPI",
+    "name": "Apple iSports Group Inc",
+    "currency": "USD",
+    "exchangeFullName": "Other OTC",
+    "exchange": "OTC"
+  },
+  {
+    "symbol": "APRU",
+    "name": "Apple Rush Company, Inc.",
+    "currency": "USD",
+    "exchangeFullName": "Other OTC",
+    "exchange": "OTC"
+  },
+  {
+    "symbol": "APLE",
+    "name": "Apple Hospitality REIT, Inc.",
+    "currency": "USD",
+    "exchangeFullName": "New York Stock Exchange",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "2788.T",
+    "name": "Apple International Co., Ltd.",
+    "currency": "JPY",
+    "exchangeFullName": "Tokyo Stock Exchange",
+    "exchange": "JPX"
+  },
+  {
+    "symbol": "APLY.NE",
+    "name": "Apple (AAPL) Yield Shares Purpose ETF",
+    "currency": "CAD",
+    "exchangeFullName": "CBOE CA",
+    "exchange": "NEO"
+  },
+  {
+    "symbol": "603020.SS",
+    "name": "Apple Flavor & Fragrance Group Co.,Ltd.",
+    "currency": "CNY",
+    "exchangeFullName": "Shanghai Stock Exchange",
+    "exchange": "SHH"
+  },
+  {
+    "symbol": "PNPL",
+    "name": "Pineapple, Inc.",
+    "currency": "USD",
+    "exchangeFullName": "Other OTC",
+    "exchange": "OTC"
+  },
+  {
+    "symbol": "PEGY",
+    "name": "Pineapple Energy Inc.",
+    "currency": "USD",
+    "exchangeFullName": "NASDAQ Capital Market",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "PAPL",
+    "name": "Pineapple Financial Inc.",
+    "currency": "USD",
+    "exchangeFullName": "New York Stock Exchange Arca",
+    "exchange": "AMEX"
+  },
+  {
+    "symbol": "PTIV",
+    "name": "Pineapple Financial, Inc.",
+    "currency": "USD",
+    "exchangeFullName": "New York Stock Exchange Arca",
+    "exchange": "AMEX"
+  },
+  {
+    "symbol": "PNPL.L",
+    "name": "Pineapple Power Corporation plc",
+    "currency": "GBp",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "MNAO",
+    "name": "Pineapple Express Cannabis Company",
+    "currency": "USD",
+    "exchangeFullName": "Other OTC",
+    "exchange": "OTC"
+  },
+  {
+    "symbol": "AAPL.L",
+    "name": "LS 1x Apple Tracker ETC",
+    "currency": "GBp",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "1AAP.L",
+    "name": "LS 1x Apple Tracker ETC",
+    "currency": "USD",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "AAP1.L",
+    "name": "LS 1x Apple Tracker ETC",
+    "currency": "EUR",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "GAPJ",
+    "name": "Golden Apple Oil & Gas Inc.",
+    "currency": "USD",
+    "exchangeFullName": "Other OTC",
+    "exchange": "OTC"
+  },
+  {
+    "symbol": "APLE.TO",
+    "name": "Harvest Apple Enhanced High Income Shares ETF Trust Units A",
+    "currency": "CAD",
+    "exchangeFullName": "Toronto Stock Exchange",
+    "exchange": "TSX"
+  },
+  {
+    "symbol": "AAPX",
+    "name": "T-REX 2X Long Apple Daily Target ETF",
+    "currency": "USD",
+    "exchangeFullName": "Chicago Board Options Exchange",
+    "exchange": "CBOE"
+  },
+  {
+    "symbol": "MLP",
+    "name": "Maui Land & Pineapple Company, Inc.",
+    "currency": "USD",
+    "exchangeFullName": "New York Stock Exchange",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AAPE.L",
+    "name": "Leverage Shares - 2x Apple",
+    "currency": "EUR",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "AAP2.L",
+    "name": "Leverage Shares - 2x Apple",
+    "currency": "USD",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "2AAP.L",
+    "name": "Leverage Shares - 2x Apple",
+    "currency": "GBp",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "AAP3.L",
+    "name": "Leverage Shares - 3x Apple",
+    "currency": "USD",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "APLS.L",
+    "name": "Leverage Shares - -1x Apple",
+    "currency": "USD",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "SAPL.L",
+    "name": "Leverage Shares - -1x Apple",
+    "currency": "GBp",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "SAPE.L",
+    "name": "Leverage Shares - -1x Apple",
+    "currency": "EUR",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "AAPS.L",
+    "name": "Leverage Shares - -3x Apple",
+    "currency": "USD",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "3LAP.L",
+    "name": "GraniteShares 3x Long Apple Daily ETP",
+    "currency": "USD",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "3SAP.L",
+    "name": "GraniteShares 3x Short Apple Daily ETP",
+    "currency": "USD",
+    "exchangeFullName": "London Stock Exchange",
+    "exchange": "LSE"
+  },
+  {
+    "symbol": "AAPY",
+    "name": "Kurv Yield Premium Strategy Apple (AAPL) ETF",
+    "currency": "USD",
+    "exchangeFullName": "Chicago Board Options Exchange",
+    "exchange": "CBOE"
+  }
+]

@@ -17,6 +17,7 @@ import pool from "../config/database.js";
  *       "category": "Energy",
  *       ...
  *       "series_id": "WTI",
+ *       "historical_time_unit": "d",
  *       ...
  *     },
  *     ...
@@ -29,6 +30,7 @@ const exportIndicatorList = async () => {
     `SELECT
         id, name, domain, category, description, source, series_id,
         native_time_unit, native_frequency, native_aggregation, unit,
+        historical_time_unit,
         use, purpose, significance, status
       FROM indicator.indicators ORDER BY name`,
   );

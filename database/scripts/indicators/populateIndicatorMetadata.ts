@@ -9,7 +9,7 @@ import { indicatorSchema } from "../../../types/database/indicator/indicatorMeta
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const indicatorDirectory = path.resolve(__dirname, "../injection/indicators");
+const indicatorDirectory = path.resolve(__dirname, "../../injection/indicators");
 
 const populateIndicatorMetadata = async () => {
   const files = fs

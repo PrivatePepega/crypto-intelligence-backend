@@ -8,7 +8,11 @@ import {
   fetchIndicatorDataSchema,
   listIndicators,
 } from "../controller/indicatorController.js";
-import { getWeatherBrief } from "../controller/weatherController.js";
+import {
+  getWeatherBrief,
+  getWeatherObservationsAndResearch,
+  weatherDataSchema,
+} from "../controller/weatherController.js";
 import { getClimateBrief } from "../controller/climateController.js";
 import authMiddleware from "../middleware/auth-middleware.js";
 import { validateRequest } from "../middleware/validateRequest.js";
@@ -32,6 +36,11 @@ router.post("/fetchData", validateRequest(fetchIndicatorDataSchema), fetchIndica
 
 // Public brief endpoints: weather and climate human briefs. No auth required.
 router.get("/weather/brief", getWeatherBrief);
+router.post(
+  "/weather/observations-research",
+  validateRequest(weatherDataSchema),
+  getWeatherObservationsAndResearch,
+);
 router.get("/climate/brief", getClimateBrief);
 
 export default router;

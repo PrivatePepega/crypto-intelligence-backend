@@ -1,0 +1,172 @@
+finance.assets — common asset identity
+Every searchable stock, cryptocurrency, or commodity gets exactly one asset record.
+Column	Purpose
+id	UUID primary key
+symbol	Ticker or asset symbol, e.g. AAPL, BTC, GOLD
+name	Full asset name
+asset_type	stock, crypto, or commodity
+description	General description
+category	Broad classification, e.g. technology, DeFi, energy
+logo_url	Logo or icon
+website_url	Official website
+external_ids	JSONB mapping to provider IDs, if needed
+created_at	Record creation time
+updated_at	Last profile update
+
+Important: symbols aren't globally unique. Different assets can share a ticker, and the same stock can trade on multiple exchanges. Search and identity resolution should use exchange, network, provider ID, or contract address where applicable—not just the symbol.
+
+
+
+
+
+
+
+
+
+
+
+finance.stocks — stock-specific profile
+One row per stock, linked by asset_id.
+Column	Purpose
+asset_id	Primary key and foreign key to assets.id
+exchange	Primary listing exchange
+sector	Broad business sector
+industry	Specific industry
+business_summary	What the company does
+financial_statements	JSONB for annual and quarterly income statements, balance sheets, and cash-flow statements
+financial_metrics	JSONB for revenue growth, earnings, margins, valuation ratios, debt, dividends, and related metrics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+finance.crypto — cryptocurrency-specific profile
+Column	Purpose
+asset_id	Primary key and foreign key to assets.id
+network	Primary blockchain/network
+contract_addresses	JSONB for contract addresses by network
+circulating_supply	Currently circulating token supply
+total_supply	Total issued supply, where available
+max_supply	Maximum supply, if defined
+tokenomics	JSONB for emissions, unlocks, allocations, burns, and vesting
+holder_distribution	JSONB for holder concentration and distribution metrics
+contract_analysis	JSONB for contract features, permissions, and security findings
+socials	JSONB for official social/community links
+exchanges	JSONB for known trading venues and relevant market pairs
+security_summary	Concise security overview
+
+Supply and holder information should include timestamps and sources because providers may report different values or update at different intervals.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+finance.commodities — commodity-specific profile
+Column	Purpose
+asset_id	Primary key and foreign key to assets.id
+commodity_type	Energy, precious metal, industrial metal, agriculture, etc.
+benchmark	Relevant benchmark or traded instrument
+currency	Currency used for quoted prices
+unit_of_measure	Such as barrels, troy ounces, or bushels
+uses	Major industrial or commercial uses
+value_drivers	JSONB for important supply, demand, and pricing factors
+supply_demand	JSONB for production, inventories, consumption, and related data
+inflation_data	JSONB for relevant inflation and price-index context
+
+A commodity's benchmark matters: the price of one benchmark for crude oil, for example, is not automatically interchangeable with another.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+finance.information — research and changing intelligence
+This is the major change. Rather than having a single large JSONB object per asset that gets overwritten, I'd make this a collection of information records.
+Column	Purpose
+id	UUID primary key
+asset_id	Foreign key to assets.id
+information_type	Type of information stored
+data	JSONB containing the structured information
+source	Provider, publisher, or originating source
+source_url	Original article or source URL, where applicable
+published_at	When the source information was published
+observed_at	When the event or measurement occurred, if applicable
+collected_at	When our platform retrieved it
+
+The information_type could identify records such as:
+- news — individual news articles and their summaries.
+- event — earnings, regulatory decisions, product launches, exploits, and other material events.
+- sentiment — sentiment scores, methodology, sample size, and the period analyzed.
+- market_snapshot — current price, market capitalization, 24-hour volume, percentage changes, and available liquidity metrics.
+- market_analysis — structured findings about market conditions.
+- macro_context — relevant interest rates, inflation releases, economic conditions, and other external drivers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+finance.asset_price_history — historical price series
+This remains a separate table because it can grow far faster than the profile tables.
+Column	Purpose
+id	Primary key
+asset_id	Foreign key to assets.id
+timestamp	Start time of the price interval
+interval	For example, 1h or 1d
+open	Opening price
+high	Highest price
+low	Lowest price
+close	Closing price
+volume	Traded volume for the interval
+
+Use a uniqueness constraint on (asset_id, interval, timestamp) so repeated ingestion updates the same candle instead of creating duplicates.
+
+One caveat: volume needs a documented unit. For stocks, it commonly represents shares traded; for crypto, token quantity or quote-currency volume depends on the feed; and for commodity futures, it may represent contracts traded. Normalize the meaning and unit, or store them explicitly when they differ.

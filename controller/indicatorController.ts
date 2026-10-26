@@ -80,6 +80,7 @@ interface IndicatorRow {
   native_frequency: string;
   native_aggregation: string;
   unit: string;
+  historical_time_unit: string;
   use: string;
   purpose: string;
   significance: string;
@@ -152,6 +153,7 @@ const loadIndicatorLookup = async (): Promise<IndicatorLookup> => {
       SELECT
         id, name, domain, category, description, source, series_id,
         native_time_unit, native_frequency, native_aggregation, unit,
+        historical_time_unit,
         use, purpose, significance, relation_tags, status
       FROM indicator.indicators
       WHERE status = 'active'
@@ -307,6 +309,7 @@ const toIndicatorResponse = (indicator: IndicatorRow) => ({
   nativeFrequency: indicator.native_frequency,
   nativeAggregation: indicator.native_aggregation,
   unit: indicator.unit,
+  historicalTimeUnit: indicator.historical_time_unit,
   use: indicator.use,
   purpose: indicator.purpose,
   significance: indicator.significance,
