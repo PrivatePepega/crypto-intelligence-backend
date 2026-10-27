@@ -1,0 +1,242 @@
+{
+  "source": "SEC EDGAR corporate actions",
+  "cik": "320193",
+  "entityName": "Apple Inc.",
+  "generatedAt": "2026-10-27T14:42:57.806Z",
+  "requestedForms": [
+    "8-K",
+    "8-K/A",
+    "S-1",
+    "S-1/A",
+    "S-3",
+    "S-3/A",
+    "424B1",
+    "424B1/A",
+    "424B3",
+    "424B3/A",
+    "424B5",
+    "424B5/A",
+    "SC TO-T",
+    "SC TO-T/A",
+    "SC TO-I",
+    "SC TO-I/A",
+    "DEFM14A",
+    "DEFM14A/A",
+    "PREM14A",
+    "PREM14A/A",
+    "DEF 14A",
+    "DEF 14A/A"
+  ],
+  "since": null,
+  "filings": [
+    {
+      "form": "8-K/A",
+      "tier": 1,
+      "accessionNumber": "0001140361-26-035325",
+      "filingDate": "2026-09-01",
+      "reportDate": "2026-04-17",
+      "primaryDocDescription": "8-K/A",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+      "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/",
+      "documentChars": 5171,
+      "documentTruncated": false,
+      "extractionUsage": {
+        "modelId": "openai/gpt-oss-120b",
+        "inputTokens": 2228,
+        "outputTokens": 1282,
+        "totalTokens": 3510
+      },
+      "extractionStatus": "ai",
+      "event": {
+        "isCorporateAction": true,
+        "eventType": "executiveChange",
+        "summary": "Apple disclosed new compensation arrangements for John Ternus, appointed CEO, and Tim Cook, appointed Executive Chair, effective September 2026. The arrangements include increased salaries and equity awards valued at millions of dollars.",
+        "parties": [
+          {
+            "name": "Apple Inc.",
+            "role": "issuer"
+          },
+          {
+            "name": "John Ternus",
+            "role": "executive"
+          },
+          {
+            "name": "Tim Cook",
+            "role": "executive"
+          }
+        ],
+        "eventDate": "2026-09-01",
+        "amounts": [
+          {
+            "label": "John Ternus annual salary",
+            "value": 3000000,
+            "currency": "USD",
+            "unit": "USD"
+          },
+          {
+            "label": "John Ternus prorated RSU award target value",
+            "value": 2500000,
+            "currency": "USD",
+            "unit": "USD"
+          },
+          {
+            "label": "John Ternus annual equity award target value",
+            "value": 55000000,
+            "currency": "USD",
+            "unit": "USD"
+          },
+          {
+            "label": "Tim Cook annual salary",
+            "value": 2000000,
+            "currency": "USD",
+            "unit": "USD"
+          },
+          {
+            "label": "Tim Cook equity award target value",
+            "value": 45000000,
+            "currency": "USD",
+            "unit": "USD"
+          }
+        ],
+        "financialImplications": "The compensation changes increase cash salary expense and grant equity awards with target values of $2.5 million, $55 million for John Ternus and $45 million for Tim Cook, which could dilute existing shareholders through the issuance of RSUs.",
+        "confidence": "high"
+      },
+      "evidence": {
+        "form": "8-K/A",
+        "accessionNumber": "0001140361-26-035325",
+        "filingDate": "2026-09-01",
+        "reportDate": "2026-04-17",
+        "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+        "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/",
+        "excerpts": [
+          "Mr. Ternus’ annual salary was increased to $3 million on the Transition Date.",
+          "The prorated RSU award has a target value of $2.5 million.",
+          "Mr. Cook’s annual salary will be $2 million, effective on September 26, 2026."
+        ],
+        "excerptsVerified": true,
+        "excerptsRejected": 0
+      }
+    },
+    {
+      "form": "8-K",
+      "tier": 1,
+      "accessionNumber": "0000320193-26-000018",
+      "filingDate": "2026-07-30",
+      "reportDate": "2026-07-30",
+      "primaryDocDescription": "8-K",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+      "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/",
+      "documentChars": 3471,
+      "documentTruncated": false,
+      "extractionUsage": {
+        "modelId": "openai/gpt-oss-120b",
+        "inputTokens": 1856,
+        "outputTokens": 623,
+        "totalTokens": 2479
+      },
+      "extractionStatus": "ai",
+      "event": {
+        "isCorporateAction": false,
+        "eventType": "earnings",
+        "summary": "Apple Inc. issued a press release on July 30, 2026 reporting its third fiscal quarter financial results. The filing includes the press release as Exhibit 99.1 and does not disclose any transaction that would affect valuation, ownership, or financial condition.",
+        "parties": [
+          {
+            "name": "Apple Inc.",
+            "role": "issuer"
+          }
+        ],
+        "eventDate": "2026-07-30",
+        "amounts": [],
+        "financialImplications": "The filing merely reports quarterly results and does not indicate any dilution, leverage change, change of control, or other financial impact.",
+        "confidence": "high"
+      },
+      "evidence": {
+        "form": "8-K",
+        "accessionNumber": "0000320193-26-000018",
+        "filingDate": "2026-07-30",
+        "reportDate": "2026-07-30",
+        "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+        "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/",
+        "excerpts": [
+          "On July 30, 2026, Apple Inc. (“Apple”) issued a press release regarding Apple’s financial results for its third fiscal quarter ended June 27, 2026.",
+          "Exhibit Number Exhibit Description 99.1 Press release issued by Apple Inc. on July 30, 2026.",
+          "Item 2.02 Results of Operations and Financial Condition."
+        ],
+        "excerptsVerified": true,
+        "excerptsRejected": 0
+      }
+    },
+    {
+      "form": "8-K",
+      "tier": 1,
+      "accessionNumber": "0000320193-26-000011",
+      "filingDate": "2026-04-30",
+      "reportDate": "2026-04-30",
+      "primaryDocDescription": "8-K",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm",
+      "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/",
+      "documentChars": 3477,
+      "documentTruncated": false,
+      "extractionUsage": {
+        "modelId": "openai/gpt-oss-120b",
+        "inputTokens": 1856,
+        "outputTokens": 691,
+        "totalTokens": 2547
+      },
+      "extractionStatus": "ai",
+      "event": {
+        "isCorporateAction": false,
+        "eventType": "earnings",
+        "summary": "Apple Inc. filed a Form 8‑K to disclose its second fiscal quarter 2026 financial results via a press release dated April 30, 2026. No corporate action affecting valuation, ownership, or financial condition was reported.",
+        "parties": [
+          {
+            "name": "Apple Inc.",
+            "role": "issuer"
+          }
+        ],
+        "eventDate": "2026-04-30",
+        "amounts": [],
+        "financialImplications": "The filing reports quarterly financial results and does not indicate any dilution, leverage change, change of control, or other financial impact.",
+        "confidence": "high"
+      },
+      "evidence": {
+        "form": "8-K",
+        "accessionNumber": "0000320193-26-000011",
+        "filingDate": "2026-04-30",
+        "reportDate": "2026-04-30",
+        "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm",
+        "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/",
+        "excerpts": [
+          "On April 30, 2026, Apple Inc. (“Apple”) issued a press release regarding Apple’s financial results for its second fiscal quarter ended March 28, 2026.",
+          "Item 2.02 Results of Operations and Financial Condition.",
+          "Exhibit Number Exhibit Description 99.1 Press release issued by Apple Inc. on April 30, 2026."
+        ],
+        "excerptsVerified": true,
+        "excerptsRejected": 0
+      }
+    }
+  ],
+  "summary": {
+    "filings": 3,
+    "extracted": 3,
+    "skipped": 0,
+    "failed": 0,
+    "notCorporateAction": 2,
+    "byTier": {
+      "1": 3
+    },
+    "byEventType": {
+      "executiveChange": 1,
+      "earnings": 2
+    }
+  },
+  "extraction": {
+    "enabled": true,
+    "model": "openai/gpt-oss-120b",
+    "documents": 3,
+    "inputTokens": 5940,
+    "outputTokens": 2596,
+    "totalTokens": 8536
+  },
+  "errors": []
+}

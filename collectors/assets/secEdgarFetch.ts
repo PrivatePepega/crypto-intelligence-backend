@@ -2,6 +2,7 @@ import "dotenv/config";
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 /**
  * SEC Edgar data collector.
@@ -31,21 +32,21 @@ import path from "node:path";
  * Pads a CIK to 10 digits with leading zeros (SEC requirement).
  * e.g., "320193" → "0000320193"
  */
-function padCik(cik: string | number): string {
+export function padCik(cik: string | number): string {
   return String(cik).padStart(10, "0");
 }
 
-const SEC_WWW_BASE = "https://www.sec.gov";
-const SEC_DATA_BASE = "https://data.sec.gov";
-const USER_AGENT = "CryptoIntelligencePlatform fernandojcastellanos@gmail.com";
+export const SEC_WWW_BASE = "https://www.sec.gov";
+export const SEC_DATA_BASE = "https://data.sec.gov";
+export const USER_AGENT = "CryptoIntelligencePlatform fernandojcastellanos@gmail.com";
 
-const OUTPUT_DIR = path.resolve(process.cwd(), "collectors/assets/data");
+export const OUTPUT_DIR = path.resolve(process.cwd(), "collectors/assets/data");
 
 // Rate limiting: min delay between requests (1000ms = 1 req/sec max)
 const MIN_REQUEST_INTERVAL_MS = 1000;
 let lastRequestTime = 0;
 
-async function rateLimitedFetch(url: string, opts: RequestInit = {}): Promise<Response> {
+export async function rateLimitedFetch(url: string, opts: RequestInit = {}): Promise<Response> {
   // Enforce minimum interval between requests
   const now = Date.now();
   const elapsed = now - lastRequestTime;
@@ -87,10 +88,63 @@ async function rateLimitedFetch(url: string, opts: RequestInit = {}): Promise<Re
   return response;
 }
 
-async function saveJson(filename: string, data: unknown): Promise<void> {
+export async function saveJson(filename: string, data: unknown): Promise<void> {
   const filePath = path.join(OUTPUT_DIR, filename);
   await fs.writeFile(filePath, JSON.stringify(data, null, 2) + "\n");
   console.log(`  ✓ Wrote ${filePath}`);
+}
+
+/**
+ * Loads a company's submissions document, preferring the cached copy under
+ * `collectors/assets/data/` so repeated research runs do not re-download a
+ * payload that changes only when the company files.
+ *
+ * Pass `refresh: true` to force a fresh request.
+ */
+export async function loadCompanySubmissions(
+  cik: string | number,
+  refresh = false,
+): Promise<Record<string, unknown>> {
+  const filename = `Edgar submissions_CIK${cik}.json`;
+  const filePath = path.join(OUTPUT_DIR, filename);
+
+  if (!refresh) {
+    try {
+      return JSON.parse(await fs.readFile(filePath, "utf-8")) as Record<string, unknown>;
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
+        throw error;
+      }
+    }
+  }
+
+  const url = `${SEC_DATA_BASE}/submissions/CIK${padCik(cik)}.json`;
+  const response = await rateLimitedFetch(url, { headers: { Accept: "application/json" } });
+  if (!response.ok) {
+    throw new Error(`SEC submissions request failed: ${response.status} for ${url}`);
+  }
+
+  const data = (await response.json()) as Record<string, unknown>;
+  await saveJson(filename, data);
+  return data;
+}
+
+/**
+ * Fetches a filing document as text.
+ *
+ * Documents are read transiently for extraction and are deliberately not
+ * persisted: the collector stores the document URL, not a copy of the filing.
+ */
+export async function fetchSecText(url: string): Promise<string> {
+  const response = await rateLimitedFetch(url, {
+    headers: { Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" },
+  });
+
+  if (!response.ok) {
+    throw new Error(`SEC document request failed: ${response.status} for ${url}`);
+  }
+
+  return response.text();
 }
 
 /**
@@ -196,6 +250,371 @@ async function fetchXbrlFrames(
   console.log(`    Status: ${response.status}`);
 }
 
+/**
+ * Construct the directory index URL for a filing.
+ *
+ * https://www.sec.gov/Archives/edgar/data/{CIK_without_leading_zeros}/{accession_number_without_dashes}/
+ *
+ * This is the stable human-readable evidence link for a filing: it lists every
+ * document in the submission rather than only the primary document.
+ */
+export function getFilingIndexUrl(cik: string | number, accessionNumber: string): string {
+  const cikWithoutZeros = String(cik).replace(/^0+/, "");
+  const accessionNoDashes = accessionNumber.replace(/-/g, "");
+  return `${SEC_WWW_BASE}/Archives/edgar/data/${cikWithoutZeros}/${accessionNoDashes}/`;
+}
+
+/**
+ * Construct the document URL for a SEC filing.
+ *
+ * https://www.sec.gov/Archives/edgar/data/{CIK_without_leading_zeros}/{accession_number_without_dashes}/{primaryDocument}
+ *
+ * Example:
+ *   https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm
+ */
+export function getFilingDocumentUrl(
+  cik: string | number,
+  accessionNumber: string,
+  primaryDocument: string,
+): string {
+  const cikWithoutZeros = String(cik).replace(/^0+/, "");
+  const accessionNoDashes = accessionNumber.replace(/-/g, "");
+  return `${SEC_WWW_BASE}/Archives/edgar/data/${cikWithoutZeros}/${accessionNoDashes}/${primaryDocument}`;
+}
+
+/**
+ * Construct the URL of the raw (non-XSL-rendered) filing document.
+ *
+ * Submissions `primaryDocument` values for ownership and 13F filings usually
+ * include an XSL viewer directory, e.g.:
+ *   xslF345X05/wk-form4_1234567890.xml
+ *   xslForm13F_X02/primary_doc.xml
+ * The underlying document lives in the filing directory itself.
+ */
+export function getRawFilingDocumentUrl(
+  cik: string | number,
+  accessionNumber: string,
+  primaryDocument: string,
+): string {
+  const filename = primaryDocument.includes("/")
+    ? primaryDocument.slice(primaryDocument.lastIndexOf("/") + 1)
+    : primaryDocument;
+  return getFilingDocumentUrl(cik, accessionNumber, filename);
+}
+
+/**
+ * Represents a parsed SEC filing from the submissions API.
+ */
+export interface SecFiling {
+  form: string;
+  filingDate: string;
+  reportDate: string;
+  accessionNumber: string;
+  primaryDocument: string;
+  primaryDocDescription: string;
+  documentUrl: string;
+}
+
+/**
+ * Parses the filings.recent parallel arrays from a submissions JSON response
+ * into an array of SecFiling objects with document URLs.
+ *
+ * The JSON fields are parallel arrays: index i across every field describes
+ * the same filing.
+ */
+export function parseRecentFilings(
+  submissions: Record<string, unknown>,
+  cik: string | number,
+): SecFiling[] {
+  const recent = submissions["filings"] as { recent?: Record<string, unknown[]> } | undefined;
+
+  if (!recent?.recent) {
+    return [];
+  }
+
+  const r = recent.recent;
+  const forms = (r["form"] ?? []) as string[];
+  const filingDates = (r["filingDate"] ?? []) as string[];
+  const reportDates = (r["reportDate"] ?? []) as string[];
+  const accessionNumbers = (r["accessionNumber"] ?? []) as string[];
+  const primaryDocuments = (r["primaryDocument"] ?? []) as string[];
+  const primaryDocDescriptions = (r["primaryDocDescription"] ?? []) as string[];
+
+  const count = forms.length;
+  const filings: SecFiling[] = [];
+
+  for (let i = 0; i < count; i++) {
+    filings.push({
+      form: forms[i] ?? "",
+      filingDate: filingDates[i] ?? "",
+      reportDate: reportDates[i] ?? "",
+      accessionNumber: accessionNumbers[i] ?? "",
+      primaryDocument: primaryDocuments[i] ?? "",
+      primaryDocDescription: primaryDocDescriptions[i] ?? "",
+      documentUrl: getFilingDocumentUrl(cik, accessionNumbers[i] ?? "", primaryDocuments[i] ?? ""),
+    });
+  }
+
+  return filings;
+}
+
+/**
+ * Find the latest filing for a given form type.
+ * Filters by form type and selects the newest filingDate.
+ */
+export function findLatestFilingByForm(filings: SecFiling[], formType: string): SecFiling | null {
+  const matches = filings.filter((f) => f.form === formType);
+  if (matches.length === 0) {
+    return null;
+  }
+
+  return matches.reduce((latest, current) => {
+    if (!latest.filingDate) return current;
+    if (!current.filingDate) return latest;
+    return current.filingDate >= latest.filingDate ? current : latest;
+  });
+}
+
+/**
+ * Find a filing by form type and report date (fiscal period).
+ * Filters by form type, then matches reportDate to the desired period.
+ */
+export function findFilingByReportDate(
+  filings: SecFiling[],
+  formType: string,
+  reportDate: string,
+): SecFiling | null {
+  const matches = filings.filter((f) => f.form === formType && f.reportDate === reportDate);
+  if (matches.length === 0) {
+    return null;
+  }
+
+  return matches[0] ?? null;
+}
+
+/**
+ * Find the newest filing whose filingDate is on or before the given date.
+ * This avoids using information that was not yet public at the time.
+ */
+export function findFilingAsOfDate(
+  filings: SecFiling[],
+  formType: string | null,
+  asOfDate: string,
+): SecFiling | null {
+  const candidates = filings.filter((f) => {
+    if (formType && f.form !== formType) {
+      return false;
+    }
+    return f.filingDate <= asOfDate;
+  });
+
+  if (candidates.length === 0) {
+    return null;
+  }
+
+  return candidates.reduce((latest, current) => {
+    if (!latest.filingDate) return current;
+    if (!current.filingDate) return latest;
+    return current.filingDate >= latest.filingDate ? current : latest;
+  });
+}
+
+/**
+ * Find 8-K filings (recent events) within a date range.
+ * Filing date must be on or after fromDate and on or before toDate.
+ */
+export function findFilingsByFormAndDateRange(
+  filings: SecFiling[],
+  formType: string,
+  fromDate: string,
+  toDate: string,
+): SecFiling[] {
+  return filings.filter(
+    (f) => f.form === formType && f.filingDate >= fromDate && f.filingDate <= toDate,
+  );
+}
+
+/**
+ * Insider and ownership research forms.
+ */
+const INSIDER_OWNERSHIP_FORMS = new Set(["3", "4", "5", "13F-HR", "13F-HR/A", "SC 13D", "SC 13G"]);
+
+/**
+ * Find insider or ownership filings.
+ * Filters for forms 3, 4, 5, 13F-HR, 13F-HR/A, SC 13D, SC 13G and amendments.
+ */
+export function findInsiderFilings(filings: SecFiling[]): SecFiling[] {
+  return filings.filter((f) => INSIDER_OWNERSHIP_FORMS.has(f.form));
+}
+
+/**
+ * Selection logic for finding a filing document URL.
+ *
+ * Priority:
+ * 1. Search recent filings using the provided criteria
+ * 2. If no match and historical files exist, note which file to check next
+ *
+ * Returns the matching filing or null with guidance on next steps.
+ */
+export function searchFilingDocument(
+  submissions: Record<string, unknown>,
+  cik: string | number,
+  options: {
+    formType?: string;
+    reportDate?: string;
+    asOfDate?: string;
+    fromDate?: string;
+    toDate?: string;
+    insiderOwnership?: boolean;
+  },
+): {
+  filing: SecFiling | null;
+  historicalFilesToCheck: string[];
+  message: string;
+} {
+  const filings = parseRecentFilings(submissions, cik);
+  const historicalFiles: string[] = [];
+
+  // Collect historical file names for fallback
+  const files = (submissions["filings"] as { files?: Array<{ name: string }> } | undefined)?.files;
+  if (files) {
+    for (const file of files) {
+      historicalFiles.push(file.name);
+    }
+  }
+
+  let filing: SecFiling | null = null;
+  let message = "";
+
+  if (options.insiderOwnership) {
+    const insider = findInsiderFilings(filings);
+    if (insider.length > 0) {
+      // Return the most recent insider filing
+      filing = insider.reduce((latest, current) => {
+        if (!latest.filingDate) return current;
+        if (!current.filingDate) return latest;
+        return current.filingDate >= latest.filingDate ? current : latest;
+      });
+      message = `Found ${insider.length} insider/ownership filing(s). Returned the most recent.`;
+    } else {
+      message = "No insider/ownership filings found in recent filings. Check historical files.";
+    }
+  } else if (options.reportDate && options.formType) {
+    filing = findFilingByReportDate(filings, options.formType, options.reportDate);
+    message = filing
+      ? `Found ${options.formType} filing for report date ${options.reportDate}.`
+      : `No ${options.formType} filing found for report date ${options.reportDate} in recent filings.`;
+  } else if (options.asOfDate) {
+    filing = findFilingAsOfDate(filings, options.formType ?? null, options.asOfDate);
+    message = filing
+      ? `Found latest filing on or before ${options.asOfDate}.`
+      : `No filing found on or before ${options.asOfDate} in recent filings.`;
+  } else if (options.fromDate && options.toDate && options.formType) {
+    const range = findFilingsByFormAndDateRange(
+      filings,
+      options.formType,
+      options.fromDate,
+      options.toDate,
+    );
+    if (range.length > 0) {
+      // Return the most recent in the range
+      filing = range.reduce((latest, current) => {
+        if (!latest.filingDate) return current;
+        if (!current.filingDate) return latest;
+        return current.filingDate >= latest.filingDate ? current : latest;
+      });
+      message = `Found ${range.length} ${options.formType} filing(s) in date range. Returned the most recent.`;
+    } else {
+      message = `No ${options.formType} filings found in date range ${options.fromDate} to ${options.toDate}.`;
+    }
+  } else if (options.formType) {
+    filing = findLatestFilingByForm(filings, options.formType);
+    message = filing
+      ? `Found latest ${options.formType} filing.`
+      : `No ${options.formType} filings found in recent filings.`;
+  } else {
+    message =
+      "No search criteria provided. Specify formType, reportDate, asOfDate, date range, or insiderOwnership.";
+  }
+
+  if (!filing && historicalFiles.length > 0) {
+    message += ` No match in recent filings. Check historical file(s): ${historicalFiles.join(", ")}`;
+  }
+
+  return { filing, historicalFilesToCheck: historicalFiles, message };
+}
+
+/**
+ * Month names used by SEC date formats.
+ */
+const MONTHS_BY_NAME: Record<string, string> = {
+  JAN: "01",
+  FEB: "02",
+  MAR: "03",
+  APR: "04",
+  MAY: "05",
+  JUN: "06",
+  JUL: "07",
+  AUG: "08",
+  SEP: "09",
+  OCT: "10",
+  NOV: "11",
+  DEC: "12",
+};
+
+/**
+ * Converts SEC dates to YYYY-MM-DD.
+ *
+ * Accepts the formats that appear across the endpoints this collector uses:
+ *   - YYYY-MM-DD  (submissions JSON, bulk TSVs)
+ *   - DD-MON-YYYY (bulk TSVs)
+ *   - MM-DD-YYYY  (13F XML)
+ *   - MM/DD/YYYY  (13D/13G XML)
+ *
+ * Returns null for unknown formats instead of guessing.
+ */
+export function toIsoDate(value: string | null | undefined): string | null {
+  if (!value) {
+    return null;
+  }
+
+  const trimmed = value.trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+    return trimmed;
+  }
+
+  const dayMonth = /^(\d{1,2})-([A-Za-z]{3})-(\d{4})$/.exec(trimmed);
+  if (dayMonth) {
+    const day = dayMonth[1];
+    const monthToken = dayMonth[2];
+    const year = dayMonth[3];
+    if (!day || !monthToken || !year) {
+      return null;
+    }
+    const month = MONTHS_BY_NAME[monthToken.toUpperCase()];
+    return month ? `${year}-${month}-${day.padStart(2, "0")}` : null;
+  }
+
+  const monthDay = /^(\d{1,2})[-/](\d{1,2})[-/](\d{4})$/.exec(trimmed);
+  if (monthDay) {
+    const month = monthDay[1];
+    const day = monthDay[2];
+    const year = monthDay[3];
+    if (!month || !day || !year) {
+      return null;
+    }
+    return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+  }
+
+  return null;
+}
+
+/**
+ * Standalone entrypoint: refresh the general SEC Edgar data files.
+ *
+ * Guarded so importing this module from a collector does not start network
+ * requests. The collectors call the exported helpers directly.
+ */
 async function main(): Promise<void> {
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
 
@@ -215,7 +634,12 @@ async function main(): Promise<void> {
   console.log(`  Output directory: ${OUTPUT_DIR}`);
 }
 
-main().catch((error) => {
-  console.error("SEC Edgar collection failed:", error);
-  process.exitCode = 1;
-});
+const isDirectRun =
+  process.argv[1] !== undefined && import.meta.url === pathToFileURL(process.argv[1]).href;
+
+if (isDirectRun) {
+  main().catch((error: unknown) => {
+    console.error("SEC Edgar collection failed:", error);
+    process.exitCode = 1;
+  });
+}

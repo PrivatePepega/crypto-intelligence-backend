@@ -1,0 +1,259 @@
+{
+  "source": "SEC EDGAR Forms 3/4/5",
+  "cik": "320193",
+  "entityName": "Apple Inc.",
+  "generatedAt": "2026-10-27T13:53:51.865Z",
+  "requestedForms": [
+    "5"
+  ],
+  "filings": [
+    {
+      "form": "5",
+      "documentType": "5",
+      "accessionNumber": "0000320193-24-000102",
+      "filingDate": "2024-10-01",
+      "reportDate": "2024-09-28",
+      "periodOfReport": "2024-09-28",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/xslF345X05/wk-form5_1727822122.xml",
+      "xmlUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/wk-form5_1727822122.xml",
+      "issuer": {
+        "cik": "0000320193",
+        "name": "Apple Inc.",
+        "tradingSymbol": "AAPL"
+      },
+      "reportingOwners": [
+        {
+          "cik": "0001059235",
+          "name": "WAGNER SUSAN",
+          "relationship": {
+            "isDirector": true,
+            "isOfficer": false,
+            "isTenPercentOwner": false,
+            "isOther": false,
+            "officerTitle": null
+          }
+        }
+      ],
+      "reportingOwner": {
+        "cik": "0001059235",
+        "name": "WAGNER SUSAN",
+        "relationship": {
+          "isDirector": true,
+          "isOfficer": false,
+          "isTenPercentOwner": false,
+          "isOther": false,
+          "officerTitle": null
+        }
+      },
+      "aff10b5One": false,
+      "noSecuritiesOwned": null,
+      "notSubjectToSection16": false,
+      "form3HoldingsReported": false,
+      "form4TransactionsReported": false,
+      "footnotes": {
+        "F1": "Shares acquired by spouse pursuant to an inheritance."
+      },
+      "transactions": [
+        {
+          "form": "5",
+          "accessionNumber": "0000320193-24-000102",
+          "filingDate": "2024-10-01",
+          "reportDate": "2024-09-28",
+          "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/xslF345X05/wk-form5_1727822122.xml",
+          "xmlUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/wk-form5_1727822122.xml",
+          "issuerCik": "0000320193",
+          "issuerName": "Apple Inc.",
+          "issuerTradingSymbol": "AAPL",
+          "insiderCik": "0001059235",
+          "insiderName": "WAGNER SUSAN",
+          "relationship": {
+            "isDirector": true,
+            "isOfficer": false,
+            "isTenPercentOwner": false,
+            "isOther": false,
+            "officerTitle": null
+          },
+          "table": "nonDerivative",
+          "isHolding": false,
+          "lineNumber": 1,
+          "securityTitle": "Common Stock",
+          "transactionDate": "2024-04-18",
+          "transactionCode": "W",
+          "transactionFormType": "5",
+          "transactionType": "other",
+          "transactionCategory": "acquisition",
+          "isOpenMarket": false,
+          "equitySwapInvolved": false,
+          "acquiredDisposedCode": "A",
+          "shares": 42,
+          "pricePerShare": 0,
+          "transactionValue": 0,
+          "sharesOwnedFollowingTransaction": 6042,
+          "directOrIndirectOwnership": "I",
+          "natureOfOwnership": "By spouse",
+          "underlyingSecurityTitle": null,
+          "underlyingSecurityShares": null,
+          "conversionOrExercisePrice": null,
+          "exerciseDate": null,
+          "expirationDate": null,
+          "footnotes": [
+            "Shares acquired by spouse pursuant to an inheritance."
+          ]
+        },
+        {
+          "form": "5",
+          "accessionNumber": "0000320193-24-000102",
+          "filingDate": "2024-10-01",
+          "reportDate": "2024-09-28",
+          "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/xslF345X05/wk-form5_1727822122.xml",
+          "xmlUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/wk-form5_1727822122.xml",
+          "issuerCik": "0000320193",
+          "issuerName": "Apple Inc.",
+          "issuerTradingSymbol": "AAPL",
+          "insiderCik": "0001059235",
+          "insiderName": "WAGNER SUSAN",
+          "relationship": {
+            "isDirector": true,
+            "isOfficer": false,
+            "isTenPercentOwner": false,
+            "isOther": false,
+            "officerTitle": null
+          },
+          "table": "nonDerivative",
+          "isHolding": true,
+          "lineNumber": 2,
+          "securityTitle": "Common Stock",
+          "transactionDate": null,
+          "transactionCode": null,
+          "transactionFormType": null,
+          "transactionType": "holding",
+          "transactionCategory": null,
+          "isOpenMarket": false,
+          "equitySwapInvolved": null,
+          "acquiredDisposedCode": null,
+          "shares": 60975,
+          "pricePerShare": null,
+          "transactionValue": null,
+          "sharesOwnedFollowingTransaction": 60975,
+          "directOrIndirectOwnership": "D",
+          "natureOfOwnership": null,
+          "underlyingSecurityTitle": null,
+          "underlyingSecurityShares": null,
+          "conversionOrExercisePrice": null,
+          "exerciseDate": null,
+          "expirationDate": null,
+          "footnotes": []
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "form": "5",
+      "accessionNumber": "0000320193-24-000102",
+      "filingDate": "2024-10-01",
+      "reportDate": "2024-09-28",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/xslF345X05/wk-form5_1727822122.xml",
+      "xmlUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/wk-form5_1727822122.xml",
+      "issuerCik": "0000320193",
+      "issuerName": "Apple Inc.",
+      "issuerTradingSymbol": "AAPL",
+      "insiderCik": "0001059235",
+      "insiderName": "WAGNER SUSAN",
+      "relationship": {
+        "isDirector": true,
+        "isOfficer": false,
+        "isTenPercentOwner": false,
+        "isOther": false,
+        "officerTitle": null
+      },
+      "table": "nonDerivative",
+      "isHolding": false,
+      "lineNumber": 1,
+      "securityTitle": "Common Stock",
+      "transactionDate": "2024-04-18",
+      "transactionCode": "W",
+      "transactionFormType": "5",
+      "transactionType": "other",
+      "transactionCategory": "acquisition",
+      "isOpenMarket": false,
+      "equitySwapInvolved": false,
+      "acquiredDisposedCode": "A",
+      "shares": 42,
+      "pricePerShare": 0,
+      "transactionValue": 0,
+      "sharesOwnedFollowingTransaction": 6042,
+      "directOrIndirectOwnership": "I",
+      "natureOfOwnership": "By spouse",
+      "underlyingSecurityTitle": null,
+      "underlyingSecurityShares": null,
+      "conversionOrExercisePrice": null,
+      "exerciseDate": null,
+      "expirationDate": null,
+      "footnotes": [
+        "Shares acquired by spouse pursuant to an inheritance."
+      ]
+    },
+    {
+      "form": "5",
+      "accessionNumber": "0000320193-24-000102",
+      "filingDate": "2024-10-01",
+      "reportDate": "2024-09-28",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/xslF345X05/wk-form5_1727822122.xml",
+      "xmlUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000102/wk-form5_1727822122.xml",
+      "issuerCik": "0000320193",
+      "issuerName": "Apple Inc.",
+      "issuerTradingSymbol": "AAPL",
+      "insiderCik": "0001059235",
+      "insiderName": "WAGNER SUSAN",
+      "relationship": {
+        "isDirector": true,
+        "isOfficer": false,
+        "isTenPercentOwner": false,
+        "isOther": false,
+        "officerTitle": null
+      },
+      "table": "nonDerivative",
+      "isHolding": true,
+      "lineNumber": 2,
+      "securityTitle": "Common Stock",
+      "transactionDate": null,
+      "transactionCode": null,
+      "transactionFormType": null,
+      "transactionType": "holding",
+      "transactionCategory": null,
+      "isOpenMarket": false,
+      "equitySwapInvolved": null,
+      "acquiredDisposedCode": null,
+      "shares": 60975,
+      "pricePerShare": null,
+      "transactionValue": null,
+      "sharesOwnedFollowingTransaction": 60975,
+      "directOrIndirectOwnership": "D",
+      "natureOfOwnership": null,
+      "underlyingSecurityTitle": null,
+      "underlyingSecurityShares": null,
+      "conversionOrExercisePrice": null,
+      "exerciseDate": null,
+      "expirationDate": null,
+      "footnotes": []
+    }
+  ],
+  "summary": {
+    "filings": 1,
+    "forms": {
+      "5": 1
+    },
+    "transactions": 2,
+    "holdings": 1,
+    "purchases": 0,
+    "sales": 0,
+    "awards": 0,
+    "other": 1,
+    "purchaseShares": 0,
+    "saleShares": 0,
+    "purchaseValue": 0,
+    "saleValue": 0
+  },
+  "errors": []
+}

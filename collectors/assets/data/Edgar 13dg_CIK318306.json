@@ -1,0 +1,234 @@
+{
+  "source": "SEC EDGAR Schedules 13D/13G",
+  "cik": "318306",
+  "entityName": "ABEONA THERAPEUTICS INC.",
+  "generatedAt": "2026-10-27T14:14:24.409Z",
+  "requestedForms": [
+    "13D",
+    "13G"
+  ],
+  "filings": [
+    {
+      "form": "SCHEDULE 13D",
+      "scheduleType": "13D",
+      "isAmendment": false,
+      "amendmentNumber": null,
+      "accessionNumber": "0001477932-26-006433",
+      "filingDate": "2026-10-23",
+      "reportDate": "2026-10-15",
+      "eventDate": "2026-10-15",
+      "issuerName": "ABEONA THERAPEUTICS INC.",
+      "issuerCik": "0000318306",
+      "issuerCusip": "00289Y206",
+      "securitiesClass": "Common Stock, $0.01 par value",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/318306/000147793226006433/primary_doc.xml",
+      "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/318306/000147793226006433/",
+      "extractionStatus": "xml",
+      "reportingPersons": [
+        {
+          "name": "James Russell Revocable Trust",
+          "cik": "0002089521",
+          "citizenshipOrOrganization": "NV",
+          "soleVotingPower": 0,
+          "sharedVotingPower": 3479963,
+          "soleDispositivePower": 0,
+          "sharedDispositivePower": 3479963,
+          "aggregateAmountOwned": 3479963,
+          "percentOfClass": 6.1,
+          "typeOfReportingPerson": "OO",
+          "memberOfGroup": "b",
+          "fundType": "PF"
+        },
+        {
+          "name": "James Russell",
+          "cik": null,
+          "citizenshipOrOrganization": "X1",
+          "soleVotingPower": 0,
+          "sharedVotingPower": 3479963,
+          "soleDispositivePower": 0,
+          "sharedDispositivePower": 3479963,
+          "aggregateAmountOwned": 3479963,
+          "percentOfClass": 6.1,
+          "typeOfReportingPerson": "IN",
+          "memberOfGroup": "b",
+          "fundType": "PF"
+        }
+      ],
+      "purposeOfTransaction": "The Reporting Persons originally acquired the Shares for investment purposes and reported their beneficial ownership on Schedule 13G. Over time, based on their review of the Issuer's public filings, press releases and other public communications, the Reporting Persons became concerned regarding the Issuer's operational execution, the consistency of management's public statements with subsequent operating results, and the Issuer's governance. Beginning in May 2026, the Reporting Persons communicated their concerns (as a shareholder in an informal manner), to the Issuer's management and board of directors (the \"Board\"). On October 14, 2026, Mr. Russell met electronically with two members of the Board: Faith L. Charles, Interim Chair of the Board and Chair of the Board's Nominating and Corporate Governance Committee, and Keith A. Goldan, Chair of the Board's Audit Committee. At that meeting, Mr. Russell presented a summary of his concerns, including the Board should consider adding additional independent directors, and expressed his view that a change in the Issuer's executive leadership should be explored. Mr. Russell also requested a written response from the Board. On October 15, 2026, Ms. Charles advised Mr. Russell that each of the concerns discussed have been shared with the full Board and should any action be taken, communications when released by the Issuer should be reviewed versus directly to him. The Reporting Persons intend to continue to engage with the Board and management regarding the business and affairs of the Issuer, including, without limitation, Board composition and leadership. Depending on the Board's response and other factors, the Reporting Persons may take further actions, which may include proposing or seeking to nominate candidates for election as directors at the Issuer's 2027 annual meeting of stockholders, voting against one or more incumbent directors, communicating with other stockholders of the Issuer, or seeking representation on the Board, directly or through designees. The Reporting Persons will not vote any Shares acquired on or after October 15, 2026 at any meeting of stockholders of the Issuer. Except as set forth herein, the Reporting Persons have no present plans or proposals that relate to or would result in any of the matters set forth in subparagraphs (a) through (j) of Item 4 of Schedule 13D. The Reporting Persons intend to review their investment on a continuing basis and, depending on various factors, may in the future take such actions with respect to their investment as they deem appropriate, including acquiring additional Shares or disposing of Shares, in each case subject to applicable law, or changing their intention with respect to any of the matters referenced in this Item 4.",
+      "sourceOfFunds": "The Shares reported herein were acquired with personal funds of the Trust for an aggregate purchase price of approximately $17,776,513.00 (excluding brokerage commissions). An additional 759,088 Shares acquired since the Schedule 13G were acquired for approximately $3,671,466.00. No borrowed funds were used.",
+      "evidence": {
+        "form": "SCHEDULE 13D",
+        "accessionNumber": "0001477932-26-006433",
+        "filingDate": "2026-10-23",
+        "reportDate": "2026-10-15",
+        "documentUrl": "https://www.sec.gov/Archives/edgar/data/318306/000147793226006433/primary_doc.xml",
+        "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/318306/000147793226006433/",
+        "excerpts": [
+          "Each of the Reporting Persons may be deemed to beneficially own 3,479,963 Shares, representing approximately 6.1% of the outstanding Shares, based on 57,184,017 Shares outstanding as of August 10, 2026, as reported in the Issuer's Quarterly Report on Form 10-Q for the quarter ended June 30, 2026."
+        ],
+        "excerptsVerified": true
+      },
+      "extractionUsage": null
+    },
+    {
+      "form": "SCHEDULE 13G/A",
+      "scheduleType": "13G",
+      "isAmendment": true,
+      "amendmentNumber": 2,
+      "accessionNumber": "0000919574-26-005538",
+      "filingDate": "2026-08-14",
+      "reportDate": "2026-06-30",
+      "eventDate": "2026-06-30",
+      "issuerName": "Abeona Therapeutics Inc.",
+      "issuerCik": "0000318306",
+      "issuerCusip": "00289Y206",
+      "securitiesClass": "Common Stock, $0.01 par value",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/318306/000091957426005538/primary_doc.xml",
+      "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/318306/000091957426005538/",
+      "extractionStatus": "xml",
+      "reportingPersons": [
+        {
+          "name": "Montanova Capital, LLC",
+          "cik": "0001569064",
+          "citizenshipOrOrganization": "DE",
+          "soleVotingPower": 0,
+          "sharedVotingPower": 500000,
+          "soleDispositivePower": 0,
+          "sharedDispositivePower": 500000,
+          "aggregateAmountOwned": 500000,
+          "percentOfClass": 0.9,
+          "typeOfReportingPerson": "IA",
+          "memberOfGroup": null,
+          "fundType": null
+        },
+        {
+          "name": "Aaron Cowen",
+          "cik": "0001569064",
+          "citizenshipOrOrganization": "X1",
+          "soleVotingPower": 0,
+          "sharedVotingPower": 500000,
+          "soleDispositivePower": 0,
+          "sharedDispositivePower": 500000,
+          "aggregateAmountOwned": 500000,
+          "percentOfClass": 0.9,
+          "typeOfReportingPerson": "HC",
+          "memberOfGroup": null,
+          "fundType": null
+        }
+      ],
+      "purposeOfTransaction": null,
+      "sourceOfFunds": null,
+      "evidence": {
+        "form": "SCHEDULE 13G/A",
+        "accessionNumber": "0000919574-26-005538",
+        "filingDate": "2026-08-14",
+        "reportDate": "2026-06-30",
+        "documentUrl": "https://www.sec.gov/Archives/edgar/data/318306/000091957426005538/primary_doc.xml",
+        "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/318306/000091957426005538/",
+        "excerpts": [],
+        "excerptsVerified": true
+      },
+      "extractionUsage": null
+    },
+    {
+      "form": "SCHEDULE 13G/A",
+      "scheduleType": "13G",
+      "isAmendment": true,
+      "amendmentNumber": 5,
+      "accessionNumber": "0001104659-26-062715",
+      "filingDate": "2026-05-15",
+      "reportDate": "2026-03-31",
+      "eventDate": "2026-03-31",
+      "issuerName": "ABEONA THERAPEUTICS INC.",
+      "issuerCik": "0000318306",
+      "issuerCusip": "00289Y206",
+      "securitiesClass": "Common Stock, $0.01 par value",
+      "documentUrl": "https://www.sec.gov/Archives/edgar/data/318306/000110465926062715/primary_doc.xml",
+      "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/318306/000110465926062715/",
+      "extractionStatus": "xml",
+      "reportingPersons": [
+        {
+          "name": "Nantahala Capital Management, LLC",
+          "cik": "0001472322",
+          "citizenshipOrOrganization": "MA",
+          "soleVotingPower": 0,
+          "sharedVotingPower": 5775350,
+          "soleDispositivePower": 0,
+          "sharedDispositivePower": 5775350,
+          "aggregateAmountOwned": 5775350,
+          "percentOfClass": 9.99,
+          "typeOfReportingPerson": "IA",
+          "memberOfGroup": null,
+          "fundType": null
+        },
+        {
+          "name": "Wilmot B. Harkey",
+          "cik": "0001472322",
+          "citizenshipOrOrganization": "X1",
+          "soleVotingPower": 0,
+          "sharedVotingPower": 5775350,
+          "soleDispositivePower": 0,
+          "sharedDispositivePower": 5775350,
+          "aggregateAmountOwned": 5775350,
+          "percentOfClass": 9.99,
+          "typeOfReportingPerson": "HC",
+          "memberOfGroup": null,
+          "fundType": null
+        },
+        {
+          "name": "Daniel Mack",
+          "cik": "0001472322",
+          "citizenshipOrOrganization": "X1",
+          "soleVotingPower": 0,
+          "sharedVotingPower": 5775350,
+          "soleDispositivePower": 0,
+          "sharedDispositivePower": 5775350,
+          "aggregateAmountOwned": 5775350,
+          "percentOfClass": 9.99,
+          "typeOfReportingPerson": "HC",
+          "memberOfGroup": null,
+          "fundType": null
+        }
+      ],
+      "purposeOfTransaction": null,
+      "sourceOfFunds": null,
+      "evidence": {
+        "form": "SCHEDULE 13G/A",
+        "accessionNumber": "0001104659-26-062715",
+        "filingDate": "2026-05-15",
+        "reportDate": "2026-03-31",
+        "documentUrl": "https://www.sec.gov/Archives/edgar/data/318306/000110465926062715/primary_doc.xml",
+        "filingIndexUrl": "https://www.sec.gov/Archives/edgar/data/318306/000110465926062715/",
+        "excerpts": [
+          "NANTAHALA CAPITAL PARTNERS LIMITED PARTNERSHIP, a fund advised by Nantahala, has the right to receive or the power to direct the receipt of dividends from, or the proceeds from the sale of more than five percent of the outstanding shares of common stock beneficially owned by Nantahala reported herein."
+        ],
+        "excerptsVerified": true
+      },
+      "extractionUsage": null
+    }
+  ],
+  "summary": {
+    "filings": 3,
+    "schedule13D": 1,
+    "schedule13G": 2,
+    "amendments": 2,
+    "reportingPersons": 7,
+    "xmlFilings": 3,
+    "aiFilings": 0,
+    "skippedFilings": 0,
+    "highestReportedPercent": {
+      "reportingPerson": "Nantahala Capital Management, LLC",
+      "percentOfClass": 9.99,
+      "accessionNumber": "0001104659-26-062715"
+    }
+  },
+  "extraction": {
+    "enabled": false,
+    "model": null,
+    "documents": 0,
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "totalTokens": 0
+  },
+  "errors": []
+}

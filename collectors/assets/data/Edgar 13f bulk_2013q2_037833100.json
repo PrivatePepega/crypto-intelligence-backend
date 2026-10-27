@@ -1,0 +1,5234 @@
+{
+  "source": "SEC EDGAR Form 13F bulk data set",
+  "dataset": {
+    "year": 2013,
+    "quarter": 2,
+    "url": null,
+    "zipPath": "C:\\Users\\maxfe\\AppData\\Local\\Temp\\13f_2013q2.zip",
+    "generatedAt": "2026-10-27T13:55:27.320Z"
+  },
+  "target": {
+    "cusips": [
+      "037833100"
+    ],
+    "assetId": "AAPL",
+    "unmatchedCusips": []
+  },
+  "managers": [
+    {
+      "cik": "0001547007",
+      "managerName": "Dorsal Capital Management, LLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 120000,
+              "shareType": "SH",
+              "valueAsReported": 53119200,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 53119200000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-22",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001144204-13-030902",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001144204-13-030902",
+                  "filingDate": "2013-05-22",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001144204-13-030902",
+              "filingDate": "2013-05-22",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 53119200000,
+            "sharesByType": {
+              "SH": 120000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000886982",
+      "managerName": "GOLDMAN SACHS GROUP INC",
+      "periods": [
+        {
+          "reportPeriod": "2012-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": null,
+              "shares": 6361655,
+              "shareType": "SH",
+              "valueAsReported": 3385500,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3385500000,
+              "investmentDiscretions": [
+                "DFND",
+                "OTR"
+              ],
+              "otherManagers": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "votingAuthority": {
+                "sole": 5488057,
+                "shared": 13088,
+                "none": 860510
+              },
+              "entryCount": 8,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0000769993-13-000385",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000385",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Call",
+              "shares": 3570400,
+              "shareType": "SH",
+              "valueAsReported": 1900070,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1900070000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 3570400,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0000769993-13-000385",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000385",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Put",
+              "shares": 2499200,
+              "shareType": "SH",
+              "valueAsReported": 1330006,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1330006000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 2499200,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0000769993-13-000385",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000385",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000769993-13-000385",
+              "filingDate": "2013-06-14",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 3,
+            "valueUsd": 6615576000,
+            "sharesByType": {
+              "SH": 12431255
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-09-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": null,
+              "shares": 7572935,
+              "shareType": "SH",
+              "valueAsReported": 5051944,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 5051944000,
+              "investmentDiscretions": [
+                "DFND",
+                "OTR"
+              ],
+              "otherManagers": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "votingAuthority": {
+                "sole": 6859160,
+                "shared": 12804,
+                "none": 700971
+              },
+              "entryCount": 8,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0000769993-13-000384",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000384",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Put",
+              "shares": 2157000,
+              "shareType": "SH",
+              "valueAsReported": 1438945,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1438945000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "2",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 2157000,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 3,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0000769993-13-000384",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000384",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Call",
+              "shares": 2037100,
+              "shareType": "SH",
+              "valueAsReported": 1358960,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1358960000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 2037100,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0000769993-13-000384",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000384",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000769993-13-000384",
+              "filingDate": "2013-06-14",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 3,
+            "valueUsd": 7849849000,
+            "sharesByType": {
+              "SH": 11767035
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-06-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": null,
+              "shares": 5885240,
+              "shareType": "SH",
+              "valueAsReported": 3436978,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3436978000,
+              "investmentDiscretions": [
+                "DFND",
+                "OTR"
+              ],
+              "otherManagers": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "votingAuthority": {
+                "sole": 5125779,
+                "shared": 15187,
+                "none": 744274
+              },
+              "entryCount": 8,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-06-30",
+              "accessionNumber": "0000769993-13-000383",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000383",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Call",
+              "shares": 2629500,
+              "shareType": "SH",
+              "valueAsReported": 1535628,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1535628000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 2629500,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-06-30",
+              "accessionNumber": "0000769993-13-000383",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000383",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Put",
+              "shares": 1973000,
+              "shareType": "SH",
+              "valueAsReported": 1152232,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1152232000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 1973000,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-06-30",
+              "accessionNumber": "0000769993-13-000383",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000383",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000769993-13-000383",
+              "filingDate": "2013-06-14",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 3,
+            "valueUsd": 6124838000,
+            "sharesByType": {
+              "SH": 10487740
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": null,
+              "shares": 5384959,
+              "shareType": "SH",
+              "valueAsReported": 3228551,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3228551000,
+              "investmentDiscretions": [
+                "DFND",
+                "OTR"
+              ],
+              "otherManagers": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+              ],
+              "votingAuthority": {
+                "sole": 4544855,
+                "shared": 12488,
+                "none": 827616
+              },
+              "entryCount": 8,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-03-31",
+              "accessionNumber": "0000769993-13-000382",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000382",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Call",
+              "shares": 2410800,
+              "shareType": "SH",
+              "valueAsReported": 1445395,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1445395000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 2410800,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-03-31",
+              "accessionNumber": "0000769993-13-000382",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000382",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "CMN",
+              "putCall": "Put",
+              "shares": 2286000,
+              "shareType": "SH",
+              "valueAsReported": 1370571,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1370571000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 2286000,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-03-31",
+              "accessionNumber": "0000769993-13-000382",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000769993-13-000382",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000769993-13-000382",
+              "filingDate": "2013-06-14",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 3,
+            "valueUsd": 6044517000,
+            "sharesByType": {
+              "SH": 10081759
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000873630",
+      "managerName": "HSBC HOLDINGS PLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 1545734,
+              "shareType": "SH",
+              "valueAsReported": 684210,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 684210000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "votingAuthority": {
+                "sole": 1322751,
+                "shared": 217656,
+                "none": 5327
+              },
+              "entryCount": 15,
+              "filingDate": "2013-05-22",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001085146-13-001007",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001007",
+                  "filingDate": "2013-05-22",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 205200,
+              "shareType": "SH",
+              "valueAsReported": 90834,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 90834000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "13"
+              ],
+              "votingAuthority": {
+                "sole": 205200,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-22",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001085146-13-001007",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001007",
+                  "filingDate": "2013-05-22",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Call",
+              "shares": 138900,
+              "shareType": "SH",
+              "valueAsReported": 61485,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 61485000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "13"
+              ],
+              "votingAuthority": {
+                "sole": 138900,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-22",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001085146-13-001007",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001007",
+                  "filingDate": "2013-05-22",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001085146-13-001007",
+              "filingDate": "2013-05-22",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 3,
+            "valueUsd": 836529000,
+            "sharesByType": {
+              "SH": 1889834
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 1060765,
+              "shareType": "SH",
+              "valueAsReported": 565208,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 565208000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "votingAuthority": {
+                "sole": 850948,
+                "shared": 205485,
+                "none": 4332
+              },
+              "entryCount": 23,
+              "filingDate": "2013-06-17",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0001085146-13-001065",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001065",
+                  "filingDate": "2013-06-17",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Call",
+              "shares": 341700,
+              "shareType": "SH",
+              "valueAsReported": 181843,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 181843000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "13"
+              ],
+              "votingAuthority": {
+                "sole": 341700,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-17",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0001085146-13-001065",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001065",
+                  "filingDate": "2013-06-17",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 294700,
+              "shareType": "SH",
+              "valueAsReported": 156831,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 156831000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "13"
+              ],
+              "votingAuthority": {
+                "sole": 294700,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-17",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0001085146-13-001065",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001065",
+                  "filingDate": "2013-06-17",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001085146-13-001065",
+              "filingDate": "2013-06-17",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 3,
+            "valueUsd": 903882000,
+            "sharesByType": {
+              "SH": 1697165
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-09-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 2597089,
+              "shareType": "SH",
+              "valueAsReported": 1732872,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1732872000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ],
+              "votingAuthority": {
+                "sole": 2566572,
+                "shared": 29061,
+                "none": 1456
+              },
+              "entryCount": 23,
+              "filingDate": "2013-06-21",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0001085146-13-001075",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001075",
+                  "filingDate": "2013-06-21",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 287200,
+              "shareType": "SH",
+              "valueAsReported": 191635,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 191635000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "13"
+              ],
+              "votingAuthority": {
+                "sole": 287200,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-21",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0001085146-13-001075",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001075",
+                  "filingDate": "2013-06-21",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Call",
+              "shares": 263900,
+              "shareType": "SH",
+              "valueAsReported": 176088,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 176088000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "13"
+              ],
+              "votingAuthority": {
+                "sole": 263900,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-21",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0001085146-13-001075",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001075",
+                  "filingDate": "2013-06-21",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001085146-13-001075",
+              "filingDate": "2013-06-21",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 3,
+            "valueUsd": 2100595000,
+            "sharesByType": {
+              "SH": 3148189
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000728889",
+      "managerName": "OPPENHEIMER FUNDS INC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 3102034,
+              "shareType": "SH",
+              "valueAsReported": 1373054,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1373054000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "02 07"
+              ],
+              "votingAuthority": {
+                "sole": 3102034,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-11",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0000728889-13-000871",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000728889-13-000871",
+                  "filingDate": "2013-06-11",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 300,
+              "shareType": "SH",
+              "valueAsReported": 6,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 6000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 300,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-11",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0000728889-13-000871",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000728889-13-000871",
+                  "filingDate": "2013-06-11",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000728889-13-000870",
+              "filingDate": "2013-06-11",
+              "isAmendment": true,
+              "amendmentType": "NEW HOLDINGS",
+              "informationTableUrl": null
+            },
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000728889-13-000871",
+              "filingDate": "2013-06-11",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 1373060000,
+            "sharesByType": {
+              "SH": 3102334
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001039765",
+      "managerName": "ING Groep NV",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 1607841,
+              "shareType": "SH",
+              "valueAsReported": 711362,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 711362000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1",
+                "2"
+              ],
+              "votingAuthority": {
+                "sole": 1607841,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-05-30",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001104659-13-045781",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001104659-13-045781",
+                  "filingDate": "2013-05-30",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001104659-13-045781",
+              "filingDate": "2013-05-30",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 711362000,
+            "sharesByType": {
+              "SH": 1607841
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001102598",
+      "managerName": "PIONEER INVESTMENT MANAGEMENT INC",
+      "periods": [
+        {
+          "reportPeriod": "2012-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple Inc",
+              "titleOfClass": "COMMSTCK",
+              "putCall": null,
+              "shares": 950561,
+              "shareType": "SH",
+              "valueAsReported": 506677,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 506677000,
+              "investmentDiscretions": [
+                "DFND",
+                "SOLE"
+              ],
+              "otherManagers": [
+                "0",
+                "1",
+                "3",
+                "4"
+              ],
+              "votingAuthority": {
+                "sole": 874969,
+                "shared": 0,
+                "none": 75592
+              },
+              "entryCount": 4,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0000950123-13-003783",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000950123-13-003783",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000950123-13-003783",
+              "filingDate": "2013-05-29",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 506677000,
+            "sharesByType": {
+              "SH": 950561
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001569395",
+      "managerName": "Mirae Asset Global Investments Co., Ltd.",
+      "periods": [
+        {
+          "reportPeriod": "2012-06-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 254392,
+              "shareType": "SH",
+              "valueAsReported": 148565,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 148565000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1 2 3",
+                "4 5 6"
+              ],
+              "votingAuthority": {
+                "sole": 254392,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-04",
+              "reportPeriod": "2012-06-30",
+              "accessionNumber": "0001140361-13-023826",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-023826",
+                  "filingDate": "2013-06-04",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001140361-13-023826",
+              "filingDate": "2013-06-04",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 148565000,
+            "sharesByType": {
+              "SH": 254392
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 272735,
+              "shareType": "SH",
+              "valueAsReported": 166257,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 166257000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1 2 3",
+                "4 5 6"
+              ],
+              "votingAuthority": {
+                "sole": 272735,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2012-03-31",
+              "accessionNumber": "0001140361-13-025260",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-025260",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001140361-13-025260",
+              "filingDate": "2013-06-14",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 166257000,
+            "sharesByType": {
+              "SH": 272735
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001167557",
+      "managerName": "AQR CAPITAL MANAGEMENT LLC",
+      "periods": [
+        {
+          "reportPeriod": "2012-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 517732,
+              "shareType": "SH",
+              "valueAsReported": 275967,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 275967000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 470332,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0001085146-13-001011",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001011",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001085146-13-001011",
+              "filingDate": "2013-05-29",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 275967000,
+            "sharesByType": {
+              "SH": 517732
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001223779",
+      "managerName": "TEXAS PERMANENT SCHOOL FUND",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER, INC.",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 500188,
+              "shareType": "SH",
+              "valueAsReported": 221398,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 221398000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [
+                "N/A"
+              ],
+              "votingAuthority": {
+                "sole": 500188,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-22",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001223779-13-000021",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001223779-13-000021",
+                  "filingDate": "2013-05-22",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001223779-13-000021",
+              "filingDate": "2013-05-22",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 221398000,
+            "sharesByType": {
+              "SH": 500188
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000009631",
+      "managerName": "BANK OF NOVA SCOTIA /",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 433384,
+              "shareType": "SH",
+              "valueAsReported": 191825,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 191825000,
+              "investmentDiscretions": [
+                "DFND",
+                "SOLE"
+              ],
+              "otherManagers": [
+                "1"
+              ],
+              "votingAuthority": {
+                "sole": 433384,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 3,
+              "filingDate": "2013-06-13",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0000009631-13-000008",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000009631-13-000008",
+                  "filingDate": "2013-06-13",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0000009631-13-000008",
+              "filingDate": "2013-06-13",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 191825000,
+            "sharesByType": {
+              "SH": 433384
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001576002",
+      "managerName": "Five Oceans Asset Management LTD",
+      "periods": [
+        {
+          "reportPeriod": "2012-09-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 38831,
+              "shareType": "SH",
+              "valueAsReported": 25904,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 25904000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 13041,
+                "shared": 0,
+                "none": 25790
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0001172661-13-000938",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000938",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 19500,
+              "shareType": "SH",
+              "valueAsReported": 13009,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 13009000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 6600,
+                "shared": 0,
+                "none": 12900
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0001172661-13-000938",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000938",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000938",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 38913000,
+            "sharesByType": {
+              "SH": 58331
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-06-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 45311,
+              "shareType": "SH",
+              "valueAsReported": 26462,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 26462000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 13102,
+                "shared": 0,
+                "none": 32209
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2012-06-30",
+              "accessionNumber": "0001172661-13-000937",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000937",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 15600,
+              "shareType": "SH",
+              "valueAsReported": 9110,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 9110000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 15600
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2012-06-30",
+              "accessionNumber": "0001172661-13-000937",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000937",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000937",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 35572000,
+            "sharesByType": {
+              "SH": 60911
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 59041,
+              "shareType": "SH",
+              "valueAsReported": 35398,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 35398000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 18654,
+                "shared": 0,
+                "none": 40387
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2012-03-31",
+              "accessionNumber": "0001172661-13-000936",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000936",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 31000,
+              "shareType": "SH",
+              "valueAsReported": 18586,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 18586000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 8500,
+                "shared": 0,
+                "none": 22500
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2012-03-31",
+              "accessionNumber": "0001172661-13-000936",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000936",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000936",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 53984000,
+            "sharesByType": {
+              "SH": 90041
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 27665,
+              "shareType": "SH",
+              "valueAsReported": 11204,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 11204000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 15512,
+                "shared": 0,
+                "none": 12153
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2011-12-31",
+              "accessionNumber": "0001172661-13-000935",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000935",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000935",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 11204000,
+            "sharesByType": {
+              "SH": 27665
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-09-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 29512,
+              "shareType": "SH",
+              "valueAsReported": 11254,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 11254000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 16712,
+                "shared": 0,
+                "none": 12800
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2011-09-30",
+              "accessionNumber": "0001172661-13-000934",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000934",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 13100,
+              "shareType": "SH",
+              "valueAsReported": 4995,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 4995000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 8400,
+                "shared": 0,
+                "none": 4700
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2011-09-30",
+              "accessionNumber": "0001172661-13-000934",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000934",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000934",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 16249000,
+            "sharesByType": {
+              "SH": 42612
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-06-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 30937,
+              "shareType": "SH",
+              "valueAsReported": 10386,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 10386000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 16737,
+                "shared": 0,
+                "none": 14200
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2011-06-30",
+              "accessionNumber": "0001172661-13-000933",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000933",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000933",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 10386000,
+            "sharesByType": {
+              "SH": 30937
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 14017,
+              "shareType": "SH",
+              "valueAsReported": 4884,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 4884000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 14017,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2011-03-31",
+              "accessionNumber": "0001172661-13-000932",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000932",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000932",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 4884000,
+            "sharesByType": {
+              "SH": 14017
+            }
+          }
+        },
+        {
+          "reportPeriod": "2010-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 9033,
+              "shareType": "SH",
+              "valueAsReported": 2914,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 2914000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 9033,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2010-12-31",
+              "accessionNumber": "0001172661-13-000931",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000931",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Call",
+              "shares": 2000,
+              "shareType": "SH",
+              "valueAsReported": 645,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 645000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 2000,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2010-12-31",
+              "accessionNumber": "0001172661-13-000931",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001172661-13-000931",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001172661-13-000931",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 3559000,
+            "sharesByType": {
+              "SH": 11033
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001453415",
+      "managerName": "CORNERSTONE CAPITAL MANAGEMENT HOLDINGS LLC.",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 374368,
+              "shareType": "SH",
+              "valueAsReported": 165717,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 165717000,
+              "investmentDiscretions": [
+                "OTR",
+                "SOLE"
+              ],
+              "otherManagers": [
+                "1",
+                "3"
+              ],
+              "votingAuthority": {
+                "sole": 363729,
+                "shared": 0,
+                "none": 10639
+              },
+              "entryCount": 3,
+              "filingDate": "2013-06-05",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001453415-13-000011",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001453415-13-000011",
+                  "filingDate": "2013-06-05",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001453415-13-000011",
+              "filingDate": "2013-06-05",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 165717000,
+            "sharesByType": {
+              "SH": 374368
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001006378",
+      "managerName": "SEGALL BRYANT & HAMILL",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple Inc.",
+              "titleOfClass": "-Common Stock",
+              "putCall": null,
+              "shares": 77403,
+              "shareType": "SH",
+              "valueAsReported": 34263,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 34263000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 11804,
+                "shared": 0,
+                "none": 65599
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-23",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0000913849-13-000170",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000913849-13-000170",
+                  "filingDate": "2013-05-23",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0000913849-13-000170",
+              "filingDate": "2013-05-23",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 34263000,
+            "sharesByType": {
+              "SH": 77403
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001009215",
+      "managerName": "COLUMBIA PARTNERS L L C INVESTMENT MANAGEMENT",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 63847,
+              "shareType": "SH",
+              "valueAsReported": 28262,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 28262000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 45046,
+                "shared": 0,
+                "none": 18801
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-23",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001009215-13-000004",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001009215-13-000004",
+                  "filingDate": "2013-05-23",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001009215-13-000004",
+              "filingDate": "2013-05-23",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 28262000,
+            "sharesByType": {
+              "SH": 63847
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000900974",
+      "managerName": "BRYN MAWR TRUST CO/PA",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COMMON STOCK",
+              "putCall": null,
+              "shares": 42863,
+              "shareType": "SH",
+              "valueAsReported": 18974,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 18974000,
+              "investmentDiscretions": [
+                "OTR",
+                "SOLE"
+              ],
+              "otherManagers": [
+                "0"
+              ],
+              "votingAuthority": {
+                "sole": 42111,
+                "shared": 0,
+                "none": 752
+              },
+              "entryCount": 3,
+              "filingDate": "2013-05-20",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0000950123-13-003669",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000950123-13-003669",
+                  "filingDate": "2013-05-20",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0000950123-13-003669",
+              "filingDate": "2013-05-20",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 18974000,
+            "sharesByType": {
+              "SH": 42863
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000014661",
+      "managerName": "BROWN BROTHERS HARRIMAN & CO",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "Common",
+              "putCall": null,
+              "shares": 38297,
+              "shareType": "SH",
+              "valueAsReported": 16953,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 16953000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 28873,
+                "shared": 0,
+                "none": 9424
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-23",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001144204-13-031310",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001144204-13-031310",
+                  "filingDate": "2013-05-23",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001144204-13-031310",
+              "filingDate": "2013-05-23",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 16953000,
+            "sharesByType": {
+              "SH": 38297
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001078658",
+      "managerName": "HOWARD CAPITAL MANAGEMENT",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 23666,
+              "shareType": "SH",
+              "valueAsReported": 10476,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 10476000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 13848,
+                "shared": 0,
+                "none": 9818
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-21",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001140361-13-021997",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-021997",
+                  "filingDate": "2013-05-21",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001140361-13-021997",
+              "filingDate": "2013-05-21",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 10476000,
+            "sharesByType": {
+              "SH": 23666
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001466538",
+      "managerName": "COWEN GROUP, INC.",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Call",
+              "shares": 10000,
+              "shareType": "SH",
+              "valueAsReported": 4427,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 4427000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "02"
+              ],
+              "votingAuthority": {
+                "sole": 10000,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-23",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001085146-13-001008",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001008",
+                  "filingDate": "2013-05-23",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 10000,
+              "shareType": "SH",
+              "valueAsReported": 4427,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 4427000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "02"
+              ],
+              "votingAuthority": {
+                "sole": 10000,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-23",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001085146-13-001008",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001008",
+                  "filingDate": "2013-05-23",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001085146-13-001008",
+              "filingDate": "2013-05-23",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 8854000,
+            "sharesByType": {
+              "SH": 20000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001388712",
+      "managerName": "VTL Associates, LLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC COM",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 19832,
+              "shareType": "SH",
+              "valueAsReported": 8778,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 8778000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1"
+              ],
+              "votingAuthority": {
+                "sole": 19832,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-20",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001140361-13-025848",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-025848",
+                  "filingDate": "2013-06-20",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001140361-13-025388",
+              "filingDate": "2013-06-17",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            },
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001140361-13-025848",
+              "filingDate": "2013-06-20",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 8778000,
+            "sharesByType": {
+              "SH": 19832
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000947263",
+      "managerName": "TORONTO DOMINION BANK",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Put",
+              "shares": 9000,
+              "shareType": "SH",
+              "valueAsReported": 3984,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3984000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [
+                "--"
+              ],
+              "votingAuthority": {
+                "sole": 9000,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001376474-13-000305",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001376474-13-000305",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 8781,
+              "shareType": "SH",
+              "valueAsReported": 3887,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3887000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [
+                "--"
+              ],
+              "votingAuthority": {
+                "sole": 8781,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001376474-13-000305",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001376474-13-000305",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001376474-13-000305",
+              "filingDate": "2013-06-14",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 7871000,
+            "sharesByType": {
+              "SH": 17781
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001074027",
+      "managerName": "BAINCO INTERNATIONAL INVESTORS",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple Inc",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 15070,
+              "shareType": "SH",
+              "valueAsReported": 6671,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 6671000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [
+                "0"
+              ],
+              "votingAuthority": {
+                "sole": 15070,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-30",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001074027-13-000003",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001074027-13-000003",
+                  "filingDate": "2013-05-30",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001074027-13-000003",
+              "filingDate": "2013-05-30",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 6671000,
+            "sharesByType": {
+              "SH": 15070
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001557485",
+      "managerName": "SNS Financial Group, LLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 12518,
+              "shareType": "SH",
+              "valueAsReported": 5541,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 5541000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 12518
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-21",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001062993-13-002709",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001062993-13-002709",
+                  "filingDate": "2013-05-21",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001062993-13-002709",
+              "filingDate": "2013-05-21",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 5541000,
+            "sharesByType": {
+              "SH": 12518
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001387508",
+      "managerName": "SPRINGBOK CAPITAL MANAGEMENT, LLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": "Call",
+              "shares": 6200,
+              "shareType": "SH",
+              "valueAsReported": 2744,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 2744000,
+              "investmentDiscretions": [
+                "OTR"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 6200,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-22",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001140361-13-022236",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-022236",
+                  "filingDate": "2013-05-22",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 5868,
+              "shareType": "SH",
+              "valueAsReported": 2598,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 2598000,
+              "investmentDiscretions": [
+                "OTR"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 5868,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-22",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001140361-13-022236",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-022236",
+                  "filingDate": "2013-05-22",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001140361-13-022236",
+              "filingDate": "2013-05-22",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 5342000,
+            "sharesByType": {
+              "SH": 12068
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001494234",
+      "managerName": "Hemenway Trust Co LLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "Common Stock",
+              "putCall": null,
+              "shares": 11564,
+              "shareType": "SH",
+              "valueAsReported": 5119,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 5119000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 11564,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-24",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001494234-13-000002",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001494234-13-000002",
+                  "filingDate": "2013-05-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001494234-13-000002",
+              "filingDate": "2013-05-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 5119000,
+            "sharesByType": {
+              "SH": 11564
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001550057",
+      "managerName": "Goelzer Investment Management, Inc.",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 11216,
+              "shareType": "SH",
+              "valueAsReported": 4965,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 4965000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 1920,
+                "shared": 0,
+                "none": 9296
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001085146-13-001009",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001085146-13-001009",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001085146-13-001009",
+              "filingDate": "2013-05-29",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 4965000,
+            "sharesByType": {
+              "SH": 11216
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001576151",
+      "managerName": "Burns Wealth Management, Inc.",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 10925,
+              "shareType": "SH",
+              "valueAsReported": 4837,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 4837000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 10925,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-14",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001576151-13-000003",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001576151-13-000003",
+                  "filingDate": "2013-06-14",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001576151-13-000003",
+              "filingDate": "2013-06-14",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 4837000,
+            "sharesByType": {
+              "SH": 10925
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001487438",
+      "managerName": "DONALDSON CAPITAL MANAGEMENT, LLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 1109,
+              "shareType": "SH",
+              "valueAsReported": 491,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 491000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 1109
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-18",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001487438-13-000002",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000002",
+                  "filingDate": "2013-06-18",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000002",
+              "filingDate": "2013-06-18",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 491000,
+            "sharesByType": {
+              "SH": 1109
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 1332,
+              "shareType": "SH",
+              "valueAsReported": 709,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 709000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 1332
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-21",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0001487438-13-000003",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000003",
+                  "filingDate": "2013-06-21",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000003",
+              "filingDate": "2013-06-21",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 709000,
+            "sharesByType": {
+              "SH": 1332
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-09-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 1009,
+              "shareType": "SH",
+              "valueAsReported": 673,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 673000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 1009
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-21",
+              "reportPeriod": "2012-09-30",
+              "accessionNumber": "0001487438-13-000004",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000004",
+                  "filingDate": "2013-06-21",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000004",
+              "filingDate": "2013-06-21",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 673000,
+            "sharesByType": {
+              "SH": 1009
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-06-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 959,
+              "shareType": "SH",
+              "valueAsReported": 560,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 560000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 959
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-21",
+              "reportPeriod": "2012-06-30",
+              "accessionNumber": "0001487438-13-000005",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000005",
+                  "filingDate": "2013-06-21",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000005",
+              "filingDate": "2013-06-21",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 560000,
+            "sharesByType": {
+              "SH": 959
+            }
+          }
+        },
+        {
+          "reportPeriod": "2012-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 911,
+              "shareType": "SH",
+              "valueAsReported": 546,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 546000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 911
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-26",
+              "reportPeriod": "2012-03-31",
+              "accessionNumber": "0001487438-13-000006",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000006",
+                  "filingDate": "2013-06-26",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000006",
+              "filingDate": "2013-06-26",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 546000,
+            "sharesByType": {
+              "SH": 911
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 711,
+              "shareType": "SH",
+              "valueAsReported": 288,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 288000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 711
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-26",
+              "reportPeriod": "2011-12-31",
+              "accessionNumber": "0001487438-13-000007",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000007",
+                  "filingDate": "2013-06-26",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000007",
+              "filingDate": "2013-06-26",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 288000,
+            "sharesByType": {
+              "SH": 711
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-09-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 611,
+              "shareType": "SH",
+              "valueAsReported": 233,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 233000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 611
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-26",
+              "reportPeriod": "2011-09-30",
+              "accessionNumber": "0001487438-13-000008",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000008",
+                  "filingDate": "2013-06-26",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000008",
+              "filingDate": "2013-06-26",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 233000,
+            "sharesByType": {
+              "SH": 611
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-06-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 801,
+              "shareType": "SH",
+              "valueAsReported": 269,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 269000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 801
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-27",
+              "reportPeriod": "2011-06-30",
+              "accessionNumber": "0001487438-13-000009",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000009",
+                  "filingDate": "2013-06-27",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000009",
+              "filingDate": "2013-06-27",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 269000,
+            "sharesByType": {
+              "SH": 801
+            }
+          }
+        },
+        {
+          "reportPeriod": "2011-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 839,
+              "shareType": "SH",
+              "valueAsReported": 292,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 292000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 839
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-27",
+              "reportPeriod": "2011-03-31",
+              "accessionNumber": "0001487438-13-000010",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000010",
+                  "filingDate": "2013-06-27",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000010",
+              "filingDate": "2013-06-27",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 292000,
+            "sharesByType": {
+              "SH": 839
+            }
+          }
+        },
+        {
+          "reportPeriod": "2010-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 661,
+              "shareType": "SH",
+              "valueAsReported": 213,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 213000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 661
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-27",
+              "reportPeriod": "2010-12-31",
+              "accessionNumber": "0001487438-13-000011",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000011",
+                  "filingDate": "2013-06-27",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000011",
+              "filingDate": "2013-06-27",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 213000,
+            "sharesByType": {
+              "SH": 661
+            }
+          }
+        },
+        {
+          "reportPeriod": "2010-09-30",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 811,
+              "shareType": "SH",
+              "valueAsReported": 230,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 230000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 811
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-27",
+              "reportPeriod": "2010-09-30",
+              "accessionNumber": "0001487438-13-000012",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001487438-13-000012",
+                  "filingDate": "2013-06-27",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001487438-13-000012",
+              "filingDate": "2013-06-27",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 230000,
+            "sharesByType": {
+              "SH": 811
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001157436",
+      "managerName": "SHEETS SMITH WEALTH MANAGEMENT",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 9108,
+              "shareType": "SH",
+              "valueAsReported": 4032,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 4032000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 9108,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-21",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001398344-13-002589",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001398344-13-002589",
+                  "filingDate": "2013-05-21",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001398344-13-002589",
+              "filingDate": "2013-05-21",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 4032000,
+            "sharesByType": {
+              "SH": 9108
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001569517",
+      "managerName": "Gary Goldberg Planning Services Inc",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 8943,
+              "shareType": "SH",
+              "valueAsReported": 3959,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3959000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 8943
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-24",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001019687-13-002080",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001019687-13-002080",
+                  "filingDate": "2013-05-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001019687-13-002080",
+              "filingDate": "2013-05-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 3959000,
+            "sharesByType": {
+              "SH": 8943
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001058800",
+      "managerName": "BEACH INVESTMENT COUNSEL INC/PA",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple Computer",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 8813,
+              "shareType": "SH",
+              "valueAsReported": 3901,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3901000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 8813
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001058800-13-000003",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001058800-13-000003",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001058800-13-000003",
+              "filingDate": "2013-05-29",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 3901000,
+            "sharesByType": {
+              "SH": 8813
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001103245",
+      "managerName": "SMITHBRIDGE ASSET MANAGEMENT INC/DE",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE COMPUTER INC COM",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 7958,
+              "shareType": "SH",
+              "valueAsReported": 3522,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 3522000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 7958
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001103245-13-000003",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001103245-13-000003",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001103245-13-000003",
+              "filingDate": "2013-05-29",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 3522000,
+            "sharesByType": {
+              "SH": 7958
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001535227",
+      "managerName": "Peregrine Asset Advisers, Inc.",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 6225,
+              "shareType": "SH",
+              "valueAsReported": 2756,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 2756000,
+              "investmentDiscretions": [
+                "OTR",
+                "SOLE"
+              ],
+              "otherManagers": [
+                "0",
+                "2"
+              ],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 6225
+              },
+              "entryCount": 2,
+              "filingDate": "2013-06-20",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001535227-13-000004",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001535227-13-000004",
+                  "filingDate": "2013-06-20",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001535227-13-000004",
+              "filingDate": "2013-06-20",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 2756000,
+            "sharesByType": {
+              "SH": 6225
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001061186",
+      "managerName": "WCM INVESTMENT MANAGEMENT/CA",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COMMON",
+              "putCall": null,
+              "shares": 5401,
+              "shareType": "SH",
+              "valueAsReported": 2391,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 2391000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 5401,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-05",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001062993-13-002937",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001062993-13-002937",
+                  "filingDate": "2013-06-05",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001062993-13-002937",
+              "filingDate": "2013-06-05",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 2391000,
+            "sharesByType": {
+              "SH": 5401
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001164062",
+      "managerName": "TEALWOOD ASSET MANAGEMENT INC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple Inc",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 3970,
+              "shareType": "SH",
+              "valueAsReported": 1758,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 1758000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 3615,
+                "shared": 0,
+                "none": 355
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-24",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001164062-13-000004",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001164062-13-000004",
+                  "filingDate": "2013-06-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001164062-13-000004",
+              "filingDate": "2013-06-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 1758000,
+            "sharesByType": {
+              "SH": 3970
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001053911",
+      "managerName": "FIDGEON TIMOTHY F",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "Common Stock",
+              "putCall": null,
+              "shares": 2023,
+              "shareType": "SH",
+              "valueAsReported": 895,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 895000,
+              "investmentDiscretions": [
+                "DFND",
+                "SOLE"
+              ],
+              "otherManagers": [
+                "03",
+                "05",
+                "06",
+                "09"
+              ],
+              "votingAuthority": {
+                "sole": 1432,
+                "shared": 591,
+                "none": 0
+              },
+              "entryCount": 5,
+              "filingDate": "2013-05-24",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001053911-13-000001",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001053911-13-000001",
+                  "filingDate": "2013-05-24",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001053911-13-000001",
+              "filingDate": "2013-05-24",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 895000,
+            "sharesByType": {
+              "SH": 2023
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001352449",
+      "managerName": "Norman Fields, Gottscho Capital Management, LLC",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple Inc",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 1863,
+              "shareType": "SH",
+              "valueAsReported": 825,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 825000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 1863
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-23",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001352449-13-000005",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001352449-13-000005",
+                  "filingDate": "2013-05-23",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001352449-13-000005",
+              "filingDate": "2013-05-23",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 825000,
+            "sharesByType": {
+              "SH": 1863
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0000849854",
+      "managerName": "STRATEGIC WEALTH MANAGEMENT INC /ADV",
+      "periods": [
+        {
+          "reportPeriod": "2012-12-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple",
+              "titleOfClass": "COM",
+              "putCall": "Call",
+              "shares": 1400,
+              "shareType": "SH",
+              "valueAsReported": 744,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 744000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 1400,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 2,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0000849854-13-000002",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000849854-13-000002",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            },
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "Apple",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 97,
+              "shareType": "SH",
+              "valueAsReported": 51,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 51000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 97,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2012-12-31",
+              "accessionNumber": "0000849854-13-000002",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0000849854-13-000002",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0000849854-13-000002",
+              "filingDate": "2013-05-29",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 2,
+            "valueUsd": 795000,
+            "sharesByType": {
+              "SH": 1497
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001389526",
+      "managerName": "Tradeworx Inc.",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 628,
+              "shareType": "SH",
+              "valueAsReported": 278,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 278000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 0,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-29",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001140361-13-023099",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-023099",
+                  "filingDate": "2013-05-29",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001140361-13-023099",
+              "filingDate": "2013-05-29",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 278000,
+            "sharesByType": {
+              "SH": 628
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001063571",
+      "managerName": "VAUGHAN DAVID INVESTMENTS INC/IL",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM ",
+              "putCall": null,
+              "shares": 566,
+              "shareType": "SH",
+              "valueAsReported": 251,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 251000,
+              "investmentDiscretions": [
+                "SOLE"
+              ],
+              "otherManagers": [],
+              "votingAuthority": {
+                "sole": 566,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-05-30",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001063571-13-000004",
+              "form": "13F-HR/A",
+              "amendmentType": "RESTATEMENT",
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001063571-13-000004",
+                  "filingDate": "2013-05-30",
+                  "form": "13F-HR/A",
+                  "amendmentType": "RESTATEMENT"
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR/A",
+              "accessionNumber": "0001063571-13-000004",
+              "filingDate": "2013-05-30",
+              "isAmendment": true,
+              "amendmentType": "RESTATEMENT",
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 251000,
+            "sharesByType": {
+              "SH": 566
+            }
+          }
+        }
+      ]
+    },
+    {
+      "cik": "0001576707",
+      "managerName": "Veritas Investment Management LLP",
+      "periods": [
+        {
+          "reportPeriod": "2013-03-31",
+          "holdings": [
+            {
+              "cusip": "037833100",
+              "nameOfIssuer": "APPLE INC",
+              "titleOfClass": "COM",
+              "putCall": null,
+              "shares": 25,
+              "shareType": "SH",
+              "valueAsReported": 11,
+              "valueUnit": "USD_THOUSANDS",
+              "valueUnitMixed": false,
+              "valueUsd": 11000,
+              "investmentDiscretions": [
+                "DFND"
+              ],
+              "otherManagers": [
+                "1"
+              ],
+              "votingAuthority": {
+                "sole": 25,
+                "shared": 0,
+                "none": 0
+              },
+              "entryCount": 1,
+              "filingDate": "2013-06-13",
+              "reportPeriod": "2013-03-31",
+              "accessionNumber": "0001140361-13-025127",
+              "form": "13F-HR",
+              "amendmentType": null,
+              "filingRefs": [
+                {
+                  "accessionNumber": "0001140361-13-025127",
+                  "filingDate": "2013-06-13",
+                  "form": "13F-HR",
+                  "amendmentType": null
+                }
+              ],
+              "assetId": "AAPL",
+              "assetResolution": "mapped",
+              "ticker": "AAPL",
+              "name": null
+            }
+          ],
+          "filings": [
+            {
+              "form": "13F-HR",
+              "accessionNumber": "0001140361-13-025127",
+              "filingDate": "2013-06-13",
+              "isAmendment": false,
+              "amendmentType": null,
+              "informationTableUrl": null
+            }
+          ],
+          "totals": {
+            "positions": 1,
+            "valueUsd": 11000,
+            "sharesByType": {
+              "SH": 25
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "managers": 40,
+    "positions": 87,
+    "valueUsd": 87727349000,
+    "sharesByType": {
+      "SH": 60415883
+    }
+  },
+  "errors": []
+}
