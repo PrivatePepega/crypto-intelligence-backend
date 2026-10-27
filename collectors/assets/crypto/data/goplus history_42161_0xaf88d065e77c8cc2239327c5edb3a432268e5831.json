@@ -1,0 +1,38 @@
+{
+  "provider": "goplus",
+  "chain_id": "42161",
+  "contract_address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+  "updated_at": "2026-10-27T16:12:43.273Z",
+  "snapshots": [
+    {
+      "checked_at": "2026-10-27T16:12:43.273Z",
+      "is_open_source": true,
+      "is_proxy": true,
+      "is_mintable": null,
+      "owner_address": "0x2e0a67588cfbcad40f9e4dd76052436190a77a68",
+      "owner_renounced": false,
+      "owner_can_take_back_ownership": null,
+      "owner_hidden": null,
+      "owner_can_change_balance": null,
+      "transfer_pausable": null,
+      "is_blacklisted": null,
+      "is_whitelisted": null,
+      "trading_cooldown": null,
+      "personal_slippage_modifiable": null,
+      "slippage_modifiable": null,
+      "anti_whale_modifiable": null,
+      "is_anti_whale": null,
+      "cannot_buy": false,
+      "cannot_sell_all": null,
+      "is_honeypot": false,
+      "honeypot_with_same_creator": false,
+      "buy_tax_percent": 0,
+      "sell_tax_percent": 0,
+      "transfer_tax_percent": null,
+      "risk_flag_ids": [
+        "proxy_contract"
+      ],
+      "security_summary": "GoPlus reported 1 risk indicator(s), highest severity info: proxy_contract. Open source: yes; proxy: yes; owner 0x2e0a67588cfbcad40f9e4dd76052436190a77a68. Provider-reported indicators are not proof of malicious behaviour."
+    }
+  ]
+}

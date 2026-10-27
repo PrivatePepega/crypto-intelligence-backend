@@ -1,0 +1,142 @@
+{
+  "source": "Alchemy",
+  "sourceUrl": "https://polygon-mainnet.g.alchemy.com/v2/<redacted>",
+  "fetchedAt": "2026-10-27T15:58:26.492Z",
+  "network": "polygon",
+  "chainId": 137,
+  "metadata": {
+    "source": "Alchemy",
+    "sourceUrl": "https://polygon-mainnet.g.alchemy.com/v2/<redacted>",
+    "observedAt": "2026-10-27T15:58:26.492Z",
+    "network": "polygon",
+    "chainId": 137,
+    "contractAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "explorerUrl": "https://polygonscan.com/token/0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "name": "USDC",
+    "symbol": "USDC",
+    "decimals": 6,
+    "logoUrl": "https://static.alchemyapi.io/images/assets/3408.png",
+    "isToken": true
+  },
+  "contract": {
+    "source": "Alchemy",
+    "sourceUrl": "https://polygon-mainnet.g.alchemy.com/v2/<redacted>",
+    "retrievedAt": "2026-10-27T15:58:26.799Z",
+    "network": "polygon",
+    "chainId": 137,
+    "contractAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "explorerUrl": "https://polygonscan.com/token/0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "isContract": true,
+    "bytecodeHash": "0xdc2898fcd8071dd801212e8f34ce32f23aba05aadbad71ff84ef7faa2909a29c",
+    "hashAlgorithm": "sha256",
+    "bytecodeBytes": 1852,
+    "isMinimalProxy": false,
+    "minimalProxyImplementation": null,
+    "isProxyLike": true,
+    "proxyEvidence": [
+      {
+        "name": "implementation",
+        "selector": "5c60da1b"
+      },
+      {
+        "name": "upgradeTo",
+        "selector": "3659cfe6"
+      },
+      {
+        "name": "upgradeToAndCall",
+        "selector": "4f1ef286"
+      }
+    ],
+    "selectorsPresent": [],
+    "selectorsMissing": [
+      {
+        "name": "name",
+        "selector": "06fdde03"
+      },
+      {
+        "name": "symbol",
+        "selector": "95d89b41"
+      },
+      {
+        "name": "decimals",
+        "selector": "313ce567"
+      },
+      {
+        "name": "totalSupply",
+        "selector": "18160ddd"
+      },
+      {
+        "name": "balanceOf",
+        "selector": "70a08231"
+      },
+      {
+        "name": "transfer",
+        "selector": "a9059cbb"
+      },
+      {
+        "name": "transferFrom",
+        "selector": "23b872dd"
+      },
+      {
+        "name": "approve",
+        "selector": "095ea7b3"
+      },
+      {
+        "name": "allowance",
+        "selector": "dd62ed3e"
+      }
+    ],
+    "note": "Runtime bytecode only; this is not verified Solidity source. Selector presence is heuristic and does not prove ERC-20 compliance. Proxy-like selectors were found; implementation bytecode is not fetched, so some token selectors may live in the implementation."
+  },
+  "supply": {
+    "source": "Alchemy",
+    "sourceUrl": "https://polygon-mainnet.g.alchemy.com/v2/<redacted>",
+    "observedAt": "2026-10-27T15:58:27.003Z",
+    "network": "polygon",
+    "chainId": 137,
+    "contractAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "explorerUrl": "https://polygonscan.com/token/0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "blockTag": "latest",
+    "blockNumber": null,
+    "callData": "0x18160ddd",
+    "rawValue": "0x00000000000000000000000000000000000000000000000000023a025478371a",
+    "decimals": 6,
+    "decimalsSource": "alchemy_getTokenMetadata",
+    "totalSupply": "626731634.931482",
+    "note": null
+  },
+  "supplyError": null,
+  "contractReference": {
+    "network": "polygon",
+    "chainId": 137,
+    "address": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "standard": "ERC-20",
+    "standardConfidence": "heuristic",
+    "explorerUrl": "https://polygonscan.com/token/0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+    "source": "Alchemy",
+    "contractExists": true
+  },
+  "standardEvidence": {
+    "metadataReportedToken": true,
+    "totalSupplyCallSucceeded": true,
+    "erc20SelectorsPresent": [],
+    "erc20SelectorsMissing": [
+      "name",
+      "symbol",
+      "decimals",
+      "totalSupply",
+      "balanceOf",
+      "transfer",
+      "transferFrom",
+      "approve",
+      "allowance"
+    ],
+    "note": "Standard is inferred from token metadata, a successful totalSupply() call and a positive decimal count. It is not verified against the contract's declared interfaces."
+  },
+  "resolution": {
+    "provider": "Alchemy",
+    "method": "contract_address",
+    "verified": false,
+    "note": "Contract values are read directly from the selected network. Canonical asset identity is not resolved; compare with CoinGecko before merging."
+  }
+}

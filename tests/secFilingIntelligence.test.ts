@@ -2,25 +2,25 @@ import {
   getFilingIndexUrl,
   getRawFilingDocumentUrl,
   toIsoDate,
-} from "../collectors/assets/secEdgarFetch.js";
+} from "../collectors/assets/stocks/secEdgarFetch.js";
 import {
   isAmendmentForm,
   parseScheduleXml,
   scheduleFromForm,
   type ScheduleFilingContext,
-} from "../collectors/assets/secBeneficialOwnership.js";
+} from "../collectors/assets/stocks/secBeneficialOwnership.js";
 import {
   CORPORATE_ACTION_FORMS,
   baseForm,
   corporateActionTier,
-} from "../collectors/assets/secCorporateActions.js";
+} from "../collectors/assets/stocks/secCorporateActions.js";
 import {
   containsQuote,
   extractDocumentText,
   htmlToText,
   normalizeForMatch,
-} from "../collectors/assets/secDocumentText.js";
-import { buildFilingEvidence, trimExcerpt } from "../collectors/assets/secEvidence.js";
+} from "../collectors/assets/stocks/secDocumentText.js";
+import { buildFilingEvidence, trimExcerpt } from "../collectors/assets/stocks/secEvidence.js";
 import {
   beneficialOwnershipExtractionSchema,
   corporateActionExtractionSchema,

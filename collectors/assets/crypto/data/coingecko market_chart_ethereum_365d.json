@@ -1,0 +1,3322 @@
+{
+  "source": "CoinGecko",
+  "sourceUrl": "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=365",
+  "fetchedAt": "2026-10-27T15:47:16.829Z",
+  "coingeckoId": "ethereum",
+  "vsCurrency": "usd",
+  "days": 365,
+  "informationTemplate": {
+    "informationType": "market_snapshot",
+    "source": "CoinGecko",
+    "sourceUrl": "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=365",
+    "collectedAt": "2026-10-27T15:47:16.829Z"
+  },
+  "granularity": {
+    "sourceIntervalSeconds": 86400,
+    "sourceIntervalLabel": "1d",
+    "assetPriceHistoryInterval": null,
+    "uniform": false,
+    "observedIntervalSeconds": [
+      56740,
+      86400
+    ],
+    "isOhlc": false,
+    "note": "market_chart returns price/market-cap/volume observations, not OHLC candles; do not insert them into assets.asset_price_history."
+  },
+  "observations": [
+    {
+      "observedAt": "2025-10-28T00:00:00.000Z",
+      "data": {
+        "price": 4117.287077707286,
+        "marketCap": 497305665524.5466,
+        "volume24h": 36385943761.52509,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-10-29T00:00:00.000Z",
+      "data": {
+        "price": 3978.812010414271,
+        "marketCap": 480647742723.29193,
+        "volume24h": 35671783550.23295,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-10-30T00:00:00.000Z",
+      "data": {
+        "price": 3902.8019474292696,
+        "marketCap": 470857249494.70953,
+        "volume24h": 32806950695.069782,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-10-31T00:00:00.000Z",
+      "data": {
+        "price": 3801.551504718387,
+        "marketCap": 459169677106.2288,
+        "volume24h": 37193378561.10616,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-01T00:00:00.000Z",
+      "data": {
+        "price": 3846.95863062356,
+        "marketCap": 464258991447.4072,
+        "volume24h": 32764029085.038177,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-02T00:00:00.000Z",
+      "data": {
+        "price": 3872.926054735507,
+        "marketCap": 467495673481.22,
+        "volume24h": 12963577620.647104,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-03T00:00:00.000Z",
+      "data": {
+        "price": 3905.342929555584,
+        "marketCap": 471728931087.62933,
+        "volume24h": 16505905832.7532,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-04T00:00:00.000Z",
+      "data": {
+        "price": 3600.363768411873,
+        "marketCap": 434830766166.5589,
+        "volume24h": 47754595370.98098,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-05T00:00:00.000Z",
+      "data": {
+        "price": 3285.2318395878847,
+        "marketCap": 397573700002.6509,
+        "volume24h": 70971936439.57846,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-06T00:00:00.000Z",
+      "data": {
+        "price": 3425.9698058908884,
+        "marketCap": 413773447437.8882,
+        "volume24h": 44016731327.195274,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-07T00:00:00.000Z",
+      "data": {
+        "price": 3312.4503070158717,
+        "marketCap": 399656276442.011,
+        "volume24h": 33740482063.273483,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-08T00:00:00.000Z",
+      "data": {
+        "price": 3426.4012405987837,
+        "marketCap": 414507643190.6567,
+        "volume24h": 39541026326.49069,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-09T00:00:00.000Z",
+      "data": {
+        "price": 3399.6637755492966,
+        "marketCap": 410476200008.4793,
+        "volume24h": 20336279641.495083,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-10T00:00:00.000Z",
+      "data": {
+        "price": 3578.8023059041866,
+        "marketCap": 432140258282.28656,
+        "volume24h": 25306062473.02298,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-11T00:00:00.000Z",
+      "data": {
+        "price": 3566.049867115414,
+        "marketCap": 430495589767.3192,
+        "volume24h": 31527602956.56814,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-12T00:00:00.000Z",
+      "data": {
+        "price": 3416.071508998829,
+        "marketCap": 412487940491.5636,
+        "volume24h": 35964365184.38774,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-13T00:00:00.000Z",
+      "data": {
+        "price": 3412.5432368287225,
+        "marketCap": 411695018306.3992,
+        "volume24h": 31867019731.549423,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-14T00:00:00.000Z",
+      "data": {
+        "price": 3223.175778614162,
+        "marketCap": 389149953098.6491,
+        "volume24h": 48625450123.82115,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-15T00:00:00.000Z",
+      "data": {
+        "price": 3118.7143444311273,
+        "marketCap": 374583156499.2539,
+        "volume24h": 44971508554.9072,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-16T00:00:00.000Z",
+      "data": {
+        "price": 3169.6972672382008,
+        "marketCap": 382171821174.872,
+        "volume24h": 18620710912.32086,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-17T00:00:00.000Z",
+      "data": {
+        "price": 3091.905045683136,
+        "marketCap": 373455751267.06415,
+        "volume24h": 30603488973.76373,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-18T00:00:00.000Z",
+      "data": {
+        "price": 3026.218255338726,
+        "marketCap": 365025720800.0176,
+        "volume24h": 38548325745.12055,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-19T00:00:00.000Z",
+      "data": {
+        "price": 3121.5138481614545,
+        "marketCap": 376627472214.8123,
+        "volume24h": 39769047587.844025,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-20T00:00:00.000Z",
+      "data": {
+        "price": 3020.935787720369,
+        "marketCap": 364624974074.7031,
+        "volume24h": 38984541011.264854,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-21T00:00:00.000Z",
+      "data": {
+        "price": 2832.5307976375693,
+        "marketCap": 341919899025.5803,
+        "volume24h": 41506608161.76037,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-22T00:00:00.000Z",
+      "data": {
+        "price": 2763.897390488984,
+        "marketCap": 333625188127.77344,
+        "volume24h": 49471335177.09487,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-23T00:00:00.000Z",
+      "data": {
+        "price": 2768.1536567521325,
+        "marketCap": 334202138387.9657,
+        "volume24h": 15227137733.353577,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-24T00:00:00.000Z",
+      "data": {
+        "price": 2798.913101183697,
+        "marketCap": 338086242481.6212,
+        "volume24h": 20117555262.314224,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-25T00:00:00.000Z",
+      "data": {
+        "price": 2952.334906852989,
+        "marketCap": 356375311640.8533,
+        "volume24h": 32463159649.035435,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-26T00:00:00.000Z",
+      "data": {
+        "price": 2958.5732175211965,
+        "marketCap": 357081428337.2704,
+        "volume24h": 23379516621.412125,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-27T00:00:00.000Z",
+      "data": {
+        "price": 3026.421534805452,
+        "marketCap": 365401603025.40247,
+        "volume24h": 20975481627.490208,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-28T00:00:00.000Z",
+      "data": {
+        "price": 3014.8198499491664,
+        "marketCap": 363871486260.152,
+        "volume24h": 16425620742.708153,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-29T00:00:00.000Z",
+      "data": {
+        "price": 3031.245855716179,
+        "marketCap": 365929010495.9888,
+        "volume24h": 20119280037.55597,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-11-30T00:00:00.000Z",
+      "data": {
+        "price": 2989.6497957851875,
+        "marketCap": 361028197396.32526,
+        "volume24h": 12587660538.295284,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-01T00:00:00.000Z",
+      "data": {
+        "price": 2990.797383294047,
+        "marketCap": 361323261616.5661,
+        "volume24h": 11717224359.873058,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-02T00:00:00.000Z",
+      "data": {
+        "price": 2796.73386904882,
+        "marketCap": 337936232248.04846,
+        "volume24h": 36758673924.641594,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-03T00:00:00.000Z",
+      "data": {
+        "price": 2997.602427194639,
+        "marketCap": 361886352850.66064,
+        "volume24h": 27128828869.360863,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-04T00:00:00.000Z",
+      "data": {
+        "price": 3188.8819447300766,
+        "marketCap": 385647238454.8962,
+        "volume24h": 31057577560.27413,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-05T00:00:00.000Z",
+      "data": {
+        "price": 3134.3486408160215,
+        "marketCap": 378254547725.5433,
+        "volume24h": 27504485182.888542,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-06T00:00:00.000Z",
+      "data": {
+        "price": 3019.826038059256,
+        "marketCap": 364479179010.7497,
+        "volume24h": 27866527351.545456,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-07T00:00:00.000Z",
+      "data": {
+        "price": 3036.875646714073,
+        "marketCap": 366362808813.6567,
+        "volume24h": 11301292406.636791,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-08T00:00:00.000Z",
+      "data": {
+        "price": 3060.9948319527766,
+        "marketCap": 369159022672.3001,
+        "volume24h": 21104749281.741245,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-09T00:00:00.000Z",
+      "data": {
+        "price": 3123.8052523660685,
+        "marketCap": 377187495543.50055,
+        "volume24h": 25543422220.52588,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-10T00:00:00.000Z",
+      "data": {
+        "price": 3318.7209450428563,
+        "marketCap": 400924984363.3934,
+        "volume24h": 34598672977.962814,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-11T00:00:00.000Z",
+      "data": {
+        "price": 3323.292012600325,
+        "marketCap": 401715584457.2677,
+        "volume24h": 31640384767.618507,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-12T00:00:00.000Z",
+      "data": {
+        "price": 3238.4136151525354,
+        "marketCap": 390860899752.5878,
+        "volume24h": 29527281577.263348,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-13T00:00:00.000Z",
+      "data": {
+        "price": 3086.7327669850124,
+        "marketCap": 372234573732.5013,
+        "volume24h": 26199365793.50417,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-14T00:00:00.000Z",
+      "data": {
+        "price": 3115.271399958073,
+        "marketCap": 376120275278.15094,
+        "volume24h": 10115726138.168154,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-15T00:00:00.000Z",
+      "data": {
+        "price": 3063.5454528219575,
+        "marketCap": 369722328464.4331,
+        "volume24h": 17436601534.892895,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-16T00:00:00.000Z",
+      "data": {
+        "price": 2963.8945572517114,
+        "marketCap": 357774924554.9611,
+        "volume24h": 30387579458.755245,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-17T00:00:00.000Z",
+      "data": {
+        "price": 2957.8602493045723,
+        "marketCap": 357683002971.8731,
+        "volume24h": 25193138558.564495,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-18T00:00:00.000Z",
+      "data": {
+        "price": 2832.4683268792255,
+        "marketCap": 341631454024.48834,
+        "volume24h": 26934376839.542957,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-19T00:00:00.000Z",
+      "data": {
+        "price": 2826.6732476964435,
+        "marketCap": 341165495574.4765,
+        "volume24h": 30288692450.546524,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-20T00:00:00.000Z",
+      "data": {
+        "price": 2977.664503683636,
+        "marketCap": 359331722373.2621,
+        "volume24h": 28523528730.892265,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-21T00:00:00.000Z",
+      "data": {
+        "price": 2977.3342562903294,
+        "marketCap": 359359718209.9075,
+        "volume24h": 8310167969.389112,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-22T00:00:00.000Z",
+      "data": {
+        "price": 3004.2204920824893,
+        "marketCap": 362237625179.74133,
+        "volume24h": 11541888974.224104,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-23T00:00:00.000Z",
+      "data": {
+        "price": 3005.3755577051465,
+        "marketCap": 362826622916.6392,
+        "volume24h": 20802090114.584797,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-24T00:00:00.000Z",
+      "data": {
+        "price": 2965.21878516193,
+        "marketCap": 357695762330.7423,
+        "volume24h": 23215144844.485134,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-25T00:00:00.000Z",
+      "data": {
+        "price": 2945.367282877598,
+        "marketCap": 355504570722.50146,
+        "volume24h": 11172260132.203032,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-26T00:00:00.000Z",
+      "data": {
+        "price": 2901.680790122988,
+        "marketCap": 350427548560.45105,
+        "volume24h": 12005781929.156887,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-27T00:00:00.000Z",
+      "data": {
+        "price": 2926.4701674105486,
+        "marketCap": 353219445854.79834,
+        "volume24h": 18903895818.69645,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-28T00:00:00.000Z",
+      "data": {
+        "price": 2947.7123005407134,
+        "marketCap": 355789194202.7286,
+        "volume24h": 7524342177.165679,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-29T00:00:00.000Z",
+      "data": {
+        "price": 2948.8317693857384,
+        "marketCap": 355886730370.1094,
+        "volume24h": 9476414204.840725,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-30T00:00:00.000Z",
+      "data": {
+        "price": 2934.356280609806,
+        "marketCap": 354128526675.7914,
+        "volume24h": 28082271198.718864,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2025-12-31T00:00:00.000Z",
+      "data": {
+        "price": 2967.9804137872784,
+        "marketCap": 358627284965.09863,
+        "volume24h": 19289785214.006233,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-01T00:00:00.000Z",
+      "data": {
+        "price": 2970.028682356399,
+        "marketCap": 358467366367.18896,
+        "volume24h": 20381481311.55118,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-02T00:00:00.000Z",
+      "data": {
+        "price": 3003.8548082170178,
+        "marketCap": 362549964638.6268,
+        "volume24h": 11171495754.153849,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-03T00:00:00.000Z",
+      "data": {
+        "price": 3127.000633399419,
+        "marketCap": 377413005478.7343,
+        "volume24h": 26322399023.246353,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-04T00:00:00.000Z",
+      "data": {
+        "price": 3126.2544909093294,
+        "marketCap": 377322889098.2665,
+        "volume24h": 12577284186.910055,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-05T00:00:00.000Z",
+      "data": {
+        "price": 3153.1033957378954,
+        "marketCap": 380563376620.20197,
+        "volume24h": 13358809647.653217,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-06T00:00:00.000Z",
+      "data": {
+        "price": 3227.3933194586493,
+        "marketCap": 389529756944.73987,
+        "volume24h": 26428294466.340294,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-07T00:00:00.000Z",
+      "data": {
+        "price": 3291.912961414173,
+        "marketCap": 397316871893.3528,
+        "volume24h": 28469573226.50492,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-08T00:00:00.000Z",
+      "data": {
+        "price": 3166.5743526228443,
+        "marketCap": 382189013032.76117,
+        "volume24h": 23321780788.41293,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-09T00:00:00.000Z",
+      "data": {
+        "price": 3106.059127932304,
+        "marketCap": 374885083400.75244,
+        "volume24h": 23170125276.17499,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-10T00:00:00.000Z",
+      "data": {
+        "price": 3085.4102699805294,
+        "marketCap": 372392811824.29297,
+        "volume24h": 19145157092.87242,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-11T00:00:00.000Z",
+      "data": {
+        "price": 3086.1247025890502,
+        "marketCap": 372478999268.31433,
+        "volume24h": 7690354756.801953,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-12T00:00:00.000Z",
+      "data": {
+        "price": 3115.493000866026,
+        "marketCap": 376023575977.9655,
+        "volume24h": 11421556403.151669,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-13T00:00:00.000Z",
+      "data": {
+        "price": 3091.684735239076,
+        "marketCap": 373150020016.49835,
+        "volume24h": 20575353540.85714,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-14T00:00:00.000Z",
+      "data": {
+        "price": 3330.50442935756,
+        "marketCap": 401974251658.0505,
+        "volume24h": 33330862704.46805,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-15T00:00:00.000Z",
+      "data": {
+        "price": 3351.816081641762,
+        "marketCap": 404546373479.0561,
+        "volume24h": 32668598575.116543,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-16T00:00:00.000Z",
+      "data": {
+        "price": 3319.2231658916444,
+        "marketCap": 400612477635.317,
+        "volume24h": 27127627892.625633,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-17T00:00:00.000Z",
+      "data": {
+        "price": 3293.574766598629,
+        "marketCap": 397516730929.6101,
+        "volume24h": 23099358657.230804,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-18T00:00:00.000Z",
+      "data": {
+        "price": 3307.0701203970584,
+        "marketCap": 399145479765.2144,
+        "volume24h": 9590348432.129143,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-19T00:00:00.000Z",
+      "data": {
+        "price": 3265.363715665118,
+        "marketCap": 394111742251.3531,
+        "volume24h": 14377298048.137966,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-20T00:00:00.000Z",
+      "data": {
+        "price": 3186.780739691063,
+        "marketCap": 384627179057.7912,
+        "volume24h": 26066522055.12842,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-21T00:00:00.000Z",
+      "data": {
+        "price": 2941.883255665837,
+        "marketCap": 355069320367.48303,
+        "volume24h": 31623540888.00539,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-22T00:00:00.000Z",
+      "data": {
+        "price": 2984.174965536145,
+        "marketCap": 360173623557.21564,
+        "volume24h": 35069368657.97486,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-23T00:00:00.000Z",
+      "data": {
+        "price": 2950.4937002079373,
+        "marketCap": 356108334730.9344,
+        "volume24h": 21416954033.51619,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-24T00:00:00.000Z",
+      "data": {
+        "price": 2955.1225550231966,
+        "marketCap": 356666947300.5546,
+        "volume24h": 21687027147.554882,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-25T00:00:00.000Z",
+      "data": {
+        "price": 2950.844309906184,
+        "marketCap": 356150528554.6088,
+        "volume24h": 8693090188.785778,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-26T00:00:00.000Z",
+      "data": {
+        "price": 2812.935403888694,
+        "marketCap": 339505649535.07916,
+        "volume24h": 21087108890.108875,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-27T00:00:00.000Z",
+      "data": {
+        "price": 2925.763833023022,
+        "marketCap": 353123365404.17914,
+        "volume24h": 28713656315.699368,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-28T00:00:00.000Z",
+      "data": {
+        "price": 3020.015731085415,
+        "marketCap": 364498969960.27167,
+        "volume24h": 26350282942.671562,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-29T00:00:00.000Z",
+      "data": {
+        "price": 3007.5497905234993,
+        "marketCap": 362994338628.4425,
+        "volume24h": 21421218020.55404,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-30T00:00:00.000Z",
+      "data": {
+        "price": 2822.633841401332,
+        "marketCap": 340675959362.1641,
+        "volume24h": 35484717267.64361,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-01-31T00:00:00.000Z",
+      "data": {
+        "price": 2702.9166772970834,
+        "marketCap": 326226524185.7266,
+        "volume24h": 39407721389.72321,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-01T00:00:00.000Z",
+      "data": {
+        "price": 2450.663546893,
+        "marketCap": 295780761628.6315,
+        "volume24h": 45050027923.664215,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-02T00:00:00.000Z",
+      "data": {
+        "price": 2264.345387690806,
+        "marketCap": 273292483045.14944,
+        "volume24h": 33868246011.930717,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-03T00:00:00.000Z",
+      "data": {
+        "price": 2343.45854365222,
+        "marketCap": 282840794551.86694,
+        "volume24h": 45984376029.69217,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-04T00:00:00.000Z",
+      "data": {
+        "price": 2226.41311845928,
+        "marketCap": 268713942139.8216,
+        "volume24h": 46544998382.51254,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-05T00:00:00.000Z",
+      "data": {
+        "price": 2143.2933986604808,
+        "marketCap": 258681747901.23593,
+        "volume24h": 42499007789.320724,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-06T00:00:00.000Z",
+      "data": {
+        "price": 1823.8053314217489,
+        "marketCap": 220121462581.44495,
+        "volume24h": 55829473443.1791,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-07T00:00:00.000Z",
+      "data": {
+        "price": 2055.7743792337988,
+        "marketCap": 248117411003.78403,
+        "volume24h": 62686208935.47836,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-08T00:00:00.000Z",
+      "data": {
+        "price": 2087.9866273523585,
+        "marketCap": 252004649364.45456,
+        "volume24h": 38641220745.576004,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-09T00:00:00.000Z",
+      "data": {
+        "price": 2092.4274588224594,
+        "marketCap": 252540566503.86624,
+        "volume24h": 18373761018.921764,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-10T00:00:00.000Z",
+      "data": {
+        "price": 2106.7856442624457,
+        "marketCap": 254273467471.43976,
+        "volume24h": 25326126141.183537,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-11T00:00:00.000Z",
+      "data": {
+        "price": 2021.4415907712967,
+        "marketCap": 243972737071.38898,
+        "volume24h": 22188086166.935238,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-12T00:00:00.000Z",
+      "data": {
+        "price": 1944.681900647583,
+        "marketCap": 234708656146.40756,
+        "volume24h": 23015277128.532955,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-13T00:00:00.000Z",
+      "data": {
+        "price": 1947.8399217972387,
+        "marketCap": 235089752119.26395,
+        "volume24h": 18810755096.514824,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-14T00:00:00.000Z",
+      "data": {
+        "price": 2048.3187877857945,
+        "marketCap": 247216688708.74347,
+        "volume24h": 19455842755.379223,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-15T00:00:00.000Z",
+      "data": {
+        "price": 2085.705591574723,
+        "marketCap": 251728954564.07672,
+        "volume24h": 16109112029.317335,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-16T00:00:00.000Z",
+      "data": {
+        "price": 1967.5499217442239,
+        "marketCap": 237468436096.25647,
+        "volume24h": 28528944773.46997,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-17T00:00:00.000Z",
+      "data": {
+        "price": 1998.1759871140314,
+        "marketCap": 241164754377.35757,
+        "volume24h": 18489676867.975807,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-18T00:00:00.000Z",
+      "data": {
+        "price": 1994.3527116895793,
+        "marketCap": 240703295934.6862,
+        "volume24h": 19627011501.056713,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-19T00:00:00.000Z",
+      "data": {
+        "price": 1954.6531149212074,
+        "marketCap": 235911822601.9092,
+        "volume24h": 19117626447.143044,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-20T00:00:00.000Z",
+      "data": {
+        "price": 1949.6068369097477,
+        "marketCap": 235302740757.12222,
+        "volume24h": 16930478555.129438,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-21T00:00:00.000Z",
+      "data": {
+        "price": 1967.928380323993,
+        "marketCap": 237513976263.95554,
+        "volume24h": 20449925362.10393,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-22T00:00:00.000Z",
+      "data": {
+        "price": 1973.8660903778675,
+        "marketCap": 238230581464.93298,
+        "volume24h": 11409185328.385601,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-23T00:00:00.000Z",
+      "data": {
+        "price": 1873.2479061988743,
+        "marketCap": 226086717448.3784,
+        "volume24h": 12511390767.313137,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-24T00:00:00.000Z",
+      "data": {
+        "price": 1859.2199106790974,
+        "marketCap": 224393629610.997,
+        "volume24h": 20413977152.977077,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-25T00:00:00.000Z",
+      "data": {
+        "price": 1852.0821618898767,
+        "marketCap": 223532130167.85715,
+        "volume24h": 18105694898.68343,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-26T00:00:00.000Z",
+      "data": {
+        "price": 2053.097732531376,
+        "marketCap": 247793130804.5807,
+        "volume24h": 26648965147.76037,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-27T00:00:00.000Z",
+      "data": {
+        "price": 2027.5050759088144,
+        "marketCap": 244704231364.1244,
+        "volume24h": 21617579430.764626,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-02-28T00:00:00.000Z",
+      "data": {
+        "price": 1931.1188526606693,
+        "marketCap": 233071113277.70514,
+        "volume24h": 19700104445.7421,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-01T00:00:00.000Z",
+      "data": {
+        "price": 1966.7219163588757,
+        "marketCap": 237368088451.83548,
+        "volume24h": 20985423314.735542,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-02T00:00:00.000Z",
+      "data": {
+        "price": 1939.7957193912328,
+        "marketCap": 234118271380.97858,
+        "volume24h": 21599432840.139435,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-03T00:00:00.000Z",
+      "data": {
+        "price": 2028.799011354667,
+        "marketCap": 244860251697.49725,
+        "volume24h": 24070045894.571983,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-04T00:00:00.000Z",
+      "data": {
+        "price": 1982.9514132768732,
+        "marketCap": 239326733114.5177,
+        "volume24h": 21716084707.508087,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-05T00:00:00.000Z",
+      "data": {
+        "price": 2127.5791778087923,
+        "marketCap": 256782106158.73483,
+        "volume24h": 31454942233.916515,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-06T00:00:00.000Z",
+      "data": {
+        "price": 2073.3589471780524,
+        "marketCap": 250238063998.13748,
+        "volume24h": 20704070246.514977,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-07T00:00:00.000Z",
+      "data": {
+        "price": 1979.0781325827184,
+        "marketCap": 238859068440.4086,
+        "volume24h": 17880928376.383335,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-08T00:00:00.000Z",
+      "data": {
+        "price": 1971.2429698608166,
+        "marketCap": 237913378760.87543,
+        "volume24h": 9800328932.503603,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-09T00:00:00.000Z",
+      "data": {
+        "price": 1939.3917593920498,
+        "marketCap": 234069173421.49823,
+        "volume24h": 15144191039.015755,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-10T00:00:00.000Z",
+      "data": {
+        "price": 1992.982026905004,
+        "marketCap": 240537076146.7661,
+        "volume24h": 21509559006.41827,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-11T00:00:00.000Z",
+      "data": {
+        "price": 2035.1741536034772,
+        "marketCap": 245629288936.0344,
+        "volume24h": 20433496336.302525,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-12T00:00:00.000Z",
+      "data": {
+        "price": 2051.9341141166024,
+        "marketCap": 247652035655.06946,
+        "volume24h": 16955024688.993406,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-13T00:00:00.000Z",
+      "data": {
+        "price": 2071.9197307868703,
+        "marketCap": 250064089421.84503,
+        "volume24h": 18582310202.19868,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-14T00:00:00.000Z",
+      "data": {
+        "price": 2090.073006429967,
+        "marketCap": 252254994382.1135,
+        "volume24h": 25561303913.200787,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-15T00:00:00.000Z",
+      "data": {
+        "price": 2094.98030985965,
+        "marketCap": 252847188885.48282,
+        "volume24h": 9604585439.975601,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-16T00:00:00.000Z",
+      "data": {
+        "price": 2182.0726576096104,
+        "marketCap": 263358513956.0199,
+        "volume24h": 14142774279.99913,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-17T00:00:00.000Z",
+      "data": {
+        "price": 2343.5310877349557,
+        "marketCap": 282845219015.19055,
+        "volume24h": 35446059567.200615,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-18T00:00:00.000Z",
+      "data": {
+        "price": 2320.9509267494554,
+        "marketCap": 280119875556.8624,
+        "volume24h": 23544760984.833347,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-19T00:00:00.000Z",
+      "data": {
+        "price": 2203.1349441544735,
+        "marketCap": 265900393517.91376,
+        "volume24h": 22377146282.21154,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-20T00:00:00.000Z",
+      "data": {
+        "price": 2139.514195287849,
+        "marketCap": 258221821843.73438,
+        "volume24h": 20747989001.230663,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-21T00:00:00.000Z",
+      "data": {
+        "price": 2146.578814982091,
+        "marketCap": 259074401685.337,
+        "volume24h": 15655115807.2655,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-22T00:00:00.000Z",
+      "data": {
+        "price": 2066.1561868530966,
+        "marketCap": 249368009906.10928,
+        "volume24h": 6737837915.836869,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-23T00:00:00.000Z",
+      "data": {
+        "price": 2055.681838744274,
+        "marketCap": 248103824426.18518,
+        "volume24h": 13821408478.563215,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-24T00:00:00.000Z",
+      "data": {
+        "price": 2152.471302393496,
+        "marketCap": 259785198462.48618,
+        "volume24h": 26141021835.50594,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-25T00:00:00.000Z",
+      "data": {
+        "price": 2156.3938779843224,
+        "marketCap": 260258554389.5669,
+        "volume24h": 15077078045.390007,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-26T00:00:00.000Z",
+      "data": {
+        "price": 2168.560552545361,
+        "marketCap": 261726932084.86105,
+        "volume24h": 15525528310.986448,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-27T00:00:00.000Z",
+      "data": {
+        "price": 2059.589104363155,
+        "marketCap": 248574966495.32648,
+        "volume24h": 16416256659.251913,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-28T00:00:00.000Z",
+      "data": {
+        "price": 1991.5485477905527,
+        "marketCap": 240363008723.19138,
+        "volume24h": 17892632129.20947,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-29T00:00:00.000Z",
+      "data": {
+        "price": 1994.4745202526722,
+        "marketCap": 240716092415.20132,
+        "volume24h": 8252036569.70752,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-30T00:00:00.000Z",
+      "data": {
+        "price": 1982.8132352130838,
+        "marketCap": 239308644088.2471,
+        "volume24h": 9911530668.776669,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-03-31T00:00:00.000Z",
+      "data": {
+        "price": 2024.0146470848574,
+        "marketCap": 244281249742.8913,
+        "volume24h": 16073332742.566395,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-01T00:00:00.000Z",
+      "data": {
+        "price": 2095.4159934323757,
+        "marketCap": 252878775956.88654,
+        "volume24h": 23416069529.556515,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-02T00:00:00.000Z",
+      "data": {
+        "price": 2131.5392771024462,
+        "marketCap": 257238202336.49893,
+        "volume24h": 21299358479.11906,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-03T00:00:00.000Z",
+      "data": {
+        "price": 2052.336230233669,
+        "marketCap": 247679828435.08362,
+        "volume24h": 20672789354.697014,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-04T00:00:00.000Z",
+      "data": {
+        "price": 2052.163683382312,
+        "marketCap": 247678283040.94418,
+        "volume24h": 10373506312.487827,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-05T00:00:00.000Z",
+      "data": {
+        "price": 2052.0685636243165,
+        "marketCap": 247647525921.04834,
+        "volume24h": 8763342890.936821,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-06T00:00:00.000Z",
+      "data": {
+        "price": 2122.887405282097,
+        "marketCap": 256213909037.63998,
+        "volume24h": 10067214258.026436,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-07T00:00:00.000Z",
+      "data": {
+        "price": 2100.806140265129,
+        "marketCap": 253529269098.853,
+        "volume24h": 20057879920.68048,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-08T00:00:00.000Z",
+      "data": {
+        "price": 2235.8222062960863,
+        "marketCap": 269823263999.8347,
+        "volume24h": 25409795947.525566,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-09T00:00:00.000Z",
+      "data": {
+        "price": 2179.7915700795793,
+        "marketCap": 263061380561.4504,
+        "volume24h": 22458863412.682026,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-10T00:00:00.000Z",
+      "data": {
+        "price": 2177.972586699981,
+        "marketCap": 262841862197.574,
+        "volume24h": 19099363153.033443,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-11T00:00:00.000Z",
+      "data": {
+        "price": 2244.742766607941,
+        "marketCap": 270920454985.28488,
+        "volume24h": 15629078001.119347,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-12T00:00:00.000Z",
+      "data": {
+        "price": 2283.0571149299954,
+        "marketCap": 275544608218.2303,
+        "volume24h": 10793969205.906853,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-13T00:00:00.000Z",
+      "data": {
+        "price": 2189.221443884993,
+        "marketCap": 264219444192.96732,
+        "volume24h": 13405623366.831423,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-14T00:00:00.000Z",
+      "data": {
+        "price": 2374.0162053338927,
+        "marketCap": 286522445815.8492,
+        "volume24h": 22227550498.82565,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-15T00:00:00.000Z",
+      "data": {
+        "price": 2326.445177466492,
+        "marketCap": 280780975778.5925,
+        "volume24h": 21779733467.637848,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-16T00:00:00.000Z",
+      "data": {
+        "price": 2360.059166183155,
+        "marketCap": 284837799241.85364,
+        "volume24h": 15687188520.661274,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-17T00:00:00.000Z",
+      "data": {
+        "price": 2348.987492385873,
+        "marketCap": 283501489006.51196,
+        "volume24h": 18277840224.2442,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-18T00:00:00.000Z",
+      "data": {
+        "price": 2421.2905710664027,
+        "marketCap": 292227734041.3285,
+        "volume24h": 22875298915.560413,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-19T00:00:00.000Z",
+      "data": {
+        "price": 2351.4600244518356,
+        "marketCap": 283799477384.54535,
+        "volume24h": 12968820774.047688,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-20T00:00:00.000Z",
+      "data": {
+        "price": 2264.1941982589246,
+        "marketCap": 273266828288.31577,
+        "volume24h": 15211822330.006557,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-21T00:00:00.000Z",
+      "data": {
+        "price": 2314.6386071300276,
+        "marketCap": 279354502380.66516,
+        "volume24h": 17060069305.720215,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-22T00:00:00.000Z",
+      "data": {
+        "price": 2326.6640126907014,
+        "marketCap": 280805083467.57495,
+        "volume24h": 15911266216.065207,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-23T00:00:00.000Z",
+      "data": {
+        "price": 2375.7144533633987,
+        "marketCap": 286724723305.0389,
+        "volume24h": 19824497898.46676,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-24T00:00:00.000Z",
+      "data": {
+        "price": 2331.0953087937605,
+        "marketCap": 281338314330.68677,
+        "volume24h": 17461867679.74141,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-25T00:00:00.000Z",
+      "data": {
+        "price": 2315.2182636013376,
+        "marketCap": 279421562734.57587,
+        "volume24h": 13093021322.350885,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-26T00:00:00.000Z",
+      "data": {
+        "price": 2320.566403725771,
+        "marketCap": 280066641519.59357,
+        "volume24h": 6503395269.585206,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-27T00:00:00.000Z",
+      "data": {
+        "price": 2369.1540292624554,
+        "marketCap": 285930428396.5808,
+        "volume24h": 10106202763.695818,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-28T00:00:00.000Z",
+      "data": {
+        "price": 2303.8842501308045,
+        "marketCap": 278052624845.4277,
+        "volume24h": 16613836112.053389,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-29T00:00:00.000Z",
+      "data": {
+        "price": 2289.1979284429567,
+        "marketCap": 276279339590.3474,
+        "volume24h": 12390033304.504728,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-04-30T00:00:00.000Z",
+      "data": {
+        "price": 2253.620049292702,
+        "marketCap": 271984956722.93295,
+        "volume24h": 19280727384.966576,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-01T00:00:00.000Z",
+      "data": {
+        "price": 2256.9491123703424,
+        "marketCap": 272386233737.76852,
+        "volume24h": 11586818602.190138,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-02T00:00:00.000Z",
+      "data": {
+        "price": 2295.583440883838,
+        "marketCap": 277048393325.80853,
+        "volume24h": 12644600926.186169,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-03T00:00:00.000Z",
+      "data": {
+        "price": 2317.497851608133,
+        "marketCap": 279692977780.6671,
+        "volume24h": 7273904197.167699,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-04T00:00:00.000Z",
+      "data": {
+        "price": 2321.898740689915,
+        "marketCap": 280223985228.8391,
+        "volume24h": 9986633762.177515,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-05T00:00:00.000Z",
+      "data": {
+        "price": 2346.1713028945196,
+        "marketCap": 283153280392.45935,
+        "volume24h": 23720470979.68119,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-06T00:00:00.000Z",
+      "data": {
+        "price": 2360.6443662859797,
+        "marketCap": 284899717179.8512,
+        "volume24h": 16718728906.766327,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-07T00:00:00.000Z",
+      "data": {
+        "price": 2351.0137484161237,
+        "marketCap": 283737319082.1199,
+        "volume24h": 20992171634.479675,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-08T00:00:00.000Z",
+      "data": {
+        "price": 2291.302591374564,
+        "marketCap": 276530674286.61005,
+        "volume24h": 21299616498.374397,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-09T00:00:00.000Z",
+      "data": {
+        "price": 2307.470372982362,
+        "marketCap": 278481484608.0288,
+        "volume24h": 18584836408.061428,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-10T00:00:00.000Z",
+      "data": {
+        "price": 2327.1639474602157,
+        "marketCap": 280857616089.8406,
+        "volume24h": 11176158889.11686,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-11T00:00:00.000Z",
+      "data": {
+        "price": 2369.9648714985337,
+        "marketCap": 286023012112.36975,
+        "volume24h": 17894035453.03701,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-12T00:00:00.000Z",
+      "data": {
+        "price": 2338.59446825004,
+        "marketCap": 282236853919.4963,
+        "volume24h": 14173141323.149693,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-13T00:00:00.000Z",
+      "data": {
+        "price": 2275.747322631228,
+        "marketCap": 274651656906.35928,
+        "volume24h": 14548238977.439606,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-14T00:00:00.000Z",
+      "data": {
+        "price": 2258.4839088491867,
+        "marketCap": 272567919519.1197,
+        "volume24h": 13894697752.532177,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-15T00:00:00.000Z",
+      "data": {
+        "price": 2282.595746277603,
+        "marketCap": 275477745070.3736,
+        "volume24h": 16191988437.405981,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-16T00:00:00.000Z",
+      "data": {
+        "price": 2223.9374886817177,
+        "marketCap": 268398316551.5641,
+        "volume24h": 16707284931.9336,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-17T00:00:00.000Z",
+      "data": {
+        "price": 2180.0891100856325,
+        "marketCap": 263105887893.18088,
+        "volume24h": 10440765468.705359,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-18T00:00:00.000Z",
+      "data": {
+        "price": 2130.749230126177,
+        "marketCap": 257151151560.93878,
+        "volume24h": 9346279089.585968,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-19T00:00:00.000Z",
+      "data": {
+        "price": 2128.8927623239815,
+        "marketCap": 256927014216.71082,
+        "volume24h": 18504025914.851704,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-20T00:00:00.000Z",
+      "data": {
+        "price": 2109.3421375885023,
+        "marketCap": 254567432222.94888,
+        "volume24h": 11250808873.19399,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-21T00:00:00.000Z",
+      "data": {
+        "price": 2127.468931683584,
+        "marketCap": 256754993448.5723,
+        "volume24h": 11238421745.282204,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-22T00:00:00.000Z",
+      "data": {
+        "price": 2132.1443703600044,
+        "marketCap": 257319162066.26633,
+        "volume24h": 13355202447.22478,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-23T00:00:00.000Z",
+      "data": {
+        "price": 2064.039749218924,
+        "marketCap": 249099851766.95044,
+        "volume24h": 12336915364.541262,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-24T00:00:00.000Z",
+      "data": {
+        "price": 2116.4299126571727,
+        "marketCap": 255422534247.0047,
+        "volume24h": 15645737334.490585,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-25T00:00:00.000Z",
+      "data": {
+        "price": 2097.6582568011895,
+        "marketCap": 253157019396.1855,
+        "volume24h": 9972550889.11964,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-26T00:00:00.000Z",
+      "data": {
+        "price": 2110.5929717502054,
+        "marketCap": 254718006828.523,
+        "volume24h": 9506066145.888752,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-27T00:00:00.000Z",
+      "data": {
+        "price": 2072.3492159738144,
+        "marketCap": 250102478155.41592,
+        "volume24h": 14155757179.744965,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-28T00:00:00.000Z",
+      "data": {
+        "price": 2022.465974317952,
+        "marketCap": 244082228718.45593,
+        "volume24h": 13111439048.810225,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-29T00:00:00.000Z",
+      "data": {
+        "price": 2008.1144631178963,
+        "marketCap": 242350127914.89413,
+        "volume24h": 16340884014.098196,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-30T00:00:00.000Z",
+      "data": {
+        "price": 2012.5607890669655,
+        "marketCap": 242886602421.65924,
+        "volume24h": 13631910773.179047,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-05-31T00:00:00.000Z",
+      "data": {
+        "price": 2021.665390940461,
+        "marketCap": 243985261872.80014,
+        "volume24h": 7309721337.815556,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-01T00:00:00.000Z",
+      "data": {
+        "price": 2005.0520566280852,
+        "marketCap": 241980194646.4275,
+        "volume24h": 8798577983.65509,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-02T00:00:00.000Z",
+      "data": {
+        "price": 2003.5794472377934,
+        "marketCap": 241802405659.34933,
+        "volume24h": 17641251039.019615,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-03T00:00:00.000Z",
+      "data": {
+        "price": 1858.3640479335945,
+        "marketCap": 224276922375.7809,
+        "volume24h": 22398056413.249477,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-04T00:00:00.000Z",
+      "data": {
+        "price": 1811.7149905120527,
+        "marketCap": 218646847414.9501,
+        "volume24h": 22460032720.27168,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-05T00:00:00.000Z",
+      "data": {
+        "price": 1769.0317333338,
+        "marketCap": 213495452809.0861,
+        "volume24h": 25717635461.02949,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-06T00:00:00.000Z",
+      "data": {
+        "price": 1582.4588294507628,
+        "marketCap": 190978752181.88416,
+        "volume24h": 38205353386.90695,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-07T00:00:00.000Z",
+      "data": {
+        "price": 1568.7027946407661,
+        "marketCap": 189318197707.50336,
+        "volume24h": 18640275407.494694,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-08T00:00:00.000Z",
+      "data": {
+        "price": 1687.8826846141703,
+        "marketCap": 203701307543.392,
+        "volume24h": 16062772861.618362,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-09T00:00:00.000Z",
+      "data": {
+        "price": 1690.4950851700783,
+        "marketCap": 204016538883.978,
+        "volume24h": 17032455956.759356,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-10T00:00:00.000Z",
+      "data": {
+        "price": 1638.7504135601862,
+        "marketCap": 197771660387.75195,
+        "volume24h": 14438363030.352573,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-11T00:00:00.000Z",
+      "data": {
+        "price": 1620.917390707054,
+        "marketCap": 195619412992.2519,
+        "volume24h": 12687812229.500313,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-12T00:00:00.000Z",
+      "data": {
+        "price": 1671.86904676229,
+        "marketCap": 201768387468.37537,
+        "volume24h": 12635592497.522842,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-13T00:00:00.000Z",
+      "data": {
+        "price": 1665.5551249935475,
+        "marketCap": 201006326715.53604,
+        "volume24h": 10271188237.766333,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-14T00:00:00.000Z",
+      "data": {
+        "price": 1680.3055520030994,
+        "marketCap": 202786394956.7776,
+        "volume24h": 6441342040.178422,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-15T00:00:00.000Z",
+      "data": {
+        "price": 1725.448928079916,
+        "marketCap": 208234439253.2255,
+        "volume24h": 8722419528.693426,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-16T00:00:00.000Z",
+      "data": {
+        "price": 1794.9576599037732,
+        "marketCap": 216622998493.3419,
+        "volume24h": 17421141494.745083,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-17T00:00:00.000Z",
+      "data": {
+        "price": 1791.3886783051394,
+        "marketCap": 216192147348.88727,
+        "volume24h": 14895312465.041277,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-18T00:00:00.000Z",
+      "data": {
+        "price": 1748.7549735206103,
+        "marketCap": 211046873391.0524,
+        "volume24h": 14238667168.314316,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-19T00:00:00.000Z",
+      "data": {
+        "price": 1710.079110757131,
+        "marketCap": 206379242687.9148,
+        "volume24h": 13166567999.261673,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-20T00:00:00.000Z",
+      "data": {
+        "price": 1708.87855388619,
+        "marketCap": 206234250069.17407,
+        "volume24h": 8744393544.88749,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-21T00:00:00.000Z",
+      "data": {
+        "price": 1739.2769352743533,
+        "marketCap": 209902786728.71887,
+        "volume24h": 8660156114.59372,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-22T00:00:00.000Z",
+      "data": {
+        "price": 1704.9130137257484,
+        "marketCap": 205755555330.1328,
+        "volume24h": 9501777100.678152,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-23T00:00:00.000Z",
+      "data": {
+        "price": 1725.1620208904676,
+        "marketCap": 208199241296.49207,
+        "volume24h": 14844534842.973106,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-24T00:00:00.000Z",
+      "data": {
+        "price": 1665.7162407218393,
+        "marketCap": 201025025282.61243,
+        "volume24h": 11028765091.96417,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-25T00:00:00.000Z",
+      "data": {
+        "price": 1620.6434082953833,
+        "marketCap": 195585379105.89435,
+        "volume24h": 14564492017.893734,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-26T00:00:00.000Z",
+      "data": {
+        "price": 1566.0081297519519,
+        "marketCap": 188991665755.70743,
+        "volume24h": 15715979048.939772,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-27T00:00:00.000Z",
+      "data": {
+        "price": 1576.9176481850786,
+        "marketCap": 190308081815.48938,
+        "volume24h": 15385677746.031172,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-28T00:00:00.000Z",
+      "data": {
+        "price": 1571.9371269098212,
+        "marketCap": 189706894652.55972,
+        "volume24h": 6488596779.477047,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-29T00:00:00.000Z",
+      "data": {
+        "price": 1570.0805519413402,
+        "marketCap": 189482804157.67572,
+        "volume24h": 6688950133.242254,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-06-30T00:00:00.000Z",
+      "data": {
+        "price": 1609.751185572177,
+        "marketCap": 194270370492.90536,
+        "volume24h": 12257591853.273031,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-01T00:00:00.000Z",
+      "data": {
+        "price": 1569.8271747749748,
+        "marketCap": 189452148354.94492,
+        "volume24h": 9776507854.22924,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-02T00:00:00.000Z",
+      "data": {
+        "price": 1608.254387223296,
+        "marketCap": 194089602864.7811,
+        "volume24h": 11965520976.255758,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-03T00:00:00.000Z",
+      "data": {
+        "price": 1698.5610521616197,
+        "marketCap": 204988032961.64233,
+        "volume24h": 13732855612.657272,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-04T00:00:00.000Z",
+      "data": {
+        "price": 1756.9804642496356,
+        "marketCap": 212038138510.35922,
+        "volume24h": 10305574832.445166,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-05T00:00:00.000Z",
+      "data": {
+        "price": 1779.908385139636,
+        "marketCap": 214805111963.64227,
+        "volume24h": 8250450293.077493,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-06T00:00:00.000Z",
+      "data": {
+        "price": 1784.2622991817525,
+        "marketCap": 215330521708.11813,
+        "volume24h": 10890625673.403336,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-07T00:00:00.000Z",
+      "data": {
+        "price": 1798.557105022033,
+        "marketCap": 217055626708.547,
+        "volume24h": 16362634630.524921,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-08T00:00:00.000Z",
+      "data": {
+        "price": 1771.2223954004269,
+        "marketCap": 213756723632.7925,
+        "volume24h": 9863305816.642056,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-09T00:00:00.000Z",
+      "data": {
+        "price": 1742.2494536901065,
+        "marketCap": 210260122320.1991,
+        "volume24h": 10424310698.384363,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-10T00:00:00.000Z",
+      "data": {
+        "price": 1744.6953884606253,
+        "marketCap": 210555249028.31128,
+        "volume24h": 7463353201.529596,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-11T00:00:00.000Z",
+      "data": {
+        "price": 1795.2394655119474,
+        "marketCap": 216655030211.1195,
+        "volume24h": 8967123815.261372,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-12T00:00:00.000Z",
+      "data": {
+        "price": 1787.9485944322748,
+        "marketCap": 215775095411.18936,
+        "volume24h": 6693222695.327211,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-13T00:00:00.000Z",
+      "data": {
+        "price": 1805.4862853704624,
+        "marketCap": 217891552265.4176,
+        "volume24h": 6029403660.551113,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-14T00:00:00.000Z",
+      "data": {
+        "price": 1774.0909253483635,
+        "marketCap": 214102634317.62497,
+        "volume24h": 10937935597.693302,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-15T00:00:00.000Z",
+      "data": {
+        "price": 1890.3093923843837,
+        "marketCap": 228128182150.20947,
+        "volume24h": 13672614153.992453,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-16T00:00:00.000Z",
+      "data": {
+        "price": 1916.7586464879018,
+        "marketCap": 231320074235.7647,
+        "volume24h": 11778781495.282999,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-17T00:00:00.000Z",
+      "data": {
+        "price": 1863.0065007127855,
+        "marketCap": 224833051309.7742,
+        "volume24h": 10783158385.916962,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-18T00:00:00.000Z",
+      "data": {
+        "price": 1840.7681193183653,
+        "marketCap": 222149185555.00424,
+        "volume24h": 10022919662.432865,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-19T00:00:00.000Z",
+      "data": {
+        "price": 1862.32234801627,
+        "marketCap": 224750368580.7533,
+        "volume24h": 4987957002.308284,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-20T00:00:00.000Z",
+      "data": {
+        "price": 1870.8170349782704,
+        "marketCap": 225775502701.29886,
+        "volume24h": 6954436039.274067,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-21T00:00:00.000Z",
+      "data": {
+        "price": 1901.7735152870935,
+        "marketCap": 229511401059.90768,
+        "volume24h": 11562172058.259706,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-22T00:00:00.000Z",
+      "data": {
+        "price": 1928.6558956703082,
+        "marketCap": 232755599657.75903,
+        "volume24h": 11705227603.004368,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-23T00:00:00.000Z",
+      "data": {
+        "price": 1933.4132583162384,
+        "marketCap": 233329678635.40228,
+        "volume24h": 10248156689.026426,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-24T00:00:00.000Z",
+      "data": {
+        "price": 1877.460607698635,
+        "marketCap": 226577108826.6929,
+        "volume24h": 9329058790.648285,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-25T00:00:00.000Z",
+      "data": {
+        "price": 1860.4425012275274,
+        "marketCap": 224523247342.9193,
+        "volume24h": 8648456718.721657,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-26T00:00:00.000Z",
+      "data": {
+        "price": 1874.4572768280736,
+        "marketCap": 226214537314.7256,
+        "volume24h": 4560080660.27285,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-27T00:00:00.000Z",
+      "data": {
+        "price": 1952.9020070235085,
+        "marketCap": 235681418276.19308,
+        "volume24h": 6005093960.158514,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-28T00:00:00.000Z",
+      "data": {
+        "price": 1890.4523208978708,
+        "marketCap": 228144769040.5725,
+        "volume24h": 11880592085.099258,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-29T00:00:00.000Z",
+      "data": {
+        "price": 1920.4888660862466,
+        "marketCap": 231769590224.5733,
+        "volume24h": 10140108111.11028,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-30T00:00:00.000Z",
+      "data": {
+        "price": 1908.7417326276595,
+        "marketCap": 230351833088.13193,
+        "volume24h": 10381004662.332052,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-07-31T00:00:00.000Z",
+      "data": {
+        "price": 1917.5713635462077,
+        "marketCap": 231417322457.43652,
+        "volume24h": 7233808983.066724,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-01T00:00:00.000Z",
+      "data": {
+        "price": 1860.5923268286904,
+        "marketCap": 224540624044.67694,
+        "volume24h": 8983553463.1014,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-02T00:00:00.000Z",
+      "data": {
+        "price": 1843.443563411847,
+        "marketCap": 222470943765.64313,
+        "volume24h": 4357579694.724913,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-03T00:00:00.000Z",
+      "data": {
+        "price": 1882.9305589557664,
+        "marketCap": 227236303688.18417,
+        "volume24h": 5173055599.256301,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-04T00:00:00.000Z",
+      "data": {
+        "price": 1858.5376969949996,
+        "marketCap": 224292495927.8464,
+        "volume24h": 6905850664.836938,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-05T00:00:00.000Z",
+      "data": {
+        "price": 1868.621381582403,
+        "marketCap": 225509357776.2601,
+        "volume24h": 7025816689.849928,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-06T00:00:00.000Z",
+      "data": {
+        "price": 1907.4360439632449,
+        "marketCap": 230193525056.68658,
+        "volume24h": 8719148747.985065,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-07T00:00:00.000Z",
+      "data": {
+        "price": 1902.1622720657638,
+        "marketCap": 229557018282.317,
+        "volume24h": 7041288910.521751,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-08T00:00:00.000Z",
+      "data": {
+        "price": 1912.9851571036106,
+        "marketCap": 230863088055.06393,
+        "volume24h": 7937017648.61706,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-09T00:00:00.000Z",
+      "data": {
+        "price": 1915.447810935271,
+        "marketCap": 231160234746.49893,
+        "volume24h": 3398047722.2540674,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-10T00:00:00.000Z",
+      "data": {
+        "price": 1908.940734099038,
+        "marketCap": 230374924394.0449,
+        "volume24h": 4015296300.504261,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-11T00:00:00.000Z",
+      "data": {
+        "price": 1871.3976551883159,
+        "marketCap": 225844119567.10123,
+        "volume24h": 7444257808.359959,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-12T00:00:00.000Z",
+      "data": {
+        "price": 1880.4862005694617,
+        "marketCap": 226940902767.18845,
+        "volume24h": 7012585474.087628,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-13T00:00:00.000Z",
+      "data": {
+        "price": 1877.743530062547,
+        "marketCap": 226609870971.63812,
+        "volume24h": 6676533766.105008,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-14T00:00:00.000Z",
+      "data": {
+        "price": 1884.3941576877892,
+        "marketCap": 227412442314.981,
+        "volume24h": 6176486165.813991,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-15T00:00:00.000Z",
+      "data": {
+        "price": 1880.3285280890423,
+        "marketCap": 226921756396.83118,
+        "volume24h": 4955816205.526191,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-16T00:00:00.000Z",
+      "data": {
+        "price": 1880.9591561894488,
+        "marketCap": 226997824776.81827,
+        "volume24h": 2840242427.939262,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-17T00:00:00.000Z",
+      "data": {
+        "price": 1874.401898191962,
+        "marketCap": 226206460858.21567,
+        "volume24h": 3309436095.6191325,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-18T00:00:00.000Z",
+      "data": {
+        "price": 1912.2734691708965,
+        "marketCap": 230776857469.4575,
+        "volume24h": 6844360576.180716,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-19T00:00:00.000Z",
+      "data": {
+        "price": 1916.3998901478055,
+        "marketCap": 231274812706.7942,
+        "volume24h": 5993977856.00991,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-20T00:00:00.000Z",
+      "data": {
+        "price": 2251.7346140069594,
+        "marketCap": 271743603539.60367,
+        "volume24h": 27730489153.053757,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-21T00:00:00.000Z",
+      "data": {
+        "price": 2326.5282334236576,
+        "marketCap": 280769475212.28674,
+        "volume24h": 25176787742.312656,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-22T00:00:00.000Z",
+      "data": {
+        "price": 2514.967577695514,
+        "marketCap": 303510532650.1589,
+        "volume24h": 31043603228.171097,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-23T00:00:00.000Z",
+      "data": {
+        "price": 2423.4127407436827,
+        "marketCap": 292461262953.4871,
+        "volume24h": 20488463662.617588,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-24T00:00:00.000Z",
+      "data": {
+        "price": 2462.403924751607,
+        "marketCap": 297166690282.8374,
+        "volume24h": 16424823875.772726,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-25T00:00:00.000Z",
+      "data": {
+        "price": 2481.879430655568,
+        "marketCap": 299516952709.2971,
+        "volume24h": 20089039982.502842,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-26T00:00:00.000Z",
+      "data": {
+        "price": 2442.0111121033965,
+        "marketCap": 294705081780.14966,
+        "volume24h": 15300244959.640041,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-27T00:00:00.000Z",
+      "data": {
+        "price": 2506.3431057180687,
+        "marketCap": 302468671992.12006,
+        "volume24h": 12215102857.703117,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-28T00:00:00.000Z",
+      "data": {
+        "price": 2511.461241063819,
+        "marketCap": 303086274935.40906,
+        "volume24h": 15416430976.148985,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-29T00:00:00.000Z",
+      "data": {
+        "price": 2442.407614756763,
+        "marketCap": 294752696360.4463,
+        "volume24h": 14972903066.684414,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-30T00:00:00.000Z",
+      "data": {
+        "price": 2457.089335222437,
+        "marketCap": 296524419464.6924,
+        "volume24h": 5355165833.843594,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-08-31T00:00:00.000Z",
+      "data": {
+        "price": 2416.2418165172735,
+        "marketCap": 291594867605.8527,
+        "volume24h": 10762275574.892046,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-01T00:00:00.000Z",
+      "data": {
+        "price": 2466.565659094493,
+        "marketCap": 297667970873.7225,
+        "volume24h": 12336663342.988674,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-02T00:00:00.000Z",
+      "data": {
+        "price": 2417.6758884733536,
+        "marketCap": 291767768408.91174,
+        "volume24h": 12760379027.821028,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-03T00:00:00.000Z",
+      "data": {
+        "price": 2390.783044679688,
+        "marketCap": 291704729861.0524,
+        "volume24h": 12772993324.596373,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-04T00:00:00.000Z",
+      "data": {
+        "price": 2507.6482840896088,
+        "marketCap": 305971011968.8528,
+        "volume24h": 16639170367.446753,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-05T00:00:00.000Z",
+      "data": {
+        "price": 2456.085066364875,
+        "marketCap": 299686660200.51276,
+        "volume24h": 16234345954.343023,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-06T00:00:00.000Z",
+      "data": {
+        "price": 2480.0031686031184,
+        "marketCap": 302612300112.52106,
+        "volume24h": 6784086852.01072,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-07T00:00:00.000Z",
+      "data": {
+        "price": 2514.0092688310365,
+        "marketCap": 306769108939.70807,
+        "volume24h": 9948019407.716267,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-08T00:00:00.000Z",
+      "data": {
+        "price": 2489.3967543757462,
+        "marketCap": 303773075685.29297,
+        "volume24h": 11300837599.905233,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-09T00:00:00.000Z",
+      "data": {
+        "price": 2485.0697039871584,
+        "marketCap": 303252321699.8239,
+        "volume24h": 11965805217.194431,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-10T00:00:00.000Z",
+      "data": {
+        "price": 2467.529167979314,
+        "marketCap": 301119066908.05597,
+        "volume24h": 13328861510.407354,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-11T00:00:00.000Z",
+      "data": {
+        "price": 2437.514812545618,
+        "marketCap": 297463477324.3543,
+        "volume24h": 15266781786.913017,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-12T00:00:00.000Z",
+      "data": {
+        "price": 2514.846819245876,
+        "marketCap": 306908073951.8628,
+        "volume24h": 24774688367.63771,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-13T00:00:00.000Z",
+      "data": {
+        "price": 2525.267261590238,
+        "marketCap": 308187084056.6601,
+        "volume24h": 7645722055.298775,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-14T00:00:00.000Z",
+      "data": {
+        "price": 2476.682526163658,
+        "marketCap": 302264990103.7054,
+        "volume24h": 9592266575.143324,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-15T00:00:00.000Z",
+      "data": {
+        "price": 2514.759550467769,
+        "marketCap": 306919471184.89514,
+        "volume24h": 16123922989.756006,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-16T00:00:00.000Z",
+      "data": {
+        "price": 2397.4972601650115,
+        "marketCap": 292614926206.1527,
+        "volume24h": 19487916667.87325,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-17T00:00:00.000Z",
+      "data": {
+        "price": 2415.9596535242995,
+        "marketCap": 294875323390.85944,
+        "volume24h": 15793566275.442846,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-18T00:00:00.000Z",
+      "data": {
+        "price": 2446.143252227872,
+        "marketCap": 298566484290.6061,
+        "volume24h": 11943767083.350086,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-19T00:00:00.000Z",
+      "data": {
+        "price": 2611.5555571198493,
+        "marketCap": 318763679004.78766,
+        "volume24h": 23593939177.26936,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-20T00:00:00.000Z",
+      "data": {
+        "price": 2632.0095970320526,
+        "marketCap": 321267925139.67786,
+        "volume24h": 11034395644.108103,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-21T00:00:00.000Z",
+      "data": {
+        "price": 2644.7349398187544,
+        "marketCap": 322828893559.51447,
+        "volume24h": 11749949626.385357,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-22T00:00:00.000Z",
+      "data": {
+        "price": 2775.1686826711957,
+        "marketCap": 338758308121.54047,
+        "volume24h": 27217607923.39273,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-23T00:00:00.000Z",
+      "data": {
+        "price": 2752.629093198004,
+        "marketCap": 336014807500.0825,
+        "volume24h": 16456702906.15831,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-24T00:00:00.000Z",
+      "data": {
+        "price": 2684.342871490596,
+        "marketCap": 327686843603.20233,
+        "volume24h": 17829847307.081375,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-25T00:00:00.000Z",
+      "data": {
+        "price": 2687.1259839506374,
+        "marketCap": 328034207688.9713,
+        "volume24h": 14564506864.808453,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-26T00:00:00.000Z",
+      "data": {
+        "price": 2690.8886985219224,
+        "marketCap": 328500746742.66174,
+        "volume24h": 14335818784.962042,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-27T00:00:00.000Z",
+      "data": {
+        "price": 2695.6048383919747,
+        "marketCap": 329084170100.4967,
+        "volume24h": 5851863209.137865,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-28T00:00:00.000Z",
+      "data": {
+        "price": 2687.5352894478456,
+        "marketCap": 328106879703.77484,
+        "volume24h": 8833449436.595728,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-29T00:00:00.000Z",
+      "data": {
+        "price": 2687.921688219616,
+        "marketCap": 328161568756.54565,
+        "volume24h": 17048616414.52823,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-09-30T00:00:00.000Z",
+      "data": {
+        "price": 2677.3845041515556,
+        "marketCap": 326882384721.9066,
+        "volume24h": 15609520153.835028,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-01T00:00:00.000Z",
+      "data": {
+        "price": 2684.708553282074,
+        "marketCap": 327783962324.3409,
+        "volume24h": 13831956665.772991,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-02T00:00:00.000Z",
+      "data": {
+        "price": 2705.2959032354674,
+        "marketCap": 330305392614.80695,
+        "volume24h": 13688689733.998228,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-03T00:00:00.000Z",
+      "data": {
+        "price": 2667.9504418816,
+        "marketCap": 325753252610.3761,
+        "volume24h": 18947257093.519634,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-04T00:00:00.000Z",
+      "data": {
+        "price": 2686.891434728346,
+        "marketCap": 328073789645.7034,
+        "volume24h": 5155711549.0922785,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-05T00:00:00.000Z",
+      "data": {
+        "price": 2725.9105379372454,
+        "marketCap": 332846167523.6478,
+        "volume24h": 6168266219.038013,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-06T00:00:00.000Z",
+      "data": {
+        "price": 2710.4181759245234,
+        "marketCap": 330962511259.41034,
+        "volume24h": 12360388631.332169,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-07T00:00:00.000Z",
+      "data": {
+        "price": 2697.1723962480346,
+        "marketCap": 329352893752.80865,
+        "volume24h": 11013438109.181702,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-08T00:00:00.000Z",
+      "data": {
+        "price": 2573.2309278741104,
+        "marketCap": 314225721923.2913,
+        "volume24h": 19380856621.938263,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-09T00:00:00.000Z",
+      "data": {
+        "price": 2472.7266584392723,
+        "marketCap": 301959830755.3213,
+        "volume24h": 19211446963.28274,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-10T00:00:00.000Z",
+      "data": {
+        "price": 2485.704908841487,
+        "marketCap": 303551579906.16174,
+        "volume24h": 9237247812.481485,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-11T00:00:00.000Z",
+      "data": {
+        "price": 2504.3139870176874,
+        "marketCap": 305831441169.97095,
+        "volume24h": 5821686502.407691,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-12T00:00:00.000Z",
+      "data": {
+        "price": 2534.632372231471,
+        "marketCap": 309541484283.7787,
+        "volume24h": 8566468363.628672,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-13T00:00:00.000Z",
+      "data": {
+        "price": 2445.8883615502414,
+        "marketCap": 298710869490.4768,
+        "volume24h": 13499532438.027359,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-14T00:00:00.000Z",
+      "data": {
+        "price": 2496.5900876439555,
+        "marketCap": 304910319328.6137,
+        "volume24h": 12664145444.948595,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-15T00:00:00.000Z",
+      "data": {
+        "price": 2419.689613608177,
+        "marketCap": 295525520649.86206,
+        "volume24h": 14011311984.6873,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-16T00:00:00.000Z",
+      "data": {
+        "price": 2439.96187745067,
+        "marketCap": 298008599988.15814,
+        "volume24h": 19072612435.258205,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-17T00:00:00.000Z",
+      "data": {
+        "price": 2420.559805997806,
+        "marketCap": 295645987052.46277,
+        "volume24h": 12413691615.07689,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-18T00:00:00.000Z",
+      "data": {
+        "price": 2400.3079201066294,
+        "marketCap": 293179515941.90076,
+        "volume24h": 6392442801.18807,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-19T00:00:00.000Z",
+      "data": {
+        "price": 2407.8423723702235,
+        "marketCap": 294106909234.6188,
+        "volume24h": 8562877335.43275,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-20T00:00:00.000Z",
+      "data": {
+        "price": 2405.9183757810897,
+        "marketCap": 293879026865.33386,
+        "volume24h": 9189766395.664333,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-21T00:00:00.000Z",
+      "data": {
+        "price": 2446.4878553971676,
+        "marketCap": 298841751224.8341,
+        "volume24h": 11659953648.207783,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-22T00:00:00.000Z",
+      "data": {
+        "price": 2472.6790339173845,
+        "marketCap": 302036532023.7666,
+        "volume24h": 13777880330.779068,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-23T00:00:00.000Z",
+      "data": {
+        "price": 2386.4827807254364,
+        "marketCap": 291514722930.01965,
+        "volume24h": 12782685343.559818,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-24T00:00:00.000Z",
+      "data": {
+        "price": 2384.7498314209515,
+        "marketCap": 291309985945.85144,
+        "volume24h": 9909686957.943005,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-25T00:00:00.000Z",
+      "data": {
+        "price": 2356.5686323389386,
+        "marketCap": 287874457234.6905,
+        "volume24h": 9030947692.418264,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-26T00:00:00.000Z",
+      "data": {
+        "price": 2326.830715323991,
+        "marketCap": 284248605755.0931,
+        "volume24h": 6329620691.518975,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-27T00:00:00.000Z",
+      "data": {
+        "price": 2320.672448636286,
+        "marketCap": 283503198237.63214,
+        "volume24h": 10108268440.438486,
+        "vsCurrency": "usd"
+      }
+    },
+    {
+      "observedAt": "2026-10-27T15:45:40.000Z",
+      "data": {
+        "price": 2345.941489238292,
+        "marketCap": 286597115095.6798,
+        "volume24h": 8556403574.569073,
+        "vsCurrency": "usd"
+      }
+    }
+  ]
+}

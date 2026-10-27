@@ -1,0 +1,1824 @@
+{
+  "source": "CoinGecko",
+  "sourceUrl": "https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=30",
+  "fetchedAt": "2026-10-27T15:47:18.842Z",
+  "coingeckoId": "bitcoin",
+  "vsCurrency": "usd",
+  "days": 30,
+  "granularity": {
+    "sourceIntervalSeconds": 14400,
+    "sourceIntervalLabel": "4h",
+    "assetPriceHistoryInterval": "4h",
+    "uniform": true,
+    "observedIntervalSeconds": [
+      14400
+    ],
+    "isOhlc": true,
+    "note": null
+  },
+  "volumeAvailable": false,
+  "volumeNote": "CoinGecko OHLC candles do not include volume. volume is null and is not derived from price or market-cap observations.",
+  "rejectedRows": 0,
+  "candles": [
+    {
+      "timestamp": "2026-09-27T16:00:00.000Z",
+      "open": 84876,
+      "high": 85089,
+      "low": 84427,
+      "close": 84441,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-27T20:00:00.000Z",
+      "open": 84443,
+      "high": 84815,
+      "low": 84355,
+      "close": 84720,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-28T00:00:00.000Z",
+      "open": 84720,
+      "high": 84790,
+      "low": 84136,
+      "close": 84442,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-28T04:00:00.000Z",
+      "open": 84449,
+      "high": 84945,
+      "low": 83212,
+      "close": 83324,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-28T08:00:00.000Z",
+      "open": 83324,
+      "high": 83505,
+      "low": 82778,
+      "close": 82957,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-28T12:00:00.000Z",
+      "open": 82933,
+      "high": 83091,
+      "low": 82581,
+      "close": 83052,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-28T16:00:00.000Z",
+      "open": 83056,
+      "high": 83770,
+      "low": 82721,
+      "close": 83360,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-28T20:00:00.000Z",
+      "open": 83360,
+      "high": 84265,
+      "low": 83128,
+      "close": 83384,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-29T00:00:00.000Z",
+      "open": 83380,
+      "high": 83628,
+      "low": 83089,
+      "close": 83484,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-29T04:00:00.000Z",
+      "open": 83479,
+      "high": 83582,
+      "low": 82796,
+      "close": 83038,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-29T08:00:00.000Z",
+      "open": 83038,
+      "high": 84133,
+      "low": 82962,
+      "close": 83954,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-29T12:00:00.000Z",
+      "open": 83978,
+      "high": 84442,
+      "low": 83747,
+      "close": 84339,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-29T16:00:00.000Z",
+      "open": 84331,
+      "high": 84486,
+      "low": 82936,
+      "close": 83080,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-29T20:00:00.000Z",
+      "open": 83080,
+      "high": 83663,
+      "low": 82911,
+      "close": 83566,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-30T00:00:00.000Z",
+      "open": 83566,
+      "high": 83811,
+      "low": 83368,
+      "close": 83640,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-30T04:00:00.000Z",
+      "open": 83640,
+      "high": 83685,
+      "low": 83164,
+      "close": 83269,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-30T08:00:00.000Z",
+      "open": 83272,
+      "high": 83448,
+      "low": 82951,
+      "close": 83290,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-30T12:00:00.000Z",
+      "open": 83283,
+      "high": 83920,
+      "low": 83003,
+      "close": 83860,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-30T16:00:00.000Z",
+      "open": 83858,
+      "high": 85518,
+      "low": 83403,
+      "close": 84102,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-09-30T20:00:00.000Z",
+      "open": 84104,
+      "high": 84422,
+      "low": 83499,
+      "close": 83567,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-01T00:00:00.000Z",
+      "open": 83562,
+      "high": 83797,
+      "low": 83513,
+      "close": 83578,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-01T04:00:00.000Z",
+      "open": 83576,
+      "high": 83716,
+      "low": 83372,
+      "close": 83706,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-01T08:00:00.000Z",
+      "open": 83710,
+      "high": 84350,
+      "low": 83327,
+      "close": 83425,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-01T12:00:00.000Z",
+      "open": 83424,
+      "high": 84016,
+      "low": 83182,
+      "close": 83896,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-01T16:00:00.000Z",
+      "open": 83896,
+      "high": 84273,
+      "low": 83457,
+      "close": 84118,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-01T20:00:00.000Z",
+      "open": 84124,
+      "high": 85183,
+      "low": 84068,
+      "close": 84622,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-02T00:00:00.000Z",
+      "open": 84630,
+      "high": 84866,
+      "low": 84473,
+      "close": 84842,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-02T04:00:00.000Z",
+      "open": 84842,
+      "high": 85499,
+      "low": 84522,
+      "close": 85496,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-02T08:00:00.000Z",
+      "open": 85500,
+      "high": 86794,
+      "low": 85447,
+      "close": 86062,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-02T12:00:00.000Z",
+      "open": 86077,
+      "high": 86545,
+      "low": 86065,
+      "close": 86418,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-02T16:00:00.000Z",
+      "open": 86390,
+      "high": 87086,
+      "low": 85191,
+      "close": 85299,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-02T20:00:00.000Z",
+      "open": 85327,
+      "high": 85471,
+      "low": 83898,
+      "close": 84297,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-03T00:00:00.000Z",
+      "open": 84297,
+      "high": 84562,
+      "low": 84228,
+      "close": 84504,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-03T04:00:00.000Z",
+      "open": 84506,
+      "high": 84696,
+      "low": 84441,
+      "close": 84684,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-03T08:00:00.000Z",
+      "open": 84685,
+      "high": 84711,
+      "low": 84518,
+      "close": 84562,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-03T12:00:00.000Z",
+      "open": 84552,
+      "high": 84675,
+      "low": 84551,
+      "close": 84660,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-03T16:00:00.000Z",
+      "open": 84659,
+      "high": 84924,
+      "low": 84659,
+      "close": 84850,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-03T20:00:00.000Z",
+      "open": 84850,
+      "high": 85014,
+      "low": 84735,
+      "close": 84830,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-04T00:00:00.000Z",
+      "open": 84830,
+      "high": 84893,
+      "low": 84572,
+      "close": 84743,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-04T04:00:00.000Z",
+      "open": 84743,
+      "high": 84871,
+      "low": 84708,
+      "close": 84828,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-04T08:00:00.000Z",
+      "open": 84828,
+      "high": 85086,
+      "low": 84798,
+      "close": 85086,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-04T12:00:00.000Z",
+      "open": 85094,
+      "high": 85401,
+      "low": 85026,
+      "close": 85293,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-04T16:00:00.000Z",
+      "open": 85293,
+      "high": 85435,
+      "low": 85098,
+      "close": 85267,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-04T20:00:00.000Z",
+      "open": 85258,
+      "high": 85518,
+      "low": 85172,
+      "close": 85413,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-05T00:00:00.000Z",
+      "open": 85413,
+      "high": 86737,
+      "low": 85381,
+      "close": 86515,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-05T04:00:00.000Z",
+      "open": 86490,
+      "high": 86949,
+      "low": 86049,
+      "close": 86066,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-05T08:00:00.000Z",
+      "open": 86087,
+      "high": 86412,
+      "low": 85428,
+      "close": 86198,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-05T12:00:00.000Z",
+      "open": 86225,
+      "high": 86466,
+      "low": 85808,
+      "close": 86174,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-05T16:00:00.000Z",
+      "open": 86179,
+      "high": 86662,
+      "low": 85219,
+      "close": 85255,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-05T20:00:00.000Z",
+      "open": 85255,
+      "high": 85759,
+      "low": 85010,
+      "close": 85711,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-06T00:00:00.000Z",
+      "open": 85719,
+      "high": 86051,
+      "low": 85647,
+      "close": 85771,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-06T04:00:00.000Z",
+      "open": 85771,
+      "high": 86102,
+      "low": 85325,
+      "close": 85491,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-06T08:00:00.000Z",
+      "open": 85500,
+      "high": 85696,
+      "low": 85122,
+      "close": 85547,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-06T12:00:00.000Z",
+      "open": 85572,
+      "high": 86339,
+      "low": 85570,
+      "close": 86232,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-06T16:00:00.000Z",
+      "open": 86243,
+      "high": 86648,
+      "low": 85752,
+      "close": 85758,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-06T20:00:00.000Z",
+      "open": 85744,
+      "high": 85824,
+      "low": 85423,
+      "close": 85614,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-07T00:00:00.000Z",
+      "open": 85611,
+      "high": 85659,
+      "low": 85370,
+      "close": 85545,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-07T04:00:00.000Z",
+      "open": 85540,
+      "high": 85585,
+      "low": 83648,
+      "close": 84139,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-07T08:00:00.000Z",
+      "open": 84139,
+      "high": 84340,
+      "low": 84033,
+      "close": 84136,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-07T12:00:00.000Z",
+      "open": 84121,
+      "high": 84121,
+      "low": 83542,
+      "close": 83709,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-07T16:00:00.000Z",
+      "open": 83713,
+      "high": 83713,
+      "low": 82823,
+      "close": 83414,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-07T20:00:00.000Z",
+      "open": 83419,
+      "high": 83616,
+      "low": 83037,
+      "close": 83391,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-08T00:00:00.000Z",
+      "open": 83397,
+      "high": 83563,
+      "low": 83104,
+      "close": 83282,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-08T04:00:00.000Z",
+      "open": 83282,
+      "high": 83459,
+      "low": 82664,
+      "close": 82720,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-08T08:00:00.000Z",
+      "open": 82722,
+      "high": 83215,
+      "low": 82318,
+      "close": 82952,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-08T12:00:00.000Z",
+      "open": 82948,
+      "high": 83111,
+      "low": 82312,
+      "close": 82450,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-08T16:00:00.000Z",
+      "open": 82439,
+      "high": 82684,
+      "low": 80986,
+      "close": 80986,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-08T20:00:00.000Z",
+      "open": 81023,
+      "high": 81773,
+      "low": 80427,
+      "close": 81714,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-09T00:00:00.000Z",
+      "open": 81763,
+      "high": 81881,
+      "low": 81571,
+      "close": 81683,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-09T04:00:00.000Z",
+      "open": 81686,
+      "high": 82364,
+      "low": 81572,
+      "close": 82362,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-09T08:00:00.000Z",
+      "open": 82362,
+      "high": 82581,
+      "low": 82180,
+      "close": 82581,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-09T12:00:00.000Z",
+      "open": 82582,
+      "high": 83398,
+      "low": 82345,
+      "close": 83173,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-09T16:00:00.000Z",
+      "open": 83145,
+      "high": 83315,
+      "low": 82453,
+      "close": 82837,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-09T20:00:00.000Z",
+      "open": 82802,
+      "high": 82929,
+      "low": 82229,
+      "close": 82274,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-10T00:00:00.000Z",
+      "open": 82295,
+      "high": 82615,
+      "low": 82262,
+      "close": 82563,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-10T04:00:00.000Z",
+      "open": 82564,
+      "high": 82655,
+      "low": 82483,
+      "close": 82527,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-10T08:00:00.000Z",
+      "open": 82529,
+      "high": 82803,
+      "low": 82529,
+      "close": 82731,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-10T12:00:00.000Z",
+      "open": 82734,
+      "high": 82867,
+      "low": 82712,
+      "close": 82805,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-10T16:00:00.000Z",
+      "open": 82805,
+      "high": 82987,
+      "low": 82713,
+      "close": 82964,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-10T20:00:00.000Z",
+      "open": 82970,
+      "high": 83094,
+      "low": 82912,
+      "close": 83011,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-11T00:00:00.000Z",
+      "open": 83011,
+      "high": 83032,
+      "low": 82892,
+      "close": 82918,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-11T04:00:00.000Z",
+      "open": 82918,
+      "high": 83066,
+      "low": 82763,
+      "close": 82763,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-11T08:00:00.000Z",
+      "open": 82763,
+      "high": 83135,
+      "low": 82735,
+      "close": 82948,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-11T12:00:00.000Z",
+      "open": 82950,
+      "high": 83110,
+      "low": 82894,
+      "close": 83088,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-11T16:00:00.000Z",
+      "open": 83094,
+      "high": 83818,
+      "low": 82957,
+      "close": 83783,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-11T20:00:00.000Z",
+      "open": 83783,
+      "high": 84072,
+      "low": 83512,
+      "close": 83591,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-12T00:00:00.000Z",
+      "open": 83594,
+      "high": 83695,
+      "low": 83255,
+      "close": 83691,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-12T04:00:00.000Z",
+      "open": 83691,
+      "high": 83935,
+      "low": 83386,
+      "close": 83536,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-12T08:00:00.000Z",
+      "open": 83535,
+      "high": 84231,
+      "low": 83429,
+      "close": 83917,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-12T12:00:00.000Z",
+      "open": 83923,
+      "high": 83923,
+      "low": 83247,
+      "close": 83333,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-12T16:00:00.000Z",
+      "open": 83331,
+      "high": 83333,
+      "low": 82379,
+      "close": 82656,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-12T20:00:00.000Z",
+      "open": 82656,
+      "high": 82876,
+      "low": 82272,
+      "close": 82777,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-13T00:00:00.000Z",
+      "open": 82777,
+      "high": 83064,
+      "low": 81728,
+      "close": 81776,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-13T04:00:00.000Z",
+      "open": 81795,
+      "high": 83368,
+      "low": 81018,
+      "close": 83246,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-13T08:00:00.000Z",
+      "open": 83239,
+      "high": 83953,
+      "low": 83185,
+      "close": 83821,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-13T12:00:00.000Z",
+      "open": 83823,
+      "high": 84074,
+      "low": 83085,
+      "close": 83278,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-13T16:00:00.000Z",
+      "open": 83280,
+      "high": 83733,
+      "low": 83093,
+      "close": 83358,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-13T20:00:00.000Z",
+      "open": 83358,
+      "high": 83536,
+      "low": 82919,
+      "close": 83226,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-14T00:00:00.000Z",
+      "open": 83219,
+      "high": 83484,
+      "low": 83089,
+      "close": 83109,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-14T04:00:00.000Z",
+      "open": 83115,
+      "high": 83865,
+      "low": 83115,
+      "close": 83779,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-14T08:00:00.000Z",
+      "open": 83721,
+      "high": 83818,
+      "low": 83290,
+      "close": 83509,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-14T12:00:00.000Z",
+      "open": 83506,
+      "high": 84025,
+      "low": 83001,
+      "close": 83394,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-14T16:00:00.000Z",
+      "open": 83391,
+      "high": 83791,
+      "low": 81576,
+      "close": 81576,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-14T20:00:00.000Z",
+      "open": 81585,
+      "high": 82011,
+      "low": 81482,
+      "close": 81742,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-15T00:00:00.000Z",
+      "open": 81745,
+      "high": 81896,
+      "low": 81376,
+      "close": 81597,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-15T04:00:00.000Z",
+      "open": 81604,
+      "high": 81802,
+      "low": 80444,
+      "close": 80858,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-15T08:00:00.000Z",
+      "open": 80806,
+      "high": 81623,
+      "low": 80469,
+      "close": 81436,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-15T12:00:00.000Z",
+      "open": 81446,
+      "high": 81473,
+      "low": 80786,
+      "close": 80904,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-15T16:00:00.000Z",
+      "open": 80905,
+      "high": 82436,
+      "low": 79806,
+      "close": 82359,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-15T20:00:00.000Z",
+      "open": 82367,
+      "high": 82508,
+      "low": 81905,
+      "close": 82312,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-16T00:00:00.000Z",
+      "open": 82309,
+      "high": 82496,
+      "low": 81910,
+      "close": 82158,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-16T04:00:00.000Z",
+      "open": 82156,
+      "high": 82412,
+      "low": 81634,
+      "close": 82038,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-16T08:00:00.000Z",
+      "open": 82026,
+      "high": 82326,
+      "low": 81882,
+      "close": 82208,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-16T12:00:00.000Z",
+      "open": 82222,
+      "high": 82816,
+      "low": 81791,
+      "close": 82566,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-16T16:00:00.000Z",
+      "open": 82553,
+      "high": 82574,
+      "low": 81287,
+      "close": 81287,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-16T20:00:00.000Z",
+      "open": 81287,
+      "high": 81600,
+      "low": 80761,
+      "close": 81504,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-17T00:00:00.000Z",
+      "open": 81506,
+      "high": 81733,
+      "low": 81452,
+      "close": 81528,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-17T04:00:00.000Z",
+      "open": 81524,
+      "high": 81582,
+      "low": 81331,
+      "close": 81483,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-17T08:00:00.000Z",
+      "open": 81476,
+      "high": 81655,
+      "low": 81431,
+      "close": 81628,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-17T12:00:00.000Z",
+      "open": 81626,
+      "high": 81650,
+      "low": 81458,
+      "close": 81475,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-17T16:00:00.000Z",
+      "open": 81478,
+      "high": 81514,
+      "low": 81229,
+      "close": 81269,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-17T20:00:00.000Z",
+      "open": 81269,
+      "high": 81563,
+      "low": 81109,
+      "close": 81528,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-18T00:00:00.000Z",
+      "open": 81528,
+      "high": 81594,
+      "low": 80823,
+      "close": 81413,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-18T04:00:00.000Z",
+      "open": 81408,
+      "high": 81978,
+      "low": 81328,
+      "close": 81880,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-18T08:00:00.000Z",
+      "open": 81881,
+      "high": 81882,
+      "low": 81565,
+      "close": 81601,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-18T12:00:00.000Z",
+      "open": 81597,
+      "high": 82178,
+      "low": 81575,
+      "close": 81972,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-18T16:00:00.000Z",
+      "open": 81969,
+      "high": 82034,
+      "low": 80945,
+      "close": 81089,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-18T20:00:00.000Z",
+      "open": 81084,
+      "high": 81188,
+      "low": 80753,
+      "close": 80823,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-19T00:00:00.000Z",
+      "open": 80814,
+      "high": 82093,
+      "low": 80672,
+      "close": 82036,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-19T04:00:00.000Z",
+      "open": 82020,
+      "high": 82693,
+      "low": 81960,
+      "close": 82455,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-19T08:00:00.000Z",
+      "open": 82453,
+      "high": 83035,
+      "low": 82412,
+      "close": 82666,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-19T12:00:00.000Z",
+      "open": 82666,
+      "high": 83015,
+      "low": 82083,
+      "close": 82295,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-19T16:00:00.000Z",
+      "open": 82275,
+      "high": 82667,
+      "low": 81745,
+      "close": 81883,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-19T20:00:00.000Z",
+      "open": 81883,
+      "high": 82077,
+      "low": 81737,
+      "close": 81802,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-20T00:00:00.000Z",
+      "open": 81799,
+      "high": 82182,
+      "low": 81787,
+      "close": 81875,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-20T04:00:00.000Z",
+      "open": 81875,
+      "high": 82059,
+      "low": 81155,
+      "close": 82058,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-20T08:00:00.000Z",
+      "open": 82063,
+      "high": 82169,
+      "low": 81416,
+      "close": 81483,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-20T12:00:00.000Z",
+      "open": 81477,
+      "high": 81562,
+      "low": 81273,
+      "close": 81423,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-20T16:00:00.000Z",
+      "open": 81423,
+      "high": 83249,
+      "low": 81273,
+      "close": 82546,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-20T20:00:00.000Z",
+      "open": 82546,
+      "high": 82850,
+      "low": 82296,
+      "close": 82526,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-21T00:00:00.000Z",
+      "open": 82499,
+      "high": 83086,
+      "low": 82458,
+      "close": 82960,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-21T04:00:00.000Z",
+      "open": 82944,
+      "high": 83140,
+      "low": 82653,
+      "close": 82653,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-21T08:00:00.000Z",
+      "open": 82675,
+      "high": 83133,
+      "low": 82567,
+      "close": 83070,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-21T12:00:00.000Z",
+      "open": 83064,
+      "high": 83568,
+      "low": 83019,
+      "close": 83416,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-21T16:00:00.000Z",
+      "open": 83409,
+      "high": 84720,
+      "low": 83228,
+      "close": 84470,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-21T20:00:00.000Z",
+      "open": 84480,
+      "high": 84808,
+      "low": 84173,
+      "close": 84465,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-22T00:00:00.000Z",
+      "open": 84449,
+      "high": 84788,
+      "low": 84039,
+      "close": 84039,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-22T04:00:00.000Z",
+      "open": 84082,
+      "high": 84306,
+      "low": 82625,
+      "close": 82863,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-22T08:00:00.000Z",
+      "open": 82863,
+      "high": 82910,
+      "low": 82085,
+      "close": 82153,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-22T12:00:00.000Z",
+      "open": 82153,
+      "high": 82183,
+      "low": 81607,
+      "close": 81695,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-22T16:00:00.000Z",
+      "open": 81695,
+      "high": 81928,
+      "low": 81331,
+      "close": 81609,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-22T20:00:00.000Z",
+      "open": 81609,
+      "high": 81660,
+      "low": 80989,
+      "close": 81403,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-23T00:00:00.000Z",
+      "open": 81387,
+      "high": 81467,
+      "low": 81110,
+      "close": 81335,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-23T04:00:00.000Z",
+      "open": 81328,
+      "high": 81912,
+      "low": 81048,
+      "close": 81796,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-23T08:00:00.000Z",
+      "open": 81796,
+      "high": 81860,
+      "low": 81460,
+      "close": 81486,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-23T12:00:00.000Z",
+      "open": 81486,
+      "high": 81802,
+      "low": 81465,
+      "close": 81630,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-23T16:00:00.000Z",
+      "open": 81634,
+      "high": 81939,
+      "low": 81098,
+      "close": 81591,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-23T20:00:00.000Z",
+      "open": 81591,
+      "high": 81749,
+      "low": 81185,
+      "close": 81194,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-24T00:00:00.000Z",
+      "open": 81201,
+      "high": 81417,
+      "low": 80455,
+      "close": 81102,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-24T04:00:00.000Z",
+      "open": 81102,
+      "high": 81104,
+      "low": 80537,
+      "close": 80879,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-24T08:00:00.000Z",
+      "open": 80879,
+      "high": 81002,
+      "low": 80619,
+      "close": 80654,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-24T12:00:00.000Z",
+      "open": 80654,
+      "high": 80742,
+      "low": 80410,
+      "close": 80518,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-24T16:00:00.000Z",
+      "open": 80517,
+      "high": 80762,
+      "low": 79263,
+      "close": 79736,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-24T20:00:00.000Z",
+      "open": 79730,
+      "high": 80524,
+      "low": 79534,
+      "close": 80424,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-25T00:00:00.000Z",
+      "open": 80431,
+      "high": 80842,
+      "low": 80240,
+      "close": 80812,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-25T04:00:00.000Z",
+      "open": 80811,
+      "high": 80949,
+      "low": 80695,
+      "close": 80786,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-25T08:00:00.000Z",
+      "open": 80785,
+      "high": 80875,
+      "low": 80378,
+      "close": 80590,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-25T12:00:00.000Z",
+      "open": 80599,
+      "high": 80604,
+      "low": 80035,
+      "close": 80508,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-25T16:00:00.000Z",
+      "open": 80505,
+      "high": 80690,
+      "low": 80180,
+      "close": 80557,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-25T20:00:00.000Z",
+      "open": 80557,
+      "high": 80825,
+      "low": 80456,
+      "close": 80485,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-26T00:00:00.000Z",
+      "open": 80486,
+      "high": 80604,
+      "low": 79816,
+      "close": 80049,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-26T04:00:00.000Z",
+      "open": 80049,
+      "high": 80270,
+      "low": 79332,
+      "close": 79515,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-26T08:00:00.000Z",
+      "open": 79514,
+      "high": 80198,
+      "low": 79503,
+      "close": 79964,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-26T12:00:00.000Z",
+      "open": 79966,
+      "high": 80477,
+      "low": 79612,
+      "close": 80311,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-26T16:00:00.000Z",
+      "open": 80312,
+      "high": 80680,
+      "low": 79421,
+      "close": 80312,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-26T20:00:00.000Z",
+      "open": 80319,
+      "high": 80446,
+      "low": 79725,
+      "close": 79915,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-27T00:00:00.000Z",
+      "open": 79912,
+      "high": 80091,
+      "low": 79632,
+      "close": 80029,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-27T04:00:00.000Z",
+      "open": 80029,
+      "high": 80261,
+      "low": 79546,
+      "close": 79698,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-27T08:00:00.000Z",
+      "open": 79704,
+      "high": 79910,
+      "low": 79483,
+      "close": 79687,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    },
+    {
+      "timestamp": "2026-10-27T12:00:00.000Z",
+      "open": 79706,
+      "high": 80023,
+      "low": 79416,
+      "close": 79787,
+      "volume": null,
+      "quoteCurrency": "usd",
+      "interval": "4h"
+    }
+  ]
+}

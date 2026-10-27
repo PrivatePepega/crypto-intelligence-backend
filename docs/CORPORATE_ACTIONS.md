@@ -4,10 +4,10 @@ Collector for SEC filings that can change a company's valuation, ownership or
 financial condition: current reports, securities registrations and
 prospectuses, tender offers and merger proxies.
 
-Script: `collectors/assets/secCorporateActions.ts`
+Script: `collectors/assets/stocks/secCorporateActions.ts`
 
 ```powershell
-npx.cmd tsx collectors/assets/secCorporateActions.ts --cik=320193 --max=12
+npx.cmd tsx collectors/assets/stocks/secCorporateActions.ts --cik=320193 --max=12
 ```
 
 ## Options

@@ -1,0 +1,225 @@
+{
+  "provider": "goplus",
+  "chain_id": "56",
+  "chain_name": "BSC",
+  "contract_address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+  "token_name": "PancakeSwap Token",
+  "token_symbol": "Cake",
+  "checked_at": "2026-10-27T16:08:59.678Z",
+  "source_url": "https://api.gopluslabs.io/api/v1/token_security/56?contract_addresses=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+  "provider_code": 1,
+  "provider_message": "OK",
+  "found": true,
+  "is_open_source": true,
+  "is_proxy": false,
+  "is_mintable": true,
+  "owner_controls": {
+    "owner_address": "0x73feaa1ee314f8c655e354234017be2193c9e24e",
+    "owner_renounced": false,
+    "owner_balance": "7259820.546665752",
+    "owner_percent": 0.001276,
+    "creator_address": "0x0f9399fc81dac77908a2dde54bb87ee2d17a3373",
+    "creator_percent": 0,
+    "can_take_back_ownership": false,
+    "hidden_owner": false,
+    "owner_change_balance": false,
+    "selfdestruct": false,
+    "external_call": false
+  },
+  "permissions": {
+    "transfer_pausable": false,
+    "is_blacklisted": false,
+    "is_whitelisted": false,
+    "trading_cooldown": false,
+    "personal_slippage_modifiable": false,
+    "slippage_modifiable": false,
+    "anti_whale_modifiable": false,
+    "is_anti_whale": false,
+    "cannot_buy": false,
+    "cannot_sell_all": null
+  },
+  "tax_indicators": {
+    "buy_tax_percent": null,
+    "sell_tax_percent": null,
+    "transfer_tax_percent": null
+  },
+  "trading": {
+    "is_honeypot": false,
+    "honeypot_with_same_creator": false,
+    "is_in_dex": true,
+    "is_in_cex": true,
+    "cex_list": [
+      "Binance"
+    ],
+    "dexes": [],
+    "lp_holder_count": null,
+    "lp_total_supply": null
+  },
+  "holders": {
+    "count": 1910926
+  },
+  "supply": {
+    "provider_total_supply": "5690553599.751051201610995531"
+  },
+  "trust": {
+    "trust_list": true,
+    "is_airdrop_scam": null,
+    "is_true_token": null,
+    "is_verified": null,
+    "fake_token": null,
+    "other_potential_risks": null,
+    "note": null
+  },
+  "risk_flags": [
+    {
+      "id": "mintable",
+      "severity": "medium",
+      "label": "Supply is mintable",
+      "evidence": "is_mintable=true"
+    }
+  ],
+  "missing_fields": [
+    "buy_tax",
+    "cannot_sell_all",
+    "dex",
+    "fake_token",
+    "is_airdrop_scam",
+    "is_true_token",
+    "is_verified",
+    "lp_holder_count",
+    "lp_holders",
+    "lp_total_supply",
+    "note",
+    "other_potential_risks",
+    "sell_tax"
+  ],
+  "security_summary": "GoPlus reported 1 risk indicator(s), highest severity medium: mintable. Open source: yes; proxy: no; owner 0x73feaa1ee314f8c655e354234017be2193c9e24e. Provider-reported indicators are not proof of malicious behaviour.",
+  "limitations": [
+    "Provider-reported indicators; not independently verified and not proof of safety or malice.",
+    "Tax percentages and holder counts are provider estimates.",
+    "Holder addresses are not enumerated in the normalized record; the raw entry is preserved.",
+    "One contract per request: a multi-address request returned a single entry in live testing."
+  ],
+  "raw": {
+    "anti_whale_modifiable": "0",
+    "can_take_back_ownership": "0",
+    "creator_address": "0x0f9399fc81dac77908a2dde54bb87ee2d17a3373",
+    "creator_balance": "0",
+    "creator_percent": "0.000000",
+    "external_call": "0",
+    "hidden_owner": "0",
+    "holder_count": "1910926",
+    "holders": [
+      {
+        "address": "0x000000000000000000000000000000000000dead",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "5347073211.63518104800493453",
+        "percent": "0.939640250795476798",
+        "is_locked": 1
+      },
+      {
+        "address": "0xf977814e90da44bfa03b6295a0616a897441acec",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "78977809.737",
+        "percent": "0.013878756847216956",
+        "is_locked": 0
+      },
+      {
+        "address": "0x5a52e96bacdabb82fd05763e25335261b270efcb",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "36330576.7632",
+        "percent": "0.006384365971843122",
+        "is_locked": 0
+      },
+      {
+        "address": "0x45c54210128a065de780c4b0df3d16664f7f859e",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "13386871.640068054029029468",
+        "percent": "0.002352472638277882",
+        "is_locked": 0
+      },
+      {
+        "address": "0x86ac3974e2bd0d60825230fa6f355ff11409df5c",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "11461498.702114195744314578",
+        "percent": "0.002014127184851683",
+        "is_locked": 0
+      },
+      {
+        "address": "0xb274202daba6ae180c665b4fbe59857b7c3a8091",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "10068723.419277753749276397",
+        "percent": "0.001769375025255581",
+        "is_locked": 0
+      },
+      {
+        "address": "0xa5f8c5dbd5f286960b9d90548680ae5ebff07652",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "7974874.10412155394710731",
+        "percent": "0.001401423247198732",
+        "is_locked": 0
+      },
+      {
+        "address": "0x73feaa1ee314f8c655e354234017be2193c9e24e",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "7259820.546665752565785519",
+        "percent": "0.001275767009203349",
+        "is_locked": 0
+      },
+      {
+        "address": "0x0ee833adb865377dbba5e9e53fec5f2072c0d34e",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "6666680.30487",
+        "percent": "0.001171534577086076",
+        "is_locked": 0
+      },
+      {
+        "address": "0x91b3927f100bb6c19e5434bfaba07d60670b98d6",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "5730172.908068040290507682",
+        "percent": "0.001006962294199060",
+        "is_locked": 0
+      }
+    ],
+    "honeypot_with_same_creator": "0",
+    "is_anti_whale": "0",
+    "is_blacklisted": "0",
+    "is_honeypot": "0",
+    "is_in_cex": {
+      "listed": "1",
+      "cex_list": [
+        "Binance"
+      ]
+    },
+    "is_in_dex": "1",
+    "is_mintable": "1",
+    "is_open_source": "1",
+    "is_proxy": "0",
+    "is_whitelisted": "0",
+    "owner_address": "0x73feaa1ee314f8c655e354234017be2193c9e24e",
+    "owner_balance": "7259820.546665752",
+    "owner_change_balance": "0",
+    "owner_percent": "0.001276",
+    "personal_slippage_modifiable": "0",
+    "selfdestruct": "0",
+    "slippage_modifiable": "0",
+    "token_name": "PancakeSwap Token",
+    "token_symbol": "Cake",
+    "total_supply": "5690553599.751051201610995531",
+    "trading_cooldown": "0",
+    "transfer_pausable": "0",
+    "transfer_tax": "",
+    "cannot_buy": "0",
+    "trust_list": "1"
+  }
+}

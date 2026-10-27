@@ -1,0 +1,38 @@
+{
+  "provider": "goplus",
+  "chain_id": "56",
+  "contract_address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+  "updated_at": "2026-10-27T16:08:59.678Z",
+  "snapshots": [
+    {
+      "checked_at": "2026-10-27T16:08:59.678Z",
+      "is_open_source": true,
+      "is_proxy": false,
+      "is_mintable": true,
+      "owner_address": "0x73feaa1ee314f8c655e354234017be2193c9e24e",
+      "owner_renounced": false,
+      "owner_can_take_back_ownership": false,
+      "owner_hidden": false,
+      "owner_can_change_balance": false,
+      "transfer_pausable": false,
+      "is_blacklisted": false,
+      "is_whitelisted": false,
+      "trading_cooldown": false,
+      "personal_slippage_modifiable": false,
+      "slippage_modifiable": false,
+      "anti_whale_modifiable": false,
+      "is_anti_whale": false,
+      "cannot_buy": false,
+      "cannot_sell_all": null,
+      "is_honeypot": false,
+      "honeypot_with_same_creator": false,
+      "buy_tax_percent": null,
+      "sell_tax_percent": null,
+      "transfer_tax_percent": null,
+      "risk_flag_ids": [
+        "mintable"
+      ],
+      "security_summary": "GoPlus reported 1 risk indicator(s), highest severity medium: mintable. Open source: yes; proxy: no; owner 0x73feaa1ee314f8c655e354234017be2193c9e24e. Provider-reported indicators are not proof of malicious behaviour."
+    }
+  ]
+}

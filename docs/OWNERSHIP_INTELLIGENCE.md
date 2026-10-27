@@ -5,22 +5,22 @@ Collectors for SEC insider ownership (Forms 3, 4, 5), beneficial ownership
 13F-HR/A).
 
 Both collectors reuse the shared SEC client in
-`collectors/assets/secEdgarFetch.ts`:
+`collectors/assets/stocks/secEdgarFetch.ts`:
 
 - `User-Agent: CryptoIntelligencePlatform fernandojcastellanos@gmail.com`
 - at most one request per second
 - exponential backoff on HTTP 429
-- raw JSON is saved under `collectors/assets/data/` with the `Edgar ` prefix
+- raw JSON is saved under `collectors/assets/stocks/data/` with the `Edgar ` prefix
 
 No database writes are performed. The output files are deterministic JSON
 snapshots that can be loaded into the database by a later ingestion step.
 
 ## Insider ownership — Forms 3, 4 and 5
 
-Script: `collectors/assets/secInsiderOwnership.ts`
+Script: `collectors/assets/stocks/secInsiderOwnership.ts`
 
 ```powershell
-npx.cmd tsx collectors/assets/secInsiderOwnership.ts --cik=320193 --max=12
+npx.cmd tsx collectors/assets/stocks/secInsiderOwnership.ts --cik=320193 --max=12
 ```
 
 Options:
@@ -79,10 +79,10 @@ Only `filings.recent` is used. Older submission archives listed in
 
 ## Beneficial ownership — Schedules 13D and 13G
 
-Script: `collectors/assets/secBeneficialOwnership.ts`
+Script: `collectors/assets/stocks/secBeneficialOwnership.ts`
 
 ```powershell
-npx.cmd tsx collectors/assets/secBeneficialOwnership.ts --cik=320193 --max=20
+npx.cmd tsx collectors/assets/stocks/secBeneficialOwnership.ts --cik=320193 --max=20
 ```
 
 | Option               | Meaning                                                                  |
@@ -163,12 +163,12 @@ another configured provider when the default is unavailable.
 
 ## Institutional holdings — Form 13F
 
-Script: `collectors/assets/sec13FHoldings.ts`
+Script: `collectors/assets/stocks/sec13FHoldings.ts`
 
 ### Manager path
 
 ```powershell
-npx.cmd tsx collectors/assets/sec13FHoldings.ts --cik=1067983 --max-periods=4
+npx.cmd tsx collectors/assets/stocks/sec13FHoldings.ts --cik=1067983 --max-periods=4
 ```
 
 Options:
@@ -205,11 +205,11 @@ Output: `Edgar 13f_CIK{cik}.json`
 ### Bulk data set path
 
 ```powershell
-npx.cmd tsx collectors/assets/sec13FHoldings.ts --year=2026 --quarter=2 `
+npx.cmd tsx collectors/assets/stocks/sec13FHoldings.ts --year=2026 --quarter=2 `
   --cusip=037833100 --asset=AAPL
 
 # or process an already-downloaded ZIP
-npx.cmd tsx collectors/assets/sec13FHoldings.ts "--zip=C:\path\2026q2_form13f.zip" `
+npx.cmd tsx collectors/assets/stocks/sec13FHoldings.ts "--zip=C:\path\2026q2_form13f.zip" `
   --year=2026 --quarter=2 --cusip=037833100 --asset=AAPL
 ```
 

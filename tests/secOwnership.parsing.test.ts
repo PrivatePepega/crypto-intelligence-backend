@@ -1,7 +1,7 @@
 import {
   parseOwnershipDocument,
   type OwnershipFilingMeta,
-} from "../collectors/assets/secInsiderOwnership.js";
+} from "../collectors/assets/stocks/secInsiderOwnership.js";
 import {
   buildThirteenFPeriods,
   normalize13FValue,
@@ -12,7 +12,7 @@ import {
   toIsoDate,
   type ThirteenFFilingInput,
   type ThirteenFInfoEntry,
-} from "../collectors/assets/sec13FHoldings.js";
+} from "../collectors/assets/stocks/sec13FHoldings.js";
 
 let failures = 0;
 const pass = (name: string, ok: boolean, extra = ""): void => {

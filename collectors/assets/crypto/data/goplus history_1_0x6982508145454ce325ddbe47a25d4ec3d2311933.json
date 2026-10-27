@@ -1,0 +1,41 @@
+{
+  "provider": "goplus",
+  "chain_id": "1",
+  "contract_address": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+  "updated_at": "2026-10-27T16:08:49.683Z",
+  "snapshots": [
+    {
+      "checked_at": "2026-10-27T16:08:49.683Z",
+      "is_open_source": true,
+      "is_proxy": false,
+      "is_mintable": false,
+      "owner_address": null,
+      "owner_renounced": true,
+      "owner_can_take_back_ownership": false,
+      "owner_hidden": false,
+      "owner_can_change_balance": false,
+      "transfer_pausable": true,
+      "is_blacklisted": true,
+      "is_whitelisted": false,
+      "trading_cooldown": false,
+      "personal_slippage_modifiable": false,
+      "slippage_modifiable": false,
+      "anti_whale_modifiable": true,
+      "is_anti_whale": true,
+      "cannot_buy": false,
+      "cannot_sell_all": false,
+      "is_honeypot": false,
+      "honeypot_with_same_creator": false,
+      "buy_tax_percent": 0,
+      "sell_tax_percent": 0,
+      "transfer_tax_percent": 0,
+      "risk_flag_ids": [
+        "transfer_pausable",
+        "blacklist",
+        "anti_whale_modifiable",
+        "anti_whale"
+      ],
+      "security_summary": "GoPlus reported 4 risk indicator(s), highest severity medium: transfer_pausable, blacklist, anti_whale_modifiable, anti_whale. Open source: yes; proxy: no; owner renounced. Provider-reported indicators are not proof of malicious behaviour."
+    }
+  ]
+}

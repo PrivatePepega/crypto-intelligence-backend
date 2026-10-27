@@ -1,0 +1,120 @@
+{
+  "source": "CoinGecko",
+  "sourceUrls": [
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum&price_change_percentage=24h%2C7d%2C30d"
+  ],
+  "fetchedAt": "2026-10-27T15:47:12.806Z",
+  "vsCurrency": "usd",
+  "requestedIds": [
+    "bitcoin",
+    "ethereum"
+  ],
+  "missingIds": [],
+  "count": 2,
+  "snapshots": [
+    {
+      "asset": {
+        "name": "Bitcoin",
+        "symbol": "btc",
+        "assetType": "crypto",
+        "description": null,
+        "category": null,
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
+        "websiteUrl": null,
+        "externalIds": {
+          "coingecko_id": "bitcoin",
+          "other_provider_ids": {}
+        }
+      },
+      "information": {
+        "informationType": "market_snapshot",
+        "data": {
+          "coingeckoId": "bitcoin",
+          "vsCurrency": "usd",
+          "currentPrice": 80494,
+          "marketCap": 1618042517482,
+          "fullyDilutedValuation": 1618042517482,
+          "marketCapRank": 1,
+          "totalVolume": 23727312888,
+          "totalValueLocked": null,
+          "high24h": 80446,
+          "low24h": 79416,
+          "priceChange24h": -140.67009095320827,
+          "priceChangePercentage24h": -0.17445,
+          "priceChangePercentage7d": -2.1842,
+          "priceChangePercentage30d": -5.5918,
+          "marketCapChange24h": -2997662974.390381,
+          "marketCapChangePercentage24h": -0.18492,
+          "ath": 126080,
+          "athDate": "2025-10-06T10:57:42.000Z",
+          "athChangePercentage": -36.15661,
+          "atl": 67.81,
+          "atlDate": "2013-07-05T16:00:00.000Z",
+          "atlChangePercentage": 118606.46844,
+          "circulatingSupply": 20104350,
+          "totalSupply": 20104350,
+          "maxSupply": 21000000,
+          "maxSupplyInfinite": null,
+          "lastUpdated": "2026-10-27T15:46:50.000Z"
+        },
+        "source": "CoinGecko",
+        "sourceUrl": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum&price_change_percentage=24h%2C7d%2C30d",
+        "publishedAt": null,
+        "observedAt": "2026-10-27T15:46:50.000Z",
+        "collectedAt": "2026-10-27T15:47:12.806Z"
+      }
+    },
+    {
+      "asset": {
+        "name": "Ethereum",
+        "symbol": "eth",
+        "assetType": "crypto",
+        "description": null,
+        "category": null,
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628",
+        "websiteUrl": null,
+        "externalIds": {
+          "coingecko_id": "ethereum",
+          "other_provider_ids": {}
+        }
+      },
+      "information": {
+        "informationType": "market_snapshot",
+        "data": {
+          "coingeckoId": "ethereum",
+          "vsCurrency": "usd",
+          "currentPrice": 2345.94,
+          "marketCap": 286576216474,
+          "fullyDilutedValuation": 286576216474,
+          "marketCapRank": 2,
+          "totalVolume": 8556403575,
+          "totalValueLocked": null,
+          "high24h": 2337.08,
+          "low24h": 2295.57,
+          "priceChange24h": 9.77,
+          "priceChangePercentage24h": 0.41813,
+          "priceChangePercentage7d": -3.1876,
+          "priceChangePercentage30d": -13.9485,
+          "marketCapChange24h": 1179387566,
+          "marketCapChangePercentage24h": 0.41324,
+          "ath": 4946.05,
+          "athDate": "2025-08-24T11:21:03.000Z",
+          "athChangePercentage": -52.56935,
+          "atl": 0.432979,
+          "atlDate": "2015-10-19T16:00:00.000Z",
+          "atlChangePercentage": 541714.65192,
+          "circulatingSupply": 122167205.11163965,
+          "totalSupply": 122167205.11163965,
+          "maxSupply": null,
+          "maxSupplyInfinite": null,
+          "lastUpdated": "2026-10-27T15:46:50.000Z"
+        },
+        "source": "CoinGecko",
+        "sourceUrl": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2Cethereum&price_change_percentage=24h%2C7d%2C30d",
+        "publishedAt": null,
+        "observedAt": "2026-10-27T15:46:50.000Z",
+        "collectedAt": "2026-10-27T15:47:12.806Z"
+      }
+    }
+  ]
+}

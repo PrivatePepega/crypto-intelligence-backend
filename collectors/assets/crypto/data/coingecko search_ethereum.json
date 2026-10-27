@@ -1,0 +1,215 @@
+{
+  "source": "CoinGecko",
+  "sourceUrl": "https://api.coingecko.com/api/v3/search?query=ethereum",
+  "fetchedAt": "2026-10-27T15:47:07.295Z",
+  "query": "ethereum",
+  "count": 25,
+  "candidates": [
+    {
+      "coingeckoId": "ethereum",
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "marketCapRank": 2,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/279/thumb/ethereum.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png"
+    },
+    {
+      "coingeckoId": "ethereum-classic",
+      "symbol": "ETC",
+      "name": "Ethereum Classic",
+      "marketCapRank": 70,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/453/thumb/ethereum-classic-logo.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/453/large/ethereum-classic-logo.png"
+    },
+    {
+      "coingeckoId": "ethereum-name-service",
+      "symbol": "ENS",
+      "name": "Ethereum Name Service",
+      "marketCapRank": 168,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/19785/thumb/ENS.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/19785/large/ENS.jpg"
+    },
+    {
+      "coingeckoId": "ethereum-pow-iou",
+      "symbol": "ETHW",
+      "name": "EthereumPoW",
+      "marketCapRank": 745,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/26997/thumb/logo-clear.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/26997/large/logo-clear.png"
+    },
+    {
+      "coingeckoId": "midas-re7-ethereum",
+      "symbol": "MRE7ETH",
+      "name": "Midas Re7 Ethereum",
+      "marketCapRank": 1133,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/102172907/thumb/mre7eth-L64TBTee.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/102172907/large/mre7eth-L64TBTee.png"
+    },
+    {
+      "coingeckoId": "galaxy-usdc-quality",
+      "symbol": "ETH:GUSDCQ",
+      "name": "Galaxy USDC Quality (Ethereum)",
+      "marketCapRank": 1206,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/102173704/thumb/USDC.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/102173704/large/USDC.png"
+    },
+    {
+      "coingeckoId": "tethereum-3",
+      "symbol": "T99",
+      "name": "Tethereum",
+      "marketCapRank": 1506,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/54861/thumb/Tethereum_Transperent_logo.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/54861/large/Tethereum_Transperent_logo.png"
+    },
+    {
+      "coingeckoId": "book-of-ethereum",
+      "symbol": "BOOE",
+      "name": "Book of Ethereum",
+      "marketCapRank": 1824,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/37384/thumb/RGh5luer_400x400.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/37384/large/RGh5luer_400x400.jpg"
+    },
+    {
+      "coingeckoId": "game-stop",
+      "symbol": "GME",
+      "name": "GME (Ethereum)",
+      "marketCapRank": 2240,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/37895/thumb/_GME_New_Logo.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/37895/large/_GME_New_Logo.png"
+    },
+    {
+      "coingeckoId": "ishares-ethereum-trust-ondo-tokenized",
+      "symbol": "ETHAON",
+      "name": "iShares Ethereum Trust (Ondo Tokenized)",
+      "marketCapRank": 3466,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/102172422/thumb/ethaon_160x160.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/102172422/large/ethaon_160x160.png"
+    },
+    {
+      "coingeckoId": "prophet-of-ethereum",
+      "symbol": "PROPHET",
+      "name": "Prophet of Ethereum",
+      "marketCapRank": 4301,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/40069/thumb/IMG_20240901_200400_654.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/40069/large/IMG_20240901_200400_654.jpg"
+    },
+    {
+      "coingeckoId": "ethereum-is-good",
+      "symbol": "EBULL",
+      "name": "ETHEREUM IS GOOD",
+      "marketCapRank": 4839,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/39868/thumb/ethbull_200x200.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/39868/large/ethbull_200x200.png"
+    },
+    {
+      "coingeckoId": "ethereumcat",
+      "symbol": "ETHCAT",
+      "name": "Ethereumcat",
+      "marketCapRank": 5997,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/102175864/thumb/photo_5787524558452625748_y.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/102175864/large/photo_5787524558452625748_y.jpg"
+    },
+    {
+      "coingeckoId": "voldemorttrumprobotnik-10neko",
+      "symbol": "ETHEREUM",
+      "name": "VoldemortTrumpRobotnik-10Neko",
+      "marketCapRank": 6061,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/31061/thumb/287c04f2-bf5c-4b54-956e-ea4e4857fc3f.jpeg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/31061/large/287c04f2-bf5c-4b54-956e-ea4e4857fc3f.jpeg"
+    },
+    {
+      "coingeckoId": "baby-ethereum",
+      "symbol": "BABYETH",
+      "name": "Baby Ethereum",
+      "marketCapRank": 8146,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/68347/thumb/ed0x7ncr23nchcuadz1tjapz3hca.",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/68347/large/ed0x7ncr23nchcuadz1tjapz3hca."
+    },
+    {
+      "coingeckoId": "bork-on-ethereum",
+      "symbol": "BORK",
+      "name": "Bork on Ethereum",
+      "marketCapRank": 8787,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/51211/thumb/Bork.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/51211/large/Bork.png"
+    },
+    {
+      "coingeckoId": "make-ethereum-great-again",
+      "symbol": "$MEGA",
+      "name": "Make Ethereum Great Again",
+      "marketCapRank": 9063,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/32451/thumb/200x200_logo_no_bg.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/32451/large/200x200_logo_no_bg.png"
+    },
+    {
+      "coingeckoId": "ketaicoin",
+      "symbol": "ETHEREUM",
+      "name": "Ketaicoin",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/31326/thumb/photo_2023-08-15_21-35-43.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/31326/large/photo_2023-08-15_21-35-43.jpg"
+    },
+    {
+      "coingeckoId": "ethereummax",
+      "symbol": "EMAX",
+      "name": "EthereumMax",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/15540/thumb/EMAX-Coin-Final2000x.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/15540/large/EMAX-Coin-Final2000x.png"
+    },
+    {
+      "coingeckoId": "ethereum-cat",
+      "symbol": "GIO",
+      "name": "Ethereum Cat",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/102175865/thumb/square-image_%286%29.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/102175865/large/square-image_%286%29.jpg"
+    },
+    {
+      "coingeckoId": "ethereum-doge",
+      "symbol": "EDOGE",
+      "name": "Ethereum Doge",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/50340/thumb/5QPi_WR0_400x400.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/50340/large/5QPi_WR0_400x400.jpg"
+    },
+    {
+      "coingeckoId": "unit-ethereum",
+      "symbol": "UETH",
+      "name": "Unit Ethereum",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/55069/thumb/eth.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/55069/large/eth.jpg"
+    },
+    {
+      "coingeckoId": "sweth",
+      "symbol": "SWETH",
+      "name": "Swell Ethereum",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/30326/thumb/_lB7zEtS_400x400.jpg",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/30326/large/_lB7zEtS_400x400.jpg"
+    },
+    {
+      "coingeckoId": "strato-goldst-tokenized-gold",
+      "symbol": "GOLDST",
+      "name": "Ethereum GOLDST",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/102172801/thumb/goldst.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/102172801/large/goldst.png"
+    },
+    {
+      "coingeckoId": "ethereum-strato",
+      "symbol": "STRATO",
+      "name": "Ethereum STRATO",
+      "marketCapRank": null,
+      "thumbUrl": "https://coin-images.coingecko.com/coins/images/102174210/thumb/strato-logo-200x200.png",
+      "largeUrl": "https://coin-images.coingecko.com/coins/images/102174210/large/strato-logo-200x200.png"
+    }
+  ],
+  "resolution": {
+    "provider": "CoinGecko",
+    "method": "search_candidate",
+    "verified": false,
+    "note": "Search results are candidates only. Symbols are not unique; confirm the stable CoinGecko id before treating a result as the asset's identity."
+  }
+}

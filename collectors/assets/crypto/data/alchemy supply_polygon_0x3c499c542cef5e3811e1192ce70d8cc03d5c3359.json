@@ -1,0 +1,17 @@
+{
+  "source": "Alchemy",
+  "sourceUrl": "https://polygon-mainnet.g.alchemy.com/v2/<redacted>",
+  "observedAt": "2026-10-27T15:58:30.478Z",
+  "network": "polygon",
+  "chainId": 137,
+  "contractAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+  "explorerUrl": "https://polygonscan.com/token/0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+  "blockTag": "latest",
+  "blockNumber": null,
+  "callData": "0x18160ddd",
+  "rawValue": "0x00000000000000000000000000000000000000000000000000023a025478371a",
+  "decimals": 6,
+  "decimalsSource": "alchemy_getTokenMetadata",
+  "totalSupply": "626731634.931482",
+  "note": null
+}

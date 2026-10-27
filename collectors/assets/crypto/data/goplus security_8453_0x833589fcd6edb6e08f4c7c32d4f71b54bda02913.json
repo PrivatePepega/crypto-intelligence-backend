@@ -1,0 +1,225 @@
+{
+  "provider": "goplus",
+  "chain_id": "8453",
+  "chain_name": "Base",
+  "contract_address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "token_name": "USD Coin",
+  "token_symbol": "USDC",
+  "checked_at": "2026-10-27T16:12:39.879Z",
+  "source_url": "https://api.gopluslabs.io/api/v1/token_security/8453?contract_addresses=0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "provider_code": 1,
+  "provider_message": "OK",
+  "found": true,
+  "is_open_source": true,
+  "is_proxy": true,
+  "is_mintable": null,
+  "owner_controls": {
+    "owner_address": "0x4fc7850364958d97b4d3f5a08f79db2493f8ca44",
+    "owner_renounced": false,
+    "owner_balance": null,
+    "owner_percent": null,
+    "creator_address": "0x6aaff8af0ae8017725312c388ba3745dfe91185b",
+    "creator_percent": 0,
+    "can_take_back_ownership": null,
+    "hidden_owner": null,
+    "owner_change_balance": null,
+    "selfdestruct": null,
+    "external_call": null
+  },
+  "permissions": {
+    "transfer_pausable": null,
+    "is_blacklisted": null,
+    "is_whitelisted": null,
+    "trading_cooldown": null,
+    "personal_slippage_modifiable": null,
+    "slippage_modifiable": null,
+    "anti_whale_modifiable": null,
+    "is_anti_whale": null,
+    "cannot_buy": false,
+    "cannot_sell_all": null
+  },
+  "tax_indicators": {
+    "buy_tax_percent": 0,
+    "sell_tax_percent": 0,
+    "transfer_tax_percent": null
+  },
+  "trading": {
+    "is_honeypot": false,
+    "honeypot_with_same_creator": false,
+    "is_in_dex": null,
+    "is_in_cex": true,
+    "cex_list": [
+      "Binance"
+    ],
+    "dexes": [],
+    "lp_holder_count": null,
+    "lp_total_supply": null
+  },
+  "holders": {
+    "count": 11376397
+  },
+  "supply": {
+    "provider_total_supply": "4350245168.24854"
+  },
+  "trust": {
+    "trust_list": true,
+    "is_airdrop_scam": null,
+    "is_true_token": null,
+    "is_verified": null,
+    "fake_token": null,
+    "other_potential_risks": null,
+    "note": null
+  },
+  "risk_flags": [
+    {
+      "id": "proxy_contract",
+      "severity": "info",
+      "label": "Proxy contract",
+      "evidence": "is_proxy=true"
+    }
+  ],
+  "missing_fields": [
+    "anti_whale_modifiable",
+    "can_take_back_ownership",
+    "cannot_sell_all",
+    "dex",
+    "external_call",
+    "fake_token",
+    "hidden_owner",
+    "is_airdrop_scam",
+    "is_anti_whale",
+    "is_blacklisted",
+    "is_in_dex",
+    "is_mintable",
+    "is_true_token",
+    "is_verified",
+    "is_whitelisted",
+    "lp_holder_count",
+    "lp_holders",
+    "lp_total_supply",
+    "note",
+    "other_potential_risks",
+    "owner_balance",
+    "owner_change_balance",
+    "owner_percent",
+    "personal_slippage_modifiable",
+    "selfdestruct",
+    "slippage_modifiable",
+    "trading_cooldown",
+    "transfer_pausable"
+  ],
+  "security_summary": "GoPlus reported 1 risk indicator(s), highest severity info: proxy_contract. Open source: yes; proxy: yes; owner 0x4fc7850364958d97b4d3f5a08f79db2493f8ca44. Provider-reported indicators are not proof of malicious behaviour.",
+  "limitations": [
+    "Provider-reported indicators; not independently verified and not proof of safety or malice.",
+    "Tax percentages and holder counts are provider estimates.",
+    "Holder addresses are not enumerated in the normalized record; the raw entry is preserved.",
+    "One contract per request: a multi-address request returned a single entry in live testing."
+  ],
+  "raw": {
+    "buy_tax": "0",
+    "creator_address": "0x6aAFF8af0ae8017725312C388bA3745dfE91185B",
+    "creator_balance": "3.209885",
+    "creator_percent": "0.000000",
+    "holder_count": "11376397",
+    "holders": [
+      {
+        "address": "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "238316814.555897",
+        "percent": "0.054782387046899740",
+        "is_locked": 0
+      },
+      {
+        "address": "0xb026ba5501c9fcdb5b4b746c37e349cd61b81b22",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "158707881.660177",
+        "percent": "0.036482514323227135",
+        "is_locked": 0
+      },
+      {
+        "address": "0x8da91a6298ea5d1a8bc985e99798fd0a0f05701a",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "158304779.55728",
+        "percent": "0.036389852395610009",
+        "is_locked": 0
+      },
+      {
+        "address": "0xee7ae85f2fe2239e27d9c1e23fffe168d63b4055",
+        "tag": "",
+        "is_contract": 1,
+        "balance": "134290023.270655",
+        "percent": "0.030869529894730449",
+        "is_locked": 0
+      },
+      {
+        "address": "0xf76f5123c6b1c49c21adc8903cc571bd875eea4b",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "80000202.002",
+        "percent": "0.018389814575487253",
+        "is_locked": 0
+      },
+      {
+        "address": "0xfa9b1c421ea3fb9974ef155729304f8d3a8c0294",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "80000000.072",
+        "percent": "0.018389768157413744",
+        "is_locked": 0
+      },
+      {
+        "address": "0xf747d90a25310d437bcc11fe69c01cdd14794afc",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "80000000.072",
+        "percent": "0.018389768157413744",
+        "is_locked": 0
+      },
+      {
+        "address": "0xead133f856c70234e530723faf546d88a1baeef2",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "80000000.072",
+        "percent": "0.018389768157413744",
+        "is_locked": 0
+      },
+      {
+        "address": "0xe7a12de9afbcb35ec2b7223795702f2b44a80ed9",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "80000000.072",
+        "percent": "0.018389768157413744",
+        "is_locked": 0
+      },
+      {
+        "address": "0xe0126d34da4b8af7c1b99923171df011b7c79a4c",
+        "tag": "",
+        "is_contract": 0,
+        "balance": "80000000.072",
+        "percent": "0.018389768157413744",
+        "is_locked": 0
+      }
+    ],
+    "honeypot_with_same_creator": "0",
+    "is_honeypot": "0",
+    "is_in_cex": {
+      "listed": "1",
+      "cex_list": [
+        "Binance"
+      ]
+    },
+    "is_open_source": "1",
+    "is_proxy": "1",
+    "owner_address": "0x4fc7850364958d97b4d3f5a08f79db2493f8ca44",
+    "sell_tax": "0",
+    "token_name": "USD Coin",
+    "token_symbol": "USDC",
+    "total_supply": "4350245168.24854",
+    "transfer_tax": "",
+    "cannot_buy": "0",
+    "trust_list": "1"
+  }
+}

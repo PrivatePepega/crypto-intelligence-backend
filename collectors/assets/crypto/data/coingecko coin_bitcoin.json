@@ -1,0 +1,141 @@
+{
+  "source": "CoinGecko",
+  "sourceUrl": "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false&sparkline=false",
+  "fetchedAt": "2026-10-27T15:47:08.992Z",
+  "observedAt": "2026-10-27T15:45:55.000Z",
+  "asset": {
+    "name": "Bitcoin",
+    "symbol": "btc",
+    "assetType": "crypto",
+    "description": "Bitcoin is the world's first decentralized cryptocurrency, created in 2009 by the pseudonymous Satoshi Nakamoto. It enables peer-to-peer electronic cash transactions without intermediaries like banks or governments, operating on a blockchain secured by Proof of Work mining and the SHA-256 cryptographic algorithm.\n\nWith a fixed supply cap of 21 million coins and programmatic halvings every four years that reduce miner rewards, Bitcoin is designed as a deflationary digital asset often called \"digital gold.\" Its value stems from solving the double-spending problem without trusted intermediaries, creating the first truly scarce digital asset with censorship resistance and permissionless access that no government, corporation, or individual can control.\n\nBitcoin operates as a decentralized peer-to-peer network where transactions are recorded on a public ledger called the blockchain, distributed across thousands of computers globally. Transactions are grouped into blocks added approximately every 10 minutes through mining, where specialized computers compete to solve complex mathematical puzzles.\n\nBitcoin has achieved mainstream adoption through multiple vectors. The January 2024 SEC approval of 11 spot Bitcoin ETFs opened Bitcoin investment to traditional finance participants, and corporations like Strategy (formerly MicroStrategy) are using Bitcoin as a treasury reserve asset to protect against currency debasement, offering MSTR holders amplified exposure to Bitcoin.\n\nThe Bitcoin ecosystem continues to evolve with innovations like Ordinals, which emerged in January 2023 to enable NFT-like functionality directly on Bitcoin, and BRC-20 tokens, an experimental standard for creating fungible tokens using Ordinal inscriptions. BTCFi (Bitcoin Finance) represents emerging financial applications extending beyond Bitcoin's traditional role, with protocols like Babylon allowing Bitcoin holders to stake BTC to secure Proof of Stake chains.",
+    "category": "Smart Contract Platform",
+    "logoUrl": "https://coin-images.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
+    "websiteUrl": "http://www.bitcoin.org",
+    "externalIds": {
+      "coingecko_id": "bitcoin",
+      "other_provider_ids": {}
+    }
+  },
+  "crypto": {
+    "network": null,
+    "contractAddresses": [],
+    "circulatingSupply": 20104350,
+    "totalSupply": 20104350,
+    "maxSupply": 21000000,
+    "tokenomics": {
+      "categories": [
+        "Smart Contract Platform",
+        "Layer 1 (L1)",
+        "FTX Holdings",
+        "Proof of Work (PoW)",
+        "Bitcoin Ecosystem",
+        "GMCI 30 Index",
+        "GMCI Index",
+        "Coinbase 50 Index"
+      ],
+      "genesisDate": "2009-01-03",
+      "hashingAlgorithm": "SHA-256",
+      "blockTimeInMinutes": 10,
+      "hasSupplyBreakdown": false
+    },
+    "socials": {
+      "homepage": [
+        "http://www.bitcoin.org"
+      ],
+      "whitepaper": "https://bitcoin.org/bitcoin.pdf",
+      "blockchainSites": [
+        "https://mempool.space/",
+        "https://platform.arkhamintelligence.com/explorer/token/bitcoin",
+        "https://btc.com/",
+        "https://btc.tokenview.io/",
+        "https://www.oklink.com/btc",
+        "https://3xpl.com/bitcoin"
+      ],
+      "officialForumUrls": [
+        "https://bitcointalk.org/"
+      ],
+      "chatUrls": [],
+      "announcementUrls": [],
+      "twitter": "bitcoin",
+      "telegram": null,
+      "subreddit": "https://www.reddit.com/r/Bitcoin/",
+      "repos": {
+        "github": [
+          "https://github.com/bitcoin/bitcoin",
+          "https://github.com/bitcoin/bips"
+        ],
+        "bitbucket": []
+      }
+    }
+  },
+  "market": {
+    "currentPrice": 80472,
+    "marketCap": 1617977417412,
+    "fullyDilutedValuation": 1617977417412,
+    "marketCapRank": 1,
+    "totalVolume": 23732858536,
+    "totalValueLocked": null,
+    "high24h": 80446,
+    "low24h": 79416,
+    "priceChange24h": -126.90142589664902,
+    "priceChangePercentage24h": -0.15745,
+    "priceChangePercentage7d": -3.29707,
+    "priceChangePercentage30d": -4.80329,
+    "marketCapChange24h": -2352762220.9816895,
+    "marketCapChangePercentage24h": -0.1452,
+    "ath": 126080,
+    "athDate": "2025-10-06T10:57:42.000Z",
+    "athChangePercentage": -36.1737,
+    "atl": 67.81,
+    "atlDate": "2013-07-05T16:00:00.000Z",
+    "atlChangePercentage": 118574.69029,
+    "circulatingSupply": 20104350,
+    "totalSupply": 20104350,
+    "maxSupply": 21000000,
+    "maxSupplyInfinite": false,
+    "lastUpdated": "2026-10-27T15:45:55.000Z"
+  },
+  "marketSnapshot": {
+    "informationType": "market_snapshot",
+    "data": {
+      "coingeckoId": "bitcoin",
+      "vsCurrency": "usd",
+      "currentPrice": 80472,
+      "marketCap": 1617977417412,
+      "fullyDilutedValuation": 1617977417412,
+      "marketCapRank": 1,
+      "totalVolume": 23732858536,
+      "totalValueLocked": null,
+      "high24h": 80446,
+      "low24h": 79416,
+      "priceChange24h": -126.90142589664902,
+      "priceChangePercentage24h": -0.15745,
+      "priceChangePercentage7d": -3.29707,
+      "priceChangePercentage30d": -4.80329,
+      "marketCapChange24h": -2352762220.9816895,
+      "marketCapChangePercentage24h": -0.1452,
+      "ath": 126080,
+      "athDate": "2025-10-06T10:57:42.000Z",
+      "athChangePercentage": -36.1737,
+      "atl": 67.81,
+      "atlDate": "2013-07-05T16:00:00.000Z",
+      "atlChangePercentage": 118574.69029,
+      "circulatingSupply": 20104350,
+      "totalSupply": 20104350,
+      "maxSupply": 21000000,
+      "maxSupplyInfinite": false,
+      "lastUpdated": "2026-10-27T15:45:55.000Z"
+    },
+    "source": "CoinGecko",
+    "sourceUrl": "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false&sparkline=false",
+    "publishedAt": null,
+    "observedAt": "2026-10-27T15:45:55.000Z",
+    "collectedAt": "2026-10-27T15:47:08.992Z"
+  },
+  "resolution": {
+    "provider": "CoinGecko",
+    "method": "provider_id",
+    "verified": false,
+    "note": "Identity is the provider's stable CoinGecko id. Contract addresses and metadata are provider reported; do not overwrite manually verified values."
+  }
+}
