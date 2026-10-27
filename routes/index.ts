@@ -2,7 +2,7 @@ import express from "express";
 import authRoutes from "./authRoutes.js";
 import chatbotRoutes from "./chatbotRoutes.js";
 import worldRoutes from "./worldRoutes.js";
-import stockRoutes from "./stockRoutes.js";
+// import stockRoutes from "./stockRoutes.js";  // Temporarily disabled for commodity testing
 import cryptoRoutes from "./cryptoRoutes.js";
 import commodityRoutes from "./commodityRoutes.js";
 import { getCurrentUser } from "../controller/authController.js";
@@ -26,7 +26,7 @@ router.use("/auth", authRoutes);
 router.get("/authMe", authMiddleware, getCurrentUser);
 router.use("/chatbot", chatbotRoutes);
 router.use("/world", worldRoutes);
-router.use("/stocks", stockRoutes);
+// router.use("/stocks", stockRoutes);  // Temporarily disabled for commodity testing
 router.use("/crypto", cryptoRoutes);
 router.use("/commodities", commodityRoutes);
 

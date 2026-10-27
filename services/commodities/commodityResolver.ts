@@ -1,11 +1,9 @@
-import "dotenv/config";
-
 import {
   fetchCommodityCatalog,
-  findListedCommodity,
   type CommodityListSnapshot,
   type CommodityIdentity,
 } from "../../collectors/assets/commodities/fmpCommodityFetchers.js";
+import { findListedCommodity } from "../../collectors/assets/commodities/fmpCommodityNormalizer.js";
 import { findCommodityReference, DEFAULT_COMMODITY_SYMBOLS } from "../../collectors/assets/commodities/commodityReference.js";
 import type {
   CommodityIdentity,

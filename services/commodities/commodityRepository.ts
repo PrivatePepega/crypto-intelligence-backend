@@ -336,16 +336,7 @@ export interface CommodityAssetRow {
   updated_at: string;
 }
 
-function toIsoStringOrNull(value: unknown): string | null {
-  if (value instanceof Date) {
-    return Number.isNaN(value.getTime()) ? null : value.toISOString();
-  }
-  if (typeof value === "string") {
-    const parsed = Date.parse(value);
-    return Number.isNaN(parsed) ? null : new Date(parsed).toISOString();
-  }
-  return null;
-}
+
 
 /**
  * Reads stored commodity state back for verification. Read-only.

@@ -155,7 +155,7 @@ function secRowToIdentity(
   const cik = padCik(secRow[0]);
   const ticker = secRow[2];
   const companyName = secRow[1];
-  const exchange = secRow[3] || fmpProfile?.exchange ?? null;
+  const exchange = secRow[3] ?? fmpProfile?.exchange ?? null;
 
   return {
     assetId: "", // Will be filled after DB lookup/creation
