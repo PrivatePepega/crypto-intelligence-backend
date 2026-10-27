@@ -1,0 +1,368 @@
+{
+  "provider": "fmp",
+  "endpoint": "/commodities-list",
+  "fetched_at": "2026-10-27T17:15:22.977Z",
+  "commodities": [
+    {
+      "provider": "fmp",
+      "symbol": "DXUSD",
+      "provider_name": "US Dollar",
+      "exchange": null,
+      "trade_month": "Sep",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "CCUSD",
+      "provider_name": "Cocoa",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "RBUSD",
+      "provider_name": "Gasoline RBOB",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ALIUSD",
+      "provider_name": "Aluminum Futures",
+      "exchange": null,
+      "trade_month": "Jan",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "NQUSD",
+      "provider_name": "Nasdaq 100",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ESUSD",
+      "provider_name": "E-Mini S&P 500",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "SIUSD",
+      "provider_name": "Silver Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "CLUSD",
+      "provider_name": "Crude Oil",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "PLUSD",
+      "provider_name": "Platinum",
+      "exchange": null,
+      "trade_month": "Jan",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "KEUSX",
+      "provider_name": "Wheat Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZRUSD",
+      "provider_name": "Rough Rice Futures",
+      "exchange": null,
+      "trade_month": "Jan",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "MGCUSD",
+      "provider_name": "Micro Gold Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZNUSD",
+      "provider_name": "10-Year T-Note Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZTUSD",
+      "provider_name": "2-Year T-Note Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "GCUSD",
+      "provider_name": "Gold Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZFUSD",
+      "provider_name": "Five-Year US Treasury Note",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "NGUSD",
+      "provider_name": "Natural Gas",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "SILUSD",
+      "provider_name": "Micro Silver Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "HGUSD",
+      "provider_name": "Copper",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "HEUSX",
+      "provider_name": "Lean Hogs Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "RTYUSD",
+      "provider_name": "Micro E-mini Russell 2000 Index Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "DCUSD",
+      "provider_name": "Class III Milk Futures",
+      "exchange": null,
+      "trade_month": "Nov",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZCUSX",
+      "provider_name": "Corn Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZLUSX",
+      "provider_name": "Soybean Oil Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "LBUSD",
+      "provider_name": "Lumber Futures",
+      "exchange": null,
+      "trade_month": "Nov",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "GFUSX",
+      "provider_name": "Feeder Cattle Futures",
+      "exchange": null,
+      "trade_month": "Jan",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "SBUSX",
+      "provider_name": "Sugar",
+      "exchange": null,
+      "trade_month": "Mar",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZOUSX",
+      "provider_name": "Oat Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "OJUSX",
+      "provider_name": "Orange Juice",
+      "exchange": null,
+      "trade_month": "Jan",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "LEUSX",
+      "provider_name": "Live Cattle Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "HOUSD",
+      "provider_name": "Heating Oil",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "PAUSD",
+      "provider_name": "Palladium",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZBUSD",
+      "provider_name": "30 Year U.S. Treasury Bond Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "CTUSX",
+      "provider_name": "Cotton",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZMUSD",
+      "provider_name": "Soybean Meal Futures",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "YMUSD",
+      "provider_name": "Mini Dow Jones Industrial Average Index",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "BZUSD",
+      "provider_name": "Brent Crude Oil",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZQUSD",
+      "provider_name": "30 Day Fed Fund Futures",
+      "exchange": null,
+      "trade_month": "Nov",
+      "currency": "USD",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "KCUSX",
+      "provider_name": "Coffee",
+      "exchange": null,
+      "trade_month": "Dec",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    },
+    {
+      "provider": "fmp",
+      "symbol": "ZSUSX",
+      "provider_name": "Soybean Futures",
+      "exchange": null,
+      "trade_month": "Jan",
+      "currency": "USX",
+      "listed_at": "2026-10-27T17:15:22.977Z"
+    }
+  ],
+  "rejected_rows": 0
+}

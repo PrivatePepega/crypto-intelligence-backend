@@ -2,6 +2,9 @@ import express from "express";
 import authRoutes from "./authRoutes.js";
 import chatbotRoutes from "./chatbotRoutes.js";
 import worldRoutes from "./worldRoutes.js";
+import stockRoutes from "./stockRoutes.js";
+import cryptoRoutes from "./cryptoRoutes.js";
+import commodityRoutes from "./commodityRoutes.js";
 import { getCurrentUser } from "../controller/authController.js";
 import {
   fetchIndicatorData,
@@ -23,6 +26,9 @@ router.use("/auth", authRoutes);
 router.get("/authMe", authMiddleware, getCurrentUser);
 router.use("/chatbot", chatbotRoutes);
 router.use("/world", worldRoutes);
+router.use("/stocks", stockRoutes);
+router.use("/crypto", cryptoRoutes);
+router.use("/commodities", commodityRoutes);
 
 // These indicator routes are public: they expose global data only, never
 // user-specific data.

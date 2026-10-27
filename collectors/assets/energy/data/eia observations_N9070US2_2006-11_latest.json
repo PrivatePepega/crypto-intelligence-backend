@@ -1,0 +1,2403 @@
+{
+  "provider": "eia",
+  "definition": {
+    "series_id": "N9070US2",
+    "route": "natural-gas/prod/sum",
+    "frequency": "monthly",
+    "unit": "MMCF",
+    "title": "U.S. Dry Natural Gas Production (MMcf)",
+    "category": "gas_production",
+    "kind": "fundamental",
+    "asset_symbol": null
+  },
+  "fetched_at": "2026-10-27T17:38:43.902Z",
+  "requested": {
+    "start": "2006-11",
+    "end": null,
+    "limit": 5000
+  },
+  "provider_total": 237,
+  "truncated": false,
+  "warnings": [],
+  "observations": [
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2006-11",
+      "value": 1539917,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2006-12",
+      "value": 1606404,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-01",
+      "value": 1576351,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-02",
+      "value": 1443745,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-03",
+      "value": 1624634,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-04",
+      "value": 1551743,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-05",
+      "value": 1643202,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-06",
+      "value": 1589702,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-07",
+      "value": 1624779,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-08",
+      "value": 1633875,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-09",
+      "value": 1597600,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-10",
+      "value": 1653527,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-11",
+      "value": 1633438,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2007-12",
+      "value": 1693431,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-01",
+      "value": 1685717,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-02",
+      "value": 1590851,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-03",
+      "value": 1722591,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-04",
+      "value": 1661637,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-05",
+      "value": 1716720,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-06",
+      "value": 1681469,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-07",
+      "value": 1769052,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-08",
+      "value": 1743909,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-09",
+      "value": 1488620,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-10",
+      "value": 1675027,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-11",
+      "value": 1678551,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2008-12",
+      "value": 1744458,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-01",
+      "value": 1781981,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-02",
+      "value": 1624266,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-03",
+      "value": 1786352,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-04",
+      "value": 1698876,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-05",
+      "value": 1756127,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-06",
+      "value": 1707221,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-07",
+      "value": 1741332,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-08",
+      "value": 1755132,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-09",
+      "value": 1651952,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-10",
+      "value": 1729056,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-11",
+      "value": 1674378,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2009-12",
+      "value": 1717182,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-01",
+      "value": 1737233,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-02",
+      "value": 1602690,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-03",
+      "value": 1775686,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-04",
+      "value": 1726918,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-05",
+      "value": 1796596,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-06",
+      "value": 1716613,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-07",
+      "value": 1805745,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-08",
+      "value": 1826614,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-09",
+      "value": 1772370,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-10",
+      "value": 1862916,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-11",
+      "value": 1802484,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2010-12",
+      "value": 1889640,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-01",
+      "value": 1860566,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-02",
+      "value": 1647326,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-03",
+      "value": 1907851,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-04",
+      "value": 1868299,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-05",
+      "value": 1934850,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-06",
+      "value": 1862207,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-07",
+      "value": 1936850,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-08",
+      "value": 1959548,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-09",
+      "value": 1893345,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-10",
+      "value": 2018734,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-11",
+      "value": 1978161,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2011-12",
+      "value": 2034141,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-01",
+      "value": 2046268,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-02",
+      "value": 1876815,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-03",
+      "value": 2013944,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-04",
+      "value": 1943437,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-05",
+      "value": 2016486,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-06",
+      "value": 1939055,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-07",
+      "value": 2055476,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-08",
+      "value": 2045359,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-09",
+      "value": 1990747,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-10",
+      "value": 2061550,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-11",
+      "value": 1997917,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2012-12",
+      "value": 2046213,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-01",
+      "value": 2023011,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-02",
+      "value": 1832561,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-03",
+      "value": 2023443,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-04",
+      "value": 1983451,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-05",
+      "value": 2042563,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-06",
+      "value": 1973764,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-07",
+      "value": 2079830,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-08",
+      "value": 2075354,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-09",
+      "value": 2003186,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-10",
+      "value": 2076228,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-11",
+      "value": 2029834,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2013-12",
+      "value": 2062296,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-01",
+      "value": 2070203,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-02",
+      "value": 1914141,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-03",
+      "value": 2134549,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-04",
+      "value": 2116226,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-05",
+      "value": 2174959,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-06",
+      "value": 2115666,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-07",
+      "value": 2232675,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-08",
+      "value": 2244834,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-09",
+      "value": 2171651,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-10",
+      "value": 2266298,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-11",
+      "value": 2179157,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2014-12",
+      "value": 2269247,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-01",
+      "value": 2276791,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-02",
+      "value": 2066675,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-03",
+      "value": 2298208,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-04",
+      "value": 2256179,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-05",
+      "value": 2297826,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-06",
+      "value": 2218529,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-07",
+      "value": 2299745,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-08",
+      "value": 2302361,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-09",
+      "value": 2242155,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-10",
+      "value": 2300017,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-11",
+      "value": 2216479,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2015-12",
+      "value": 2290495,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-01",
+      "value": 2280340,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-02",
+      "value": 2163435,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-03",
+      "value": 2286521,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-04",
+      "value": 2211218,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-05",
+      "value": 2258898,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-06",
+      "value": 2165089,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-07",
+      "value": 2255564,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-08",
+      "value": 2237678,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-09",
+      "value": 2151150,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-10",
+      "value": 2214145,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-11",
+      "value": 2160600,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2016-12",
+      "value": 2207475,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-01",
+      "value": 2187447,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-02",
+      "value": 2003393,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-03",
+      "value": 2268204,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-04",
+      "value": 2197733,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-05",
+      "value": 2270953,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-06",
+      "value": 2219000,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-07",
+      "value": 2316614,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-08",
+      "value": 2315312,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-09",
+      "value": 2279811,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-10",
+      "value": 2397665,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-11",
+      "value": 2392537,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2017-12",
+      "value": 2491914,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-01",
+      "value": 2441063,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-02",
+      "value": 2250905,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-03",
+      "value": 2521151,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-04",
+      "value": 2435681,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-05",
+      "value": 2545810,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-06",
+      "value": 2476154,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-07",
+      "value": 2609653,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-08",
+      "value": 2662285,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-09",
+      "value": 2618670,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-10",
+      "value": 2740273,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-11",
+      "value": 2698177,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2018-12",
+      "value": 2774454,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-01",
+      "value": 2766868,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-02",
+      "value": 2516133,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-03",
+      "value": 2798471,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-04",
+      "value": 2721306,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-05",
+      "value": 2833477,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-06",
+      "value": 2749637,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-07",
+      "value": 2856964,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-08",
+      "value": 2926429,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-09",
+      "value": 2842862,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-10",
+      "value": 2963416,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-11",
+      "value": 2914843,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2019-12",
+      "value": 3008614,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-01",
+      "value": 3018453,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-02",
+      "value": 2769451,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-03",
+      "value": 2952802,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-04",
+      "value": 2850742,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-05",
+      "value": 2723828,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-06",
+      "value": 2712029,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-07",
+      "value": 2800638,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-08",
+      "value": 2802176,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-09",
+      "value": 2738793,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-10",
+      "value": 2780936,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-11",
+      "value": 2774983,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2020-12",
+      "value": 2886298,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-01",
+      "value": 2871976,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-02",
+      "value": 2401865,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-03",
+      "value": 2900170,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-04",
+      "value": 2828588,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-05",
+      "value": 2920531,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-06",
+      "value": 2816197,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-07",
+      "value": 2937568,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-08",
+      "value": 2946272,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-09",
+      "value": 2870587,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-10",
+      "value": 3013375,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-11",
+      "value": 2949082,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2021-12",
+      "value": 3073064,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-01",
+      "value": 2950871,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-02",
+      "value": 2690795,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-03",
+      "value": 3027982,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-04",
+      "value": 2959139,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-05",
+      "value": 3059893,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-06",
+      "value": 2970029,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-07",
+      "value": 3093508,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-08",
+      "value": 3113580,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-09",
+      "value": 3059857,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-10",
+      "value": 3156233,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-11",
+      "value": 3058251,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2022-12",
+      "value": 3114806,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-01",
+      "value": 3163626,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-02",
+      "value": 2846196,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-03",
+      "value": 3196323,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-04",
+      "value": 3067575,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-05",
+      "value": 3196235,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-06",
+      "value": 3057137,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-07",
+      "value": 3183137,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-08",
+      "value": 3202498,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-09",
+      "value": 3105466,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-10",
+      "value": 3212305,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-11",
+      "value": 3156146,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2023-12",
+      "value": 3265794,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-01",
+      "value": 3154708,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-02",
+      "value": 3032497,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-03",
+      "value": 3171604,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-04",
+      "value": 3040592,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-05",
+      "value": 3146787,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-06",
+      "value": 3081871,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-07",
+      "value": 3225035,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-08",
+      "value": 3195021,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-09",
+      "value": 3070289,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-10",
+      "value": 3216838,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-11",
+      "value": 3113573,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2024-12",
+      "value": 3276117,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-01",
+      "value": 3232733,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-02",
+      "value": 2936329,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-03",
+      "value": 3326508,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-04",
+      "value": 3205791,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-05",
+      "value": 3301713,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-06",
+      "value": 3224554,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-07",
+      "value": 3347972,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-08",
+      "value": 3368106,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-09",
+      "value": 3247818,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-10",
+      "value": 3327262,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-11",
+      "value": 3308309,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2025-12",
+      "value": 3460487,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2026-01",
+      "value": 3371505,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2026-02",
+      "value": 3098632,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2026-03",
+      "value": 3432813,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2026-04",
+      "value": 3330684,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2026-05",
+      "value": 3424309,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2026-06",
+      "value": 3369876,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9070US2",
+      "frequency": "monthly",
+      "period": "2026-07",
+      "value": 3524896,
+      "unit": "MMCF",
+      "series_name": "U.S. Dry Natural Gas Production (MMcf)",
+      "collected_at": "2026-10-27T17:38:43.902Z"
+    }
+  ],
+  "rejected": [],
+  "duplicates_removed": 0,
+  "provider_frequency": "monthly",
+  "pages": 1,
+  "rows_fetched": 237,
+  "window": {
+    "start": "2006-11",
+    "end": null
+  }
+}

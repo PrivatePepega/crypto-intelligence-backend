@@ -1,0 +1,68 @@
+{
+  "provider": "fmp",
+  "checked_at": "2026-10-27T17:14:45.370Z",
+  "endpoint": "/quote",
+  "note": "402/restricted means the current plan does not include the symbol; it does not mean the symbol is unknown.",
+  "results": [
+    {
+      "symbol": "GCUSD",
+      "listed": true,
+      "accessible": true,
+      "price": 4073.4,
+      "rejection": null
+    },
+    {
+      "symbol": "SIUSD",
+      "listed": true,
+      "accessible": true,
+      "price": 54.495,
+      "rejection": null
+    },
+    {
+      "symbol": "CLUSD",
+      "listed": true,
+      "accessible": false,
+      "kind": "restricted",
+      "status": 402,
+      "message": "FMP quote CLUSD failed: HTTP 402 - Premium Query Parameter: 'Special Endpoint : This value set for 'symbol' is not available under your current subscription please visit our subscription page to upgrade your plan at https://financialmodelingprep.com/ (https://financialmodelingprep.com/stable/quote?symbol=CLUSD&apikey=%3Credacted%3E)."
+    },
+    {
+      "symbol": "BZUSD",
+      "listed": true,
+      "accessible": true,
+      "price": 113.86,
+      "rejection": null
+    },
+    {
+      "symbol": "NGUSD",
+      "listed": true,
+      "accessible": false,
+      "kind": "restricted",
+      "status": 402,
+      "message": "FMP quote NGUSD failed: HTTP 402 - Premium Query Parameter: 'Special Endpoint : This value set for 'symbol' is not available under your current subscription please visit our subscription page to upgrade your plan at https://financialmodelingprep.com/ (https://financialmodelingprep.com/stable/quote?symbol=NGUSD&apikey=%3Credacted%3E)."
+    },
+    {
+      "symbol": "HGUSD",
+      "listed": true,
+      "accessible": false,
+      "kind": "restricted",
+      "status": 402,
+      "message": "FMP quote HGUSD failed: HTTP 402 - Premium Query Parameter: 'Special Endpoint : This value set for 'symbol' is not available under your current subscription please visit our subscription page to upgrade your plan at https://financialmodelingprep.com/ (https://financialmodelingprep.com/stable/quote?symbol=HGUSD&apikey=%3Credacted%3E)."
+    },
+    {
+      "symbol": "ALIUSD",
+      "listed": true,
+      "accessible": false,
+      "kind": "restricted",
+      "status": 402,
+      "message": "FMP quote ALIUSD failed: HTTP 402 - Premium Query Parameter: 'Special Endpoint : This value set for 'symbol' is not available under your current subscription please visit our subscription page to upgrade your plan at https://financialmodelingprep.com/ (https://financialmodelingprep.com/stable/quote?symbol=ALIUSD&apikey=%3Credacted%3E)."
+    },
+    {
+      "symbol": "ESUSD",
+      "listed": true,
+      "accessible": true,
+      "price": 7753.5,
+      "rejection": null
+    }
+  ]
+}

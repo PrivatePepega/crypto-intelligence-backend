@@ -1,0 +1,137 @@
+{
+  "provider": "eia",
+  "checked_at": "2026-10-27T17:35:43.591Z",
+  "note": "Verified against api.eia.gov/v2 on 2026-10-27. Frequency and unit are pinned per series.",
+  "series": [
+    {
+      "series_id": "RWTC",
+      "route": "petroleum/pri/spt",
+      "frequency": "daily",
+      "unit": "$/BBL",
+      "title": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
+      "category": "crude_price_spot",
+      "kind": "price",
+      "asset_symbol": "RWTC"
+    },
+    {
+      "series_id": "RBRTE",
+      "route": "petroleum/pri/spt",
+      "frequency": "daily",
+      "unit": "$/BBL",
+      "title": "Europe Brent Spot Price FOB (Dollars per Barrel)",
+      "category": "crude_price_spot",
+      "kind": "price",
+      "asset_symbol": "RBRTE"
+    },
+    {
+      "series_id": "WCESTUS1",
+      "route": "petroleum/stoc/wstk",
+      "frequency": "weekly",
+      "unit": "MBBL",
+      "title": "U.S. Ending Stocks excluding SPR of Crude Oil (Thousand Barrels)",
+      "category": "crude_inventory",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "WCRFPUS2",
+      "route": "petroleum/sum/sndw",
+      "frequency": "weekly",
+      "unit": "MBBL/D",
+      "title": "U.S. Field Production of Crude Oil (Thousand Barrels per Day)",
+      "category": "crude_production",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "MCRFPUS2",
+      "route": "petroleum/crd/crpdn",
+      "frequency": "monthly",
+      "unit": "MBBL/D",
+      "title": "U.S. Field Production of Crude Oil (Thousand Barrels per Day)",
+      "category": "crude_production",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "MCRIMUS2",
+      "route": "petroleum/move/imp",
+      "frequency": "monthly",
+      "unit": "MBBL/D",
+      "title": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "category": "crude_imports",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "MCREXUS2",
+      "route": "petroleum/move/exp",
+      "frequency": "monthly",
+      "unit": "MBBL/D",
+      "title": "U.S. Exports of Crude Oil (Thousand Barrels per Day)",
+      "category": "crude_exports",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "WPULEUS3",
+      "route": "petroleum/pnp/wiup",
+      "frequency": "weekly",
+      "unit": "%",
+      "title": "U.S. Percent Utilization of Refinery Operable Capacity",
+      "category": "refinery_utilization",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "WGFUPUS2",
+      "route": "petroleum/sum/sndw",
+      "frequency": "weekly",
+      "unit": "MBBL/D",
+      "title": "U.S. Product Supplied of Finished Motor Gasoline (Thousand Barrels per Day)",
+      "category": "product_supplied",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "WDIUPUS2",
+      "route": "petroleum/sum/sndw",
+      "frequency": "weekly",
+      "unit": "MBBL/D",
+      "title": "U.S. Product Supplied of Distillate Fuel Oil (Thousand Barrels per Day)",
+      "category": "product_supplied",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "NW2_EPG0_SWO_R48_BCF",
+      "route": "natural-gas/stor/wkly",
+      "frequency": "weekly",
+      "unit": "BCF",
+      "title": "Weekly Lower 48 States Natural Gas Working Underground Storage (Billion Cubic Feet)",
+      "category": "gas_storage",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "N9070US2",
+      "route": "natural-gas/prod/sum",
+      "frequency": "monthly",
+      "unit": "MMCF",
+      "title": "U.S. Dry Natural Gas Production (MMcf)",
+      "category": "gas_production",
+      "kind": "fundamental",
+      "asset_symbol": null
+    },
+    {
+      "series_id": "N9140US2",
+      "route": "natural-gas/cons/sum",
+      "frequency": "monthly",
+      "unit": "MMCF",
+      "title": "U.S. Natural Gas Total Consumption (MMcf)",
+      "category": "gas_consumption",
+      "kind": "fundamental",
+      "asset_symbol": null
+    }
+  ]
+}

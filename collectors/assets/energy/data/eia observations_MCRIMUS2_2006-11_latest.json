@@ -1,0 +1,2403 @@
+{
+  "provider": "eia",
+  "definition": {
+    "series_id": "MCRIMUS2",
+    "route": "petroleum/move/imp",
+    "frequency": "monthly",
+    "unit": "MBBL/D",
+    "title": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+    "category": "crude_imports",
+    "kind": "fundamental",
+    "asset_symbol": null
+  },
+  "fetched_at": "2026-10-27T17:38:37.824Z",
+  "requested": {
+    "start": "2006-11",
+    "end": null,
+    "limit": 5000
+  },
+  "provider_total": 237,
+  "truncated": false,
+  "warnings": [],
+  "observations": [
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2006-11",
+      "value": 9888,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2006-12",
+      "value": 9555,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-01",
+      "value": 10211,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-02",
+      "value": 9009,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-03",
+      "value": 10380,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-04",
+      "value": 10161,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-05",
+      "value": 10328,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-06",
+      "value": 10015,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-07",
+      "value": 9939,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-08",
+      "value": 10316,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-09",
+      "value": 10307,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-10",
+      "value": 9784,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-11",
+      "value": 10004,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2007-12",
+      "value": 9835,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-01",
+      "value": 10082,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-02",
+      "value": 9636,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-03",
+      "value": 9636,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-04",
+      "value": 9979,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-05",
+      "value": 9664,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-06",
+      "value": 10018,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-07",
+      "value": 10132,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-08",
+      "value": 10324,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-09",
+      "value": 8447,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-10",
+      "value": 10086,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-11",
+      "value": 9944,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2008-12",
+      "value": 9419,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-01",
+      "value": 9779,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-02",
+      "value": 9074,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-03",
+      "value": 9378,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-04",
+      "value": 9374,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-05",
+      "value": 8797,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-06",
+      "value": 9135,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-07",
+      "value": 9094,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-08",
+      "value": 8814,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-09",
+      "value": 9254,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-10",
+      "value": 8566,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-11",
+      "value": 8740,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2009-12",
+      "value": 8170,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-01",
+      "value": 8492,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-02",
+      "value": 8761,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-03",
+      "value": 9341,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-04",
+      "value": 9726,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-05",
+      "value": 9655,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-06",
+      "value": 9927,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-07",
+      "value": 9932,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-08",
+      "value": 9543,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-09",
+      "value": 9229,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-10",
+      "value": 8540,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-11",
+      "value": 8699,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2010-12",
+      "value": 8695,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-01",
+      "value": 9183,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-02",
+      "value": 8184,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-03",
+      "value": 9183,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-04",
+      "value": 8839,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-05",
+      "value": 9059,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-06",
+      "value": 9235,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-07",
+      "value": 9276,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-08",
+      "value": 8936,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-09",
+      "value": 8914,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-10",
+      "value": 8907,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-11",
+      "value": 8724,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2011-12",
+      "value": 8711,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-01",
+      "value": 8527,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-02",
+      "value": 8562,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-03",
+      "value": 8771,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-04",
+      "value": 8636,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-05",
+      "value": 8991,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-06",
+      "value": 9193,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-07",
+      "value": 8712,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-08",
+      "value": 8665,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-09",
+      "value": 8381,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-10",
+      "value": 8108,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-11",
+      "value": 8183,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2012-12",
+      "value": 7604,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-01",
+      "value": 7956,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-02",
+      "value": 7293,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-03",
+      "value": 7497,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-04",
+      "value": 7760,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-05",
+      "value": 7741,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-06",
+      "value": 7731,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-07",
+      "value": 8058,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-08",
+      "value": 8099,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-09",
+      "value": 7923,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-10",
+      "value": 7478,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-11",
+      "value": 7408,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2013-12",
+      "value": 7772,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-01",
+      "value": 7589,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-02",
+      "value": 7199,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-03",
+      "value": 7274,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-04",
+      "value": 7555,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-05",
+      "value": 7167,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-06",
+      "value": 7068,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-07",
+      "value": 7630,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-08",
+      "value": 7473,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-09",
+      "value": 7495,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-10",
+      "value": 7148,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-11",
+      "value": 7295,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2014-12",
+      "value": 7225,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-01",
+      "value": 7171,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-02",
+      "value": 7100,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-03",
+      "value": 7592,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-04",
+      "value": 7208,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-05",
+      "value": 7245,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-06",
+      "value": 7321,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-07",
+      "value": 7360,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-08",
+      "value": 7717,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-09",
+      "value": 7228,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-10",
+      "value": 7102,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-11",
+      "value": 7371,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2015-12",
+      "value": 7902,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-01",
+      "value": 7615,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-02",
+      "value": 7914,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-03",
+      "value": 8012,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-04",
+      "value": 7611,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-05",
+      "value": 7927,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-06",
+      "value": 7560,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-07",
+      "value": 8096,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-08",
+      "value": 8016,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-09",
+      "value": 8040,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-10",
+      "value": 7570,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-11",
+      "value": 8023,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2016-12",
+      "value": 7817,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-01",
+      "value": 8478,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-02",
+      "value": 7877,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-03",
+      "value": 8165,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-04",
+      "value": 8204,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-05",
+      "value": 8487,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-06",
+      "value": 8089,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-07",
+      "value": 7915,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-08",
+      "value": 7923,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-09",
+      "value": 7324,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-10",
+      "value": 7681,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-11",
+      "value": 7674,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2017-12",
+      "value": 7782,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-01",
+      "value": 8018,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-02",
+      "value": 7498,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-03",
+      "value": 7620,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-04",
+      "value": 8254,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-05",
+      "value": 7834,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-06",
+      "value": 8487,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-07",
+      "value": 7936,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-08",
+      "value": 7989,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-09",
+      "value": 7593,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-10",
+      "value": 7354,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-11",
+      "value": 7542,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2018-12",
+      "value": 7097,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-01",
+      "value": 7558,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-02",
+      "value": 6670,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-03",
+      "value": 6783,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-04",
+      "value": 6999,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-05",
+      "value": 7154,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-06",
+      "value": 7152,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-07",
+      "value": 6938,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-08",
+      "value": 6944,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-09",
+      "value": 6483,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-10",
+      "value": 6242,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-11",
+      "value": 5818,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2019-12",
+      "value": 6833,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-01",
+      "value": 6411,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-02",
+      "value": 6519,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-03",
+      "value": 6296,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-04",
+      "value": 5520,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-05",
+      "value": 6087,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-06",
+      "value": 6393,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-07",
+      "value": 5906,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-08",
+      "value": 5417,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-09",
+      "value": 5398,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-10",
+      "value": 5293,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-11",
+      "value": 5570,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2020-12",
+      "value": 5713,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-01",
+      "value": 5787,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-02",
+      "value": 5589,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-03",
+      "value": 5819,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-04",
+      "value": 5819,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-05",
+      "value": 5828,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-06",
+      "value": 6607,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-07",
+      "value": 6398,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-08",
+      "value": 6236,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-09",
+      "value": 6525,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-10",
+      "value": 5971,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-11",
+      "value": 6334,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2021-12",
+      "value": 6429,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-01",
+      "value": 6397,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-02",
+      "value": 6160,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-03",
+      "value": 6417,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-04",
+      "value": 6060,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-05",
+      "value": 6164,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-06",
+      "value": 6474,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-07",
+      "value": 6597,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-08",
+      "value": 6333,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-09",
+      "value": 6269,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-10",
+      "value": 6239,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-11",
+      "value": 6253,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2022-12",
+      "value": 5999,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-01",
+      "value": 6300,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-02",
+      "value": 6631,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-03",
+      "value": 6303,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-04",
+      "value": 6220,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-05",
+      "value": 6465,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-06",
+      "value": 6518,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-07",
+      "value": 6305,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-08",
+      "value": 6989,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-09",
+      "value": 6683,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-10",
+      "value": 6130,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-11",
+      "value": 6926,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2023-12",
+      "value": 6422,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-01",
+      "value": 6626,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-02",
+      "value": 6536,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-03",
+      "value": 6180,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-04",
+      "value": 6593,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-05",
+      "value": 7043,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-06",
+      "value": 6685,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-07",
+      "value": 7116,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-08",
+      "value": 6326,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-09",
+      "value": 6455,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-10",
+      "value": 6352,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-11",
+      "value": 6578,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2024-12",
+      "value": 6557,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-01",
+      "value": 6649,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-02",
+      "value": 6045,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-03",
+      "value": 5756,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-04",
+      "value": 6022,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-05",
+      "value": 6263,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-06",
+      "value": 6165,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-07",
+      "value": 6324,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-08",
+      "value": 6283,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-09",
+      "value": 6399,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-10",
+      "value": 5898,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-11",
+      "value": 5780,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2025-12",
+      "value": 6413,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2026-01",
+      "value": 6469,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2026-02",
+      "value": 6457,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2026-03",
+      "value": 6536,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2026-04",
+      "value": 6257,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2026-05",
+      "value": 5953,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2026-06",
+      "value": 6044,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "MCRIMUS2",
+      "frequency": "monthly",
+      "period": "2026-07",
+      "value": 6224,
+      "unit": "MBBL/D",
+      "series_name": "U.S. Imports of Crude Oil (Thousand Barrels per Day)",
+      "collected_at": "2026-10-27T17:38:37.824Z"
+    }
+  ],
+  "rejected": [],
+  "duplicates_removed": 0,
+  "provider_frequency": "monthly",
+  "pages": 1,
+  "rows_fetched": 237,
+  "window": {
+    "start": "2006-11",
+    "end": null
+  }
+}

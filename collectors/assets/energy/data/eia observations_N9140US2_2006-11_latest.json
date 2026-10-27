@@ -1,0 +1,2403 @@
+{
+  "provider": "eia",
+  "definition": {
+    "series_id": "N9140US2",
+    "route": "natural-gas/cons/sum",
+    "frequency": "monthly",
+    "unit": "MMCF",
+    "title": "U.S. Natural Gas Total Consumption (MMcf)",
+    "category": "gas_consumption",
+    "kind": "fundamental",
+    "asset_symbol": null
+  },
+  "fetched_at": "2026-10-27T17:38:44.901Z",
+  "requested": {
+    "start": "2006-11",
+    "end": null,
+    "limit": 5000
+  },
+  "provider_total": 237,
+  "truncated": false,
+  "warnings": [],
+  "observations": [
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2006-11",
+      "value": 1765375,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2006-12",
+      "value": 2122784,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-01",
+      "value": 2475594,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-02",
+      "value": 2566993,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-03",
+      "value": 2128845,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-04",
+      "value": 1810079,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-05",
+      "value": 1559080,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-06",
+      "value": 1555226,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-07",
+      "value": 1659882,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-08",
+      "value": 1896137,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-09",
+      "value": 1590484,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-10",
+      "value": 1627791,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-11",
+      "value": 1834529,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2007-12",
+      "value": 2399154,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-01",
+      "value": 2733970,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-02",
+      "value": 2503421,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-03",
+      "value": 2278151,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-04",
+      "value": 1823867,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-05",
+      "value": 1576387,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-06",
+      "value": 1604249,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-07",
+      "value": 1708641,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-08",
+      "value": 1682924,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-09",
+      "value": 1460924,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-10",
+      "value": 1635827,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-11",
+      "value": 1868947,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2008-12",
+      "value": 2399702,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-01",
+      "value": 2729715,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-02",
+      "value": 2332539,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-03",
+      "value": 2170709,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-04",
+      "value": 1741293,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-05",
+      "value": 1504000,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-06",
+      "value": 1527833,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-07",
+      "value": 1657997,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-08",
+      "value": 1736462,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-09",
+      "value": 1574975,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-10",
+      "value": 1666520,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-11",
+      "value": 1776171,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2009-12",
+      "value": 2491864,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-01",
+      "value": 2809788,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-02",
+      "value": 2480950,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-03",
+      "value": 2142925,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-04",
+      "value": 1691813,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-05",
+      "value": 1617274,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-06",
+      "value": 1649515,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-07",
+      "value": 1825828,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-08",
+      "value": 1878926,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-09",
+      "value": 1637491,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-10",
+      "value": 1664938,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-11",
+      "value": 1973294,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2010-12",
+      "value": 2714054,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-01",
+      "value": 2888640,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-02",
+      "value": 2452403,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-03",
+      "value": 2230493,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-04",
+      "value": 1825023,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-05",
+      "value": 1667396,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-06",
+      "value": 1657334,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-07",
+      "value": 1890515,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-08",
+      "value": 1891783,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-09",
+      "value": 1655634,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-10",
+      "value": 1744454,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-11",
+      "value": 2031872,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2011-12",
+      "value": 2541878,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-01",
+      "value": 2756180,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-02",
+      "value": 2500654,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-03",
+      "value": 2127761,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-04",
+      "value": 1953071,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-05",
+      "value": 1873835,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-06",
+      "value": 1868356,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-07",
+      "value": 2069773,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-08",
+      "value": 2008815,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-09",
+      "value": 1807208,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-10",
+      "value": 1901084,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-11",
+      "value": 2167841,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2012-12",
+      "value": 2503907,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-01",
+      "value": 2878785,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-02",
+      "value": 2567155,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-03",
+      "value": 2521108,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-04",
+      "value": 1967458,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-05",
+      "value": 1752469,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-06",
+      "value": 1742917,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-07",
+      "value": 1926330,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-08",
+      "value": 1927379,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-09",
+      "value": 1766973,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-10",
+      "value": 1866762,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-11",
+      "value": 2316909,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2013-12",
+      "value": 2920826,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-01",
+      "value": 3204129,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-02",
+      "value": 2741240,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-03",
+      "value": 2557890,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-04",
+      "value": 1961678,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-05",
+      "value": 1810222,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-06",
+      "value": 1745351,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-07",
+      "value": 1881017,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-08",
+      "value": 1933061,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-09",
+      "value": 1809291,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-10",
+      "value": 1912810,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-11",
+      "value": 2357521,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2014-12",
+      "value": 2679165,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-01",
+      "value": 3114982,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-02",
+      "value": 2925172,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-03",
+      "value": 2591329,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-04",
+      "value": 2007922,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-05",
+      "value": 1858149,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-06",
+      "value": 1899906,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-07",
+      "value": 2067714,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-08",
+      "value": 2052728,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-09",
+      "value": 1901337,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-10",
+      "value": 1987310,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-11",
+      "value": 2249140,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2015-12",
+      "value": 2588168,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-01",
+      "value": 3091695,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-02",
+      "value": 2652260,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-03",
+      "value": 2356298,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-04",
+      "value": 2083848,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-05",
+      "value": 1965799,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-06",
+      "value": 2000656,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-07",
+      "value": 2186616,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-08",
+      "value": 2208375,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-09",
+      "value": 1947752,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-10",
+      "value": 1925203,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-11",
+      "value": 2159445,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2016-12",
+      "value": 2866273,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-01",
+      "value": 2913823,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-02",
+      "value": 2340217,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-03",
+      "value": 2523331,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-04",
+      "value": 1932042,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-05",
+      "value": 1892010,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-06",
+      "value": 1910441,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-07",
+      "value": 2141595,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-08",
+      "value": 2093773,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-09",
+      "value": 1920466,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-10",
+      "value": 2031510,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-11",
+      "value": 2357258,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2017-12",
+      "value": 3086015,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-01",
+      "value": 3340935,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-02",
+      "value": 2710719,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-03",
+      "value": 2796708,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-04",
+      "value": 2350481,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-05",
+      "value": 2055019,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-06",
+      "value": 2063144,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-07",
+      "value": 2350719,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-08",
+      "value": 2313836,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-09",
+      "value": 2156063,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-10",
+      "value": 2285854,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-11",
+      "value": 2715942,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2018-12",
+      "value": 2999510,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-01",
+      "value": 3424302,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-02",
+      "value": 3019120,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-03",
+      "value": 2927812,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-04",
+      "value": 2212386,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-05",
+      "value": 2133985,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-06",
+      "value": 2119341,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-07",
+      "value": 2393904,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-08",
+      "value": 2433924,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-09",
+      "value": 2206252,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-10",
+      "value": 2306544,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-11",
+      "value": 2783754,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2019-12",
+      "value": 3170717,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-01",
+      "value": 3327245,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-02",
+      "value": 3062299,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-03",
+      "value": 2725503,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-04",
+      "value": 2263569,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-05",
+      "value": 2076671,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-06",
+      "value": 2134224,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-07",
+      "value": 2468300,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-08",
+      "value": 2404283,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-09",
+      "value": 2156948,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-10",
+      "value": 2320505,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-11",
+      "value": 2446546,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2020-12",
+      "value": 3188152,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-01",
+      "value": 3335219,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-02",
+      "value": 3095717,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-03",
+      "value": 2640102,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-04",
+      "value": 2271622,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-05",
+      "value": 2116420,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-06",
+      "value": 2242031,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-07",
+      "value": 2417590,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-08",
+      "value": 2436266,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-09",
+      "value": 2138211,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-10",
+      "value": 2259328,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-11",
+      "value": 2684978,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2021-12",
+      "value": 3008222,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-01",
+      "value": 3582058,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-02",
+      "value": 3052434,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-03",
+      "value": 2781768,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-04",
+      "value": 2358188,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-05",
+      "value": 2240224,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-06",
+      "value": 2317094,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-07",
+      "value": 2589602,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-08",
+      "value": 2566702,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-09",
+      "value": 2293531,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-10",
+      "value": 2362424,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-11",
+      "value": 2768946,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2022-12",
+      "value": 3378941,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-01",
+      "value": 3317042,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-02",
+      "value": 2957734,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-03",
+      "value": 3028068,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-04",
+      "value": 2420034,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-05",
+      "value": 2310535,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-06",
+      "value": 2366079,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-07",
+      "value": 2672061,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-08",
+      "value": 2683066,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-09",
+      "value": 2386277,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-10",
+      "value": 2442786,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-11",
+      "value": 2825894,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2023-12",
+      "value": 3182367,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-01",
+      "value": 3729812,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-02",
+      "value": 2966965,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-03",
+      "value": 2800749,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-04",
+      "value": 2399649,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-05",
+      "value": 2338619,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-06",
+      "value": 2430874,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-07",
+      "value": 2746362,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-08",
+      "value": 2724003,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-09",
+      "value": 2416417,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-10",
+      "value": 2431064,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-11",
+      "value": 2709513,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2024-12",
+      "value": 3361874,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-01",
+      "value": 3921586,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-02",
+      "value": 3232380,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-03",
+      "value": 2752029,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-04",
+      "value": 2376688,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-05",
+      "value": 2309890,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-06",
+      "value": 2417597,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-07",
+      "value": 2719968,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-08",
+      "value": 2639655,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-09",
+      "value": 2424022,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-10",
+      "value": 2443238,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-11",
+      "value": 2780954,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2025-12",
+      "value": 3497693,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2026-01",
+      "value": 3789096,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2026-02",
+      "value": 3112198,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2026-03",
+      "value": 2777807,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2026-04",
+      "value": 2396031,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2026-05",
+      "value": 2355193,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2026-06",
+      "value": 2432896,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    },
+    {
+      "provider": "eia",
+      "series_id": "N9140US2",
+      "frequency": "monthly",
+      "period": "2026-07",
+      "value": 2775752,
+      "unit": "MMCF",
+      "series_name": "U.S. Natural Gas Total Consumption (MMcf)",
+      "collected_at": "2026-10-27T17:38:44.901Z"
+    }
+  ],
+  "rejected": [],
+  "duplicates_removed": 0,
+  "provider_frequency": "monthly",
+  "pages": 1,
+  "rows_fetched": 237,
+  "window": {
+    "start": "2006-11",
+    "end": null
+  }
+}
