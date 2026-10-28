@@ -1,0 +1,131 @@
+{
+  "identity": {
+    "assetId": "",
+    "ticker": "AAPL",
+    "companyName": "Apple Inc.",
+    "exchange": "Nasdaq",
+    "cik": "0000320193",
+    "providerIds": {
+      "fmp": {
+        "symbol": "AAPL",
+        "cik": "0000320193",
+        "isin": "US0378331005",
+        "cusip": "037833100"
+      },
+      "sec": {
+        "cik": "0000320193",
+        "name": "Apple Inc.",
+        "ticker": "AAPL",
+        "exchange": "Nasdaq"
+      }
+    }
+  },
+  "profile": null,
+  "quote": null,
+  "history": null,
+  "financialStatements": null,
+  "financialMetrics": null,
+  "insiderTransactions": [],
+  "institutionalHoldings": [],
+  "beneficialOwnership": [],
+  "corporateActions": [],
+  "coverage": {
+    "assetId": "",
+    "ticker": "AAPL",
+    "datasets": [
+      {
+        "dataset": "profile",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh after 7 days, or when missing.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "quote",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh on every explicit full stock retrieval.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "history",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Fetch missing dates and recent corrections; avoid full re-download.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "financial_statements",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh when new SEC filing available, or periodically check.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "financial_metrics",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh when financial statements refresh.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "insider_transactions",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Incrementally check for new Forms 3, 4, and 5.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "institutional_holdings",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Check for newly filed or amended 13F reports; respect reporting delays.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "beneficial_ownership",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Check for new or amended 13D/13G filings.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "corporate_actions",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Check for new relevant filings and refresh extracted records.",
+        "recordCount": 0,
+        "error": null
+      }
+    ],
+    "overallFresh": false,
+    "collectedAt": "2026-10-28T19:29:30.955Z"
+  },
+  "errors": []
+}

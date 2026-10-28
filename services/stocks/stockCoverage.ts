@@ -10,6 +10,9 @@ import type {
   DatasetName,
 } from "../../types/stocks/stock.types.js";
 
+// Re-export types for consumers
+export type { StockCoverageReport, DatasetCoverage, DbClient };
+
 /* -------------------------------------------------------------------------- */
 /*                              DB Client Adapter                             */
 /* -------------------------------------------------------------------------- */

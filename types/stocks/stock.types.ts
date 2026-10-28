@@ -1,5 +1,13 @@
 import { z } from "zod";
 
+/** Database client interface for coverage and repository queries. */
+export interface DbClient {
+  query(text: string, values?: unknown[]): Promise<{
+    rows: Array<Record<string, unknown>>;
+    rowCount: number | null;
+  }>;
+}
+
 /**
  * Stock intelligence types for the deterministic ingestion service.
  *
@@ -69,6 +77,7 @@ export const fmpQuoteItemSchema = z.object({
   changePercentage: z.number().nullable().optional(),
   change: z.number().nullable().optional(),
   volume: z.number().nullable().optional(),
+  averageVolume: z.number().nullable().optional(),
   dayLow: z.number().nullable().optional(),
   dayHigh: z.number().nullable().optional(),
   yearHigh: z.number().nullable().optional(),
@@ -80,6 +89,7 @@ export const fmpQuoteItemSchema = z.object({
   open: z.number().nullable().optional(),
   previousClose: z.number().nullable().optional(),
   timestamp: z.number().nullable().optional(),
+  currency: z.string().nullable().optional(),
 });
 
 export type FmpQuoteItem = z.infer<typeof fmpQuoteItemSchema>;

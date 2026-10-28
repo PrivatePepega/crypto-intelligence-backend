@@ -17,6 +17,9 @@ import type {
 import { createDbClient, type DbClient } from "./stockCoverage.js";
 import { buildQuoteSnapshotData, buildQuoteSnapshotKey } from "./fmpStockNormalizer.js";
 
+// Re-export types for consumers
+export type { DbClient, StockAssetRow, StockAssetUpsertResult, CandleUpsertResult, SnapshotInsertResult, SecEventInsertResult };
+
 /* -------------------------------------------------------------------------- */
 /*                              Asset Identity                                */
 /* -------------------------------------------------------------------------- */

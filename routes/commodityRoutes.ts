@@ -50,7 +50,7 @@ const ingestCommoditySchema = z.object({
  */
 router.get("/search", validateRequest(searchQuerySchema, 'query'), async (req, res) => {
   try {
-    const { query, limit } = req.query as { query: string; limit?: string };
+    const { query, limit } = res.locals.validatedQuery as { query: string; limit?: string };
     const results = await autocompleteCommodities(query, Number(limit ?? 10));
     res.json({
       query,
@@ -82,7 +82,7 @@ router.get("/search", validateRequest(searchQuerySchema, 'query'), async (req, r
  */
 router.post("/intelligence", validateRequest(ingestCommoditySchema), async (req, res) => {
   try {
-    const { query, refresh, include, readOnly, historyRange } = req.body as CommodityOptionsInput;
+    const { query, refresh, include, readOnly, historyRange } = res.locals.validatedBody as CommodityOptionsInput;
 
     const options: GetOrIngestCommodityOptions = {
       refresh: refresh ?? false,

@@ -18,6 +18,9 @@ import type {
   StockIdentity,
 } from "../../types/stocks/stock.types.js";
 
+// Re-export types for consumers
+export type { StockProfile, StockQuote, StockHistory, StockCandle };
+
 /* -------------------------------------------------------------------------- */
 /*                              Helpers                                       */
 /* -------------------------------------------------------------------------- */

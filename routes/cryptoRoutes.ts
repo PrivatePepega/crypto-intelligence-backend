@@ -51,7 +51,7 @@ const ingestCryptoSchema = z.object({
  */
 router.get("/search", validateRequest(searchQuerySchema, 'query'), async (req, res) => {
   try {
-    const { query, limit } = req.query as { query: string; limit?: string };
+    const { query, limit } = res.locals.validatedQuery as { query: string; limit?: string };
     const results = await autocompleteCrypto(query, Number(limit ?? 10));
     res.json({
       query,
@@ -85,7 +85,7 @@ router.get("/search", validateRequest(searchQuerySchema, 'query'), async (req, r
  */
 router.post("/intelligence", validateRequest(ingestCryptoSchema), async (req, res) => {
   try {
-    const { query, refresh, include, readOnly, network, contractAddress, historyRange } = req.body as {
+    const { query, refresh, include, readOnly, network, contractAddress, historyRange } = res.locals.validatedBody as {
       query: string;
       refresh?: boolean;
       include?: CryptoDatasetName[];

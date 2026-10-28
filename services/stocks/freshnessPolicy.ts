@@ -1,4 +1,8 @@
 import type { DatasetName, IngestionPlanStep, IngestionPlan } from "../../types/stocks/stock.types.js";
+import { getStockCoverage, type StockCoverageReport } from "./stockCoverage.js";
+
+// Re-export types for consumers
+export type { IngestionPlan, IngestionPlanStep };
 
 /**
  * Freshness policies for each dataset.
@@ -109,7 +113,7 @@ export function isFresh(lastCollectedAt: string | null, dataset: DatasetName): b
 export function createIngestionPlan(
   assetId: string,
   ticker: string,
-  coverage: Awaited<ReturnType<import("./stockCoverage.js").getStockCoverage>>,
+  coverage: StockCoverageReport,
   options: { refresh?: boolean; include?: DatasetName[] } = {},
 ): IngestionPlan {
   const steps: IngestionPlanStep[] = [];

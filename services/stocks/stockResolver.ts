@@ -8,7 +8,6 @@ import {
 import {
   loadCompanyTickersExchange,
   padCik,
-  type SecTickerExchangeData,
 } from "../../collectors/assets/stocks/secEdgarFetch.js";
 import type {
   FmpSearchSymbolItem,
@@ -17,7 +16,12 @@ import type {
   StockIdentity,
   StockResolutionResult,
   StockSearchCandidate,
+  SecTickerExchangeData,
+  SecTickerExchangeRow,
 } from "../../types/stocks/stock.types.js";
+
+// Re-export types for consumers
+export type { StockIdentity, StockResolutionResult, StockSearchCandidate };
 
 export const FMP_BASE_URL = "https://financialmodelingprep.com/stable";
 export const SEARCH_SYMBOL_ENDPOINT = "/search-symbol";
@@ -34,7 +38,8 @@ let secTickerCache: Map<string, SecTickerExchangeData> | null = null;
 
 async function getSecTickerData(): Promise<SecTickerExchangeData> {
   if (secTickerCache) {
-    return secTickerCache;
+    // Return the cached data object (first value in the Map)
+    return secTickerCache.values().next().value;
   }
   const data = await loadCompanyTickersExchange();
   secTickerCache = new Map([[data.fields.join("|"), data]]);

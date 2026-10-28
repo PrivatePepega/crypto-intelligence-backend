@@ -49,18 +49,12 @@ import type {
   StockIntelligenceResult,
   GetOrIngestStockOptions,
   DatasetName,
-  StockHistory,
-  StockProfile,
-  StockQuote,
   FinancialStatements,
   FinancialMetrics,
   InsiderTransaction,
   ThirteenFPeriod,
   BeneficialOwnershipFiling,
   CorporateActionFiling,
-  StockCoverageReport,
-  IngestionPlan,
-  StockIdentity,
 } from "../../types/stocks/stock.types.js";
 import { PROFILE_ENDPOINT, QUOTE_ENDPOINT, HISTORY_ENDPOINT } from "./stockResolver.js";
 
@@ -572,9 +566,28 @@ export async function getOrIngestStock(
   // 2. Get coverage report
   const coverage = await getStockCoverage(identity);
 
-  // 3. If read-only, return current state
+  // 3. Read stored data for response (always, even in read-only mode)
+  const client = await pool.connect();
+  let stored: Awaited<ReturnType<typeof readStockState>> | null = null;
+  try {
+    const dbClient = {
+      async query(text: string, values?: unknown[]) {
+        const result = await client.query(text, values);
+        return { rows: result.rows as Array<Record<string, unknown>>, rowCount: result.rowCount };
+      },
+    };
+    stored = await readStockState(dbClient, identity.ticker, {
+      recentCandles: 30,
+      recentSnapshots: 5,
+      recentEvents: 20,
+    });
+  } finally {
+    client.release();
+  }
+
+  // 4. If read-only, return current state without ingestion
   if (options.readOnly) {
-    return buildResult(identity, coverage, null, []);
+    return buildResult(identity, coverage, stored, []);
   }
 
   // 4. Create ingestion plan
@@ -600,23 +613,24 @@ export async function getOrIngestStock(
   const freshCoverage = await getStockCoverage(identity);
 
   // 7. Read back stored data for response
-  const client = await pool.connect();
+  // (already read above before ingestion; re-read to get fresh data after ingestion)
+  const client2 = await pool.connect();
   try {
     const dbClient = {
       async query(text: string, values?: unknown[]) {
-        const result = await client.query(text, values);
+        const result = await client2.query(text, values);
         return { rows: result.rows as Array<Record<string, unknown>>, rowCount: result.rowCount };
       },
     };
-    const stored = await readStockState(dbClient, identity.ticker, {
+    const freshStored = await readStockState(dbClient, identity.ticker, {
       recentCandles: 30,
       recentSnapshots: 5,
       recentEvents: 20,
     });
 
-    return buildResult(identity, freshCoverage, stored, ingestionResult?.errors ?? []);
+    return buildResult(identity, freshCoverage, freshStored, ingestionResult?.errors ?? []);
   } finally {
-    client.release();
+    client2.release();
   }
 }
 
