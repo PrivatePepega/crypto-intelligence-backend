@@ -1,0 +1,5 @@
+{
+  "error": "intelligence_failed",
+  "message": "Failed to retrieve stock intelligence",
+  "details": "data.data is not iterable"
+}

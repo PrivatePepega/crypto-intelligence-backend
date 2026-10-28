@@ -41,20 +41,44 @@ const ingestStockSchema = z.object({
  * Autocomplete/search for stocks by ticker or company name.
  * Lightweight - does not trigger full ingestion.
  */
-router.get("/search", validateRequest(searchQuerySchema), async (req, res) => {
+router.get("/search", async (req, res, next) => {
+  console.log("[STOCKS SEARCH] Route matched, path:", req.path, "method:", req.method);
+  console.log("[STOCKS SEARCH] Raw query:", req.query);
+  
+  // Manual validation to bypass middleware issues
+  const searchQuerySchema = z.object({
+    query: z.string().trim().min(1, "Query is required").max(100),
+    limit: z.coerce.number().int().positive().max(50).optional().default(10),
+  });
+
+  const validationResult = searchQuerySchema.safeParse(req.query);
+  if (!validationResult.success) {
+    console.log("[STOCKS SEARCH] Validation failed:", validationResult.error.issues.map(i => i.message));
+    return res.status(400).json({
+      error: "validation_failed",
+      message: validationResult.error.issues.map(i => i.message).join(", "),
+    });
+  }
+
+  const { query, limit } = validationResult.data;
+  console.log("[STOCKS SEARCH] Validated params:", { query, limit });
+
   try {
-    const { query, limit } = req.query as { query: string; limit?: string };
+    console.log("[STOCKS SEARCH] Calling autocompleteStocks...");
     const results = await autocompleteStocks(query, Number(limit ?? 10));
+    console.log("[STOCKS SEARCH] Results:", results.length);
     res.json({
       query,
       results,
       count: results.length,
     });
   } catch (error) {
-    console.error("Stock search failed:", error);
+    console.error("[STOCKS SEARCH] Error:", error);
+    console.error("[STOCKS SEARCH] Stack:", error instanceof Error ? error.stack : "No stack");
     res.status(500).json({
       error: "search_failed",
       message: error instanceof Error ? error.message : "Stock search failed",
+      stack: error instanceof Error ? error.stack : undefined,
     });
   }
 });
@@ -147,16 +171,22 @@ router.post("/intelligence", validateRequest(ingestStockSchema), async (req, res
  * Query params: refresh, include, readOnly
  */
 router.get("/intelligence/:ticker", async (req, res) => {
+  console.log("[STOCKS INTELLIGENCE GET] Request:", req.params, req.query);
   try {
     const { ticker } = req.params;
     const refresh = req.query.refresh === "true";
     const readOnly = req.query.readOnly === "true";
-    const include = req.query.include
-      ? (req.query.include as string).split(",").filter(Boolean)
-      : undefined;
+    const includeParam = req.query.include;
+    let include: string[] | undefined;
+    if (includeParam) {
+      const str = Array.isArray(includeParam) ? (includeParam[0] as string) : String(includeParam);
+      include = str.split(",").filter(Boolean);
+    }
 
+    console.log("[STOCKS INTELLIGENCE GET] Calling getOrIngestStock with:", { ticker, refresh, readOnly, include });
     const options: GetOrIngestStockOptions = { refresh, include: include as DatasetName[] | undefined, readOnly };
     const result = await getOrIngestStock(ticker, options);
+    console.log("[STOCKS INTELLIGENCE GET] Success, errors:", result.errors.length);
 
     if (result.errors.length > 0) {
       const failedCount = result.errors.length;
@@ -172,6 +202,8 @@ router.get("/intelligence/:ticker", async (req, res) => {
 
     res.json(result);
   } catch (error) {
+    console.error("[STOCKS INTELLIGENCE GET] Error:", error);
+    console.error("[STOCKS INTELLIGENCE GET] Stack:", error instanceof Error ? error.stack : "No stack");
     const message = error instanceof Error ? error.message : String(error);
 
     if (message.includes("not a recognized stock") || message.includes("is an ETF/fund")) {
@@ -181,7 +213,6 @@ router.get("/intelligence/:ticker", async (req, res) => {
       return res.status(409).json({ error: "ambiguous_stock", message });
     }
 
-    console.error("Stock intelligence failed:", error);
     res.status(500).json({ error: "intelligence_failed", message: "Failed to retrieve stock intelligence" });
   }
 });

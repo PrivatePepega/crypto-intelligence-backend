@@ -19,10 +19,12 @@ import type {
   StockSearchCandidate,
 } from "../../types/stocks/stock.types.js";
 
-const FMP_BASE_URL = "https://financialmodelingprep.com/stable";
-const SEARCH_SYMBOL_ENDPOINT = "/search-symbol";
-const SEARCH_NAME_ENDPOINT = "/search-name";
-const PROFILE_ENDPOINT = "/profile";
+export const FMP_BASE_URL = "https://financialmodelingprep.com/stable";
+export const SEARCH_SYMBOL_ENDPOINT = "/search-symbol";
+export const SEARCH_NAME_ENDPOINT = "/search-name";
+export const PROFILE_ENDPOINT = "/profile";
+export const QUOTE_ENDPOINT = "/quote";
+export const HISTORY_ENDPOINT = "/historical-price-eod/full";
 
 /* -------------------------------------------------------------------------- */
 /*                              SEC Ticker Cache                              */

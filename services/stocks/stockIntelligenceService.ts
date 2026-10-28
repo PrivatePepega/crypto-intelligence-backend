@@ -367,6 +367,39 @@ async function executeIngestionPlan(
     }
   }
 
+  // Ensure we have an assetId for subsequent steps
+  // If profile step wasn't in plan or failed, look up existing asset
+  if (!assetId) {
+    const client = await pool.connect();
+    try {
+      const result = await client.query(
+        `SELECT id FROM assets.assets WHERE asset_type = 'stock' AND lower(symbol) = lower($1) LIMIT 1`,
+        [identity.ticker]
+      );
+      if (result.rows.length > 0) {
+        assetId = result.rows[0].id;
+      }
+    } finally {
+      client.release();
+    }
+  }
+
+  // If still no assetId, we can't proceed with other datasets
+  if (!assetId && plan.steps.some(s => s.dataset !== "profile")) {
+    errors.push({ dataset: "profile", message: "No asset ID available for ingestion" });
+    return {
+      profile: { ok: profileResult.ok, profile, error: profileResult.ok ? null : profileResult.reason },
+      quote: { ok: false, quote: null, error: "No asset ID" },
+      history: { ok: false, history: null, error: "No asset ID", candles: null },
+      fundamentals: { ok: false, statements: null, metrics: null, error: "No asset ID" },
+      insider: { ok: false, transactions: [], count: 0, error: "No asset ID" },
+      institutional: { ok: false, periods: [], count: 0, error: "No asset ID" },
+      beneficial: { ok: false, filings: [], count: 0, error: "No asset ID" },
+      corporate: { ok: false, filings: [], count: 0, error: "No asset ID" },
+      errors,
+    };
+  }
+
   // 2. Quote
   let quoteResult: NormalizedQuoteResult = { ok: false, reason: "not attempted" };
   let quote: StockQuote | null = null;
@@ -518,6 +551,23 @@ export async function getOrIngestStock(
   }
 
   let identity = resolution.identity;
+
+  // Ensure we have an assetId for coverage check
+  // If not present, look up existing asset in database
+  if (!identity.assetId) {
+    const client = await pool.connect();
+    try {
+      const result = await client.query(
+        `SELECT id FROM assets.assets WHERE asset_type = 'stock' AND lower(symbol) = lower($1) LIMIT 1`,
+        [identity.ticker]
+      );
+      if (result.rows.length > 0) {
+        identity = { ...identity, assetId: result.rows[0].id };
+      }
+    } finally {
+      client.release();
+    }
+  }
 
   // 2. Get coverage report
   const coverage = await getStockCoverage(identity);

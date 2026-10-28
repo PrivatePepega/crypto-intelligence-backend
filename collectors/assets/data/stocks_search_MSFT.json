@@ -1,0 +1,86 @@
+{
+  "query": "MSFT",
+  "results": [
+    {
+      "ticker": "MSFT",
+      "companyName": "Microsoft Corporation",
+      "exchange": "NASDAQ",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFT"
+    },
+    {
+      "ticker": "MSFT.L",
+      "companyName": "Leverage Shares 1x Microsoft Tracker ETP",
+      "exchange": "LSE",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFT.L"
+    },
+    {
+      "ticker": "MSFT.NE",
+      "companyName": "Microsoft Corporation",
+      "exchange": "NEO",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFT.NE"
+    },
+    {
+      "ticker": "MSFT.TO",
+      "companyName": "Microsoft Corporation",
+      "exchange": "TSX",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFT.TO"
+    },
+    {
+      "ticker": "XVMS",
+      "companyName": "FT Vest MSFT & Target Income ETF",
+      "exchange": "CBOE",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "XVMS"
+    },
+    {
+      "ticker": "MSFO",
+      "companyName": "YieldMax MSFT Option Income Strategy ETF",
+      "exchange": "AMEX",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFO"
+    },
+    {
+      "ticker": "MSFD",
+      "companyName": "Direxion Daily MSFT Bear 1X ETF",
+      "exchange": "NASDAQ",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFD"
+    },
+    {
+      "ticker": "MSFU",
+      "companyName": "Direxion Daily MSFT Bull 2X Shares",
+      "exchange": "NASDAQ",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFU"
+    },
+    {
+      "ticker": "MSFL",
+      "companyName": "GraniteShares 2x Long MSFT Daily ETF",
+      "exchange": "NASDAQ",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFL"
+    },
+    {
+      "ticker": "MSFW",
+      "companyName": "Roundhill Investments - MSFT WeeklyPay ETF",
+      "exchange": "CBOE",
+      "cik": null,
+      "provider": "fmp",
+      "providerSymbol": "MSFW"
+    }
+  ],
+  "count": 10
+}

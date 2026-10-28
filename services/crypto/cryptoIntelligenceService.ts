@@ -285,6 +285,41 @@ async function executeCryptoIngestionPlan(
     }
   }
 
+  // Ensure we have an assetId for subsequent steps
+  // If profile step wasn't in plan or failed, look up existing asset
+  if (!assetId) {
+    const client = await pool.connect();
+    try {
+      const result = await client.query(
+        `SELECT id FROM assets.assets WHERE asset_type = 'crypto' AND external_ids->'coingecko'->>'id' = $1 LIMIT 1`,
+        [identity.coingeckoId]
+      );
+      if (result.rows.length > 0) {
+        assetId = result.rows[0].id;
+      }
+    } finally {
+      client.release();
+    }
+  }
+
+  // If still no assetId, we can't proceed with other datasets
+  if (!assetId && plan.steps.some(s => s.dataset !== "profile")) {
+    errors.push({ dataset: "profile", message: "No asset ID available for ingestion" });
+    return {
+      profile: { ok: !profileResult.error, profile, error: profileResult.error },
+      market: { ok: false, snapshots: [], error: "No asset ID" },
+      history: { ok: false, history: null, error: "No asset ID", candles: null },
+      contractMetadata: { ok: false, metadata: [], error: "No asset ID" },
+      contractAnalysis: { ok: false, analyses: [], error: "No asset ID" },
+      tokenSupply: { ok: false, supplies: [], error: "No asset ID" },
+      security: { ok: false, security: null, error: "No asset ID" },
+      transfers: { ok: false, transfers: [], error: "No asset ID" },
+      balances: { ok: false, balances: [], error: "No asset ID" },
+      holderDistribution: { ok: false, distribution: [], error: "No asset ID" },
+      errors,
+    };
+  }
+
   // 2. Market Snapshot
   let marketsResult: MarketCollectionResult = { ok: false, snapshots: [], error: "not attempted", collectedAt: "" };
   let snapshot: CryptoMarketSnapshot | null = null;

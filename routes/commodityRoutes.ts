@@ -19,7 +19,7 @@ const router = Router();
 /* -------------------------------------------------------------------------- */
 
 const searchQuerySchema = z.object({
-  q: z.string().trim().min(1, "Query is required").max(100),
+  query: z.string().trim().min(1, "Query is required").max(100),
   limit: z.coerce.number().int().positive().max(50).optional().default(10),
 });
 
@@ -49,12 +49,9 @@ const ingestCommoditySchema = z.object({
  * Lightweight - does not trigger full ingestion.
  */
 router.get("/search", validateRequest(searchQuerySchema, 'query'), async (req, res) => {
-  console.log('Query params:', req.query);
   try {
-    const { q: query, limit } = req.query as { q: string; limit?: string };
-    console.log('Calling autocompleteCommodities with:', query, limit);
+    const { query, limit } = req.query as { query: string; limit?: string };
     const results = await autocompleteCommodities(query, Number(limit ?? 10));
-    console.log('Results:', results);
     res.json({
       query,
       results,
@@ -65,7 +62,6 @@ router.get("/search", validateRequest(searchQuerySchema, 'query'), async (req, r
     res.status(500).json({
       error: "search_failed",
       message: error instanceof Error ? error.message : "Commodity search failed",
-      stack: error instanceof Error ? error.stack : undefined,
     });
   }
 });

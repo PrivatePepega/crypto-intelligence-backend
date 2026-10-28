@@ -49,7 +49,7 @@ const ingestCryptoSchema = z.object({
  * Autocomplete/search for crypto tokens by name, symbol, or CoinGecko ID.
  * Lightweight - does not trigger full ingestion.
  */
-router.get("/search", validateRequest(searchQuerySchema), async (req, res) => {
+router.get("/search", validateRequest(searchQuerySchema, 'query'), async (req, res) => {
   try {
     const { query, limit } = req.query as { query: string; limit?: string };
     const results = await autocompleteCrypto(query, Number(limit ?? 10));

@@ -41,7 +41,7 @@ interface NormalizedFact {
   unit: string;
 }
 
-interface RatioResult {
+export interface RatioResult {
   fy: number;
   period: "FY" | "Q1" | "Q2" | "Q3" | "Q4";
   grossMargin: number | null;
@@ -83,7 +83,7 @@ type KeyConcept = (typeof KEY_CONCEPTS)[number];
  * Loads and parses the companyfacts JSON, extracting key concepts
  * into normalized facts with fiscal period metadata.
  */
-function loadAndNormalizeFacts(inputPath: string): {
+export function loadAndNormalizeFacts(inputPath: string): {
   cik: string;
   entityName: string;
   facts: NormalizedFact[];
@@ -165,7 +165,7 @@ function getFactByConcept(group: NormalizedFact[], concept: string): number | nu
  * Returns a map keyed by "fy|period" (e.g., "2025|FY", "2026|Q3")
  * with standalone (non-YTD) values per concept.
  */
-function normalizeQuarterlyYTD(
+export function normalizeQuarterlyYTD(
   groups: Map<string, NormalizedFact[]>,
 ): Map<string, Map<string, number | null>> {
   const result = new Map<string, Map<string, number | null>>();
@@ -280,7 +280,7 @@ function getConceptValue(
  * Calculates financial ratios from normalized data.
  * Missing values are treated as null (unknown), not zero.
  */
-function calculateRatios(normalized: Map<string, Map<string, number | null>>): RatioResult[] {
+export function calculateRatios(normalized: Map<string, Map<string, number | null>>): RatioResult[] {
   const results: RatioResult[] = [];
 
   for (const [key, data] of normalized) {
@@ -450,4 +450,7 @@ function main(): void {
   }
 }
 
-main();
+// Only run main if this file is executed directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}

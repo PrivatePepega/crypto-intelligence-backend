@@ -1,6 +1,7 @@
 import "dotenv/config";
 
 import pool from "../../config/database.js";
+import { getFreshnessPolicy } from "./freshnessPolicy.js";
 import type {
   DbClient,
   DatasetCoverage,
@@ -47,6 +48,20 @@ async function checkDatasetCoverage(
   assetId: string,
   dataset: DatasetName,
 ): Promise<DatasetCoverage> {
+  // If assetId is empty, the asset doesn't exist yet - all datasets are missing
+  if (!assetId) {
+    return {
+      dataset,
+      status: "missing",
+      lastCollectedAt: null,
+      lastSuccessfulAt: null,
+      latestSourceDate: null,
+      freshnessPolicy: getFreshnessPolicy(dataset).description,
+      recordCount: 0,
+      error: null,
+    };
+  }
+
   switch (dataset) {
     case "profile": {
       const result = await client.query(
@@ -168,7 +183,7 @@ async function checkDatasetCoverage(
           s.updated_at AS last_collected_at,
           s.updated_at AS last_successful_at,
           NULL AS latest_source_date,
-          CASE WHEN s.financial_statements IS NULL OR jsonb_typeof(s.financial_statements) <> 'object' OR jsonb_object_keys(s.financial_statements) = '{}' THEN 0 ELSE 1 END AS record_count,
+          CASE WHEN s.financial_statements IS NULL OR jsonb_typeof(s.financial_statements) <> 'object' OR s.financial_statements = '{}'::jsonb THEN 0 ELSE 1 END AS record_count,
           NULL AS error_message
         FROM assets.stocks s
         WHERE s.asset_id = $1
@@ -214,7 +229,7 @@ async function checkDatasetCoverage(
           s.updated_at AS last_collected_at,
           s.updated_at AS last_successful_at,
           NULL AS latest_source_date,
-          CASE WHEN s.financial_metrics IS NULL OR jsonb_typeof(s.financial_metrics) <> 'object' OR jsonb_object_keys(s.financial_metrics) = '{}' THEN 0 ELSE 1 END AS record_count,
+          CASE WHEN s.financial_metrics IS NULL OR jsonb_typeof(s.financial_metrics) <> 'object' OR s.financial_metrics = '{}'::jsonb THEN 0 ELSE 1 END AS record_count,
           NULL AS error_message
         FROM assets.stocks s
         WHERE s.asset_id = $1

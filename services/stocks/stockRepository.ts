@@ -355,7 +355,7 @@ export async function insertQuoteSnapshot(
     )
     RETURNING id
   `,
-    [assetId, JSON.stringify(data), sourceUrl, quote.observed_at, quote.collected_at, snapshotKey],
+    [assetId, JSON.stringify(data), sourceUrl, quote.observedAt, quote.collectedAt, snapshotKey],
   );
 
   return { inserted: response.rows.length > 0, snapshot_key: snapshotKey };

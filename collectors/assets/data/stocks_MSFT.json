@@ -1,0 +1,221 @@
+{
+  "identity": {
+    "assetId": "73c8470b-6660-49c4-8c0b-7137c6fdbd6c",
+    "ticker": "MSFT",
+    "companyName": "MICROSOFT CORP",
+    "exchange": "Nasdaq",
+    "cik": "0000789019",
+    "providerIds": {
+      "fmp": {
+        "symbol": "MSFT",
+        "cik": "0000789019",
+        "isin": "US5949181045",
+        "cusip": "594918104"
+      },
+      "sec": {
+        "cik": "0000789019",
+        "name": "MICROSOFT CORP",
+        "ticker": "MSFT",
+        "exchange": "Nasdaq"
+      }
+    }
+  },
+  "profile": {
+    "assetId": "73c8470b-6660-49c4-8c0b-7137c6fdbd6c",
+    "ticker": "MSFT",
+    "companyName": "MICROSOFT CORP",
+    "exchange": "NASDAQ",
+    "cik": "0000789019",
+    "isin": null,
+    "cusip": null,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "description": "Microsoft Corporation is a prominent global technology firm that invents, markets, and provides ongoing assistance for a diverse range of software, digital services, computing devices, and comprehensive solutions. Its operations are organized into three primary divisions: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing. The Productivity and Business Processes segment delivers crucial tools for both enterprises and individual users. This includes the extensive Office suite (comprising Exchange, SharePoint, Microsoft Teams, Office 365 Security and Compliance, Microsoft Viva, and Skype for Business), along with popular consumer offerings like Skype, Outlook.com, OneDrive, and LinkedIn. It also features Dynamics 365, a suite of integrated cloud and on-premises business applications tailored for organizations. The Intelligent Cloud division focuses on sophisticated infrastructure and platform services. Here, Microsoft licenses key products such as SQL Server, Windows Servers, Visual Studio, System Center, and associated Client Access Licenses. It also includes GitHub, a leading platform for developer collaboration and code hosting; Nuance, offering advanced AI solutions for healthcare and businesses; and Azure, its expansive cloud computing platform. This segment further encompasses enterprise support, Microsoft consulting services, and Nuance professional services, assisting clients with the development, deployment, and management of Microsoft's server and desktop technologies, alongside offering product training and certification. Finally, the More Personal Computing segment covers a broad spectrum of consumer and commercial computing experiences. It generates revenue through Windows operating system licensing, including agreements with original equipment manufacturers (OEMs), non-volume licensing, and various Windows Commercial offerings (such as volume licensing and cloud services), as well as patent licensing and Windows Internet of Things (IoT). This division also supplies its own hardware, including Surface devices, PC accessories, and gaming/entertainment consoles. Its Gaming portfolio features Xbox hardware, content, and subscription services, in addition to video games and royalties from third-party titles. Furthermore, it manages search services like Bing and Microsoft's advertising platforms. Microsoft distributes its extensive product line via numerous channels, including original equipment manufacturers, wholesale distributors, and various resellers, complementing direct sales through digital marketplaces, its own online storefronts, and physical retail outlets. The company, established in 1975, maintains its headquarters in Redmond, Washington.",
+    "website": null,
+    "country": null,
+    "ipoDate": null,
+    "currency": null,
+    "isEtf": null,
+    "isFund": null,
+    "isAdr": null,
+    "isActivelyTrading": null,
+    "providerData": {},
+    "updatedAt": "2026-10-28T13:53:33.446Z"
+  },
+  "quote": {
+    "provider": "fmp",
+    "symbol": "MSFT",
+    "name": "Microsoft Corporation",
+    "currency": null,
+    "price": 530.32001,
+    "change": -1.00999,
+    "open": 532.198,
+    "volume": 2171459,
+    "exchange": "NASDAQ",
+    "provider_raw": {
+      "name": "Microsoft Corporation",
+      "open": 532.198,
+      "price": 530.32001,
+      "change": -1.00999,
+      "dayLow": 529.81,
+      "volume": 2171459,
+      "dayHigh": 534.57202,
+      "yearLow": 349.2,
+      "currency": null,
+      "exchange": "NASDAQ",
+      "provider": "fmp",
+      "yearHigh": 551.15,
+      "marketCap": 3937915339172.9995,
+      "observedAt": "2026-10-28T13:57:15.000Z",
+      "priceAvg50": 510.1912,
+      "collectedAt": "2026-10-28T13:57:16.718Z",
+      "limitations": [
+        "Provider-reported quote; not independently verified.",
+        "Volume is the provider's reported volume with no documented unit.",
+        "A quote is an observation, not a daily candle."
+      ],
+      "priceAvg200": 437.0474,
+      "averageVolume": null,
+      "changePercent": -0.19009,
+      "previousClose": 531.33,
+      "providerSymbol": "MSFT"
+    }
+  },
+  "history": {
+    "provider": "fmp",
+    "symbol": "MSFT",
+    "interval": "1d",
+    "fetched_at": "2026-10-28T13:57:18.888Z",
+    "requested": {
+      "from": null,
+      "to": null
+    },
+    "candles": [
+      {
+        "symbol": "MSFT",
+        "date": "2026-09-17",
+        "timestamp": "2026-09-17T00:00:00.000Z",
+        "open": "497.8",
+        "high": "501.47",
+        "low": "493.17",
+        "close": "497.75",
+        "volume": "17841640",
+        "change": null,
+        "change_percent": null,
+        "vwap": null
+      }
+    ],
+    "rejected": [],
+    "duplicates_removed": 0
+  },
+  "financialStatements": {
+    "annual": [],
+    "quarterly": []
+  },
+  "financialMetrics": {
+    "periods": []
+  },
+  "insiderTransactions": [],
+  "institutionalHoldings": [],
+  "beneficialOwnership": [],
+  "corporateActions": [],
+  "coverage": {
+    "assetId": "73c8470b-6660-49c4-8c0b-7137c6fdbd6c",
+    "ticker": "MSFT",
+    "datasets": [
+      {
+        "dataset": "profile",
+        "status": "fresh",
+        "lastCollectedAt": "2026-10-28T13:53:33.446Z",
+        "lastSuccessfulAt": "2026-10-28T13:53:33.446Z",
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh after 7 days, or when missing.",
+        "recordCount": 1,
+        "error": null
+      },
+      {
+        "dataset": "quote",
+        "status": "fresh",
+        "lastCollectedAt": "2026-10-28T13:57:16.718Z",
+        "lastSuccessfulAt": "2026-10-28T13:57:16.718Z",
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh on every explicit full stock retrieval.",
+        "recordCount": 1,
+        "error": null
+      },
+      {
+        "dataset": "history",
+        "status": "fresh",
+        "lastCollectedAt": "2026-10-28T13:57:18.264Z",
+        "lastSuccessfulAt": "2026-10-28T13:57:18.264Z",
+        "latestSourceDate": "2026-10-28T00:00:00.000Z",
+        "freshnessPolicy": "Fetch missing dates and recent corrections; avoid full re-download.",
+        "recordCount": 252,
+        "error": null
+      },
+      {
+        "dataset": "financial_statements",
+        "status": "fresh",
+        "lastCollectedAt": "2026-10-28T13:53:33.446Z",
+        "lastSuccessfulAt": "2026-10-28T13:53:33.446Z",
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh when new SEC filing available, or periodically check.",
+        "recordCount": 1,
+        "error": null
+      },
+      {
+        "dataset": "financial_metrics",
+        "status": "fresh",
+        "lastCollectedAt": "2026-10-28T13:53:33.446Z",
+        "lastSuccessfulAt": "2026-10-28T13:53:33.446Z",
+        "latestSourceDate": null,
+        "freshnessPolicy": "Refresh when financial statements refresh.",
+        "recordCount": 1,
+        "error": null
+      },
+      {
+        "dataset": "insider_transactions",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Incrementally check for new Forms 3, 4, and 5.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "institutional_holdings",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Check for newly filed or amended 13F reports; respect reporting delays.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "beneficial_ownership",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Check for new or amended 13D/13G filings.",
+        "recordCount": 0,
+        "error": null
+      },
+      {
+        "dataset": "corporate_actions",
+        "status": "missing",
+        "lastCollectedAt": null,
+        "lastSuccessfulAt": null,
+        "latestSourceDate": null,
+        "freshnessPolicy": "Check for new relevant filings and refresh extracted records.",
+        "recordCount": 0,
+        "error": null
+      }
+    ],
+    "overallFresh": false,
+    "collectedAt": "2026-10-28T13:57:18.245Z"
+  },
+  "errors": []
+}

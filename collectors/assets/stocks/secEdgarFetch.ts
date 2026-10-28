@@ -151,7 +151,22 @@ export async function fetchSecText(url: string): Promise<string> {
  * 1. Company ticker and exchange directory (Essential)
  * https://www.sec.gov/files/company_tickers_exchange.json
  */
-async function fetchCompanyTickersExchange(): Promise<void> {
+export async function loadCompanyTickersExchange(
+  refresh = false,
+): Promise<{ fields: string[]; data: Array<[number, string, string, string]> }> {
+  const filename = "Edgar company_tickers_exchange.json";
+  const filePath = path.join(OUTPUT_DIR, filename);
+
+  if (!refresh) {
+    try {
+      return JSON.parse(await fs.readFile(filePath, "utf-8"));
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
+        throw error;
+      }
+    }
+  }
+
   const url = `${SEC_WWW_BASE}/files/company_tickers_exchange.json`;
   console.log(`Fetching ${url}...`);
 
@@ -162,8 +177,13 @@ async function fetchCompanyTickersExchange(): Promise<void> {
   }
 
   const data = await response.json();
-  await saveJson("Edgar company_tickers_exchange.json", data);
+  await saveJson(filename, data);
   console.log(`    Status: ${response.status}`);
+  return data;
+}
+
+async function fetchCompanyTickersExchange(): Promise<void> {
+  await loadCompanyTickersExchange(true);
 }
 
 /**

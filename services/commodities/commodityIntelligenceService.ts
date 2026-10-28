@@ -153,6 +153,34 @@ async function executeCommodityIngestionPlan(
     }
   }
 
+  // Ensure we have an assetId for subsequent steps
+  // If profile step wasn't in plan or failed, look up existing asset
+  if (!assetId) {
+    const client = await pool.connect();
+    try {
+      const result = await client.query(
+        `SELECT id FROM assets.assets WHERE asset_type = 'commodity' AND external_ids->'fmp'->>'symbol' = $1 LIMIT 1`,
+        [identity.symbol]
+      );
+      if (result.rows.length > 0) {
+        assetId = result.rows[0].id;
+      }
+    } finally {
+      client.release();
+    }
+  }
+
+  // If still no assetId, we can't proceed with other datasets
+  if (!assetId && plan.steps.some(s => s.dataset !== "profile")) {
+    errors.push({ dataset: "profile", message: "No asset ID available for ingestion" });
+    return {
+      profile: { ok: !profileResult.error, profile, error: profileResult.error },
+      market: { ok: false, snapshot: null, error: "No asset ID" },
+      history: { ok: false, history: null, error: "No asset ID", candles: null },
+      errors,
+    };
+  }
+
   // 2. Market Snapshot
   let marketResult: MarketCollectionResult = { snapshot: null, error: "not attempted", collectedAt: "", sourceUrl: "" };
   let snapshot: CommodityMarketSnapshot | null = null;
