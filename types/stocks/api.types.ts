@@ -282,3 +282,201 @@ export function toApiResponse(
     metadata: result.collectionMetadata,
   };
 }
+
+/* -------------------------------------------------------------------------- */
+/*                          Contract Validation                               */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Top-level fields every response carries. Nullable datasets are still present
+ * as `null`, so a missing key is always a contract violation.
+ */
+export const STOCK_RESPONSE_REQUIRED_KEYS = [
+  "identity",
+  "profile",
+  "quote",
+  "history",
+  "financialStatements",
+  "financialMetrics",
+  "insiderTransactions",
+  "institutionalHoldings",
+  "beneficialOwnership",
+  "corporateActions",
+  "metadata",
+] as const;
+
+const STOCK_RESPONSE_OBJECT_KEYS = [
+  "profile",
+  "quote",
+  "history",
+  "financialStatements",
+  "financialMetrics",
+] as const;
+
+const STOCK_RESPONSE_EVENT_KEYS = [
+  "insiderTransactions",
+  "institutionalHoldings",
+  "beneficialOwnership",
+  "corporateActions",
+] as const;
+
+const DATASET_NAMES = [
+  "profile",
+  "quote",
+  "history",
+  "financial_statements",
+  "financial_metrics",
+  "insider_transactions",
+  "institutional_holdings",
+  "beneficial_ownership",
+  "corporate_actions",
+] as const;
+
+const DATASET_RUN_STATUSES = ["success", "partial", "failed", "skipped"] as const;
+
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+/**
+ * Checks a decoded response payload against the public contract.
+ *
+ * Returns human-readable problems; an empty array means the payload is valid.
+ * This validates the response shape only — it makes no claim about whether the
+ * analysed stock data is correct.
+ */
+export function findStockApiPayloadProblems(payload: unknown): string[] {
+  const problems: string[] = [];
+
+  if (!isPlainObject(payload)) {
+    return ["payload must be a JSON object"];
+  }
+
+  const allowed = new Set<string>(STOCK_RESPONSE_REQUIRED_KEYS);
+  for (const key of STOCK_RESPONSE_REQUIRED_KEYS) {
+    if (!(key in payload)) {
+      problems.push(`missing top-level field: ${key}`);
+    }
+  }
+  for (const key of Object.keys(payload)) {
+    if (!allowed.has(key)) {
+      problems.push(`unexpected top-level field: ${key}`);
+    }
+  }
+
+  const identity = payload["identity"];
+  if (!isPlainObject(identity)) {
+    problems.push("identity must be an object");
+  } else if (typeof identity["assetId"] !== "string" || identity["assetId"].length === 0) {
+    problems.push("identity.assetId must be a non-empty string");
+  } else if (typeof identity["ticker"] !== "string" || identity["ticker"].length === 0) {
+    problems.push("identity.ticker must be a non-empty string");
+  }
+
+  for (const key of STOCK_RESPONSE_OBJECT_KEYS) {
+    const value = payload[key];
+    if (value !== null && !isPlainObject(value)) {
+      problems.push(`${key} must be an object or null`);
+    }
+  }
+
+  for (const key of STOCK_RESPONSE_EVENT_KEYS) {
+    if (!Array.isArray(payload[key])) {
+      problems.push(`${key} must be an array`);
+    }
+  }
+
+  const history = payload["history"];
+  if (isPlainObject(history)) {
+    if (!Array.isArray(history["candles"])) {
+      problems.push("history.candles must be an array");
+    } else {
+      const candles = history["candles"];
+      for (let index = 0; index < candles.length; index++) {
+        const candle = candles[index];
+        if (!isPlainObject(candle)) {
+          problems.push(`history.candles[${index}] must be an object`);
+          break;
+        }
+        for (const field of ["open", "high", "low", "close"]) {
+          if (typeof candle[field] !== "number" || !Number.isFinite(candle[field] as number)) {
+            problems.push(`history.candles[${index}].${field} must be a finite number`);
+          }
+        }
+      }
+    }
+  }
+
+  const metadata = payload["metadata"];
+  if (!isPlainObject(metadata)) {
+    problems.push("metadata must be an object");
+    return problems;
+  }
+
+  if (typeof metadata["requestedAt"] !== "string") {
+    problems.push("metadata.requestedAt must be a string");
+  }
+  if (typeof metadata["durationMs"] !== "number") {
+    problems.push("metadata.durationMs must be a number");
+  }
+  if (typeof metadata["refresh"] !== "boolean") {
+    problems.push("metadata.refresh must be a boolean");
+  }
+  if (typeof metadata["readOnly"] !== "boolean") {
+    problems.push("metadata.readOnly must be a boolean");
+  }
+  if (!Array.isArray(metadata["warnings"])) {
+    problems.push("metadata.warnings must be an array");
+  }
+  if (!Array.isArray(metadata["errors"])) {
+    problems.push("metadata.errors must be an array");
+  } else {
+    for (const [index, entry] of (metadata["errors"] as unknown[]).entries()) {
+      if (!isPlainObject(entry) || typeof entry["dataset"] !== "string" || typeof entry["message"] !== "string") {
+        problems.push(`metadata.errors[${index}] must be {dataset, message}`);
+      }
+    }
+  }
+
+  const coverage = metadata["coverage"];
+  if (!isPlainObject(coverage)) {
+    problems.push("metadata.coverage must be an object");
+  } else if (!Array.isArray(coverage["datasets"])) {
+    problems.push("metadata.coverage.datasets must be an array");
+  }
+
+  const datasets = metadata["datasets"];
+  if (!Array.isArray(datasets)) {
+    problems.push("metadata.datasets must be an array");
+  } else {
+    const seen = new Set<string>();
+    for (const [index, entry] of datasets.entries()) {
+      if (!isPlainObject(entry)) {
+        problems.push(`metadata.datasets[${index}] must be an object`);
+        continue;
+      }
+      const dataset = entry["dataset"];
+      if (typeof dataset !== "string" || !DATASET_NAMES.includes(dataset as (typeof DATASET_NAMES)[number])) {
+        problems.push(`metadata.datasets[${index}].dataset is unknown`);
+      } else {
+        seen.add(dataset);
+      }
+      if (
+        typeof entry["status"] !== "string" ||
+        !DATASET_RUN_STATUSES.includes(entry["status"] as (typeof DATASET_RUN_STATUSES)[number])
+      ) {
+        problems.push(`metadata.datasets[${index}].status is invalid`);
+      }
+      if (typeof entry["recordsAvailable"] !== "number") {
+        problems.push(`metadata.datasets[${index}].recordsAvailable must be a number`);
+      }
+    }
+    for (const dataset of DATASET_NAMES) {
+      if (!seen.has(dataset)) {
+        problems.push(`metadata.datasets is missing dataset: ${dataset}`);
+      }
+    }
+  }
+
+  return problems;
+}

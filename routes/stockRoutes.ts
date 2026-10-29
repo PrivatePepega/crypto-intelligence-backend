@@ -1,5 +1,5 @@
 /**
- * Stock Routes - Single GET /:ticker endpoint with comprehensive instrumentation
+ * Stock Routes - Single GET /:ticker endpoint
  *
  * This route provides deterministic stock intelligence ingestion and retrieval.
  * Flow:
@@ -7,10 +7,7 @@
  * 2. Checks database for existing asset and data freshness
  * 3. Fetches missing/stale data from providers (FMP, SEC)
  * 4. Persists all data to PostgreSQL
- * 5. Returns complete intelligence package from database
- *
- * All requests and responses are logged to console and saved to collectors/assets/data/
- * for debugging and verification.
+ * 5. Returns simplified intelligence package from database
  */
 
 import { Router } from "express";
@@ -18,7 +15,7 @@ import type { Request, Response } from "express";
 import fs from "fs/promises";
 import path from "path";
 import { getOrIngestStock } from "../services/stocks/stockIntelligenceService.js";
-import { toApiResponse } from "../types/stocks/api.types.js";
+import { mapToSimpleResponse } from "../services/stocks/simpleResponseMapper.js";
 
 const router = Router();
 
@@ -65,6 +62,10 @@ async function writeResponseToFile(
     return "";
   }
 }
+
+/* ============================================================================
+ * UTILITY FUNCTIONS
+ * ============================================================================ */
 
 /**
  * Standardized error response
@@ -134,7 +135,7 @@ router.use(requestLogger);
  * - Checks database for existing data and freshness
  * - Fetches missing/stale data from FMP and SEC
  * - Persists all data to PostgreSQL
- * - Returns complete intelligence package from database
+ * - Returns simplified intelligence package from database
  *
  * Path Parameters:
  * - ticker: Stock ticker symbol (e.g., MSFT, AAPL, GOOGL)
@@ -143,20 +144,15 @@ router.use(requestLogger);
  * - refresh: "true" | "false" (default: false) - force refresh even if data appears fresh
  * - readOnly: "true" | "false" (default: false) - skip ingestion, only read from DB
  *
- * Response: clean StockIntelligenceResponse contract:
- * - identity: canonical asset identity (assetId is the database UUID)
- * - profile: persisted profile fields (exchange, sector, description, website)
- * - quote: latest persisted quote observation
- * - history: daily OHLCV candles derived from persisted candles
- * - financialStatements / financialMetrics: normalized SEC fundamentals
- * - insiderTransactions / institutionalHoldings / beneficialOwnership /
- *   corporateActions: individual persisted event records
- * - metadata: coverage, per-dataset diagnostics, warnings and errors
+ * Response: Simplified contract:
+ * - ticker: string
+ * - company: { name, exchange, currency, cik, sector, industry, description, website, country, logoUrl }
+ * - market: { price, change, changePercent, marketCap, volume, averageVolume, dayHigh, dayLow, yearHigh, yearLow, priceUpdatedAt }
+ * - financialReports: { latestQuarterly (10-Q), latestAnnual (10-K) }
+ * - dataUpdatedAt: string | null
  */
 router.get("/:ticker", async (req: Request, res: Response) => {
   const routeContext = "GET /:ticker";
-  console.log(`[STOCK_ROUTES] ${routeContext} - Starting request`);
-  console.log(`[STOCK_ROUTES] ${routeContext} - Params:`, req.params, "Query:", req.query);
 
   try {
     const { ticker } = req.params;
@@ -188,55 +184,27 @@ router.get("/:ticker", async (req: Request, res: Response) => {
     const duration = Date.now() - startTime;
     console.log(`[STOCK_ROUTES] ${routeContext} - getOrIngestStock completed in ${duration}ms`);
 
-    // Convert to clean API response. Diagnostics travel under metadata only.
-    const apiResponse = toApiResponse(serviceResult);
-    const { errors, warnings, datasets } = apiResponse.metadata;
+    // Map to simplified response contract
+    const simpleResponse = mapToSimpleResponse(serviceResult);
 
-    console.log(`[STOCK_ROUTES] ${routeContext} - Result summary:`, {
-      assetId: apiResponse.identity.assetId,
-      hasProfile: !!apiResponse.profile,
-      hasQuote: !!apiResponse.quote,
-      hasHistory: !!apiResponse.history,
-      historyCandles: apiResponse.history?.candles.length ?? 0,
-      hasFinancialStatements: !!apiResponse.financialStatements,
-      hasFinancialMetrics: !!apiResponse.financialMetrics,
-      insiderCount: apiResponse.insiderTransactions.length,
-      institutionalCount: apiResponse.institutionalHoldings.length,
-      beneficialCount: apiResponse.beneficialOwnership.length,
-      corporateCount: apiResponse.corporateActions.length,
-      warningCount: warnings.length,
-      errorCount: errors.length,
-      coverageFresh: apiResponse.metadata.coverage.overallFresh,
-      datasetStatuses: datasets.map((d) => `${d.dataset}:${d.status}`).join(","),
+    // Log concise result summary
+    console.log(`[STOCK_ROUTES] ${routeContext} - Result:`, {
+      ticker: simpleResponse.ticker,
+      company: simpleResponse.company.name,
+      hasQuote: simpleResponse.market.price !== null,
+      quarterly: simpleResponse.financialReports.latestQuarterly.fiscalYear ?? "none",
+      annual: simpleResponse.financialReports.latestAnnual.fiscalYear ?? "none",
+      dataUpdatedAt: simpleResponse.dataUpdatedAt,
     });
 
-    // Complete failure means every core dataset is unavailable and collection
-    // reported at least one error. Partial results are still returned as 200.
-    const hasCoreData =
-      !!apiResponse.profile ||
-      !!apiResponse.quote ||
-      !!apiResponse.history ||
-      !!apiResponse.financialStatements;
-    if (errors.length > 0 && !hasCoreData) {
-      const errorResponse = {
-        error: "ingestion_failed",
-        message:
-          "No stock data could be collected or read. Check the dataset diagnostics for details.",
-        metadata: apiResponse.metadata,
-      };
-      await writeResponseToFile("stocks_intelligence_error", cleanTicker, errorResponse);
-      return res.status(502).json(errorResponse);
-    }
+    // Write response to file
+    await writeResponseToFile("stocks_intelligence", cleanTicker, simpleResponse);
 
-    // Success or partial success: the payload shape is always the same.
-    const filePrefix = errors.length > 0 ? "stocks_intelligence_partial" : "stocks_intelligence";
-    await writeResponseToFile(filePrefix, cleanTicker, apiResponse);
-    return res.status(200).json(apiResponse);
+    // Return simplified response (always 200 with the contract shape)
+    return res.status(200).json(simpleResponse);
 
   } catch (error) {
     const { response, statusCode } = createErrorResponse(error, routeContext, 500);
-    const tickerStr = Array.isArray(req.params.ticker) ? req.params.ticker[0] : req.params.ticker;
-    await writeResponseToFile("stocks_intelligence_exception", tickerStr || "unknown", response);
     res.status(statusCode).json(response);
   }
 });
@@ -246,40 +214,3 @@ router.get("/:ticker", async (req: Request, res: Response) => {
  * ============================================================================ */
 
 export default router;
-
-/* ============================================================================
- * USAGE NOTES FOR FUTURE AGENTS
- * ============================================================================
- *
- * 1. DATA PERSISTENCE:
- *    All responses are automatically saved to collectors/assets/data/ with timestamps.
- *    Files are named: {prefix}_{ticker}_{timestamp}.json
- *    - stocks_intelligence_{ticker}_{timestamp}.json (success)
- *    - stocks_intelligence_partial_{ticker}_{timestamp}.json (partial failure)
- *    - stocks_intelligence_error_{ticker}_{timestamp}.json (complete failure)
- *    - stocks_intelligence_exception_{ticker}_{timestamp}.json (unhandled exception)
- *
- * 2. DEBUGGING:
- *    - All requests log to console with [STOCK_ROUTES] prefix
- *    - Check console for detailed step-by-step execution logs
- *    - Check collectors/assets/data/ for actual response payloads
- *
- * 3. ERROR HANDLING:
- *    - Validation errors: 400 with "validation_failed"
- *    - Not found: 404 with "stock_not_found"
- *    - Ambiguous: 409 with "ambiguous_stock"
- *    - Complete ingestion failure: 502 with "ingestion_failed" (metadata only)
- *    - Partial failure: 200 with the normal contract; metadata.errors names the
- *      failing dataset and metadata.warnings lists partial results
- *    - Server errors: 500 with "intelligence_failed"
- *
- * 4. TESTING:
- *    curl "http://localhost:5000/api-v1/stocks/MSFT"
- *    curl "http://localhost:5000/api-v1/stocks/MSFT?refresh=true"
- *    curl "http://localhost:5000/api-v1/stocks/MSFT?readOnly=true"
- *
- * 5. DEPENDENCIES:
- *    - services/stocks/stockIntelligenceService.ts (getOrIngestStock)
- *    - types/stocks/api.types.ts (StockIntelligenceResponse)
- *    - collectors/assets/data/ must be writable
- */

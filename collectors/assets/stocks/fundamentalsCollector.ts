@@ -375,6 +375,162 @@ export function calculateRatios(normalized: Map<string, Map<string, number | nul
   return results;
 }
 
+/**
+ * Finds the latest valid 10-Q period from normalized data.
+ */
+function findLatestQuarterlyPeriod(
+  normalized: Map<string, Map<string, number | null>>,
+): { fy: number; period: string; periodEnd: string; filingDate: string; accessionNumber: string } | null {
+  const quarterlyKeys = Array.from(normalized.keys())
+    .filter((k) => k.endsWith("|Q1") || k.endsWith("|Q2") || k.endsWith("|Q3") || k.endsWith("|Q4"))
+    .sort((a, b) => {
+      // Sort by fiscal year desc, then quarter desc (Q4 > Q3 > Q2 > Q1)
+      const [fyA, pA] = a.split("|");
+      const [fyB, pB] = b.split("|");
+      if (parseInt(fyB ?? "0", 10) !== parseInt(fyA ?? "0", 10)) return parseInt(fyB ?? "0", 10) - parseInt(fyA ?? "0", 10);
+      const qOrder = { Q4: 4, Q3: 3, Q2: 2, Q1: 1 };
+      return (qOrder[pB as keyof typeof qOrder] ?? 0) - (qOrder[pA as keyof typeof qOrder] ?? 0);
+    });
+
+  for (const key of quarterlyKeys) {
+    const data = normalized.get(key)!;
+    const revenue = data.get("RevenueFromContractWithCustomerExcludingAssessedTax") ?? data.get("Revenues");
+    const netIncome = data.get("NetIncomeLoss");
+    if (revenue !== null || netIncome !== null) {
+      // We need to find the accession/filing date from the original facts
+      // Since we don't have that in normalized, we return what we have
+      return {
+        fy: parseInt(key.split("|")[0] ?? "0", 10),
+        period: key.split("|")[1] ?? "Q1",
+        periodEnd: "", // Would need to track this from original facts
+        filingDate: "",
+        accessionNumber: "",
+      };
+    }
+  }
+  return null;
+}
+
+/**
+ * Finds the latest valid 10-K period from normalized data.
+ */
+function findLatestAnnualPeriod(
+  normalized: Map<string, Map<string, number | null>>,
+): { fy: number; period: string; periodEnd: string; filingDate: string; accessionNumber: string } | null {
+  const annualKeys = Array.from(normalized.keys())
+    .filter((k) => k.endsWith("|FY"))
+    .sort((a, b) => {
+      const fyA = a.split("|")[0];
+      const fyB = b.split("|")[0];
+      return parseInt(fyB ?? "0", 10) - parseInt(fyA ?? "0", 10);
+    });
+
+  for (const key of annualKeys) {
+    const data = normalized.get(key)!;
+    const revenue = data.get("RevenueFromContractWithCustomerExcludingAssessedTax") ?? data.get("Revenues");
+    const netIncome = data.get("NetIncomeLoss");
+    if (revenue !== null || netIncome !== null) {
+      return {
+        fy: parseInt(key.split("|")[0] ?? "0", 10),
+        period: "FY",
+        periodEnd: "",
+        filingDate: "",
+        accessionNumber: "",
+      };
+    }
+  }
+  return null;
+}
+
+/**
+ * Builds a clean financial report object with key line items.
+ */
+interface CleanFinancialReport {
+  form: "10-Q" | "10-K";
+  fiscalYear: number | null;
+  fiscalPeriod: string | null;
+  periodEnd: string | null;
+  filingDate: string | null;
+  accessionNumber: string | null;
+  currency: "USD";
+  revenue: number | null;
+  grossProfit: number | null;
+  operatingIncome: number | null;
+  netIncome: number | null;
+  totalAssets: number | null;
+  totalLiabilities: number | null;
+  cashAndCashEquivalents: number | null;
+  operatingCashFlow: number | null;
+  capitalExpenditures: number | null;
+  freeCashFlow: number | null;
+  sourceUrl: string | null;
+}
+
+function createEmptyFinancialReport(form: "10-Q" | "10-K"): CleanFinancialReport {
+  return {
+    form,
+    fiscalYear: null,
+    fiscalPeriod: null,
+    periodEnd: null,
+    filingDate: null,
+    accessionNumber: null,
+    currency: "USD",
+    revenue: null,
+    grossProfit: null,
+    operatingIncome: null,
+    netIncome: null,
+    totalAssets: null,
+    totalLiabilities: null,
+    cashAndCashEquivalents: null,
+    operatingCashFlow: null,
+    capitalExpenditures: null,
+    freeCashFlow: null,
+    sourceUrl: null,
+  };
+}
+
+function buildFinancialReport(
+  latestPeriod: { fy: number; period?: string; periodEnd: string; filingDate: string; accessionNumber: string } | null,
+  normalized: Map<string, Map<string, number | null>>,
+  cik: string,
+  form: "10-Q" | "10-K",
+): CleanFinancialReport {
+  if (!latestPeriod) {
+    return createEmptyFinancialReport(form);
+  }
+
+  const key = form === "10-Q" ? `${latestPeriod.fy}|${latestPeriod.period}` : `${latestPeriod.fy}|FY`;
+  const data = normalized.get(key);
+
+  return {
+    form,
+    fiscalYear: latestPeriod.fy,
+    fiscalPeriod: form === "10-Q" ? latestPeriod.period ?? null : "FY",
+    periodEnd: latestPeriod.periodEnd || null,
+    filingDate: latestPeriod.filingDate || null,
+    accessionNumber: latestPeriod.accessionNumber || null,
+    currency: "USD",
+    revenue: data?.get("RevenueFromContractWithCustomerExcludingAssessedTax") ?? data?.get("Revenues") ?? null,
+    grossProfit: data?.get("GrossProfit") ?? null,
+    operatingIncome: data?.get("OperatingIncomeLoss") ?? null,
+    netIncome: data?.get("NetIncomeLoss") ?? null,
+    totalAssets: data?.get("Assets") ?? null,
+    totalLiabilities: data?.get("Liabilities") ?? null,
+    cashAndCashEquivalents: data?.get("CashAndCashEquivalentsAtCarryingValue") ?? null,
+    operatingCashFlow: data?.get("NetCashProvidedByUsedInOperatingActivities") ?? null,
+    capitalExpenditures: data?.get("PaymentsToAcquirePropertyPlantAndEquipment") ?? null,
+    freeCashFlow: (() => {
+      const ocf = data?.get("NetCashProvidedByUsedInOperatingActivities") ?? null;
+      const capex = data?.get("PaymentsToAcquirePropertyPlantAndEquipment") ?? null;
+      if (ocf !== null && capex !== null) return ocf - Math.abs(capex);
+      return null;
+    })(),
+    sourceUrl: latestPeriod.accessionNumber
+      ? `https://www.sec.gov/Archives/edgar/data/${cik}/${latestPeriod.accessionNumber.replace(/-/g, "")}/index.html`
+      : null,
+  };
+}
+
 function main(): void {
   console.log("Loading and normalizing SEC company facts...\n");
 
@@ -391,11 +547,22 @@ function main(): void {
   const ratios = calculateRatios(normalized);
   console.log(`Ratio calculations: ${ratios.length}`);
 
-  // Build output
+  // Find latest valid quarterly and annual periods
+  const latestQuarterly = findLatestQuarterlyPeriod(normalized);
+  const latestAnnual = findLatestAnnualPeriod(normalized);
+
+  // Build clean financial reports for the frontend
+  const financialReports = {
+    latestQuarterly: buildFinancialReport(latestQuarterly, normalized, cik, "10-Q"),
+    latestAnnual: buildFinancialReport(latestAnnual, normalized, cik, "10-K"),
+  };
+
+  // Build output with clean reports + full normalized data + ratios
   const output = {
     cik,
     entityName,
     source: "SEC Edgar companyfacts",
+    financialReports,
     normalizedFacts: Array.from(normalized.entries()).map(([key, data]) => {
       const [fyStr, period] = key.split("|") as [string, string];
       return {
@@ -409,6 +576,13 @@ function main(): void {
 
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2) + "\n");
   console.log(`\nOutput written to: ${OUTPUT_PATH}`);
+
+  // Print summary of latest reports
+  console.log("\n--- Latest Quarterly (10-Q) ---");
+  console.log(JSON.stringify(financialReports.latestQuarterly, null, 2));
+
+  console.log("\n--- Latest Annual (10-K) ---");
+  console.log(JSON.stringify(financialReports.latestAnnual, null, 2));
 
   // Print summary of latest FY ratios
   const latestFyRatios = ratios
