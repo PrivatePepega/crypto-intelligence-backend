@@ -39,7 +39,8 @@ let secTickerCache: Map<string, SecTickerExchangeData> | null = null;
 async function getSecTickerData(): Promise<SecTickerExchangeData> {
   if (secTickerCache) {
     // Return the cached data object (first value in the Map)
-    return secTickerCache.values().next().value;
+    const cached = secTickerCache.values().next().value;
+    if (cached) return cached;
   }
   const data = await loadCompanyTickersExchange();
   secTickerCache = new Map([[data.fields.join("|"), data]]);
@@ -241,7 +242,7 @@ export async function resolveByTicker(ticker: string): Promise<StockResolutionRe
         message: `${normalized} matches ${secMatches.length} SEC listings.`,
       };
     }
-    return { kind: "resolved", identity: secRowToIdentity(secMatches[0], null) };
+    return { kind: "resolved", identity: secRowToIdentity(secMatches[0]!, null) };
   }
 
   // Not found in either source
@@ -270,8 +271,8 @@ export async function resolveByName(name: string): Promise<StockResolutionResult
 
   // 3. Cross-reference FMP and SEC
   if (exactFmpMatches.length === 1 && secMatches.length === 1) {
-    const fmpItem = exactFmpMatches[0];
-    const secRow = secMatches[0];
+    const fmpItem = exactFmpMatches[0]!;
+    const secRow = secMatches[0]!;
     const fmpProfile = await fmpGetProfile(fmpItem.symbol);
 
     if (fmpProfile?.isEtf === true || fmpProfile?.isFund === true) {
@@ -288,7 +289,7 @@ export async function resolveByName(name: string): Promise<StockResolutionResult
   }
 
   if (exactFmpMatches.length === 1) {
-    const fmpItem = exactFmpMatches[0];
+    const fmpItem = exactFmpMatches[0]!;
     const fmpProfile = await fmpGetProfile(fmpItem.symbol);
 
     if (fmpProfile?.isEtf === true || fmpProfile?.isFund === true) {
@@ -312,7 +313,7 @@ export async function resolveByName(name: string): Promise<StockResolutionResult
   }
 
   if (secMatches.length === 1) {
-    return { kind: "resolved", identity: secRowToIdentity(secMatches[0], null) };
+    return { kind: "resolved", identity: secRowToIdentity(secMatches[0]!, null) };
   }
 
   if (secMatches.length > 1 || exactFmpMatches.length > 1) {
@@ -346,17 +347,17 @@ export async function resolveByName(name: string): Promise<StockResolutionResult
   );
 
   if (fuzzyFmpMatches.length === 1) {
-    const fmpProfile = await fmpGetProfile(fuzzyFmpMatches[0].symbol);
+    const fmpProfile = await fmpGetProfile(fuzzyFmpMatches[0]!.symbol);
     if (fmpProfile?.isEtf !== true && fmpProfile?.isFund !== true) {
       return {
         kind: "resolved",
         identity: {
           assetId: "",
-          ticker: fmpProfile?.symbol ?? fuzzyFmpMatches[0].symbol,
-          companyName: fmpProfile?.companyName ?? fuzzyFmpMatches[0].name ?? fuzzyFmpMatches[0].symbol,
-          exchange: fmpProfile?.exchange ?? fuzzyFmpMatches[0].exchange ?? null,
+          ticker: fmpProfile?.symbol ?? fuzzyFmpMatches[0]!.symbol,
+          companyName: fmpProfile?.companyName ?? fuzzyFmpMatches[0]!.name ?? fuzzyFmpMatches[0]!.symbol,
+          exchange: fmpProfile?.exchange ?? fuzzyFmpMatches[0]!.exchange ?? null,
           cik: fmpProfile?.cik ? padCik(fmpProfile.cik) : null,
-          providerIds: buildProviderIds(fuzzyFmpMatches[0].symbol, fmpProfile, null),
+          providerIds: buildProviderIds(fuzzyFmpMatches[0]!.symbol, fmpProfile, null),
         },
       };
     }

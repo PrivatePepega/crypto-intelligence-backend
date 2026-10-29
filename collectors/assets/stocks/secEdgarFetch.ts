@@ -40,10 +40,12 @@ export const SEC_WWW_BASE = "https://www.sec.gov";
 export const SEC_DATA_BASE = "https://data.sec.gov";
 export const USER_AGENT = "CryptoIntelligencePlatform fernandojcastellanos@gmail.com";
 
-export const OUTPUT_DIR = path.resolve(process.cwd(), "collectors/assets/data");
+export const OUTPUT_DIR = path.resolve(process.cwd(), "collectors/assets/stocks/data");
 
 // Rate limiting: min delay between requests (1000ms = 1 req/sec max)
 const MIN_REQUEST_INTERVAL_MS = 1000;
+/** A stalled SEC connection must not block a collection run forever. */
+const SEC_REQUEST_TIMEOUT_MS = 30_000;
 let lastRequestTime = 0;
 
 export async function rateLimitedFetch(url: string, opts: RequestInit = {}): Promise<Response> {
@@ -66,7 +68,11 @@ export async function rateLimitedFetch(url: string, opts: RequestInit = {}): Pro
   let attempt = 0;
   const maxAttempts = 5;
   while (attempt < maxAttempts) {
-    response = await fetch(url, { ...opts, headers });
+    response = await fetch(url, {
+      ...opts,
+      headers,
+      signal: opts.signal ?? AbortSignal.timeout(SEC_REQUEST_TIMEOUT_MS),
+    });
 
     if (response.status !== 429) {
       break;

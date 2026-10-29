@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import type { CorporateActionEventType as AiCorporateActionEventType } from "../../AI/assets/schemas.js";
+
 /** Database client interface for coverage and repository queries. */
 export interface DbClient {
   query(text: string, values?: unknown[]): Promise<{
@@ -497,21 +499,11 @@ export interface BeneficialOwnershipFiling {
 /*                           Corporate Actions                                */
 /* -------------------------------------------------------------------------- */
 
-export type CorporateActionEventType =
-  | "merger_acquisition"
-  | "spin_off"
-  | "stock_split"
-  | "reverse_split"
-  | "dividend_announcement"
-  | "share_buyback"
-  | "secondary_offering"
-  | "debt_offering"
-  | "tender_offer"
-  | "executive_change"
-  | "bankruptcy"
-  | "material_agreement"
-  | "other"
-  | "not_corporate_action";
+/**
+ * Re-uses the extraction schema's union so the persisted domain type cannot
+ * drift from what the AI extractor actually produces.
+ */
+export type CorporateActionEventType = AiCorporateActionEventType;
 
 export interface CorporateActionEvent {
   isCorporateAction: boolean;
@@ -606,11 +598,11 @@ export interface IngestionPlan {
 
 export interface GetOrIngestStockOptions {
   /** Force refresh even if data appears fresh. */
-  refresh: boolean | undefined;
+  refresh?: boolean;
   /** Only include these datasets in the response (default: all available). */
-  include: DatasetName[] | undefined;
+  include?: DatasetName[];
   /** Skip ingestion entirely; only read from DB. */
-  readOnly: boolean | undefined;
+  readOnly?: boolean;
 }
 
 export interface StockIntelligenceResult {

@@ -23,7 +23,11 @@ import {
   textOf,
   type XmlNode,
 } from "./secXml.js";
-import type { ExtractionModelKey, ExtractionUsage } from "../../AI/assets/secExtractor.js";
+import {
+  extractBeneficialOwnership,
+  type ExtractionModelKey,
+  type ExtractionUsage,
+} from "../../../AI/assets/secExtractor.js";
 
 /**
  * SEC Edgar beneficial-ownership collector (Schedules 13D and 13G).
@@ -38,7 +42,7 @@ import type { ExtractionModelKey, ExtractionUsage } from "../../AI/assets/secExt
  * collector never writes filing documents to disk: the output keeps the
  * document URL, the filing index URL, and verbatim supporting excerpts.
  *
- * Output: collectors/assets/data/Edgar 13dg_CIK{cik}.json
+ * Output: collectors/assets/stocks/data/Edgar 13dg_CIK{cik}.json
  *
  * Run with:
  *   npx tsx collectors/assets/secBeneficialOwnership.ts --cik=320193 --max=20
@@ -452,7 +456,6 @@ async function extractLegacyFiling(
   options: { model?: ExtractionModelKey; maxDocumentChars: number },
 ): Promise<BeneficialOwnershipFiling> {
   const document = extractDocumentText(raw, options.maxDocumentChars);
-  const { extractBeneficialOwnership } = await import("../../AI/assets/secExtractor.js");
 
   const result = await extractBeneficialOwnership(
     {
@@ -623,6 +626,11 @@ export async function collectBeneficialOwnership(
   let inputTokens = 0;
   let outputTokens = 0;
   let totalTokens = 0;
+  // Provider outages and quota exhaustion would otherwise cost one long timeout
+  // per filing. After two consecutive failures, stop calling the model and keep
+  // the deterministic filing metadata instead.
+  const MAX_CONSECUTIVE_EXTRACTION_FAILURES = 2;
+  let consecutiveExtractionFailures = 0;
 
   console.log(
     `Collecting ${candidates.length} beneficial-ownership filing(s) for CIK ${cik} ` +
@@ -660,12 +668,14 @@ export async function collectBeneficialOwnership(
         continue;
       }
 
-      if (!extractEnabled) {
+      if (!extractEnabled || consecutiveExtractionFailures >= MAX_CONSECUTIVE_EXTRACTION_FAILURES) {
         const skipped = skippedFiling(context);
         filings.push(skipped);
         console.log(
           `  - ${filing.form} ${filing.filingDate} ${filing.accessionNumber} ` +
-            `(legacy document, extraction disabled)`,
+            (extractEnabled
+              ? "(legacy document, AI extraction unavailable this run)"
+              : "(legacy document, extraction disabled)"),
         );
         continue;
       }
@@ -674,6 +684,7 @@ export async function collectBeneficialOwnership(
         ...(options.model ? { model: options.model } : {}),
         maxDocumentChars,
       });
+      consecutiveExtractionFailures = 0;
       filings.push(extracted);
       documents += 1;
 
@@ -696,6 +707,7 @@ export async function collectBeneficialOwnership(
         );
       }
     } catch (error) {
+      consecutiveExtractionFailures += 1;
       const message = error instanceof Error ? error.message : String(error);
       errors.push({ form: filing.form, accessionNumber: filing.accessionNumber, message });
       console.warn(`  ! ${filing.form} ${filing.accessionNumber}: ${message}`);

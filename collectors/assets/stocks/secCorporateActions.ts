@@ -16,8 +16,12 @@ import { buildFilingEvidence, type FilingEvidence } from "./secEvidence.js";
 import type {
   CorporateActionEventType,
   CorporateActionExtraction,
-} from "../../AI/assets/schemas.js";
-import type { ExtractionModelKey, ExtractionUsage } from "../../AI/assets/secExtractor.js";
+} from "../../../AI/assets/schemas.js";
+import {
+  extractCorporateAction,
+  type ExtractionModelKey,
+  type ExtractionUsage,
+} from "../../../AI/assets/secExtractor.js";
 
 /**
  * SEC Edgar corporate-action and capital-raising collector.
@@ -36,7 +40,7 @@ import type { ExtractionModelKey, ExtractionUsage } from "../../AI/assets/secExt
  * Documents are fetched transiently. Only the normalized JSON report is
  * written:
  *
- *   collectors/assets/data/Edgar corporate_actions_CIK{cik}.json
+ *   collectors/assets/stocks/data/Edgar corporate_actions_CIK{cik}.json
  *
  * Run with:
  *   npx tsx collectors/assets/secCorporateActions.ts --cik=320193 --max=12
@@ -255,6 +259,10 @@ export async function collectCorporateActions(
   let inputTokens = 0;
   let outputTokens = 0;
   let totalTokens = 0;
+  // After repeated provider failures, keep deterministic filing metadata instead
+  // of paying one timeout per filing.
+  const MAX_CONSECUTIVE_EXTRACTION_FAILURES = 2;
+  let consecutiveExtractionFailures = 0;
 
   console.log(`Collecting ${candidates.length} corporate-action filing(s) for CIK ${cik}...`);
 
@@ -294,7 +302,7 @@ export async function collectCorporateActions(
         ...(sourceText !== undefined ? { sourceText } : {}),
       });
 
-    if (!extractEnabled) {
+    if (!extractEnabled || consecutiveExtractionFailures >= MAX_CONSECUTIVE_EXTRACTION_FAILURES) {
       filings.push({
         ...base,
         extractionStatus: "skipped",
@@ -302,7 +310,10 @@ export async function collectCorporateActions(
         evidence: evidence(),
       });
       console.log(
-        `  - ${filing.form} ${filing.filingDate} ${filing.accessionNumber} (extraction disabled)`,
+        `  - ${filing.form} ${filing.filingDate} ${filing.accessionNumber} ` +
+          (extractEnabled
+            ? "(AI extraction unavailable this run)"
+            : "(extraction disabled)"),
       );
       continue;
     }
@@ -310,7 +321,6 @@ export async function collectCorporateActions(
     try {
       const raw = await fetchSecText(documentUrl);
       const document = extractDocumentText(raw, maxDocumentChars);
-      const { extractCorporateAction } = await import("../../AI/assets/secExtractor.js");
 
       const result = await extractCorporateAction(
         {
@@ -328,6 +338,7 @@ export async function collectCorporateActions(
 
       const event = normalizeEvent(result.data);
       const verifiedEvidence = evidence(result.data.evidenceQuotes, document.text);
+      consecutiveExtractionFailures = 0;
 
       filings.push({
         ...base,
@@ -358,6 +369,7 @@ export async function collectCorporateActions(
         );
       }
     } catch (error) {
+      consecutiveExtractionFailures += 1;
       const message = error instanceof Error ? error.message : String(error);
       errors.push({ form: filing.form, accessionNumber: filing.accessionNumber, message });
 

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { OUTPUT_DIR } from "./secEdgarFetch.js";
 
 /**
  * SEC Edgar Fundamentals Collector
@@ -10,11 +11,8 @@ import path from "node:path";
  * Run with: npx tsx collectors/assets/fundamentalsCollector.ts
  */
 
-const INPUT_PATH = path.resolve(
-  process.cwd(),
-  "collectors/assets/data/Edgar companyfacts_CIK320193.json",
-);
-const OUTPUT_PATH = path.resolve(process.cwd(), "collectors/assets/data/fundamentals_AAPL.json");
+const INPUT_PATH = path.join(OUTPUT_DIR, "Edgar companyfacts_CIK320193.json");
+const OUTPUT_PATH = path.join(OUTPUT_DIR, "fundamentals_AAPL.json");
 
 interface RawFact {
   start: string;
@@ -451,6 +449,6 @@ function main(): void {
 }
 
 // Only run main if this file is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith("fundamentalsCollector.ts")) {
   main();
 }

@@ -17,10 +17,13 @@ export type { StockCoverageReport, DatasetCoverage, DbClient };
 /*                              DB Client Adapter                             */
 /* -------------------------------------------------------------------------- */
 
-export function createDbClient(): DbClient {
+export function createDbClient(
+  pg?: { query: (text: string, values?: unknown[]) => Promise<{ rows: unknown[]; rowCount: number | null }> },
+): DbClient {
+  const connection = pg ?? pool;
   return {
     async query(text, values) {
-      const result = await pool.query(text, values);
+      const result = await connection.query(text, values);
       return {
         rows: result.rows as Array<Record<string, unknown>>,
         rowCount: result.rowCount,
@@ -94,7 +97,7 @@ async function checkDatasetCoverage(
         };
       }
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const isFresh = lastCollected ? isWithinDays(lastCollected, 7) : false;
 
@@ -127,7 +130,7 @@ async function checkDatasetCoverage(
         [assetId],
       );
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       // Quote is refreshed on every explicit retrieval, so it's fresh if collected today
@@ -160,7 +163,7 @@ async function checkDatasetCoverage(
         [assetId],
       );
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       const latestCandle = row.latest_source_date as string | null;
@@ -207,7 +210,7 @@ async function checkDatasetCoverage(
         };
       }
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       // Financial statements are fresh if collected within 90 days (quarterly cycle)
@@ -253,7 +256,7 @@ async function checkDatasetCoverage(
         };
       }
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       const isFresh = lastCollected ? isWithinDays(lastCollected, 90) : false;
@@ -287,7 +290,7 @@ async function checkDatasetCoverage(
         [assetId],
       );
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       const isFresh = lastCollected ? isWithinDays(lastCollected, 7) : false;
@@ -321,7 +324,7 @@ async function checkDatasetCoverage(
         [assetId],
       );
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       // 13F filings have 45-day delay after quarter end
@@ -356,7 +359,7 @@ async function checkDatasetCoverage(
         [assetId],
       );
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       const isFresh = lastCollected ? isWithinDays(lastCollected, 30) : false;
@@ -390,7 +393,7 @@ async function checkDatasetCoverage(
         [assetId],
       );
 
-      const row = result.rows[0];
+      const row = result.rows[0] ?? {};
       const lastCollected = row.last_collected_at as string | null;
       const recordCount = Number(row.record_count ?? 0);
       const isFresh = lastCollected ? isWithinDays(lastCollected, 14) : false;

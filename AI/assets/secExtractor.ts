@@ -41,6 +41,13 @@ export const MAX_EXTRACTION_INPUT_CHARS = 60_000;
 
 const EXTRACTION_MAX_OUTPUT_TOKENS = 6_000;
 
+/**
+ * Hard ceiling for a single extraction call. Provider stalls must not hang an
+ * entire collection run: the collector catches the abort and reports the
+ * filing as failed while keeping the filings that already succeeded.
+ */
+const EXTRACTION_TIMEOUT_MS = 60_000;
+
 /** The filing a document belongs to, used in prompts and error messages. */
 export interface FilingExtractionInput {
   text: string;
@@ -166,6 +173,7 @@ async function runExtraction<T>(options: {
       temperature: 0,
       maxOutputTokens: EXTRACTION_MAX_OUTPUT_TOKENS,
       maxRetries: 1,
+      abortSignal: AbortSignal.timeout(EXTRACTION_TIMEOUT_MS),
       tools: {},
       toolChoice: "none",
       output: Output.object({

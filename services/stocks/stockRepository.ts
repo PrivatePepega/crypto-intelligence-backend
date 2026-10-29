@@ -17,8 +17,8 @@ import type {
 import { createDbClient, type DbClient } from "./stockCoverage.js";
 import { buildQuoteSnapshotData, buildQuoteSnapshotKey } from "./fmpStockNormalizer.js";
 
-// Re-export types for consumers
-export type { DbClient, StockAssetRow, StockAssetUpsertResult, CandleUpsertResult, SnapshotInsertResult, SecEventInsertResult };
+// Re-export the shared DB client type for consumers of this module.
+export type { DbClient };
 
 /* -------------------------------------------------------------------------- */
 /*                              Asset Identity                                */
@@ -29,6 +29,9 @@ export interface StockAssetRow {
   symbol: string;
   name: string;
   asset_type: string;
+  description: string | null;
+  logo_url: string | null;
+  website_url: string | null;
   external_ids: unknown;
   created_at: string;
   updated_at: string;
@@ -66,7 +69,7 @@ export async function findStockAsset(
 ): Promise<StockAssetRow | null> {
   const result = await client.query(
     `
-    SELECT id, symbol, name, asset_type, external_ids, created_at, updated_at
+    SELECT id, symbol, name, asset_type, description, logo_url, website_url, external_ids, created_at, updated_at
     FROM assets.assets
     WHERE asset_type = 'stock'
       AND (
@@ -109,6 +112,9 @@ export async function upsertStockAsset(
   const existing = await findStockAsset(client, identity.ticker, identity.providerIds.fmp?.symbol as string);
 
   if (existing) {
+    // Only the canonical asset row carries provider identifiers. Business
+    // description stays in assets.stocks.business_summary; the website is a
+    // canonical asset attribute and therefore lives here.
     await client.query(
       `
       UPDATE assets.assets
@@ -118,10 +124,11 @@ export async function upsertStockAsset(
             COALESCE(external_ids->'fmp', '{}'::jsonb) || $2::jsonb,
             true
           ),
+          website_url = COALESCE($3, website_url),
           updated_at = NOW()
       WHERE id = $1
     `,
-      [existing.id, JSON.stringify(externalIds)],
+      [existing.id, JSON.stringify(externalIds), profile?.website ?? null],
     );
 
     return { asset_id: existing.id, created: false };
@@ -129,11 +136,16 @@ export async function upsertStockAsset(
 
   const inserted = await client.query(
     `
-    INSERT INTO assets.assets (symbol, name, asset_type, external_ids)
-    VALUES ($1, $2, 'stock', jsonb_build_object('fmp', $3::jsonb))
+    INSERT INTO assets.assets (symbol, name, asset_type, website_url, external_ids)
+    VALUES ($1, $2, 'stock', $3, jsonb_build_object('fmp', $4::jsonb))
     RETURNING id
   `,
-    [identity.ticker, identity.companyName, JSON.stringify(externalIds)],
+    [
+      identity.ticker,
+      profile?.companyName ?? identity.companyName,
+      profile?.website ?? null,
+      JSON.stringify(externalIds),
+    ],
   );
 
   const row = inserted.rows[0];
@@ -150,7 +162,12 @@ export async function upsertStockAsset(
 /* -------------------------------------------------------------------------- */
 
 /**
- * Upserts assets.stocks with profile data.
+ * Upserts assets.stocks profile columns.
+ *
+ * Financial statements and metrics have their own writers. This function must
+ * never touch those JSONB columns, otherwise a profile refresh would overwrite
+ * previously persisted fundamentals with empty placeholders.
+ *
  * NULL values never erase existing data (COALESCE).
  */
 export async function upsertStockProfile(
@@ -161,31 +178,17 @@ export async function upsertStockProfile(
   await client.query(
     `
     INSERT INTO assets.stocks
-      (asset_id, exchange, sector, industry, business_summary, financial_statements, financial_metrics)
-    VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7::jsonb)
+      (asset_id, exchange, sector, industry, business_summary)
+    VALUES ($1, $2, $3, $4, $5)
     ON CONFLICT (asset_id) DO UPDATE SET
       exchange = COALESCE(EXCLUDED.exchange, assets.stocks.exchange),
       sector = COALESCE(EXCLUDED.sector, assets.stocks.sector),
       industry = COALESCE(EXCLUDED.industry, assets.stocks.industry),
       business_summary = COALESCE(EXCLUDED.business_summary, assets.stocks.business_summary),
-      financial_statements = COALESCE(EXCLUDED.financial_statements, assets.stocks.financial_statements),
-      financial_metrics = COALESCE(EXCLUDED.financial_metrics, assets.stocks.financial_metrics),
       updated_at = NOW()
   `,
-    [
-      assetId,
-      profile.exchange,
-      profile.sector,
-      profile.industry,
-      profile.description,
-      JSON.stringify({ annual: [], quarterly: [] }), // Placeholder; actual statements stored separately
-      JSON.stringify({ periods: [] }), // Placeholder; actual metrics stored separately
-    ],
+    [assetId, profile.exchange, profile.sector, profile.industry, profile.description],
   );
-
-  // Note: We store full financial_statements and financial_metrics as JSONB
-  // in the same row. The placeholders above are overwritten by the actual
-  // upsertFinancialStatements and upsertFinancialMetrics calls.
 }
 
 /**
@@ -425,6 +428,61 @@ export async function insertSecEvent(
   );
 
   return { inserted: response.rows.length > 0, dedupeKey: input.dedupeKey };
+}
+
+/**
+ * Inserts institutional holdings (13F) periods for a specific asset.
+ * Each period is stored as a separate event with dedupe key based on
+ * manager CIK + report period + accession number.
+ */
+export async function insertInstitutionalHoldingsPeriod(
+  client: DbClient,
+  assetId: string,
+  period: {
+    reportPeriod: string;
+    holdings: Array<Record<string, unknown>>;
+    filings: Array<Record<string, unknown>>;
+    totals: Record<string, unknown>;
+  },
+  managerCik: string,
+  managerName: string,
+  accessionNumber: string,
+  filingDate: string,
+  collectedAt: string,
+): Promise<SecEventInsertResult> {
+  const data = {
+    reportPeriod: period.reportPeriod,
+    holdings: period.holdings,
+    filings: period.filings,
+    totals: period.totals,
+    managerCik,
+    managerName,
+  };
+
+  // Dedupe key: manager CIK + report period + accession number
+  const dedupeKey = `13f:${managerCik}:${period.reportPeriod}:${accessionNumber}`;
+
+  const dataWithKey = { ...data, dedupe_key: dedupeKey };
+
+  const response = await client.query(
+    `
+    INSERT INTO assets.information
+      (asset_id, information_type, data, source, source_url, observed_at, collected_at)
+    SELECT $1, 'event', $2::jsonb, 'sec_13f', $3, $4::timestamptz, $5::timestamptz
+    WHERE NOT EXISTS (
+      SELECT 1
+      FROM assets.information
+      WHERE asset_id = $1
+        AND information_type = 'event'
+        AND source = 'sec_13f'
+        AND data->>'dedupe_key' = $6
+    )
+    RETURNING id
+  `,
+    [assetId, JSON.stringify(dataWithKey), `https://www.sec.gov/Archives/edgar/data/${managerCik.replace(/^0+/, "")}/${accessionNumber.replace(/-/g, "")}/`, filingDate, collectedAt, dedupeKey],
+  );
+
+  return { inserted: response.rows.length > 0, dedupeKey };
 }
 
 /* -------------------------------------------------------------------------- */

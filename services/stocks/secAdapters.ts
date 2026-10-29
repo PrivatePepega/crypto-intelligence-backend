@@ -1,21 +1,19 @@
 import "dotenv/config";
 
+import { fileURLToPath } from "node:url";
+import path from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 import {
-  loadCompanySubmissions,
-  parseRecentFilings,
-  type SecFiling,
   padCik,
-  getRawFilingDocumentUrl,
-  getFilingIndexUrl,
-  rateLimitedFetch,
+  OUTPUT_DIR,
 } from "../../collectors/assets/stocks/secEdgarFetch.js";
 import { collectInsiderOwnership, type InsiderTransaction } from "../../collectors/assets/stocks/secInsiderOwnership.js";
-import { collectManager13F, type ThirteenFPeriod } from "../../collectors/assets/stocks/sec13FHoldings.js";
+import { type ThirteenFPeriod } from "../../collectors/assets/stocks/sec13FHoldings.js";
 import { collectBeneficialOwnership, type BeneficialOwnershipFiling } from "../../collectors/assets/stocks/secBeneficialOwnership.js";
 import { collectCorporateActions, type CorporateActionFiling } from "../../collectors/assets/stocks/secCorporateActions.js";
-import { extractDocumentText } from "../../collectors/assets/stocks/secDocumentText.js";
-import { buildFilingEvidence, type FilingEvidence } from "../../collectors/assets/stocks/secEvidence.js";
-import { toIsoDate } from "../../collectors/assets/stocks/secEdgarFetch.js";
 import type {
   StockIdentity,
   InsiderTransaction as InsiderTransactionType,
@@ -109,31 +107,92 @@ export async function collectInsiderTransactions(
 /*                          Institutional Holdings (13F)                      */
 /* -------------------------------------------------------------------------- */
 
+/** A 13F period plus the manager that filed it. */
+export interface InstitutionalHoldingsPeriod extends ThirteenFPeriodType {
+  managerCik: string;
+  managerName: string | null;
+}
+
 export interface InstitutionalHoldingsResult {
-  periods: ThirteenFPeriodType[];
+  periods: InstitutionalHoldingsPeriod[];
   errors: Array<{ accessionNumber: string; form: string; message: string }>;
   collectedAt: string;
 }
 
 /**
  * Collects 13F institutional holdings for a stock.
- * Note: 13F is filed by managers, not issuers. We use the bulk path to find
- * managers holding this stock's CUSIP.
+ * Note: 13F is filed by managers, not issuers. We use local cached manager
+ * 13F files to find managers holding this stock's CUSIP.
  */
 export async function collectInstitutionalHoldings(
   identity: StockIdentity,
   options: { maxPeriods?: number; cusip?: string; refreshSubmissions?: boolean } = {},
 ): Promise<InstitutionalHoldingsResult> {
   // For 13F, we need the issuer's CUSIP to find managers holding it
-  // The existing collector has a bulk path for this
-  // For now, we'll use the manager path with a known manager CIK if available
-  // A more complete implementation would use the bulk data set
+  const cusip = options.cusip ?? identity.providerIds?.fmp?.cusip ?? null;
+  if (!cusip) {
+    return {
+      periods: [],
+      errors: [{ form: "13F", accessionNumber: "N/A", message: "No CUSIP available for institutional holdings collection." }],
+      collectedAt: new Date().toISOString(),
+    };
+  }
 
-  // This is a placeholder - the full 13F bulk collection is complex
-  // and requires a CUSIP-to-asset mapping
+  const periods: InstitutionalHoldingsPeriod[] = [];
+  const errors: Array<{ form: string; accessionNumber: string; message: string }> = [];
+
+  // Strategy: read locally cached manager 13F files. 13F is filed by the
+  // manager, so each period is only meaningful together with its manager.
+  try {
+    const fs = await import("node:fs/promises");
+    const path = await import("node:path");
+    const outputDir = path.join(process.cwd(), "collectors/assets/stocks/data");
+
+    const files = await fs.readdir(outputDir);
+    const managerFiles = files.filter((f) => /^Edgar 13f_CIK\d+\.json$/.test(f));
+
+    for (const file of managerFiles) {
+      try {
+        const content = await fs.readFile(path.join(outputDir, file), "utf-8");
+        const report = JSON.parse(content) as {
+          cik?: string | number;
+          managerName?: string | null;
+          periods?: Array<{
+            reportPeriod: string;
+            holdings: Array<{ cusip?: string }>;
+            filings: ThirteenFPeriodType["filings"];
+            totals: ThirteenFPeriodType["totals"];
+          }>;
+        };
+
+        const managerCik = padCik(String(report.cik ?? file.match(/CIK(\d+)/)?.[1] ?? ""));
+        const managerName = report.managerName ?? null;
+
+        for (const period of report.periods ?? []) {
+          const filteredHoldings = period.holdings.filter((h) => h.cusip === cusip);
+          if (filteredHoldings.length > 0) {
+            periods.push({
+              reportPeriod: period.reportPeriod,
+              holdings: filteredHoldings as ThirteenFPeriodType["holdings"],
+              filings: period.filings,
+              totals: period.totals,
+              managerCik,
+              managerName,
+            });
+          }
+        }
+      } catch (e) {
+        errors.push({ form: "13F", accessionNumber: file, message: `Failed to read cached 13F file: ${e instanceof Error ? e.message : String(e)}` });
+      }
+    }
+  } catch (e) {
+    errors.push({ form: "13F", accessionNumber: "local", message: `Failed to scan local 13F files: ${e instanceof Error ? e.message : String(e)}` });
+  }
+
+  // Return whatever we found locally (even if empty - no bulk fallback)
   return {
-    periods: [],
-    errors: [{ form: "13F", accessionNumber: "N/A", message: "13F bulk collection not yet integrated; use collector directly." }],
+    periods,
+    errors,
     collectedAt: new Date().toISOString(),
   };
 }
@@ -192,8 +251,6 @@ export async function collectBeneficialOwnershipFilings(
     reportingPersons: filing.reportingPersons,
     purposeOfTransaction: filing.purposeOfTransaction,
     sourceOfFunds: filing.sourceOfFunds,
-    evidence: filing.evidence,
-    extractionUsage: filing.extractionUsage,
   }));
 
   return {
@@ -236,7 +293,7 @@ export async function collectCorporateActionFilings(
       "SC TO-T", "SC TO-I", "DEFM14A", "PREM14A", "DEF 14A",
     ],
     refreshSubmissions: options.refreshSubmissions ?? false,
-    since: options.since ?? null,
+    ...(options.since ? { since: options.since } : {}),
     extract: options.extract ?? true,
   });
 
@@ -254,8 +311,6 @@ export async function collectCorporateActionFilings(
     event: filing.event,
     documentChars: filing.documentChars,
     documentTruncated: filing.documentTruncated,
-    evidence: filing.evidence,
-    extractionUsage: filing.extractionUsage,
   }));
 
   return {
@@ -269,8 +324,8 @@ export async function collectCorporateActionFilings(
 /*                         Financial Statements (SEC)                         */
 /* -------------------------------------------------------------------------- */
 
-import { loadAndNormalizeFacts, normalizeQuarterlyYTD, calculateRatios, type RatioResult } from "../../collectors/assets/stocks/fundamentalsCollector.js";
-import type { FinancialStatements, FinancialMetrics, FinancialStatementPeriod, FinancialMetricsPeriod } from "../../../types/stocks/stock.types.js";
+import { loadAndNormalizeFacts, normalizeQuarterlyYTD, calculateRatios } from "../../collectors/assets/stocks/fundamentalsCollector.js";
+import type { FinancialStatements, FinancialMetrics, FinancialStatementPeriod, FinancialMetricsPeriod } from "../../types/stocks/stock.types.js";
 
 export interface FundamentalsResult {
   statements: FinancialStatements | null;
@@ -299,7 +354,7 @@ export async function collectFundamentals(
   try {
     // Load company facts from cached file (the collector fetches it)
     const cikNumber = identity.cik.replace(/^0+/, "");
-    const filePath = `collectors/assets/data/Edgar companyfacts_CIK${cikNumber}.json`;
+    const filePath = path.join(OUTPUT_DIR, `Edgar companyfacts_CIK${cikNumber}.json`);
 
     // Use the existing fundamentals collector logic
     const { cik, entityName, facts } = loadAndNormalizeFacts(filePath);

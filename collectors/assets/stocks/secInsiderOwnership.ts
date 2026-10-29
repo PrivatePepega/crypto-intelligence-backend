@@ -36,7 +36,7 @@ import {
  * number, direct/indirect ownership and the transaction code so downstream
  * code can distinguish purchases, sales, awards and other events.
  *
- * Output: collectors/assets/data/Edgar insider_CIK{cik}.json
+ * Output: collectors/assets/stocks/data/Edgar insider_CIK{cik}.json
  *
  * Run with:
  *   npx tsx collectors/assets/secInsiderOwnership.ts --cik=320193 --max=12

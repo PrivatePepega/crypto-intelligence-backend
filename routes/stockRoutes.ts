@@ -18,7 +18,7 @@ import type { Request, Response } from "express";
 import fs from "fs/promises";
 import path from "path";
 import { getOrIngestStock } from "../services/stocks/stockIntelligenceService.js";
-import type { StockIntelligenceResult } from "../types/stocks/stock.types.js";
+import { toApiResponse } from "../types/stocks/api.types.js";
 
 const router = Router();
 
@@ -143,19 +143,15 @@ router.use(requestLogger);
  * - refresh: "true" | "false" (default: false) - force refresh even if data appears fresh
  * - readOnly: "true" | "false" (default: false) - skip ingestion, only read from DB
  *
- * Response: Full StockIntelligenceResult object containing:
- * - identity: canonical stock identity
- * - profile: company profile (exchange, sector, description, etc.)
- * - quote: current market quote/snapshot
- * - history: daily OHLCV candles (last 30 by default)
- * - financialStatements: SEC financial statements (annual/quarterly)
- * - financialMetrics: computed financial ratios
- * - insiderTransactions: SEC Form 4 insider trades
- * - institutionalHoldings: 13F institutional holdings
- * - beneficialOwnership: 13D/G beneficial ownership filings
- * - corporateActions: corporate action events from SEC filings
- * - coverage: freshness report for each dataset
- * - errors: any ingestion errors
+ * Response: clean StockIntelligenceResponse contract:
+ * - identity: canonical asset identity (assetId is the database UUID)
+ * - profile: persisted profile fields (exchange, sector, description, website)
+ * - quote: latest persisted quote observation
+ * - history: daily OHLCV candles derived from persisted candles
+ * - financialStatements / financialMetrics: normalized SEC fundamentals
+ * - insiderTransactions / institutionalHoldings / beneficialOwnership /
+ *   corporateActions: individual persisted event records
+ * - metadata: coverage, per-dataset diagnostics, warnings and errors
  */
 router.get("/:ticker", async (req: Request, res: Response) => {
   const routeContext = "GET /:ticker";
@@ -184,65 +180,58 @@ router.get("/:ticker", async (req: Request, res: Response) => {
     console.log(`[STOCK_ROUTES] ${routeContext} - Options:`, { refresh, readOnly });
 
     // Build options for getOrIngestStock
-    const options = {
-      refresh,
-      readOnly,
-      include: undefined as undefined // include all datasets by default
-    };
+    const options = { refresh, readOnly };
 
     console.log(`[STOCK_ROUTES] ${routeContext} - Calling getOrIngestStock()`);
     const startTime = Date.now();
-    const result = await getOrIngestStock(cleanTicker, options);
+    const serviceResult = await getOrIngestStock(cleanTicker, options);
     const duration = Date.now() - startTime;
     console.log(`[STOCK_ROUTES] ${routeContext} - getOrIngestStock completed in ${duration}ms`);
 
-    // Log result summary
+    // Convert to clean API response. Diagnostics travel under metadata only.
+    const apiResponse = toApiResponse(serviceResult);
+    const { errors, warnings, datasets } = apiResponse.metadata;
+
     console.log(`[STOCK_ROUTES] ${routeContext} - Result summary:`, {
-      hasIdentity: !!result.identity,
-      hasProfile: !!result.profile,
-      hasQuote: !!result.quote,
-      hasHistory: !!result.history,
-      historyCandles: result.history?.candles?.length || 0,
-      hasFinancialStatements: !!result.financialStatements,
-      hasFinancialMetrics: !!result.financialMetrics,
-      insiderCount: result.insiderTransactions?.length || 0,
-      institutionalCount: result.institutionalHoldings?.length || 0,
-      beneficialCount: result.beneficialOwnership?.length || 0,
-      corporateCount: result.corporateActions?.length || 0,
-      errors: result.errors.length,
-      coverageFresh: result.coverage?.overallFresh
+      assetId: apiResponse.identity.assetId,
+      hasProfile: !!apiResponse.profile,
+      hasQuote: !!apiResponse.quote,
+      hasHistory: !!apiResponse.history,
+      historyCandles: apiResponse.history?.candles.length ?? 0,
+      hasFinancialStatements: !!apiResponse.financialStatements,
+      hasFinancialMetrics: !!apiResponse.financialMetrics,
+      insiderCount: apiResponse.insiderTransactions.length,
+      institutionalCount: apiResponse.institutionalHoldings.length,
+      beneficialCount: apiResponse.beneficialOwnership.length,
+      corporateCount: apiResponse.corporateActions.length,
+      warningCount: warnings.length,
+      errorCount: errors.length,
+      coverageFresh: apiResponse.metadata.coverage.overallFresh,
+      datasetStatuses: datasets.map((d) => `${d.dataset}:${d.status}`).join(","),
     });
 
-    // Determine HTTP status based on errors
-    if (result.errors.length > 0) {
-      const failedCount = result.errors.length;
-      console.log(`[STOCK_ROUTES] ${routeContext} - Partial/Complete failure: ${failedCount} datasets failed`);
-
-      if (failedCount > 0 && !result.profile && !result.quote && !result.history) {
-        // Complete failure - no core data
-        const errorResponse = {
-          error: "ingestion_failed",
-          message: "All dataset collections failed",
-          details: result.errors,
-          ...result
-        };
-        await writeResponseToFile("stocks_intelligence_error", cleanTicker, errorResponse);
-        return res.status(502).json(errorResponse);
-      }
-
-      // Partial failure - return 200 with warnings
-      const partialResponse = {
-        ...result,
-        warnings: result.errors.map(e => `${e.dataset}: ${e.message}`)
+    // Complete failure means every core dataset is unavailable and collection
+    // reported at least one error. Partial results are still returned as 200.
+    const hasCoreData =
+      !!apiResponse.profile ||
+      !!apiResponse.quote ||
+      !!apiResponse.history ||
+      !!apiResponse.financialStatements;
+    if (errors.length > 0 && !hasCoreData) {
+      const errorResponse = {
+        error: "ingestion_failed",
+        message:
+          "No stock data could be collected or read. Check the dataset diagnostics for details.",
+        metadata: apiResponse.metadata,
       };
-      await writeResponseToFile("stocks_intelligence_partial", cleanTicker, partialResponse);
-      return res.status(200).json(partialResponse);
+      await writeResponseToFile("stocks_intelligence_error", cleanTicker, errorResponse);
+      return res.status(502).json(errorResponse);
     }
 
-    // Complete success
-    await writeResponseToFile("stocks_intelligence", cleanTicker, result);
-    console.log(`[STOCK_ROUTES] ${routeContext} - Complete success`);
-    res.json(result);
+    // Success or partial success: the payload shape is always the same.
+    const filePrefix = errors.length > 0 ? "stocks_intelligence_partial" : "stocks_intelligence";
+    await writeResponseToFile(filePrefix, cleanTicker, apiResponse);
+    return res.status(200).json(apiResponse);
 
   } catch (error) {
     const { response, statusCode } = createErrorResponse(error, routeContext, 500);
@@ -279,8 +268,9 @@ export default router;
  *    - Validation errors: 400 with "validation_failed"
  *    - Not found: 404 with "stock_not_found"
  *    - Ambiguous: 409 with "ambiguous_stock"
- *    - Complete ingestion failure: 502 with "ingestion_failed"
- *    - Partial failure: 200 with warnings array
+ *    - Complete ingestion failure: 502 with "ingestion_failed" (metadata only)
+ *    - Partial failure: 200 with the normal contract; metadata.errors names the
+ *      failing dataset and metadata.warnings lists partial results
  *    - Server errors: 500 with "intelligence_failed"
  *
  * 4. TESTING:
@@ -290,6 +280,6 @@ export default router;
  *
  * 5. DEPENDENCIES:
  *    - services/stocks/stockIntelligenceService.ts (getOrIngestStock)
- *    - types/stocks/stock.types.ts (StockIntelligenceResult, GetOrIngestStockOptions)
+ *    - types/stocks/api.types.ts (StockIntelligenceResponse)
  *    - collectors/assets/data/ must be writable
  */
