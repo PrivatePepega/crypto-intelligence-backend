@@ -802,7 +802,12 @@
   {
     "id": "a7a5",
     "symbol": "a7a5",
-    "name": "A7A5"
+    "name": "A7A5",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:08:09.732Z"
   },
   {
     "id": "aaai_agent-by-virtuals",
@@ -897,7 +902,12 @@
   {
     "id": "aave",
     "symbol": "aave",
-    "name": "Aave"
+    "name": "Aave",
+    "pair": "AAVE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:AAVEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/AAVE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:47:03.486Z"
   },
   {
     "id": "aave-aave",
@@ -2297,7 +2307,12 @@
   {
     "id": "aerodrome-finance",
     "symbol": "aero",
-    "name": "Aerodrome Finance"
+    "name": "Aerodrome Finance",
+    "pair": "AERO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:AEROUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/AERO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:55.683Z"
   },
   {
     "id": "aerosol",
@@ -2862,7 +2877,12 @@
   {
     "id": "agora-dollar",
     "symbol": "ausd",
-    "name": "AUSD"
+    "name": "AUSD",
+    "pair": "AUSD/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:AUSDUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/AUSD-USD",
+    "updatedAt": "2026-10-30T20:11:18.702Z"
   },
   {
     "id": "agorahub",
@@ -3597,12 +3617,22 @@
   {
     "id": "akash-network",
     "symbol": "akt",
-    "name": "Akash Network"
+    "name": "Akash Network",
+    "pair": "AKT/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:AKTUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/AKT-USD",
+    "updatedAt": "2026-10-30T20:10:32.497Z"
   },
   {
     "id": "akedo",
     "symbol": "ake",
-    "name": "Akedo"
+    "name": "Akedo",
+    "pair": "AKE/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:AKEUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/AKE-USD",
+    "updatedAt": "2026-10-30T20:08:45.893Z"
   },
   {
     "id": "akio",
@@ -3972,7 +4002,12 @@
   {
     "id": "algorand",
     "symbol": "algo",
-    "name": "Algorand"
+    "name": "Algorand",
+    "pair": "ALGO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ALGOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ALGO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:06.829Z"
   },
   {
     "id": "algoritha-a-i",
@@ -6137,7 +6172,12 @@
   {
     "id": "anvil",
     "symbol": "anvl",
-    "name": "Anvil"
+    "name": "Anvil",
+    "pair": "ANVL/USDT",
+    "exchange": "MEXC",
+    "tradingViewSymbol": "MEXC:ANVLUSDT",
+    "tradeUrl": "https://www.mexc.com/exchange/ANVL_USDT",
+    "updatedAt": "2026-10-30T20:10:56.578Z"
   },
   {
     "id": "any-inu",
@@ -6237,7 +6277,12 @@
   {
     "id": "ape-and-pepe",
     "symbol": "apepe",
-    "name": "Ape and Pepe"
+    "name": "Ape and Pepe",
+    "pair": "APEPE/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:APEPEUSDT",
+    "tradeUrl": "https://www.gate.com/trade/APEPE_USDT",
+    "updatedAt": "2026-10-30T20:09:23.995Z"
   },
   {
     "id": "ape-cat",
@@ -6287,7 +6332,12 @@
   {
     "id": "apenft",
     "symbol": "nft",
-    "name": "AINFT"
+    "name": "AINFT",
+    "pair": "APENFT/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:APENFTUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/APENFT-USD",
+    "updatedAt": "2026-10-30T20:09:34.134Z"
   },
   {
     "id": "apeonfone",
@@ -6712,7 +6762,12 @@
   {
     "id": "aptos",
     "symbol": "apt",
-    "name": "Aptos"
+    "name": "Aptos",
+    "pair": "APT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:APTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/APT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:39.597Z"
   },
   {
     "id": "aptusd",
@@ -6752,7 +6807,12 @@
   {
     "id": "apxusd",
     "symbol": "apxusd",
-    "name": "apxUSD"
+    "name": "apxUSD",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:08:57.946Z"
   },
   {
     "id": "apy-finance",
@@ -6767,7 +6827,12 @@
   {
     "id": "apyusd",
     "symbol": "apyusd",
-    "name": "apyUSD"
+    "name": "apyUSD",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:11:12.656Z"
   },
   {
     "id": "apy-vision",
@@ -6932,7 +6997,12 @@
   {
     "id": "arbitrum",
     "symbol": "arb",
-    "name": "Arbitrum"
+    "name": "Arbitrum",
+    "pair": "ARB/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ARBUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ARB_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:47.382Z"
   },
   {
     "id": "arbitrum-bridged-wbtc-arbitrum-one",
@@ -7992,7 +8062,12 @@
   {
     "id": "arweave",
     "symbol": "ar",
-    "name": "Arweave"
+    "name": "Arweave",
+    "pair": "AR/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ARUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/AR_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:00.428Z"
   },
   {
     "id": "arxis-aerospace-defense-rstock",
@@ -8282,7 +8357,12 @@
   {
     "id": "aster-2",
     "symbol": "aster",
-    "name": "Aster"
+    "name": "Aster",
+    "pair": "ASTER/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ASTERUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ASTER_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:17.285Z"
   },
   {
     "id": "astera-labs-bstocks-tokenized-stock",
@@ -9297,7 +9377,12 @@
   {
     "id": "avalanche-2",
     "symbol": "avax",
-    "name": "Avalanche"
+    "name": "Avalanche",
+    "pair": "AVAX/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:AVAXUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/AVAX_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:23.361Z"
   },
   {
     "id": "avalanche-bridged-btc-arbitrum-one",
@@ -9547,7 +9632,12 @@
   {
     "id": "axie-infinity",
     "symbol": "axs",
-    "name": "Axie Infinity"
+    "name": "Axie Infinity",
+    "pair": "AXS/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:AXSUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/AXS_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:20.705Z"
   },
   {
     "id": "axiom",
@@ -10467,7 +10557,12 @@
   {
     "id": "backpack",
     "symbol": "bp",
-    "name": "Backpack"
+    "name": "Backpack",
+    "pair": "BP/USDT",
+    "exchange": "MEXC",
+    "tradingViewSymbol": "MEXC:BPUSDT",
+    "tradeUrl": "https://www.mexc.com/exchange/BP_USDT",
+    "updatedAt": "2026-10-30T20:09:40.144Z"
   },
   {
     "id": "backpack-staked-sol",
@@ -11597,7 +11692,12 @@
   {
     "id": "basic-attention-token",
     "symbol": "bat",
-    "name": "Basic Attention"
+    "name": "Basic Attention",
+    "pair": "BAT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BATUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BAT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:20.429Z"
   },
   {
     "id": "basic-dog-meme",
@@ -11792,7 +11892,12 @@
   {
     "id": "beam-2",
     "symbol": "beam",
-    "name": "Beam"
+    "name": "Beam",
+    "pair": "BEAMX/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BEAMXUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BEAMX_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:36.066Z"
   },
   {
     "id": "beamable-network-token",
@@ -11947,7 +12052,12 @@
   {
     "id": "bedrock-token",
     "symbol": "br",
-    "name": "Bedrock"
+    "name": "Bedrock",
+    "pair": "BR/USDT",
+    "exchange": "BYBIT",
+    "tradingViewSymbol": "BYBIT:BRUSDT",
+    "tradeUrl": "https://www.bybit.com/trade/spot/BR/USDT",
+    "updatedAt": "2026-10-30T20:11:50.780Z"
   },
   {
     "id": "bee",
@@ -12097,7 +12207,12 @@
   {
     "id": "beldex",
     "symbol": "bdx",
-    "name": "Beldex"
+    "name": "Beldex",
+    "pair": "BDX/USDT",
+    "exchange": "KUCOIN",
+    "tradingViewSymbol": "KUCOIN:BDXUSDT",
+    "tradeUrl": "https://www.kucoin.com/trade/BDX-USDT",
+    "updatedAt": "2026-10-30T20:07:41.655Z"
   },
   {
     "id": "beleaf",
@@ -12647,7 +12762,12 @@
   {
     "id": "bfusd",
     "symbol": "bfusd",
-    "name": "BFUSD"
+    "name": "BFUSD",
+    "pair": "BFUSD/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BFUSDUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BFUSD_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:39.391Z"
   },
   {
     "id": "b-h-a-d",
@@ -12677,7 +12797,12 @@
   {
     "id": "bianrensheng",
     "symbol": "币安人生",
-    "name": "币安人生 (BinanceLife)"
+    "name": "币安人生 (BinanceLife)",
+    "pair": "币安人生/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:币安人生USDT",
+    "tradeUrl": "https://www.binance.com/en/trade/币安人生_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:49.691Z"
   },
   {
     "id": "biao-coin",
@@ -13132,7 +13257,12 @@
   {
     "id": "binancecoin",
     "symbol": "bnb",
-    "name": "BNB"
+    "name": "BNB",
+    "pair": "BNB/USD",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BNBUSD",
+    "tradeUrl": "https://www.binance.com/en/trade/BNB_USD?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:33.166Z"
   },
   {
     "id": "binance-coin-wormhole",
@@ -13642,7 +13772,12 @@
   {
     "id": "bitcoin",
     "symbol": "btc",
-    "name": "Bitcoin"
+    "name": "Bitcoin",
+    "pair": "BTC/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BTCUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BTC_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:27.183Z"
   },
   {
     "id": "bitcoin-2",
@@ -13737,7 +13872,12 @@
   {
     "id": "bitcoin-cash",
     "symbol": "bch",
-    "name": "Bitcoin Cash"
+    "name": "Bitcoin Cash",
+    "pair": "BCH/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BCHUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BCH_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:05.256Z"
   },
   {
     "id": "bitcoin-cash-ii",
@@ -13752,7 +13892,12 @@
   {
     "id": "bitcoin-cash-sv",
     "symbol": "bsv",
-    "name": "Bitcoin SV"
+    "name": "Bitcoin SV",
+    "pair": "BSV/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:BSVUSDT",
+    "tradeUrl": "https://www.gate.com/trade/BSV_USDT",
+    "updatedAt": "2026-10-30T20:08:35.827Z"
   },
   {
     "id": "bitcoin-cats",
@@ -14022,7 +14167,12 @@
   {
     "id": "bitget-token",
     "symbol": "bgb",
-    "name": "Bitget Token"
+    "name": "Bitget Token",
+    "pair": "BGB/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:BGBUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/BGB-USD",
+    "updatedAt": "2026-10-30T20:06:43.348Z"
   },
   {
     "id": "bitget-wrapped-btc",
@@ -14242,12 +14392,22 @@
   {
     "id": "bittensor",
     "symbol": "tao",
-    "name": "Bittensor"
+    "name": "Bittensor",
+    "pair": "TAO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:TAOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/TAO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:41.392Z"
   },
   {
     "id": "bittorrent",
     "symbol": "btt",
-    "name": "BitTorrent"
+    "name": "BitTorrent",
+    "pair": "BTTC/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BTTCUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BTTC_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:41.939Z"
   },
   {
     "id": "bittorrent-old",
@@ -14277,7 +14437,12 @@
   {
     "id": "bitway",
     "symbol": "btw",
-    "name": "Bitway"
+    "name": "Bitway",
+    "pair": "BTW/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:BTWUSDT",
+    "tradeUrl": "https://www.gate.com/trade/BTW_USDT",
+    "updatedAt": "2026-10-30T19:47:01.479Z"
   },
   {
     "id": "bitwise-ausd-morpho-vault",
@@ -14507,7 +14672,12 @@
   {
     "id": "blackrock-usd-institutional-digital-liquidity-fund",
     "symbol": "buidl",
-    "name": "BlackRock USD Institutional Digital Liquidity Fund"
+    "name": "BlackRock USD Institutional Digital Liquidity Fund",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T19:46:57.427Z"
   },
   {
     "id": "blackrock-usd-institutional-digital-liquidity-fund-i-class",
@@ -14932,7 +15102,12 @@
   {
     "id": "blockstack",
     "symbol": "stx",
-    "name": "Stacks"
+    "name": "Stacks",
+    "pair": "STX/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:STXUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/STX_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:47.638Z"
   },
   {
     "id": "block-street",
@@ -15337,7 +15512,12 @@
   {
     "id": "bnb48-club-token",
     "symbol": "koge",
-    "name": "KOGE"
+    "name": "KOGE",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:10:02.500Z"
   },
   {
     "id": "bnb-card",
@@ -15507,7 +15687,7 @@
   {
     "id": "boatkid",
     "symbol": "boatkid",
-    "name": "BoatKid "
+    "name": "BoatKid"
   },
   {
     "id": "bob",
@@ -15902,7 +16082,12 @@
   {
     "id": "bonk",
     "symbol": "bonk",
-    "name": "Bonk"
+    "name": "Bonk",
+    "pair": "BONK/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BONKUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BONK_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:20.022Z"
   },
   {
     "id": "bonk-2-0-sol",
@@ -17702,7 +17887,12 @@
   {
     "id": "btse-token",
     "symbol": "btse",
-    "name": "BTSE Token"
+    "name": "BTSE Token",
+    "pair": "BTSE/USDT",
+    "exchange": "BTSE",
+    "tradingViewSymbol": "BTSE:BTSEUSDT",
+    "tradeUrl": "https://www.btse.com/en/trading/BTSE-USDT",
+    "updatedAt": "2026-10-30T20:10:36.571Z"
   },
   {
     "id": "bubb",
@@ -19052,7 +19242,12 @@
   {
     "id": "canton-network",
     "symbol": "cc",
-    "name": "Canton"
+    "name": "Canton",
+    "pair": "CC/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:CCUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/CC-USD",
+    "updatedAt": "2026-10-30T19:46:21.405Z"
   },
   {
     "id": "cantor-equity-partners-i-dinari-tokenized-stock",
@@ -19277,7 +19472,12 @@
   {
     "id": "cardano",
     "symbol": "ada",
-    "name": "Cardano"
+    "name": "Cardano",
+    "pair": "ADA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ADAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ADA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:01.316Z"
   },
   {
     "id": "cardanogpt",
@@ -20287,7 +20487,12 @@
   {
     "id": "celestia",
     "symbol": "tia",
-    "name": "Celestia"
+    "name": "Celestia",
+    "pair": "TIA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:TIAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/TIA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:11.743Z"
   },
   {
     "id": "celestica-inc-robinhood-token",
@@ -20307,7 +20512,12 @@
   {
     "id": "celium",
     "symbol": "sn51",
-    "name": "lium"
+    "name": "lium",
+    "pair": "SN51/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:SN51USD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/SN51-USD",
+    "updatedAt": "2026-10-30T20:11:26.693Z"
   },
   {
     "id": "cellar",
@@ -20682,7 +20892,12 @@
   {
     "id": "chain-2",
     "symbol": "xcn",
-    "name": "Onyxcoin"
+    "name": "Onyxcoin",
+    "pair": "XCN/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:XCNUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/XCN-USD",
+    "updatedAt": "2026-10-30T20:11:28.681Z"
   },
   {
     "id": "chain4energy",
@@ -20792,7 +21007,12 @@
   {
     "id": "chainlink",
     "symbol": "link",
-    "name": "Chainlink"
+    "name": "Chainlink",
+    "pair": "LINK/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:LINKUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/LINK_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:59.237Z"
   },
   {
     "id": "chainlink-plenty-bridge",
@@ -22112,7 +22332,12 @@
   {
     "id": "circle-internet-group-bstock",
     "symbol": "crclb",
-    "name": "Circle Internet Group (bStocks Tokenized Stock)"
+    "name": "Circle Internet Group (bStocks Tokenized Stock)",
+    "pair": "CRCLB/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:CRCLBUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/CRCLB_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:36.721Z"
   },
   {
     "id": "circle-internet-group-dinari-tokenized-stock",
@@ -23097,7 +23322,12 @@
   {
     "id": "coco-2",
     "symbol": "coco",
-    "name": "coco"
+    "name": "coco",
+    "pair": "COCO/USDT",
+    "exchange": "MEXC",
+    "tradingViewSymbol": "MEXC:COCOUSDT",
+    "tradeUrl": "https://www.mexc.com/exchange/COCO_USDT",
+    "updatedAt": "2026-10-30T20:11:34.713Z"
   },
   {
     "id": "coco-3",
@@ -23727,7 +23957,12 @@
   {
     "id": "collector-crypt",
     "symbol": "cards",
-    "name": "Collector Crypt"
+    "name": "Collector Crypt",
+    "pair": "CARDS/USDT",
+    "exchange": "OKX",
+    "tradingViewSymbol": "OKX:CARDSUSDT",
+    "tradeUrl": "https://www.okx.com/trade-spot/cards-usdt",
+    "updatedAt": "2026-10-30T20:09:48.121Z"
   },
   {
     "id": "collies",
@@ -23997,7 +24232,12 @@
   {
     "id": "compound-governance-token",
     "symbol": "comp",
-    "name": "Compound"
+    "name": "Compound",
+    "pair": "COMP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:COMPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/COMP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:10.653Z"
   },
   {
     "id": "compounding-open-dollar",
@@ -24182,7 +24422,12 @@
   {
     "id": "conflux-token",
     "symbol": "cfx",
-    "name": "Conflux"
+    "name": "Conflux",
+    "pair": "CFX/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:CFXUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/CFX_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:26.012Z"
   },
   {
     "id": "conk",
@@ -24367,7 +24612,12 @@
   {
     "id": "convex-finance",
     "symbol": "cvx",
-    "name": "Convex Finance"
+    "name": "Convex Finance",
+    "pair": "CVX/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:CVXUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/CVX_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:34.511Z"
   },
   {
     "id": "convex-fxn",
@@ -24937,7 +25187,12 @@
   {
     "id": "cosmos",
     "symbol": "atom",
-    "name": "Cosmos Hub"
+    "name": "Cosmos Hub",
+    "pair": "ATOM/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ATOMUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ATOM_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:09.490Z"
   },
   {
     "id": "cosplay-token-2",
@@ -25832,7 +26087,12 @@
   {
     "id": "crvusd",
     "symbol": "crvusd",
-    "name": "crvUSD"
+    "name": "crvUSD",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:10:58.571Z"
   },
   {
     "id": "crying-cat",
@@ -25997,7 +26257,12 @@
   {
     "id": "crypto-com-chain",
     "symbol": "cro",
-    "name": "Cronos"
+    "name": "Cronos",
+    "pair": "CRO/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:CROUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/CRO-USD",
+    "updatedAt": "2026-10-30T19:46:43.394Z"
   },
   {
     "id": "crypto-com-staked-eth",
@@ -26502,7 +26767,12 @@
   {
     "id": "curve-dao-token",
     "symbol": "crv",
-    "name": "Curve DAO"
+    "name": "Curve DAO",
+    "pair": "CRV/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:CRVUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/CRV_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:15.784Z"
   },
   {
     "id": "curve-fi-amdai-amusdc-amusdt",
@@ -27007,7 +27277,12 @@
   {
     "id": "dai",
     "symbol": "dai",
-    "name": "Dai"
+    "name": "Dai",
+    "pair": "DAI/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:DAIUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/DAI-USD",
+    "updatedAt": "2026-10-30T19:46:09.295Z"
   },
   {
     "id": "daifuku",
@@ -27387,7 +27662,12 @@
   {
     "id": "dash",
     "symbol": "dash",
-    "name": "Dash"
+    "name": "Dash",
+    "pair": "DASH/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:DASHUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/DASH_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:31.581Z"
   },
   {
     "id": "dash-2",
@@ -27717,7 +27997,12 @@
   {
     "id": "decentraland",
     "symbol": "mana",
-    "name": "Decentraland"
+    "name": "Decentraland",
+    "pair": "MANA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:MANAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/MANA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:42.804Z"
   },
   {
     "id": "decentraland-wormhole",
@@ -27822,7 +28107,12 @@
   {
     "id": "decred",
     "symbol": "dcr",
-    "name": "Decred"
+    "name": "Decred",
+    "pair": "DCR/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:DCRUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/DCR_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:44.103Z"
   },
   {
     "id": "decrypting",
@@ -28667,7 +28957,12 @@
   {
     "id": "derive",
     "symbol": "drv",
-    "name": "Derive"
+    "name": "Derive",
+    "pair": "DRV/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:DRVUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/DRV-USD",
+    "updatedAt": "2026-10-30T20:08:33.841Z"
   },
   {
     "id": "dero",
@@ -30112,7 +30407,12 @@
   {
     "id": "dogecoin",
     "symbol": "doge",
-    "name": "Dogecoin"
+    "name": "Dogecoin",
+    "pair": "DOGE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:DOGEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/DOGE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:49.203Z"
   },
   {
     "id": "dogecoin-2",
@@ -30552,7 +30852,12 @@
   {
     "id": "dogwifcoin",
     "symbol": "wif",
-    "name": "dogwifhat"
+    "name": "dogwifhat",
+    "pair": "WIF/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:WIFUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/WIF_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:46.583Z"
   },
   {
     "id": "dogwifgun",
@@ -31142,7 +31447,12 @@
   {
     "id": "doublezero",
     "symbol": "2z",
-    "name": "DoubleZero"
+    "name": "DoubleZero",
+    "pair": "2Z/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:2ZUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/2Z_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:48.814Z"
   },
   {
     "id": "doublezero-staked-sol",
@@ -32627,7 +32937,12 @@
   {
     "id": "eigenlayer",
     "symbol": "eigen",
-    "name": "EigenCloud (prev. EigenLayer)"
+    "name": "EigenCloud (prev. EigenLayer)",
+    "pair": "EIGEN/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:EIGENUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/EIGEN_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:22.451Z"
   },
   {
     "id": "eigenpie",
@@ -34177,7 +34492,12 @@
   {
     "id": "ethena",
     "symbol": "ena",
-    "name": "Ethena"
+    "name": "Ethena",
+    "pair": "ENA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ENAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ENA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:45.401Z"
   },
   {
     "id": "ethena-staked-ena",
@@ -34192,7 +34512,12 @@
   {
     "id": "ethena-usde",
     "symbol": "usde",
-    "name": "Ethena USDe"
+    "name": "Ethena USDe",
+    "pair": "USDE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:USDEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/USDE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:11.283Z"
   },
   {
     "id": "ethena-ustb",
@@ -34212,7 +34537,12 @@
   {
     "id": "ethereum",
     "symbol": "eth",
-    "name": "Ethereum"
+    "name": "Ethereum",
+    "pair": "ETH/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ETHUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ETH_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:29.140Z"
   },
   {
     "id": "ethereum-cat",
@@ -34227,7 +34557,12 @@
   {
     "id": "ethereum-classic",
     "symbol": "etc",
-    "name": "Ethereum Classic"
+    "name": "Ethereum Classic",
+    "pair": "ETC/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ETCUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ETC_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:45.406Z"
   },
   {
     "id": "ethereum-doge",
@@ -34252,7 +34587,12 @@
   {
     "id": "ethereum-name-service",
     "symbol": "ens",
-    "name": "Ethereum Name Service"
+    "name": "Ethereum Name Service",
+    "pair": "ENS/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ENSUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ENS_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:10.223Z"
   },
   {
     "id": "ethereum-overnight",
@@ -34302,7 +34642,12 @@
   {
     "id": "ether-fi",
     "symbol": "ethfi",
-    "name": "Ether.fi"
+    "name": "Ether.fi",
+    "pair": "ETHFI/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ETHFIUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ETHFI_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:35.621Z"
   },
   {
     "id": "ether-fi-liquid-eth",
@@ -34512,7 +34857,12 @@
   {
     "id": "euro-coin",
     "symbol": "eurc",
-    "name": "EURC"
+    "name": "EURC",
+    "pair": "EURC/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:EURCUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/EURC-USD",
+    "updatedAt": "2026-10-30T20:08:03.711Z"
   },
   {
     "id": "eurocoinpay",
@@ -34542,7 +34892,12 @@
   {
     "id": "eutbl",
     "symbol": "eutbl",
-    "name": "Spiko EU T-Bills Money Market Fund"
+    "name": "Spiko EU T-Bills Money Market Fund",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:07:57.671Z"
   },
   {
     "id": "eva",
@@ -35322,12 +35677,22 @@
   {
     "id": "falcon-finance",
     "symbol": "usdf",
-    "name": "Falcon USD"
+    "name": "Falcon USD",
+    "pair": "USDF/USDT",
+    "exchange": "MEXC",
+    "tradingViewSymbol": "MEXC:USDFUSDT",
+    "tradeUrl": "https://www.mexc.com/exchange/USDF_USDT",
+    "updatedAt": "2026-10-30T20:06:13.251Z"
   },
   {
     "id": "falcon-finance-ff",
     "symbol": "ff",
-    "name": "Falcon Finance"
+    "name": "Falcon Finance",
+    "pair": "FF/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:FFUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/FF_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:55.944Z"
   },
   {
     "id": "falcon-finance-usd",
@@ -36042,7 +36407,12 @@
   {
     "id": "fetch-ai",
     "symbol": "fet",
-    "name": "Artificial Superintelligence Alliance"
+    "name": "Artificial Superintelligence Alliance",
+    "pair": "FET/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:FETUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/FET_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:27.873Z"
   },
   {
     "id": "fetchr",
@@ -36272,7 +36642,12 @@
   {
     "id": "figure-heloc",
     "symbol": "figr_heloc",
-    "name": "Figure Heloc"
+    "name": "Figure Heloc",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T19:45:43.241Z"
   },
   {
     "id": "figure-technology-solutions-ondo-tokenized-stock",
@@ -36297,7 +36672,12 @@
   {
     "id": "filecoin",
     "symbol": "fil",
-    "name": "Filecoin"
+    "name": "Filecoin",
+    "pair": "FIL/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:FILUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/FIL_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:15.560Z"
   },
   {
     "id": "filecoin-bridged-weth-filecoin",
@@ -36567,7 +36947,12 @@
   {
     "id": "first-digital-usd",
     "symbol": "fdusd",
-    "name": "First Digital USD"
+    "name": "First Digital USD",
+    "pair": "FDUSD/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:FDUSDUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/FDUSD_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:59.916Z"
   },
   {
     "id": "first-dog-to-buy-crypto",
@@ -36927,7 +37312,12 @@
   {
     "id": "flare-networks",
     "symbol": "flr",
-    "name": "Flare"
+    "name": "Flare",
+    "pair": "FLR/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:FLRUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/FLR-USD",
+    "updatedAt": "2026-10-30T20:07:51.668Z"
   },
   {
     "id": "flare-staked-ether",
@@ -37122,7 +37512,12 @@
   {
     "id": "floki",
     "symbol": "floki",
-    "name": "FLOKI"
+    "name": "FLOKI",
+    "pair": "FLOKI/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:FLOKIUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/FLOKI_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:32.049Z"
   },
   {
     "id": "floki-cash",
@@ -38357,7 +38752,12 @@
   {
     "id": "frax",
     "symbol": "frax",
-    "name": "Legacy Frax Dollar"
+    "name": "Legacy Frax Dollar",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:09:52.119Z"
   },
   {
     "id": "frax-bullas",
@@ -39947,7 +40347,12 @@
   {
     "id": "gatechain-token",
     "symbol": "gt",
-    "name": "Gate"
+    "name": "Gate",
+    "pair": "GT/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:GTUSDT",
+    "tradeUrl": "https://www.gate.com/trade/GT_USDT",
+    "updatedAt": "2026-10-30T20:06:57.433Z"
   },
   {
     "id": "gatenet",
@@ -40532,7 +40937,12 @@
   {
     "id": "geodnet",
     "symbol": "geod",
-    "name": "Geodnet"
+    "name": "Geodnet",
+    "pair": "GEOD/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:GEODUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/GEOD-USD",
+    "updatedAt": "2026-10-30T20:10:38.507Z"
   },
   {
     "id": "geoff",
@@ -40727,7 +41137,12 @@
   {
     "id": "gho",
     "symbol": "gho",
-    "name": "GHO"
+    "name": "GHO",
+    "pair": "GHO/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:GHOUSDT",
+    "tradeUrl": "https://www.gate.com/trade/GHO_USDT",
+    "updatedAt": "2026-10-30T20:07:19.572Z"
   },
   {
     "id": "ghost-by-mcafee",
@@ -41227,7 +41642,12 @@
   {
     "id": "global-dollar",
     "symbol": "usdg",
-    "name": "Global Dollar"
+    "name": "Global Dollar",
+    "pair": "USDG/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:USDGUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/USDG-USD",
+    "updatedAt": "2026-10-30T19:46:33.328Z"
   },
   {
     "id": "globalfoundries-ondo-tokenized",
@@ -41612,7 +42032,12 @@
   {
     "id": "gmt-token",
     "symbol": "gomining",
-    "name": "GoMining Token"
+    "name": "GoMining Token",
+    "pair": "GOMINING/USD",
+    "exchange": "BITFINEX",
+    "tradingViewSymbol": "BITFINEX:GOMININGUSD",
+    "tradeUrl": "https://trading.bitfinex.com/t/GOMINING:USD?type=exchange",
+    "updatedAt": "2026-10-30T20:11:24.718Z"
   },
   {
     "id": "gmx",
@@ -41662,7 +42087,12 @@
   {
     "id": "gnosis",
     "symbol": "gno",
-    "name": "Gnosis"
+    "name": "Gnosis",
+    "pair": "GNO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:GNOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/GNO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:09.957Z"
   },
   {
     "id": "gnosis-xdai-bridged-eurc-gnosis",
@@ -42912,7 +43342,12 @@
   {
     "id": "grass",
     "symbol": "grass",
-    "name": "Grass"
+    "name": "Grass",
+    "pair": "GRASS/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:GRASSUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/GRASS-USD",
+    "updatedAt": "2026-10-30T20:08:23.775Z"
   },
   {
     "id": "grass-2",
@@ -43602,7 +44037,12 @@
   {
     "id": "gusd",
     "symbol": "gusd",
-    "name": "GUSD"
+    "name": "GUSD",
+    "pair": "GUSD/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:GUSDUSDT",
+    "tradeUrl": "https://www.gate.com/trade/GUSD_USDT",
+    "updatedAt": "2026-10-30T20:11:30.723Z"
   },
   {
     "id": "gut-says",
@@ -44277,7 +44717,12 @@
   {
     "id": "hash-2",
     "symbol": "hash",
-    "name": "Provenance Blockchain"
+    "name": "Provenance Blockchain",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:08:17.763Z"
   },
   {
     "id": "hashai",
@@ -44327,7 +44772,12 @@
   {
     "id": "hashnote-usyc",
     "symbol": "usyc",
-    "name": "Circle USYC"
+    "name": "Circle USYC",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T19:46:51.459Z"
   },
   {
     "id": "hashpack",
@@ -44642,7 +45092,12 @@
   {
     "id": "hedera-hashgraph",
     "symbol": "hbar",
-    "name": "Hedera"
+    "name": "Hedera",
+    "pair": "HBAR/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:HBARUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/HBAR_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:29.340Z"
   },
   {
     "id": "hedera-liquity",
@@ -46507,7 +46962,12 @@
   {
     "id": "htx-dao",
     "symbol": "htx",
-    "name": "HTX DAO"
+    "name": "HTX DAO",
+    "pair": "HTX/USDT",
+    "exchange": "BYBIT",
+    "tradingViewSymbol": "BYBIT:HTXUSDT",
+    "tradeUrl": "https://www.bybit.com/trade/spot/HTX/USDT",
+    "updatedAt": "2026-10-30T20:06:35.359Z"
   },
   {
     "id": "hua-hua",
@@ -47192,7 +47652,12 @@
   {
     "id": "hyperliquid",
     "symbol": "hype",
-    "name": "Hyperliquid"
+    "name": "Hyperliquid",
+    "pair": "HYPE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:HYPEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/HYPE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:45.176Z"
   },
   {
     "id": "hyperliquid-strategies-backpack-securities",
@@ -48562,7 +49027,12 @@
   {
     "id": "injective-protocol",
     "symbol": "inj",
-    "name": "Injective"
+    "name": "Injective",
+    "pair": "INJ/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:INJUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/INJ_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:17.559Z"
   },
   {
     "id": "injective-quants",
@@ -48772,7 +49242,12 @@
   {
     "id": "instadapp",
     "symbol": "fluid",
-    "name": "Fluid"
+    "name": "Fluid",
+    "pair": "FLUID/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:FLUIDUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/FLUID-USD",
+    "updatedAt": "2026-10-30T20:11:14.713Z"
   },
   {
     "id": "instadapp-dai",
@@ -49062,7 +49537,12 @@
   {
     "id": "internet-computer",
     "symbol": "icp",
-    "name": "Internet Computer"
+    "name": "Internet Computer",
+    "pair": "ICP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ICPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ICP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:37.367Z"
   },
   {
     "id": "internet-doge",
@@ -49512,7 +49992,12 @@
   {
     "id": "iota",
     "symbol": "iota",
-    "name": "IOTA"
+    "name": "IOTA",
+    "pair": "IOTA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:IOTAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/IOTA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:30.524Z"
   },
   {
     "id": "iota-2",
@@ -50857,7 +51342,12 @@
   {
     "id": "janus-henderson-anemoy-aaa-clo-fund",
     "symbol": "jaaa",
-    "name": "Janus Henderson Anemoy AAA CLO Fund"
+    "name": "Janus Henderson Anemoy AAA CLO Fund",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:07:37.600Z"
   },
   {
     "id": "janus-henderson-anemoy-treasury-fund",
@@ -50927,7 +51417,12 @@
   {
     "id": "jasmycoin",
     "symbol": "jasmy",
-    "name": "JasmyCoin"
+    "name": "JasmyCoin",
+    "pair": "JASMY/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:JASMYUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/JASMY_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:28.586Z"
   },
   {
     "id": "jason-derulo",
@@ -51297,7 +51792,12 @@
   {
     "id": "jito-governance-token",
     "symbol": "jto",
-    "name": "Jito"
+    "name": "Jito",
+    "pair": "JTO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:JTOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/JTO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:16.434Z"
   },
   {
     "id": "jito-staked-sol",
@@ -51617,7 +52117,12 @@
   {
     "id": "jpycoin",
     "symbol": "jpyc",
-    "name": "JPY Coin"
+    "name": "JPY Coin",
+    "pair": "JPYC/USDT",
+    "exchange": "POLONIEX",
+    "tradingViewSymbol": "POLONIEX:JPYCUSDT",
+    "tradeUrl": "https://poloniex.com/trade/JPYC_USDT/?type=spot",
+    "updatedAt": "2026-10-30T20:11:58.859Z"
   },
   {
     "id": "jpysc",
@@ -51777,7 +52282,12 @@
   {
     "id": "jupiter-exchange-solana",
     "symbol": "jup",
-    "name": "Jupiter"
+    "name": "Jupiter",
+    "pair": "JUP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:JUPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/JUP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:07.550Z"
   },
   {
     "id": "jupiter-meta-data-token",
@@ -51827,7 +52337,12 @@
   {
     "id": "just",
     "symbol": "jst",
-    "name": "JUST"
+    "name": "JUST",
+    "pair": "JST/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:JSTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/JST_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:49.460Z"
   },
   {
     "id": "just-a-based-guy",
@@ -52172,7 +52687,12 @@
   {
     "id": "kaia",
     "symbol": "kaia",
-    "name": "Kaia"
+    "name": "Kaia",
+    "pair": "KAIA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:KAIAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/KAIA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:54.128Z"
   },
   {
     "id": "kaia-bridged-usdt-kaia",
@@ -52312,7 +52832,12 @@
   {
     "id": "kamino",
     "symbol": "kmno",
-    "name": "Kamino"
+    "name": "Kamino",
+    "pair": "KMNO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:KMNOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/KMNO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:24.506Z"
   },
   {
     "id": "kamiyo",
@@ -52477,7 +53002,12 @@
   {
     "id": "kaspa",
     "symbol": "kas",
-    "name": "Kaspa"
+    "name": "Kaspa",
+    "pair": "KAS/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:KASUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/KAS-USD",
+    "updatedAt": "2026-10-30T20:06:59.472Z"
   },
   {
     "id": "kasper",
@@ -53232,12 +53762,22 @@
   {
     "id": "kinesis-gold",
     "symbol": "kau",
-    "name": "Kinesis Gold"
+    "name": "Kinesis Gold",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:08:37.822Z"
   },
   {
     "id": "kinesis-silver",
     "symbol": "kag",
-    "name": "Kinesis Silver"
+    "name": "Kinesis Silver",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:10:40.531Z"
   },
   {
     "id": "kinesis-velocity-token",
@@ -53257,7 +53797,12 @@
   {
     "id": "kinetiq",
     "symbol": "kntq",
-    "name": "Kinetiq"
+    "name": "Kinetiq",
+    "pair": "KNTQ/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:KNTQUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/KNTQ-USD",
+    "updatedAt": "2026-10-30T20:11:02.598Z"
   },
   {
     "id": "kinetiq-earn-vault",
@@ -53422,7 +53967,12 @@
   {
     "id": "kite-2",
     "symbol": "kite",
-    "name": "Kite"
+    "name": "Kite",
+    "pair": "KITE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:KITEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/KITE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:22.052Z"
   },
   {
     "id": "kiteai",
@@ -54427,7 +54977,12 @@
   {
     "id": "kucoin-shares",
     "symbol": "kcs",
-    "name": "KuCoin"
+    "name": "KuCoin",
+    "pair": "KCS/USDT",
+    "exchange": "BYBIT",
+    "tradingViewSymbol": "BYBIT:KCSUSDT",
+    "tradeUrl": "https://www.bybit.com/trade/spot/KCS/USDT",
+    "updatedAt": "2026-10-30T20:06:55.474Z"
   },
   {
     "id": "kudai",
@@ -55287,7 +55842,12 @@
   {
     "id": "layerzero",
     "symbol": "zro",
-    "name": "LayerZero"
+    "name": "LayerZero",
+    "pair": "ZRO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ZROUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ZRO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:23.635Z"
   },
   {
     "id": "layerzero-bridged-pyusd0",
@@ -55732,7 +56292,12 @@
   {
     "id": "leo-token",
     "symbol": "leo",
-    "name": "LEO Token"
+    "name": "LEO Token",
+    "pair": "LEO/USDT",
+    "exchange": "OKX",
+    "tradingViewSymbol": "OKX:LEOUSDT",
+    "tradeUrl": "https://www.okx.com/trade-spot/leo-usdt",
+    "updatedAt": "2026-10-30T19:45:57.264Z"
   },
   {
     "id": "leox",
@@ -56092,7 +56657,12 @@
   {
     "id": "lido-dao",
     "symbol": "ldo",
-    "name": "Lido DAO"
+    "name": "Lido DAO",
+    "pair": "LDO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:LDOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/LDO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:11.951Z"
   },
   {
     "id": "lido-earn-eth",
@@ -56197,7 +56767,12 @@
   {
     "id": "lighter",
     "symbol": "lit",
-    "name": "Lighter"
+    "name": "Lighter",
+    "pair": "LIGHTER/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:LIGHTERUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/LIGHTER-USD",
+    "updatedAt": "2026-10-30T20:07:21.558Z"
   },
   {
     "id": "lighthouse",
@@ -56897,7 +57472,12 @@
   {
     "id": "litecoin",
     "symbol": "ltc",
-    "name": "Litecoin"
+    "name": "Litecoin",
+    "pair": "LTC/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:LTCUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/LTC_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:17.356Z"
   },
   {
     "id": "litecoin-mascot",
@@ -59187,7 +59767,12 @@
   {
     "id": "mantle",
     "symbol": "mnt",
-    "name": "Mantle"
+    "name": "Mantle",
+    "pair": "MANTLE/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:MANTLEUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/MANTLE-USD",
+    "updatedAt": "2026-10-30T20:06:27.321Z"
   },
   {
     "id": "mantle-bridged-usdc-mantle",
@@ -60657,7 +61242,12 @@
   {
     "id": "memecore",
     "symbol": "m",
-    "name": "MemeCore"
+    "name": "MemeCore",
+    "pair": "M/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:MUSDT",
+    "tradeUrl": "https://www.gate.com/trade/M_USDT",
+    "updatedAt": "2026-10-30T19:46:55.429Z"
   },
   {
     "id": "memecycle",
@@ -61507,7 +62097,12 @@
   {
     "id": "meteora",
     "symbol": "met",
-    "name": "Meteora"
+    "name": "Meteora",
+    "pair": "MET/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:METUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/MET_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:10.652Z"
   },
   {
     "id": "meteor-coin",
@@ -62052,7 +62647,12 @@
   {
     "id": "midas-fasanara-global-open",
     "symbol": "mglo",
-    "name": "Midas Fasanara Global Open"
+    "name": "Midas Fasanara Global Open",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:10:26.494Z"
   },
   {
     "id": "midas-fasanara-one-solana",
@@ -62202,7 +62802,12 @@
   {
     "id": "midnight-3",
     "symbol": "night",
-    "name": "Midnight"
+    "name": "Midnight",
+    "pair": "NIGHT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:NIGHTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/NIGHT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:25.562Z"
   },
   {
     "id": "midterm-elections",
@@ -63487,7 +64092,12 @@
   {
     "id": "monad",
     "symbol": "mon",
-    "name": "Monad"
+    "name": "Monad",
+    "pair": "MON/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:MONUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/MON-USD",
+    "updatedAt": "2026-10-30T20:09:38.076Z"
   },
   {
     "id": "monark",
@@ -63547,7 +64157,12 @@
   {
     "id": "monero",
     "symbol": "xmr",
-    "name": "Monero"
+    "name": "Monero",
+    "pair": "XMR/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:XMRUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/XMR-USD",
+    "updatedAt": "2026-10-30T19:45:51.204Z"
   },
   {
     "id": "monero-chan",
@@ -64327,7 +64942,12 @@
   {
     "id": "morpho",
     "symbol": "morpho",
-    "name": "Morpho"
+    "name": "Morpho",
+    "pair": "MORPHO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:MORPHOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/MORPHO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:33.330Z"
   },
   {
     "id": "morpho-2",
@@ -65227,7 +65847,12 @@
   {
     "id": "mx-token",
     "symbol": "mx",
-    "name": "MX"
+    "name": "MX",
+    "pair": "MX/USDT",
+    "exchange": "BYBIT",
+    "tradingViewSymbol": "BYBIT:MXUSDT",
+    "tradeUrl": "https://www.bybit.com/trade/spot/MX/USDT",
+    "updatedAt": "2026-10-30T20:11:38.733Z"
   },
   {
     "id": "mxy6900",
@@ -65917,7 +66542,12 @@
   {
     "id": "near",
     "symbol": "near",
-    "name": "NEAR Protocol"
+    "name": "NEAR Protocol",
+    "pair": "NEAR/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:NEARUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/NEAR_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:07.278Z"
   },
   {
     "id": "near20-yield-strategy",
@@ -66207,7 +66837,12 @@
   {
     "id": "neo",
     "symbol": "neo",
-    "name": "NEO"
+    "name": "NEO",
+    "pair": "NEO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:NEOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/NEO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:46.872Z"
   },
   {
     "id": "neon",
@@ -66977,7 +67612,12 @@
   {
     "id": "nexo",
     "symbol": "nexo",
-    "name": "NEXO"
+    "name": "NEXO",
+    "pair": "NEXO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:NEXOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/NEXO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:13.653Z"
   },
   {
     "id": "nexora",
@@ -69317,7 +69957,12 @@
   {
     "id": "official-trump",
     "symbol": "trump",
-    "name": "Official Trump"
+    "name": "Official Trump",
+    "pair": "TRUMP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:TRUMPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/TRUMP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:19.753Z"
   },
   {
     "id": "official-usa-token",
@@ -69482,7 +70127,12 @@
   {
     "id": "okb",
     "symbol": "okb",
-    "name": "OKB"
+    "name": "OKB",
+    "pair": "OKB/USDT",
+    "exchange": "OKX",
+    "tradingViewSymbol": "OKX:OKBUSDT",
+    "tradeUrl": "https://www.okx.com/trade-spot/okb-usdt",
+    "updatedAt": "2026-10-30T19:46:53.435Z"
   },
   {
     "id": "okbet",
@@ -69642,7 +70292,12 @@
   {
     "id": "olympus",
     "symbol": "ohm",
-    "name": "Olympus"
+    "name": "Olympus",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:09:03.939Z"
   },
   {
     "id": "olympus-v1",
@@ -69932,7 +70587,12 @@
   {
     "id": "ondo-finance",
     "symbol": "ondo",
-    "name": "Ondo"
+    "name": "Ondo",
+    "pair": "ONDO/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ONDOUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ONDO_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:47:05.484Z"
   },
   {
     "id": "ondo-high-growth-powered-by-blackrock",
@@ -69957,7 +70617,12 @@
   {
     "id": "ondo-us-dollar-yield",
     "symbol": "usdy",
-    "name": "Ondo US Dollar Yield"
+    "name": "Ondo US Dollar Yield",
+    "pair": "USDY/USDT",
+    "exchange": "BYBIT",
+    "tradingViewSymbol": "BYBIT:USDYUSDT",
+    "tradeUrl": "https://www.bybit.com/trade/spot/USDY/USDT",
+    "updatedAt": "2026-10-30T19:46:49.410Z"
   },
   {
     "id": "one",
@@ -69971,7 +70636,7 @@
   },
   {
     "id": "onecow",
-    "symbol": " 1cow",
+    "symbol": "1cow",
     "name": "OneCOW"
   },
   {
@@ -70527,7 +71192,12 @@
   {
     "id": "open-usd",
     "symbol": "ousd",
-    "name": "Open USD"
+    "name": "Open USD",
+    "pair": "OUSD/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:OUSDUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/OUSD-USD",
+    "updatedAt": "2026-10-30T20:07:01.513Z"
   },
   {
     "id": "openusdt",
@@ -70672,7 +71342,12 @@
   {
     "id": "optimism",
     "symbol": "op",
-    "name": "Optimism"
+    "name": "Optimism",
+    "pair": "OP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:OPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/OP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:18.016Z"
   },
   {
     "id": "optimistic-general-intelligence",
@@ -71152,7 +71827,12 @@
   {
     "id": "origintrail",
     "symbol": "trac",
-    "name": "OriginTrail"
+    "name": "OriginTrail",
+    "pair": "TRAC/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:TRACUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/TRAC-USD",
+    "updatedAt": "2026-10-30T20:11:22.703Z"
   },
   {
     "id": "origyn-foundation",
@@ -71402,7 +72082,12 @@
   {
     "id": "ousg",
     "symbol": "ousg",
-    "name": "Ondo Short-Term U.S. Government Bond Fund"
+    "name": "Ondo Short-Term U.S. Government Bond Fund",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:08:49.883Z"
   },
   {
     "id": "ouster-inc-robinhood-token",
@@ -72032,7 +72717,12 @@
   {
     "id": "pancakeswap-token",
     "symbol": "cake",
-    "name": "PancakeSwap"
+    "name": "PancakeSwap",
+    "pair": "CAKE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:CAKEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/CAKE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:27.558Z"
   },
   {
     "id": "panda-academy",
@@ -72577,7 +73267,12 @@
   {
     "id": "pax-gold",
     "symbol": "paxg",
-    "name": "PAX Gold"
+    "name": "PAX Gold",
+    "pair": "PAXG/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:PAXGUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/PAXG_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:15.293Z"
   },
   {
     "id": "paxgy",
@@ -72682,7 +73377,12 @@
   {
     "id": "paypal-usd",
     "symbol": "pyusd",
-    "name": "PayPal USD"
+    "name": "PayPal USD",
+    "pair": "PYUSD/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:PYUSDUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/PYUSD-USD",
+    "updatedAt": "2026-10-30T19:46:35.524Z"
   },
   {
     "id": "paypal-xstock",
@@ -72877,7 +73577,12 @@
   {
     "id": "pearl-2",
     "symbol": "pearl",
-    "name": "Pearl"
+    "name": "Pearl",
+    "pair": "PEARL/USDT",
+    "exchange": "GATEIO",
+    "tradingViewSymbol": "GATEIO:PEARLUSDT",
+    "tradeUrl": "https://www.gate.com/trade/PEARL_USDT",
+    "updatedAt": "2026-10-30T20:07:43.651Z"
   },
   {
     "id": "pear-protocol",
@@ -73042,7 +73747,12 @@
   {
     "id": "pendle",
     "symbol": "pendle",
-    "name": "Pendle"
+    "name": "Pendle",
+    "pair": "PENDLE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:PENDLEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/PENDLE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:53.914Z"
   },
   {
     "id": "pendulum-chain",
@@ -73222,7 +73932,12 @@
   {
     "id": "pepe",
     "symbol": "pepe",
-    "name": "Pepe"
+    "name": "Pepe",
+    "pair": "PEPE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:PEPEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/PEPE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:59.438Z"
   },
   {
     "id": "pepe-0x69-on-base",
@@ -74332,7 +75047,12 @@
   {
     "id": "pieverse",
     "symbol": "pieverse",
-    "name": "Pieverse"
+    "name": "Pieverse",
+    "pair": "PIEVERSE/USDT",
+    "exchange": "BYBIT",
+    "tradingViewSymbol": "BYBIT:PIEVERSEUSDT",
+    "tradeUrl": "https://www.bybit.com/trade/spot/PIEVERSE/USDT",
+    "updatedAt": "2026-10-30T20:09:13.987Z"
   },
   {
     "id": "pig",
@@ -74507,7 +75227,12 @@
   {
     "id": "pi-network",
     "symbol": "pi",
-    "name": "Pi Network"
+    "name": "Pi Network",
+    "pair": "PI/USDT",
+    "exchange": "OKX",
+    "tradingViewSymbol": "OKX:PIUSDT",
+    "tradeUrl": "https://www.okx.com/trade-spot/pi-usdt",
+    "updatedAt": "2026-10-30T20:07:03.499Z"
   },
   {
     "id": "pi-network-dog",
@@ -75002,7 +75727,12 @@
   {
     "id": "plasma",
     "symbol": "xpl",
-    "name": "Plasma"
+    "name": "Plasma",
+    "pair": "XPL/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:XPLUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/XPL_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:29.810Z"
   },
   {
     "id": "plasma-finance",
@@ -75597,7 +76327,12 @@
   {
     "id": "polkadot",
     "symbol": "dot",
-    "name": "Polkadot"
+    "name": "Polkadot",
+    "pair": "DOT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:DOTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/DOT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:19.320Z"
   },
   {
     "id": "polkafoundry",
@@ -75757,7 +76492,12 @@
   {
     "id": "polygon-ecosystem-token",
     "symbol": "pol",
-    "name": "POL (ex-MATIC)"
+    "name": "POL (ex-MATIC)",
+    "pair": "POL/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:POLUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/POL_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:53.435Z"
   },
   {
     "id": "polygonfarm-finance",
@@ -75992,7 +76732,12 @@
   {
     "id": "pons",
     "symbol": "pons",
-    "name": "Pons"
+    "name": "Pons",
+    "pair": "PONS/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:PONSUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/PONS-USD",
+    "updatedAt": "2026-10-30T20:11:07.019Z"
   },
   {
     "id": "ponsancoin",
@@ -77607,7 +78352,12 @@
   {
     "id": "pudgy-penguins",
     "symbol": "pengu",
-    "name": "Pudgy Penguins"
+    "name": "Pudgy Penguins",
+    "pair": "PENGU/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:PENGUUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/PENGU_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:13.755Z"
   },
   {
     "id": "pudgystrategy",
@@ -77857,7 +78607,12 @@
   {
     "id": "pump-fun",
     "symbol": "pump",
-    "name": "Pump.fun"
+    "name": "Pump.fun",
+    "pair": "PUMP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:PUMPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/PUMP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:09.291Z"
   },
   {
     "id": "pumpfun-pepe",
@@ -78297,7 +79052,12 @@
   {
     "id": "pyth-network",
     "symbol": "pyth",
-    "name": "Pyth Network"
+    "name": "Pyth Network",
+    "pair": "PYTH/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:PYTHUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/PYTH_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:05.722Z"
   },
   {
     "id": "pyth-usdc",
@@ -78477,7 +79237,12 @@
   {
     "id": "quack-ai",
     "symbol": "q",
-    "name": "Quack AI"
+    "name": "Quack AI",
+    "pair": "Q/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:QUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/Q-USD",
+    "updatedAt": "2026-10-30T20:09:56.154Z"
   },
   {
     "id": "quacks",
@@ -78612,7 +79377,12 @@
   {
     "id": "quant-network",
     "symbol": "qnt",
-    "name": "Quant"
+    "name": "Quant",
+    "pair": "QNT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:QNTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/QNT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:39.390Z"
   },
   {
     "id": "quanto",
@@ -79222,7 +79992,12 @@
   {
     "id": "railgun",
     "symbol": "rail",
-    "name": "Railgun"
+    "name": "Railgun",
+    "pair": "RAIL/USDT",
+    "exchange": "MEXC",
+    "tradingViewSymbol": "MEXC:RAILUSDT",
+    "tradeUrl": "https://www.mexc.com/exchange/RAIL_USDT",
+    "updatedAt": "2026-10-30T20:11:52.809Z"
   },
   {
     "id": "rails",
@@ -79232,7 +80007,12 @@
   {
     "id": "rain",
     "symbol": "rain",
-    "name": "Rain"
+    "name": "Rain",
+    "pair": "RAIN/USDT",
+    "exchange": "KUCOIN",
+    "tradingViewSymbol": "KUCOIN:RAINUSDT",
+    "tradeUrl": "https://www.kucoin.com/trade/RAIN-USDT",
+    "updatedAt": "2026-10-30T19:46:13.300Z"
   },
   {
     "id": "rainbow-3-2",
@@ -79637,7 +80417,12 @@
   {
     "id": "raydium",
     "symbol": "ray",
-    "name": "Raydium"
+    "name": "Raydium",
+    "pair": "RAY/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:RAYUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/RAY_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:21.823Z"
   },
   {
     "id": "raydium-cat",
@@ -80672,7 +81457,12 @@
   {
     "id": "render-token",
     "symbol": "render",
-    "name": "Render"
+    "name": "Render",
+    "pair": "RENDER/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:RENDERUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/RENDER_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:11.516Z"
   },
   {
     "id": "renewable-energy",
@@ -80807,7 +81597,12 @@
   {
     "id": "re-protocol-reusd",
     "symbol": "reusd",
-    "name": "Re Protocol reUSD"
+    "name": "Re Protocol reUSD",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:08:31.816Z"
   },
   {
     "id": "re-protocol-reusde",
@@ -81717,7 +82512,12 @@
   {
     "id": "ripple",
     "symbol": "xrp",
-    "name": "XRP"
+    "name": "XRP",
+    "pair": "XRP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:XRPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/XRP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:35.199Z"
   },
   {
     "id": "ripplebids",
@@ -81732,7 +82532,12 @@
   {
     "id": "ripple-usd",
     "symbol": "rlusd",
-    "name": "Ripple USD"
+    "name": "Ripple USD",
+    "pair": "RLUSD/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:RLUSDUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/RLUSD_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:47.366Z"
   },
   {
     "id": "rips",
@@ -83677,7 +84482,12 @@
   {
     "id": "safo",
     "symbol": "safo",
-    "name": "Spiko Amundi Overnight Swap Fund"
+    "name": "Spiko Amundi Overnight Swap Fund",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:09:30.054Z"
   },
   {
     "id": "safrochain-saf-token",
@@ -85172,7 +85982,12 @@
   {
     "id": "sei-network",
     "symbol": "sei",
-    "name": "Sei"
+    "name": "Sei",
+    "pair": "SEI/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SEIUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SEI_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:47.855Z"
   },
   {
     "id": "sei-staked-fastusd",
@@ -85427,7 +86242,12 @@
   {
     "id": "sentient",
     "symbol": "sent",
-    "name": "Sentient"
+    "name": "Sentient",
+    "pair": "SENT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SENTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SENT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:44.782Z"
   },
   {
     "id": "sentient-ai",
@@ -86087,7 +86907,12 @@
   {
     "id": "shiba-inu",
     "symbol": "shib",
-    "name": "Shiba Inu"
+    "name": "Shiba Inu",
+    "pair": "SHIB/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SHIBUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SHIB_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:37.336Z"
   },
   {
     "id": "shiba-inu-empire",
@@ -86647,7 +87472,12 @@
   {
     "id": "shuffle-2",
     "symbol": "shfl",
-    "name": "Shuffle"
+    "name": "Shuffle",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:09:50.115Z"
   },
   {
     "id": "shuffle-3",
@@ -87457,7 +88287,12 @@
   {
     "id": "sky",
     "symbol": "sky",
-    "name": "Sky"
+    "name": "Sky",
+    "pair": "SKY/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SKYUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SKY_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:25.303Z"
   },
   {
     "id": "sky0",
@@ -88287,7 +89122,12 @@
   {
     "id": "societe-generale-forge-eurcv",
     "symbol": "eurcv",
-    "name": "EUR CoinVertible"
+    "name": "EUR CoinVertible",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:10:18.445Z"
   },
   {
     "id": "sock",
@@ -88357,7 +89197,12 @@
   {
     "id": "sofiusd",
     "symbol": "sofid",
-    "name": "SoFiUSD"
+    "name": "SoFiUSD",
+    "pair": "SOFID/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:SOFIDUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/SOFID-USD",
+    "updatedAt": "2026-10-30T20:09:02.054Z"
   },
   {
     "id": "soft-dao",
@@ -88452,7 +89297,12 @@
   {
     "id": "solana",
     "symbol": "sol",
-    "name": "Solana"
+    "name": "Solana",
+    "pair": "SOL/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SOLUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SOL_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:39.199Z"
   },
   {
     "id": "solana-beach",
@@ -88532,7 +89382,7 @@
   {
     "id": "solana-shib",
     "symbol": "sshib",
-    "name": "Solana Shib "
+    "name": "Solana Shib"
   },
   {
     "id": "solana-social-explorer",
@@ -89287,7 +90137,12 @@
   {
     "id": "sonic-3",
     "symbol": "s",
-    "name": "Sonic"
+    "name": "Sonic",
+    "pair": "S/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/S_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:04.614Z"
   },
   {
     "id": "sonic-bridged-usdt-sonic",
@@ -89837,7 +90692,12 @@
   {
     "id": "spacex-bstocks-tokenized-stock",
     "symbol": "spcxb",
-    "name": "SpaceX (bStocks Tokenized Stock)"
+    "name": "SpaceX (bStocks Tokenized Stock)",
+    "pair": "SPCXB/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SPCXBUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SPCXB_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:52.547Z"
   },
   {
     "id": "spacex-coinbase-tokenized-stock",
@@ -90337,7 +91197,12 @@
   {
     "id": "spiko-amundi-overnight-swap-fund-eur",
     "symbol": "eursafo",
-    "name": "Spiko Amundi Overnight Swap Fund (EUR)"
+    "name": "Spiko Amundi Overnight Swap Fund (EUR)",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:06:11.307Z"
   },
   {
     "id": "spiko-amundi-overnight-swap-fund-gbp",
@@ -90362,7 +91227,12 @@
   {
     "id": "spiko-us-t-bills-money-market-fund",
     "symbol": "ustbl",
-    "name": "Spiko US T-Bills Money Market Fund"
+    "name": "Spiko US T-Bills Money Market Fund",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:10:54.563Z"
   },
   {
     "id": "spinedao-token",
@@ -90687,7 +91557,12 @@
   {
     "id": "spx6900",
     "symbol": "spx",
-    "name": "SPX6900"
+    "name": "SPX6900",
+    "pair": "SPX/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:SPXUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/SPX-USD",
+    "updatedAt": "2026-10-30T20:08:43.881Z"
   },
   {
     "id": "spx6900-2-0",
@@ -90822,7 +91697,12 @@
   {
     "id": "stable-2",
     "symbol": "stable",
-    "name": "​​Stable"
+    "name": "​​Stable",
+    "pair": "STABLE/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:STABLEUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/STABLE-USD",
+    "updatedAt": "2026-10-30T20:08:07.721Z"
   },
   {
     "id": "stable-3",
@@ -91557,7 +92437,12 @@
   {
     "id": "starknet",
     "symbol": "strk",
-    "name": "Starknet"
+    "name": "Starknet",
+    "pair": "STRK/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:STRKUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/STRK_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:39.858Z"
   },
   {
     "id": "starknet-brother",
@@ -91957,7 +92842,12 @@
   {
     "id": "stellar",
     "symbol": "xlm",
-    "name": "Stellar"
+    "name": "Stellar",
+    "pair": "XLM/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:XLMUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/XLM_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:03.251Z"
   },
   {
     "id": "stellar-synthetic-usd",
@@ -92552,7 +93442,12 @@
   {
     "id": "strategy-pp-variable-xstock",
     "symbol": "strcx",
-    "name": "Strategy PP Variable xStock"
+    "name": "Strategy PP Variable xStock",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:11:16.650Z"
   },
   {
     "id": "strategy-punks",
@@ -93052,7 +93947,12 @@
   {
     "id": "sui",
     "symbol": "sui",
-    "name": "Sui"
+    "name": "Sui",
+    "pair": "SUI/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SUIUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SUI_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:25.292Z"
   },
   {
     "id": "suia",
@@ -93347,7 +94247,12 @@
   {
     "id": "sun-token",
     "symbol": "sun",
-    "name": "Sun Token"
+    "name": "Sun Token",
+    "pair": "SUN/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SUNUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SUN_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:51.874Z"
   },
   {
     "id": "sun-tzu",
@@ -93697,7 +94602,12 @@
   {
     "id": "superstate-short-duration-us-government-securities-fund-ustb",
     "symbol": "ustb",
-    "name": "Invesco Short Duration US Government Securities Fund"
+    "name": "Invesco Short Duration US Government Securities Fund",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:07:29.653Z"
   },
   {
     "id": "superstate-uscc",
@@ -94102,7 +95012,12 @@
   {
     "id": "swissborg",
     "symbol": "borg",
-    "name": "SwissBorg"
+    "name": "SwissBorg",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:11:32.714Z"
   },
   {
     "id": "swisscheese",
@@ -94452,7 +95367,12 @@
   {
     "id": "syrup",
     "symbol": "syrup",
-    "name": "Maple Finance"
+    "name": "Maple Finance",
+    "pair": "SYRUP/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SYRUPUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SYRUP_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:44.556Z"
   },
   {
     "id": "syrupusdc",
@@ -95777,7 +96697,12 @@
   {
     "id": "terra-luna",
     "symbol": "lunc",
-    "name": "Terra Luna Classic"
+    "name": "Terra Luna Classic",
+    "pair": "LUNC/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:LUNCUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/LUNC_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:28.017Z"
   },
   {
     "id": "terra-luna-2",
@@ -95932,7 +96857,12 @@
   {
     "id": "tether",
     "symbol": "usdt",
-    "name": "Tether"
+    "name": "Tether",
+    "pair": "BTC/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:BTCUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/BTC_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:31.154Z"
   },
   {
     "id": "tether-avalanche-bridged-usdt-e",
@@ -95952,7 +96882,12 @@
   {
     "id": "tether-gold",
     "symbol": "xaut",
-    "name": "Tether Gold"
+    "name": "Tether Gold",
+    "pair": "XAUT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:XAUTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/XAUT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:31.338Z"
   },
   {
     "id": "tether-gold-tokens",
@@ -96087,7 +97022,12 @@
   {
     "id": "tezos",
     "symbol": "xtz",
-    "name": "Tezos"
+    "name": "Tezos",
+    "pair": "XTZ/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:XTZUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/XTZ_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:05.916Z"
   },
   {
     "id": "tezos-domains",
@@ -96767,7 +97707,12 @@
   {
     "id": "the-graph",
     "symbol": "grt",
-    "name": "The Graph"
+    "name": "The Graph",
+    "pair": "GRT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:GRTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/GRT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:46.092Z"
   },
   {
     "id": "the-grays-currency",
@@ -97192,7 +98137,12 @@
   {
     "id": "the-open-network",
     "symbol": "gram",
-    "name": "Gram (prev. Toncoin)"
+    "name": "Gram (prev. Toncoin)",
+    "pair": "GRAM/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:GRAMUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/GRAM_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:27.306Z"
   },
   {
     "id": "the-orange-era",
@@ -97412,7 +98362,12 @@
   {
     "id": "the-sandbox",
     "symbol": "sand",
-    "name": "The Sandbox"
+    "name": "The Sandbox",
+    "pair": "SAND/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:SANDUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/SAND_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:56.841Z"
   },
   {
     "id": "the-sandbox-wormhole",
@@ -97577,7 +98532,12 @@
   {
     "id": "theta-token",
     "symbol": "theta",
-    "name": "Theta Network"
+    "name": "Theta Network",
+    "pair": "THETA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:THETAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/THETA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:08.615Z"
   },
   {
     "id": "the-technology-select-sector-spdr-fund-rstock",
@@ -97917,7 +98877,12 @@
   {
     "id": "thorchain",
     "symbol": "rune",
-    "name": "THORChain"
+    "name": "THORChain",
+    "pair": "RUNE/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:RUNEUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/RUNE_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:09:58.125Z"
   },
   {
     "id": "thoreum-v2",
@@ -99277,7 +100242,12 @@
   {
     "id": "tradable-apac-diversified-finance-provider-sstn",
     "symbol": "pc0000033",
-    "name": "Tradable APAC Diversified Finance Provider SSTN"
+    "name": "Tradable APAC Diversified Finance Provider SSTN",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:11:00.609Z"
   },
   {
     "id": "tradable-eu-latam-pos-financing-sstl",
@@ -99297,7 +100267,12 @@
   {
     "id": "tradable-latam-fintech-sstn",
     "symbol": "pc0000097",
-    "name": "Tradable LatAm Fintech SSTN"
+    "name": "Tradable LatAm Fintech SSTN",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:12:02.845Z"
   },
   {
     "id": "tradable-latam-middle-market-lender-sstl",
@@ -99317,7 +100292,12 @@
   {
     "id": "tradable-na-rent-financing-platform-sstn",
     "symbol": "pc0000031",
-    "name": "Tradable NA Rent Financing Platform SSTN"
+    "name": "Tradable NA Rent Financing Platform SSTN",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:09:42.115Z"
   },
   {
     "id": "tradable-na-residential-real-estate-backed-credit-card-sstn",
@@ -99997,7 +100977,12 @@
   {
     "id": "tron",
     "symbol": "trx",
-    "name": "TRON"
+    "name": "TRON",
+    "pair": "TRX/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:TRXUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/TRX_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:41.220Z"
   },
   {
     "id": "tronbank",
@@ -100092,7 +101077,12 @@
   {
     "id": "true-usd",
     "symbol": "tusd",
-    "name": "TrueUSD"
+    "name": "TrueUSD",
+    "pair": "TUSD/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:TUSDUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/TUSD_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:59.668Z"
   },
   {
     "id": "trufin-staked-inj",
@@ -100307,7 +101297,12 @@
   {
     "id": "trust-wallet-token",
     "symbol": "twt",
-    "name": "Trust Wallet"
+    "name": "Trust Wallet",
+    "pair": "TWT/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:TWTUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/TWT_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:48.582Z"
   },
   {
     "id": "truth",
@@ -101227,7 +102222,12 @@
   {
     "id": "unibase",
     "symbol": "ub",
-    "name": "Unibase"
+    "name": "Unibase",
+    "pair": "UB/USDT",
+    "exchange": "KUCOIN",
+    "tradingViewSymbol": "KUCOIN:UBUSDT",
+    "tradeUrl": "https://www.kucoin.com/trade/UB-USDT",
+    "updatedAt": "2026-10-30T20:09:07.944Z"
   },
   {
     "id": "unibot",
@@ -101487,7 +102487,12 @@
   {
     "id": "uniswap",
     "symbol": "uni",
-    "name": "Uniswap"
+    "name": "Uniswap",
+    "pair": "UNI/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:UNIUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/UNI_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:15.243Z"
   },
   {
     "id": "uniswap-cat",
@@ -101657,7 +102662,12 @@
   {
     "id": "united-stables",
     "symbol": "u",
-    "name": "United Stables"
+    "name": "United Stables",
+    "pair": "U/USD",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:UUSD",
+    "tradeUrl": "https://www.binance.com/en/trade/U_USD?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:21.291Z"
   },
   {
     "id": "united-states-antimony-ondo-tokenized",
@@ -102297,7 +103307,12 @@
   {
     "id": "usa",
     "symbol": "usat",
-    "name": "USAT"
+    "name": "USAT",
+    "pair": "USAT/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:USATUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/USAT-USD",
+    "updatedAt": "2026-10-30T20:10:42.532Z"
   },
   {
     "id": "usacoin",
@@ -102412,7 +103427,12 @@
   {
     "id": "usd1-wlfi",
     "symbol": "usd1",
-    "name": "USD1"
+    "name": "USD1",
+    "pair": "USD1/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:USD1USDT",
+    "tradeUrl": "https://www.binance.com/en/trade/USD1_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:46:19.357Z"
   },
   {
     "id": "usd-2",
@@ -102442,7 +103462,12 @@
   {
     "id": "usdai",
     "symbol": "usdai",
-    "name": "USDai"
+    "name": "USDai",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:09:16.038Z"
   },
   {
     "id": "usd-arm-lp-token",
@@ -102467,7 +103492,12 @@
   {
     "id": "usd-coin",
     "symbol": "usdc",
-    "name": "USDC"
+    "name": "USDC",
+    "pair": "USDC/USD",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:USDCUSD",
+    "tradeUrl": "https://www.binance.com/en/trade/USDC_USD?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:37.160Z"
   },
   {
     "id": "usd-coin-avalanche-bridged-usdc-e",
@@ -102537,7 +103567,12 @@
   {
     "id": "usdd",
     "symbol": "usdd",
-    "name": "USDD"
+    "name": "USDD",
+    "pair": "USDD/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:USDDUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/USDD-USD",
+    "updatedAt": "2026-10-30T20:06:31.322Z"
   },
   {
     "id": "usd-dwin",
@@ -102597,7 +103632,12 @@
   {
     "id": "usdgo",
     "symbol": "usdgo",
-    "name": "USDGO"
+    "name": "USDGO",
+    "pair": "USDGO/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:USDGOUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/USDGO-USD",
+    "updatedAt": "2026-10-30T20:06:41.383Z"
   },
   {
     "id": "usdh",
@@ -102652,7 +103692,12 @@
   {
     "id": "usds",
     "symbol": "usds",
-    "name": "USDS"
+    "name": "USDS",
+    "pair": "USDS/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:USDSUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/USDS_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:53.198Z"
   },
   {
     "id": "usd-slash",
@@ -102747,7 +103792,12 @@
   {
     "id": "useless-3",
     "symbol": "useless",
-    "name": "Useless Coin"
+    "name": "Useless Coin",
+    "pair": "USELESS/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:USELESSUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/USELESS-USD",
+    "updatedAt": "2026-10-30T20:12:00.882Z"
   },
   {
     "id": "useless-coin",
@@ -102852,7 +103902,12 @@
   {
     "id": "usual-usd",
     "symbol": "usd0",
-    "name": "Usual USD"
+    "name": "Usual USD",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:07:45.618Z"
   },
   {
     "id": "usualx",
@@ -102867,7 +103922,12 @@
   {
     "id": "usx",
     "symbol": "usx",
-    "name": "USX"
+    "name": "USX",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:10:12.435Z"
   },
   {
     "id": "usx-2",
@@ -103452,7 +104512,12 @@
   {
     "id": "vaulta",
     "symbol": "a",
-    "name": "Vaulta"
+    "name": "Vaulta",
+    "pair": "A/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:AUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/A_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:11:54.815Z"
   },
   {
     "id": "vaultbags",
@@ -103542,7 +104607,12 @@
   {
     "id": "vechain",
     "symbol": "vet",
-    "name": "VeChain"
+    "name": "VeChain",
+    "pair": "VET/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:VETUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/VET_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:07:53.657Z"
   },
   {
     "id": "vecno",
@@ -103747,7 +104817,12 @@
   {
     "id": "venice-token",
     "symbol": "vvv",
-    "name": "Venice Token"
+    "name": "Venice Token",
+    "pair": "VVV/USD",
+    "exchange": "COINBASE",
+    "tradingViewSymbol": "COINBASE:VVVUSD",
+    "tradeUrl": "https://www.coinbase.com/advanced-trade/spot/VVV-USD",
+    "updatedAt": "2026-10-30T20:06:51.436Z"
   },
   {
     "id": "veno-bridged-ybusd",
@@ -104597,7 +105672,12 @@
   {
     "id": "virtual-protocol",
     "symbol": "virtual",
-    "name": "Virtuals Protocol"
+    "name": "Virtuals Protocol",
+    "pair": "VIRTUAL/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:VIRTUALUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/VIRTUAL_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:08:25.775Z"
   },
   {
     "id": "virtuals-ventures",
@@ -104687,7 +105767,12 @@
   {
     "id": "vision-3",
     "symbol": "vsn",
-    "name": "Vision"
+    "name": "Vision",
+    "pair": "VSN/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:VSNUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/VSN-USD",
+    "updatedAt": "2026-10-30T20:11:40.752Z"
   },
   {
     "id": "vision-5",
@@ -106772,7 +107857,12 @@
   {
     "id": "whitebit",
     "symbol": "wbt",
-    "name": "WhiteBIT Coin"
+    "name": "WhiteBIT Coin",
+    "pair": "WBT/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:WBTUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/WBT-USD",
+    "updatedAt": "2026-10-30T19:45:55.227Z"
   },
   {
     "id": "white-boy-summer",
@@ -107727,7 +108817,12 @@
   {
     "id": "worldcoin-wld",
     "symbol": "wld",
-    "name": "Worldcoin"
+    "name": "Worldcoin",
+    "pair": "WLD/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:WLDUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/WLD_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:29.294Z"
   },
   {
     "id": "world-collective-oil-reserve",
@@ -107747,7 +108842,12 @@
   {
     "id": "world-liberty-financial",
     "symbol": "wlfi",
-    "name": "World Liberty Financial"
+    "name": "World Liberty Financial",
+    "pair": "WLFI/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:WLFIUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/WLFI_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:06:23.332Z"
   },
   {
     "id": "world-licking-cat",
@@ -110077,7 +111177,12 @@
   {
     "id": "xdce-crowd-sale",
     "symbol": "xdc",
-    "name": "XDC Network"
+    "name": "XDC Network",
+    "pair": "XDC/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:XDCUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/XDC-USD",
+    "updatedAt": "2026-10-30T20:07:33.595Z"
   },
   {
     "id": "xdog",
@@ -111021,8 +112126,8 @@
   },
   {
     "id": "yee-3",
-    "symbol": "yee ",
-    "name": "YEE "
+    "symbol": "yee",
+    "name": "YEE"
   },
   {
     "id": "yeet",
@@ -111397,7 +112502,12 @@
   {
     "id": "ylds",
     "symbol": "ylds",
-    "name": "YLDS"
+    "name": "YLDS",
+    "pair": null,
+    "exchange": null,
+    "tradingViewSymbol": null,
+    "tradeUrl": null,
+    "updatedAt": "2026-10-30T20:08:01.742Z"
   },
   {
     "id": "yn",
@@ -111892,7 +113002,12 @@
   {
     "id": "zama",
     "symbol": "zama",
-    "name": "Zama"
+    "name": "Zama",
+    "pair": "ZAMA/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ZAMAUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ZAMA_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T20:10:50.567Z"
   },
   {
     "id": "zamica-token",
@@ -112022,7 +113137,12 @@
   {
     "id": "zcash",
     "symbol": "zec",
-    "name": "Zcash"
+    "name": "Zcash",
+    "pair": "ZEC/USDT",
+    "exchange": "BINANCE",
+    "tradingViewSymbol": "BINANCE:ZECUSDT",
+    "tradeUrl": "https://www.binance.com/en/trade/ZEC_USDT?ref=37754157",
+    "updatedAt": "2026-10-30T19:45:47.167Z"
   },
   {
     "id": "zcash-shielded-asset",
@@ -112067,7 +113187,12 @@
   {
     "id": "zebec-network",
     "symbol": "zbcn",
-    "name": "Zebec Network"
+    "name": "Zebec Network",
+    "pair": "ZBCN/USD",
+    "exchange": "KRAKEN",
+    "tradingViewSymbol": "KRAKEN:ZBCNUSD",
+    "tradeUrl": "https://pro.kraken.com/app/trade/ZBCN-USD",
+    "updatedAt": "2026-10-30T20:10:14.411Z"
   },
   {
     "id": "zebec-protocol",
@@ -113187,7 +114312,7 @@
   {
     "id": "zygoswap-io-rewards-token",
     "symbol": "zrw",
-    "name": "Zygoswap.io rewards token "
+    "name": "Zygoswap.io rewards token"
   },
   {
     "id": "zygo-the-frog",

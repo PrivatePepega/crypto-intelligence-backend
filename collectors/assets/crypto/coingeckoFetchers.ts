@@ -25,6 +25,8 @@ import { pathToFileURL } from "node:url";
  *   GET /search?query=ethereum
  *   GET /coins/{id}?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false
  *   GET /coins/markets?vs_currency=usd&ids=bitcoin,ethereum&price_change_percentage=24h,7d,30d
+ *   GET /coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1
+ *   GET /coins/{id}/tickers?exchange_ids=binance,gdax&order=volume_desc
  *   GET /coins/{id}/market_chart?vs_currency=usd&days=365
  *   GET /coins/{id}/ohlc?vs_currency=usd&days=30
  *
@@ -762,6 +764,45 @@ export interface CoinGeckoPingReport {
   geckoSays: string | null;
 }
 
+/**
+ * One market pair from `/coins/{id}/tickers`.
+ *
+ * `base`/`target` are the provider's symbols as reported, not normalized.
+ * `volumeUsd` is the provider's converted USD volume; the raw `volume` field is
+ * denominated in the base asset and is deliberately not used.
+ */
+export interface CoinGeckoMarketTicker {
+  exchangeId: string;
+  exchangeName: string;
+  base: string;
+  target: string;
+  tradeUrl: string | null;
+  volumeUsd: number | null;
+  trustScore: string | null;
+  lastTradedAt: string | null;
+  isAnomaly: boolean;
+  isStale: boolean;
+}
+
+export interface CoinGeckoCoinTickersReport {
+  source: "CoinGecko";
+  sourceUrl: string;
+  fetchedAt: string;
+  coingeckoId: string;
+  exchangeIds: string[];
+  count: number;
+  tickers: CoinGeckoMarketTicker[];
+}
+
+/** One page of `/coins/markets` ids, ordered by the requested field. */
+export interface CoinGeckoMarketIdsPage {
+  sourceUrl: string;
+  page: number;
+  perPage: number;
+  ids: string[];
+  hasMore: boolean;
+}
+
 // --------------------------------------------------
 // Normalizers (exported for tests)
 // --------------------------------------------------
@@ -1176,6 +1217,44 @@ export function normalizeSearchCandidates(payload: unknown): CoinGeckoSearchCand
   }
 
   return [...byId.values()];
+}
+
+/**
+ * Normalizes `/coins/{id}/tickers` rows.
+ *
+ * Rows without a market identifier, base or target are dropped: a pair cannot
+ * be mapped to an exchange without them. No pair is chosen here; that decision
+ * belongs to the ticker collector.
+ */
+export function normalizeCoinTickers(payload: unknown): CoinGeckoMarketTicker[] {
+  const rows: CoinGeckoMarketTicker[] = [];
+
+  for (const item of arrayAt(asJsonObject(payload), "tickers")) {
+    const record = asJsonObject(item);
+    const market = jsonObjectAt(record, "market");
+    const exchangeId = stringOrNull(market["identifier"]);
+    const base = stringOrNull(record["base"]);
+    const target = stringOrNull(record["target"]);
+
+    if (!exchangeId || !base || !target) {
+      continue;
+    }
+
+    rows.push({
+      exchangeId,
+      exchangeName: stringOrNull(market["name"]) ?? exchangeId,
+      base,
+      target,
+      tradeUrl: stringOrNull(record["trade_url"]),
+      volumeUsd: numberOrNull(jsonObjectAt(record, "converted_volume")["usd"]),
+      trustScore: stringOrNull(record["trust_score"]),
+      lastTradedAt: isoDateOrNull(record["last_traded_at"]),
+      isAnomaly: record["is_anomaly"] === true,
+      isStale: record["is_stale"] === true,
+    });
+  }
+
+  return rows;
 }
 
 // --------------------------------------------------
@@ -1673,6 +1752,104 @@ export async function fetchCoinGeckoMarkets(options: {
     missingIds: ids.filter((id) => !returnedIds.has(id)),
     count: snapshots.length,
     snapshots,
+  };
+}
+
+/**
+ * Fetches the market pairs for one coin.
+ *
+ * `exchangeIds` limits the response to exchanges the caller can map to
+ * TradingView, which keeps the payload small and avoids choosing a pair that
+ * has no TradingView listing. The provider returns at most 100 rows, so the
+ * result must not be treated as exhaustive.
+ */
+export async function fetchCoinGeckoCoinTickers(
+  id: string,
+  options: { exchangeIds?: string[] } = {},
+): Promise<CoinGeckoCoinTickersReport> {
+  const coingeckoId = assertNonEmptyId(id, "tickers");
+  const exchangeIds = uniqueIds(options.exchangeIds ?? []);
+  const fetchedAt = new Date().toISOString();
+
+  const { data, url } = await requestJson(
+    `/coins/${encodeURIComponent(coingeckoId)}/tickers`,
+    {
+      exchange_ids: exchangeIds.length > 0 ? exchangeIds.join(",") : undefined,
+      include_exchange_logo: "false",
+      order: "volume_desc",
+      depth: "false",
+    },
+    `tickers ${coingeckoId}`,
+  );
+
+  const tickers = normalizeCoinTickers(data);
+
+  return {
+    source: "CoinGecko",
+    sourceUrl: url,
+    fetchedAt,
+    coingeckoId,
+    exchangeIds,
+    count: tickers.length,
+    tickers,
+  };
+}
+
+/**
+ * Fetches one page of `/coins/markets` ids.
+ *
+ * The ticker collector walks these pages from the largest market cap downward,
+ * so it does not need to load every id before it starts enriching pairs.
+ */
+export async function fetchCoinGeckoMarketIdsPage(
+  options: {
+    page?: number;
+    perPage?: number;
+    vsCurrency?: string;
+    order?: "market_cap_desc" | "market_cap_asc" | "volume_desc" | "volume_asc";
+  } = {},
+): Promise<CoinGeckoMarketIdsPage> {
+  const page = options.page ?? 1;
+  if (!Number.isInteger(page) || page <= 0) {
+    throw new Error(`CoinGecko markets: page must be a positive integer, got ${page}.`);
+  }
+
+  const perPage = options.perPage ?? MAX_MARKET_BATCH_SIZE;
+  if (!Number.isInteger(perPage) || perPage <= 0 || perPage > MAX_MARKET_BATCH_SIZE) {
+    throw new Error(`CoinGecko markets: perPage must be between 1 and ${MAX_MARKET_BATCH_SIZE}.`);
+  }
+
+  const vsCurrency = normalizeVsCurrency(options.vsCurrency ?? DEFAULT_VS_CURRENCY);
+  const order = options.order ?? "market_cap_desc";
+
+  const { data, url } = await requestJson(
+    "/coins/markets",
+    {
+      vs_currency: vsCurrency,
+      order,
+      per_page: perPage,
+      page,
+      sparkline: "false",
+    },
+    `markets page ${page}`,
+  );
+
+  if (!Array.isArray(data)) {
+    throw new Error("CoinGecko markets: response is not an array.");
+  }
+
+  const ids = uniqueIds(
+    data
+      .map((row) => stringOrNull(asJsonObject(row)["id"]))
+      .filter((id): id is string => id !== null),
+  );
+
+  return {
+    sourceUrl: url,
+    page,
+    perPage,
+    ids,
+    hasMore: data.length >= perPage,
   };
 }
 

@@ -2,280 +2,280 @@
   {
     "symbol": "ZLUSX",
     "name": "Soybean Oil Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USX"
   },
   {
     "symbol": "HGUSD",
     "name": "Copper",
-    "exchange": null,
+    "exchange": "COMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "KCUSX",
     "name": "Coffee",
-    "exchange": null,
+    "exchange": "ICEUS",
     "tradeMonth": "Dec",
     "currency": "USX"
   },
   {
     "symbol": "ZSUSX",
     "name": "Soybean Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Jan",
     "currency": "USX"
   },
   {
     "symbol": "LBUSD",
     "name": "Lumber Futures",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Nov",
     "currency": "USD"
   },
   {
     "symbol": "YMUSD",
     "name": "Mini Dow Jones Industrial Average Index",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "CTUSX",
     "name": "Cotton",
-    "exchange": null,
+    "exchange": "ICEUS",
     "tradeMonth": "Dec",
     "currency": "USX"
   },
   {
     "symbol": "ALIUSD",
     "name": "Aluminum Futures",
-    "exchange": null,
+    "exchange": "LME",
     "tradeMonth": "Jan",
     "currency": "USD"
   },
   {
     "symbol": "GCUSD",
     "name": "Gold Futures",
-    "exchange": null,
+    "exchange": "COMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "DXUSD",
     "name": "US Dollar",
-    "exchange": null,
+    "exchange": "ICEUS",
     "tradeMonth": "Sep",
     "currency": "USD"
   },
   {
     "symbol": "PLUSD",
     "name": "Platinum",
-    "exchange": null,
+    "exchange": "NYMEX",
     "tradeMonth": "Jan",
     "currency": "USD"
   },
   {
     "symbol": "SILUSD",
     "name": "Micro Silver Futures",
-    "exchange": null,
+    "exchange": "COMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "ZCUSX",
     "name": "Corn Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USX"
   },
   {
     "symbol": "OJUSX",
     "name": "Orange Juice",
-    "exchange": null,
+    "exchange": "ICEUS",
     "tradeMonth": "Jan",
     "currency": "USX"
   },
   {
     "symbol": "ZTUSD",
     "name": "2-Year T-Note Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "RTYUSD",
     "name": "Micro E-mini Russell 2000 Index Futures",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "BZUSD",
     "name": "Brent Crude Oil",
-    "exchange": null,
+    "exchange": "ICEEUR",
     "tradeMonth": "Jan",
     "currency": "USD"
   },
   {
     "symbol": "SBUSX",
     "name": "Sugar",
-    "exchange": null,
+    "exchange": "ICEUS",
     "tradeMonth": "Mar",
     "currency": "USX"
   },
   {
     "symbol": "NQUSD",
     "name": "Nasdaq 100",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "ZBUSD",
     "name": "30 Year U.S. Treasury Bond Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "NGUSD",
     "name": "Natural Gas",
-    "exchange": null,
+    "exchange": "NYMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "GFUSX",
     "name": "Feeder Cattle Futures",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Jan",
     "currency": "USX"
   },
   {
     "symbol": "CLUSD",
     "name": "Crude Oil",
-    "exchange": null,
+    "exchange": "NYMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "ZRUSD",
     "name": "Rough Rice Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Jan",
     "currency": "USD"
   },
   {
     "symbol": "ZOUSX",
     "name": "Oat Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USX"
   },
   {
     "symbol": "ZFUSD",
     "name": "Five-Year US Treasury Note",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "DCUSD",
     "name": "Class III Milk Futures",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "HOUSD",
     "name": "Heating Oil",
-    "exchange": null,
+    "exchange": "NYMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "ESUSD",
     "name": "E-Mini S&P 500",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "ZMUSD",
     "name": "Soybean Meal Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "RBUSD",
     "name": "Gasoline RBOB",
-    "exchange": null,
+    "exchange": "NYMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "HEUSX",
     "name": "Lean Hogs Futures",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Dec",
     "currency": "USX"
   },
   {
     "symbol": "PAUSD",
     "name": "Palladium",
-    "exchange": null,
+    "exchange": "NYMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "ZQUSD",
     "name": "30 Day Fed Fund Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Nov",
     "currency": "USD"
   },
   {
     "symbol": "SIUSD",
     "name": "Silver Futures",
-    "exchange": null,
+    "exchange": "COMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "KEUSX",
     "name": "Wheat Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USX"
   },
   {
     "symbol": "MGCUSD",
     "name": "Micro Gold Futures",
-    "exchange": null,
+    "exchange": "COMEX",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "CCUSD",
     "name": "Cocoa",
-    "exchange": null,
+    "exchange": "ICEUS",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "ZNUSD",
     "name": "10-Year T-Note Futures",
-    "exchange": null,
+    "exchange": "CBOT",
     "tradeMonth": "Dec",
     "currency": "USD"
   },
   {
     "symbol": "LEUSX",
     "name": "Live Cattle Futures",
-    "exchange": null,
+    "exchange": "CME",
     "tradeMonth": "Dec",
     "currency": "USX"
   }
