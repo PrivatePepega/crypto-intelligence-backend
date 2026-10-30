@@ -1,0 +1,101 @@
+{
+  "result": {
+    "provider": "eia",
+    "definition": {
+      "series_id": "RWTC",
+      "route": "petroleum/pri/spt",
+      "frequency": "daily",
+      "unit": "$/BBL",
+      "title": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
+      "category": "crude_price_spot",
+      "kind": "price",
+      "asset_symbol": "RWTC"
+    },
+    "fetched_at": "2026-10-30T16:22:33.868Z",
+    "requested": {
+      "start": "2024-10-30",
+      "end": null,
+      "limit": 1
+    },
+    "provider_total": 499,
+    "truncated": true,
+    "warnings": [
+      "incomplete return: The API can only return 5000 rows in JSON format.  Please consider constraining your request with facet, start, or end, or using offset to paginate results."
+    ],
+    "observations": [
+      {
+        "provider": "eia",
+        "series_id": "RWTC",
+        "frequency": "daily",
+        "period": "2026-10-27",
+        "value": 103.37,
+        "unit": "$/BBL",
+        "series_name": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
+        "collected_at": "2026-10-30T16:22:33.868Z"
+      }
+    ],
+    "rejected": [],
+    "duplicates_removed": 0,
+    "provider_frequency": "daily"
+  },
+  "pages": 1,
+  "rows_fetched": 1,
+  "source_urls": [
+    "https://api.eia.gov/v2/petroleum/pri/spt/data/?frequency=daily&data%5B0%5D=value&facets%5Bseries%5D%5B%5D=RWTC&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=desc&offset=0&length=1&start=2024-10-30&api_key=<redacted>"
+  ],
+  "provider_raw": [
+    {
+      "warnings": [
+        {
+          "warning": "incomplete return",
+          "description": "The API can only return 5000 rows in JSON format.  Please consider constraining your request with facet, start, or end, or using offset to paginate results."
+        }
+      ],
+      "response": {
+        "total": "499",
+        "dateFormat": "YYYY-MM-DD",
+        "frequency": "daily",
+        "data": [
+          {
+            "period": "2026-10-27",
+            "duoarea": "YCUOK",
+            "area-name": "NA",
+            "product": "EPCWTI",
+            "product-name": "WTI Crude Oil",
+            "process": "PF4",
+            "process-name": "Spot Price FOB",
+            "series": "RWTC",
+            "series-description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
+            "value": "103.37",
+            "units": "$/BBL"
+          }
+        ]
+      },
+      "request": {
+        "command": "/v2/petroleum/pri/spt/data/",
+        "params": {
+          "frequency": "daily",
+          "data": [
+            "value"
+          ],
+          "facets": {
+            "series": [
+              "RWTC"
+            ]
+          },
+          "sort": [
+            {
+              "column": "period",
+              "direction": "desc"
+            }
+          ],
+          "offset": "0",
+          "length": "1",
+          "start": "2024-10-30"
+        }
+      },
+      "apiVersion": "2.1.14",
+      "ExcelAddInVersion": "2.1.0"
+    }
+  ]
+}

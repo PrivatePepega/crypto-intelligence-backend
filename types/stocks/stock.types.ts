@@ -571,6 +571,7 @@ export type DatasetName =
   | "history"
   | "financial_statements"
   | "financial_metrics"
+  | "financial_reports"
   | "insider_transactions"
   | "institutional_holdings"
   | "beneficial_ownership"

@@ -1,0 +1,46 @@
+[
+  {
+    "symbol": "BTCUSDT",
+    "globalLongShort": {
+      "symbol": "BTCUSDT",
+      "longAccount": "0.7029",
+      "longShortRatio": "2.3659",
+      "shortAccount": "0.2971",
+      "date": "2026-10-30"
+    },
+    "topAccount": {
+      "symbol": "BTCUSDT",
+      "longAccount": "0.7246",
+      "longShortRatio": "2.6311",
+      "shortAccount": "0.2754",
+      "date": "2026-10-30"
+    },
+    "topPosition": {
+      "symbol": "BTCUSDT",
+      "longAccount": "0.6572",
+      "longShortRatio": "1.9169",
+      "shortAccount": "0.3428",
+      "date": "2026-10-30"
+    },
+    "openInterest": {
+      "symbol": "BTCUSDT",
+      "sumOpenInterest": "94785.41600000",
+      "sumOpenInterestValue": "7390665327.60160000",
+      "CMCCirculatingSupply": "20105018.00000000",
+      "date": "2026-10-30"
+    },
+    "funding": {
+      "symbol": "BTCUSDT",
+      "fundingRate": "0.00003619",
+      "markPrice": "77962.70000000",
+      "rateType": "Regular",
+      "date": "2026-10-30"
+    },
+    "taker": {
+      "buySellRatio": "0.9250",
+      "sellVol": "131813.7050",
+      "buyVol": "121922.4330",
+      "date": "2026-10-29"
+    }
+  }
+]

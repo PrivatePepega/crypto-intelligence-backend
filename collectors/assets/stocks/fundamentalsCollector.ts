@@ -210,6 +210,25 @@ export function normalizeQuarterlyYTD(
   for (const fy of fyKeys) {
     const fyMap = fyData.get(fy)!;
 
+    // Helper: get a concept value, trying the alternate revenue concept name
+    // when the primary one is missing. SEC filings sometimes use
+    // "RevenueFromContractWithCustomerExcludingAssessedTax" and sometimes
+    // "Revenues" for the same underlying figure, differing between periods.
+    const getWithAlias = (
+      map: Map<string, number | null>,
+      concept: string,
+    ): number | null => {
+      const direct = map.get(concept) ?? null;
+      if (direct !== null) return direct;
+      if (concept === "RevenueFromContractWithCustomerExcludingAssessedTax") {
+        return map.get("Revenues") ?? null;
+      }
+      if (concept === "Revenues") {
+        return map.get("RevenueFromContractWithCustomerExcludingAssessedTax") ?? null;
+      }
+      return null;
+    };
+
     // FY entry
     const fyResult = new Map<string, number | null>();
     for (const concept of KEY_CONCEPTS) {
@@ -234,8 +253,8 @@ export function normalizeQuarterlyYTD(
     // Q2-only = Q2 YTD - Q1 YTD
     const q2Result = new Map<string, number | null>();
     for (const concept of KEY_CONCEPTS) {
-      const q2Val = q2.get(concept);
-      const q1Val = q1.get(concept);
+      const q2Val = getWithAlias(q2, concept);
+      const q1Val = getWithAlias(q1, concept);
       q2Result.set(concept, q2Val !== null && q1Val !== null ? q2Val - q1Val : null);
     }
     result.set(`${fy}|Q2`, q2Result);
@@ -243,8 +262,8 @@ export function normalizeQuarterlyYTD(
     // Q3-only = Q3 YTD - Q2 YTD
     const q3Result = new Map<string, number | null>();
     for (const concept of KEY_CONCEPTS) {
-      const q3Val = q3.get(concept);
-      const q2Val = q2.get(concept);
+      const q3Val = getWithAlias(q3, concept);
+      const q2Val = getWithAlias(q2, concept);
       q3Result.set(concept, q3Val !== null && q2Val !== null ? q3Val - q2Val : null);
     }
     result.set(`${fy}|Q3`, q3Result);
@@ -254,7 +273,7 @@ export function normalizeQuarterlyYTD(
       const q4Result = new Map<string, number | null>();
       for (const concept of KEY_CONCEPTS) {
         const fyVal = fyMap.get(concept) ?? null;
-        const q3Val = q3.get(concept) ?? null;
+        const q3Val = getWithAlias(q3, concept);
         q4Result.set(concept, fyVal !== null && q3Val !== null ? fyVal - q3Val : null);
       }
       result.set(`${fy}|Q4`, q4Result);

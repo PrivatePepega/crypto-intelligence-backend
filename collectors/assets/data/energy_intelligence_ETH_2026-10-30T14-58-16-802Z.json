@@ -1,0 +1,61 @@
+{
+  "symbol": "ETH",
+  "asset": {
+    "name": "ETH",
+    "symbol": "ETH",
+    "category": null,
+    "description": null,
+    "website": null,
+    "externalIds": {
+      "eiaSeriesId": "ETH"
+    }
+  },
+  "commodity": {
+    "type": null,
+    "benchmark": null,
+    "currency": null,
+    "unitOfMeasure": null,
+    "uses": [],
+    "contract": {
+      "exchange": null,
+      "tradeMonth": null,
+      "contractYear": null
+    }
+  },
+  "market": {
+    "price": null,
+    "currency": "USD",
+    "change": null,
+    "changePercent": null,
+    "previousClose": null,
+    "open": null,
+    "dayHigh": null,
+    "dayLow": null,
+    "yearHigh": null,
+    "yearLow": null,
+    "volume": null,
+    "vwap": null,
+    "movingAverages": {
+      "sma50": null,
+      "sma200": null
+    },
+    "priceUpdatedAt": null,
+    "source": "EIA",
+    "yearLowDate": null,
+    "priceChange7d": null,
+    "priceChange90d": null
+  },
+  "fundamentals": {
+    "valueDrivers": {},
+    "supplyDemand": {},
+    "inflation": {}
+  },
+  "history": {
+    "interval": "1d",
+    "firstObservation": null,
+    "lastObservation": null,
+    "observationCount": null,
+    "lastUpdatedAt": null
+  },
+  "dataUpdatedAt": "2026-10-30T14:58:16.801Z"
+}

@@ -12,6 +12,7 @@ import {
 } from "../../types/binance/binance.types.js";
 
 const BINANCE_API = "https://fapi.binance.com";
+const BINANCE_SPOT_API = "https://api.binance.com";
 
 const SYMBOLS = [
   "BTCUSDT", //binance_btcusdt
@@ -23,6 +24,96 @@ const SYMBOLS = [
   "LINKUSDT", //binance_linkusdt
   "AAVEUSDT", //binance_aaveusdt
 ] as const;
+
+export interface BinanceSpotPrice {
+  symbol: string;
+  price: string;
+}
+
+export interface BinanceSpotTicker24hr {
+  symbol: string;
+  priceChange: string;
+  priceChangePercent: string;
+  weightedAvgPrice: string;
+  prevClosePrice: string;
+  lastPrice: string;
+  lastQty: string;
+  bidPrice: string;
+  bidQty: string;
+  askPrice: string;
+  askQty: string;
+  openPrice: string;
+  highPrice: string;
+  lowPrice: string;
+  volume: string;
+  quoteVolume: string;
+  openTime: number;
+  closeTime: number;
+  firstId: number;
+  lastId: number;
+  count: number;
+}
+
+export interface BinanceSpotKline {
+  openTime: number;
+  open: string;
+  high: string;
+  low: string;
+  close: string;
+  volume: string;
+  closeTime: number;
+  quoteAssetVolume: string;
+  numberOfTrades: number;
+  takerBuyBaseAssetVolume: string;
+  takerBuyQuoteAssetVolume: string;
+  ignore: string;
+}
+
+/**
+ * Fetch the latest price for a Binance spot symbol.
+ * GET https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT
+ */
+export async function fetchBinanceSpotPrice(symbol: string): Promise<BinanceSpotPrice> {
+  const response = await axios.get(`${BINANCE_SPOT_API}/api/v3/ticker/price?symbol=${symbol}`);
+  return response.data;
+}
+
+/**
+ * Fetch 24-hour price change statistics for a Binance spot symbol.
+ * GET https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT
+ */
+export async function fetchBinanceSpotTicker24hr(symbol: string): Promise<BinanceSpotTicker24hr> {
+  const response = await axios.get(`${BINANCE_SPOT_API}/api/v3/ticker/24hr?symbol=${symbol}`);
+  return response.data;
+}
+
+/**
+ * Fetch candlestick (kline) data for a Binance spot symbol.
+ * GET https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=90
+ */
+export async function fetchBinanceSpotKlines(
+  symbol: string,
+  interval: string = "1d",
+  limit: number = 90
+): Promise<BinanceSpotKline[]> {
+  const response = await axios.get(
+    `${BINANCE_SPOT_API}/api/v3/klines?symbol=${symbol}&interval=${interval}&limit=${limit}`
+  );
+  return response.data.map((k: any[]) => ({
+    openTime: k[0],
+    open: k[1],
+    high: k[2],
+    low: k[3],
+    close: k[4],
+    volume: k[5],
+    closeTime: k[6],
+    quoteAssetVolume: k[7],
+    numberOfTrades: k[8],
+    takerBuyBaseAssetVolume: k[9],
+    takerBuyQuoteAssetVolume: k[10],
+    ignore: k[11],
+  }));
+}
 
 type FetchMode = "full" | "latest";
 

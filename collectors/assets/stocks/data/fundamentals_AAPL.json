@@ -2,6 +2,48 @@
   "cik": 320193,
   "entityName": "Apple Inc.",
   "source": "SEC Edgar companyfacts",
+  "financialReports": {
+    "latestQuarterly": {
+      "form": "10-Q",
+      "fiscalYear": 2025,
+      "fiscalPeriod": "Q4",
+      "periodEnd": null,
+      "filingDate": null,
+      "accessionNumber": null,
+      "currency": "USD",
+      "revenue": 87180000000,
+      "grossProfit": 32344000000,
+      "operatingIncome": 20676000000,
+      "netIncome": 17995000000,
+      "totalAssets": 0,
+      "totalLiabilities": 0,
+      "cashAndCashEquivalents": 0,
+      "operatingCashFlow": 19100000000,
+      "capitalExpenditures": 4420000000,
+      "freeCashFlow": 14680000000,
+      "sourceUrl": null
+    },
+    "latestAnnual": {
+      "form": "10-K",
+      "fiscalYear": 2025,
+      "fiscalPeriod": "FY",
+      "periodEnd": null,
+      "filingDate": null,
+      "accessionNumber": null,
+      "currency": "USD",
+      "revenue": 383285000000,
+      "grossProfit": 169148000000,
+      "operatingIncome": 114301000000,
+      "netIncome": 96995000000,
+      "totalAssets": 364980000000,
+      "totalLiabilities": 308030000000,
+      "cashAndCashEquivalents": 29943000000,
+      "operatingCashFlow": 110543000000,
+      "capitalExpenditures": 10959000000,
+      "freeCashFlow": 99584000000,
+      "sourceUrl": null
+    }
+  },
   "normalizedFacts": [
     {
       "fy": 2009,

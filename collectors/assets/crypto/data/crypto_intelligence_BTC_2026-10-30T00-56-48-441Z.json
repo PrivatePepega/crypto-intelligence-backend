@@ -1,0 +1,68 @@
+{
+  "symbol": "BTC",
+  "asset": {
+    "name": "BTC",
+    "symbol": "BTC",
+    "category": null,
+    "description": null,
+    "logoUrl": null,
+    "website": null,
+    "externalIds": {
+      "coingeckoId": "btc"
+    }
+  },
+  "market": {
+    "price": null,
+    "currency": "USD",
+    "change24h": null,
+    "changePercent24h": null,
+    "changeSincePreviousClose": null,
+    "changePercentSincePreviousClose": null,
+    "high24h": null,
+    "low24h": null,
+    "marketCap": null,
+    "marketCapRank": null,
+    "fullyDilutedValuation": null,
+    "marketCapDominance": null,
+    "volume24h": null,
+    "quoteVolume24h": null,
+    "volumeToMarketCap": null,
+    "allTimeHigh": null,
+    "allTimeHighDate": null,
+    "allTimeLow": null,
+    "allTimeLowDate": null,
+    "priceChange7d": null,
+    "priceChange30d": null,
+    "priceChange90d": null,
+    "priceUpdatedAt": null,
+    "source": null
+  },
+  "supply": {
+    "circulating": null,
+    "total": null,
+    "max": null,
+    "circulatingPercentage": null
+  },
+  "network": {
+    "primary": null,
+    "contracts": []
+  },
+  "tokenomics": {},
+  "security": {
+    "summary": null,
+    "contractAnalysis": {},
+    "riskFlags": []
+  },
+  "socials": {},
+  "exchanges": [
+    {
+      "name": "Binance",
+      "symbol": "BTC",
+      "volume24h": 739066532.76016,
+      "quoteVolume24h": 739066532.76016,
+      "percentOfTotalVolume": null,
+      "isVerified": true
+    }
+  ],
+  "dataUpdatedAt": "2026-10-30T00:56:48.441Z"
+}

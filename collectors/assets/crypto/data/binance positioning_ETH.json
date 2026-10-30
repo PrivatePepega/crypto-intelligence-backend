@@ -1,0 +1,46 @@
+[
+  {
+    "symbol": "ETHUSDT",
+    "globalLongShort": {
+      "symbol": "ETHUSDT",
+      "longAccount": "0.7673",
+      "longShortRatio": "3.2974",
+      "shortAccount": "0.2327",
+      "date": "2026-10-30"
+    },
+    "topAccount": {
+      "symbol": "ETHUSDT",
+      "longAccount": "0.7612",
+      "longShortRatio": "3.1876",
+      "shortAccount": "0.2388",
+      "date": "2026-10-30"
+    },
+    "topPosition": {
+      "symbol": "ETHUSDT",
+      "longAccount": "0.6407",
+      "longShortRatio": "1.7832",
+      "shortAccount": "0.3593",
+      "date": "2026-10-30"
+    },
+    "openInterest": {
+      "symbol": "ETHUSDT",
+      "sumOpenInterest": "2321977.16700000",
+      "sumOpenInterestValue": "5230880502.50259000",
+      "CMCCirculatingSupply": "122170165.62061684",
+      "date": "2026-10-30"
+    },
+    "funding": {
+      "symbol": "ETHUSDT",
+      "fundingRate": "-0.00004294",
+      "markPrice": "2252.35000000",
+      "rateType": "Regular",
+      "date": "2026-10-30"
+    },
+    "taker": {
+      "buySellRatio": "0.8740",
+      "sellVol": "3183490.0950",
+      "buyVol": "2782423.4650",
+      "date": "2026-10-29"
+    }
+  }
+]

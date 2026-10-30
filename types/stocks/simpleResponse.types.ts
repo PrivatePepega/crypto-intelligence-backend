@@ -4,8 +4,8 @@
  * This is a reduced, frontend-friendly contract containing only:
  * - ticker
  * - company (name, exchange, currency, cik, sector, industry, description, website, country, logoUrl)
- * - market (price, change, changePercent, marketCap, volume, averageVolume, dayHigh, dayLow, yearHigh, yearLow, priceUpdatedAt)
- * - financialReports (latestQuarterly, latestAnnual)
+ * - market (price, previousClose, change, changePercent, marketCap, volume, averageVolume, dayHigh, dayLow, yearHigh, yearLow, priceUpdatedAt, movingAverages)
+ * - financialReports (quarterly[], annual[])
  * - dataUpdatedAt
  *
  * This deliberately excludes: history, financial metrics, SEC event arrays,
@@ -25,6 +25,12 @@ export interface SimpleCompany {
   logoUrl: string | null;
 }
 
+export interface SimpleMovingAverages {
+  sma20: number | null;
+  sma50: number | null;
+  sma200: number | null;
+}
+
 export interface SimpleMarket {
   price: number | null;
   previousClose: number | null;
@@ -38,6 +44,7 @@ export interface SimpleMarket {
   yearHigh: number | null;
   yearLow: number | null;
   priceUpdatedAt: string | null;
+  movingAverages: SimpleMovingAverages;
 }
 
 export interface SimpleFinancialReport {
@@ -62,8 +69,8 @@ export interface SimpleFinancialReport {
 }
 
 export interface SimpleFinancialReports {
-  latestQuarterly: SimpleFinancialReport;
-  latestAnnual: SimpleFinancialReport;
+  quarterly: SimpleFinancialReport[];
+  annual: SimpleFinancialReport[];
 }
 
 export interface SimpleStockIntelligenceResponse {
@@ -131,10 +138,11 @@ export function createEmptyResponse(ticker: string): SimpleStockIntelligenceResp
       yearHigh: null,
       yearLow: null,
       priceUpdatedAt: null,
+      movingAverages: { sma20: null, sma50: null, sma200: null },
     },
     financialReports: {
-      latestQuarterly: createEmptyFinancialReport("10-Q"),
-      latestAnnual: createEmptyFinancialReport("10-K"),
+      quarterly: [],
+      annual: [],
     },
     dataUpdatedAt: null,
   };

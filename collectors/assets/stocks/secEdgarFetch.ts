@@ -216,7 +216,7 @@ async function fetchCompanySubmissions(cik: string): Promise<void> {
  * 3. Company Facts — all supported standardized financial facts (Essential)
  * https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json
  */
-async function fetchCompanyFacts(cik: string): Promise<void> {
+export async function fetchCompanyFacts(cik: string): Promise<void> {
   const paddedCik = padCik(cik);
   const url = `${SEC_DATA_BASE}/api/xbrl/companyfacts/CIK${paddedCik}.json`;
   console.log(`Fetching ${url}...`);
