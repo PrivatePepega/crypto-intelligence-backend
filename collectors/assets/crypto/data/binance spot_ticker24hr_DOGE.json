@@ -1,0 +1,23 @@
+{
+  "symbol": "DOGEUSDT",
+  "priceChange": "-0.00432000",
+  "priceChangePercent": "-5.432",
+  "weightedAvgPrice": "0.07531454",
+  "prevClosePrice": "0.07953000",
+  "lastPrice": "0.07521000",
+  "lastQty": "851.00000000",
+  "bidPrice": "0.07521000",
+  "bidQty": "167394.00000000",
+  "askPrice": "0.07522000",
+  "askQty": "150708.00000000",
+  "openPrice": "0.07953000",
+  "highPrice": "0.07969000",
+  "lowPrice": "0.07220000",
+  "volume": "1105562378.00000000",
+  "quoteVolume": "83264916.68073000",
+  "openTime": 1793297890439,
+  "closeTime": 1793384290439,
+  "firstId": 1631015789,
+  "lastId": 1631742626,
+  "count": 726838
+}

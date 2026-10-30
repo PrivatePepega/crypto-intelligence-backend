@@ -1,0 +1,140 @@
+{
+  "source": "CoinGecko",
+  "sourceUrl": "https://api.coingecko.com/api/v3/coins/dogecoin?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false&sparkline=false",
+  "fetchedAt": "2026-10-30T18:18:10.024Z",
+  "observedAt": "2026-10-30T18:16:52.000Z",
+  "asset": {
+    "name": "Dogecoin",
+    "symbol": "doge",
+    "assetType": "crypto",
+    "description": "Dogecoin is an open-source digital currency based on the \"Doge\" meme that functions as a peer-to-peer medium for fast payments and digital tipping. Unlike projects backed by corporate entities, its value is driven by a global community, and the project is managed by a decentralized group of volunteers and the non-profit Dogecoin Foundation rather than a formal company.\n\nOriginally created in 2013 by software engineers Billy Markus and Jackson Palmer as a market parody, the project held no public sale or venture capital rounds. The network operates as a fork of LuckyCoin, which itself was a fork of Litecoin, using a proof of work consensus mechanism. It employs the Scrypt algorithm to ensure the mining process remains fast and efficient, with new blocks processed every 60 seconds. A unique technical feature is its use of merged mining, allowing miners to secure Dogecoin simultaneously with other Scrypt-based networks like Litecoin.\n\nTo keep transaction fees low and the network running indefinitely, Dogecoin features an uncapped supply where new coins are added forever. In a major regulatory milestone in March 2026, a joint SEC and CFTC framework officially classified Dogecoin as a digital commodity, placing it in the same asset category as gold or oil.",
+    "category": "Smart Contract Platform",
+    "logoUrl": "https://coin-images.coingecko.com/coins/images/5/large/dogecoin.png?1696501409",
+    "websiteUrl": "http://dogecoin.com/",
+    "externalIds": {
+      "coingecko_id": "dogecoin",
+      "other_provider_ids": {}
+    }
+  },
+  "crypto": {
+    "network": null,
+    "contractAddresses": [],
+    "circulatingSupply": 156511242860.16907,
+    "totalSupply": 156542642860.16907,
+    "maxSupply": null,
+    "tokenomics": {
+      "categories": [
+        "Smart Contract Platform",
+        "Meme",
+        "Dog-Themed",
+        "Elon Musk-Inspired",
+        "Proof of Work (PoW)",
+        "GMCI Meme Index",
+        "GMCI 30 Index",
+        "GMCI Index",
+        "Coinbase 50 Index",
+        "4chan-Themed"
+      ],
+      "genesisDate": "2013-12-08",
+      "hashingAlgorithm": "Scrypt",
+      "blockTimeInMinutes": 1,
+      "hasSupplyBreakdown": false
+    },
+    "socials": {
+      "homepage": [
+        "http://dogecoin.com/"
+      ],
+      "whitepaper": "https://dogecoin.com/dogepedia/",
+      "blockchainSites": [
+        "https://blockchair.com/dogecoin",
+        "https://doge.tokenview.io/",
+        "http://dogechain.info/chain/Dogecoin",
+        "https://3xpl.com/dogecoin",
+        "https://www.oklink.com/doge"
+      ],
+      "officialForumUrls": [],
+      "chatUrls": [],
+      "announcementUrls": [],
+      "twitter": "dogecoin",
+      "telegram": null,
+      "subreddit": "https://www.reddit.com/r/dogecoin/",
+      "repos": {
+        "github": [
+          "https://github.com/dogecoin/dogecoin",
+          "https://github.com/dogecoin/libdohj"
+        ],
+        "bitbucket": []
+      }
+    }
+  },
+  "market": {
+    "currentPrice": 0.075271,
+    "marketCap": 11780722591,
+    "fullyDilutedValuation": 11783086093,
+    "marketCapRank": 12,
+    "totalVolume": 1044031434,
+    "totalValueLocked": null,
+    "high24h": 0.079393,
+    "low24h": 0.072687,
+    "priceChange24h": -0.004177948548574645,
+    "priceChangePercentage24h": -5.25867,
+    "priceChangePercentage7d": -5.70385,
+    "priceChangePercentage30d": -20.28897,
+    "marketCapChange24h": -653895919.9432564,
+    "marketCapChangePercentage24h": -5.25867,
+    "ath": 0.731578,
+    "athDate": "2021-05-07T21:08:23.000Z",
+    "athChangePercentage": -89.71118,
+    "atl": 0.0000869,
+    "atlDate": "2015-05-05T16:00:00.000Z",
+    "atlChangePercentage": 86513.94818,
+    "circulatingSupply": 156511242860.16907,
+    "totalSupply": 156542642860.16907,
+    "maxSupply": null,
+    "maxSupplyInfinite": true,
+    "lastUpdated": "2026-10-30T18:16:52.000Z"
+  },
+  "marketSnapshot": {
+    "informationType": "market_snapshot",
+    "data": {
+      "coingeckoId": "dogecoin",
+      "vsCurrency": "usd",
+      "currentPrice": 0.075271,
+      "marketCap": 11780722591,
+      "fullyDilutedValuation": 11783086093,
+      "marketCapRank": 12,
+      "totalVolume": 1044031434,
+      "totalValueLocked": null,
+      "high24h": 0.079393,
+      "low24h": 0.072687,
+      "priceChange24h": -0.004177948548574645,
+      "priceChangePercentage24h": -5.25867,
+      "priceChangePercentage7d": -5.70385,
+      "priceChangePercentage30d": -20.28897,
+      "marketCapChange24h": -653895919.9432564,
+      "marketCapChangePercentage24h": -5.25867,
+      "ath": 0.731578,
+      "athDate": "2021-05-07T21:08:23.000Z",
+      "athChangePercentage": -89.71118,
+      "atl": 0.0000869,
+      "atlDate": "2015-05-05T16:00:00.000Z",
+      "atlChangePercentage": 86513.94818,
+      "circulatingSupply": 156511242860.16907,
+      "totalSupply": 156542642860.16907,
+      "maxSupply": null,
+      "maxSupplyInfinite": true,
+      "lastUpdated": "2026-10-30T18:16:52.000Z"
+    },
+    "source": "CoinGecko",
+    "sourceUrl": "https://api.coingecko.com/api/v3/coins/dogecoin?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false&sparkline=false",
+    "publishedAt": null,
+    "observedAt": "2026-10-30T18:16:52.000Z",
+    "collectedAt": "2026-10-30T18:18:10.024Z"
+  },
+  "resolution": {
+    "provider": "CoinGecko",
+    "method": "provider_id",
+    "verified": false,
+    "note": "Identity is the provider's stable CoinGecko id. Contract addresses and metadata are provider reported; do not overwrite manually verified values."
+  }
+}

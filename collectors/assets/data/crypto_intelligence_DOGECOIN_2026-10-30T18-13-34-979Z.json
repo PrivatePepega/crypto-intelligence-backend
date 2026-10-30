@@ -1,0 +1,101 @@
+{
+  "symbol": "DOGECOIN",
+  "asset": {
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "category": "Smart Contract Platform",
+    "description": "Dogecoin is an open-source digital currency based on the \"Doge\" meme that functions as a peer-to-peer medium for fast payments and digital tipping. Unlike projects backed by corporate entities, its value is driven by a global community, and the project is managed by a decentralized group of volunteers and the non-profit Dogecoin Foundation rather than a formal company.\n\nOriginally created in 2013 by software engineers Billy Markus and Jackson Palmer as a market parody, the project held no public sale or venture capital rounds. The network operates as a fork of LuckyCoin, which itself was a fork of Litecoin, using a proof of work consensus mechanism. It employs the Scrypt algorithm to ensure the mining process remains fast and efficient, with new blocks processed every 60 seconds. A unique technical feature is its use of merged mining, allowing miners to secure Dogecoin simultaneously with other Scrypt-based networks like Litecoin.\n\nTo keep transaction fees low and the network running indefinitely, Dogecoin features an uncapped supply where new coins are added forever. In a major regulatory milestone in March 2026, a joint SEC and CFTC framework officially classified Dogecoin as a digital commodity, placing it in the same asset category as gold or oil.",
+    "logoUrl": "https://coin-images.coingecko.com/coins/images/5/large/dogecoin.png?1696501409",
+    "website": "http://dogecoin.com/",
+    "externalIds": {
+      "coingeckoId": "dogecoin"
+    }
+  },
+  "market": {
+    "price": 0.075348,
+    "currency": "USD",
+    "change24h": -0.004098669302807667,
+    "changePercent24h": -5.15899,
+    "changeSincePreviousClose": -0.004098669302807667,
+    "changePercentSincePreviousClose": -5.15899,
+    "high24h": 0.079393,
+    "low24h": 0.072687,
+    "marketCap": 11788566237,
+    "marketCapRank": 12,
+    "fullyDilutedValuation": 11790931313,
+    "marketCapDominance": null,
+    "volume24h": 1054432729,
+    "quoteVolume24h": null,
+    "volumeToMarketCap": 0.08944537510342192,
+    "allTimeHigh": 0.731578,
+    "allTimeHighDate": "2021-05-07T21:08:23.000Z",
+    "allTimeLow": null,
+    "allTimeLowDate": null,
+    "priceChange7d": null,
+    "priceChange30d": -20.20675,
+    "priceChange90d": null,
+    "priceUpdatedAt": "2026-10-30T18:11:58.000Z",
+    "source": "CoinGecko"
+  },
+  "supply": {
+    "circulating": 156511242860.16907,
+    "total": 156542642860.16907,
+    "max": null,
+    "circulatingPercentage": null
+  },
+  "network": {
+    "primary": null,
+    "contracts": []
+  },
+  "tokenomics": {
+    "categories": [
+      "Smart Contract Platform",
+      "Meme",
+      "Dog-Themed",
+      "Elon Musk-Inspired",
+      "Proof of Work (PoW)",
+      "GMCI Meme Index",
+      "GMCI 30 Index",
+      "GMCI Index",
+      "Coinbase 50 Index",
+      "4chan-Themed"
+    ],
+    "genesisDate": "2013-12-08",
+    "hashingAlgorithm": "Scrypt",
+    "blockTimeInMinutes": 1,
+    "hasSupplyBreakdown": false
+  },
+  "security": {
+    "summary": null,
+    "contractAnalysis": {},
+    "riskFlags": []
+  },
+  "socials": {
+    "homepage": [
+      "http://dogecoin.com/"
+    ],
+    "whitepaper": "https://dogecoin.com/dogepedia/",
+    "blockchainSites": [
+      "https://blockchair.com/dogecoin",
+      "https://doge.tokenview.io/",
+      "http://dogechain.info/chain/Dogecoin",
+      "https://3xpl.com/dogecoin",
+      "https://www.oklink.com/doge"
+    ],
+    "officialForumUrls": [],
+    "chatUrls": [],
+    "announcementUrls": [],
+    "twitter": "dogecoin",
+    "telegram": null,
+    "subreddit": "https://www.reddit.com/r/dogecoin/",
+    "repos": {
+      "github": [
+        "https://github.com/dogecoin/dogecoin",
+        "https://github.com/dogecoin/libdohj"
+      ],
+      "bitbucket": []
+    }
+  },
+  "exchanges": [],
+  "dataUpdatedAt": "2026-10-30T18:13:31.254Z"
+}

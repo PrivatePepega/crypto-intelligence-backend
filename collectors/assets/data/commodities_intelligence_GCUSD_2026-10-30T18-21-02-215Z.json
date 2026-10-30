@@ -1,0 +1,62 @@
+{
+  "symbol": "GCUSD",
+  "asset": {
+    "name": "Gold Futures",
+    "symbol": "GCUSD",
+    "category": null,
+    "description": null,
+    "logoUrl": null,
+    "website": null,
+    "externalIds": {
+      "fmpSymbol": "GCUSD"
+    }
+  },
+  "commodity": {
+    "type": "Precious_metal",
+    "benchmark": "COMEX gold",
+    "currency": "USD",
+    "unitOfMeasure": null,
+    "uses": [],
+    "contract": {
+      "exchange": "COMMODITY",
+      "tradeMonth": "Dec",
+      "contractYear": null
+    }
+  },
+  "market": {
+    "price": 3891.9,
+    "currency": "USD",
+    "change": -139.5,
+    "changePercent": -3.46034,
+    "previousClose": 4031.4,
+    "open": 4033.6,
+    "dayHigh": 4038.2,
+    "dayLow": 3887.2,
+    "yearHigh": 5626.8,
+    "yearLow": 3887.2,
+    "volume": 208940,
+    "vwap": null,
+    "movingAverages": {
+      "sma50": 4305.6,
+      "sma200": 4476.71
+    },
+    "priceUpdatedAt": "2026-10-30T18:10:57.000Z",
+    "source": "FMP",
+    "yearLowDate": "2026-10-30",
+    "priceChange7d": -2.8942837895157068,
+    "priceChange90d": -5.237399561723883
+  },
+  "fundamentals": {
+    "valueDrivers": {},
+    "supplyDemand": {},
+    "inflation": {}
+  },
+  "history": {
+    "interval": "1d",
+    "firstObservation": "2025-10-30",
+    "lastObservation": "2026-10-30",
+    "observationCount": 297,
+    "lastUpdatedAt": "2026-10-30T18:21:00.200Z"
+  },
+  "dataUpdatedAt": "2026-10-30T18:21:00.200Z"
+}

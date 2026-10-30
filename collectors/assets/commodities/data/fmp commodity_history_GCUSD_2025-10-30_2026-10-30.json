@@ -3,7 +3,7 @@
     "provider": "fmp",
     "symbol": "GCUSD",
     "interval": "1d",
-    "fetched_at": "2026-10-30T16:22:41.394Z",
+    "fetched_at": "2026-10-30T18:25:00.814Z",
     "requested": {
       "from": "2025-10-30",
       "to": "2026-10-30"
@@ -3863,12 +3863,12 @@
         "timestamp": "2026-10-30T00:00:00.000Z",
         "open": 4033.6,
         "high": 4038.2,
-        "low": 3900.9,
-        "close": 3909,
-        "volume": 180601,
-        "change": -124.6,
-        "change_percent": -3.08905,
-        "vwap": 3949.37
+        "low": 3887.2,
+        "close": 3891,
+        "volume": 208849,
+        "change": -142.6,
+        "change_percent": -3.5353,
+        "vwap": 3938.8
       }
     ],
     "rejected": [],
@@ -7456,12 +7456,12 @@
           "date": "2026-10-30",
           "open": 4033.6,
           "high": 4038.2,
-          "low": 3900.9,
-          "close": 3909,
-          "volume": 180601,
-          "change": -124.6,
-          "changePercent": -3.08905,
-          "vwap": 3949.37
+          "low": 3887.2,
+          "close": 3891,
+          "volume": 208849,
+          "change": -142.6,
+          "changePercent": -3.5353,
+          "vwap": 3938.8
         }
       ]
     }

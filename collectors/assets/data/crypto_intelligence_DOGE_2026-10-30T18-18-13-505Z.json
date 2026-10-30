@@ -1,0 +1,110 @@
+{
+  "symbol": "DOGE",
+  "asset": {
+    "name": "Dogecoin",
+    "symbol": "DOGE",
+    "category": "Smart Contract Platform",
+    "description": "Dogecoin is an open-source digital currency based on the \"Doge\" meme that functions as a peer-to-peer medium for fast payments and digital tipping. Unlike projects backed by corporate entities, its value is driven by a global community, and the project is managed by a decentralized group of volunteers and the non-profit Dogecoin Foundation rather than a formal company.\n\nOriginally created in 2013 by software engineers Billy Markus and Jackson Palmer as a market parody, the project held no public sale or venture capital rounds. The network operates as a fork of LuckyCoin, which itself was a fork of Litecoin, using a proof of work consensus mechanism. It employs the Scrypt algorithm to ensure the mining process remains fast and efficient, with new blocks processed every 60 seconds. A unique technical feature is its use of merged mining, allowing miners to secure Dogecoin simultaneously with other Scrypt-based networks like Litecoin.\n\nTo keep transaction fees low and the network running indefinitely, Dogecoin features an uncapped supply where new coins are added forever. In a major regulatory milestone in March 2026, a joint SEC and CFTC framework officially classified Dogecoin as a digital commodity, placing it in the same asset category as gold or oil.",
+    "logoUrl": "https://coin-images.coingecko.com/coins/images/5/large/dogecoin.png?1696501409",
+    "website": "http://dogecoin.com/",
+    "externalIds": {
+      "coingeckoId": "dogecoin"
+    }
+  },
+  "market": {
+    "price": 0.07521,
+    "currency": "USD",
+    "change24h": -0.00432,
+    "changePercent24h": -5.432,
+    "changeSincePreviousClose": -0.00432,
+    "changePercentSincePreviousClose": -5.432,
+    "high24h": 0.07969,
+    "low24h": 0.0722,
+    "marketCap": 11780722591,
+    "marketCapRank": 12,
+    "fullyDilutedValuation": 11783086093,
+    "marketCapDominance": null,
+    "volume24h": 1105562378,
+    "quoteVolume24h": 83264916.68073,
+    "volumeToMarketCap": 0.09384503959414216,
+    "allTimeHigh": 0.731578,
+    "allTimeHighDate": "2021-05-07T21:08:23.000Z",
+    "allTimeLow": 0.06822,
+    "allTimeLowDate": "2026-08-06T00:00:00.000Z",
+    "priceChange7d": -4.361648016276707,
+    "priceChange30d": -20.28897,
+    "priceChange90d": 6.213811608529871,
+    "priceUpdatedAt": "2026-10-30T18:18:10.439Z",
+    "source": "Binance"
+  },
+  "supply": {
+    "circulating": 156511242860.16907,
+    "total": 156542642860.16907,
+    "max": null,
+    "circulatingPercentage": null
+  },
+  "network": {
+    "primary": null,
+    "contracts": []
+  },
+  "tokenomics": {
+    "categories": [
+      "Smart Contract Platform",
+      "Meme",
+      "Dog-Themed",
+      "Elon Musk-Inspired",
+      "Proof of Work (PoW)",
+      "GMCI Meme Index",
+      "GMCI 30 Index",
+      "GMCI Index",
+      "Coinbase 50 Index",
+      "4chan-Themed"
+    ],
+    "genesisDate": "2013-12-08",
+    "hashingAlgorithm": "Scrypt",
+    "blockTimeInMinutes": 1,
+    "hasSupplyBreakdown": false
+  },
+  "security": {
+    "summary": null,
+    "contractAnalysis": {},
+    "riskFlags": []
+  },
+  "socials": {
+    "homepage": [
+      "http://dogecoin.com/"
+    ],
+    "whitepaper": "https://dogecoin.com/dogepedia/",
+    "blockchainSites": [
+      "https://blockchair.com/dogecoin",
+      "https://doge.tokenview.io/",
+      "http://dogechain.info/chain/Dogecoin",
+      "https://3xpl.com/dogecoin",
+      "https://www.oklink.com/doge"
+    ],
+    "officialForumUrls": [],
+    "chatUrls": [],
+    "announcementUrls": [],
+    "twitter": "dogecoin",
+    "telegram": null,
+    "subreddit": "https://www.reddit.com/r/dogecoin/",
+    "repos": {
+      "github": [
+        "https://github.com/dogecoin/dogecoin",
+        "https://github.com/dogecoin/libdohj"
+      ],
+      "bitbucket": []
+    }
+  },
+  "exchanges": [
+    {
+      "name": "Binance",
+      "symbol": "DOGE",
+      "volume24h": 19394983.099277,
+      "quoteVolume24h": 19394983.099277,
+      "percentOfTotalVolume": null,
+      "isVerified": true
+    }
+  ],
+  "dataUpdatedAt": "2026-10-30T18:18:10.439Z"
+}

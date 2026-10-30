@@ -1,0 +1,46 @@
+[
+  {
+    "symbol": "DOGEUSDT",
+    "globalLongShort": {
+      "symbol": "DOGEUSDT",
+      "longAccount": "0.7672",
+      "longShortRatio": "3.2955",
+      "shortAccount": "0.2328",
+      "date": "2026-10-30"
+    },
+    "topAccount": {
+      "symbol": "DOGEUSDT",
+      "longAccount": "0.8120",
+      "longShortRatio": "4.3191",
+      "shortAccount": "0.1880",
+      "date": "2026-10-30"
+    },
+    "topPosition": {
+      "symbol": "DOGEUSDT",
+      "longAccount": "0.7663",
+      "longShortRatio": "3.2788",
+      "shortAccount": "0.2337",
+      "date": "2026-10-30"
+    },
+    "openInterest": {
+      "symbol": "DOGEUSDT",
+      "sumOpenInterest": "2578091599.00000000",
+      "sumOpenInterestValue": "193949830.99277000",
+      "CMCCirculatingSupply": "156519496383.70523000",
+      "date": "2026-10-30"
+    },
+    "funding": {
+      "symbol": "DOGEUSDT",
+      "fundingRate": "0.00006455",
+      "markPrice": "0.07584159",
+      "rateType": "Regular",
+      "date": "2026-10-30"
+    },
+    "taker": {
+      "buySellRatio": "0.8891",
+      "sellVol": "4196673611.0000",
+      "buyVol": "3731372301.0000",
+      "date": "2026-10-29"
+    }
+  }
+]
