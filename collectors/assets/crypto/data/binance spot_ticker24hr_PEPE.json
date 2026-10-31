@@ -1,0 +1,23 @@
+{
+  "symbol": "PEPEUSDT",
+  "priceChange": "0.00000049",
+  "priceChangePercent": "11.011",
+  "weightedAvgPrice": "0.00000494",
+  "prevClosePrice": "0.00000445",
+  "lastPrice": "0.00000494",
+  "lastQty": "98909957.00",
+  "bidPrice": "0.00000493",
+  "bidQty": "9166154681.00",
+  "askPrice": "0.00000494",
+  "askQty": "15131985662.00",
+  "openPrice": "0.00000445",
+  "highPrice": "0.00000550",
+  "lowPrice": "0.00000431",
+  "volume": "44766603618618.00",
+  "quoteVolume": "221041132.91599990",
+  "openTime": 1793311737031,
+  "closeTime": 1793398137031,
+  "firstId": 567111461,
+  "lastId": 567889443,
+  "count": 777983
+}

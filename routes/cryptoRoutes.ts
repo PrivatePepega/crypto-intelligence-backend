@@ -3,15 +3,14 @@
  *
  * Deterministic crypto intelligence flow:
  * 1. GET /api-v1/crypto/:ticker - takes a crypto symbol (e.g., BTC)
- * 2. Checks database for existing data and freshness
- * 3. If data is current -> returns it from the database
- * 4. If stale or missing -> fetches from providers via cryptoNormalizer,
- *    injects into the SQL database (assets.assets, assets.crypto),
- *    then returns data from the database
+ * 2. Fetches fresh data from providers via cryptoNormalizer
+ * 3. Injects into the SQL database (assets.assets, assets.crypto)
+ * 4. Returns the complete normalized intelligence data
  * 5. If ticker is not legitimate -> returns an error
  *
  * Output file: collectors/assets/data/crypto_intelligence_<TICKER>_<timestamp>.json
- * All output data is read from the database tables in database/sql/assets/.
+ * Market data (price, changes, ATH/ATL) comes from live provider calls,
+ * not from the database (which only stores supply, network, tokenomics, etc.).
  */
 
 import { Router } from "express";
@@ -53,7 +52,7 @@ async function ensureOutputDir(): Promise<void> {
 async function writeResponseToFile(
   prefix: string,
   identifier: string,
-  data: unknown
+  data: unknown,
 ): Promise<string> {
   await ensureOutputDir();
   const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
@@ -76,7 +75,7 @@ async function writeResponseToFile(
 function createErrorResponse(
   error: unknown,
   context: string,
-  statusCode: number = 500
+  statusCode: number = 500,
 ): { response: object; statusCode: number } {
   const message = error instanceof Error ? error.message : String(error);
   const stack = error instanceof Error ? error.stack : undefined;
@@ -87,7 +86,10 @@ function createErrorResponse(
   let errorCode = "intelligence_failed";
   let httpStatus = statusCode;
 
-  if (message.includes("not a recognized crypto") || message.includes("crypto ticker doesnt exist")) {
+  if (
+    message.includes("not a recognized crypto") ||
+    message.includes("crypto ticker doesnt exist")
+  ) {
     errorCode = "wrong_ticker";
     httpStatus = 404;
   } else if (message.includes("matches multiple") || message.includes("ambiguous")) {
@@ -102,9 +104,9 @@ function createErrorResponse(
     response: {
       error: errorCode,
       message: httpStatus >= 500 ? "Internal server error" : message,
-      ...(process.env.NODE_ENV === "development" && { stack })
+      ...(process.env.NODE_ENV === "development" && { stack }),
     },
-    statusCode: httpStatus
+    statusCode: httpStatus,
   };
 }
 
@@ -123,7 +125,7 @@ async function checkDbFreshness(ticker: string): Promise<{
 }> {
   const assetRes = await pool.query(
     `SELECT id FROM assets.assets WHERE symbol = $1 AND asset_type = 'crypto' LIMIT 1`,
-    [ticker]
+    [ticker],
   );
 
   if (assetRes.rows.length === 0) {
@@ -132,146 +134,22 @@ async function checkDbFreshness(ticker: string): Promise<{
 
   const assetId = assetRes.rows[0]["id"] as string;
 
-  // Check that we have crypto data + at least some market data
-  const checks = await Promise.all([
-    pool.query(
-      `SELECT 1 FROM assets.crypto WHERE asset_id = $1 LIMIT 1`,
-      [assetId]
-    ),
-    pool.query(
-      `SELECT updated_at FROM assets.crypto WHERE asset_id = $1`,
-      [assetId]
-    ),
+  // Check that we have crypto data
+  const cryptoRes = await pool.query(`SELECT 1 FROM assets.crypto WHERE asset_id = $1 LIMIT 1`, [
+    assetId,
   ]);
 
-  const hasCrypto = checks[0].rows.length > 0;
-  const cryptoRow = checks[1].rows[0];
-
-  const updatedAt = cryptoRow?.["updated_at"];
-  const isFresh = updatedAt
-    ? Date.now() - new Date(updatedAt).getTime() <= 7 * 24 * 60 * 60 * 1000
-    : false;
+  const hasCrypto = cryptoRes.rows.length > 0;
 
   return {
     exists: true,
-    fresh: hasCrypto && isFresh,
+    fresh: hasCrypto,
     assetId,
   };
 }
 
-/**
- * Reads the asset profile from assets.assets + assets.crypto for a given assetId.
- */
-async function readAssetFromDB(assetId: string, ticker: string): Promise<CryptoAsset> {
-  const res = await pool.query(
-    `SELECT a.name, a.external_ids, a.website_url, a.logo_url,
-            c.network, c.contract_addresses
-     FROM assets.assets a
-     LEFT JOIN assets.crypto c ON c.asset_id = a.id
-     WHERE a.id = $1 AND a.asset_type = 'crypto'`,
-    [assetId]
-  );
-
-  const row = res.rows[0];
-  const externalIds = (row?.["external_ids"] as Record<string, unknown> | null) ?? {};
-
-  return {
-    name: (typeof row?.["name"] === "string" && row["name"] !== "")
-      ? (row["name"] as string)
-      : ticker,
-    symbol: ticker,
-    category: null,
-    description: null,
-    logoUrl: (typeof row?.["logo_url"] === "string") ? (row["logo_url"] as string) : null,
-    website: (typeof row?.["website_url"] === "string") ? (row["website_url"] as string) : null,
-    externalIds: {
-      coingeckoId: (typeof externalIds["coingecko_id"] === "string")
-        ? (externalIds["coingecko_id"] as string)
-        : ticker.toLowerCase(),
-    },
-  };
-}
-
-/**
- * Reads the market data from assets.crypto for a given assetId.
- */
-async function readMarketFromDB(assetId: string): Promise<CryptoMarket> {
-  const res = await pool.query(
-    `SELECT circulating_supply, total_supply, max_supply, security_summary, updated_at
-     FROM assets.crypto
-     WHERE asset_id = $1`,
-    [assetId]
-  );
-
-  const row = res.rows[0];
-  const circulating = row?.["circulating_supply"] !== null ? Number(row["circulating_supply"]) : null;
-  const maxSupply = row?.["max_supply"] !== null ? Number(row["max_supply"]) : null;
-
-  return {
-    price: null,
-    currency: "USD",
-    change24h: null,
-    changePercent24h: null,
-    changeSincePreviousClose: null,
-    changePercentSincePreviousClose: null,
-    high24h: null,
-    low24h: null,
-    marketCap: null,
-    marketCapRank: null,
-    fullyDilutedValuation: null,
-    marketCapDominance: null,
-    volume24h: null,
-    quoteVolume24h: null,
-    volumeToMarketCap: null,
-    allTimeHigh: null,
-    allTimeHighDate: null,
-    allTimeLow: null,
-    allTimeLowDate: null,
-    priceChange7d: null,
-    priceChange30d: null,
-    priceChange90d: null,
-    priceUpdatedAt: row?.["updated_at"] !== null ? new Date(row["updated_at"]).toISOString() : null,
-    source: "CoinGecko",
-  };
-}
-
-/**
- * Reads supply data from assets.crypto for a given assetId.
- */
-async function readSupplyFromDB(assetId: string): Promise<CryptoSupply> {
-  const res = await pool.query(
-    `SELECT circulating_supply, total_supply, max_supply
-     FROM assets.crypto
-     WHERE asset_id = $1`,
-    [assetId]
-  );
-
-  const row = res.rows[0];
-  const circulating = row?.["circulating_supply"] !== null ? Number(row["circulating_supply"]) : null;
-  const total = row?.["total_supply"] !== null ? Number(row["total_supply"]) : null;
-  const max = row?.["max_supply"] !== null ? Number(row["max_supply"]) : null;
-
-  const circulatingPercentage =
-    circulating !== null && max !== null && max > 0
-      ? (circulating / max) * 100
-      : null;
-
-  return {
-    circulating,
-    total,
-    max,
-    circulatingPercentage,
-  };
-}
-
-/**
- * Reads network data from assets.crypto for a given assetId.
- */
-async function readNetworkFromDB(assetId: string): Promise<CryptoNetwork> {
-  const res = await pool.query(
-    `SELECT network, contract_addresses
-     FROM assets.crypto
-     WHERE asset_id = $1`,
+/* ============================================================================
+ * MIDDLEWARE: Request Logging
     [assetId]
   );
 
@@ -298,7 +176,7 @@ async function readNetworkFromDB(assetId: string): Promise<CryptoNetwork> {
 async function upsertAsset(ticker: string, asset: CryptoAsset): Promise<string> {
   const existing = await pool.query(
     `SELECT id FROM assets.assets WHERE symbol = $1 AND asset_type = 'crypto' LIMIT 1`,
-    [ticker]
+    [ticker],
   );
 
   const externalIds = {
@@ -314,7 +192,7 @@ async function upsertAsset(ticker: string, asset: CryptoAsset): Promise<string> 
            logo_url = COALESCE($4, logo_url),
            updated_at = NOW()
        WHERE id = $1`,
-      [id, JSON.stringify(externalIds), asset.website ?? null, asset.logoUrl ?? null]
+      [id, JSON.stringify(externalIds), asset.website ?? null, asset.logoUrl ?? null],
     );
     return id;
   }
@@ -323,7 +201,7 @@ async function upsertAsset(ticker: string, asset: CryptoAsset): Promise<string> 
     `INSERT INTO assets.assets (symbol, name, asset_type, website_url, logo_url, external_ids)
      VALUES ($1, $2, 'crypto', $3, $4, $5::jsonb)
      RETURNING id`,
-    [ticker, asset.name, asset.website ?? null, asset.logoUrl ?? null, JSON.stringify(externalIds)]
+    [ticker, asset.name, asset.website ?? null, asset.logoUrl ?? null, JSON.stringify(externalIds)],
   );
 
   const row = insertRes.rows[0];
@@ -343,13 +221,19 @@ async function upsertCrypto(
   supply: CryptoSupply,
   tokenomics: Record<string, unknown>,
   socials: Record<string, unknown>,
-  exchanges: Array<{ name: string; symbol: string; volume24h: number | null; quoteVolume24h: number | null; percentOfTotalVolume: number | null; isVerified: boolean }>,
-  securitySummary: string | null
+  exchanges: Array<{
+    name: string;
+    symbol: string;
+    volume24h: number | null;
+    quoteVolume24h: number | null;
+    percentOfTotalVolume: number | null;
+    isVerified: boolean;
+  }>,
+  securitySummary: string | null,
 ): Promise<void> {
-  const existing = await pool.query(
-    `SELECT 1 FROM assets.crypto WHERE asset_id = $1 LIMIT 1`,
-    [assetId]
-  );
+  const existing = await pool.query(`SELECT 1 FROM assets.crypto WHERE asset_id = $1 LIMIT 1`, [
+    assetId,
+  ]);
 
   const contractAddresses = network.contracts.map((c) => ({
     network: c.network,
@@ -394,7 +278,7 @@ async function upsertCrypto(
         JSON.stringify(socials),
         JSON.stringify(exchangesJson),
         securitySummary,
-      ]
+      ],
     );
     return;
   }
@@ -416,7 +300,7 @@ async function upsertCrypto(
       JSON.stringify(socials),
       JSON.stringify(exchangesJson),
       securitySummary,
-    ]
+    ],
   );
 }
 
@@ -426,7 +310,12 @@ async function upsertCrypto(
 
 function requestLogger(req: Request, res: Response, next: () => void) {
   const startTime = Date.now();
-  console.log(`[CRYPTO_ROUTES] ${req.method} ${req.path} - Params:`, req.params, "Query:", req.query);
+  console.log(
+    `[CRYPTO_ROUTES] ${req.method} ${req.path} - Params:`,
+    req.params,
+    "Query:",
+    req.query,
+  );
 
   res.on("finish", () => {
     const duration = Date.now() - startTime;
@@ -466,26 +355,24 @@ router.get("/:ticker", async (req: Request, res: Response) => {
       console.warn(`[CRYPTO_ROUTES] ${routeContext} - Missing or invalid ticker`);
       return res.status(400).json({
         error: "validation_failed",
-        message: "Ticker parameter is required"
+        message: "Ticker parameter is required",
       });
     }
 
     const cleanTicker = ticker.trim().toUpperCase();
     console.log(`[CRYPTO_ROUTES] ${routeContext} - Clean ticker:`, cleanTicker);
 
-    // Parse query parameters
+    // Parse query parameters (kept for future use)
     const refresh = req.query.refresh === "true";
     console.log(`[CRYPTO_ROUTES] ${routeContext} - Options:`, { refresh });
 
-    // Check DB freshness
+    // Check DB existence (for logging; we always fetch fresh to get complete market data)
     const freshness = await checkDbFreshness(cleanTicker);
 
-    // If data is current and not forced refresh, return from DB
-    if (freshness.exists && freshness.fresh && !refresh) {
-      console.log(`[CRYPTO_ROUTES] ${routeContext} - DB data is current, returning from DB`);
-      const simpleResponse = await buildResponseFromDB(freshness.assetId!, cleanTicker);
-      await writeResponseToFile("crypto_intelligence", cleanTicker, simpleResponse);
-      return res.status(200).json(simpleResponse);
+    if (freshness.exists) {
+      console.log(
+        `[CRYPTO_ROUTES] ${routeContext} - Asset exists in DB, fetching fresh for complete market data`,
+      );
     }
 
     // Fetch from providers via cryptoNormalizer
@@ -501,7 +388,7 @@ router.get("/:ticker", async (req: Request, res: Response) => {
       console.warn(`[CRYPTO_ROUTES] ${routeContext} - No data returned for ticker: ${cleanTicker}`);
       return res.status(404).json({
         error: "wrong_ticker",
-        message: `This crypto ticker doesnt exist: ${cleanTicker}`
+        message: `This crypto ticker doesnt exist: ${cleanTicker}`,
       });
     }
 
@@ -517,10 +404,12 @@ router.get("/:ticker", async (req: Request, res: Response) => {
       normalized.tokenomics,
       normalized.socials,
       normalized.exchanges,
-      normalized.security.summary
+      normalized.security.summary,
     );
 
-    console.log(`[CRYPTO_ROUTES] ${routeContext} - Data injected into database for asset ${assetId}`);
+    console.log(
+      `[CRYPTO_ROUTES] ${routeContext} - Data injected into database for asset ${assetId}`,
+    );
 
     // Return normalized response directly (market data not stored in DB schema)
     const simpleResponse = normalized;
@@ -539,85 +428,11 @@ router.get("/:ticker", async (req: Request, res: Response) => {
 
     // Return simplified response
     return res.status(200).json(simpleResponse);
-
   } catch (error) {
     const { response, statusCode } = createErrorResponse(error, routeContext, 500);
     res.status(statusCode).json(response);
   }
 });
-
-/**
- * Builds the simplified response contract by reading from the database.
- */
-async function buildResponseFromDB(
-  assetId: string,
-  ticker: string
-): Promise<{
-  symbol: string;
-  asset: CryptoAsset;
-  market: CryptoMarket;
-  supply: CryptoSupply;
-  network: CryptoNetwork;
-  tokenomics: Record<string, unknown>;
-  security: { summary: string | null; contractAnalysis: Record<string, unknown>; riskFlags: string[] };
-  socials: Record<string, unknown>;
-  exchanges: Array<{ name: string; symbol: string; volume24h: number | null; quoteVolume24h: number | null; percentOfTotalVolume: number | null; isVerified: boolean }>;
-  dataUpdatedAt: string | null;
-}> {
-  const [asset, market, supply, network] = await Promise.all([
-    readAssetFromDB(assetId, ticker),
-    readMarketFromDB(assetId),
-    readSupplyFromDB(assetId),
-    readNetworkFromDB(assetId),
-  ]);
-
-  // Read crypto row for tokenomics, socials, exchanges, security
-  const cryptoRes = await pool.query(
-    `SELECT tokenomics, socials, exchanges, security_summary, updated_at
-     FROM assets.crypto
-     WHERE asset_id = $1`,
-    [assetId]
-  );
-
-  const cryptoRow = cryptoRes.rows[0];
-  const tokenomics = cryptoRow?.["tokenomics"] ?? {};
-  const socials = cryptoRow?.["socials"] ?? {};
-  const exchanges = Array.isArray(cryptoRow?.["exchanges"]) ? cryptoRow["exchanges"] : [];
-  const securitySummary = cryptoRow?.["security_summary"] ?? null;
-
-  const timestamps: string[] = [
-    market.priceUpdatedAt,
-    cryptoRow?.["updated_at"] !== null ? new Date(cryptoRow["updated_at"]).toISOString() : null,
-  ].filter((t): t is string => t !== null);
-
-  const dataUpdatedAt = timestamps.length > 0
-    ? timestamps.reduce((latest, current) => (current > latest ? current : latest))
-    : null;
-
-  return {
-    symbol: ticker,
-    asset,
-    market,
-    supply,
-    network,
-    tokenomics,
-    security: {
-      summary: securitySummary,
-      contractAnalysis: {},
-      riskFlags: [],
-    },
-    socials,
-    exchanges: exchanges.map((e: any) => ({
-      name: e.name,
-      symbol: e.symbol,
-      volume24h: e.volume24h,
-      quoteVolume24h: e.quoteVolume24h,
-      percentOfTotalVolume: e.percentOfTotalVolume,
-      isVerified: e.isVerified,
-    })),
-    dataUpdatedAt,
-  };
-}
 
 /* ============================================================================
  * EXPORTS

@@ -1,0 +1,108 @@
+{
+  "symbol": "SHIB",
+  "asset": {
+    "name": "Shiba Inu",
+    "symbol": "SHIB",
+    "category": null,
+    "description": null,
+    "logoUrl": "https://coin-images.coingecko.com/coins/images/11939/large/shiba.png?1696511800",
+    "website": "https://shibatoken.com/",
+    "externalIds": {
+      "coingeckoId": "shiba-inu"
+    }
+  },
+  "market": {
+    "price": null,
+    "currency": "USD",
+    "change24h": null,
+    "changePercent24h": null,
+    "changeSincePreviousClose": null,
+    "changePercentSincePreviousClose": null,
+    "high24h": null,
+    "low24h": null,
+    "marketCap": null,
+    "marketCapRank": null,
+    "fullyDilutedValuation": null,
+    "marketCapDominance": null,
+    "volume24h": null,
+    "quoteVolume24h": null,
+    "volumeToMarketCap": null,
+    "allTimeHigh": null,
+    "allTimeHighDate": null,
+    "allTimeLow": null,
+    "allTimeLowDate": null,
+    "priceChange7d": null,
+    "priceChange30d": null,
+    "priceChange90d": null,
+    "priceUpdatedAt": "2026-10-30T21:01:31.696Z",
+    "source": "CoinGecko"
+  },
+  "supply": {
+    "circulating": 589238257671695.1,
+    "total": 589495715255345.8,
+    "max": null,
+    "circulatingPercentage": null
+  },
+  "network": {
+    "primary": "ethereum",
+    "contracts": [
+      {
+        "network": "ethereum",
+        "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce"
+      }
+    ]
+  },
+  "tokenomics": {
+    "categories": [
+      "Meme",
+      "Ethereum Ecosystem",
+      "Animoca Brands Portfolio",
+      "Dog-Themed",
+      "GMCI Meme Index",
+      "GMCI 30 Index",
+      "GMCI Index",
+      "Coinbase 50 Index"
+    ],
+    "genesisDate": null,
+    "hashingAlgorithm": null,
+    "blockTimeInMinutes": 0,
+    "hasSupplyBreakdown": true
+  },
+  "security": {
+    "summary": null,
+    "contractAnalysis": {},
+    "riskFlags": []
+  },
+  "socials": {
+    "repos": {
+      "github": [
+        "https://github.com/shibaone"
+      ],
+      "bitbucket": []
+    },
+    "twitter": "shibarium_",
+    "chatUrls": [
+      "https://discord.com/invite/shibatoken"
+    ],
+    "homepage": [
+      "https://shibatoken.com/",
+      "https://shib.io/"
+    ],
+    "telegram": "ShibaInu_Dogecoinkiller",
+    "subreddit": "https://www.reddit.com/r/SHIBArmy/",
+    "whitepaper": "https://shib.io/documents/SHIBPAPER-ABRIDGED-V.1.pdf",
+    "blockchainSites": [
+      "https://etherscan.io/token/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+      "https://intel.arkm.com/explorer/token/shiba-inu",
+      "https://ethplorer.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+      "https://explorer.energi.network/token/0x7fdb933327aa6989ae706001c2ea54ba5e046e79",
+      "https://ethereum.dex.guru/token/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce"
+    ],
+    "announcementUrls": [
+      "https://blog.shibaswap.com/"
+    ],
+    "officialForumUrls": []
+  },
+  "exchanges": [],
+  "dataUpdatedAt": "2026-10-30T21:01:31.696Z"
+}

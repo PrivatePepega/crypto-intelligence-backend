@@ -1,0 +1,150 @@
+{
+  "source": "CoinGecko",
+  "sourceUrl": "https://api.coingecko.com/api/v3/coins/shiba-inu?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false&sparkline=false",
+  "fetchedAt": "2026-10-30T22:06:15.806Z",
+  "observedAt": "2026-10-30T22:04:52.000Z",
+  "asset": {
+    "name": "Shiba Inu",
+    "symbol": "shib",
+    "assetType": "crypto",
+    "description": "Shiba Inu (SHIB) is a decentralized, community-led cryptocurrency ecosystem built on the Ethereum blockchain. Originally launched as a meme-based project, it has evolved into a comprehensive financial ecosystem designed to offer a decentralized alternative to traditional banking. Its main value proposition lies in its transition from a social phenomenon into a functional utility network, supported by a vast global community known as the ShibArmy and a commitment to 100% community ownership with no central leadership.\n\nThe ecosystem features its own decentralized exchange, ShibaSwap, where users can trade, provide liquidity, and earn rewards. To address Ethereum’s high costs and slow speeds, the project utilizes Shibarium, a Layer 2 scaling solution that processes transactions faster and more affordably.\n\nThe project employs a unique three-token model to manage its economy and governance. SHIB serves as the primary currency for trading and payments, while LEASH offers scarcity-based incentives for dedicated supporters. BONE acts as the governance token, allowing holders to vote on proposals through the Doggy DAO and serving as the native gas token for the Shibarium network.",
+    "category": "Meme",
+    "logoUrl": "https://coin-images.coingecko.com/coins/images/11939/large/shiba.png?1696511800",
+    "websiteUrl": "https://shibatoken.com/",
+    "externalIds": {
+      "coingecko_id": "shiba-inu",
+      "other_provider_ids": {}
+    }
+  },
+  "crypto": {
+    "network": "ethereum",
+    "contractAddresses": [
+      {
+        "network": "ethereum",
+        "address": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+        "decimalPlace": 18,
+        "source": "CoinGecko",
+        "verified": false
+      }
+    ],
+    "circulatingSupply": 589238257671695.1,
+    "totalSupply": 589495715255345.8,
+    "maxSupply": null,
+    "tokenomics": {
+      "categories": [
+        "Meme",
+        "Ethereum Ecosystem",
+        "Animoca Brands Portfolio",
+        "Dog-Themed",
+        "GMCI Meme Index",
+        "GMCI 30 Index",
+        "GMCI Index",
+        "Coinbase 50 Index"
+      ],
+      "genesisDate": null,
+      "hashingAlgorithm": null,
+      "blockTimeInMinutes": 0,
+      "hasSupplyBreakdown": true
+    },
+    "socials": {
+      "homepage": [
+        "https://shibatoken.com/",
+        "https://shib.io/"
+      ],
+      "whitepaper": "https://shib.io/documents/SHIBPAPER-ABRIDGED-V.1.pdf",
+      "blockchainSites": [
+        "https://etherscan.io/token/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+        "https://intel.arkm.com/explorer/token/shiba-inu",
+        "https://ethplorer.io/address/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
+        "https://explorer.energi.network/token/0x7fdb933327aa6989ae706001c2ea54ba5e046e79",
+        "https://ethereum.dex.guru/token/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce"
+      ],
+      "officialForumUrls": [],
+      "chatUrls": [
+        "https://discord.com/invite/shibatoken"
+      ],
+      "announcementUrls": [
+        "https://blog.shibaswap.com/"
+      ],
+      "twitter": "shibarium_",
+      "telegram": "ShibaInu_Dogecoinkiller",
+      "subreddit": "https://www.reddit.com/r/SHIBArmy/",
+      "repos": {
+        "github": [
+          "https://github.com/shibaone"
+        ],
+        "bitbucket": []
+      }
+    }
+  },
+  "market": {
+    "currentPrice": 0.00000477,
+    "marketCap": 2810478201,
+    "fullyDilutedValuation": 2811706191,
+    "marketCapRank": 36,
+    "totalVolume": 110791144,
+    "totalValueLocked": null,
+    "high24h": 0.00000483,
+    "low24h": 0.00000448,
+    "priceChange24h": 1.09479e-7,
+    "priceChangePercentage24h": 2.34934,
+    "priceChangePercentage7d": -5.35652,
+    "priceChangePercentage30d": -16.84602,
+    "marketCapChange24h": 64634027,
+    "marketCapChangePercentage24h": 2.35389,
+    "ath": 0.00008616,
+    "athDate": "2021-10-27T19:54:55.000Z",
+    "athChangePercentage": -94.46433,
+    "atl": 5.6366e-11,
+    "atlDate": "2020-11-28T03:26:25.000Z",
+    "atlChangePercentage": 8461443.21888,
+    "circulatingSupply": 589238257671695.1,
+    "totalSupply": 589495715255345.8,
+    "maxSupply": null,
+    "maxSupplyInfinite": false,
+    "lastUpdated": "2026-10-30T22:04:52.000Z"
+  },
+  "marketSnapshot": {
+    "informationType": "market_snapshot",
+    "data": {
+      "coingeckoId": "shiba-inu",
+      "vsCurrency": "usd",
+      "currentPrice": 0.00000477,
+      "marketCap": 2810478201,
+      "fullyDilutedValuation": 2811706191,
+      "marketCapRank": 36,
+      "totalVolume": 110791144,
+      "totalValueLocked": null,
+      "high24h": 0.00000483,
+      "low24h": 0.00000448,
+      "priceChange24h": 1.09479e-7,
+      "priceChangePercentage24h": 2.34934,
+      "priceChangePercentage7d": -5.35652,
+      "priceChangePercentage30d": -16.84602,
+      "marketCapChange24h": 64634027,
+      "marketCapChangePercentage24h": 2.35389,
+      "ath": 0.00008616,
+      "athDate": "2021-10-27T19:54:55.000Z",
+      "athChangePercentage": -94.46433,
+      "atl": 5.6366e-11,
+      "atlDate": "2020-11-28T03:26:25.000Z",
+      "atlChangePercentage": 8461443.21888,
+      "circulatingSupply": 589238257671695.1,
+      "totalSupply": 589495715255345.8,
+      "maxSupply": null,
+      "maxSupplyInfinite": false,
+      "lastUpdated": "2026-10-30T22:04:52.000Z"
+    },
+    "source": "CoinGecko",
+    "sourceUrl": "https://api.coingecko.com/api/v3/coins/shiba-inu?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false&sparkline=false",
+    "publishedAt": null,
+    "observedAt": "2026-10-30T22:04:52.000Z",
+    "collectedAt": "2026-10-30T22:06:15.806Z"
+  },
+  "resolution": {
+    "provider": "CoinGecko",
+    "method": "provider_id",
+    "verified": false,
+    "note": "Identity is the provider's stable CoinGecko id. Contract addresses and metadata are provider reported; do not overwrite manually verified values."
+  }
+}
