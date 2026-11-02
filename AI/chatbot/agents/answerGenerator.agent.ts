@@ -11,7 +11,7 @@ import {
 import { buildAnswerGeneratorSystemPrompt } from "../prompts/answerGenerator.prompt.js";
 
 import { getAgenticTooling } from "../../utils/general.tools.js";
-import { createAgentRunLog } from "../../utils/logger.js";
+import { createSilentAgentRunLog } from "../../utils/logger.js";
 import { modelIdOf, getReasoningText, normalizeStep, sleep } from "../../utils/agent.js";
 
 // The logger turns this into AI/data/<agent name>/<run domain>-<n>.json.
@@ -224,7 +224,7 @@ ${researcherOutputText}${buildAnswerGeneratorContext(validatedInput)}`;
   // Logged before the first await so initialization is visible immediately.
   console.log("[Chatbot Answer Generator] INITIALIZED");
 
-  const runLog = await createAgentRunLog(AGENT_NAME, RUN_DOMAIN);
+  const runLog = await createSilentAgentRunLog(AGENT_NAME, RUN_DOMAIN);
 
   await runLog.record("initializer", {
     currentDate,

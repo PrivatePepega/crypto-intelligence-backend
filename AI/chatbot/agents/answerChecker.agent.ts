@@ -10,7 +10,7 @@ import {
 
 import { buildAnswerCheckSystemPrompt } from "../prompts/answerChecker.js";
 
-import { createAgentRunLog } from "../../utils/logger.js";
+import { createSilentAgentRunLog } from "../../utils/logger.js";
 import { modelIdOf, getReasoningText, normalizeStep, sleep } from "../../utils/agent.js";
 
 // The logger turns this into AI/data/<agent name>/<run domain>-<n>.json.
@@ -139,7 +139,7 @@ ${validatedInput.answer}`;
   // Logged before the first await so initialization is visible immediately.
   console.log("[Chatbot Answer Checker] INITIALIZED");
 
-  const runLog = await createAgentRunLog(AGENT_NAME, RUN_DOMAIN);
+  const runLog = await createSilentAgentRunLog(AGENT_NAME, RUN_DOMAIN);
 
   await runLog.record("initializer", {
     userQuery: validatedInput.userQuery,
