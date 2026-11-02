@@ -1,8 +1,8 @@
-CREATE TABLE IF NOT EXISTS accounts.chat_messages (
+CREATE TABLE IF NOT EXISTS accountstest.chat_messages (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 
     chat_id UUID NOT NULL
-        REFERENCES accounts.chats(id)
+        REFERENCES accountstest.chats(id)
         ON DELETE CASCADE,
 
     role TEXT NOT NULL
@@ -20,4 +20,4 @@ CREATE TABLE IF NOT EXISTS accounts.chat_messages (
 );
 
 CREATE INDEX IF NOT EXISTS idx_chat_messages_chat_sequence
-    ON accounts.chat_messages (chat_id, sequence_number);
+    ON accountstest.chat_messages (chat_id, sequence_number);

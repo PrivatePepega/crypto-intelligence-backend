@@ -1,8 +1,8 @@
-CREATE TABLE IF NOT EXISTS accounts.sessions (
+CREATE TABLE IF NOT EXISTS accountstest.sessions (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 
     user_id UUID NOT NULL
-        REFERENCES accounts.users(id)
+        REFERENCES accountstest.users(id)
         ON DELETE CASCADE,
 
     session_token_hash TEXT NOT NULL UNIQUE,
@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS accounts.sessions (
 );
 
 CREATE INDEX IF NOT EXISTS idx_sessions_user_id
-    ON accounts.sessions (user_id);
+    ON accountstest.sessions (user_id);
 
 CREATE INDEX IF NOT EXISTS idx_sessions_expires_at
-    ON accounts.sessions (expires_at);
+    ON accountstest.sessions (expires_at);

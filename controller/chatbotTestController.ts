@@ -224,7 +224,7 @@ const findOrCreateUser = async (username: string): Promise<TestUserRow> => {
     // Try to find existing user
     let userResult = await client.query<TestUserRow>(
       `SELECT id, name, created_at
-       FROM accounts.users
+       FROM accountstest.users
        WHERE name = $1`,
       [username],
     );
@@ -234,7 +234,7 @@ const findOrCreateUser = async (username: string): Promise<TestUserRow> => {
     if (!user) {
       // Create new user
       const createdUserResult = await client.query<TestUserRow>(
-        `INSERT INTO accounts.users (name)
+        `INSERT INTO accountstest.users (name)
          VALUES ($1)
          RETURNING id, name, created_at`,
         [username],
@@ -276,7 +276,7 @@ const prepareChatTurn = async (input: {
     if (input.chatId) {
       const chatResult = await client.query<ChatRow>(
         `SELECT id, title, summary, created_at
-         FROM accounts.chats
+         FROM accountstest.chats
          WHERE id = $1 AND user_id = $2
          FOR UPDATE`,
         [input.chatId, input.userId],
@@ -292,7 +292,7 @@ const prepareChatTurn = async (input: {
     } else {
       const latestChatResult = await client.query<ChatRow>(
         `SELECT id, title, summary, created_at
-         FROM accounts.chats
+         FROM accountstest.chats
          WHERE user_id = $1
          ORDER BY created_at DESC
          LIMIT 1
@@ -304,7 +304,7 @@ const prepareChatTurn = async (input: {
 
       if (!existingChat) {
         const createdChatResult = await client.query<ChatRow>(
-          `INSERT INTO accounts.chats (user_id, title)
+          `INSERT INTO accountstest.chats (user_id, title)
            VALUES ($1, $2)
            RETURNING id, title, summary, created_at`,
           [input.userId, buildChatTitle(input.message)],
@@ -322,7 +322,7 @@ const prepareChatTurn = async (input: {
 
     const recentMessagesResult = await client.query<MessageRow>(
       `SELECT id, role, content, sequence_number, created_at
-       FROM accounts.chat_messages
+       FROM accountstest.chat_messages
        WHERE chat_id = $1
        ORDER BY sequence_number DESC
        LIMIT $2`,
@@ -335,7 +335,7 @@ const prepareChatTurn = async (input: {
 
     const maxSequenceResult = await client.query<MaxSequenceRow>(
       `SELECT COALESCE(MAX(sequence_number), 0) AS max_sequence
-       FROM accounts.chat_messages
+       FROM accountstest.chat_messages
        WHERE chat_id = $1`,
       [chat.id],
     );
@@ -343,7 +343,7 @@ const prepareChatTurn = async (input: {
     const nextSequence = Number(maxSequenceResult.rows[0]?.max_sequence ?? 0) + 1;
 
     const userMessageResult = await client.query<MessageRow>(
-      `INSERT INTO accounts.chat_messages (chat_id, role, content, sequence_number)
+      `INSERT INTO accountstest.chat_messages (chat_id, role, content, sequence_number)
        VALUES ($1, 'user', $2, $3)
        RETURNING id, role, content, sequence_number, created_at`,
       [chat.id, input.message, nextSequence],
@@ -378,7 +378,7 @@ const saveAssistantTurn = async (input: SaveAssistantTurnInput): Promise<Message
 
     const chatResult = await client.query<ChatRow>(
       `SELECT id, title, summary, created_at
-       FROM accounts.chats
+       FROM accountstest.chats
        WHERE id = $1 AND user_id = $2
        FOR UPDATE`,
       [input.chatId, input.userId],
@@ -390,7 +390,7 @@ const saveAssistantTurn = async (input: SaveAssistantTurnInput): Promise<Message
 
     const maxSequenceResult = await client.query<MaxSequenceRow>(
       `SELECT COALESCE(MAX(sequence_number), 0) AS max_sequence
-       FROM accounts.chat_messages
+       FROM accountstest.chat_messages
        WHERE chat_id = $1`,
       [input.chatId],
     );
@@ -398,7 +398,7 @@ const saveAssistantTurn = async (input: SaveAssistantTurnInput): Promise<Message
     const nextSequence = Number(maxSequenceResult.rows[0]?.max_sequence ?? 0) + 1;
 
     const assistantMessageResult = await client.query<MessageRow>(
-      `INSERT INTO accounts.chat_messages (chat_id, role, content, sequence_number)
+      `INSERT INTO accountstest.chat_messages (chat_id, role, content, sequence_number)
        VALUES ($1, 'assistant', $2, $3)
        RETURNING id, role, content, sequence_number, created_at`,
       [input.chatId, input.content, nextSequence],
@@ -414,7 +414,7 @@ const saveAssistantTurn = async (input: SaveAssistantTurnInput): Promise<Message
 
     if (summary) {
       await client.query(
-        `UPDATE accounts.chats
+        `UPDATE accountstest.chats
          SET summary = $1
          WHERE id = $2 AND user_id = $3`,
         [summary, input.chatId, input.userId],
@@ -484,7 +484,7 @@ export const testGetHistory = async (req: Request, res: Response) => {
   try {
     const userResult = await pool.query<TestUserRow>(
       `SELECT id, name, created_at
-       FROM accounts.users
+       FROM accountstest.users
        WHERE name = $1`,
       [username],
     );
@@ -507,7 +507,7 @@ export const testGetHistory = async (req: Request, res: Response) => {
     if (chatId) {
       const chatResult = await pool.query<ChatRow>(
         `SELECT id, title, summary, created_at
-         FROM accounts.chats
+         FROM accountstest.chats
          WHERE id = $1 AND user_id = $2`,
         [chatId, user.id],
       );
@@ -520,7 +520,7 @@ export const testGetHistory = async (req: Request, res: Response) => {
     } else {
       const chatResult = await pool.query<ChatRow>(
         `SELECT id, title, summary, created_at
-         FROM accounts.chats
+         FROM accountstest.chats
          WHERE user_id = $1
          ORDER BY created_at DESC
          LIMIT 1`,
@@ -536,7 +536,7 @@ export const testGetHistory = async (req: Request, res: Response) => {
 
     const messagesResult = await pool.query<MessageRow>(
       `SELECT id, role, content, sequence_number, created_at
-       FROM accounts.chat_messages
+       FROM accountstest.chat_messages
        WHERE chat_id = $1
        ORDER BY sequence_number ASC`,
       [chat.id],
@@ -568,7 +568,7 @@ export const testSendMessage = async (req: Request, res: Response) => {
   try {
     const userResult = await pool.query<TestUserRow>(
       `SELECT id, name, created_at
-       FROM accounts.users
+       FROM accountstest.users
        WHERE name = $1`,
       [username],
     );
