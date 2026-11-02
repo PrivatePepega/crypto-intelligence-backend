@@ -57,6 +57,7 @@ type IndicatorRow = {
   native_time_unit: string;
   native_frequency: string;
   native_aggregation: string;
+  historical_time_unit: string;
   unit: string;
   use: string;
   purpose: string;
@@ -107,6 +108,7 @@ export const TOKENIZED_FIELDS = [
   "description",
   "nativeTimeUnit",
   "nativeFrequency",
+  "historicalTimeUnit",
   "unit",
   "use",
   "purpose",
@@ -170,6 +172,7 @@ const toIndicator = (row: IndicatorRow): Indicator => ({
   nativeTimeUnit: row.native_time_unit,
   nativeFrequency: row.native_frequency,
   nativeAggregation: row.native_aggregation,
+  historicalTimeUnit: row.historical_time_unit as Indicator["historicalTimeUnit"],
   unit: row.unit,
   use: row.use,
   purpose: row.purpose,
@@ -199,7 +202,9 @@ export const exposeIndicators = async (
         SELECT
           id, name, domain, category, description, source,
           series_id,
-          native_time_unit, native_frequency, native_aggregation, unit,
+          native_time_unit, native_frequency, native_aggregation,
+          historical_time_unit,
+          unit,
           use, purpose, significance,
           relation_tags, status,
           embedding::text AS embedding
