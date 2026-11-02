@@ -356,8 +356,8 @@ ${researcherOutputText}${buildAnswerGeneratorContext(validatedInput)}`;
         throw error;
       }
 
-      console.log("[Chatbot Answer Generator] Waiting 4 seconds before retry...");
-      await sleep(RETRY_DELAY_MS);
+      // console.log("[Chatbot Answer Generator] Waiting 4 seconds before retry...");
+      // await sleep(RETRY_DELAY_MS);
     }
   }
 

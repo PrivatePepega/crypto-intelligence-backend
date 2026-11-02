@@ -301,8 +301,8 @@ ${validatedInput.analyzerQuery}`;
         return fallbackText;
       }
 
-      console.log("[Chatbot Researcher] Waiting 4 seconds before retry...");
-      await sleep(RETRY_DELAY_MS);
+      // console.log("[Chatbot Researcher] Waiting 4 seconds before retry...");
+      // await sleep(RETRY_DELAY_MS);
     }
   }
 

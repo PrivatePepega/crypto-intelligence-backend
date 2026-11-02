@@ -111,7 +111,7 @@ export async function summarizeChat(input: ChatSummaryInput): Promise<string> {
       console.warn(
         `[Chatbot Summary] attempt ${attempt} failed; retrying: ${describeError(lastError)}`,
       );
-      await sleep(RETRY_DELAY_MS);
+      // await sleep(RETRY_DELAY_MS);
     }
   }
 

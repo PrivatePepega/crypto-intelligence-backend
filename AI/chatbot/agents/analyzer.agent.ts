@@ -248,8 +248,8 @@ export async function runAnalyzerAgent(input: AnalyzerInput) {
         throw error;
       }
 
-      console.log("[Chatbot Analyst] Waiting 4 seconds before retry...");
-      await sleep(RETRY_DELAY_MS);
+      // console.log("[Chatbot Analyst] Waiting 4 seconds before retry...");
+      // await sleep(RETRY_DELAY_MS);
     }
   }
 

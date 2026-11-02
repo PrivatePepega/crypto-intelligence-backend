@@ -1,6 +1,7 @@
 import express from "express";
 import authRoutes from "./authRoutes.js";
 import chatbotRoutes from "./chatbotRoutes.js";
+import chatbotTestRoutes from "./chatbotTestRoutes.js";
 import worldRoutes from "./worldRoutes.js";
 import stockRoutes from "./stockRoutes.js";
 import cryptoRoutes from "./cryptoRoutes.js";
@@ -25,6 +26,7 @@ const router = express.Router();
 router.use("/auth", authRoutes);
 router.get("/authMe", authMiddleware, getCurrentUser);
 router.use("/chatbot", chatbotRoutes);
+router.use("/chatbottest", chatbotTestRoutes);
 router.use("/world", worldRoutes);
 router.use("/stocks", stockRoutes);
 router.use("/crypto", cryptoRoutes);

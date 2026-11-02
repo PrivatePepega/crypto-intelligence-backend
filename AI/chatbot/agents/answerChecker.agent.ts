@@ -264,8 +264,8 @@ ${validatedInput.answer}`;
         throw error;
       }
 
-      console.log("[Chatbot Answer Checker] Waiting 4 seconds before retry...");
-      await sleep(RETRY_DELAY_MS);
+      // console.log("[Chatbot Answer Checker] Waiting 4 seconds before retry...");
+      // await sleep(RETRY_DELAY_MS);
     }
   }
 
